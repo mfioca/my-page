@@ -1,0 +1,40 @@
+.Layout {
+    margin: 20px;
+    padding: 20;
+    flex: 1;
+}
+
+.Header {
+    width: '100%';
+    height: 50px;
+    border: 1px solid #DDD;
+}
+
+
+.Body {
+    border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.Footer {
+    width: 100%;
+    height: 100px;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.google { 
+    Float: right;
+    vertical-align: top;
+    right: 0;
+}
+
+.navbartable {
+    float: left;
+    vertical-align: top;
+    left: 0;
+}
+
