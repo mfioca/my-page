@@ -1,18 +1,23 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import Link from 'next/link'
-//import '!file-loader?name=[name].[ext]!./images/google.png';
-//import google from 'images/google.png'
 
-//const photo = require('./images/google.png');
-const linkStyle = {
-    marginRight: 15
+
+
+class Footer extends React.Component {
+    render() {
+        return (
+            <div>
+                <div className="email">
+                    <ul className="navbar-default nav-ul">
+                        <li className="nav-li">
+                            <a href = "mailto: mark@fioca.com">Send Email</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        )
+    }
 }
 
-export default function Header() {
-    return (
-        <div>
-            <p>The footer is placed at the bottom
-                of the Page IDIOT!!!
-            </p>
-        </div>
-    )
-}
+export default Footer;

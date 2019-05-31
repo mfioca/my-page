@@ -3,6 +3,7 @@ import Layout from '../components/layout.js'
 import Link from 'next/link'
 
 
+
 class Home extends Component {
     render() {
         return (

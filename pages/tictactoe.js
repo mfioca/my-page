@@ -1,7 +1,7 @@
 import react, { Component } from 'react'
 import Layout from '../components/layout'
 import Link from 'next/link'
-import CSS from '../components/tictactoe.css'
+import CSS2 from '../components/tictactoe.css'
 
 var ReactDOM = require('react-dom');
  
