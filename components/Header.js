@@ -37,8 +37,8 @@ class NavBar extends React.Component {
                             </td>
                             <td>
                                 <form action="http://google.com/search" target="_blank">
-                                    <input name="q" value="google search" />
-                                    <input type="submit" />
+                                    <input name="q" />
+                                    <input type="submit"/>
                                 </form>
                             </td>
                         </tr>

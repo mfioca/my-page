@@ -265,7 +265,6 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         name: "q",
-        value: "google search",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
@@ -11313,7 +11312,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 4:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cabout.js ***!
   \******************************************************************************************************************************************/
@@ -11336,5 +11335,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about.js.map

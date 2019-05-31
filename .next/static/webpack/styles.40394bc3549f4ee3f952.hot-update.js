@@ -1,9 +1,9 @@
 webpackHotUpdate("styles",{
 
-/***/ "./components/tictactoe.css":
-/*!**********************************!*\
-  !*** ./components/tictactoe.css ***!
-  \**********************************/
+/***/ "./components/style.css":
+/*!******************************!*\
+  !*** ./components/style.css ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +29,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1559333288609");
+            injectCss(link, link.href.split("?")[0] + "?unix=1559334799211");
           });
       }
     }
@@ -38,4 +38,4 @@ webpackHotUpdate("styles",{
 /***/ })
 
 })
-//# sourceMappingURL=styles.9b8717e6592fcb340210.hot-update.js.map
+//# sourceMappingURL=styles.40394bc3549f4ee3f952.hot-update.js.map
