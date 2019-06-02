@@ -65,7 +65,7 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "horizontal-li",
+        className: "h-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
@@ -150,14 +150,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-        className: "navbar-default horizontal-ul",
+        className: "navbar-default h-ul",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "horizontal-li",
+        className: "h-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
@@ -177,7 +177,7 @@ function (_React$Component) {
         },
         __self: this
       }, "Home"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "horizontal-li",
+        className: "h-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
@@ -197,14 +197,14 @@ function (_React$Component) {
         },
         __self: this
       }, "About"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "horizontal-li",
+        className: "h-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: "/tictactoe",
+        href: "/resume",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
@@ -216,49 +216,29 @@ function (_React$Component) {
           lineNumber: 27
         },
         __self: this
-      }, "TicTacToe"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "horizontal-li",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: "/resume",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+      }, "Resume"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "google",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 32
         },
         __self: this
-      }, "Resume"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "google",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 37
-        },
-        __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 33
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -266,13 +246,13 @@ function (_React$Component) {
         height: "20",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 36
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -280,21 +260,21 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         name: "q",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 40
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 41
         },
         __self: this
       })))))));
@@ -11332,7 +11312,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 2:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cabout.js ***!
   \******************************************************************************************************************************************/
@@ -11355,5 +11335,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about.js.map

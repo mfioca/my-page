@@ -17,8 +17,8 @@ class Resume extends Component {
                 <div className="Resume-body">
                     <h1 className="center">Resume</h1>
                     <ul className="center">
-                        <li className="Resume-li">Email: mark@fioca.com</li>
-                        <li className="Resume-li">www.linkedin.com/in/mark-fioca</li>
+                        <li className="h-li Res-title-li">Email: mark@fioca.com</li>
+                        <li className="h-li Res-title-li">www.linkedin.com/in/mark-fioca</li>
                     </ul>
                 </div>
                 <div className="Resume-divider center">
@@ -66,7 +66,7 @@ class Resume extends Component {
                     <p className="Resume-divider-text">PROFESSIONAL CAREER EXPERTISE</p>
                 </div>
                 <div>
-                    <h3>SOFTWARE IMPLEMENTATION AND SUPPORT</h3>
+                    <h3><u>SOFTWARE IMPLEMENTATION AND SUPPORT</u></h3>
                     <ul>
                         <li>
                             <p>
@@ -93,7 +93,7 @@ class Resume extends Component {
                             </p>
                         </li>
                     </ul>
-                    <h3>TECHNICAL WRITING</h3>
+                    <h3><u>TECHNICAL WRITING</u></h3>
                     <ul>
                         <li>
                             <p>
@@ -111,7 +111,7 @@ class Resume extends Component {
                             </p>
                         </li>
                     </ul>
-                    <h3>CUSTOMER RELATIONS</h3>
+                    <h3><u>CUSTOMER RELATIONS</u></h3>
                     <ul>
                         <li>
                             <p>
@@ -139,44 +139,44 @@ class Resume extends Component {
                 <div className="Resume-divider">
                     <p className="Resume-divider-text">PROFESSIONAL EXPERIENCE</p>
                 </div>
-                    <table>
+                    <table className="Resume-exp-table">
                         <tr>
-                            <td>
+                            <td className="ul-left">
                                 <b>Contract Compliance Specialist</b>, LogistiCare Solutions, Atlanta, GA
                             </td>
-                            <td>
+                            <td className="ul-right">
                                 2015 - 2019
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="ul-left">
                                 <b>Job Coach and Claims Specialist</b>, LogistiCare Solutions, Atlanta GA
                             </td>
-                            <td>
+                            <td className="ul-right">
                                 2012 - 2015
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="ul-left">
                                 <b>Provider Enrollment Specialist</b>, Affilliated Computer Services, Anchorage AK
                             </td>
-                            <td>
+                            <td className="ul-right">
                                 2009 - 2011
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="ul-left">
                                 <b>Claims Processor</b>, Affiliated Computer Services, Anchorage AK
                             </td>
-                            <td>
+                            <td className="ul-right">
                                 2007 - 2009
                             </td>
                         </tr>
                         <tr>
-                            <td>
+                            <td className="ul-left">
                                 <b>Freelance Contractor</b>, PangoMedia, Anchorage AK
                             </td>
-                            <td>
+                            <td className="ul-right">
                                 2005 - 2006
                             </td>
                         </tr>

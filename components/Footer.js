@@ -10,7 +10,7 @@ class Footer extends React.Component {
             <div>
                 <div className="email">
                     <ul className="navbar-default horizontal-ul">
-                        <li className="horizontal-li">
+                        <li className="h-li">
                             <a href = "mailto: mark@fioca.com">Send Email</a>
                         </li>
                     </ul>
