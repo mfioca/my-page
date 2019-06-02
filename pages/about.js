@@ -7,7 +7,10 @@ class About extends Component {
     render() {
         return (
             <Layout>
-                <h1>This is my About Page Idiot!</h1>
+                <h1>
+                    About Page under construction,
+                    the information below came with the table.
+                </h1>
                 <table>
                     <tr>
                         <th>Company</th>

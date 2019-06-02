@@ -151,14 +151,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-        className: "navbar-default nav-ul",
+        className: "navbar-default horizontal-ul",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "nav-li",
+        className: "horizontal-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
@@ -243,14 +243,14 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
-        className: "navbar-default nav-ul",
+        className: "navbar-default horizontal-ul",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "nav-li",
+        className: "horizontal-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
@@ -270,7 +270,7 @@ function (_React$Component) {
         },
         __self: this
       }, "Home"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "nav-li",
+        className: "horizontal-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
@@ -290,7 +290,7 @@ function (_React$Component) {
         },
         __self: this
       }, "About"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        className: "nav-li",
+        className: "horizontal-li",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
@@ -309,29 +309,49 @@ function (_React$Component) {
           lineNumber: 27
         },
         __self: this
-      }, "TicTacToe"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "google",
+      }, "TicTacToe"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+        className: "horizontal-li",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        href: "/resume",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 32
         },
         __self: this
+      }, "Resume"))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "google",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 40
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -339,13 +359,13 @@ function (_React$Component) {
         height: "20",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 41
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 43
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -353,21 +373,21 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         name: "q",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 45
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 46
         },
         __self: this
       })))))));
@@ -2035,101 +2055,101 @@ function (_Component) {
           lineNumber: 10
         },
         __self: this
-      }, "This is my About Page Idiot!"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("table", {
-        className: "jsx-1279096838",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        className: "jsx-1279096838",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("th", {
-        className: "jsx-1279096838",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }, "Company"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("th", {
+      }, "About Page under construction, the information below came with the table."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("table", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 14
         },
         __self: this
-      }, "Contact"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("th", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
         },
         __self: this
-      }, "Country")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("th", {
+        className: "jsx-1279096838",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, "Company"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("th", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 17
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+      }, "Contact"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("th", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 18
         },
         __self: this
-      }, "Alfreds Futterkiste"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        className: "jsx-1279096838",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      }, "Maria Anders"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+      }, "Country")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 20
         },
         __self: this
-      }, "Germany")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+        className: "jsx-1279096838",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, "Alfreds Futterkiste"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+      }, "Maria Anders"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
         },
         __self: this
-      }, "Centro commercial Moctezuma"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        className: "jsx-1279096838",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      }, "Francisco Change"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+      }, "Germany")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         className: "jsx-1279096838",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
         },
         __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+        className: "jsx-1279096838",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, "Centro commercial Moctezuma"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+        className: "jsx-1279096838",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, "Francisco Change"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+        className: "jsx-1279096838",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
       }, "Mexico"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_5___default.a, {
         id: "1279096838",
         __self: this
-      }, "table.jsx-1279096838{font-family:ariel,sansserif;border-collapse:collaps;width:100%;}td.jsx-1279096838,th.jsx-1279096838{border:1px solid #dddddd;text-align:left;padding:8px;}tr.jsx-1279096838:nth-child(even){background-color:#dddddd;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGFib3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQTJCNEIsQUFHc0QsQUFNSixBQU1BLHlCQUxULEFBTXBCLEdBWjRCLGFBT1osV0FORCxDQU9mLFVBTkEiLCJmaWxlIjoiQzpcXFVzZXJzXFxNYXJrXFxEZXNrdG9wXFxuZXd0ZXN0XFxteS1wYWdlXFxwYWdlc1xcYWJvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgQ29tcG9uZW50IH0gZnJvbSAncmVhY3QnXHJcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9sYXlvdXQnXHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcclxuXHJcblxyXG5jbGFzcyBBYm91dCBleHRlbmRzIENvbXBvbmVudCB7XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPExheW91dD5cclxuICAgICAgICAgICAgICAgIDxoMT5UaGlzIGlzIG15IEFib3V0IFBhZ2UgSWRpb3QhPC9oMT5cclxuICAgICAgICAgICAgICAgIDx0YWJsZT5cclxuICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5Db21wYW55PC90aD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHRoPkNvbnRhY3Q8L3RoPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8dGg+Q291bnRyeTwvdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5BbGZyZWRzIEZ1dHRlcmtpc3RlPC90ZD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHRkPk1hcmlhIEFuZGVyczwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5HZXJtYW55PC90ZD5cclxuICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHRkPkNlbnRybyBjb21tZXJjaWFsIE1vY3RlenVtYTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgIDx0ZD5GcmFuY2lzY28gQ2hhbmdlPC90ZD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHRkPk1leGljbzwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgIDwvdGFibGU+XHJcbiAgICAgICAgICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICAgICAgICAgICAgdGFibGUge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBmb250LWZhbWlseTogYXJpZWwsIHNhbnNzZXJpZjtcclxuICAgICAgICAgICAgICAgICAgICAgICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcclxuICAgICAgICAgICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIHRkLCB0aCB7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNkZGRkZGQ7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHRleHQtYWxpZ246IGxlZnQ7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHBhZGRpbmc6IDhweDtcclxuICAgICAgICAgICAgICAgICAgICB9XHJcblxyXG4gICAgICAgICAgICAgICAgICAgIHRyOm50aC1jaGlsZChldmVuKSB7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNkZGRkZGQ7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgYH1cclxuICAgICAgICAgICAgICAgIDwvc3R5bGU+XHJcbiAgICAgICAgICAgIDwvTGF5b3V0PlxyXG4gICAgICAgIClcclxuICAgIH1cclxufVxyXG5cclxuZXhwb3J0IGRlZmF1bHQgQWJvdXQ7Il19 */\n/*@ sourceURL=C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\about.js */"));
+      }, "table.jsx-1279096838{font-family:ariel,sansserif;border-collapse:collaps;width:100%;}td.jsx-1279096838,th.jsx-1279096838{border:1px solid #dddddd;text-align:left;padding:8px;}tr.jsx-1279096838:nth-child(even){background-color:#dddddd;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGFib3V0LmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThCNEIsQUFHc0QsQUFNSixBQU1BLHlCQUxULEFBTXBCLEdBWjRCLGFBT1osV0FORCxDQU9mLFVBTkEiLCJmaWxlIjoiQzpcXFVzZXJzXFxNYXJrXFxEZXNrdG9wXFxuZXd0ZXN0XFxteS1wYWdlXFxwYWdlc1xcYWJvdXQuanMiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3QsIHsgQ29tcG9uZW50IH0gZnJvbSAncmVhY3QnXHJcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vY29tcG9uZW50cy9sYXlvdXQnXHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcclxuXHJcblxyXG5jbGFzcyBBYm91dCBleHRlbmRzIENvbXBvbmVudCB7XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPExheW91dD5cclxuICAgICAgICAgICAgICAgIDxoMT5cclxuICAgICAgICAgICAgICAgICAgICBBYm91dCBQYWdlIHVuZGVyIGNvbnN0cnVjdGlvbixcclxuICAgICAgICAgICAgICAgICAgICB0aGUgaW5mb3JtYXRpb24gYmVsb3cgY2FtZSB3aXRoIHRoZSB0YWJsZS5cclxuICAgICAgICAgICAgICAgIDwvaDE+XHJcbiAgICAgICAgICAgICAgICA8dGFibGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8dGg+Q29tcGFueTwvdGg+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0aD5Db250YWN0PC90aD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPHRoPkNvdW50cnk8L3RoPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8dGQ+QWxmcmVkcyBGdXR0ZXJraXN0ZTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5NYXJpYSBBbmRlcnM8L3RkPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8dGQ+R2VybWFueTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5DZW50cm8gY29tbWVyY2lhbCBNb2N0ZXp1bWE8L3RkPlxyXG4gICAgICAgICAgICAgICAgICAgICA8dGQ+RnJhbmNpc2NvIENoYW5nZTwvdGQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5NZXhpY288L3RkPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICA8L3RhYmxlPlxyXG4gICAgICAgICAgICAgICAgPHN0eWxlIGpzeD57YFxyXG4gICAgICAgICAgICAgICAgICAgIHRhYmxlIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgZm9udC1mYW1pbHk6IGFyaWVsLCBzYW5zc2VyaWY7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGJvcmRlci1jb2xsYXBzZTogY29sbGFwcztcclxuICAgICAgICAgICAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgICAgICB0ZCwgdGgge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkZGRkO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB0ZXh0LWFsaWduOiBsZWZ0O1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBwYWRkaW5nOiA4cHg7XHJcbiAgICAgICAgICAgICAgICAgICAgfVxyXG5cclxuICAgICAgICAgICAgICAgICAgICB0cjpudGgtY2hpbGQoZXZlbikge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZGRkZGRkO1xyXG4gICAgICAgICAgICAgICAgICAgIH1cclxuICAgICAgICAgICAgICAgIGB9XHJcbiAgICAgICAgICAgICAgICA8L3N0eWxlPlxyXG4gICAgICAgICAgICA8L0xheW91dD5cclxuICAgICAgICApXHJcbiAgICB9XHJcbn1cclxuXHJcbmV4cG9ydCBkZWZhdWx0IEFib3V0OyJdfQ== */\n/*@ sourceURL=C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\about.js */"));
     }
   }]);
 

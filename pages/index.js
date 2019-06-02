@@ -8,7 +8,12 @@ class Home extends Component {
     render() {
         return (
             <Layout>
-                <h1>This is my home page Idiot!!</h1>
+                <h1>Home Page Under Construction</h1>
+                <img className="Lemons" src="../static/images/lemons.jpg" />
+                <p className="copywrite-text center">
+                    This picture and everything in it is owned by the Valve Corpration.
+                    All Rights Reserved.
+                </p>
             </Layout>
         )
     }

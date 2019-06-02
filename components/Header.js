@@ -11,20 +11,25 @@ class NavBar extends React.Component {
         return (
             <div>
                 <div className="navbar navbar-default">
-                    <ul className="navbar-default nav-ul">
-                        <li className="nav-li">
+                    <ul className="navbar-default horizontal-ul">
+                        <li className="horizontal-li">
                             <Link href="/">
                                 <a>Home</a>
                             </Link>
                         </li>
-                        <li className="nav-li">
+                        <li className="horizontal-li">
                             <Link href="/about">
                                 <a>About</a>
                             </Link>
                         </li>
-                        <li className="nav-li">
+                        <li className="horizontal-li">
                             <Link href="/tictactoe">
                                 <a>TicTacToe</a>
+                            </Link>
+                        </li>
+                        <li className="horizontal-li">
+                            <Link href="/resume">
+                                <a>Resume</a>
                             </Link>
                         </li>
                     </ul>  
