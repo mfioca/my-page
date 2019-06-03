@@ -3,6 +3,8 @@
     padding: 5px;
 }
 
+
+
 /* *********************** 
 *   Text Formatting      * 
 **************************/
@@ -97,20 +99,27 @@ a:hover {
     background-size: 100% 50px;
 }
 
-.google, .email {
-    float: right;
-    right: 0; 
-    margin: 10px 10px;
-}
-
-.navbar {
+.Navbar {
+    display: flex;
     float: left;
-    left: 0;
+    flex-direction: row;
 }
 
-.navbar-default > ul > li > a {
-    font-weight: 600;
-    margin: 0px 20px;
+.Navbar > div {
+    width: 80px;
+    margin: 5px; 
+    line-height: 40px;
+}
+
+.google, .email {
+    display: flex;
+    float: right;
+    flex-direction: row;
+}
+
+.google, .email > div {
+    margin-top: 15px;
+    margin-right: 15px;
 }
 
 /* *********************** 
