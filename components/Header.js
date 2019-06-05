@@ -2,9 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Link from 'next/link'
 
-const linkStyle = {
-    marginRight: 15
-}
 
 class NavBar extends React.Component {
     render() {

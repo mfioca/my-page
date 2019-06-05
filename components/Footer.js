@@ -8,16 +8,16 @@ class Footer extends React.Component {
     render() {
         return (
             <div>
-                <div className="Navbar center">
+                <div className="Footer-nav center">
                     <div>
-                        < a href="https://www.linkedin.com/in/mark-fioca/" target="_blank">
+                        <a href="https://www.linkedin.com/in/mark-fioca/" target="_blank">
                             Linkedln
                         </a>
                     </div>
                     <div>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
+                        <a href="https://www.deviantart.com/franknmullet" target="_blank">
+                            Deviantart
+                        </a>
                     </div>
                     <div>
                         <Link href="/resume">

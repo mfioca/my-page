@@ -32,40 +32,22 @@
     line-height: 1;
 }
 
+.Res-body > div {
+    font-family: "Times New Roman", Times, serif;
+}
+
 /* *********************** 
 *   Lists and tables     * 
 **************************/
 
-.h-ul {
-    list-style-type: none;  
-}
-
-.h-li {
-    display: inline-block;
-}
-
 .Res-title-li {
     padding: 0px 20px;
-}
-
-.ul-left {
-    text-align: left;
-}
-
-.ul-right {
-    text-align: right;
 }
 
 .Res-table {
     border-collapse: collapse;
     width: 100%;
     margin-left: 5px;
-}
-
-.Resume-exp-table {
-    border-collapse: collapse;
-    width: 50%;
-    margin-right: 50px;
 }
 
 /* *********************** 
@@ -133,6 +115,7 @@ a:hover {
 **************************/
 
 .Body {
+    flex-direction: column;
     border: 1px solid;
     min-height: 100vh;
     font-size: 14px;
@@ -149,6 +132,7 @@ a:hover {
     font-size: 10px
 }
 
+
 /* Resume Page */
 
 .Res-container {
@@ -159,10 +143,6 @@ a:hover {
     border: 2px solid;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-.Res-body > div {
-    font-family: "Times New Roman", Times, serif;
 }
 
 .Res-section {
@@ -176,6 +156,7 @@ a:hover {
     width: 100%;
     border: 1px solid black;
 }
+
 
 /* *********************** 
 *        Footer          * 
@@ -196,7 +177,17 @@ a:hover {
     background-size: 100% 100px;
 }
 
-  
+.Footer-nav {
+    display: flex;
+    float: left;
+    flex-direction: row;
+}
+
+.Footer-nav > div {
+    width: 100px;
+    margin: 5px; 
+    line-height: 40px;
+}
   
 
 

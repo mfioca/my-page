@@ -1,54 +1,22 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
 import Link from 'next/link'
+import ReactDOM from 'react-dom'
+import App from './about_content/aboutapp'
 
 
-class About extends Component {
+class Aboutpage extends React.Component {
     render() {
         return (
+            <div>
             <Layout>
-                <h1>
-                    About Page under construction,
-                    the information below came with the table.
-                </h1>
-                <table>
-                    <tr>
-                        <th>Company</th>
-                        <th>Contact</th>
-                        <th>Country</th>
-                    </tr>
-                    <tr>
-                        <td>Alfreds Futterkiste</td>
-                        <td>Maria Anders</td>
-                        <td>Germany</td>
-                    </tr>
-                    <tr>
-                        <td>Centro commercial Moctezuma</td>
-                     <td>Francisco Change</td>
-                        <td>Mexico</td>
-                    </tr>
-                </table>
-                <style jsx>{`
-                    table {
-                        font-family: ariel, sansserif;
-                        border-collapse: collaps;
-                        width: 100%;
-                    }
-
-                    td, th {
-                        border: 1px solid #dddddd;
-                        text-align: left;
-                        padding: 8px;
-                    }
-
-                    tr:nth-child(even) {
-                        background-color: #dddddd;
-                    }
-                `}
-                </style>
+                <div id="App">
+                    <App />
+                </div>
             </Layout>
+            </div>
         )
     }
 }
 
-export default About;
+export default Aboutpage

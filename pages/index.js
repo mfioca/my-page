@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import Link from 'next/link'
+import Test from './app'
 
 
 
@@ -14,9 +15,11 @@ class Home extends Component {
                     This picture and everything in it is owned by the Valve Corpration.
                     All Rights Reserved.
                 </p>
+                <div id="Test"><Test /></div>
             </Layout>
         )
     }
 }
+
 
 export default Home;

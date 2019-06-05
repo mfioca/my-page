@@ -12,8 +12,8 @@ class Resume extends Component {
                         <div className="Res-section">
                             <h1 className="center r-title">Resume</h1>
                             <ul className="center">
-                                <li className="h-li Res-title-li">Email: mark@fioca.com</li>
-                                <li className="h-li Res-title-li">www.linkedin.com/in/mark-fioca</li>
+                                <li className="inline-block Res-title-li">Email: mark@fioca.com</li>
+                                <li className="inline-block Res-title-li">www.linkedin.com/in/mark-fioca</li>
                             </ul>
                         </div>
                     </div>
@@ -139,42 +139,42 @@ class Resume extends Component {
                     <div className="Res-section">
                         <table className="Res-table">
                             <tr>
-                                <td className="ul-left">
+                                <td className="left">
                                     <b>Contract Compliance Specialist</b>, LogistiCare Solutions, Atlanta, GA
                                 </td>
-                                <td className="ul-right">
+                                <td className="right">
                                     2015 - 2019
                                 </td>
                             </tr>
                             <tr>
-                                <td className="ul-left">
+                                <td className="left">
                                     <b>Job Coach and Claims Specialist</b>, LogistiCare Solutions, Atlanta GA
                                 </td>
-                                <td className="ul-right">
+                                <td className="right">
                                     2012 - 2015
                                 </td>
                             </tr>
                             <tr>
-                                <td className="ul-left">
+                                <td className="left">
                                     <b>Provider Enrollment Specialist</b>, Affilliated Computer Services, Anchorage AK
                                 </td>
-                                <td className="ul-right">
+                                <td className="right">
                                     2009 - 2011
                                 </td>
                             </tr>
                             <tr>
-                                <td className="ul-left">
+                                <td className="left">
                                     <b>Claims Processor</b>, Affiliated Computer Services, Anchorage AK
                                 </td>
-                                <td className="ul-right">
+                                <td className="right">
                                     2007 - 2009
                                 </td>
                             </tr>
                             <tr>
-                                <td className="ul-left">
+                                <td className="left">
                                     <b>Freelance Contractor</b>, PangoMedia, Anchorage AK
                                 </td>
-                                <td className="ul-right">
+                                <td className="right">
                                     2005 - 2006
                                 </td>
                             </tr>
