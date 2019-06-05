@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout'
 import Link from 'next/link'
 import ReactDOM from 'react-dom'
-import App from './about_content/aboutapp'
+import App from './about_content/App'
 
 
 class Aboutpage extends React.Component {
