@@ -1,5 +1,5 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { Transition, TransitionGroup } from 'react-transition-group';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Transition, TransitionGroup } from 'react-transition-group'
 import ReactDOM from 'react-dom'
 import './index.css'
 import { play, exit } from './timelines'
@@ -40,4 +40,4 @@ class App extends Component {
   }
 }
   
-  export default App;
+  export default App
