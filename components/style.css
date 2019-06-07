@@ -36,6 +36,10 @@
     font-family: "Times New Roman", Times, serif;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 /* *********************** 
 *   Lists and tables     * 
 **************************/
@@ -135,7 +139,7 @@ a:hover {
 
 /* Resume Page */
 
-.Res-container {
+.about-container, .Res-container {
     margin-right: auto;
     margin-left: auto;
     flex-direction: column;
@@ -143,6 +147,7 @@ a:hover {
     border: 2px solid;
     padding-left: 10px;
     padding-right: 10px;
+    min-height: 100vh;
 }
 
 .Res-section {

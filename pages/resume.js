@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
-import Link from 'next/link'
+
+
 
 
 class Resume extends Component {
