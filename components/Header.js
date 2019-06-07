@@ -18,11 +18,6 @@ class NavBar extends React.Component {
                             <a>About</a>
                         </Link>
                     </div>
-                    <div>
-                        <Link href="/resume">
-                            <a>Resume</a>
-                        </Link>
-                    </div>
                 </div>
                 <div className="google">
                     <div>

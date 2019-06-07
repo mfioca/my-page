@@ -37,17 +37,22 @@ class Aboutpage extends React.Component {
     render() {
         return (
             <Layout>
-                <div>
-                    <p  
-                        className="pointer"
-                        onClick={this.aboutclick}>
-                        {this.state.showAbout ? 'About' : 'About'} 
-                    </p>
-                    <p className="pointer"
-                        onClick={this.resumeclick} >
-                        {this.state.showResume ? 'Resume' : 'Resume'}
-                    </p>
-                    
+                <div className="about_header ">
+                    <div className="about_nav center Fsize-3">
+                        <div>
+                            <a  
+                                className="pointer center"
+                                onClick={this.aboutclick}>
+                                {this.state.showAbout ? 'About' : 'About'} 
+                            </a>
+                        </div>
+                        <div>
+                            <a className="pointer center"
+                                onClick={this.resumeclick} >
+                                {this.state.showResume ? 'Resume' : 'Resume'}
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div>
                 <About about={this.state.showAbout}/>

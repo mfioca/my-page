@@ -236,36 +236,17 @@ function (_React$Component) {
           lineNumber: 18
         },
         __self: this
-      }, "About"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 21
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: "/resume",
+      }, "About")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "google",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 22
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, "Resume")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "google",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -273,13 +254,13 @@ function (_React$Component) {
         height: "20",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 24
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -287,21 +268,21 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         name: "q",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 28
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 29
         },
         __self: this
       })))));
@@ -10365,7 +10346,7 @@ function (_Component) {
           lineNumber: 14
         },
         __self: this
-      }, "This picture and everything in it is owned by the Valve Corpration. All Rights Reserved."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "All pictures currently used and everything in them are owned by the Valve Corpration. All Rights Reserved."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         id: "Test",
         __source: {
           fileName: _jsxFileName,
