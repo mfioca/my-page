@@ -11,6 +11,9 @@ body {
 /* *********************** 
 *   Text Formatting      * 
 **************************/
+.Fsize-1 {
+    font-size: 14px;
+}
 
 .Fsize-2 {
     font-size: 20px;
@@ -18,10 +21,6 @@ body {
 
 .copywrite-text {
     font-size: 10px
-}
-
-.Fsize-3 {
-    font-size: 20px;
 }
 
 .center {
@@ -48,12 +47,12 @@ body {
     font-family: "Times New Roman", Times, serif;
 }
 
-.pointer {
-    cursor: pointer;
+.about_text-title {
+    color: navy;
 }
 
-.Wsize-1 {
-    width: 400px;
+.pointer {
+    cursor: pointer;
 }
 
 /* *********************** 
@@ -200,6 +199,7 @@ a:hover {
     margin-bottom: 10px;
     width: 800px;
     background-color: rgb(83, 101, 138);
+    color: rgb(87, 165, 190);
 }
 
 .about_text {
@@ -209,6 +209,7 @@ a:hover {
     float: right;
     display: block;
     text-align: left;
+    font-size: 14px;
 }
 
 .Res-section {

@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Link from 'next/link'
 
-
 class NavBar extends React.Component {
     render() {
         return (
@@ -38,3 +37,4 @@ class NavBar extends React.Component {
 
 
 export default NavBar;
+

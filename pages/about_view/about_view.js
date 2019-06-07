@@ -10,10 +10,10 @@ export function About(props) {
         <div className="about-container">
             <div className="about_section">
                 <div>
-                    <img className="about_img" src="../static/images/Cave_Johnson.png"></img>
+                    <img className="about_img" src="../static/images/avatar.jpg"></img>
                 </div>
                 <div className="about_text">
-                    <h1>About</h1>
+                    <h1 className="about_text-title">About</h1>
                     <p>
                         Movie, sci-fi and over all tech geek that always seeks out new and interesting
                         things to experience and learn.  I strive to keep an open mind on everything because
@@ -28,7 +28,7 @@ export function About(props) {
             </div>
             <div className="about_section">
                 <div className="about_text">
-                    <h1>Background</h1>
+                    <h1 className="about_text-title">Background</h1>
                     <p>
                         I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences 
                         when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated and saw 
@@ -45,7 +45,7 @@ export function About(props) {
                     <img className="about_img" src="../static/images/layout1.png"></img>
                 </div>
                 <div className="about_text">
-                    <h1>
+                    <h1 className="about_text-title">
                         Computers and UI design
                     </h1>
                     <p>

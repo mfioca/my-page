@@ -85,49 +85,30 @@ function (_React$Component) {
           lineNumber: 18
         },
         __self: this
-      }, "Deviantart")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        href: "/resume",
+      }, "Deviantart"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "email",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 23
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      }, "Resume")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "email",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 28
-        },
-        __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
         href: "mailto: mark@fioca.com",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 26
         },
         __self: this
       }, "Send Email")))));
@@ -188,65 +169,65 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 8
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "Navbar center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 9
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 10
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 11
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 12
         },
         __self: this
       }, "Home"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 16
+          lineNumber: 15
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 16
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 17
         },
         __self: this
       }, "About")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "google",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 21
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -254,13 +235,13 @@ function (_React$Component) {
         height: "20",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -268,21 +249,21 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         name: "q",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 28
         },
         __self: this
       })))));
@@ -11369,7 +11350,7 @@ function About(props) {
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     className: "about_img",
-    src: "../static/images/Cave_Johnson.png",
+    src: "../static/images/avatar.jpg",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
@@ -11383,6 +11364,7 @@ function About(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "about_text-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
@@ -11415,6 +11397,7 @@ function About(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "about_text-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
@@ -11469,6 +11452,7 @@ function About(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    className: "about_text-title",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 48
@@ -12111,7 +12095,7 @@ function Resumeabout(props) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!******************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fabout&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cabout.js ***!
   \******************************************************************************************************************************************/
@@ -12134,5 +12118,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=about.js.map

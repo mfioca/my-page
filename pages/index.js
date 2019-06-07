@@ -12,7 +12,7 @@ class Home extends Component {
                 <h1>Home Page Under Construction</h1>
                 <img className="Lemons" src="../static/images/lemons.jpg" />
                 <p className="copywrite-text center">
-                    All pictures currently used and everything in them are owned by the Valve Corpration.
+                    This picture and everything in it is owned by the Valve Corpration.
                     All Rights Reserved.
                 </p>
                 <div id="Test"><Test /></div>

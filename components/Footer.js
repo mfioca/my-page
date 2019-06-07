@@ -19,11 +19,6 @@ class Footer extends React.Component {
                             Deviantart
                         </a>
                     </div>
-                    <div>
-                        <Link href="/resume">
-                            <a>Resume</a>
-                        </Link>
-                    </div>
                 </div>
                 <div className="email">
                     <div>
