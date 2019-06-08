@@ -19,6 +19,10 @@ body {
     font-size: 20px;
 }
 
+.Fsize-3 {
+    font-size: 25px;
+}
+
 .copywrite-text {
     font-size: 10px
 }
@@ -55,6 +59,7 @@ body {
     cursor: pointer;
 }
 
+
 /* *********************** 
 *   Lists and tables     * 
 **************************/
@@ -89,6 +94,16 @@ a:hover {
     transform: scale(1.1);
 }
 
+
+a.about-header {
+    font-size: 
+}
+a.about-content {
+        color: black;
+        text-decoration: underline;
+        font-size: 14px;
+}
+
 /* *********************** 
 *       Images           * 
 **************************/
@@ -102,7 +117,6 @@ a:hover {
 
 .about_img {
     display: block;
-    float: left;
     object-fit: contain;
     width: 200px;
     height: 200px;
@@ -181,10 +195,7 @@ a:hover {
 
 .about-container, .Res-container {
     background-color: white;
-    margin-right: auto;
-    margin-left: auto;
     flex-direction: column;
-    width: 800px;
     border: 2px solid;
     padding-left: 10px;
     padding-right: 10px;
@@ -197,15 +208,16 @@ a:hover {
     flex-direction: row;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 800px;
+    padding-right: 50px;
+    padding-left: 50px;
     background-color: rgb(83, 101, 138);
     color: rgb(87, 165, 190);
 }
 
 .about_text {
     margin-top: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 100px;
+    padding-right: 100px;
     float: right;
     display: block;
     text-align: left;

@@ -11219,83 +11219,81 @@ function (_React$Component) {
         };
       });
     }
-    /*&& this.state.active}*/
-
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 37
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "about_header ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "about_nav center Fsize-3",
+        className: "about_nav center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        class: "pointer center Fsize-3",
+        onClick: this.aboutclick,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 42
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
-        className: "pointer center",
-        onClick: this.aboutclick,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        },
-        __self: this
       }, this.state.showAbout ? 'About' : 'About')), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 47
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
-        className: "pointer center",
+        className: "pointer center Fsize-3",
         onClick: this.resumeclick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 48
         },
         __self: this
       }, this.state.showResume ? 'Resume' : 'Resume')))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_about_view_about_view__WEBPACK_IMPORTED_MODULE_8__["default"], {
         about: this.state.showAbout,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 56
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 58
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_about_view_resume_view__WEBPACK_IMPORTED_MODULE_9__["default"], {
         resume: this.state.showResume,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 59
         },
         __self: this
       })));
@@ -11476,7 +11474,16 @@ function About(props) {
       lineNumber: 60
     },
     __self: this
-  }, "My Rainmeter theme is available to download through deviantart and you can click on my link in the footer to navigate to that page."))));
+  }, "My Rainmeter theme is available to download through deviantart and you can click ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: "https://www.deviantart.com/franknmullet",
+    target: "_blank",
+    className: "about-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, "here"), " or on my link in the footer to navigate to that page."))));
 }
 /* harmony default export */ __webpack_exports__["default"] = (About);
 
