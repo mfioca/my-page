@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Test from './app'
 
 
-const numbers = [1, 2, 3, 4, 5, 6];
+
 
 class Home extends Component {
     render() {
@@ -19,34 +19,12 @@ class Home extends Component {
                     This picture and everything in it is owned by the Valve Corpration.
                     All Rights Reserved.
                 </p>
-                <div id="Test">
-                    <Test />
-                </div>
-                <div>
-                    <NumberList numbers ={numbers}  />
-                </div>
-                
             </Layout>
         )
     }
 }
 
-function ListItem(props) {
-    return <li>{props.value}</li>;
-}
 
-function NumberList(props) {
-    const numbers = props.numbers;
-
-    return(
-        <ul>
-            {numbers.map((number) =>
-                <ListItem key={number.toString()}
-                value={number} />
-                )}
-        </ul>
-    );
-}
 
 
 export default Home;

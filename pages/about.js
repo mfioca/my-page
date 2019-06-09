@@ -9,7 +9,7 @@ class Aboutpage extends React.Component {
         super(props);
         this.state = {showAbout: true}
         this.aboutclick = this.aboutclick.bind(this);
-
+        
         this.state = {showResume: false}
         this.resumeclick = this.resumeclick.bind(this);
     }

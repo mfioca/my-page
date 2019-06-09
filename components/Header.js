@@ -1,5 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+
 
 
 class NavBar extends React.Component {
@@ -9,15 +9,24 @@ class NavBar extends React.Component {
                 <div className="Navbar center">
                     <div>
                         <a href="/">
-                            Home</a>
-                        
+                            Home
+                        </a>
                     </div>
                     <div>
                         <a href="/about">
-                            About</a>
-                        
+                            About
+                        </a>
                     </div>
-                    
+                    <div>
+                        <a href="/test">
+                            Test Page
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/tvpage">
+                            Tv Page
+                        </a>
+                    </div>
                 </div>
                 <div className="google">
                     <div>
@@ -37,22 +46,6 @@ class NavBar extends React.Component {
 }
 
 
+
 export default NavBar;
 
-/*
-<div>
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
-                    </div>
-                    <div>
-                        <Link href="/tvpage">
-                            <a>TV Show Feed</a>
-                        </Link>
-                    </div>
-*/
