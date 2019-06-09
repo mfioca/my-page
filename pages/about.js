@@ -39,7 +39,7 @@ class Aboutpage extends React.Component {
                     <div className="about_nav center">
                         <div>
                             <a  
-                                class="pointer center Fsize-3"
+                                className="pointer center Fsize-3"
                                 onClick={this.aboutclick}>
                                 {this.state.showAbout ? 'About' : 'About'} 
                             </a>

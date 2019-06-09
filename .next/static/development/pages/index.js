@@ -140,15 +140,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Header.js";
-
 
 
 
@@ -185,49 +182,37 @@ function (_React$Component) {
           lineNumber: 10
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 11
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, "Home"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 15
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 16
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        },
-        __self: this
-      }, "About")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "About"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "google",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -235,13 +220,13 @@ function (_React$Component) {
         height: "20",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 24
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("form", {
@@ -249,21 +234,21 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         name: "q",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
         type: "submit",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 29
         },
         __self: this
       })))));
@@ -274,6 +259,23 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (NavBar);
+/*
+<div>
+                        <Link href="/">
+                            <a>Home</a>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href="/about">
+                            <a>About</a>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href="/tvpage">
+                            <a>TV Show Feed</a>
+                        </Link>
+                    </div>
+*/
 
 /***/ }),
 
@@ -10285,6 +10287,7 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\index.js"
 
 
 
+var numbers = [1, 2, 3, 4, 5, 6];
 
 var Home =
 /*#__PURE__*/
@@ -10303,41 +10306,60 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 12
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 13
         },
         __self: this
-      }, "Home Page Under Construction"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+      }, "Home Page Under Construction"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, "I will be placing test items on this page as I go"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         className: "Lemons",
         src: "../static/images/lemons.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 17
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "copywrite-text center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 18
         },
         __self: this
       }, "This picture and everything in it is owned by the Valve Corpration. All Rights Reserved."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         id: "Test",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_app__WEBPACK_IMPORTED_MODULE_8__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 23
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(NumberList, {
+        numbers: numbers,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
         },
         __self: this
       })));
@@ -10346,6 +10368,37 @@ function (_Component) {
 
   return Home;
 }(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+function ListItem(props) {
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, props.value);
+}
+
+function NumberList(props) {
+  var numbers = props.numbers;
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
+    },
+    __self: this
+  }, numbers.map(function (number) {
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(ListItem, {
+      key: number.toString(),
+      value: number,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    });
+  }));
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 

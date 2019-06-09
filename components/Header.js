@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Link from 'next/link'
+
 
 class NavBar extends React.Component {
     render() {
@@ -8,15 +8,16 @@ class NavBar extends React.Component {
             <div>
                 <div className="Navbar center">
                     <div>
-                        <Link href="/">
-                            <a>Home</a>
-                        </Link>
+                        <a href="/">
+                            Home</a>
+                        
                     </div>
                     <div>
-                        <Link href="/about">
-                            <a>About</a>
-                        </Link>
+                        <a href="/about">
+                            About</a>
+                        
                     </div>
+                    
                 </div>
                 <div className="google">
                     <div>
@@ -38,3 +39,20 @@ class NavBar extends React.Component {
 
 export default NavBar;
 
+/*
+<div>
+                        <Link href="/">
+                            <a>Home</a>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href="/about">
+                            <a>About</a>
+                        </Link>
+                    </div>
+                    <div>
+                        <Link href="/tvpage">
+                            <a>TV Show Feed</a>
+                        </Link>
+                    </div>
+*/
