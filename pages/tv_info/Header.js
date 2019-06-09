@@ -4,14 +4,11 @@ const linkStyle = {
   marginRight: 15
 }
 
-export default function Header() {
+export default function Header2() {
   return (
     <div>
-      <Link href="/">
+      <Link href="/tvpage">
         <a style={linkStyle}>Home</a>
-      </Link>
-      <Link href="/about">
-        <a style={linkStyle}>About</a>
       </Link>
     </div>
   )

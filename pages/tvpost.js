@@ -2,7 +2,7 @@ import Layout from '../components/layout';
 import Layout2 from './tv_info/MyLayout';
 import fetch from 'isomorphic-unfetch';
 
-const Post = props => (
+const tvPost = props => (
   <Layout>
   <Layout2>
     <h1>{props.show.name}</h1>
@@ -12,7 +12,7 @@ const Post = props => (
   </Layout>
 );
 
-Post.getInitialProps = async function(context) {
+tvPost.getInitialProps = async function(context) {
   const { id } = context.query;
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
   const show = await res.json();
@@ -22,4 +22,4 @@ Post.getInitialProps = async function(context) {
   return { show };
 };
 
-export default Post;
+export default tvPost;

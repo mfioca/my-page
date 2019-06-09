@@ -1301,10 +1301,97 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./pages/post.js":
-/*!***********************!*\
-  !*** ./pages/post.js ***!
-  \***********************/
+/***/ "./pages/tv_info/Header.js":
+/*!*********************************!*\
+  !*** ./pages/tv_info/Header.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Header2; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tv_info\\Header.js";
+
+
+var linkStyle = {
+  marginRight: 15
+};
+function Header2() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: "/tvpage",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    style: linkStyle,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Home")));
+}
+
+/***/ }),
+
+/***/ "./pages/tv_info/MyLayout.js":
+/*!***********************************!*\
+  !*** ./pages/tv_info/MyLayout.js ***!
+  \***********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout2; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./pages/tv_info/Header.js");
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tv_info\\MyLayout.js";
+
+
+var layout2Style = {
+  margin: 20,
+  padding: 20,
+  border: '1px solid #DDD',
+  backgroundColor: 'white'
+};
+function Layout2(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    style: layout2Style,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), props.children);
+}
+
+/***/ }),
+
+/***/ "./pages/tvpost.js":
+/*!*************************!*\
+  !*** ./pages/tvpost.js ***!
+  \*************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1321,13 +1408,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\post.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tvpost.js";
 
 
 
 
 
-var Post = function Post(props) {
+var tvPost = function tvPost(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
@@ -1362,7 +1449,7 @@ var Post = function Post(props) {
   })));
 };
 
-Post.getInitialProps =
+tvPost.getInitialProps =
 /*#__PURE__*/
 function () {
   var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
@@ -1402,50 +1489,18 @@ function () {
   };
 }();
 
-/* harmony default export */ __webpack_exports__["default"] = (Post);
-
-/***/ }),
-
-/***/ "./pages/tv_info/MyLayout.js":
-/*!***********************************!*\
-  !*** ./pages/tv_info/MyLayout.js ***!
-  \***********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Layout2; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tv_info\\MyLayout.js";
-
-var layout2Style = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
-function Layout2(props) {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    style: layout2Style,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }, props.children);
-}
+/* harmony default export */ __webpack_exports__["default"] = (tvPost);
 
 /***/ }),
 
 /***/ 5:
-/*!*****************************!*\
-  !*** multi ./pages/post.js ***!
-  \*****************************/
+/*!*******************************!*\
+  !*** multi ./pages/tvpost.js ***!
+  \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\post.js */"./pages/post.js");
+module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\tvpost.js */"./pages/tvpost.js");
 
 
 /***/ }),
@@ -1638,4 +1693,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=post.js.map
+//# sourceMappingURL=tvpost.js.map
