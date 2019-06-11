@@ -5,7 +5,7 @@ import React from 'react'
 class NavBar extends React.Component {
     render() {
         return (
-            <div>
+            <div className="Header-container">
                 <div className="Navbar center">
                     <div>
                         <a href="/">
@@ -18,13 +18,13 @@ class NavBar extends React.Component {
                         </a>
                     </div>
                     <div>
-                        <a href="/test">
-                            Test Page
+                        <a href="/tvpage">
+                            Tv Page
                         </a>
                     </div>
                     <div>
-                        <a href="/tvpage">
-                            Tv Page
+                        <a href="/test">
+                            Test Page
                         </a>
                     </div>
                 </div>

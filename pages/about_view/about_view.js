@@ -12,7 +12,7 @@ export function About(props) {
                 <div>
                     <img className="about_img" src="../static/images/avatar.jpg"></img>
                 </div>
-                <div className="about_text">
+                <div className="about_text Fsize-1">
                     <h1 className="about_text-title">About</h1>
                     <p>
                         Movie, sci-fi and over all tech geek that always seeks out new and interesting
@@ -27,7 +27,7 @@ export function About(props) {
                 </div>
             </div>
             <div className="about_section">
-                <div className="about_text">
+                <div className="about_text Fsize-1">
                     <h1 className="about_text-title">Background</h1>
                     <p>
                         I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences 
@@ -44,7 +44,7 @@ export function About(props) {
                 <div>
                     <img className="about_img" src="../static/images/layout1.png"></img>
                 </div>
-                <div className="about_text">
+                <div className="about_text Fsize-1">
                     <h1 className="about_text-title">
                         Computers and UI design
                     </h1>
@@ -58,7 +58,7 @@ export function About(props) {
                         through this program.  I took that knowledge and experience and applied it to start learning javascript and the React environment.  
                     </p>
                     <p>
-                        My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet" target="_blank" className="about-content">here</a> or on my link in the footer to navigate to that page.  
+                        My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet" target="_blank">here</a> or on my link in the footer to navigate to that page.  
                     </p>
                 </div>
             </div>

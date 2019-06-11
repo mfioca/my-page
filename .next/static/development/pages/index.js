@@ -45,6 +45,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "Footer-container",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 10
@@ -161,6 +162,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "Header-container",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8
@@ -206,26 +208,26 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/test",
+        href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 21
         },
         __self: this
-      }, "Test Page")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Tv Page")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/tvpage",
+        href: "/test",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
         },
         __self: this
-      }, "Tv Page"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Test Page"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "google",
         __source: {
           fileName: _jsxFileName,
@@ -10320,25 +10322,19 @@ function (_Component) {
           lineNumber: 13
         },
         __self: this
-      }, "Home Page Under Construction"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }, "I will be placing test items on this page as I go"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
-        className: "Lemons",
+      }, "Home Page Under Construction"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
+        className: "Lemons center-page",
         src: "../static/images/lemons.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 14
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "copywrite-text center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 15
         },
         __self: this
       }, "This picture and everything in it is owned by the Valve Corpration. All Rights Reserved."));

@@ -45,6 +45,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "Footer-container",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 10
@@ -161,6 +162,7 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "Header-container",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 8
@@ -206,26 +208,26 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/test",
+        href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 21
         },
         __self: this
-      }, "Test Page")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Tv Page")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        href: "/tvpage",
+        href: "/test",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 26
         },
         __self: this
-      }, "Tv Page"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Test Page"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "google",
         __source: {
           fileName: _jsxFileName,

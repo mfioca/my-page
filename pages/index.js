@@ -11,10 +11,7 @@ class Home extends Component {
         return (
             <Layout>
                 <h1>Home Page Under Construction</h1>
-                <p>
-                    I will be placing test items on this page as I go
-                </p>
-                <img className="Lemons" src="../static/images/lemons.jpg" />
+                <img className="Lemons center-page" src="../static/images/lemons.jpg" />
                 <p className="copywrite-text center">
                     This picture and everything in it is owned by the Valve Corpration.
                     All Rights Reserved.

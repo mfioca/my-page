@@ -7,6 +7,11 @@ body {
     background-color: rgb(202, 202, 202);
 }
 
+.center-page {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 /* *********************** 
 *   Text Formatting      * 
@@ -78,26 +83,34 @@ body {
 *         Links          * 
 **************************/
 
-a:link {
+.Header-container a:link, .Footer-container a:link {
     font-size: 20px;
     color: #888888;
     transition: all .2s ease-in-out;
 }
 
-a:visited {
+.Header-container a:visited, .Footer-container a:visited {
     color: #888888;
 }
 
-a:hover {
+.Header-container a:hover, .Footer-container a:hover {
     font-size: 25px;
     color:#f2f2f2;
     transform: scale(1.1);
 }
 
-a.about-content {
-        color: black;
-        text-decoration: underline;
-        font-size: 14px;
+.about-container a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.about-container a:visited {
+    color: black;
+}
+
+.about-container a:hover {
+    color: pink;
+    text-decoration: underline;
 }
 
 /* *********************** 
@@ -107,8 +120,6 @@ a.about-content {
 .Lemons {
     display: block;
     width: 50%;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .about_img {
@@ -116,8 +127,7 @@ a.about-content {
     object-fit: contain;
     width: 200px;
     height: 200px;
-    padding-top: 10px;
-    padding-right: 10px;
+    padding: 10px;
 }
 
 /* *********************** 
@@ -138,8 +148,8 @@ a.about-content {
 .Navbar > div, .about_nav > div {
     margin: 5px; 
     line-height: 40px;
-    height: 10px;
-    width: 200px;
+    width: 100px;
+    
 }
 
 .Navbar {
@@ -183,8 +193,6 @@ a.about-content {
     display: flex;
     flex-direction: row;
     background-color: rgb(37, 56, 82);
-    margin-right: auto;
-    margin-left: auto;
     width: 823px;
     height: 50px;
     color: white;
@@ -218,7 +226,6 @@ a.about-content {
     float: right;
     display: block;
     text-align: left;
-    font-size: 14px;
 }
 
 .Res-section {
@@ -263,10 +270,56 @@ a.about-content {
     line-height: 40px;
 }
   
+.box {
+    -webkit-transition:1s;
+}
+.box:active{
+    margin-left:-120px;
+ }
 
 
 
 
-
+.container {
+    position: relative;
+  }
+  
+  .display {
+    position: relative;
+    z-index: 1;
+    width: 120px;
+    height: 40px;
+    background-color: #5a564c;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 350ms;
+  }
+  
+  .display:active {
+    background-color: #000000;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    box-sizing: border-box;
+    width: 200px;
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: #9e8949;
+    border-radius: 5px;
+  }
+  
+  .list {
+    padding: 0;
+    list-style-type: star;
+  }
+  
+  .list-item {
+    padding: 5px 0;
+  }
 
 /*# sourceMappingURL=styles.chunk.css.map*/
