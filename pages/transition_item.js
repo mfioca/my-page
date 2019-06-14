@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import "../components/transitionstyle.css";
 
 class Testapp5 extends Component {
@@ -16,19 +15,19 @@ class Testapp5 extends Component {
     render() {
         return (
             <div className="container">
-            <button className="display" onClick={this.switch}>
-                List
-            </button>
-            {this.state.showList && (
-                <div className="menu">
-                    <ul className="list">
-                        <li className="list-item">Feed the dog</li>
-                        <li className="list-item">Cut hair</li>
-                        <li className="list-item">Do the dishes</li>
-                        <li className="list-item">Buy grossries</li>
-                    </ul>
-                </div>
-            )}
+                <button className="display" onClick={this.switch}>
+                    List
+                </button>
+                {this.state.showList && (
+                    <div className="menu">
+                        <ul className="list">
+                            <li className="list-item">Feed the dog</li>
+                            <li className="list-item">Cut hair</li>
+                            <li className="list-item">Do the dishes</li>
+                            <li className="list-item">Buy grossries</li>
+                        </ul>
+                    </div>
+                )}
             </div>
         );
     }

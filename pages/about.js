@@ -53,7 +53,7 @@ class Aboutpage extends React.Component {
                     </div>
                 </div>
                 <div>
-                <About about={this.state.showAbout}/>
+                    <About about={this.state.showAbout}/>
                 </div>
                 <div>
                     <Resume resume={this.state.showResume}/>

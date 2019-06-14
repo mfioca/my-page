@@ -2,14 +2,13 @@ import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import Test from './app'
 import Testapp5 from './transition_item'
+import Hero from './DandD/hero'
 
 const numbers = [1, 2, 3, 4, 5, 6];
 
 function ListItem(props) {
     return <li>{props.value}</li>;
 }
-
-
 
 function NumberList(props) {
     const numbers = props.numbers;
@@ -19,7 +18,7 @@ function NumberList(props) {
             {numbers.map((number) =>
                 <ListItem key={number.toString()}
                 value={number} />
-                )}
+            )}
         </ul>
     );
 }
@@ -52,6 +51,9 @@ class Testpage extends Component {
                 </div>
                 <div className="Testapp5">
                     <Testapp5 />
+                </div>
+                <div className="Hero">
+                    <Hero />
                 </div>
             </Layout>
         )

@@ -4,11 +4,11 @@ import fetch from 'isomorphic-unfetch';
 
 const tvPost = props => (
   <Layout>
-  <Layout2>
-    <h1>{props.show.name}</h1>
-    <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-    <img src={props.show.image.medium} />
-  </Layout2>
+    <Layout2>
+      <h1>{props.show.name}</h1>
+      <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
+      <img src={props.show.image.medium} />
+    </Layout2>
   </Layout>
 );
 

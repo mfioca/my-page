@@ -1340,10 +1340,72 @@ function (_Component) {
           lineNumber: 12
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "center-page center Fsize-2",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 13
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 14
+        },
+        __self: this
+      }, "Welcome to my page!"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, "This page has been created during my efforts to learn JavaScript ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }), "and the React development structure."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, "I will be posting different projects on these pages through ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }), "Development to fully formatted pages."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, "It is my intent to use this page as a professional page and portfolio as ", react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }), "I progress as a developer."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, "Please feel free to look around and email me with any questions or suggestions.")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "center-page center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
         },
         __self: this
       }, "Home Page Under Construction"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -1351,17 +1413,17 @@ function (_Component) {
         src: "../static/images/lemons.jpg",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 34
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "copywrite-text center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 15
+          lineNumber: 35
         },
         __self: this
-      }, "This picture and everything in it is owned by the Valve Corpration. All Rights Reserved."));
+      }, "This picture and everything in it is owned by the Valve Corpration. All Rights Reserved.")));
     }
   }]);
 

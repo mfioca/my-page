@@ -12,7 +12,7 @@ export function About(props) {
                 <div>
                     <img className="about_img" src="../static/images/avatar.jpg"></img>
                 </div>
-                <div className="about_text Fsize-1">
+                <div className="about_text Fsize-2">
                     <h1 className="about_text-title">About</h1>
                     <p>
                         Movie, sci-fi and over all tech geek that always seeks out new and interesting
@@ -27,7 +27,7 @@ export function About(props) {
                 </div>
             </div>
             <div className="about_section">
-                <div className="about_text Fsize-1">
+                <div className="about_text Fsize-2">
                     <h1 className="about_text-title">Background</h1>
                     <p>
                         I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences 
@@ -42,20 +42,19 @@ export function About(props) {
             </div>
             <div className="about_section">
                 <div>
-                    <img className="about_img" src="../static/images/layout1.png"></img>
+                    <img className="about_img" src="../static/images/rainmeter.png"></img>
                 </div>
-                <div className="about_text Fsize-1">
+                <div className="about_text Fsize-2">
                     <h1 className="about_text-title">
                         Computers and UI design
                     </h1>
                     <p>
-                        I first developed my interest in computers as a kid when constantly having to fix my computer after random problems 
-                        nd crashes.  I have owned both Windows and Mac machines.  When moving back to a windows machine from a Mac, my interest 
-                        in UI designed peaked because I wanted to change my desktop to be more like OSX.
+                        I first developed my interested in UI design when convirting back to a windows machine from a mac. I did not like how windows was 
+                        cet up and strived to make my desktop look and act more like OSX.
                     </p>
                     <p>
                         I learned about a program called Rainmeter and expanded my knowledge in programing developing my first full custom UI theme 
-                        through this program.  I took that knowledge and experience and applied it to start learning javascript and the React environment.  
+                        through this program.    
                     </p>
                     <p>
                         My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet" target="_blank">here</a> or on my link in the footer to navigate to that page.  

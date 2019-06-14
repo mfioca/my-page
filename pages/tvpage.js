@@ -7,17 +7,17 @@ import fetch from 'isomorphic-unfetch'
 const TvPage = props => (
     <Layout>
         <Layout2>
-      <h1>Batman TV Shows</h1>
-      <ul>
-        {props.shows.map(show => (
-          <li key={show.id}>
-            <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
-              <a>{show.name}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      </Layout2>
+          <h1>Batman TV Shows</h1>
+            <ul>
+              {props.shows.map(show => (
+                <li key={show.id}>
+                  <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
+                    <a>{show.name}</a>
+                  </Link>
+                </li>
+                ))}
+            </ul>
+        </Layout2>
     </Layout>
   );
 
