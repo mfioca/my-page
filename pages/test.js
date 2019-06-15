@@ -52,9 +52,7 @@ class Testpage extends Component {
                 <div className="Testapp5">
                     <Testapp5 />
                 </div>
-                <div className="Hero">
-                    <Hero />
-                </div>
+                
             </Layout>
         )
     }

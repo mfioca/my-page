@@ -21,7 +21,9 @@ class Testapp5 extends Component {
                 {this.state.showList && (
                     <div className="menu">
                         <ul className="list">
-                            <li className="list-item">Feed the dog</li>
+                            <li className="list-item">
+                                <a href="http://www.google.com" target="_blank" onClick={this.switch}>Google</a>
+                                </li>
                             <li className="list-item">Cut hair</li>
                             <li className="list-item">Do the dishes</li>
                             <li className="list-item">Buy grossries</li>

@@ -1,168 +1,134 @@
 import React, { Component } from 'react'
-
-var newHero = {
-    Str: 0,
-    Const: 0,
-    Dext: 0,
-    BaseHitPoints: 20,
-    BaseArmorClass: 10,
-    BaseDamage: 10,
-    BaseHitAdj: 0
-};
+import { newHero } from './hero'
 
 
-var HeroHp = 0;
-var HeroAc = 0;
-var HeroDmg = 0;
-var HeroHitAdj = 0;
+export function SetConstAdj() {
+    if (newHero.Const == 1) {
+        return -3;
+    }
+    if (newHero.Const == 2 || newHero.Const == 3) {
+        return -2;
+    }
+    if (newHero.Const >= 4 && newHero.Const <= 6) {
+        return -1;
+    }
+    if (newHero.Const >= 7 && newHero.Const <= 14) {
+        return 0;
+    }
+    if (newHero.Const == 15) {
+        return 1;
+    }
+    if (newHero.Const == 16) {
+        return 2;
+    }
+    if (newHero.Const == 17) {
+        return 3;
+    }
+    if (newHero.Const == 18) {
+        return 4;
+    }
+    if (newHero.Const == 19) {
+        return 5;
+    }
+    if (newHero.Const == 20) {
+        return 6;
+    }
+}
 
-var Constadj = { 
-    one: -3, two: -2, three: -1, four: 0,
-    five: 1, six: 2, seven: 3, eight: 4, nine: 5, ten: 6
-};
-
-var AcAdj = {
-    one: -5, two: -4, three: -3, four: -2, five: -1, six: 0,
-    seven: 1, eight: 2, nine: 3, ten: 4, eleven: 5
-};
-
-var DamageAdj = {
-    one: -4, two: -3, three: -2, four: -1, five: 0, six: 1,
-    seven: 2, eight: 3, nine: 4
-};
-
-var HitAdj = {
-    one: -4, two: -3, three: -2, four: -1, five: 0, six: 1,
-    seven: 2, eight: 3, nine: 4
-};
 
 export function setHitAdj() {
     if (newHero.Str == 1) {
-        return HitAdj.one;
+        return -4;
     }
     if (newHero.Str == 2 || newHero.Str == 3) {
-        return HitAdj.two;
+        return -3;
     }
     if (newHero.Str == 4 || newHero.Str == 5) {
-        return HitAdj.three;
+        return -2;
     }
     if (newHero.Str == 6 || newHero.Str == 7) {
-        return HitAdj.four;
+        return -1;
     }
     if (newHero.Str >= 8 && newHero.Str <= 16) {
-        return HitAdj.five;
+        return 0;
     }
     if (newHero.Str == 17 ) {
-        return HitAdj.six;
+        return 1;
     }
     if (newHero.Str == 18 ) {
-        return HitAdj.seven;
+        return 2;
     }
     if (newHero.Str == 19 ) {
-        return HitAdj.eight;
+        return 3;
     }
     if (newHero.Str == 20 ) {
-        return HitAdj.nine;
+        return 4;
     }
 }
 
 export function setDmgAdj() {
     if (newHero.Str == 1) {
-        return DamageAdj.one;
+        return -4;
     }
     if (newHero.Str == 2 || newHero.Str == 3) {
-        return DamageAdj.two;
+        return -3;
     }
     if (newHero.Str == 4 || newHero.Str == 5) {
-        return DamageAdj.three;
+        return -2;
     }
     if (newHero.Str == 6 || newHero.Str == 7) {
-        return DamageAdj.four;
+        return -1;
     }
     if (newHero.Str >= 8 && newHero.Str <= 16) {
-        return DamageAdj.five;
+        return 0;
     }
     if (newHero.Str == 17 ) {
-        return DamageAdj.six;
+        return 1;
     }
     if (newHero.Str == 18 ) {
-        return DamageAdj.seven;
+        return 2;
     }
     if (newHero.Str == 19 ) {
-        return DamageAdj.eight;
+        return 3;
     }
     if (newHero.Str == 20 ) {
-        return DamageAdj.nine;
+        return 4;
     }
 }
 
 export function setacAdj() {
     if (newHero.Dext == 1 || newHero.Dext == 2) {
-        return AcAdj.one;
+        return -5;
     }
     if (newHero.Dext == 3) {
-        return AcAdj.two;
+        return -4;
     }
     if (newHero.Dext == 4) {
-        return AcAdj.three;
+        return -3;
     }
     if (newHero.Dext == 5) {
-        return AcAdj.four;
+        return -2;
     }
     if (newHero.Dext == 6) {
-        return AcAdj.five;
+        return -1;
     }
     if (newHero.Dext >= 7 && newHero.Dext <= 14) {
-        return AcAdj.six;
+        return 0;
     }
     if (newHero.Dext == 15) {
-        return AcAdj.seven;
+        return 1;
     }
     if (newHero.Dext == 16) {
-        return AcAdj.eight;
+        return 2;
     }
     if (newHero.Dext == 17) {
-        return AcAdj.nine;
+        return 3;
     }
     if (newHero.Dext == 18 || newHero.Dext == 19) {
-        return AcAdj.ten;
+        return 4;
     }
     if (newHero.Dext == 20) {
-        return AcAdj.eleven;
+        return 5;
     }
 }
-
-export function SetConstAdj() {
-    if (newHero.Const == 1) {
-        return Constadj.one;
-    }
-    if (newHero.Const == 2 || newHero.Const == 3) {
-        return Constadj.two;
-    }
-    if (newHero.Const >= 4 && newHero.Const <= 6) {
-        return Constadj.three;
-    }
-    if (newHero.Const >= 7 && newHero.Const <= 14) {
-        return Constadj.four;
-    }
-    if (newHero.Const == 15) {
-        return Constadj.five;
-    }
-    if (newHero.Const == 16) {
-        return Constadj.six;
-    }
-    if (newHero.Const == 17) {
-        return Constadj.seven;
-    }
-    if (newHero.Const == 18) {
-        return Constadj.eight;
-    }
-    if (newHero.Const == 19) {
-        return Constadj.nine;
-    }
-    if (newHero.Const == 20) {
-        return Constadj.ten;
-    }
-}
-
 

@@ -35,7 +35,7 @@ class Aboutpage extends React.Component {
     render() {
         return (
             <Layout>
-                <div className="about_header center-page">
+                <div className="about_header">
                     <div className="about_nav center">
                         <div>
                             <a  

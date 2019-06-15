@@ -1,4 +1,5 @@
 import React from 'react'
+import Headerdropdown from './Header_dropdown'
 
 
 
@@ -17,15 +18,8 @@ class NavBar extends React.Component {
                             About
                         </a>
                     </div>
-                    <div>
-                        <a href="/tvpage">
-                            Tv Page
-                        </a>
-                    </div>
-                    <div>
-                        <a href="/test">
-                            Test Page
-                        </a>
+                    <div className="Headerdropdown">
+                        <Headerdropdown />
                     </div>
                 </div>
                 <div className="google">
@@ -48,4 +42,23 @@ class NavBar extends React.Component {
 
 
 export default NavBar;
+
+
+/*
+<div>
+                        <a href="/tvpage">
+                            Tv
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/test">
+                            Test
+                        </a>
+                    </div>
+                    <div>
+                        <a href="/DandD_page">
+                            DandD
+                        </a>
+                    </div>
+                    */
 
