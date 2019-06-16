@@ -220,8 +220,7 @@ body {
 **************************/
 
 .about_header {
-    display: flex;
-    flex-direction: row;
+    
     margin-right: auto;
     margin-left: auto;
     background-color: rgb(37, 56, 82);
@@ -230,10 +229,16 @@ body {
     color: white;
 }
 
-.about-container, .Res-container {
+.about-container {
     background-color: white;
     flex-direction: column;
     min-height: 100vh;
+}
+
+.Res-container {
+    background-color: white;
+    flex-direction: column;
+    padding: 10px;
 }
 
 .about_section {
@@ -349,46 +354,5 @@ body {
 
 
 
-.container {
-    position: relative;
-  }
-  
-  .display {
-    position: relative;
-    z-index: 1;
-    width: 120px;
-    height: 40px;
-    background-color: #5a564c;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 350ms;
-  }
-  
-  .display:active {
-    background-color: #000000;
-  }
-  
-  .menu {
-    position: absolute;
-    top: 60px;
-    z-index: 1;
-    box-sizing: border-box;
-    width: 200px;
-    padding: 0 20px;
-    overflow: hidden;
-    background-color: #9e8949;
-    border-radius: 5px;
-  }
-  
-  .list {
-    padding: 0;
-    list-style-type: star;
-  }
-  
-  .list-item {
-    padding: 5px 0;
-  }
 
 /*# sourceMappingURL=styles.chunk.css.map*/

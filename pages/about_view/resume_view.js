@@ -7,7 +7,7 @@ function Resumeabout(props) {
 
     return(
         <div>
-            <div className="about-container">
+            <div className="Res-container">
                 <div className="Res-body">
                     <div className="Res-section">
                         <h1 className="center r-title">Resume</h1>
