@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { newHero } from './hero'
 
 
+
 export function SetConstAdj() {
     if (newHero.Const == 1) {
         return -3;
@@ -131,4 +132,6 @@ export function setacAdj() {
         return 5;
     }
 }
+
+
 

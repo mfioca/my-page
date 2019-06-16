@@ -1,11 +1,8 @@
 import React from 'react'
-import { newHero } from './hero'
-import { HeroHp } from './hero'
-import { HeroAc } from './hero'
-import { HeroDmg } from './hero'
 import { Monster } from './monster'
 export { MonsteradjStats}
 export { HeroadjStats }
+
 //import { HeroHitAdj } from './hero'
 
 var MonsteradjStats = {
@@ -24,32 +21,55 @@ var HeroadjStats = {
 
 
 
-var roll = 0;
+var Heroroll = 0;
+var Monsterroll = 0;
 
-var didhit = " ";
+var Herodidhit = " ";
+var Monsterdidhit = " ";
 
+
+function heroattackroll() {
+    //Heroroll = Math.floor((Math.random() * 20) + 1);
+    if (Heroroll >= (MonsteradjStats.MonsterAc + HeroadjStats.HeroHitAdj)) {
+        Herodidhit = "yes";
+        MonsteradjStats.MonsterHp = (MonsteradjStats.MonsterHp - 10);
+        if (MonsteradjStats.MonsterHp <= 0 ) {
+            MonsteradjStats.MonsterHp = "Monster is dead";
+        }
+    } else {
+        Herodidhit = "no";
+    };
+}
+
+function Monsterattackroll() {
+    if (Monsterroll >= (HeroadjStats.HeroAc + MonsteradjStats.MonsterHitAdj)) {
+        Monsterdidhit = "yes";
+        HeroadjStats.HeroHp = (HeroadjStats.HeroHp - 10);
+        if (HeroadjStats.HeroHp <= 0 ) {
+            HeroadjStats.HeroHp = "Hero is dead";
+        }
+    } else {
+        Monsterdidhit = "no";
+    };
+}
 
 
 class HeroAttackSim extends React.Component {
     constructor (props) {
         super(props);
-        const didhit = " ";
-        this.attackroll = this.attackroll.bind(this);
+        this.heroattack = this.heroattack.bind(this);
+        this.Monsterattack = this.Monsterattack.bind(this);
         this.refresh = this.refresh.bind(this);
     }
 
-    attackroll() {
-        roll = Math.floor((Math.random() * 20) + 1);
-        if (roll >= (MonsteradjStats.MonsterAc + HeroadjStats.HeroHitAdj)) {
-            didhit = "yes";
-            MonsteradjStats.MonsterHp = (MonsteradjStats.MonsterHp - 10);
-            if (MonsteradjStats.MonsterHp <= 0 ) {
-                MonsteradjStats.MonsterHp = "Monster is dead";
-            }
-        } else {
-            didhit = "no";
-        };
-        
+    heroattack() {
+        Heroroll = Math.floor((Math.random() * 20) + 1);
+        heroattackroll();
+        this.forceUpdate();
+    }
+    Monsterattack() {
+        Monsterroll = Math.floor((Math.random() * 20) + 1);
+        Monsterattackroll();
         this.forceUpdate();
     }
 
@@ -60,15 +80,34 @@ class HeroAttackSim extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.refresh}>Refresh stats</button>
-                <p>MonsterAC = { MonsteradjStats.MonsterAc }</p>
-                <p>Hero Hit Adjustment = { HeroadjStats.HeroHitAdj }</p>
-                <button onClick={this.attackroll}>
-                    Roll to hit
-                </button>
-                <p>Result of attack = { didhit }</p>
-                <p> Monster hit points = { MonsteradjStats.MonsterHp }</p>
+                <div className="DandD_attack">    
+                    <div className="Attack-container">
+                        
+                        <p>MonsterAC = { MonsteradjStats.MonsterAc }</p>
+                        <p>Hero Hit Adjustment = { HeroadjStats.HeroHitAdj }</p>
+                        <button onClick={this.heroattack}>
+                            Roll to hit
+                        </button>
+                        <p>Result of attack = { Herodidhit }</p>
+                        
+                    </div>
+                    <div className="Attack-container">
+                    <button className="Reset_stat-button" onClick={this.refresh}>Refresh stats</button>
+                    <p> Hero hit points = { HeroadjStats.HeroHp }</p>
+                    <p> Monster hit points = { MonsteradjStats.MonsterHp }</p>
+                    </div>
+                    <div className="Attack-container">
+                        <p>HeroAC = { HeroadjStats.HeroAc }</p>
+                        <p>Monster Hit Adjustment = { MonsteradjStats.MonsterHitAdj }</p>
+                        <button onClick={this.Monsterattack}>
+                            Roll to hit
+                        </button>
+                    <p>Result of attack = { Monsterdidhit }</p>
+                    
+                    </div>
+                </div>
             </div>
+    
         );
     }
 }

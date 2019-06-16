@@ -16,17 +16,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Footer.js";
-
 
 
 
@@ -48,20 +45,20 @@ function (_React$Component) {
         className: "Footer-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 9
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "Footer-nav center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 11
+          lineNumber: 10
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 11
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -69,13 +66,13 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 12
         },
         __self: this
       }, "Linkedln")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 16
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -83,33 +80,33 @@ function (_React$Component) {
         target: "_blank",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 17
         },
         __self: this
       }, "Deviantart"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_7___default.a, {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_6___default.a, {
         href: "mailto: mark@fioca.com",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         },
         __self: this
       }, "Send Email")))));
@@ -9325,17 +9322,6 @@ exports.encode = exports.stringify = __webpack_require__(/*! ./encode */ "./node
 
 /***/ }),
 
-/***/ "./node_modules/react-dom/index.js":
-/*!***********************************************************************************************!*\
-  !*** delegated ./node_modules/react-dom/index.js from dll-reference dll_6dc2816e14fab51b8269 ***!
-  \***********************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/react-dom/index.js");
-
-/***/ }),
-
 /***/ "./node_modules/react-is/cjs/react-is.development.js":
 /*!***********************************************************!*\
   !*** ./node_modules/react-is/cjs/react-is.development.js ***!
@@ -10432,13 +10418,13 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Hero);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Hero).call(this, props));
-    _this.handleClick = _this.handleClick.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.setherostats = _this.setherostats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Hero, [{
-    key: "handleClick",
-    value: function handleClick() {
+    key: "setherostats",
+    value: function setherostats() {
       newHero.Str = Math.floor(Math.random() * 20 + 1);
       newHero.Const = Math.floor(Math.random() * 20 + 1);
       newHero.Dext = Math.floor(Math.random() * 20 + 1);
@@ -10512,7 +10498,7 @@ function (_React$Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.handleClick,
+        onClick: this.setherostats,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 53
@@ -10548,8 +10534,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hero */ "./pages/DandD/hero.js");
-/* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./monster */ "./pages/DandD/monster.js");
+/* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./monster */ "./pages/DandD/monster.js");
 
 
 
@@ -10557,10 +10542,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\hero_attacksim.js";
-
-
-
-
 
 
 
@@ -10578,8 +10559,41 @@ var HeroadjStats = {
   HeroDmg: 0,
   HeroHitAdj: 0
 };
-var roll = 0;
-var didhit = " ";
+var Heroroll = 0;
+var Monsterroll = 0;
+var Herodidhit = " ";
+var Monsterdidhit = " ";
+
+function heroattackroll() {
+  //Heroroll = Math.floor((Math.random() * 20) + 1);
+  if (Heroroll >= MonsteradjStats.MonsterAc + HeroadjStats.HeroHitAdj) {
+    Herodidhit = "yes";
+    MonsteradjStats.MonsterHp = MonsteradjStats.MonsterHp - 10;
+
+    if (MonsteradjStats.MonsterHp <= 0) {
+      MonsteradjStats.MonsterHp = "Monster is dead";
+    }
+  } else {
+    Herodidhit = "no";
+  }
+
+  ;
+}
+
+function Monsterattackroll() {
+  if (Monsterroll >= HeroadjStats.HeroAc + MonsteradjStats.MonsterHitAdj) {
+    Monsterdidhit = "yes";
+    HeroadjStats.HeroHp = HeroadjStats.HeroHp - 10;
+
+    if (HeroadjStats.HeroHp <= 0) {
+      HeroadjStats.HeroHp = "Hero is dead";
+    }
+  } else {
+    Monsterdidhit = "no";
+  }
+
+  ;
+}
 
 var HeroAttackSim =
 /*#__PURE__*/
@@ -10592,29 +10606,24 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, HeroAttackSim);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(HeroAttackSim).call(this, props));
-    var didhit = " ";
-    _this.attackroll = _this.attackroll.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.heroattack = _this.heroattack.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.Monsterattack = _this.Monsterattack.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.refresh = _this.refresh.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(HeroAttackSim, [{
-    key: "attackroll",
-    value: function attackroll() {
-      roll = Math.floor(Math.random() * 20 + 1);
-
-      if (roll >= MonsteradjStats.MonsterAc + HeroadjStats.HeroHitAdj) {
-        didhit = "yes";
-        MonsteradjStats.MonsterHp = MonsteradjStats.MonsterHp - 10;
-
-        if (MonsteradjStats.MonsterHp <= 0) {
-          MonsteradjStats.MonsterHp = "Monster is dead";
-        }
-      } else {
-        didhit = "no";
-      }
-
-      ;
+    key: "heroattack",
+    value: function heroattack() {
+      Heroroll = Math.floor(Math.random() * 20 + 1);
+      heroattackroll();
+      this.forceUpdate();
+    }
+  }, {
+    key: "Monsterattack",
+    value: function Monsterattack() {
+      Monsterroll = Math.floor(Math.random() * 20 + 1);
+      Monsterattackroll();
       this.forceUpdate();
     }
   }, {
@@ -10628,48 +10637,108 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 82
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.refresh,
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "DandD_attack",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 83
         },
         __self: this
-      }, "Refresh stats"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 84
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
         },
         __self: this
       }, "MonsterAC = ", MonsteradjStats.MonsterAc), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 87
         },
         __self: this
       }, "Hero Hit Adjustment = ", HeroadjStats.HeroHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.attackroll,
+        onClick: this.heroattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 88
         },
         __self: this
       }, "Roll to hit"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 91
         },
         __self: this
-      }, "Result of attack = ", didhit), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Result of attack = ", Herodidhit)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 94
         },
         __self: this
-      }, " Monster hit points = ", MonsteradjStats.MonsterHp));
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "Reset_stat-button",
+        onClick: this.refresh,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, "Refresh stats"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: this
+      }, " Hero hit points = ", HeroadjStats.HeroHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }, " Monster hit points = ", MonsteradjStats.MonsterHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 100
+        },
+        __self: this
+      }, "HeroAC = ", HeroadjStats.HeroAc), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        },
+        __self: this
+      }, "Monster Hit Adjustment = ", MonsteradjStats.MonsterHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        onClick: this.Monsterattack,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        },
+        __self: this
+      }, "Roll to hit"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, "Result of attack = ", Monsterdidhit))));
     }
   }]);
 
@@ -11247,7 +11316,7 @@ function (_Component) {
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "DandD_section",
+        className: "DandD_stats",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 12
@@ -11319,20 +11388,13 @@ function (_Component) {
           lineNumber: 29
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "HeroAttackSim",
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_hero_attacksim__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_hero_attacksim__WEBPACK_IMPORTED_MODULE_9__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }))));
+      })));
     }
   }]);
 
@@ -11343,7 +11405,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 3:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FDandD_page&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5CDandD_page.js ***!
   \****************************************************************************************************************************************************/
@@ -11366,5 +11428,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=DandD_page.js.map

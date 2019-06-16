@@ -22,10 +22,10 @@ var newHero = {
 class Hero extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        this.setherostats = this.setherostats.bind(this);
     }
 
-    handleClick() {
+    setherostats() {
         newHero.Str = Math.floor((Math.random() * 20) + 1);
         newHero.Const = Math.floor((Math.random() * 20) + 1);
         newHero.Dext = Math.floor((Math.random() * 20) + 1);
@@ -50,7 +50,7 @@ class Hero extends React.Component {
                 <p>Hit Adjust: {HeroadjStats.HeroHitAdj}</p>
             </div>
             <div>
-            <button onClick={this.handleClick}>Set Attrubutes</button>
+            <button onClick={this.setherostats}>Set Attrubutes</button>
             </div>
             </div>
         );

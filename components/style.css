@@ -296,24 +296,44 @@ body {
 *      DandD Page        * 
 **************************/
 
-.DandD_section {
+.DandD_stats {
     display: flex;
     flex-wrap: nowrap;
     background-color: DodgerBlue;
-  }
+}
   
-  .DandD_section > div {
+.DandD_stats > div {
     background-color: #f1f1f1;
     margin: 10px;
     font-size: 15px;
     width: 50%;
-  }
+}
 
-  .Stats {
-      float: left;
-      line-height: 10px;
-      margin-left: 30px;
-  }
+.Stats {
+    float: left;
+    line-height: 10px;
+    margin-left: 30px;
+}
+
+.DandD_attack  {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: DodgerBlue;
+}
+
+  .Attack-container {
+    background-color: #f1f1f1;
+    margin: 10px;
+    font-size: 15px;
+    width: 50%;
+    
+}
+
+.Reset_stat-button {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
 
 /* *********************** 
 *        Footer          * 
