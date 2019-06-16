@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/transitionstyle.css";
+import "../components/style.css";
 
 class Headerdropdown extends React.Component {
     constructor(props) {
@@ -16,24 +16,26 @@ class Headerdropdown extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <button className="display" onClick={this.showList}>
-                    Projects
-                </button>
+            <div>
+                <a className = "center pointer Dropdown"
+                onMouseOver="this.className='Dropdown_hover'" 
+                onClick={this.showList}>
+                    <u>Projects</u>
+                </a>
                 {this.state.showList && (
-                    <div className="menu" onMouseLeave={this.showList}>
-                        <ul className="list">
-                            <li className="list-item">
+                    <div className="DropdownMenu" onMouseLeave={this.showList}>
+                        <ul className="Dropdown-list">
+                            <li className="Dropdown-list_item">
                                 <a href="/tvpage">
                                     Tv import
                                 </a>
                             </li>
-                            <li className="list-item">
+                            <li className="Dropdown-list_item">
                                 <a href="/DandD_page">
                                     DandD
                                 </a>
                             </li>
-                            <li className="list-item">
+                            <li className="Dropdown-list_item">
                                 <a href="/test">
                                     test
                                 </a>

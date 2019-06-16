@@ -4,6 +4,18 @@ import Headerdropdown from './Header_dropdown'
 
 
 class NavBar extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {showList: false};
+        this.showList = this.showList.bind(this);
+    }
+
+    showList() {
+        this.setState(prevState => ({
+            showList: !prevState.showList      
+        }));
+    };
+    
     render() {
         return (
             <div className="Header-container">
@@ -18,7 +30,7 @@ class NavBar extends React.Component {
                             About
                         </a>
                     </div>
-                    <div className="Headerdropdown">
+                    <div>
                         <Headerdropdown />
                     </div>
                 </div>

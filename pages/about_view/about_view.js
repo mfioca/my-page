@@ -8,7 +8,7 @@ export function About(props) {
 
     return (
         <div className="about-container">
-            <div className="about_section">
+            <div className="about_section about_gradient-left">
                 <div>
                     <img className="about_img" src="../static/images/avatar.jpg"></img>
                 </div>
@@ -26,7 +26,7 @@ export function About(props) {
                     </p>
                 </div>
             </div>
-            <div className="about_section">
+            <div className="about_section about_gradient-right">
                 <div className="about_text Fsize-2">
                     <h1 className="about_text-title">Background</h1>
                     <p>
@@ -40,7 +40,7 @@ export function About(props) {
                     <img className="about_img" src="../static/images/building.jpg"></img>
                 </div>
             </div>
-            <div className="about_section">
+            <div className="about_section about_gradient-left">
                 <div>
                     <img className="about_img" src="../static/images/rainmeter.png"></img>
                 </div>

@@ -7,7 +7,7 @@ class DandD extends Component {
     render() {
         return (
             <Layout>
-                <div className="flex-container">
+                <div className="DandD_section">
                     <div>
                         <span className="Stats">
                             <Hero />
