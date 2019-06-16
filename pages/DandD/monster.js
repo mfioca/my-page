@@ -4,6 +4,8 @@ import { setHitAdj } from './monster_functions';
 import { setDmgAdj } from './monster_functions';
 import { setacAdj } from './monster_functions';
 export { newMonster }
+import { MonsteradjStats } from './hero_attacksim'
+
 
 
 var newMonster = {
@@ -16,12 +18,6 @@ var newMonster = {
     BaseHitAdj: 0
 };
 
-var MonsterHp = 0;
-var MonsterAc = 0;
-var MonsterDmg = 0;
-var MonsterHitAdj = 0;
-
-
 class Monster extends React.Component {
     constructor(props) {
         super(props);
@@ -32,10 +28,10 @@ class Monster extends React.Component {
         newMonster.Str = Math.floor((Math.random() * 20) + 1);
         newMonster.Const = Math.floor((Math.random() * 20) + 1);
         newMonster.Dext = Math.floor((Math.random() * 20) + 1);
-        MonsterHp = (newMonster.BaseHitPoints) + (SetConstAdj());
-        MonsterAc = (newMonster.BaseArmorClass) + (setacAdj());
-        MonsterDmg = (newMonster.BaseDamage) + (setDmgAdj());
-        MonsterHitAdj = (newMonster.BaseHitAdj) + (setHitAdj());
+        MonsteradjStats.MonsterHp = (newMonster.BaseHitPoints) + (SetConstAdj());
+        MonsteradjStats.MonsterAc = (newMonster.BaseArmorClass) + (setacAdj());
+        MonsteradjStats.MonsterDmg = (newMonster.BaseDamage) + (setDmgAdj());
+        MonsteradjStats.MonsterHitAdj = (newMonster.BaseHitAdj) + (setHitAdj());
         this.forceUpdate();
     }
 
@@ -47,10 +43,10 @@ class Monster extends React.Component {
                 <p>Strength: {newMonster.Str}</p>
                 <p>Constitution: {newMonster.Const}</p>
                 <p>Dexterity: {newMonster.Dext}</p>
-                <p>Hitpoints: {MonsterHp}</p>
-                <p>Armor Class: {MonsterAc}</p>
-                <p>Base Damage: {MonsterDmg  }</p>
-                <p>Hit Adjust: {MonsterHitAdj}</p>
+                <p>Hitpoints: {MonsteradjStats.MonsterHp}</p>
+                <p>Armor Class: {MonsteradjStats.MonsterAc}</p>
+                <p>Base Damage: {MonsteradjStats.MonsterDmg  }</p>
+                <p>Hit Adjust: {MonsteradjStats.MonsterHitAdj}</p>
             </div>
             <div>
             <button onClick={this.handleClick}>Set Attrubutes</button>

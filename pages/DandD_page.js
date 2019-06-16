@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import Hero from './DandD/hero'
 import Monster from './DandD/monster'
+import HeroAttackSim from './DandD/hero_attacksim'
 
 class DandD extends Component {
+
     render() {
         return (
             <Layout>
@@ -14,7 +16,6 @@ class DandD extends Component {
                         </span>
                         
                             <img className="DnD_avatar" src="../static/images/hero.png" /> 
-                        
                     </div>
                     <div>
                         <span className="Stats">
@@ -25,6 +26,11 @@ class DandD extends Component {
                         </span>
                     </div>
                 </div>
+                <div>
+                    <div className= "HeroAttackSim">
+                        <HeroAttackSim />
+                    </div>
+                </div>
             </Layout>
         );
     }
@@ -32,26 +38,3 @@ class DandD extends Component {
 
 export default DandD;
 
-/*
-<Layout>
-                
-                <div className="DnD_characters">
-                    <div className= "Char_element">
-                        <div className="Stats">
-                            <Hero />
-                        </div>  
-                        <div>
-                            <img className="DnD_avatar" src="../static/images/hero.png" />
-                        </div>
-                    </div>
-                    <div className="Char_element">
-                        <div className="Stats">
-                            <Monster />
-                        </div>
-                    
-                        <div className="Char_element">
-                            <img className="DnD_avatar" src="../static/images/monster.png" />
-                        </div>
-                    </div>
-                </div>
-            </Layout> */

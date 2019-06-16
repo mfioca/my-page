@@ -3,7 +3,9 @@ import { SetConstAdj } from './hero_functions';
 import { setHitAdj } from './hero_functions';
 import { setDmgAdj } from './hero_functions';
 import { setacAdj } from './hero_functions';
+import { HeroadjStats } from './hero_attacksim';
 export { newHero }
+export { Hero }
 
 
 var newHero = {
@@ -16,11 +18,6 @@ var newHero = {
     BaseHitAdj: 0
 };
 
-var HeroHp = 0;
-var HeroAc = 0;
-var HeroDmg = 0;
-var HeroHitAdj = 0;
-
 
 class Hero extends React.Component {
     constructor(props) {
@@ -32,10 +29,10 @@ class Hero extends React.Component {
         newHero.Str = Math.floor((Math.random() * 20) + 1);
         newHero.Const = Math.floor((Math.random() * 20) + 1);
         newHero.Dext = Math.floor((Math.random() * 20) + 1);
-        HeroHp = (newHero.BaseHitPoints) + (SetConstAdj());
-        HeroAc = (newHero.BaseArmorClass) + (setacAdj());
-        HeroDmg = (newHero.BaseDamage) + (setDmgAdj());
-        HeroHitAdj = (newHero.BaseHitAdj) + (setHitAdj());
+        HeroadjStats.HeroHp = (newHero.BaseHitPoints) + (SetConstAdj());
+        HeroadjStats.HeroAc = (newHero.BaseArmorClass) + (setacAdj());
+        HeroadjStats.HeroDmg = (newHero.BaseDamage) + (setDmgAdj());
+        HeroadjStats.HeroHitAdj = (newHero.BaseHitAdj) + (setHitAdj());
         this.forceUpdate();
     }
 
@@ -47,10 +44,10 @@ class Hero extends React.Component {
                 <p>Strength: {newHero.Str}</p>
                 <p>Constitution: {newHero.Const}</p>
                 <p>Dexterity: {newHero.Dext}</p>
-                <p>Hitpoints: {HeroHp}</p>
-                <p>Armor Class: {HeroAc}</p>
-                <p>Base Damage: {HeroDmg  }</p>
-                <p>Hit Adjust: {HeroHitAdj}</p>
+                <p>Hitpoints: {HeroadjStats.HeroHp}</p>
+                <p>Armor Class: {HeroadjStats.HeroAc}</p>
+                <p>Base Damage: {HeroadjStats.HeroDmg  }</p>
+                <p>Hit Adjust: {HeroadjStats.HeroHitAdj}</p>
             </div>
             <div>
             <button onClick={this.handleClick}>Set Attrubutes</button>
