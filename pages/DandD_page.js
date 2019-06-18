@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import Hero from './DandD/hero'
 import Monster from './DandD/monster'
-import HeroAttackSim from './DandD/hero_attacksim'
+import AttackSim from './DandD/hero_attacksim'
 
 class DandD extends Component {
 
@@ -27,7 +27,7 @@ class DandD extends Component {
                     </div>
                 </div>
                 <div>
-                        <HeroAttackSim />
+                        <AttackSim />
                     
                 </div>
             </Layout>

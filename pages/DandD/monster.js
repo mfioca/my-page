@@ -25,9 +25,12 @@ class Monster extends React.Component {
     }
 
     handleClick() {
+        //random number 1-20 to set newmonster stats
         newMonster.Str = Math.floor((Math.random() * 20) + 1);
         newMonster.Const = Math.floor((Math.random() * 20) + 1);
         newMonster.Dext = Math.floor((Math.random() * 20) + 1);
+        //calls the adjusted functions in monster_functions to set adjusted monster
+        //stats in the attacksim.js
         MonsteradjStats.MonsterHp = (newMonster.BaseHitPoints) + (SetConstAdj());
         MonsteradjStats.MonsterAc = (newMonster.BaseArmorClass) + (setacAdj());
         MonsteradjStats.MonsterDmg = (newMonster.BaseDamage) + (setDmgAdj());
@@ -44,9 +47,9 @@ class Monster extends React.Component {
                 <p>Constitution: {newMonster.Const}</p>
                 <p>Dexterity: {newMonster.Dext}</p>
                 <p>Hitpoints: {MonsteradjStats.MonsterHp}</p>
-                <p>Armor Class: {MonsteradjStats.MonsterAc}</p>
+               
                 <p>Base Damage: {MonsteradjStats.MonsterDmg  }</p>
-                <p>Hit Adjust: {MonsteradjStats.MonsterHitAdj}</p>
+                
             </div>
             <div>
             <button onClick={this.handleClick}>Set Attrubutes</button>

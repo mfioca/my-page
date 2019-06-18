@@ -64,6 +64,16 @@ body {
     cursor: pointer;
 }
 
+.Float-left {
+    display: flex;
+    float: left;
+}
+
+.Float-right {
+    display: flex;
+    float: right;
+}
+
 
 /* *********************** 
 *   Lists and tables     * 
@@ -322,6 +332,8 @@ body {
 }
 
   .Attack-container {
+    display: flex;
+    height: 300px;
     background-color: #f1f1f1;
     margin: 10px;
     font-size: 15px;
@@ -329,10 +341,79 @@ body {
     
 }
 
+.Attack-section1 {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    background-color: pink;
+}
+
+.Attack-hitadj {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+}
+
+.Attack-roll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Attack-result {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .Reset_stat-button {
     display: flex;
     margin-right: auto;
     margin-left: auto;
+}
+
+.AC-Icon {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+    width: 100px;
+    height: 100px;
+    
+}
+
+.AC-Icon-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.stat-img {
+    position: relative;
+    
+    width: 50px;
+    height: 50px;
+}
+
+.stat-img-text {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.AC-Icon-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Box-left {
+    margin-left: 50px;
+    
 }
 
 /* *********************** 

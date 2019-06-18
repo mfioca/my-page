@@ -1,7 +1,7 @@
 import React from 'react';
 import { newMonster } from './monster';
 
-
+//sets hero hit adjustment based on strength stat number.
 export function setHitAdj() {
     if (newMonster.Str == 1) {
         return -4;
@@ -32,6 +32,7 @@ export function setHitAdj() {
     }
 }
 
+//sets hero damage adjustment based on strength stat number.
 export function setDmgAdj() {
     if (newMonster.Str == 1) {
         return -4;
@@ -62,6 +63,7 @@ export function setDmgAdj() {
     }
 }
 
+//sets hero armor class based on dexterity stat number.
 export function setacAdj() {
     if (newMonster.Dext == 1 || newMonster.Dext == 2) {
         return -5;
@@ -98,6 +100,7 @@ export function setacAdj() {
     }
 }
 
+//sets hero hitpoints based on constitution stat number.
 export function SetConstAdj() {
     if (newMonster.Const == 1) {
         return -3;

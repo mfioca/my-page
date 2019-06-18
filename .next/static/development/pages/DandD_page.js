@@ -10425,9 +10425,12 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Hero, [{
     key: "setherostats",
     value: function setherostats() {
+      //random number between 1-20 to set stats
       newHero.Str = Math.floor(Math.random() * 20 + 1);
       newHero.Const = Math.floor(Math.random() * 20 + 1);
-      newHero.Dext = Math.floor(Math.random() * 20 + 1);
+      newHero.Dext = Math.floor(Math.random() * 20 + 1); //calls functions in hero_functions to adjust stats in
+      //heroadjstats variable in the attacksim.js
+
       _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHp = newHero.BaseHitPoints + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"])();
       _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroAc = newHero.BaseArmorClass + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setacAdj"])();
       _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg = newHero.BaseDamage + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setDmgAdj"])();
@@ -10440,68 +10443,56 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 46
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         },
         __self: this
       }, "Strength: ", newHero.Str), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         },
         __self: this
       }, "Constitution: ", newHero.Const), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 49
         },
         __self: this
       }, "Dexterity: ", newHero.Dext), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 50
         },
         __self: this
       }, "Hitpoints: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
-        },
-        __self: this
-      }, "Armor Class: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroAc), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49
-        },
-        __self: this
-      }, "Base Damage: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, "Hit Adjust: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHitAdj)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 52
+        },
+        __self: this
+      }, "Base Damage: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.setherostats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 56
         },
         __self: this
       }, "Set Attrubutes")));
@@ -10545,7 +10536,6 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\he
 
 
 
- //import { HeroHitAdj } from './hero'
 
 var MonsteradjStats = {
   MonsterHp: 0,
@@ -10563,9 +10553,11 @@ var Heroroll = 0;
 var Monsterroll = 0;
 var Herodidhit = " ";
 var Monsterdidhit = " ";
+/* determins if the hero successfully hits the monster.  adjusts for monster
+armor class and hero hit adjustment.  on successful attack role, applies damage
+to monster hp and if hp reaches zero alerts that monster is dead */
 
 function heroattackroll() {
-  //Heroroll = Math.floor((Math.random() * 20) + 1);
   if (Heroroll >= MonsteradjStats.MonsterAc + HeroadjStats.HeroHitAdj) {
     Herodidhit = "yes";
     MonsteradjStats.MonsterHp = MonsteradjStats.MonsterHp - 10;
@@ -10579,6 +10571,10 @@ function heroattackroll() {
 
   ;
 }
+/* determins if the monster successfully hits the hero.  adjusts for hero
+armor class andmonster hit adjustment.  on successful attack role, applies damage
+to hero hp and if hp reaches zero alerts that hero is dead */
+
 
 function Monsterattackroll() {
   if (Monsterroll >= HeroadjStats.HeroAc + MonsteradjStats.MonsterHitAdj) {
@@ -10595,30 +10591,39 @@ function Monsterattackroll() {
   ;
 }
 
-var HeroAttackSim =
+var AttackSim =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(HeroAttackSim, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(AttackSim, _React$Component);
 
-  function HeroAttackSim(props) {
+  function AttackSim(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, HeroAttackSim);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AttackSim);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(HeroAttackSim).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(AttackSim).call(this, props));
+    _this.heroinitiative = 0;
+    _this.monsterinitiative = 0;
     _this.heroattack = _this.heroattack.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.Monsterattack = _this.Monsterattack.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.refresh = _this.refresh.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.rollforiniative = _this.rollforiniative.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
   }
+  /*hero attack roll, radomly generates number between 1 to 20.  Then
+  calls the hero attack roll function to determine successful attack.*/
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(HeroAttackSim, [{
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AttackSim, [{
     key: "heroattack",
     value: function heroattack() {
       Heroroll = Math.floor(Math.random() * 20 + 1);
       heroattackroll();
       this.forceUpdate();
     }
+    /*monster attack roll, randomly generates number between 1 to 20.  Then 
+    calls the monster attack roll function to determine successful attack. */
+
   }, {
     key: "Monsterattack",
     value: function Monsterattack() {
@@ -10631,59 +10636,130 @@ function (_React$Component) {
     value: function refresh() {
       this.forceUpdate();
     }
+    /*initiative role to determine if hero or monster attacks first.  sets 
+    variable for initiative to determine first attack.  Who ever has lower 
+    number goes first, on equal role, alerts that a reroll is necessary. */
+
+  }, {
+    key: "rollforiniative",
+    value: function rollforiniative() {
+      this.heroinitiative = Math.floor(Math.random() * 10 + 1);
+      this.monsterinitiative = Math.floor(Math.random() * 10 + 1);
+
+      if (this.heroinitiative < this.monsterinitiative) {
+        this.heroinitiative = "Hero goes first";
+      } else if (this.heroinitiative > this.monsterinitiative) {
+        this.monsterinitiative = "Monster goes first";
+      } else {
+        this.heroinitiative = "ReRoll";
+        this.monsterinitiative = "ReRoll";
+      }
+
+      this.forceUpdate();
+    }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 113
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "DandD_attack",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 114
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 115
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-section1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 116
         },
         __self: this
-      }, "MonsterAC = ", MonsteradjStats.MonsterAc), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 117
         },
         __self: this
-      }, "Hero Hit Adjustment = ", HeroadjStats.HeroHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        src: "../static/images/ac.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        className: "AC-Icon-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119
+        },
+        __self: this
+      }, "\xA0\xA0\xA0Hero", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119
+        },
+        __self: this
+      }), "AC = ", HeroadjStats.HeroAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        div: true,
+        className: "Attack-hitadj",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, "Hero Hit ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }), "Adjustment = ", HeroadjStats.HeroHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-roll",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.heroattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 127
         },
         __self: this
-      }, "Roll to hit"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-result",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 131
         },
         __self: this
-      }, "Result of attack = ", Herodidhit)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Result of attack = ", Herodidhit))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 138
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 140
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
@@ -10691,61 +10767,124 @@ function (_React$Component) {
         onClick: this.refresh,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 141
         },
         __self: this
-      }, "Refresh stats"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Refresh stats"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        onClick: this.rollforiniative,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 142
         },
         __self: this
-      }, " Hero hit points = ", HeroadjStats.HeroHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Roll for iniative"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 144
         },
         __self: this
-      }, " Monster hit points = ", MonsteradjStats.MonsterHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Hero iniative = ", this.heroinitiative), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 145
+        },
+        __self: this
+      }, "Monster iniative = ", this.monsterinitiative), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 148
+        },
+        __self: this
+      }, " Monster hit points = ", MonsteradjStats.MonsterHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        className: " center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 151
+        },
+        __self: this
+      }, "Hero HP ", HeroadjStats.HeroHp))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99
+          lineNumber: 154
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-section1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 155
         },
         __self: this
-      }, "HeroAC = ", HeroadjStats.HeroAc), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 156
         },
         __self: this
-      }, "Monster Hit Adjustment = ", MonsteradjStats.MonsterHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        src: "../static/images/ac.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        className: "AC-Icon-text",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 158
+        },
+        __self: this
+      }, "Monster", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 158
+        },
+        __self: this
+      }), "AC = ", MonsteradjStats.MonsterAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-hitadj",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 160
+        },
+        __self: this
+      }, "Monster Hit ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 161
+        },
+        __self: this
+      }), "Adjustment = ", MonsteradjStats.MonsterHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-roll",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 163
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.Monsterattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 164
         },
         __self: this
-      }, "Roll to hit"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Attack-result",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 168
         },
         __self: this
-      }, "Result of attack = ", Monsterdidhit))));
+      }, "Result of attack = ", Monsterdidhit)))));
     }
   }]);
 
-  return HeroAttackSim;
+  return AttackSim;
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
-/* harmony default export */ __webpack_exports__["default"] = (HeroAttackSim);
+/* harmony default export */ __webpack_exports__["default"] = (AttackSim);
 
 /***/ }),
 
@@ -10766,6 +10905,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hero */ "./pages/DandD/hero.js");
 
+ //sets hero hitpoints based on constitution stat number.
 
 function SetConstAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 1) {
@@ -10807,7 +10947,8 @@ function SetConstAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 20) {
     return 6;
   }
-}
+} //sets hero hit adjustment based on strength stat number.
+
 function setHitAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 1) {
     return -4;
@@ -10844,7 +10985,8 @@ function setHitAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 20) {
     return 4;
   }
-}
+} //sets hero damage adjustment based on strength stat number.
+
 function setDmgAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 1) {
     return -4;
@@ -10881,7 +11023,8 @@ function setDmgAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 20) {
     return 4;
   }
-}
+} //sets hero armor class based on dexterity stat number.
+
 function setacAdj() {
   if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 1 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 2) {
     return -5;
@@ -10992,9 +11135,12 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Monster, [{
     key: "handleClick",
     value: function handleClick() {
+      //random number 1-20 to set newmonster stats
       newMonster.Str = Math.floor(Math.random() * 20 + 1);
       newMonster.Const = Math.floor(Math.random() * 20 + 1);
-      newMonster.Dext = Math.floor(Math.random() * 20 + 1);
+      newMonster.Dext = Math.floor(Math.random() * 20 + 1); //calls the adjusted functions in monster_functions to set adjusted monster
+      //stats in the attacksim.js
+
       _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHp = newMonster.BaseHitPoints + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"])();
       _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterAc = newMonster.BaseArmorClass + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setacAdj"])();
       _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg = newMonster.BaseDamage + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setDmgAdj"])();
@@ -11007,68 +11153,56 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 44
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 46
         },
         __self: this
       }, "Strength: ", newMonster.Str), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 47
         },
         __self: this
       }, "Constitution: ", newMonster.Const), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 48
         },
         __self: this
       }, "Dexterity: ", newMonster.Dext), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 49
         },
         __self: this
       }, "Hitpoints: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
-        },
-        __self: this
-      }, "Armor Class: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterAc), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        },
-        __self: this
-      }, "Base Damage: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49
-        },
-        __self: this
-      }, "Hit Adjust: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHitAdj)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 51
+        },
+        __self: this
+      }, "Base Damage: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 55
         },
         __self: this
       }, "Set Attrubutes")));
@@ -11099,6 +11233,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./monster */ "./pages/DandD/monster.js");
 
+ //sets hero hit adjustment based on strength stat number.
 
 function setHitAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 1) {
@@ -11136,7 +11271,8 @@ function setHitAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 20) {
     return 4;
   }
-}
+} //sets hero damage adjustment based on strength stat number.
+
 function setDmgAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 1) {
     return -4;
@@ -11173,7 +11309,8 @@ function setDmgAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 20) {
     return 4;
   }
-}
+} //sets hero armor class based on dexterity stat number.
+
 function setacAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 1 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 2) {
     return -5;
@@ -11218,7 +11355,8 @@ function setacAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 20) {
     return 5;
   }
-}
+} //sets hero hitpoints based on constitution stat number.
+
 function SetConstAdj() {
   if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 1) {
     return -3;
@@ -11405,7 +11543,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!****************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FDandD_page&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5CDandD_page.js ***!
   \****************************************************************************************************************************************************/
@@ -11428,5 +11566,5 @@ module.exports = dll_6dc2816e14fab51b8269;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js","styles"]]]);
+},[[2,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=DandD_page.js.map

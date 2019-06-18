@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { newHero } from './hero'
 
 
-
+//sets hero hitpoints based on constitution stat number.
 export function SetConstAdj() {
     if (newHero.Const == 1) {
         return -3;
@@ -36,7 +36,7 @@ export function SetConstAdj() {
     }
 }
 
-
+//sets hero hit adjustment based on strength stat number.
 export function setHitAdj() {
     if (newHero.Str == 1) {
         return -4;
@@ -67,6 +67,7 @@ export function setHitAdj() {
     }
 }
 
+//sets hero damage adjustment based on strength stat number.
 export function setDmgAdj() {
     if (newHero.Str == 1) {
         return -4;
@@ -97,6 +98,7 @@ export function setDmgAdj() {
     }
 }
 
+//sets hero armor class based on dexterity stat number.
 export function setacAdj() {
     if (newHero.Dext == 1 || newHero.Dext == 2) {
         return -5;

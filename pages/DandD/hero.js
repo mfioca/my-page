@@ -26,9 +26,12 @@ class Hero extends React.Component {
     }
 
     setherostats() {
+        //random number between 1-20 to set stats
         newHero.Str = Math.floor((Math.random() * 20) + 1);
         newHero.Const = Math.floor((Math.random() * 20) + 1);
         newHero.Dext = Math.floor((Math.random() * 20) + 1);
+        //calls functions in hero_functions to adjust stats in
+        //heroadjstats variable in the attacksim.js
         HeroadjStats.HeroHp = (newHero.BaseHitPoints) + (SetConstAdj());
         HeroadjStats.HeroAc = (newHero.BaseArmorClass) + (setacAdj());
         HeroadjStats.HeroDmg = (newHero.BaseDamage) + (setDmgAdj());
@@ -45,9 +48,9 @@ class Hero extends React.Component {
                 <p>Constitution: {newHero.Const}</p>
                 <p>Dexterity: {newHero.Dext}</p>
                 <p>Hitpoints: {HeroadjStats.HeroHp}</p>
-                <p>Armor Class: {HeroadjStats.HeroAc}</p>
+                
                 <p>Base Damage: {HeroadjStats.HeroDmg  }</p>
-                <p>Hit Adjust: {HeroadjStats.HeroHitAdj}</p>
+                
             </div>
             <div>
             <button onClick={this.setherostats}>Set Attrubutes</button>
