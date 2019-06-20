@@ -43,6 +43,7 @@ class Hero extends React.Component {
     render() {
         return (
             <div>
+                
             <div>
                 <p>Strength: { newHero.Str }</p>
                 <p>Constitution: { newHero.Const }</p>

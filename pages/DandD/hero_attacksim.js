@@ -115,20 +115,20 @@ class AttackSim extends React.Component {
                 <div className="DandD_attack">    
                     <div className="Attack-container">
                         <div className="Attack-section">
-                            <div className="Ac-title Fsize-2">
-                                Armor &nbsp;&nbsp;&nbsp;&nbsp; Class
-                            </div>
                             <div className="AC-Icon">
                                 <img src="../static/images/acicon.png" />
                                 <p className="AC-Icon-text Fsize-3">
                                     { HeroadjStats.HeroAc }
                                 </p>
                             </div>
-                            <div div className="Attack-hitadj">
-                                Hero Hit <br />Adjustment = { HeroadjStats.HeroHitAdj }
+                            <div className="HitAdj-Icon">
+                                <img src="../static/images/hitadjust.png" />
+                                <p className="HitAdj-Icon-text Fsize-3">
+                                    { HeroadjStats.HeroHitAdj }
+                                </p>
                             </div>
                             <div className="Attack-roll">
-                                <button onClick={this.heroattack}>
+                                <button  onClick={this.heroattack}>
                                     Roll for Attack
                                 </button>
                             </div>
@@ -136,20 +136,19 @@ class AttackSim extends React.Component {
                                 Result of attack = { Herodidhit }
                             </div>
                         </div>
-                        
                     </div>  
-                    
+    
                     <div className="Attack-container">
                         <div className="Attack-section">    
                             <div>
+                                <div className="Float-left DandD_button">
                                 <button className="Reset_stat-button" onClick={this.refresh}>Refresh stats</button>
+                                </div>
+                                <div className="Float-right DandD_button">
                                 <button onClick={this.rollforiniative}>Roll for iniative</button>
-                            
+                                </div>
                                 <p>Hero iniative = {this.heroinitiative}</p>
                                 <p>Monster iniative = {this.monsterinitiative}</p>
-                            
-                            
-                                
                             </div>
                             
                             <div className="HeroHP-icon">
@@ -173,18 +172,20 @@ class AttackSim extends React.Component {
 
                     <div className="Attack-container">
                         <div className="Attack-section">
-                        <div className="Ac-title Fsize-2">
-                                Armor &nbsp;&nbsp;&nbsp;&nbsp; Class
-                            </div>
+                        
                             <div className="AC-Icon">
                                 <img src="../static/images/acicon.png" />
                                 <p className="AC-Icon-text Fsize-3">
                                     { MonsteradjStats.MonsterAc }
                                 </p>
                             </div>
-                            <div className="Attack-hitadj">
-                                Monster Hit <br />Adjustment = { MonsteradjStats.MonsterHitAdj }
+                            <div className="HitAdj-Icon">
+                                <img src="../static/images/hitadjust.png" />
+                                <p className="HitAdj-Icon-text Fsize-3">
+                                    { MonsteradjStats.MonsterHitAdj }
+                                </p>
                             </div>
+                            
                             <div className="Attack-roll">
                                 <button onClick={this.Monsterattack}>
                                     Roll for Attack
