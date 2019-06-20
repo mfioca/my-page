@@ -43,12 +43,12 @@ class Monster extends React.Component {
         return (
             <div>
             <div>
-                <p>Strength: {newMonster.Str}</p>
-                <p>Constitution: {newMonster.Const}</p>
-                <p>Dexterity: {newMonster.Dext}</p>
-                <p>Hitpoints: {MonsteradjStats.MonsterHp}</p>
+                <p>Strength: { newMonster.Str }</p>
+                <p>Constitution: { newMonster.Const }</p>
+                <p>Dexterity: { newMonster.Dext }</p>
+                <p>Hitpoints: { MonsteradjStats.MonsterHp }</p>
                
-                <p>Base Damage: {MonsteradjStats.MonsterDmg  }</p>
+                <p>Base Damage: { MonsteradjStats.MonsterDmg }</p>
                 
             </div>
             <div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Monster } from './monster'
 export { MonsteradjStats}
 export { HeroadjStats }
 
@@ -113,13 +112,16 @@ class AttackSim extends React.Component {
             <div>
                 <div className="DandD_attack">    
                     <div className="Attack-container">
-                        <div className="Attack-section1">
+                        <div className="Attack-section">
+                            <div className="Ac-title Fsize-2">
+                                Armor &nbsp;&nbsp;&nbsp;&nbsp; Class
+                            </div>
                             <div className="AC-Icon">
                                 <img src="../static/images/ac.png" />
-                                <p className="AC-Icon-text">&nbsp;&nbsp;&nbsp;Hero<br />AC = { HeroadjStats.HeroAc }</p>
+                                <p className="AC-Icon-text Fsize-3">
+                                    { HeroadjStats.HeroAc }
+                                </p>
                             </div>
-                        
-                            
                             <div div className="Attack-hitadj">
                                 Hero Hit <br />Adjustment = { HeroadjStats.HeroHitAdj }
                             </div>
@@ -136,26 +138,44 @@ class AttackSim extends React.Component {
                     </div>  
                     
                     <div className="Attack-container">
-                        
-                        <div>
-                            <button className="Reset_stat-button" onClick={this.refresh}>Refresh stats</button>
-                            <button onClick={this.rollforiniative}>Roll for iniative</button>
-                        
-                            <p>Hero iniative = {this.heroinitiative}</p>
-                            <p>Monster iniative = {this.monsterinitiative}</p>
-                        
-                        
-                            <p> Monster hit points = { MonsteradjStats.MonsterHp }</p>
-                        
+                        <div className="Attack-section">    
+                            <div>
+                                <button className="Reset_stat-button" onClick={this.refresh}>Refresh stats</button>
+                                <button onClick={this.rollforiniative}>Roll for iniative</button>
                             
-                            <p className=" center">Hero HP { HeroadjStats.HeroHp }</p>
+                                <p>Hero iniative = {this.heroinitiative}</p>
+                                <p>Monster iniative = {this.monsterinitiative}</p>
+                            
+                            
+                                <p> Monster hit points = { MonsteradjStats.MonsterHp }</p>
+                            
+                                
+                                <p className=" center">Hero HP { HeroadjStats.HeroHp }</p>
+                    
+                            </div>
+                            
+                            <div className="HeroHP-icon">
+                                <img src="../static/images/herohp.png" />
+                            
+                            <p className="HeroHP-text Fsize-3 center">
+                                { HeroadjStats.HeroHp }
+                            </p>
+                            </div>
                         </div>
                     </div>
+
+
+
                     <div className="Attack-container">
-                        <div className="Attack-section1">
+                        <div className="Attack-section">
+                        <div className="Ac-title Fsize-2">
+                                Armor &nbsp;&nbsp;&nbsp;&nbsp; Class
+                            </div>
                             <div className="AC-Icon">
                                 <img src="../static/images/ac.png" />
-                                <p className="AC-Icon-text">Monster<br />AC = { MonsteradjStats.MonsterAc }</p>
+                                <p className="AC-Icon-text Fsize-3">
+                                    { MonsteradjStats.MonsterAc }
+                                </p>
                             </div>
                             <div className="Attack-hitadj">
                                 Monster Hit <br />Adjustment = { MonsteradjStats.MonsterHitAdj }

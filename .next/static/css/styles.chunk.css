@@ -341,7 +341,7 @@ body {
     
 }
 
-.Attack-section1 {
+.Attack-section {
     position: relative;
     text-align: center;
     width: 100%;
@@ -352,6 +352,12 @@ body {
     position: absolute;
     top: 30px;
     right: 40px;
+}
+
+.Ac-title {
+    position: absolute;
+    top: 4px;
+    left: 5px;
 }
 
 .Attack-roll {
@@ -376,8 +382,8 @@ body {
 
 .AC-Icon {
     position: absolute;
-    top: 8px;
-    left: 16px;
+    top: 15px;
+    left: 22px;
     width: 100px;
     height: 100px;
     
@@ -385,30 +391,25 @@ body {
 
 .AC-Icon-text {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 
-.stat-img {
-    position: relative;
-    
+.HeroHP-icon {
+    position: absolute;
+    top: 150px;
+    left: 10px;
     width: 50px;
     height: 50px;
 }
 
-.stat-img-text {
+.HeroHP-text {
     position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.AC-Icon-text {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40px;
+    left: 50px;
+    width: 50px;
 }
 
 .Box-left {

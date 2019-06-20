@@ -44,12 +44,12 @@ class Hero extends React.Component {
         return (
             <div>
             <div>
-                <p>Strength: {newHero.Str}</p>
-                <p>Constitution: {newHero.Const}</p>
-                <p>Dexterity: {newHero.Dext}</p>
-                <p>Hitpoints: {HeroadjStats.HeroHp}</p>
+                <p>Strength: { newHero.Str }</p>
+                <p>Constitution: { newHero.Const }</p>
+                <p>Dexterity: { newHero.Dext }</p>
+                <p>Hitpoints: { HeroadjStats.HeroHp }</p>
                 
-                <p>Base Damage: {HeroadjStats.HeroDmg  }</p>
+                <p>Base Damage: { HeroadjStats.HeroDmg  }</p>
                 
             </div>
             <div>
