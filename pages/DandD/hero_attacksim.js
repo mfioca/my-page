@@ -32,7 +32,7 @@ function heroattackroll() {
         Herodidhit = "yes";
         MonsteradjStats.MonsterHp = (MonsteradjStats.MonsterHp - 10);
         if (MonsteradjStats.MonsterHp <= 0 ) {
-            MonsteradjStats.MonsterHp = "Monster is dead";
+            MonsteradjStats.MonsterHp = "Dead";
         }
     } else {
         Herodidhit = "no";
@@ -48,7 +48,7 @@ function Monsterattackroll() {
         Monsterdidhit = "yes";
         HeroadjStats.HeroHp = (HeroadjStats.HeroHp - 10);
         if (HeroadjStats.HeroHp <= 0 ) {
-            HeroadjStats.HeroHp = "Hero is dead";
+            HeroadjStats.HeroHp = "Dead";
         }
     } else {
         Monsterdidhit = "no";
@@ -104,6 +104,8 @@ class AttackSim extends React.Component {
             this.heroinitiative = "ReRoll";
             this.monsterinitiative = "ReRoll";
         }
+        Herodidhit = " ";
+        Monsterdidhit = " ";
         this.forceUpdate();
     }
 
@@ -117,7 +119,7 @@ class AttackSim extends React.Component {
                                 Armor &nbsp;&nbsp;&nbsp;&nbsp; Class
                             </div>
                             <div className="AC-Icon">
-                                <img src="../static/images/ac.png" />
+                                <img src="../static/images/acicon.png" />
                                 <p className="AC-Icon-text Fsize-3">
                                     { HeroadjStats.HeroAc }
                                 </p>
@@ -131,7 +133,7 @@ class AttackSim extends React.Component {
                                 </button>
                             </div>
                             <div className="Attack-result">
-                            Result of attack = { Herodidhit }
+                                Result of attack = { Herodidhit }
                             </div>
                         </div>
                         
@@ -147,19 +149,22 @@ class AttackSim extends React.Component {
                                 <p>Monster iniative = {this.monsterinitiative}</p>
                             
                             
-                                <p> Monster hit points = { MonsteradjStats.MonsterHp }</p>
-                            
                                 
-                                <p className=" center">Hero HP { HeroadjStats.HeroHp }</p>
-                    
                             </div>
                             
                             <div className="HeroHP-icon">
                                 <img src="../static/images/herohp.png" />
                             
-                            <p className="HeroHP-text Fsize-3 center">
-                                { HeroadjStats.HeroHp }
-                            </p>
+                                <p className="HeroHP-text Fsize-3 center">
+                                    { HeroadjStats.HeroHp }
+                                </p>
+                            </div>
+                            <div className="MonsterHP-icon">
+                                <img src="../static/images/monsterhp.png" />
+                            
+                                <p className="MonsterHP-text Fsize-3 center">
+                                    { MonsteradjStats.MonsterHp }
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -172,7 +177,7 @@ class AttackSim extends React.Component {
                                 Armor &nbsp;&nbsp;&nbsp;&nbsp; Class
                             </div>
                             <div className="AC-Icon">
-                                <img src="../static/images/ac.png" />
+                                <img src="../static/images/acicon.png" />
                                 <p className="AC-Icon-text Fsize-3">
                                     { MonsteradjStats.MonsterAc }
                                 </p>

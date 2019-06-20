@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1596,7 +1596,7 @@ function heroattackroll() {
     MonsteradjStats.MonsterHp = MonsteradjStats.MonsterHp - 10;
 
     if (MonsteradjStats.MonsterHp <= 0) {
-      MonsteradjStats.MonsterHp = "Monster is dead";
+      MonsteradjStats.MonsterHp = "Dead";
     }
   } else {
     Herodidhit = "no";
@@ -1615,7 +1615,7 @@ function Monsterattackroll() {
     HeroadjStats.HeroHp = HeroadjStats.HeroHp - 10;
 
     if (HeroadjStats.HeroHp <= 0) {
-      HeroadjStats.HeroHp = "Hero is dead";
+      HeroadjStats.HeroHp = "Dead";
     }
   } else {
     Monsterdidhit = "no";
@@ -1688,6 +1688,8 @@ function (_React$Component) {
         this.monsterinitiative = "ReRoll";
       }
 
+      Herodidhit = " ";
+      Monsterdidhit = " ";
       this.forceUpdate();
     }
   }, {
@@ -1696,56 +1698,56 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 114
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "DandD_attack",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 115
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 117
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Ac-title Fsize-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 118
         },
         __self: this
       }, "Armor \xA0\xA0\xA0\xA0 Class"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 121
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        src: "../static/images/ac.png",
+        src: "../static/images/acicon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 122
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "AC-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 123
         },
         __self: this
       }, HeroadjStats.HeroAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -1753,54 +1755,54 @@ function (_React$Component) {
         className: "Attack-hitadj",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 127
         },
         __self: this
       }, "Hero Hit ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 128
         },
         __self: this
       }), "Adjustment = ", HeroadjStats.HeroHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-roll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 130
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.heroattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 131
         },
         __self: this
       }, "Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-result",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 135
         },
         __self: this
       }, "Result of attack = ", Herodidhit))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 142
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 143
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
@@ -1808,136 +1810,144 @@ function (_React$Component) {
         onClick: this.refresh,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 145
         },
         __self: this
       }, "Refresh stats"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.rollforiniative,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 146
         },
         __self: this
       }, "Roll for iniative"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 148
         },
         __self: this
       }, "Hero iniative = ", this.heroinitiative), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 149
         },
         __self: this
-      }, "Monster iniative = ", this.monsterinitiative), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 150
-        },
-        __self: this
-      }, " Monster hit points = ", MonsteradjStats.MonsterHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        className: " center",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 153
-        },
-        __self: this
-      }, "Hero HP ", HeroadjStats.HeroHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Monster iniative = ", this.monsterinitiative)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HeroHP-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 155
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/herohp.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 158
+          lineNumber: 156
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HeroHP-text Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 160
+          lineNumber: 158
         },
         __self: this
-      }, HeroadjStats.HeroHp)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, HeroadjStats.HeroHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "MonsterHP-icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 162
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        src: "../static/images/monsterhp.png",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 163
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        className: "MonsterHP-text Fsize-3 center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 165
+        },
+        __self: this
+      }, MonsteradjStats.MonsterHp)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169
+          lineNumber: 174
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 175
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Ac-title Fsize-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 176
         },
         __self: this
       }, "Armor \xA0\xA0\xA0\xA0 Class"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 179
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        src: "../static/images/ac.png",
+        src: "../static/images/acicon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175
+          lineNumber: 180
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "AC-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 181
         },
         __self: this
       }, MonsteradjStats.MonsterAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-hitadj",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 185
         },
         __self: this
       }, "Monster Hit ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 186
         },
         __self: this
       }), "Adjustment = ", MonsteradjStats.MonsterHitAdj), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-roll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 188
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.Monsterattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 189
         },
         __self: this
       }, "Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-result",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 193
         },
         __self: this
       }, "Result of attack = ", Monsterdidhit)))));
@@ -2606,7 +2616,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!***********************************!*\
   !*** multi ./pages/DandD_page.js ***!
   \***********************************/
