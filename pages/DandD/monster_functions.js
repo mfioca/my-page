@@ -1,4 +1,3 @@
-import React from 'react';
 import { newMonster } from './monster';
 
 //sets hero hit adjustment based on strength stat number.

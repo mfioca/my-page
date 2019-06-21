@@ -10361,155 +10361,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./pages/DandD/hero.js":
-/*!*****************************!*\
-  !*** ./pages/DandD/hero.js ***!
-  \*****************************/
-/*! exports provided: newHero, Hero, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newHero", function() { return newHero; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hero", function() { return Hero; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _hero_functions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hero_functions */ "./pages/DandD/hero_functions.js");
-/* harmony import */ var _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./hero_attacksim */ "./pages/DandD/hero_attacksim.js");
-
-
-
-
-
-
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\hero.js";
-
-
-
-
-
-
-
-
-var newHero = {
-  Str: 0,
-  Const: 0,
-  Dext: 0,
-  BaseHitPoints: 20,
-  BaseArmorClass: 10,
-  BaseDamage: 10,
-  BaseHitAdj: 0
-};
-
-var Hero =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Hero, _React$Component);
-
-  function Hero(props) {
-    var _this;
-
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Hero);
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Hero).call(this, props));
-    _this.setherostats = _this.setherostats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    return _this;
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Hero, [{
-    key: "setherostats",
-    value: function setherostats() {
-      //random number between 1-20 to set stats
-      newHero.Str = Math.floor(Math.random() * 20 + 1);
-      newHero.Const = Math.floor(Math.random() * 20 + 1);
-      newHero.Dext = Math.floor(Math.random() * 20 + 1); //calls functions in hero_functions to adjust stats in
-      //heroadjstats variable in the attacksim.js
-
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHp = newHero.BaseHitPoints + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"])();
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroAc = newHero.BaseArmorClass + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setacAdj"])();
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg = newHero.BaseDamage + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setDmgAdj"])();
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHitAdj = newHero.BaseHitAdj + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setHitAdj"])();
-      this.forceUpdate();
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 47
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 48
-        },
-        __self: this
-      }, "Strength: ", newHero.Str), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 49
-        },
-        __self: this
-      }, "Constitution: ", newHero.Const), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 50
-        },
-        __self: this
-      }, "Dexterity: ", newHero.Dext), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 51
-        },
-        __self: this
-      }, "Hitpoints: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }, "Base Damage: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 56
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.setherostats,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 57
-        },
-        __self: this
-      }, "Set Attrubutes")));
-    }
-  }]);
-
-  return Hero;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Hero);
-
-/***/ }),
-
-/***/ "./pages/DandD/hero_attacksim.js":
-/*!***************************************!*\
-  !*** ./pages/DandD/hero_attacksim.js ***!
-  \***************************************/
+/***/ "./pages/DandD/attacksim.js":
+/*!**********************************!*\
+  !*** ./pages/DandD/attacksim.js ***!
+  \**********************************/
 /*! exports provided: MonsteradjStats, HeroadjStats, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -10531,7 +10386,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\hero_attacksim.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\attacksim.js";
 
 
 
@@ -10557,14 +10412,14 @@ to monster hp and if hp reaches zero alerts that monster is dead */
 
 function heroattackroll() {
   if (Heroroll >= MonsteradjStats.MonsterAc + HeroadjStats.HeroHitAdj) {
-    Herodidhit = "yes";
+    Herodidhit = "HIT";
     MonsteradjStats.MonsterHp = MonsteradjStats.MonsterHp - 10;
 
     if (MonsteradjStats.MonsterHp <= 0) {
       MonsteradjStats.MonsterHp = "Dead";
     }
   } else {
-    Herodidhit = "no";
+    Herodidhit = "MISS";
   }
 
   ;
@@ -10576,14 +10431,14 @@ to hero hp and if hp reaches zero alerts that hero is dead */
 
 function Monsterattackroll() {
   if (Monsterroll >= HeroadjStats.HeroAc + MonsteradjStats.MonsterHitAdj) {
-    Monsterdidhit = "yes";
+    Monsterdidhit = "HIT";
     HeroadjStats.HeroHp = HeroadjStats.HeroHp - 10;
 
     if (HeroadjStats.HeroHp <= 0) {
       HeroadjStats.HeroHp = "Dead";
     }
   } else {
-    Monsterdidhit = "no";
+    Monsterdidhit = "MISS";
   }
 
   ;
@@ -10645,9 +10500,11 @@ function (_React$Component) {
       this.monsterinitiative = Math.floor(Math.random() * 10 + 1);
 
       if (this.heroinitiative < this.monsterinitiative) {
-        this.heroinitiative = "Hero goes first";
+        this.heroinitiative = "First";
+        this.monsterinitiative = "Second";
       } else if (this.heroinitiative > this.monsterinitiative) {
-        this.monsterinitiative = "Monster goes first";
+        this.monsterinitiative = "First";
+        this.heroinitiative = "Second";
       } else {
         this.heroinitiative = "ReRoll";
         this.monsterinitiative = "ReRoll";
@@ -10663,274 +10520,307 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "DandD_attack",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 117
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 118
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 119
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 118
+          lineNumber: 120
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/acicon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 121
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "AC-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 122
         },
         __self: this
       }, HeroadjStats.HeroAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HitAdj-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/hitadjust.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 127
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HitAdj-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 128
         },
         __self: this
       }, HeroadjStats.HeroHitAdj)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-roll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 132
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.heroattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 133
         },
         __self: this
       }, "Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Attack-result",
+        className: "Attack-result Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 137
         },
         __self: this
-      }, "Result of attack = ", Herodidhit))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, Herodidhit))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 141
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Attack-section",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 142
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 143
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Float-left DandD_button",
+        className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 144
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        className: "Reset_stat-button",
-        onClick: this.refresh,
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 145
         },
         __self: this
-      }, "Refresh stats")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Float-right DandD_button",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "StatRefresh DandD_button",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 146
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        onClick: this.refresh,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 147
+        },
+        __self: this
+      }, "Refresh stats")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Initiative DandD_button",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 149
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.rollforiniative,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
-        },
-        __self: this
-      }, "Roll for iniative")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 150
         },
         __self: this
-      }, "Hero iniative = ", this.heroinitiative), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Roll for iniative")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Heroinitiative center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 151
+          lineNumber: 152
         },
         __self: this
-      }, "Monster iniative = ", this.monsterinitiative)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "HeroHP-icon",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 153
+        },
+        __self: this
+      }, "Hero ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 153
+        },
+        __self: this
+      }), "iniative:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        className: "Fsize-3",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 154
+        },
+        __self: this
+      }, this.heroinitiative)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "Monsterinitiative center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157
+        },
+        __self: this
+      }, "Monster initiative:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        className: "Fsize-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 158
+        },
+        __self: this
+      }, this.monsterinitiative))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "HeroHP-icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 162
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/herohp.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155
+          lineNumber: 163
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HeroHP-text Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157
+          lineNumber: 165
         },
         __self: this
       }, HeroadjStats.HeroHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "MonsterHP-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 169
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/monsterhp.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 170
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "MonsterHP-text Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 172
         },
         __self: this
       }, MonsteradjStats.MonsterHp)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 181
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 182
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 184
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/acicon.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 185
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "AC-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 178
+          lineNumber: 186
         },
         __self: this
       }, MonsteradjStats.MonsterAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HitAdj-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 190
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
         src: "../static/images/hitadjust.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 191
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HitAdj-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 192
         },
         __self: this
       }, MonsteradjStats.MonsterHitAdj)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-roll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 197
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.Monsterattack,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 198
         },
         __self: this
       }, "Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Attack-result",
+        className: "Attack-result Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194
+          lineNumber: 202
         },
         __self: this
-      }, "Result of attack = ", Monsterdidhit)))));
+      }, Monsterdidhit)))));
     }
   }]);
 
@@ -10938,6 +10828,151 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (AttackSim);
+
+/***/ }),
+
+/***/ "./pages/DandD/hero.js":
+/*!*****************************!*\
+  !*** ./pages/DandD/hero.js ***!
+  \*****************************/
+/*! exports provided: newHero, Hero, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "newHero", function() { return newHero; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Hero", function() { return Hero; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _hero_functions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./hero_functions */ "./pages/DandD/hero_functions.js");
+/* harmony import */ var _attacksim__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./attacksim */ "./pages/DandD/attacksim.js");
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\hero.js";
+
+
+
+
+
+
+
+
+var newHero = {
+  Str: 0,
+  Const: 0,
+  Dext: 0,
+  BaseHitPoints: 50,
+  BaseArmorClass: 10,
+  BaseDamage: 10,
+  BaseHitAdj: 0
+};
+
+var Hero =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Hero, _React$Component);
+
+  function Hero(props) {
+    var _this;
+
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Hero);
+
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Hero).call(this, props));
+    _this.setherostats = _this.setherostats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    return _this;
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Hero, [{
+    key: "setherostats",
+    value: function setherostats() {
+      //random number between 1-20 to set stats
+      newHero.Str = Math.floor(Math.random() * 20 + 1);
+      newHero.Const = Math.floor(Math.random() * 20 + 1);
+      newHero.Dext = Math.floor(Math.random() * 20 + 1); //calls functions in hero_functions to adjust stats in
+      //heroadjstats variable in the attacksim.js
+
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHp = newHero.BaseHitPoints + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroAc = newHero.BaseArmorClass + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setacAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg = newHero.BaseDamage + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setDmgAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHitAdj = newHero.BaseHitAdj + Object(_hero_functions__WEBPACK_IMPORTED_MODULE_7__["setHitAdj"])();
+      this.forceUpdate();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, "Strength: ", newHero.Str), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, "Constitution: ", newHero.Const), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, "Dexterity: ", newHero.Dext), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, "Hitpoints: ", _attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, "Base Damage: ", _attacksim__WEBPACK_IMPORTED_MODULE_8__["HeroadjStats"].HeroDmg)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        onClick: this.setherostats,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, "Set Attrubutes")));
+    }
+  }]);
+
+  return Hero;
+}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
 
@@ -10954,172 +10989,169 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setHitAdj", function() { return setHitAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setDmgAdj", function() { return setDmgAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setacAdj", function() { return setacAdj; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./hero */ "./pages/DandD/hero.js");
-
+/* harmony import */ var _hero__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./hero */ "./pages/DandD/hero.js");
  //sets hero hitpoints based on constitution stat number.
 
 function SetConstAdj() {
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 1) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 1) {
     return -3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 2 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 3) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 2 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 3) {
     return -2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const >= 4 && _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const <= 6) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const >= 4 && _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const <= 6) {
     return -1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const >= 7 && _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const <= 14) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const >= 7 && _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const <= 14) {
     return 0;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 15) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 15) {
     return 1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 16) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 16) {
     return 2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 17) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 17) {
     return 3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 18) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 18) {
     return 4;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 19) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 19) {
     return 5;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Const == 20) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Const == 20) {
     return 6;
   }
 } //sets hero hit adjustment based on strength stat number.
 
 function setHitAdj() {
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 1) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 1) {
     return -4;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 2 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 3) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 2 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 3) {
     return -3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 4 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 5) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 4 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 5) {
     return -2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 6 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 7) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 6 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 7) {
     return -1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str >= 8 && _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str <= 16) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str >= 8 && _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str <= 16) {
     return 0;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 17) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 17) {
     return 1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 18) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 18) {
     return 2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 19) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 19) {
     return 3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 20) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 20) {
     return 4;
   }
 } //sets hero damage adjustment based on strength stat number.
 
 function setDmgAdj() {
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 1) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 1) {
     return -4;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 2 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 3) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 2 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 3) {
     return -3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 4 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 5) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 4 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 5) {
     return -2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 6 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 7) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 6 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 7) {
     return -1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str >= 8 && _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str <= 16) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str >= 8 && _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str <= 16) {
     return 0;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 17) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 17) {
     return 1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 18) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 18) {
     return 2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 19) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 19) {
     return 3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Str == 20) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Str == 20) {
     return 4;
   }
 } //sets hero armor class based on dexterity stat number.
 
 function setacAdj() {
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 1 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 2) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 1 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 2) {
     return -5;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 3) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 3) {
     return -4;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 4) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 4) {
     return -3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 5) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 5) {
     return -2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 6) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 6) {
     return -1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext >= 7 && _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext <= 14) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext >= 7 && _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext <= 14) {
     return 0;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 15) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 15) {
     return 1;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 16) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 16) {
     return 2;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 17) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 17) {
     return 3;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 18 || _hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 19) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 18 || _hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 19) {
     return 4;
   }
 
-  if (_hero__WEBPACK_IMPORTED_MODULE_1__["newHero"].Dext == 20) {
+  if (_hero__WEBPACK_IMPORTED_MODULE_0__["newHero"].Dext == 20) {
     return 5;
   }
 }
@@ -11145,7 +11177,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _monster_functions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./monster_functions */ "./pages/DandD/monster_functions.js");
-/* harmony import */ var _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./hero_attacksim */ "./pages/DandD/hero_attacksim.js");
+/* harmony import */ var _attacksim__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./attacksim */ "./pages/DandD/attacksim.js");
 
 
 
@@ -11164,7 +11196,7 @@ var newMonster = {
   Str: 0,
   Const: 0,
   Dext: 0,
-  BaseHitPoints: 20,
+  BaseHitPoints: 50,
   BaseArmorClass: 10,
   BaseDamage: 10,
   BaseHitAdj: 0
@@ -11194,10 +11226,10 @@ function (_React$Component) {
       newMonster.Dext = Math.floor(Math.random() * 20 + 1); //calls the adjusted functions in monster_functions to set adjusted monster
       //stats in the attacksim.js
 
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHp = newMonster.BaseHitPoints + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"])();
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterAc = newMonster.BaseArmorClass + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setacAdj"])();
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg = newMonster.BaseDamage + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setDmgAdj"])();
-      _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHitAdj = newMonster.BaseHitAdj + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setHitAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHp = newMonster.BaseHitPoints + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterAc = newMonster.BaseArmorClass + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setacAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg = newMonster.BaseDamage + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setDmgAdj"])();
+      _attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHitAdj = newMonster.BaseHitAdj + Object(_monster_functions__WEBPACK_IMPORTED_MODULE_7__["setHitAdj"])();
       this.forceUpdate();
     }
   }, {
@@ -11206,56 +11238,56 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 46
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 47
         },
         __self: this
       }, "Strength: ", newMonster.Str), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 48
         },
         __self: this
       }, "Constitution: ", newMonster.Const), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 49
         },
         __self: this
       }, "Dexterity: ", newMonster.Dext), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 50
         },
         __self: this
-      }, "Hitpoints: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+      }, "Hitpoints: ", _attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterHp), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 51
         },
         __self: this
-      }, "Base Damage: ", _hero_attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      }, "Base Damage: ", _attacksim__WEBPACK_IMPORTED_MODULE_8__["MonsteradjStats"].MonsterDmg)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54
+          lineNumber: 53
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.handleClick,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 54
         },
         __self: this
       }, "Set Attrubutes")));
@@ -11282,172 +11314,169 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setDmgAdj", function() { return setDmgAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setacAdj", function() { return setacAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetConstAdj", function() { return SetConstAdj; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./monster */ "./pages/DandD/monster.js");
-
+/* harmony import */ var _monster__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./monster */ "./pages/DandD/monster.js");
  //sets hero hit adjustment based on strength stat number.
 
 function setHitAdj() {
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 1) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 1) {
     return -4;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 2 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 3) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 2 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 3) {
     return -3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 4 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 5) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 4 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 5) {
     return -2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 6 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 7) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 6 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 7) {
     return -1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str >= 8 && _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str <= 16) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str >= 8 && _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str <= 16) {
     return 0;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 17) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 17) {
     return 1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 18) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 18) {
     return 2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 19) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 19) {
     return 3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 20) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 20) {
     return 4;
   }
 } //sets hero damage adjustment based on strength stat number.
 
 function setDmgAdj() {
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 1) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 1) {
     return -4;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 2 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 3) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 2 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 3) {
     return -3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 4 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 5) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 4 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 5) {
     return -2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 6 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 7) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 6 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 7) {
     return -1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str >= 8 && _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str <= 16) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str >= 8 && _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str <= 16) {
     return 0;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 17) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 17) {
     return 1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 18) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 18) {
     return 2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 19) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 19) {
     return 3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Str == 20) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Str == 20) {
     return 4;
   }
 } //sets hero armor class based on dexterity stat number.
 
 function setacAdj() {
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 1 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 2) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 1 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 2) {
     return -5;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 3) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 3) {
     return -4;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 4) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 4) {
     return -3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 5) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 5) {
     return -2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 6) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 6) {
     return -1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext >= 7 && _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext <= 14) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext >= 7 && _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext <= 14) {
     return 0;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 15) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 15) {
     return 1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 16) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 16) {
     return 2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 17) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 17) {
     return 3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 18 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 19) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 18 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 19) {
     return 4;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Dext == 20) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Dext == 20) {
     return 5;
   }
 } //sets hero hitpoints based on constitution stat number.
 
 function SetConstAdj() {
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 1) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 1) {
     return -3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 2 || _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 3) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 2 || _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 3) {
     return -2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const >= 4 && _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const <= 6) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const >= 4 && _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const <= 6) {
     return -1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const >= 7 && _monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const <= 14) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const >= 7 && _monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const <= 14) {
     return 0;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 15) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 15) {
     return 1;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 16) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 16) {
     return 2;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 17) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 17) {
     return 3;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 18) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 18) {
     return 4;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 19) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 19) {
     return 5;
   }
 
-  if (_monster__WEBPACK_IMPORTED_MODULE_1__["newMonster"].Const == 20) {
+  if (_monster__WEBPACK_IMPORTED_MODULE_0__["newMonster"].Const == 20) {
     return 6;
   }
 }
@@ -11473,7 +11502,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
 /* harmony import */ var _DandD_hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DandD/hero */ "./pages/DandD/hero.js");
 /* harmony import */ var _DandD_monster__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./DandD/monster */ "./pages/DandD/monster.js");
-/* harmony import */ var _DandD_hero_attacksim__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./DandD/hero_attacksim */ "./pages/DandD/hero_attacksim.js");
+/* harmony import */ var _DandD_attacksim__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./DandD/attacksim */ "./pages/DandD/attacksim.js");
 
 
 
@@ -11579,7 +11608,7 @@ function (_Component) {
           lineNumber: 29
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_hero_attacksim__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_attacksim__WEBPACK_IMPORTED_MODULE_9__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 30

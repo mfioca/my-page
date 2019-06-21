@@ -306,7 +306,7 @@ body {
 *      DandD Page        * 
 **************************/
 
-.DandD_stats {
+.DandD_stats, .DandD_attack {
     display: flex;
     flex-wrap: nowrap;
     background-color: DodgerBlue;
@@ -325,25 +325,16 @@ body {
     margin-left: 30px;
 }
 
-.DandD_attack  {
-    display: flex;
-    flex-wrap: nowrap;
-    background-color: DodgerBlue;
-}
-
   .Attack-container {
     display: flex;
     height: 300px;
     background-color: #f1f1f1;
     margin: 10px;
-    font-size: 15px;
-    width: 50%;
-    
+    width: 100%;
 }
 
 .Attack-section {
     position: relative;
-    text-align: center;
     width: 100%;
     background-color: pink;
 }
@@ -359,13 +350,8 @@ body {
     position: absolute;
     bottom: 40px;
     left: 50%;
+    width: 200px;
     transform: translate(-50%, -50%);
-}
-
-.Reset_stat-button {
-    display: flex;
-    margin-right: auto;
-    margin-left: auto;
 }
 
 .AC-Icon {
@@ -397,6 +383,34 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     
+}
+.StatRefresh {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Initiative {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Heroinitiative {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 100px;
+    
+}
+
+.Monsterinitiative {
+    position: absolute;
+    top: 40px;
+    right: 30px;
+    width: 100px;
 }
 
 .HeroHP-icon {

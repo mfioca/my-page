@@ -3,8 +3,9 @@ import { SetConstAdj } from './monster_functions';
 import { setHitAdj } from './monster_functions';
 import { setDmgAdj } from './monster_functions';
 import { setacAdj } from './monster_functions';
+import { MonsteradjStats } from './attacksim';
 export { newMonster }
-import { MonsteradjStats } from './hero_attacksim'
+
 
 
 
@@ -12,7 +13,7 @@ var newMonster = {
     Str: 0,
     Const: 0,
     Dext: 0,
-    BaseHitPoints: 20,
+    BaseHitPoints: 50,
     BaseArmorClass: 10,
     BaseDamage: 10,
     BaseHitAdj: 0
@@ -42,18 +43,16 @@ class Monster extends React.Component {
     render() {
         return (
             <div>
-            <div>
-                <p>Strength: { newMonster.Str }</p>
-                <p>Constitution: { newMonster.Const }</p>
-                <p>Dexterity: { newMonster.Dext }</p>
-                <p>Hitpoints: { MonsteradjStats.MonsterHp }</p>
-               
-                <p>Base Damage: { MonsteradjStats.MonsterDmg }</p>
-                
-            </div>
-            <div>
-            <button onClick={this.handleClick}>Set Attrubutes</button>
-            </div>
+                <div>
+                    <p>Strength: { newMonster.Str }</p>
+                    <p>Constitution: { newMonster.Const }</p>
+                    <p>Dexterity: { newMonster.Dext }</p>
+                    <p>Hitpoints: { MonsteradjStats.MonsterHp }</p>
+                    <p>Base Damage: { MonsteradjStats.MonsterDmg }</p> 
+                </div>
+                <div>
+                    <button onClick={this.handleClick}>Set Attrubutes</button>
+                </div>
             </div>
         );
     }

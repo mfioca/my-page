@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import Hero from './DandD/hero'
 import Monster from './DandD/monster'
-import AttackSim from './DandD/hero_attacksim'
+import AttackSim from './DandD/attacksim'
 
 class DandD extends Component {
 
