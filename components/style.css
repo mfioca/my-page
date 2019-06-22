@@ -8,9 +8,16 @@ body {
 }
 
 .Body {
-    flex-direction: column;
     min-height: 100vh;
     font-size: 14px;
+}
+
+.FlexDirection_column {
+    flex-direction: column;
+}
+
+.FlexDirection_row {
+
 }
 
 /* *********************** 
@@ -136,6 +143,11 @@ body {
 *       Images           * 
 **************************/
 
+.ImgSize200 {
+    width: 200px;
+    height: 200px;
+}
+
 .Lemons {
     display: block;
     margin-right: auto;
@@ -146,17 +158,13 @@ body {
 .about_img {
     display: block;
     object-fit: contain;
-    width: 200px;
-    height: 200px;
-    padding: 20px;
+    padding: 10px;
     margin-top: 30px;
 }
 
 .DnD_avatar {
     object-fit: contain;
     float: right;
-    width: 200px;
-    height: 200px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 30px;
@@ -167,7 +175,7 @@ body {
 **************************/
 
 .Header {
-    width: '100%';
+    width: 100%;
     height: 50px;
     background-color: black;
     background-image: 
@@ -181,7 +189,7 @@ body {
     position: absolute;
     top: 62px;
     z-index: 1;
-    width: 130px;
+    width: 110px;
     padding: 0 20px;
     overflow: hidden;
     background-color: black;
@@ -197,27 +205,16 @@ body {
     margin: 5px; 
     line-height: 40px;
     width: 100px;
-    
 }
 
 .Navbar {
     display: flex;
     float: left;
-    flex-direction: row;
-    
-}
-
-.about_nav {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5px;
-    margin-left: 300px;
 }
 
 .google, .email {
     display: flex;
     float: right;
-    flex-direction: row;
 }
 
 .google, .email > div {
@@ -225,12 +222,17 @@ body {
     margin-right: 15px;
 }
 
+.about_nav {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 300px;
+}
+
 /* *********************** 
 *      About Page        * 
 **************************/
 
 .about_header {
-    
     margin-right: auto;
     margin-left: auto;
     background-color: rgb(37, 56, 82);
@@ -241,19 +243,16 @@ body {
 
 .about-container {
     background-color: white;
-    flex-direction: column;
     min-height: 100vh;
 }
 
 .Res-container {
     background-color: white;
-    flex-direction: column;
     padding: 10px;
 }
 
 .about_section {
     display: flex;
-    flex-direction: row;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-right: 50px;
@@ -282,17 +281,11 @@ body {
 }
 
 .about_text {
+    display: block;
     margin-top: 0px;
     padding-left: 100px;
     padding-right: 100px;
-    float: right;
-    display: block;
     text-align: left;
-}
-
-.Res-section {
-    display: flex;
-    flex-direction: column;
 }
 
 .Res-divider > p {
@@ -467,11 +460,10 @@ body {
 .Footer-nav {
     display: flex;
     float: left;
-    flex-direction: row;
 }
 
 .Footer-nav > div {
-    width: 100px;
+    width: 120px;
     margin: 5px; 
     line-height: 40px;
 }

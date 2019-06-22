@@ -7,9 +7,9 @@ function Resumeabout(props) {
 
     return(
         <div>
-            <div className="Res-container">
+            <div className="Res-container FlexDirection_column">
                 <div className="Res-body">
-                    <div className="Res-section">
+                    <div >
                         <h1 className="center r-title">Resume</h1>
                         <ul className="center">
                             <li className="inline-block Res-title-li">Email: mark@fioca.com</li>
@@ -17,10 +17,10 @@ function Resumeabout(props) {
                         </ul>
                     </div>
                     </div>
-                    <div className="Res-divider Fsize-2 center margin-tb-0">
+                    <div className="Res-divider Fsize-2 center">
                         <p className="inline-block">PROFESSIONAL SUMMARY</p>
                     </div>
-                    <div className="Res-section">
+                    <div>
                         <p>
                             Dedicated and motivated professional looking to apply my accumulated experience in 
                             technical writing and training in mixed customer relations roles and into an IT based career. 
@@ -59,10 +59,10 @@ function Resumeabout(props) {
                             beginner knowledge in REACT and Java/JavaScript.
                         </p>
                     </div>
-                    <div className="Res-divider Fsize-2 center margin-tb-0">
+                    <div className="Res-divider Fsize-2 center">
                         <p className="inline-block">PROFESSIONAL CAREER EXPERTISE</p>
                     </div>
-                    <div className="Res-section">
+                    <div >
                         <h3><u>SOFTWARE IMPLEMENTATION AND SUPPORT</u></h3>
                         <ul>
                             <li>
@@ -133,10 +133,10 @@ function Resumeabout(props) {
                             </li>
                         </ul>
                     </div>
-                    <div className="Res-divider Fsize-2 center margin-tb-0">
+                    <div className="Res-divider Fsize-2 center">
                         <p className="inline-block">PROFESSIONAL EXPERIENCE</p>
                     </div>
-                    <div className="Res-section">
+                    <div>
                         <table className="Res-table">
                             <tr>
                                 <td className="left">

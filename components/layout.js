@@ -8,7 +8,7 @@ export default function Layout(props) {
             <div className="Header">
                 <Header />
             </div>
-            <div className="Body">
+            <div className="Body FlexDirection_column">
               <body >
                 {props.children}
               </body>

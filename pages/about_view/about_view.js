@@ -7,12 +7,12 @@ export function About(props) {
     }
 
     return (
-        <div className="about-container">
+        <div className="about-container FlexDirection_column">
             <div className="about_section about_gradient-left">
                 <div>
-                    <img className="about_img" src="../static/images/avatar.jpg"></img>
+                    <img className="about_img ImgSize200" src="../static/images/avatar.jpg"></img>
                 </div>
-                <div className="about_text Fsize-2">
+                <div className="about_text Fsize-2 Float-right">
                     <h1 className="about_text-title">About</h1>
                     <p>
                         Movie, sci-fi and over all tech geek that always seeks out new and interesting
@@ -27,7 +27,7 @@ export function About(props) {
                 </div>
             </div>
             <div className="about_section about_gradient-right">
-                <div className="about_text Fsize-2">
+                <div className="about_text Fsize-2 Float-right">
                     <h1 className="about_text-title">Background</h1>
                     <p>
                         I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences 
@@ -37,14 +37,14 @@ export function About(props) {
                     </p>
                 </div>
                 <div>
-                    <img className="about_img" src="../static/images/building.jpg"></img>
+                    <img className="about_img ImgSize200" src="../static/images/building.jpg"></img>
                 </div>
             </div>
             <div className="about_section about_gradient-left">
                 <div>
-                    <img className="about_img" src="../static/images/rainmeter.png"></img>
+                    <img className="about_img ImgSize200" src="../static/images/rainmeter.png"></img>
                 </div>
-                <div className="about_text Fsize-2">
+                <div className="about_text Fsize-2 Float-right">
                     <h1 className="about_text-title">
                         Computers and UI design
                     </h1>
