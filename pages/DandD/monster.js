@@ -44,18 +44,39 @@ class Monster extends React.Component {
         return (
             <div>
                 <div>
-                    <p>Strength: { newMonster.Str }</p>
-                    <p>Constitution: { newMonster.Const }</p>
-                    <p>Dexterity: { newMonster.Dext }</p>
-                    <p>Hitpoints: { MonsteradjStats.MonsterHp }</p>
-                    <p>Base Damage: { MonsteradjStats.MonsterDmg }</p> 
+                    <p><b>Name: </b>Insert random Name Here</p>
                 </div>
                 <div>
+                    <table className="DandDstat_table">
+                        <tr>
+                            <td>Strength:</td>
+                            <td> { newMonster.Str }</td>
+                        </tr>
+                        <tr>
+                            <td>Constitution:</td>
+                            <td> { newMonster.Const }</td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity:</td>
+                            <td> { newMonster.Dext }</td>
+                        </tr>
+                        <tr>
+                            <td>Hitpoints:</td>
+                            <td> { MonsteradjStats.MonsterHp }</td>
+                        </tr>
+                        <tr>
+                            <td>Base Damage:</td>
+                            <td> { MonsteradjStats.MonsterDmg }</td>
+                        </tr>
+                    </table>
+                </div>
+                <div className="Stats-roll">
                     <button onClick={this.handleClick}>Set Attrubutes</button>
                 </div>
             </div>
         );
     }
 }
+
 
 export default Monster;

@@ -9,7 +9,7 @@ class DandD extends Component {
     render() {
         return (
             <Layout>
-                <div className="DandD_stats">
+                <div className="DandD_stats Fsize-2">
                     <div>
                         <span className="Stats">
                             <Hero />

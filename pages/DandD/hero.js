@@ -46,15 +46,35 @@ class Hero extends React.Component {
 
     render() {
         return (
-            <div>  
+            <div>
                 <div>
-                    <p>Strength: { newHero.Str }</p>
-                    <p>Constitution: { newHero.Const }</p>
-                    <p>Dexterity: { newHero.Dext }</p>
-                    <p>Hitpoints: { HeroadjStats.HeroHp }</p>
-                    <p>Base Damage: { HeroadjStats.HeroDmg  }</p>
+                    <p><b>Name: </b>Insert random Name Here</p>
+                </div> 
+                <div>
+                    <table className="DandDstat_table">
+                        <tr>
+                            <td>Strength:</td>
+                            <td> { newHero.Str }</td>
+                        </tr>
+                        <tr>
+                            <td>Constitution:</td>
+                            <td> { newHero.Const }</td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity:</td>
+                            <td> { newHero.Dext }</td>
+                        </tr>
+                        <tr>
+                            <td>Hitpoints:</td>
+                            <td> { HeroadjStats.HeroHp }</td>
+                        </tr>
+                        <tr>
+                            <td>Base Damage:</td>
+                            <td> { HeroadjStats.HeroDmg }</td>
+                        </tr>
+                    </table>
                 </div>
-                <div>
+                <div className="Stats-roll">
                     <button onClick={this.setherostats}>Set Attrubutes</button>
                 </div>
             </div>
