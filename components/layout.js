@@ -17,5 +17,5 @@ export default function Layout(props) {
                 <Footer />
             </div>
         </div>
-    )
+    );
 }

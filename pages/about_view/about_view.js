@@ -10,7 +10,7 @@ export function About(props) {
         <div className="about-container FlexDirection_column Text-shadow">
             <div className="about_section about_gradient-left">
                 <div>
-                    <img className="about_img ImgSize200" src="../static/images/avatar.jpg"></img>
+                    <img className="about_img ImgSize200" src="../static/images/avatar.jpg" alt="profile picture"></img>
                 </div>
                 <div className="about_text Fsize-2 Float-right">
                     <h1 className="about_text-title">About</h1>
@@ -37,12 +37,12 @@ export function About(props) {
                     </p>
                 </div>
                 <div>
-                    <img className="about_img ImgSize200" src="../static/images/building.jpg"></img>
+                    <img className="about_img ImgSize200" src="../static/images/building.jpg" alt="buckner building"></img>
                 </div>
             </div>
             <div className="about_section about_gradient-left">
                 <div>
-                    <img className="about_img ImgSize200" src="../static/images/rainmeter.png"></img>
+                    <img className="about_img ImgSize200" src="../static/images/rainmeter.png" alt="rainmeter skin"></img>
                 </div>
                 <div className="about_text Fsize-2 Float-right">
                     <h1 className="about_text-title">
@@ -57,7 +57,7 @@ export function About(props) {
                         through this program.    
                     </p>
                     <p>
-                        My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet" target="_blank">here</a> or on my link in the footer to navigate to that page.  
+                        My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet">here</a> or on my link in the footer to navigate to that page.  
                     </p>
                 </div>
             </div>

@@ -9,7 +9,6 @@ export { Hero }
 
 
 var newHero = {
-    
     Str: 0,
     Const: 0,
     Dext: 0,
@@ -18,8 +17,6 @@ var newHero = {
     BaseDamage: 10,
     BaseHitAdj: 0
 };
-
-
 
 
 class Hero extends React.Component {

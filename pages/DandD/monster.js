@@ -7,8 +7,6 @@ import { MonsteradjStats } from './attacksim';
 export { newMonster }
 
 
-
-
 var newMonster = {
     Str: 0,
     Const: 0,

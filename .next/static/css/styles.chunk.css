@@ -1,0 +1,516 @@
+.Layout {
+    margin: 2px;
+    padding: 5px;
+}
+
+body {
+    background-color: rgb(202, 202, 202);
+}
+
+.Body {
+    min-height: 100vh;
+    font-size: 14px;
+}
+
+.FlexDirection_column {
+    flex-direction: column;
+}
+
+
+
+/* *********************** 
+*   Text Formatting      * 
+**************************/
+.Fsize-1 {
+    font-size: 14px;
+}
+
+.Fsize-2 {
+    font-size: 20px;
+}
+
+.Fsize-3 {
+    font-size: 25px;
+}
+
+.copywrite-text {
+    font-size: 10px
+}
+
+.center {
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.res-lineheight {
+    line-height: 1;
+}
+
+.Res-body > div {
+    font-family: "Times New Roman", Times, serif;
+}
+
+.about_text-title {
+    color: navy;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.Float-left {
+    display: flex;
+    float: left;
+}
+
+.Float-right {
+    display: flex;
+    float: right;
+}
+
+.Text-shadow {
+    text-shadow: 2px 2px 8px rgb(0, 153, 255)
+}
+/*text-shadow: 2px 2px 8px #FF0000
+/* *********************** 
+*   Lists and tables     * 
+**************************/
+
+.Res-title-li {
+    padding: 0px 20px;
+}
+
+.Res-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: 5px;
+}
+
+.Dropdown-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+.Dropdown-list_item {
+    padding: 5px 0;
+}
+
+.DandDstat_table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.DandDstat_table td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+.DandDstat_table td:nth-child(even) {
+    color: #888888;
+}
+/* *********************** 
+*         Links          * 
+**************************/
+
+.Header-container a:link, .Footer-container a:link, .Dropdown {
+    font-size: 20px;
+    color: #888888;
+    transition: all .2s ease-in-out;
+}
+
+.Header-container a:visited, .Footer-container a:visited {
+    color: #888888;
+}
+
+.Header-container a:hover, .Footer-container a:hover, .Dropdown_hover {
+    font-size: 25px;
+    color:#f2f2f2;
+    transform: scale(1.1);
+}
+
+.about-container a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.about-container a:visited {
+    color: black;
+}
+
+.about-container a:hover {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+/* *********************** 
+*       Images           * 
+**************************/
+
+.ImgSize200 {
+    width: 200px;
+    height: 200px;
+}
+
+.Lemons {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+}
+
+.about_img {
+    display: block;
+    object-fit: contain;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.DnD_avatar {
+    object-fit: contain;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+
+/* *********************** 
+*        Header          * 
+**************************/
+
+.Header {
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    background-image: 
+    linear-gradient(
+      rgba(15, 15, 15, 0.45), 
+      rgba(170, 165, 165, 0.45)
+    );
+}
+
+.DropdownMenu {
+    position: absolute;
+    top: 62px;
+    z-index: 1;
+    width: 110px;
+    padding: 0 20px;
+    overflow: hidden;
+    background-color: black;
+    background-image:
+    linear-gradient( 
+      rgba(170, 165, 165, 0.45),
+      rgba(15, 15, 15, 0.45)
+    );
+    border-radius: 5px;
+}
+
+.Navbar > div, .about_nav > div {
+    margin: 5px; 
+    line-height: 40px;
+    width: 100px;
+}
+
+.Navbar {
+    display: flex;
+    float: left;
+}
+
+.google, .email {
+    display: flex;
+    float: right;
+}
+
+.google, .email > div {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+.about_nav {
+    display: flex;
+    margin-top: 5px;
+    margin-left: 300px;
+}
+
+/* *********************** 
+*      About Page        * 
+**************************/
+
+.about_header {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 5px;
+    background-color: rgb(37, 56, 82);
+    box-shadow: 0px 10px  5px rgba(0,0,0,0.6);
+	-moz-box-shadow: 0px 10px  5px  rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0px 10px 5px  rgba(0,0,0,0.6);
+	-o-box-shadow: 0px 10px 5px  rgba(0,0,0,0.6);
+    width: 823px;
+    height: 50px;
+    color: white;
+}
+
+.about-container {
+    min-height: 100vh;
+}
+
+.Res-container {
+    background-color: white;
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+	-moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+	-o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+    padding: 10px;
+}
+
+.about_section {
+    display: flex;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    padding-right: 50px;
+    padding-left: 50px;
+    background-color: rgb(83, 101, 138);
+    color: rgb(27, 73, 88);
+    
+}
+
+.about_gradient-left {
+    background-image:
+    linear-gradient(
+        to left, 
+      rgba(202, 202, 202),
+      rgba(83, 101, 138)
+    );
+    box-shadow: -10px 0px     5px rgba(0,0,0,0.6);
+	-moz-box-shadow: -10px 0px     5px rgba(0,0,0,0.6);
+	-webkit-box-shadow: -10px 0px     5px rgba(0,0,0,0.6);
+	-o-box-shadow: -10px 0px     5px rgba(0,0,0,0.6);
+}
+
+.about_gradient-right {
+    background-image:
+    linear-gradient(
+        to right, 
+      rgba(202, 202, 202),
+      rgba(83, 101, 138)
+    );
+    box-shadow: 10px 0px  5px rgba(0,0,0,0.6);
+	-moz-box-shadow: 10px 0px  5px  rgba(0,0,0,0.6);
+	-webkit-box-shadow: 10px 0px  5px  rgba(0,0,0,0.6);
+	-o-box-shadow: 10px 0px  5px  rgba(0,0,0,0.6);
+}
+
+.about_text {
+    display: block;
+    margin-top: 0px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: left;
+}
+
+.Res-divider > p {
+    background-color: rgb(196, 194, 194);
+    height: 25px;
+    width: 100%;
+    border: 1px solid black;
+}
+
+/* *********************** 
+*      DandD Page        * 
+**************************/
+
+.DandD_stats, .DandD_attack {
+    display: flex;
+    flex-wrap: nowrap;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+  
+.DandD_stats > div {
+    background-color: #575555;
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+		-moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+		-webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+		-o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+    margin: 10px;
+    width: 50%;
+}
+
+.Stats {
+    float: left;
+    line-height: 10px;
+    margin-left: 30px;
+}
+.Stats-roll {
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+}
+
+.Attack-container {
+    display: flex;
+    height: 300px;
+    background-color: #575555;
+    box-shadow:  0 0 10px  rgba(0,0,0,0.6);
+        -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+        -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+        -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
+    margin: 10px;
+    width: 100%;
+}
+
+.Attack-section {
+    position: relative;
+    width: 100%;
+}
+
+.Attack-roll {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Attack-result {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 200px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
+
+.AC-Icon {
+    position: absolute;
+    top: 10px;
+    left: 22px;
+    width: 100px;
+    height: 100px;
+}
+
+.AC-Icon-text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.HitAdj-Icon {
+    position: absolute;
+    top: 10px;
+    right: 22px;  
+}
+
+.HitAdj-Icon-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.StatRefresh {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Initiative {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Heroinitiative {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;
+}
+
+.Monsterinitiative {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 100px;
+}
+
+.HeroHP-icon {
+    position: absolute;
+    top: 150px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+}
+
+.HeroHP-text, .MonsterHP-text {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    width: 50px;
+}
+
+.MonsterHP-icon {
+    position: absolute;
+    top: 150px;
+    right: 115px;
+    width: 50px;
+    height: 50px;
+}
+
+.DandD_button {
+    padding: 5px 20px;
+}
+
+/* *********************** 
+*        Footer          * 
+**************************/
+
+.Footer {
+    width: '100%';
+    height: 100px;
+    font-size: 25px;
+    color:#f2f2f2;
+    background-color: black;
+    background-image: 
+    linear-gradient( 
+      rgba(170, 165, 165, 0.45),
+      rgba(15, 15, 15, 0.45)
+    );
+}
+
+.Footer-nav {
+    display: flex;
+    float: left;
+}
+
+.Footer-nav > div {
+    width: 120px;
+    margin: 5px; 
+    line-height: 40px;
+}
+  
+.box {
+    -webkit-transition:1s;
+}
+.box:active{
+    margin-left:-120px;
+ }
+
+
+
+
+
+/*# sourceMappingURL=styles.chunk.css.map*/

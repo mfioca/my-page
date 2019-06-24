@@ -1,6 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
-
 
 
 class Footer extends React.Component {
@@ -9,25 +7,25 @@ class Footer extends React.Component {
             <div className="Footer-container">
                 <div className="Footer-nav center">
                     <div>
-                        <a href="https://www.linkedin.com/in/mark-fioca/" target="_blank">
+                        <a href="https://www.linkedin.com/in/mark-fioca/">
                             Linkedln
                         </a>
                     </div>
                     <div>
-                        <a href="https://www.deviantart.com/franknmullet" target="_blank">
+                        <a href="https://www.deviantart.com/franknmullet">
                             Deviantart
                         </a>
                     </div>
                 </div>
                 <div className="email">
                     <div>
-                        <Link href="mailto: mark@fioca.com">
+                        <a href="mailto: mark@fioca.com">
                             <a>Send Email</a>
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 

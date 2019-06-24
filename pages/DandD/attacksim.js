@@ -118,13 +118,13 @@ class AttackSim extends React.Component {
                     <div className="Attack-container">
                         <div className="Attack-section">
                             <div className="AC-Icon">
-                                <img src="../static/images/acicon.png" />
+                                <img src="../static/images/acicon.png" alt="shield"/>
                                 <p className="AC-Icon-text Fsize-3">
                                     { HeroadjStats.HeroAc }
                                 </p>
                             </div>
                             <div className="HitAdj-Icon">
-                                <img src="../static/images/hitadjust.png" />
+                                <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <p className="HitAdj-Icon-text Fsize-3">
                                     { HeroadjStats.HeroHitAdj }
                                 </p>
@@ -138,16 +138,15 @@ class AttackSim extends React.Component {
                                 { Herodidhit }
                             </div>
                         </div>
-                    </div>  
-    
+                    </div>
                     <div className="Attack-container">
                         <div className="Attack-section">    
                             <div>
                                 <div className="StatRefresh DandD_button">
-                                <button onClick={this.refresh}>Refresh stats</button>
+                                    <button onClick={this.refresh}>Refresh stats</button>
                                 </div>
                                 <div className="Initiative DandD_button">
-                                <button onClick={this.rollforiniative}>Roll for iniative</button>
+                                    <button onClick={this.rollforiniative}>Roll for iniative</button>
                                 </div>
                                 <div className="Heroinitiative center Fsize-2">
                                     <p>Hero <br/>iniative:</p>
@@ -160,40 +159,33 @@ class AttackSim extends React.Component {
                             </div>
                             
                             <div className="HeroHP-icon">
-                                <img src="../static/images/herohp.png" />
-                            
+                                <img src="../static/images/herohp.png" alt="icon"/>
                                 <p className="HeroHP-text Fsize-3 center">
                                     { HeroadjStats.HeroHp }
                                 </p>
                             </div>
                             <div className="MonsterHP-icon">
-                                <img src="../static/images/monsterhp.png" />
-                            
+                                <img src="../static/images/monsterhp.png" alt="icon"/>
                                 <p className="MonsterHP-text Fsize-3 center">
                                     { MonsteradjStats.MonsterHp }
                                 </p>
                             </div>
                         </div>
                     </div>
-
-
-
                     <div className="Attack-container">
                         <div className="Attack-section">
-                        
                             <div className="AC-Icon">
-                                <img src="../static/images/acicon.png" />
+                                <img src="../static/images/acicon.png" alt="shield" />
                                 <p className="AC-Icon-text Fsize-3">
                                     { MonsteradjStats.MonsterAc }
                                 </p>
                             </div>
                             <div className="HitAdj-Icon">
-                                <img src="../static/images/hitadjust.png" />
+                                <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <p className="HitAdj-Icon-text Fsize-3">
                                     { MonsteradjStats.MonsterHitAdj }
                                 </p>
                             </div>
-                            
                             <div className="Attack-roll">
                                 <button onClick={this.Monsterattack}>
                                     Roll for Attack
@@ -206,7 +198,6 @@ class AttackSim extends React.Component {
                     </div>
                 </div>
             </div>
-    
         );
     }
 }

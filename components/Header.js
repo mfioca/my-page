@@ -1,7 +1,6 @@
 import React from 'react'
 
 
-
 class Headerdropdown extends React.Component {
     constructor(props) {
         super(props);
@@ -82,22 +81,19 @@ class NavBar extends React.Component {
                 </div>
                 <div className="google">
                     <div>
-                        <img src="/static/images/google.png" height="20" />
+                        <img src="/static/images/google.png" alt="google" height="20" />
                     </div>
                     <div>
-                        <form action="http://google.com/search" target="_blank">
+                        <form action="http://google.com/search" target="_blank" rel="noopener noreferrer">
                             <input name="q" />
                             <input type="submit" />
                         </form>
                     </div>
                 </div>
-                
             </div>
-        )
+        );
     }
 }
-
-
 
 export default NavBar;
 

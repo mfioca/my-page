@@ -15,14 +15,14 @@ class DandD extends Component {
                             <Hero />
                         </span>
                         
-                            <img className="DnD_avatar ImgSize200" src="../static/images/hero.png" /> 
+                            <img className="DnD_avatar ImgSize200" src="../static/images/hero.png" alt="hero"/> 
                     </div>
                     <div>
                         <span className="Stats">
                             <Monster />
                         </span>
                         <span>
-                            <img className="DnD_avatar ImgSize200" src="../static/images/monster.png" />
+                            <img className="DnD_avatar ImgSize200" src="../static/images/monster.png" alt="monster"/>
                         </span>
                     </div>
                 </div>
