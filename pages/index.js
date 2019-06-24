@@ -10,7 +10,7 @@ class Home extends Component {
     render() {
         return (
             <Layout>
-                <div className="center-page center Fsize-2">
+                <div className="center-page center Fsize-3 Text-shadow">
                     <h1>Welcome to my page!</h1>
                     <p>
                         This page has been created during my efforts to learn JavaScript <br /> 
@@ -29,7 +29,7 @@ class Home extends Component {
                     </p>
 
                 </div>
-                <div className="center-page center">
+                <div className="center-page center Text-shadow">
                 <h1>Home Page Under Construction</h1>
                 <img className="Lemons center-page" src="../static/images/lemons.jpg" />
                 <p className="copywrite-text center">

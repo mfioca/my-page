@@ -26,8 +26,6 @@ class Hero extends React.Component {
     constructor(props) {
         super(props);
         this.setherostats = this.setherostats.bind(this);
-       
-        
     }
 
     setherostats() {

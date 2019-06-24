@@ -149,11 +149,11 @@ class AttackSim extends React.Component {
                                 <div className="Initiative DandD_button">
                                 <button onClick={this.rollforiniative}>Roll for iniative</button>
                                 </div>
-                                <div className="Heroinitiative center">
+                                <div className="Heroinitiative center Fsize-2">
                                     <p>Hero <br/>iniative:</p>
                                     <p className="Fsize-3">{this.heroinitiative}</p>
                                 </div>
-                                <div className="Monsterinitiative center">
+                                <div className="Monsterinitiative center Fsize-2">
                                     <p>Monster initiative:</p>
                                     <p className="Fsize-3">{this.monsterinitiative}</p>
                                 </div>

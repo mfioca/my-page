@@ -7,7 +7,7 @@ export function About(props) {
     }
 
     return (
-        <div className="about-container FlexDirection_column">
+        <div className="about-container FlexDirection_column Text-shadow">
             <div className="about_section about_gradient-left">
                 <div>
                     <img className="about_img ImgSize200" src="../static/images/avatar.jpg"></img>
