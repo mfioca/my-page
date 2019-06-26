@@ -26,10 +26,8 @@ class DandD extends Component {
                         </span>
                     </div>
                 </div>
-                <div>
                         <AttackSim />
-                    
-                </div>
+                   
             </Layout>
         );
     }
