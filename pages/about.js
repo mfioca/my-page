@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout'
-import About from './about_view/about_view'
-import Resume from './about_view/resume_view'
+import About from './about_view/aboutview'
+import Resume from './about_view/resumeview'
 
 
 class Aboutpage extends React.Component {

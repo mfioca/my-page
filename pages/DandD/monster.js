@@ -1,8 +1,8 @@
 import React from 'react';
-import { SetConstAdj } from './monster_functions';
-import { setHitAdj } from './monster_functions';
-import { setDmgAdj } from './monster_functions';
-import { setacAdj } from './monster_functions';
+import { SetConstAdj } from './monsterfunctions';
+import { setHitAdj } from './monsterfunctions';
+import { setDmgAdj } from './monsterfunctions';
+import { setacAdj } from './monsterfunctions';
 import { MonsteradjStats } from './attacksim';
 export { newMonster }
 

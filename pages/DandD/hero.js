@@ -1,8 +1,8 @@
 import React from 'react';
-import { SetConstAdj } from './hero_functions';
-import { setHitAdj } from './hero_functions';
-import { setDmgAdj } from './hero_functions';
-import { setacAdj } from './hero_functions';
+import { SetConstAdj } from './herofunctions';
+import { setHitAdj } from './herofunctions';
+import { setDmgAdj } from './herofunctions';
+import { setacAdj } from './herofunctions';
 import { HeroadjStats } from './attacksim';
 export { newHero }
 export { Hero }
