@@ -86,7 +86,8 @@ class NavBar extends React.Component {
                     <div>
                         <form action="http://google.com/search" target="_blank" rel="noopener noreferrer">
                             <input name="q" />
-                            <input type="submit" />
+                            <input type="submit" value="Google Search" />
+                            
                         </form>
                     </div>
                 </div>

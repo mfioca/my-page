@@ -25,14 +25,6 @@ class Home extends Component {
                     </p>
 
                 </div>
-                <div className="center-page center Text-shadow">
-                    <h1>Home Page Under Construction</h1>
-                    <img className="Lemons center-page" src="../static/images/lemons.jpg" />
-                    <p className="copywrite-text center">
-                        This picture and everything in it is owned by the Valve Corpration.
-                        All Rights Reserved.
-                    </p>
-                </div>
             </Layout>
         )
     }
