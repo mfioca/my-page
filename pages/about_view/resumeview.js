@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 
-function Resumeabout(props) {
-    if (!props.resume) {
-        return null;
-    }
+function Resume(props) {
+    
 
     return(
         <div>
@@ -192,4 +190,4 @@ function Resumeabout(props) {
 
 }
 
-export default Resumeabout;
+export default Resume;

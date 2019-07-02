@@ -2,9 +2,7 @@ import React, { Component } from 'react'
 
 
 export function About(props) {
-    if (props.about) {
-        return null;
-    }
+    
 
     return (
         <div className="about-container FlexDirection_column Text-shadow">
@@ -31,8 +29,8 @@ export function About(props) {
                     <h1 className="about_text-title">Background</h1>
                     <p>
                         I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences 
-                        when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated and saw 
-                        different places and things that are unforgetable.  Those experiences helped me 
+                        when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated different places
+                        and have seen things that are unforgetable.  Those experiences helped me 
                         expand my knowledge in movie, photo and audio editing and new knowledge and points of views about the world.
                     </p>
                 </div>

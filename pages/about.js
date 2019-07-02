@@ -1,66 +1,121 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import Layout from '../components/layout'
 import About from './about_view/aboutview'
 import Resume from './about_view/resumeview'
 
+class Tab extends Component {
+    static propTypes = {
+        activeTab: PropTypes.string.isRequired,
+        label: PropTypes.string.isRequired,
+        onClick: PropTypes.func.isRequired,
+    };
 
-class Aboutpage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {showAbout: true}
-        this.aboutclick = this.aboutclick.bind(this);
-        
-        this.state = {showResume: false}
-        this.resumeclick = this.resumeclick.bind(this);
-    }
-
-    aboutclick() {
-        this.setState(prevState => ({
-            showResume: !prevState.showResume
-        }));
-        this.setState(prevState => ({
-            showAbout: !prevState.showAbout
-        }));
-    }
-
-    resumeclick() {
-        this.setState(prevState => ({
-            showResume: !prevState.showResume
-        })); 
-        this.setState(prevState => ({
-            showAbout: !prevState.showAbout
-        }));
+    onClick = () => {
+        const { label, onClick } = this.props;
+        onClick(label);
     }
 
     render() {
+        const {
+            onClick,
+            props: {
+                activeTab,
+                label,
+            },
+        } = this;
+
+        let className = 'tab-list-item ';
+
+        if (activeTab === label) {
+            className += ' tab-list-active';
+        }
+
         return (
-            <Layout>
-                <div className="about_header">
-                    <div className="about_nav center">
-                        <div>
-                            <a  
-                                className="pointer center Fsize-3"
-                                onClick={this.aboutclick}>
-                                {this.state.showAbout ? 'About' : 'About'} 
-                            </a>
-                        </div>
-                        <div>
-                            <a className="pointer center Fsize-3"
-                                onClick={this.resumeclick} >
-                                {this.state.showResume ? 'Resume' : 'Resume'}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <About about={this.state.showAbout}/>
-                </div>
-                <div>
-                    <Resume resume={this.state.showResume}/>
-                </div>
-            </Layout>
+            <li 
+                className={className}
+                onClick={onClick}
+            >
+                {label}
+            </li>
         );
     }
 }
+
+class Tabs extends Component {
+    static propTypes = {
+        children: PropTypes.instanceOf(Array).isRequired,
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            activeTab: this.props.children[0].props.label,
+        };
+    }
+
+    onClickTabItem = (tab) => {
+        this.setState({ activeTab: tab});
+    }
+
+    render() {
+        const {
+            onClickTabItem,
+            props: {
+                children,
+            },
+            state: {
+                activeTab,
+            }
+        } = this;
+
+        return (
+            <div className="tabs">
+                <div className="about_header">
+                    <ol className="about_nav pointer Fsize-3">
+                        {children.map((child) => {
+                            const { label } = child.props;
+
+                            return (
+                                <Tab
+                                activeTab={activeTab}
+                                key={label}
+                                label={label}
+                                onClick={onClickTabItem}
+                                />
+                            );
+                        })}
+                    </ol>
+                </div>
+                <div className="tab-content">
+                    {children.map((child) => {
+                        if (child.props.label !== activeTab) return undefined;
+                        return child.props.children;
+                    })}
+                </div>
+            </div>
+        );
+    }
+}
+
+function Aboutpage() {
+    return (
+        <Layout>
+            <div>
+                <Tabs>
+                    <div label="About">
+                        <About />
+                    </div>
+                    <div label="Resume">
+                        <Resume />
+                    </div>
+                </Tabs>
+            </div>
+        </Layout>
+    );
+}
+
+
+
 
 export default Aboutpage;

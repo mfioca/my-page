@@ -31,10 +31,6 @@ body {
     font-size: 25px;
 }
 
-.copywrite-text {
-    font-size: 10px
-}
-
 .center {
     text-align: center;
 }
@@ -162,13 +158,6 @@ body {
     height: 200px;
 }
 
-.Lemons {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 50%;
-}
-
 .about_img {
     display: block;
     object-fit: contain;
@@ -239,7 +228,6 @@ body {
 .about_nav {
     display: flex;
     margin-top: 5px;
-    margin-left: 300px;
 }
 
 /* *********************** 
@@ -257,6 +245,18 @@ body {
 	-o-box-shadow: 0px 10px 5px  rgba(0,0,0,0.6);
     width: 823px;
     height: 50px;
+    color: rgb(46, 99, 173);
+}
+
+.tab-list-item {
+    list-style: none;
+    text-align: center;
+    margin: 5px;
+    width: 50%;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
     color: white;
 }
 
@@ -505,50 +505,10 @@ body {
 .box:active{
     margin-left:-120px;
  }
+ 
+
+ 
 
 
-
-
-.container {
-    position: relative;
-  }
-  
-  .display {
-    position: relative;
-    z-index: 1;
-    width: 120px;
-    height: 40px;
-    background-color: #5a564c;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
-    transition: background-color 350ms;
-  }
-  
-  .display:active {
-    background-color: #000000;
-  }
-  
-  .menu {
-    position: absolute;
-    top: 60px;
-    z-index: 1;
-    box-sizing: border-box;
-    width: 200px;
-    padding: 0 20px;
-    overflow: hidden;
-    background-color: #9e8949;
-    border-radius: 5px;
-  }
-  
-  .list {
-    padding: 0;
-    list-style-type: star;
-  }
-  
-  .list-item {
-    padding: 5px 0;
-  }
 
 /*# sourceMappingURL=styles.chunk.css.map*/

@@ -38,7 +38,7 @@ class Testpage extends Component {
     render() {
         return (
             <Layout>
-                <h1>This page is for current dev projects</h1>
+                <h1>This page is for testing and learning different concepts.</h1>
                 <div id="Test">
                     <Test />
                 </div>
