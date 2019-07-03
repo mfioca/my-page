@@ -19,10 +19,17 @@ var newHero = {
 };
 
 
+
+
 class Hero extends React.Component {
     constructor(props) {
         super(props);
         this.setherostats = this.setherostats.bind(this);
+        //sets Name on form
+        this.state = {Name: ''};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        
     }
 
     setherostats() {
@@ -39,11 +46,21 @@ class Hero extends React.Component {
         this.forceUpdate();
     }
 
+    handleChange(event) {
+        this.setState({Name: event.target.value});
+    }
+
+    handleSubmit() {
+        this.setState(prevState => ({
+            showNameForm: !prevState.showNameForm
+        }));
+    }
+
     render() {
         return (
             <div>
                 <div>
-                    <p><b>Name: </b>Insert random Name Here</p>
+                    <p><b>Name:</b> { this.state.Name }</p>
                 </div> 
                 <div>
                     <table className="DandDstat_table">
@@ -71,6 +88,18 @@ class Hero extends React.Component {
                 </div>
                 <div className="Stats-roll">
                     <button onClick={this.setherostats}>Set Attrubutes</button>
+                </div>
+                <div>
+                    <form>
+                        <label>
+                            Name: 
+                            <input 
+                                type="text" 
+                                value={this.state.value}
+                                onChange={this.handleChange}
+                            />
+                        </label>
+                    </form>
                 </div>
             </div>
         );

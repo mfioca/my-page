@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 
 
 export function About(props) {
-    
-
     return (
         <div className="about-container FlexDirection_column Text-shadow">
             <div className="about_section about_gradient-left">

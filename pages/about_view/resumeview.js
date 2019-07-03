@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 
 function Resume(props) {
-    
-
     return(
         <div>
             <div className="Res-container FlexDirection_column">

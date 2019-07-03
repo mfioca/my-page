@@ -4,6 +4,8 @@ import Layout from '../components/layout'
 import About from './about_view/aboutview'
 import Resume from './about_view/resumeview'
 
+
+
 class Tab extends Component {
     static propTypes = {
         activeTab: PropTypes.string.isRequired,
@@ -25,10 +27,10 @@ class Tab extends Component {
             },
         } = this;
 
-        let className = 'tab-list-item ';
+        let className = 'tab-list-item';
 
         if (activeTab === label) {
-            className += ' tab-list-active';
+            className += ' tab-list-active ';
         }
 
         return (
@@ -69,6 +71,7 @@ class Tabs extends Component {
             }
         } = this;
 
+        
         return (
             <div className="tabs">
                 <div className="about_header">
@@ -99,20 +102,22 @@ class Tabs extends Component {
 }
 
 function Aboutpage() {
-    return (
-        <Layout>
-            <div>
-                <Tabs>
-                    <div label="About">
-                        <About />
-                    </div>
-                    <div label="Resume">
-                        <Resume />
-                    </div>
-                </Tabs>
-            </div>
-        </Layout>
-    );
+    
+        return (
+            <Layout>
+                <div>
+                    <Tabs>
+                        <div label="About" className="tabtransition">
+                            <About />
+                        </div>
+                        <div label="Resume">
+                            <Resume />
+                        </div>
+                    </Tabs>
+                </div>
+            </Layout>
+        );
+    
 }
 
 

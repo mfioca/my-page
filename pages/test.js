@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import Test from './app'
 import Testapp5 from './transition_item'
-import Hero from './DandD/hero'
+
 
 const numbers = [1, 2, 3, 4, 5, 6];
 

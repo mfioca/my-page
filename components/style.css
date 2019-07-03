@@ -256,6 +256,11 @@ body {
     padding: 0.5rem 0.75rem;
 }
 
+.tabtransition {
+    -webkit-transition: all 3s ease-in-out;
+  -ms-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
+}
 .tab-list-active {
     color: white;
 }

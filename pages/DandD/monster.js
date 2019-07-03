@@ -21,6 +21,13 @@ class Monster extends React.Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
+        //sets Name on form
+        this.state = {Name: ''};
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(event) {
+        this.setState({Name: event.target.value});
     }
 
     handleClick() {
@@ -42,7 +49,7 @@ class Monster extends React.Component {
         return (
             <div>
                 <div>
-                    <p><b>Name: </b>Insert random Name Here</p>
+                    <p><b>Name: </b>{ this.state.Name }</p>
                 </div>
                 <div>
                     <table className="DandDstat_table">
@@ -70,6 +77,18 @@ class Monster extends React.Component {
                 </div>
                 <div className="Stats-roll">
                     <button onClick={this.handleClick}>Set Attrubutes</button>
+                </div>
+                <div>
+                    <form>
+                        <label>
+                            Name:
+                            <input
+                                type="text"
+                                value={this.state.value}
+                                onChange={this.handleChange}
+                            />
+                        </label>
+                    </form>
                 </div>
             </div>
         );
