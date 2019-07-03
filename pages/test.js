@@ -6,6 +6,14 @@ import Testapp5 from './transition_item'
 
 const numbers = [1, 2, 3, 4, 5, 6];
 
+var test = {
+    str: 0,
+    const: 0
+}
+
+
+
+
 function ListItem(props) {
     return <li>{props.value}</li>;
 }
@@ -25,6 +33,22 @@ function NumberList(props) {
 
 
 class Testpage extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {str: test.str};
+        this.setstr = this.setstr.bind(this);
+        this.onChange = this.onChange.bind(this);
+    }
+
+    setstr() {
+        //this.setState({str: Math.floor((Math.random() * 20) + 1)});
+       test.str = Math.floor((Math.random() * 20) + 1);
+       this.setState({str: test.str});
+    }
+
+    onChange() {
+        this.setState({str: test.str});
+    }
     state = {
         boxactive: false
     };
@@ -53,11 +77,18 @@ class Testpage extends Component {
                 <div className="Testapp5">
                     <Testapp5 />
                 </div>
+                <div>
+                    <p>STR: {test.str}</p>
+                    <p>str 2: {this.state.str}</p>
+                    <button onClick={this.setstr}>Set Srength</button>
+                </div>
                 
             </Layout>
         )
     }
 }
+
+
 
 
 export default Testpage;

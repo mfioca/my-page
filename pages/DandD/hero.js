@@ -24,6 +24,12 @@ var newHero = {
 class Hero extends React.Component {
     constructor(props) {
         super(props);
+        //sets states for stats in the new hero object
+        this.state = {str: newHero.Str};
+        this.state = {const: newHero.Const};
+        this.state = {dext: newHero.Dext};
+        this.state = {hp: HeroadjStats.HeroHp};
+        this.state = {dmg: HeroadjStats.HeroDmg};
         this.setherostats = this.setherostats.bind(this);
         //sets Name on form
         this.state = {Name: ''};
@@ -43,7 +49,12 @@ class Hero extends React.Component {
         HeroadjStats.HeroAc = (newHero.BaseArmorClass) + (setacAdj());
         HeroadjStats.HeroDmg = (newHero.BaseDamage) + (setDmgAdj());
         HeroadjStats.HeroHitAdj = (newHero.BaseHitAdj) + (setHitAdj());
-        this.forceUpdate();
+        //sets new state for each variable
+        this.setState({str: newHero.Str});
+        this.setState({const: newHero.Const});
+        this.setState({dext: newHero.Dext});
+        this.setState({hp: HeroadjStats.HeroHp});
+        this.setState({dmg: HeroadjStats.HeroDmg});
     }
 
     handleChange(event) {
@@ -66,23 +77,23 @@ class Hero extends React.Component {
                     <table className="DandDstat_table">
                         <tr>
                             <td>Strength:</td>
-                            <td> { newHero.Str }</td>
+                            <td> { this.state.str }</td>
                         </tr>
                         <tr>
                             <td>Constitution:</td>
-                            <td> { newHero.Const }</td>
+                            <td> { this.state.const }</td>
                         </tr>
                         <tr>
                             <td>Dexterity:</td>
-                            <td> { newHero.Dext }</td>
+                            <td> { this.state.dext }</td>
                         </tr>
                         <tr>
                             <td>Hitpoints:</td>
-                            <td> { HeroadjStats.HeroHp }</td>
+                            <td> { this.state.hp }</td>
                         </tr>
                         <tr>
                             <td>Base Damage:</td>
-                            <td> { HeroadjStats.HeroDmg }</td>
+                            <td> { this.state.dmg }</td>
                         </tr>
                     </table>
                 </div>
@@ -94,7 +105,8 @@ class Hero extends React.Component {
                         <label>
                             Name: 
                             <input 
-                                type="text" 
+                                type="text"
+                                maxlength="20"
                                 value={this.state.value}
                                 onChange={this.handleChange}
                             />

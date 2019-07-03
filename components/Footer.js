@@ -7,12 +7,12 @@ class Footer extends React.Component {
             <div className="Footer-container">
                 <div className="Footer-nav center">
                     <div>
-                        <a href="https://www.linkedin.com/in/mark-fioca/">
+                        <a href="https://www.linkedin.com/in/mark-fioca/" target="_blank" rel="noopener noreferrer">
                             Linkedln
                         </a>
                     </div>
                     <div>
-                        <a href="https://www.deviantart.com/franknmullet">
+                        <a href="https://www.deviantart.com/franknmullet" target="_blank" rel="noopener noreferrer">
                             Deviantart
                         </a>
                     </div>

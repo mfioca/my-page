@@ -53,7 +53,7 @@ export function About(props) {
                         through this program.    
                     </p>
                     <p>
-                        My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet">here</a> or on my link in the footer to navigate to that page.  
+                        My Rainmeter theme is available to download through deviantart and you can click <a href="https://www.deviantart.com/franknmullet" target="_blank" rel="noopener noreferrer">here</a> or on my link in the footer to navigate to that page.  
                     </p>
                 </div>
             </div>

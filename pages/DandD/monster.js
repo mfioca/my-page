@@ -20,7 +20,13 @@ var newMonster = {
 class Monster extends React.Component {
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
+        //sets states for stats in the new monster object
+        this.state = {str: newMonster.Str};
+        this.state = {const: newMonster.Const};
+        this.state = {dext: newMonster.Dext};
+        this.state = {hp: MonsteradjStats.MonsterHp};
+        this.state = {dmg: MonsteradjStats.MonsterDmg};
+        this.setMonsterstats = this.setMonsterstats.bind(this);
         //sets Name on form
         this.state = {Name: ''};
         this.handleChange = this.handleChange.bind(this);
@@ -30,7 +36,7 @@ class Monster extends React.Component {
         this.setState({Name: event.target.value});
     }
 
-    handleClick() {
+    setMonsterstats() {
         //random number 1-20 to set newmonster stats
         newMonster.Str = Math.floor((Math.random() * 20) + 1);
         newMonster.Const = Math.floor((Math.random() * 20) + 1);
@@ -41,7 +47,12 @@ class Monster extends React.Component {
         MonsteradjStats.MonsterAc = (newMonster.BaseArmorClass) + (setacAdj());
         MonsteradjStats.MonsterDmg = (newMonster.BaseDamage) + (setDmgAdj());
         MonsteradjStats.MonsterHitAdj = (newMonster.BaseHitAdj) + (setHitAdj());
-        this.forceUpdate();
+        //sets new state for each variable
+        this.setState({str: newMonster.Str});
+        this.setState({const: newMonster.Const});
+        this.setState({dext: newMonster.Dext});
+        this.setState({hp: MonsteradjStats.MonsterHp});
+        this.setState({dmg: MonsteradjStats.MonsterDmg});
     }
 
     
@@ -55,28 +66,28 @@ class Monster extends React.Component {
                     <table className="DandDstat_table">
                         <tr>
                             <td>Strength:</td>
-                            <td> { newMonster.Str }</td>
+                            <td> { this.state.str }</td>
                         </tr>
                         <tr>
                             <td>Constitution:</td>
-                            <td> { newMonster.Const }</td>
+                            <td> { this.state.const }</td>
                         </tr>
                         <tr>
                             <td>Dexterity:</td>
-                            <td> { newMonster.Dext }</td>
+                            <td> { this.state.dext }</td>
                         </tr>
                         <tr>
                             <td>Hitpoints:</td>
-                            <td> { MonsteradjStats.MonsterHp }</td>
+                            <td> { this.state.hp }</td>
                         </tr>
                         <tr>
                             <td>Base Damage:</td>
-                            <td> { MonsteradjStats.MonsterDmg }</td>
+                            <td> { this.state.dmg }</td>
                         </tr>
                     </table>
                 </div>
                 <div className="Stats-roll">
-                    <button onClick={this.handleClick}>Set Attrubutes</button>
+                    <button onClick={this.setMonsterstats}>Set Attrubutes</button>
                 </div>
                 <div>
                     <form>
@@ -84,6 +95,7 @@ class Monster extends React.Component {
                             Name:
                             <input
                                 type="text"
+                                maxlength="20"
                                 value={this.state.value}
                                 onChange={this.handleChange}
                             />
