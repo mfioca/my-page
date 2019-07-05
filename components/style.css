@@ -73,6 +73,11 @@ body {
     float: right;
 }
 
+.align-center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .Text-shadow {
     text-shadow: 2px 2px 8px rgb(0, 153, 255)
 }
@@ -103,7 +108,7 @@ body {
 .DandDstat_table {
     margin-top: 20px;
     border-collapse: collapse;
-    width: 100%;
+    width: 250px;
 }
 
 .DandDstat_table td, th {
@@ -165,12 +170,23 @@ body {
     margin-top: 30px;
 }
 
-.DnD_avatar {
+.DnD_Hero {
+    display: flex;
     object-fit: contain;
-    float: right;
     margin-top: 10px;
     margin-bottom: 10px;
-    margin-right: 30px;
+    margin-right: 50px;
+    width: 150px;
+}
+
+.DnD_Monster {
+    display: flex;
+    object-fit: contain;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    width: 200px;
+    height: 200px;
 }
 
 /* *********************** 
@@ -333,35 +349,53 @@ body {
 *      DandD Page        * 
 **************************/
 
-.DandD_stats, .DandD_attack {
+.DandD_character {
     display: flex;
-    flex-wrap: nowrap;
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: "Comic Sans MS", cursive, sans-serif; 
 }
-  
-.DandD_stats > div {
+
+.DandD_character > div {
+    width: 48%;
+    margin: 10px;
     background-color: #575555;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
 	-moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
 	-webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
 	-o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-    margin: 10px;
-    width: 50%;
+    margin: 10px;  
 }
 
-.Stats {
-    float: left;
-    line-height: 10px;
-    margin-left: 30px;
-}
-.Stats-roll {
-    margin: auto;
-    width: 50%;
-    padding: 20px;
-}
-
-.Attack-container {
+.Hero, .Monster {
     display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.HeroBox, .MonsterBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.HeroBox > div, .MonsterBox > div {
+    width: 50%;
+    padding: 5px;
+}
+
+.Stats-roll {
+    height: 80px;  
+}
+
+.Attack-container > div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.Attack-section {
+    position: relative;
+    width: 445px;
     height: 300px;
     background-color: #575555;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
@@ -369,12 +403,7 @@ body {
     -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
     -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
     margin: 10px;
-    width: 100%;
-}
-
-.Attack-section {
-    position: relative;
-    width: 100%;
+    
 }
 
 .Attack-roll {

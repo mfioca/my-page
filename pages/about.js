@@ -107,7 +107,7 @@ function Aboutpage() {
             <Layout>
                 <div>
                     <Tabs>
-                        <div label="About" className="tabtransition">
+                        <div label="About">
                             <About />
                         </div>
                         <div label="Resume">

@@ -50,8 +50,8 @@ function Resume(props) {
                         <h3>COMPUTER SKILLS</h3>
                         <p>
                             Windows and OSX, Microsoft Office with advanced excel functions and
-                            macro scripting, Lotus Notes, Maximo Enterprise Suite, Eclipse,
-                            Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,
+                            macro scripting, Lotus Notes, Maximo Enterprise Suite, Audacity, Photoshop, 
+                            Gimp, Eclipse, Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,
                             beginner knowledge in REACT and Java/JavaScript.
                         </p>
                     </div>

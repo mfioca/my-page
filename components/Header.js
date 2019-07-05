@@ -18,8 +18,8 @@ class Headerdropdown extends React.Component {
         return (
             <div>
                 <a className = "center pointer Dropdown"
-                onMouseOver="this.className='Dropdown_hover'" 
-                onClick={this.showList}>
+                    onMouseOver="this.className='Dropdown_hover'" 
+                    onClick={this.showList}>
                     <u>Projects</u>
                 </a>
                 {this.state.showList && (
@@ -49,18 +49,6 @@ class Headerdropdown extends React.Component {
 }
 
 class NavBar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {showList: false};
-        this.showList = this.showList.bind(this);
-    }
-
-    showList() {
-        this.setState(prevState => ({
-            showList: !prevState.showList      
-        }));
-    };
-    
     render() {
         return (
             <div className="Header-container">

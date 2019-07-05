@@ -114,89 +114,81 @@ class AttackSim extends React.Component {
     render() {
         return (
             <div>
-                <div className="DandD_attack">    
-                    <div className="Attack-container">
-                        <div className="Attack-section">
-                            <div className="AC-Icon">
-                                <img src="../static/images/acicon.png" alt="shield"/>
-                                <p className="AC-Icon-text Fsize-3">
-                                    { HeroadjStats.HeroAc }
-                                </p>
-                            </div>
-                            <div className="HitAdj-Icon">
-                                <img src="../static/images/hitadjust.png" alt="icon"/>
-                                <p className="HitAdj-Icon-text Fsize-3">
-                                    { HeroadjStats.HeroHitAdj }
-                                </p>
-                            </div>
-                            <div className="Attack-roll">
-                                <button  onClick={this.heroattack}>
-                                    Roll for Attack
-                                </button>
-                            </div>
-                            <div className="Attack-result Fsize-3 center">
-                                { Herodidhit }
-                            </div>
-                        </div>
+                <div className="Attack-section">
+                    <div className="AC-Icon">
+                        <img src="../static/images/acicon.png" alt="shield"/>
+                        <p className="AC-Icon-text Fsize-3">
+                            { HeroadjStats.HeroAc }
+                        </p>
                     </div>
-                    <div className="Attack-container">
-                        <div className="Attack-section">    
-                            <div>
-                                <div className="StatRefresh DandD_button">
-                                    <button onClick={this.refresh}>Refresh stats</button>
-                                </div>
-                                <div className="Initiative DandD_button">
-                                    <button onClick={this.rollforiniative}>Roll for iniative</button>
-                                </div>
-                                <div className="Heroinitiative center Fsize-2">
-                                    <p>Hero <br/>iniative:</p>
-                                    <p className="Fsize-3">{this.heroinitiative}</p>
-                                </div>
-                                <div className="Monsterinitiative center Fsize-2">
-                                    <p>Monster initiative:</p>
-                                    <p className="Fsize-3">{this.monsterinitiative}</p>
-                                </div>
-                            </div>
-                            
-                            <div className="HeroHP-icon">
-                                <img src="../static/images/herohp.png" alt="icon"/>
-                                <p className="HeroHP-text Fsize-3 center">
-                                    { HeroadjStats.HeroHp }
-                                </p>
-                            </div>
-                            <div className="MonsterHP-icon">
-                                <img src="../static/images/monsterhp.png" alt="icon"/>
-                                <p className="MonsterHP-text Fsize-3 center">
-                                    { MonsteradjStats.MonsterHp }
-                                </p>
-                            </div>
-                        </div>
+                    <div className="HitAdj-Icon">
+                        <img src="../static/images/hitadjust.png" alt="icon"/>
+                        <p className="HitAdj-Icon-text Fsize-3">
+                            { HeroadjStats.HeroHitAdj }
+                        </p>
                     </div>
-                    <div className="Attack-container">
-                        <div className="Attack-section">
-                            <div className="AC-Icon">
-                                <img src="../static/images/acicon.png" alt="shield" />
-                                <p className="AC-Icon-text Fsize-3">
-                                    { MonsteradjStats.MonsterAc }
-                                </p>
-                            </div>
-                            <div className="HitAdj-Icon">
-                                <img src="../static/images/hitadjust.png" alt="icon"/>
-                                <p className="HitAdj-Icon-text Fsize-3">
-                                    { MonsteradjStats.MonsterHitAdj }
-                                </p>
-                            </div>
-                            <div className="Attack-roll">
-                                <button onClick={this.Monsterattack}>
-                                    Roll for Attack
-                                </button>
-                            </div>
-                            <div className="Attack-result Fsize-3 center">
-                                { Monsterdidhit }
-                            </div>
-                        </div>
+                    <div className="Attack-roll">
+                        <button  onClick={this.heroattack}>
+                            Hero Roll for Attack
+                        </button>
+                    </div>
+                    <div className="Attack-result Fsize-3 center">
+                        { Herodidhit }
                     </div>
                 </div>
+                    
+                <div className="Attack-section">    
+                        
+                    <div className="StatRefresh DandD_button">
+                        <button onClick={this.refresh}>Refresh stats</button>
+                    </div>
+                    <div className="Initiative DandD_button">
+                        <button onClick={this.rollforiniative}>Roll for iniative</button>
+                    </div>
+                    <div className="Heroinitiative center Fsize-2">
+                        <p>Hero <br/>iniative:</p>
+                        <p className="Fsize-3">{this.heroinitiative}</p>
+                    </div>
+                    <div className="Monsterinitiative center Fsize-2">
+                        <p>Monster initiative:</p>
+                        <p className="Fsize-3">{this.monsterinitiative}</p>
+                    </div>  
+                    <div className="HeroHP-icon">
+                        <img src="../static/images/herohp.png" alt="icon"/>
+                        <p className="HeroHP-text Fsize-3 center">
+                            { HeroadjStats.HeroHp }
+                        </p>
+                    </div>
+                    <div className="MonsterHP-icon">
+                        <img src="../static/images/monsterhp.png" alt="icon"/>
+                        <p className="MonsterHP-text Fsize-3 center">
+                            { MonsteradjStats.MonsterHp }
+                        </p>
+                    </div>
+                </div>
+                <div className="Attack-section">
+                    <div className="AC-Icon">
+                        <img src="../static/images/acicon.png" alt="shield" />
+                        <p className="AC-Icon-text Fsize-3">
+                            { MonsteradjStats.MonsterAc }
+                        </p>
+                    </div>
+                    <div className="HitAdj-Icon">
+                        <img src="../static/images/hitadjust.png" alt="icon"/>
+                        <p className="HitAdj-Icon-text Fsize-3">
+                            { MonsteradjStats.MonsterHitAdj }
+                        </p>
+                    </div>
+                    <div className="Attack-roll">
+                        <button onClick={this.Monsterattack}>
+                            Monster Roll for Attack
+                        </button>
+                    </div>
+                    <div className="Attack-result Fsize-3 center">
+                        { Monsterdidhit }
+                    </div>
+                </div>
+                
             </div>
         );
     }

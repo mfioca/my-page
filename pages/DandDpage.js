@@ -22,25 +22,17 @@ class DandD extends Component {
                         <li>After each round, repeat until simulation is finished.</li>
                     </ol>
                 </div>
-                <div className="DandD_stats Fsize-2">
+                <div className="DandD_character Fsize-2">
                     <div>
-                        <span className="Stats">
-                            <Hero />
-                        </span>
-                        
-                            <img className="DnD_avatar ImgSize200" src="../static/images/hero.png" alt="hero"/> 
+                        <Hero />
                     </div>
                     <div>
-                        <span className="Stats">
-                            <Monster />
-                        </span>
-                        <span>
-                            <img className="DnD_avatar ImgSize200" src="../static/images/monster.png" alt="monster"/>
-                        </span>
+                        <Monster />
                     </div>
                 </div>
-                        <AttackSim />
-                   
+                <div className="Attack-container">
+                    <AttackSim />
+                </div>
             </Layout>
         );
     }

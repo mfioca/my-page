@@ -58,35 +58,38 @@ class Monster extends React.Component {
     
     render() {
         return (
-            <div>
-                <div>
-                    <p><b>Name: </b>{ this.state.Name }</p>
+            <div className="Monster">
+                <div className="MonsterBox">
+                    <div>
+                        <p><b>Name: </b>{ this.state.Name }</p>
+                        <table className="DandDstat_table">
+                            <tr>
+                                <td>Strength:</td>
+                                <td> { this.state.str }</td>
+                            </tr>
+                            <tr>
+                                <td>Constitution:</td>
+                                <td> { this.state.const }</td>
+                            </tr>
+                            <tr>
+                                <td>Dexterity:</td>
+                                <td> { this.state.dext }</td>
+                            </tr>
+                            <tr>
+                                <td>Hitpoints:</td>
+                                <td> { this.state.hp }</td>
+                            </tr>
+                            <tr>
+                                <td>Base Damage:</td>
+                                <td> { this.state.dmg }</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <img className="DnD_Monster Float-right" src="../static/images/monster.png" alt="monster"/>
+                    </div>
                 </div>
-                <div>
-                    <table className="DandDstat_table">
-                        <tr>
-                            <td>Strength:</td>
-                            <td> { this.state.str }</td>
-                        </tr>
-                        <tr>
-                            <td>Constitution:</td>
-                            <td> { this.state.const }</td>
-                        </tr>
-                        <tr>
-                            <td>Dexterity:</td>
-                            <td> { this.state.dext }</td>
-                        </tr>
-                        <tr>
-                            <td>Hitpoints:</td>
-                            <td> { this.state.hp }</td>
-                        </tr>
-                        <tr>
-                            <td>Base Damage:</td>
-                            <td> { this.state.dmg }</td>
-                        </tr>
-                    </table>
-                </div>
-                <div className="Stats-roll">
+                <div className="Stats-roll align-center">
                     <button onClick={this.setMonsterstats}>Set Attrubutes</button>
                 </div>
                 <div>
@@ -95,7 +98,7 @@ class Monster extends React.Component {
                             Name:
                             <input
                                 type="text"
-                                maxlength="20"
+                                maxLength="20"
                                 value={this.state.value}
                                 onChange={this.handleChange}
                             />
