@@ -1,22 +1,14 @@
 import React from 'react'
+import { FooterLink } from './components'
+import CSS from './style.css'
 
 
 class Footer extends React.Component {
     render() {
         return (
-            <div className="Footer-container">
-                <div className="Footer-nav center">
-                    <div>
-                        <a href="https://www.linkedin.com/in/mark-fioca/" target="_blank" rel="noopener noreferrer">
-                            Linkedln
-                        </a>
-                    </div>
-                    <div>
-                        <a href="https://www.deviantart.com/franknmullet" target="_blank" rel="noopener noreferrer">
-                            Deviantart
-                        </a>
-                    </div>
-                </div>
+            <div className="Footer">
+                <FooterLink id="https://www.linkedin.com/in/mark-fioca/"  title="LinkedIn" />
+                <FooterLink id="https://www.deviantart.com/franknmullet" title="Deviantart" />
                 <div className="email">
                     <div>
                         <a href="mailto: mark@fioca.com">

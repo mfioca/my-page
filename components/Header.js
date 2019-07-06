@@ -1,4 +1,6 @@
 import React from 'react'
+import { NavLink } from './components'
+import { Google } from './components'
 
 
 class Headerdropdown extends React.Component {
@@ -16,7 +18,7 @@ class Headerdropdown extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="Navbar">
                 <a className = "center pointer Dropdown"
                     onMouseOver="this.className='Dropdown_hover'" 
                     onClick={this.showList}>
@@ -26,19 +28,16 @@ class Headerdropdown extends React.Component {
                     <div className="DropdownMenu" onMouseLeave={this.showList}>
                         <ul className="Dropdown-list">
                             <li className="Dropdown-list_item">
-                                <a href="/tvpage">
-                                    Tv import
-                                </a>
+                            <NavLink id="/tvpage" title="Tv import" />
+                                
                             </li>
                             <li className="Dropdown-list_item">
-                                <a href="/DandDpage">
-                                    DandD
-                                </a>
+                                <NavLink id="/DandDpage" title="D and D" />
+                                
                             </li>
                             <li className="Dropdown-list_item">
-                                <a href="/test">
-                                    test
-                                </a>
+                                <NavLink id="/test" title="Test" />
+                                
                             </li>
                         </ul>
                     </div>
@@ -48,42 +47,19 @@ class Headerdropdown extends React.Component {
     }
 }
 
-class NavBar extends React.Component {
+class Header extends React.Component {
     render() {
         return (
-            <div className="Header-container">
-                <div className="Navbar center">
-                    <div>
-                        <a href="/">
-                            Home
-                        </a>
-                    </div>
-                    <div>
-                        <a href="/about">
-                            About
-                        </a>
-                    </div>
-                    <div>
-                        <Headerdropdown />
-                    </div>
-                </div>
-                <div className="google">
-                    <div>
-                        <img src="/static/images/google.png" alt="google" height="20" />
-                    </div>
-                    <div>
-                        <form action="http://google.com/search" target="_blank" rel="noopener noreferrer">
-                            <input name="q" />
-                            <input type="submit" value="Google Search" />
-                            
-                        </form>
-                    </div>
-                </div>
+            <div className="Header">
+                <NavLink id="/" title="Home" />
+                <NavLink id="/about" title="About" />
+                <Headerdropdown />
+                <Google />
             </div>
         );
     }
 }
 
-export default NavBar;
+export default Header;
 
 
