@@ -6,11 +6,7 @@ export default function Layout(props) {
     return (
         <div className="Layout">
           <Header />
-          <div>
-          <body >
             {props.children}
-          </body>
-          </div>
           <Footer />
         </div>
     );

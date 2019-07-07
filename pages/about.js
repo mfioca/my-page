@@ -5,7 +5,7 @@ import About from './about_view/aboutview'
 import Resume from './about_view/resumeview'
 
 
-
+// figure out a way to remove the static prop types
 class Tab extends Component {
     static propTypes = {
         activeTab: PropTypes.string.isRequired,

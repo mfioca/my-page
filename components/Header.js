@@ -1,7 +1,15 @@
 import React from 'react'
-import { NavLink } from './components'
-import { Google } from './components'
 
+
+function NavLink(props) {
+    return (
+    <div className="Navbar center">
+        <a href={`${props.id}`} title={props.title}>
+            {props.title}
+        </a>
+    </div>
+    );
+}
 
 class Headerdropdown extends React.Component {
     constructor(props) {
@@ -19,8 +27,8 @@ class Headerdropdown extends React.Component {
     render() {
         return (
             <div className="Navbar">
-                <a className = "center pointer Dropdown"
-                    onMouseOver="this.className='Dropdown_hover'" 
+                <a 
+                    className="Dropdown pointer"
                     onClick={this.showList}>
                     <u>Projects</u>
                 </a>
@@ -54,7 +62,17 @@ class Header extends React.Component {
                 <NavLink id="/" title="Home" />
                 <NavLink id="/about" title="About" />
                 <Headerdropdown />
-                <Google />
+                <div className="google">
+                    <div>
+                        <img src="/static/images/google.png" alt="google" height="20" />
+                    </div>
+                    <div>
+                        <form action="http://google.com/search" target="_blank" rel="noopener noreferrer">
+                            <input name="q" />
+                            <input type="submit" value="Google Search" />
+                        </form>
+                    </div>
+                </div>
             </div>
         );
     }

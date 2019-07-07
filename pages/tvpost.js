@@ -6,6 +6,8 @@ const tvPost = props => (
   <Layout>
     <Layout2>
       <h1>{props.show.name}</h1>
+      <h2>Premier: {props.show.premiered}</h2>
+      <h2>Country Code: {props.show.network.country.code}</h2>
       <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
       <img src={props.show.image.medium} />
     </Layout2>
@@ -16,6 +18,7 @@ tvPost.getInitialProps = async function(context) {
   const { id } = context.query;
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
   const show = await res.json();
+  console.log(show);
 
   console.log(`Fetched show: ${show.name}`);
 
