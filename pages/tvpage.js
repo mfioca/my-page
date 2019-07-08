@@ -4,8 +4,12 @@ import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
+
+
+
 const TvPage = props => (
     <Layout>
+      <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
         <Layout2>
           <h1>Batman TV Shows</h1>
             <ul>

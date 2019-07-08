@@ -5,14 +5,8 @@ import About from './about_view/aboutview'
 import Resume from './about_view/resumeview'
 
 
-// figure out a way to remove the static prop types
-class Tab extends Component {
-    static propTypes = {
-        activeTab: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        onClick: PropTypes.func.isRequired,
-    };
 
+class Tab extends Component {
     onClick = () => {
         const { label, onClick } = this.props;
         onClick(label);
@@ -45,10 +39,6 @@ class Tab extends Component {
 }
 
 class Tabs extends Component {
-    static propTypes = {
-        children: PropTypes.instanceOf(Array).isRequired,
-    }
-
     constructor(props) {
         super(props);
         this.state = {
