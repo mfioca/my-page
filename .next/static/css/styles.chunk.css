@@ -588,7 +588,7 @@ body {
   
   .list-group-item {
     cursor: pointer;
-    width: 500px;
+    
   }
   
   .list-group-item:hover {
