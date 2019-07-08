@@ -10,6 +10,8 @@ Currently, the project is set up so that you download all files necessary to run
 
 ### live demo
 
-A Live demo of this project can be found here:  <https://out.mfioca1.now.sh/>  Due to complications with the next.js framework, I have not yet configured the project for demo on github pages.
+A Live demo of this project can be found here:  <https://out.mfioca1.now.sh/>  
+
+Due to complications with the next.js framework, I have not yet configured the project for demo on github pages.
 
 ```
