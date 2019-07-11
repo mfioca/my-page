@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 
+
 export function About(props) {
     return (
         <div className="about-container FlexDirection_column ">

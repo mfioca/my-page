@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
+import CSS from '../components/style.css'
 import Test from './app'
 import Testapp5 from './transition_item'
 

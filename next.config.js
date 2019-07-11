@@ -11,6 +11,5 @@ module.exports = withCSS({
           '/test': {page: '/test'},
         };
       }
-
 }) 
 
