@@ -158,6 +158,9 @@ body {
     text-decoration: underline;
 }
 
+.Tvpagesearch-bar a:link, .Tvpagesearch-bar a:visited, .Tvpagesearch-bar a:hover {
+    color: black;
+}
 /* *********************** 
 *       Images           * 
 **************************/
@@ -389,6 +392,34 @@ body {
 }
 
 /* *********************** 
+*      TvPage Inport        * 
+**************************/
+
+.Tvpagesearch-bar {
+    margin: 20px;
+    text-align: center;
+    }
+    
+.Tvpagesearch-bar input {
+width: 50%;
+}
+
+.tvbox {
+display: flex;
+flex-wrap: wrap;
+}
+
+.tvbox > div {
+    width: 250px;
+    padding: 5px;
+    text-align: center;
+}
+
+.tvbox :hover {
+    background-color: rgb(167, 164, 164);
+}
+
+/* *********************** 
 *      DandD Page        * 
 **************************/
 
@@ -559,53 +590,10 @@ body {
 .box {
     -webkit-transition:1s;
 }
+
 .box:active{
     margin-left:-120px;
- }
+}
  
- .show-thumbnail {
-    max-width: 64;
-  }
-  
-  .search-bar {
-    margin: 20px;
-    text-align: center;
-  }
-  
-  .search-bar input {
-    width: 75%;
-  }
-  
-  .serie-detail {
-    
-    padding: 10px;
-  
-  }
-  
-  .details {
-    margin-bottom: 10px;
-  }
-  
-  .list-group-item {
-    cursor: pointer;
-    
-  }
-  
-  .list-group-item:hover {
-    background-color: #eee;
-  }
-  
-  .genre span {
-    margin-right: 5px;
-    font-size: 90%;
-  }
 
-  .tvbox {
-    display: flex;
-    flex-wrap: wrap;
-}
 
-.tvbox > div {
-    width: 300px;
-    padding: 5px;
-}

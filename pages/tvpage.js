@@ -5,12 +5,52 @@ import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
+var Search = '';
 
+
+
+class Searchbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+    this.enterSearch = this.enterSearch.bind(this);
+    //this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  enterSearch(event) {
+    this.setState({value: event.target.value});
+    Search = (event.target.value);
+  }
+
+  handleSubmit() {
+    Search = (event.target.value);
+  }
+
+  render() {
+    return (
+      <div className="Tvpagesearch-bar">
+        <form onSubmit={this.handleSubmit}>
+        <label>
+          Name:
+          <input type="text" value={this.state.value} onChange={this.enterSearch} />
+        </label>
+        
+        <button >
+        <Link href="/tvpage">
+        <a>Submit</a>
+      </Link>
+        </button>
+      </form>
+      </div>
+    );
+  }
+}
 
 
 const TvPage = props => (
   <Layout>
     <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
+    <Searchbar />
       <Layout2>
         {/*<h1>Batman TV Shows</h1>
           <ul>
@@ -22,7 +62,7 @@ const TvPage = props => (
               </li>
               ))}
             </ul>*/}
-          
+          <h1>Results for: {Search}</h1>
           <div className="tvbox">
             {props.shows.map(show => (
               
@@ -32,11 +72,7 @@ const TvPage = props => (
                   <a>{show.name}<br /><img src={show.image.medium} /></a>
                 </Link>
                 </p>
-                
-                
-                
               </div>
-              
               ))}
           </div>
       </Layout2>
@@ -44,7 +80,7 @@ const TvPage = props => (
 );
 
 TvPage.getInitialProps = async function() {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=Batman');
+  const res = await fetch('https://api.tvmaze.com/search/shows?q=' + Search);
   const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);
