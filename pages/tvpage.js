@@ -30,20 +30,16 @@ class Searchbar extends React.Component {
     return (
       <div className="Tvpagesearch-bar">
         <form onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.value} onChange={this.enterSearch} />
-        </label>
-        
-        
-        
-        
-      </form>
-      <button>
-      <Link href="/tvpage">
-        <a>Submit</a>
-      </Link>
-      </button>
+          <label>
+            Name:
+            <input type="text" value={this.state.value} onChange={this.enterSearch} />
+          </label>
+          <button>
+            <Link href="/tvpage">
+              <a>Submit</a>
+            </Link>
+          </button>
+        </form>
       </div>
     );
   }
@@ -56,7 +52,7 @@ const TvPage = props => (
      <Searchbar />
      <Layout2>
         <h1>Results for: {Search}</h1>
-        
+        {/*}
           <ul>
             {props.shows.map(show => (
               <li key={show.id}>
@@ -66,19 +62,19 @@ const TvPage = props => (
               </li>
               ))}
             </ul>
-          
-          {/*<div className="tvbox">
+            */}
+          <div className="tvbox">
             {props.shows.map(show => (
               
               <div key={show.id}>
                 <p>
                  <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
-                  <a>{show.name}<br /><img src={show.image.medium} /></a>
+                  <a>{show.name}<br /><img src={show.image ? show.image.medium : 'null'} alt="no image"/></a>
                 </Link>
                 </p>
               </div>
               ))}
-          </div>*/}
+          </div>
       </Layout2>
   </Layout>
 );

@@ -14,7 +14,7 @@ const tvPost = props => (
       <h2>Premiered: {props.show.premiered}</h2>
       <h2>status: {props.show.status}</h2>
       <h2>Rating: {props.show.rating.average}</h2>
-      <img src={props.show.image.medium} />
+      <img src={props.show.image ? props.show.image.medium : 'null'} alt="no image"/>
       <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
       <h2>Link: 
         <a href={props.show.url}

@@ -1594,26 +1594,26 @@ function (_React$Component) {
           lineNumber: 35
         },
         __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
+      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 37
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
         href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 39
         },
         __self: this
-      }, "Submit"))));
+      }, "Submit")))));
     }
   }]);
 
@@ -1624,14 +1624,14 @@ var TvPage = function TvPage(props) {
   return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 50
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
     className: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 51
     },
     __self: this
   }, "the below content has been imported from ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -1640,39 +1640,46 @@ var TvPage = function TvPage(props) {
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 51
     },
     __self: this
   }, "TVmaze.com")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Searchbar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 52
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_tv_info_MyLayout_js__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 54
     },
     __self: this
-  }, "Results for: ", Search), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("ul", {
+  }, "Results for: ", Search), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+    className: "tvbox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 66
     },
     __self: this
   }, props.shows.map(function (show) {
-    return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
+    return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
       key: show.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 69
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 70
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -1680,16 +1687,30 @@ var TvPage = function TvPage(props) {
       href: "/tvpost?id=".concat(show.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 71
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 72
       },
       __self: this
-    }, show.name)));
+    }, show.name, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+      src: show.image ? show.image.medium : 'null',
+      alt: "no image",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    })))));
   }))));
 };
 
