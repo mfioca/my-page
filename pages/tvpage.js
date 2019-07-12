@@ -5,8 +5,8 @@ import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
-var Search = '';
 
+var Search = '';
 
 
 class Searchbar extends React.Component {
@@ -14,7 +14,7 @@ class Searchbar extends React.Component {
     super(props);
     this.state = {value: ''};
     this.enterSearch = this.enterSearch.bind(this);
-    //this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   enterSearch(event) {
@@ -35,12 +35,15 @@ class Searchbar extends React.Component {
           <input type="text" value={this.state.value} onChange={this.enterSearch} />
         </label>
         
-        <button >
-        <Link href="/tvpage">
+        
+        
+        
+      </form>
+      <button>
+      <Link href="/tvpage">
         <a>Submit</a>
       </Link>
-        </button>
-      </form>
+      </button>
       </div>
     );
   }
@@ -50,9 +53,10 @@ class Searchbar extends React.Component {
 const TvPage = props => (
   <Layout>
     <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
-    <Searchbar />
-      <Layout2>
-        {/*<h1>Batman TV Shows</h1>
+     <Searchbar />
+     <Layout2>
+        <h1>Results for: {Search}</h1>
+        
           <ul>
             {props.shows.map(show => (
               <li key={show.id}>
@@ -61,9 +65,9 @@ const TvPage = props => (
                 </Link>
               </li>
               ))}
-            </ul>*/}
-          <h1>Results for: {Search}</h1>
-          <div className="tvbox">
+            </ul>
+          
+          {/*<div className="tvbox">
             {props.shows.map(show => (
               
               <div key={show.id}>
@@ -74,7 +78,7 @@ const TvPage = props => (
                 </p>
               </div>
               ))}
-          </div>
+          </div>*/}
       </Layout2>
   </Layout>
 );
