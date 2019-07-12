@@ -1528,6 +1528,7 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tvpage.js
 
 
 
+var noimage = '/static/images/no-img.png';
 var Search = '';
 
 var Searchbar =
@@ -1703,7 +1704,7 @@ var TvPage = function TvPage(props) {
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
-      src: show.image ? show.image.medium : 'null',
+      src: show.image ? show.image.medium : noimage,
       alt: "no image",
       __source: {
         fileName: _jsxFileName,

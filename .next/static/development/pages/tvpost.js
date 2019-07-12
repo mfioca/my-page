@@ -10430,6 +10430,7 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tvpost.js
 
 
 
+var noimage = '/static/images/no-img.png';
 
 var tvPost = function tvPost(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_4__["default"], {
@@ -10472,26 +10473,26 @@ var tvPost = function tvPost(props) {
       lineNumber: 13
     },
     __self: this
-  }, "Type: ", props.show.type), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+  }, "Type: ", props.show.type ? props.show.type : 'no data'), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, "Premiered: ", props.show.premiered), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+  }, "Premiered: ", props.show.premiered ? props.show.premiered : 'no data'), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, "status: ", props.show.status), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+  }, "status: ", props.show.status ? props.show.status : 'no data'), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16
     },
     __self: this
-  }, "Rating: ", props.show.rating.average), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
-    src: props.show.image ? props.show.image.medium : 'null',
+  }, "Rating: ", props.show.rating.average ? props.show.average : 'no data'), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
+    src: props.show.image ? props.show.image.medium : noimage,
     alt: "no image",
     __source: {
       fileName: _jsxFileName,
@@ -10520,7 +10521,7 @@ var tvPost = function tvPost(props) {
       lineNumber: 20
     },
     __self: this
-  }, props.show.url))));
+  }, props.show.url ? props.show.url : 'null'))));
 };
 
 tvPost.getInitialProps =

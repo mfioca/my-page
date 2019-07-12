@@ -5,7 +5,7 @@ import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
-
+const noimage = '/static/images/no-img.png';
 var Search = '';
 
 
@@ -69,7 +69,7 @@ const TvPage = props => (
               <div key={show.id}>
                 <p>
                  <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
-                  <a>{show.name}<br /><img src={show.image ? show.image.medium : 'null'} alt="no image"/></a>
+                  <a>{show.name}<br /><img src={show.image ? show.image.medium : noimage} alt="no image"/></a>
                 </Link>
                 </p>
               </div>
