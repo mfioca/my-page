@@ -22,6 +22,7 @@ class Footer extends React.Component {
             <div className="Footer">
                 <FooterLink id="https://www.linkedin.com/in/mark-fioca/"  title="LinkedIn" />
                 <FooterLink id="https://www.deviantart.com/franknmullet" title="Deviantart" />
+                <FooterLink id="https://github.com/mfioca/my-page" title="Git-Hub" />
                 <div className="email">
                     <div>
                         <a href="mailto: mark@fioca.com">
