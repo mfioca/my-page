@@ -5,7 +5,6 @@ import fetch from 'isomorphic-unfetch';
 
 
 
-
 const tvPost = props => (
   <Layout>
     <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
@@ -31,7 +30,7 @@ const tvPost = props => (
 
 tvPost.getInitialProps = async function(context) {
   const { id } = context.query;
-  const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
+  const res = await fetch(`https://api.tvmaze.com/shows/${id}?embed=cast`);
   const show = await res.json();
   
   console.log(show);

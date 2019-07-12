@@ -600,3 +600,12 @@ body {
     font-size: 90%;
   }
 
+  .tvbox {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tvbox > div {
+    width: 300px;
+    padding: 5px;
+}

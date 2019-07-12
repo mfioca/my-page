@@ -7,11 +7,12 @@ import fetch from 'isomorphic-unfetch'
 
 
 
+
 const TvPage = props => (
   <Layout>
     <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
       <Layout2>
-        <h1>Batman TV Shows</h1>
+        {/*<h1>Batman TV Shows</h1>
           <ul>
             {props.shows.map(show => (
               <li key={show.id}>
@@ -20,22 +21,30 @@ const TvPage = props => (
                 </Link>
               </li>
               ))}
-          </ul>
-          <ul>
+            </ul>*/}
+          
+          <div className="tvbox">
             {props.shows.map(show => (
-              <li key={show.id}>
-               
-                <p><img src={show.image.medium} />{show.name}</p>
+              
+              <div key={show.id}>
+                <p>
+                 <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
+                  <a>{show.name}<br /><img src={show.image.medium} /></a>
+                </Link>
+                </p>
                 
-              </li>
+                
+                
+              </div>
+              
               ))}
-          </ul>
+          </div>
       </Layout2>
   </Layout>
 );
 
 TvPage.getInitialProps = async function() {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+  const res = await fetch('https://api.tvmaze.com/search/shows?q=Batman');
   const data = await res.json();
 
   console.log(`Show data fetched. Count: ${data.length}`);
