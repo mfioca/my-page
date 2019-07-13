@@ -61,14 +61,12 @@ class Tabs extends Component {
             }
         } = this;
 
-        
         return (
             <div className="tabs">
                 <div className="about_header">
                     <ol className="about_nav pointer Fsize-3">
                         {children.map((child) => {
                             const { label } = child.props;
-
                             return (
                                 <Tab
                                 activeTab={activeTab}
@@ -92,7 +90,6 @@ class Tabs extends Component {
 }
 
 function Aboutpage() {
-    
         return (
             <Layout>
                 <div>
@@ -107,10 +104,6 @@ function Aboutpage() {
                 </div>
             </Layout>
         );
-    
 }
-
-
-
 
 export default Aboutpage;

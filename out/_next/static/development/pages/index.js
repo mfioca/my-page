@@ -253,7 +253,7 @@ function (_React$Component) {
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
         id: "/tvpage",
-        title: "Tv import",
+        title: "TvMaze",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40

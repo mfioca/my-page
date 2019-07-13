@@ -1,5 +1,22 @@
 import React, { Component } from 'react'
 
+const Dividerstyle = {
+    marginTop: 5,
+    marginBottom: 5,
+    backgroundColor: 'rgb(196, 194, 194)',
+    height: 25,
+    width: '100%',
+    border: '1px solid black',
+    textAlign: 'center',
+    fontSize: 20
+}
+
+function Divider(props) {
+    return (
+        <p style={Dividerstyle} title={props.title}>{props.title}</p>
+    );
+}
+
 
 function Resume(props) {
     return(
@@ -13,10 +30,7 @@ function Resume(props) {
                             <li className="inline-block Res-title-li">www.linkedin.com/in/mark-fioca</li>
                         </ul>
                     </div>
-                    </div>
-                    <div className="Res-divider Fsize-2 center">
-                        <p className="inline-block">PROFESSIONAL SUMMARY</p>
-                    </div>
+                    <Divider title="PROFESSIONAL SUMMARY" />
                     <div>
                         <p>
                             Dedicated and motivated professional looking to apply my accumulated experience in 
@@ -56,9 +70,7 @@ function Resume(props) {
                             beginner knowledge in REACT and Java/JavaScript.
                         </p>
                     </div>
-                    <div className="Res-divider Fsize-2 center">
-                        <p className="inline-block">PROFESSIONAL CAREER EXPERTISE</p>
-                    </div>
+                    <Divider title="PROFESSIONAL CAREER EXPERTIESE" />
                     <div >
                         <h3><u>SOFTWARE IMPLEMENTATION AND SUPPORT</u></h3>
                         <ul>
@@ -130,9 +142,7 @@ function Resume(props) {
                             </li>
                         </ul>
                     </div>
-                    <div className="Res-divider Fsize-2 center">
-                        <p className="inline-block">PROFESSIONAL EXPERIENCE</p>
-                    </div>
+                    <Divider title="PROFESSIONAL EXPERIENCE" />
                     <div>
                         <table className="Res-table">
                             <tr>
@@ -184,7 +194,8 @@ function Resume(props) {
                     }
                 `}
                 </style>
-                </div>
+            </div>
+        </div>
     );
 
 }

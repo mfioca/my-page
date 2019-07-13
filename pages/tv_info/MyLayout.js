@@ -2,7 +2,6 @@ import React from 'react'
 import Header2 from './Header'
 
 
-
 const layout2Style = {
   margin: 20,
   padding: 20,

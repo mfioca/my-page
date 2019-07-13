@@ -4,6 +4,7 @@ import CSS from '../components/style.css'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import { Redirect } from 'react-router'
 
 const noimage = '/static/images/no-img.png';
 var Search = '';
@@ -14,7 +15,6 @@ class Searchbar extends React.Component {
     super(props);
     this.state = {value: ''};
     this.enterSearch = this.enterSearch.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   enterSearch(event) {
@@ -22,16 +22,12 @@ class Searchbar extends React.Component {
     Search = (event.target.value);
   }
 
-  handleSubmit() {
-    Search = (event.target.value);
-  }
-
   render() {
     return (
-      <div className="Tvpagesearch-bar">
+      <div className="Tvpagesearch-bar Fsize-1">
         <form onSubmit={this.handleSubmit}>
           <label>
-            Name:
+            TV Show search by Name:
             <input type="text" value={this.state.value} onChange={this.enterSearch} />
           </label>
           <button>
@@ -63,13 +59,13 @@ const TvPage = props => (
               ))}
             </ul>
             */}
-          <div className="tvbox">
+          <div className="tvbox Fsize-2">
             {props.shows.map(show => (
               
               <div key={show.id}>
                 <p>
                  <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
-                  <a>{show.name}<br /><img src={show.image ? show.image.medium : noimage} alt="no image"/></a>
+                  <a>{show.name}<br /><br /><img className="tvbox-img" src={show.image ? show.image.medium : noimage} alt="no image"/></a>
                 </Link>
                 </p>
               </div>

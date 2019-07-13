@@ -37,7 +37,7 @@ class Headerdropdown extends React.Component {
                     <div className="DropdownMenu" onMouseLeave={this.showList}>
                         <ul className="Dropdown-list">
                             <li className="Dropdown-list_item">
-                            <NavLink id="/tvpage" title="Tv import" />
+                            <NavLink id="/tvpage" title="TvMaze" />
                                 
                             </li>
                             <li className="Dropdown-list_item">
