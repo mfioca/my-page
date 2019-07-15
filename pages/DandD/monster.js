@@ -31,7 +31,8 @@ class Monster extends React.Component {
         this.state = {Name: ''};
         this.handleChange = this.handleChange.bind(this);
     }
-
+    //displays name as entered into the name field. currently is
+    //a live event rather than on submit event.
     handleChange(event) {
         this.setState({Name: event.target.value});
     }

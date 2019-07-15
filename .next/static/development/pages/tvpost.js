@@ -10511,40 +10511,28 @@ var tvPost = function tvPost(props) {
       lineNumber: 17
     },
     __self: this
-  }, "Country:"), " ", props.show.network.country.code), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
   }, "status:"), " ", props.show.status ? props.show.status : 'no data'), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 18
     },
     __self: this
   }, "Rating:"), " ", props.show.rating.average ? props.show.average : 'no data'), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 22
     },
     __self: this
   }, "Genre:"), " \xA0", props.show.genres.map(function (genre) {
@@ -10552,7 +10540,7 @@ var tvPost = function tvPost(props) {
       key: props.show.genres,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 23
+        lineNumber: 24
       },
       __self: this
     }, genre, " \xA0");
@@ -10561,19 +10549,19 @@ var tvPost = function tvPost(props) {
     alt: "no image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }, "Link:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -10583,7 +10571,7 @@ var tvPost = function tvPost(props) {
     title: props.show.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, props.show.url ? props.show.url : 'null')))));
@@ -10600,7 +10588,8 @@ function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            id = context.query.id;
+            id = context.query.id; //pules tvmaze api json based on selected show on the search page.
+
             _context.next = 3;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_6___default()("https://api.tvmaze.com/shows/".concat(id));
 

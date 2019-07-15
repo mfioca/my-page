@@ -114,6 +114,7 @@ class AttackSim extends React.Component {
     render() {
         return (
             <div>
+                {/*displays hero stats and attack information */}
                 <div className="Attack-section">
                     <div className="AC-Icon">
                         <img src="../static/images/acicon.png" alt="shield"/>
@@ -136,9 +137,9 @@ class AttackSim extends React.Component {
                         { Herodidhit }
                     </div>
                 </div>
-                    
+                  {/*main field to control attack simulation placed between
+                     hero info and monster info */}  
                 <div className="Attack-section">    
-                        
                     <div className="StatRefresh DandD_button">
                         <button onClick={this.refresh}>Refresh stats</button>
                     </div>
@@ -166,6 +167,7 @@ class AttackSim extends React.Component {
                         </p>
                     </div>
                 </div>
+                {/*displays Monster stats and attack information */}
                 <div className="Attack-section">
                     <div className="AC-Icon">
                         <img src="../static/images/acicon.png" alt="shield" />
@@ -188,7 +190,6 @@ class AttackSim extends React.Component {
                         { Monsterdidhit }
                     </div>
                 </div>
-                
             </div>
         );
     }

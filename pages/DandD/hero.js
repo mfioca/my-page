@@ -56,7 +56,8 @@ class Hero extends React.Component {
         this.setState({hp: HeroadjStats.HeroHp});
         this.setState({dmg: HeroadjStats.HeroDmg});
     }
-
+    //displays name as entered into the name field. currently is
+    //a live event rather than on submit event.
     handleChange(event) {
         this.setState({Name: event.target.value});
     }
@@ -117,7 +118,6 @@ class Hero extends React.Component {
                     </form>
                 </div>
             </div>
-            
         );
     }
 }

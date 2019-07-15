@@ -10465,7 +10465,9 @@ function (_React$Component) {
     };
     _this.enterSearch = _this.enterSearch.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_6__["default"])(_this));
     return _this;
-  }
+  } //handles setting state of search value to render tvmaze json api
+  //sets variable search value to state
+
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Searchbar, [{
     key: "enterSearch",
@@ -10482,20 +10484,19 @@ function (_React$Component) {
         className: "Tvpagesearch-bar Fsize-1",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 28
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("form", {
-        onSubmit: this.handleSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 31
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("label", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 32
         },
         __self: this
       }, "TV Show search by Name:", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("input", {
@@ -10504,26 +10505,26 @@ function (_React$Component) {
         onChange: this.enterSearch,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 34
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("button", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
         href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 40
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 41
         },
         __self: this
       }, "Submit")))));
@@ -10537,14 +10538,14 @@ var TvPage = function TvPage(props) {
   return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 52
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
     className: "center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 53
     },
     __self: this
   }, "the below content has been imported from ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
@@ -10553,32 +10554,32 @@ var TvPage = function TvPage(props) {
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 53
     },
     __self: this
   }, "TVmaze.com")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Searchbar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 54
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_tv_info_MyLayout_js__WEBPACK_IMPORTED_MODULE_11__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 55
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 56
     },
     __self: this
   }, "Results for: ", Search), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "tvbox Fsize-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 68
     },
     __self: this
   }, props.shows.map(function (show) {
@@ -10586,13 +10587,13 @@ var TvPage = function TvPage(props) {
       key: show.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 72
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 73
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
@@ -10600,25 +10601,25 @@ var TvPage = function TvPage(props) {
       href: "/tvpost?id=".concat(show.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 74
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 75
       },
       __self: this
     }, show.name, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 75
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 75
       },
       __self: this
     }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
@@ -10627,7 +10628,7 @@ var TvPage = function TvPage(props) {
       alt: "no image",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 75
       },
       __self: this
     })))));

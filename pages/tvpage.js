@@ -16,7 +16,8 @@ class Searchbar extends React.Component {
     this.state = {value: ''};
     this.enterSearch = this.enterSearch.bind(this);
   }
-
+  //handles setting state of search value to render tvmaze json api
+  //sets variable search value to state
   enterSearch(event) {
     this.setState({value: event.target.value});
     Search = (event.target.value);
@@ -25,11 +26,16 @@ class Searchbar extends React.Component {
   render() {
     return (
       <div className="Tvpagesearch-bar Fsize-1">
-        <form onSubmit={this.handleSubmit}>
+        {/* currentl does not have on submit or entery key function to push link to 
+          page for api call to render*/}
+        <form>
           <label>
             TV Show search by Name:
             <input type="text" value={this.state.value} onChange={this.enterSearch} />
           </label>
+          {/*due to get initial props async function is only called on page load
+            disguised a page link as a search button to call value of search for 
+            the await fetch api call.*/}
           <button>
             <Link href="/tvpage">
               <a>Submit</a>
@@ -48,7 +54,7 @@ const TvPage = props => (
      <Searchbar />
      <Layout2>
         <h1>Results for: {Search}</h1>
-        {/*}
+        {/* was original code from next.js tutorial.
           <ul>
             {props.shows.map(show => (
               <li key={show.id}>
@@ -60,8 +66,9 @@ const TvPage = props => (
             </ul>
             */}
           <div className="tvbox Fsize-2">
+            {/*Search results display inlucing show name and image.
+              uses map key to render all results. */}
             {props.shows.map(show => (
-              
               <div key={show.id}>
                 <p>
                  <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
@@ -76,6 +83,8 @@ const TvPage = props => (
 );
 
 TvPage.getInitialProps = async function() {
+  //tvmaze search api link.  pulls the json info based on the search variable
+  //entered by user in the search field.
   const res = await fetch('https://api.tvmaze.com/search/shows?q=' + Search);
   const data = await res.json();
 
