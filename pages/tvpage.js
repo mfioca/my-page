@@ -4,7 +4,7 @@ import CSS from '../components/style.css'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import { Redirect } from 'react-router'
+
 
 const noimage = '/static/images/no-img.png';
 var Search = '';

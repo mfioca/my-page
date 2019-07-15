@@ -12,7 +12,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/transitionstyle.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!pages/test_items/transitionstyle.css": [
     {
       "modules": {
         "byIdentifier": {},
@@ -28,7 +28,7 @@
   "modules": {
     "byIdentifier": {
       "css node_modules/css-loader/index.js??ref--5-1!components/style.css 0": 0,
-      "css node_modules/css-loader/index.js??ref--5-1!components/transitionstyle.css 0": 1
+      "css node_modules/css-loader/index.js??ref--5-1!pages/test_items/transitionstyle.css 0": 1
     },
     "usedIds": {
       "0": 0,

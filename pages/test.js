@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import CSS from '../components/style.css'
-import Test from './app'
-import Testapp5 from './transition_item'
+import Testapp5 from './test_items/transition_item.js'
 
 
 const numbers = [1, 2, 3, 4, 5, 6];
@@ -64,9 +63,6 @@ class Testpage extends Component {
         return (
             <Layout>
                 <h1>This page is for testing and learning different concepts.</h1>
-                <div id="Test">
-                    <Test />
-                </div>
                 <div>
                     <NumberList numbers={numbers} />
                 </div>

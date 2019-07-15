@@ -5,6 +5,7 @@ import fetch from 'isomorphic-unfetch';
 
 const noimage = '/static/images/no-img.png';
 
+
 const tvPost = props => (
   <Layout>
     <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
@@ -13,8 +14,17 @@ const tvPost = props => (
       <h1>{props.show.name}</h1>
       <p><b>Type:</b> {props.show.type ? props.show.type : 'no data'}</p>
       <p><b>Premiered:</b> {props.show.premiered ? props.show.premiered : 'no data'}</p>
+      <p><b>Country:</b> {props.show.network.country.code}</p>
       <p><b>status:</b> {props.show.status ? props.show.status : 'no data'}</p>
       <p><b>Rating:</b> {props.show.rating.average ? props.show.average : 'no data'}</p>
+      <p>
+        <b>Genre:</b> &nbsp;
+        {props.show.genres.map(genre => (
+          <span key={props.show.genres}>
+          {genre} &nbsp;
+          </span>
+        ))}
+      </p>
       <img src={props.show.image ? props.show.image.medium : noimage} alt="no image"/>
       <p>{props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')}</p>
       <p>Link: 

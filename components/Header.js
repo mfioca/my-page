@@ -38,11 +38,9 @@ class Headerdropdown extends React.Component {
                         <ul className="Dropdown-list">
                             <li className="Dropdown-list_item">
                             <NavLink id="/tvpage" title="TvMaze" />
-                                
                             </li>
                             <li className="Dropdown-list_item">
                                 <NavLink id="/DandDpage" title="D and D" />
-                                
                             </li>
                             <li className="Dropdown-list_item">
                                 <NavLink id="/test" title="Test" /> 
