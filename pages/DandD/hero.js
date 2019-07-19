@@ -25,17 +25,17 @@ class Hero extends React.Component {
     constructor(props) {
         super(props);
         //sets states for stats in the new hero object
-        this.state = {str: newHero.Str};
-        this.state = {const: newHero.Const};
-        this.state = {dext: newHero.Dext};
-        this.state = {hp: HeroadjStats.HeroHp};
-        this.state = {dmg: HeroadjStats.HeroDmg};
+        this.state = {
+            str: newHero.Str,
+            const: newHero.Const,
+            dext: newHero.Dext,
+            hp: HeroadjStats.HeroHp,
+            dmg: HeroadjStats.HeroDmg,
+            name: '',
+        };
         this.setherostats = this.setherostats.bind(this);
-        //sets Name on form
-        this.state = {Name: ''};
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        
     }
 
     setherostats() {

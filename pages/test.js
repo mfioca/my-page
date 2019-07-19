@@ -4,6 +4,8 @@ import CSS from '../components/style.css'
 import Testapp5 from './test_items/transition_item.js'
 
 
+
+
 const numbers = [1, 2, 3, 4, 5, 6];
 
 var test = {
@@ -79,7 +81,10 @@ class Testpage extends Component {
                     <p>str 2: {this.state.str}</p>
                     <button onClick={this.setstr}>Set Srength</button>
                 </div>
-                
+                <div>
+                    <p>importing local JSON file:</p>
+                    
+                </div>
             </Layout>
         )
     }

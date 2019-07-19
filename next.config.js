@@ -8,6 +8,7 @@ module.exports = withCSS({
           '/about': { page: '/about'},
           '/tvpage': { page: '/tvpage'},
           '/DandDpage': { page: '/DandDpage'},
+          '/ProviderData': { page: '/providerData'},
           '/test': {page: '/test'},
         };
       }

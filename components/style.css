@@ -470,14 +470,14 @@ body {
 }
 .Attack-section {
     position: relative;
-    width: 455px;
+    width: 30%;
     height: 300px;
     background-color: #575555;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
     -moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
     -webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
     -o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-    margin: 20px;
+    margin: 22px;
 }
 
 .Attack-roll {
@@ -594,6 +594,41 @@ body {
 .box:active{
     margin-left:-120px;
 }
- 
 
+.Provider-containter > div {
+    
+    height: 800px;
+    
+    border-collapse: collapse;
+    overflow-x: scroll;
+    
+}
+ 
+.Provider-table {
+    font-family: arial, sans-serif;
+    width: 100%;
+    height: 800px;
+    
+    border-collapse: collapse;
+    
+    background-color: white;
+    
+}
+
+.Provider-table th {
+    background-color: grey;
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+.Provider-table td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+.Provider-table tr:nth-child(even) {
+    background-color: #dddddd;
+}                                         
 

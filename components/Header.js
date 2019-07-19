@@ -43,6 +43,9 @@ class Headerdropdown extends React.Component {
                                 <NavLink id="/DandDpage" title="D and D" />
                             </li>
                             <li className="Dropdown-list_item">
+                                <NavLink id="/ProviderData" title="Provider List" />
+                            </li>
+                            <li className="Dropdown-list_item">
                                 <NavLink id="/test" title="Test" /> 
                             </li>
                         </ul>

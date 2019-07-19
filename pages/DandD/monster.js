@@ -21,14 +21,15 @@ class Monster extends React.Component {
     constructor(props) {
         super(props);
         //sets states for stats in the new monster object
-        this.state = {str: newMonster.Str};
-        this.state = {const: newMonster.Const};
-        this.state = {dext: newMonster.Dext};
-        this.state = {hp: MonsteradjStats.MonsterHp};
-        this.state = {dmg: MonsteradjStats.MonsterDmg};
+        this.state = {
+            str: newMonster.Str,
+            const: newMonster.Const,
+            dext: newMonster.Dext,
+            hp: MonsteradjStats.MonsterHp,
+            dmg: MonsteradjStats.MonsterDmg,
+            Name: '',
+        };
         this.setMonsterstats = this.setMonsterstats.bind(this);
-        //sets Name on form
-        this.state = {Name: ''};
         this.handleChange = this.handleChange.bind(this);
     }
     //displays name as entered into the name field. currently is
