@@ -12,11 +12,13 @@ class ProviderData extends Component {
                     <p>this is data imported from a local json file. It will recreate a tracking
                         spreadsheet I created at one of my jobs.
                     </p>
-                    <p><b>Filter criteria</b> currently set at "East Region" with "stretcher" vehicles.</p>
+                    <p><b>Filter criteria</b> currently set at "Central Region" with "stretcher" vehicles.</p>
+                    <p><b>Sorted</b> by County then name</p>
                     <ol>
                         <b>Things to do:</b>
                         <li>make filter criteria editable by the user.</li>
                         <li>restrict viewing area of table forcing scroll.</li>
+                        <li>double check json file for consistency</li>
                     </ol>
                 </div>
                 <ProviderList />

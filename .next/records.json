@@ -1,5 +1,5 @@
 {
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!pages/test_items/transitionstyle.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/style.css": [
     {
       "modules": {
         "byIdentifier": {},
@@ -12,7 +12,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/style.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!pages/test_items/transitionstyle.css": [
     {
       "modules": {
         "byIdentifier": {},

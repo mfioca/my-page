@@ -626,6 +626,7 @@ body {
     border: 1px solid black;
     text-align: center;
     padding: 8px;
+    width: 40px;
 }
 
 .Provider-table tr:nth-child(even) {
