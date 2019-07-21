@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Component } from 'react'
 import Layout from '../components/layout.js'
 import CSS from '../components/style.css'
 import Testapp5 from './test_items/transition_item.js'

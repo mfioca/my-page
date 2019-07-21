@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -574,39 +574,6 @@ function Layout(props) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/from.js ***!
-  \*******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/array/from */ "core-js/library/fn/array/from");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
-  \***********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "core-js/library/fn/array/is-array");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js ***!
-  \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/is-iterable */ "core-js/library/fn/is-iterable");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/object/create.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/object/create.js ***!
@@ -670,31 +637,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/symbol */ "core-js/l
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/symbol/iterator */ "core-js/library/fn/symbol/iterator");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithoutHoles; });
-/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
-/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
-
-function _arrayWithoutHoles(arr) {
-  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
-}
 
 /***/ }),
 
@@ -769,36 +711,6 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js ***!
-  \***************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _defineProperty; });
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/define-property */ "./node_modules/@babel/runtime-corejs2/core-js/object/define-property.js");
-/* harmony import */ var _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0__);
-
-function _defineProperty(obj, key, value) {
-  if (key in obj) {
-    _core_js_object_define_property__WEBPACK_IMPORTED_MODULE_0___default()(obj, key, {
-      value: value,
-      enumerable: true,
-      configurable: true,
-      writable: true
-    });
-  } else {
-    obj[key] = value;
-  }
-
-  return obj;
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js":
 /*!***************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js ***!
@@ -856,44 +768,6 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js":
-/*!****************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js ***!
-  \****************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArray; });
-/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/from */ "./node_modules/@babel/runtime-corejs2/core-js/array/from.js");
-/* harmony import */ var _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_from__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../core-js/is-iterable */ "./node_modules/@babel/runtime-corejs2/core-js/is-iterable.js");
-/* harmony import */ var _core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1__);
-
-
-function _iterableToArray(iter) {
-  if (_core_js_is_iterable__WEBPACK_IMPORTED_MODULE_1___default()(Object(iter)) || Object.prototype.toString.call(iter) === "[object Arguments]") return _core_js_array_from__WEBPACK_IMPORTED_MODULE_0___default()(iter);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableSpread; });
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js ***!
@@ -942,28 +816,6 @@ function _setPrototypeOf(o, p) {
 
 /***/ }),
 
-/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js":
-/*!******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js ***!
-  \******************************************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _toConsumableArray; });
-/* harmony import */ var _arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithoutHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithoutHoles.js");
-/* harmony import */ var _iterableToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArray.js");
-/* harmony import */ var _nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableSpread */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableSpread.js");
-
-
-
-function _toConsumableArray(arr) {
-  return Object(_arrayWithoutHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(arr) || Object(_nonIterableSpread__WEBPACK_IMPORTED_MODULE_2__["default"])();
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js":
 /*!*******************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js ***!
@@ -996,6 +848,17 @@ function _typeof(obj) {
 
   return _typeof(obj);
 }
+
+/***/ }),
+
+/***/ "./node_modules/react-table/react-table.css":
+/*!**************************************************!*\
+  !*** ./node_modules/react-table/react-table.css ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -1110,10 +973,16 @@ function (_Component) {
           lineNumber: 20
         },
         __self: this
-      }, "restrict viewing area of table forcing scroll."))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_provider_data_providerimport_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, "restrict viewing area of table forcing scroll."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 21
+        },
+        __self: this
+      }, "double check json file for consistency"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_provider_data_providerimport_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
         },
         __self: this
       }));
@@ -1190,22 +1059,19 @@ module.exports = [{"id":1,"Name":"Random Provider Name 1","City":"HINESVILLE","S
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/defineProperty */ "./node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _Filter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./Filter */ "./pages/provider_data/Filter.js");
-/* harmony import */ var _sort__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sort */ "./pages/provider_data/sort.js");
-
-
-
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _Filter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Filter */ "./pages/provider_data/Filter.js");
+/* harmony import */ var _sort__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sort */ "./pages/provider_data/sort.js");
+/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-table */ "react-table");
+/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_table__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-table/react-table.css */ "./node_modules/react-table/react-table.css");
+/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_table_react_table_css__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -1216,34 +1082,27 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\provider_
 
 
 
+
+
 var data = __webpack_require__(/*! ./provider.json */ "./pages/provider_data/provider.json");
 
-var test1 = {
-  region: {
-    property: 'Region',
-    value: 'Central'
-  }
-};
+function filterCaseInsensitive(filter, row) {
+  var id = filter.pivotId || filter.id;
+  return row[id] !== undefined ? String(row[id].toLowerCase()).startsWith(filter.value.toLowerCase()) : true;
+}
 
 var ProviderList =
 /*#__PURE__*/
 function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_6__["default"])(ProviderList, _Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(ProviderList, _Component);
 
   function ProviderList(props) {
-    var _this;
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ProviderList);
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_2__["default"])(this, ProviderList);
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_4__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_5__["default"])(ProviderList).call(this, props));
-    _this.state = {
-      filters: _this.props.filters,
-      sorter: _this.props.sorter
-    };
-    return _this;
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(ProviderList).call(this, props));
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(ProviderList, [{
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(ProviderList, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       fetch("/provider.json").then(function (res) {
@@ -1251,171 +1110,98 @@ function (_Component) {
       });
     }
   }, {
-    key: "parseData",
-    value: function parseData(data) {
-      var sorter = this.state.sorter;
-
-      if (data && data.length) {
-        if (_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_1___default()(sorter) && sorter.length) {
-          data.sort(_sort__WEBPACK_IMPORTED_MODULE_10__["createSorter"].apply(void 0, Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(sorter)));
-        }
-      }
-
-      return data;
-    }
-  }, {
     key: "render",
     value: function render() {
-      //const  data   = this.parseData(data);
-      return this.parseData(data) ? this.renderData(data) : this.renderLoading();
+      return data ? this.renderData(data) : this.renderLoading();
     }
   }, {
     key: "renderData",
     value: function renderData(data) {
-      var filters = this.state.filters;
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_8___default.a, {
+        className: "Provider-table -striped -highlight",
+        data: data,
+        defaultPageSize: 20,
+        style: {
+          height: "400px" // This will force the table body to overflow and scroll, since there is not enough room
 
-      if (data && data.length > 0) {
-        if (_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_1___default()(filters) && filters.length) {
-          data = data.filter(_Filter__WEBPACK_IMPORTED_MODULE_9__["createFilter"].apply(void 0, Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(filters)));
-        }
+        },
+        filterable: true,
+        defaultFilterMethod: function defaultFilterMethod(filter, row) {
+          return filterCaseInsensitive(filter, row);
+        },
+        columns: [{
+          Header: "Provider",
+          columns: [{
+            Header: "Name",
+            accessor: "Name",
+            sortMethod: function sortMethod(a, b) {
+              if (a.length === b.length) {
+                return a > b ? 1 : -1;
+              }
 
-        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-          className: "Provider-container",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 80
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 81
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("table", {
-          className: "Provider-table",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 82
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 85
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 86
-          },
-          __self: this
-        }, "Type"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 87
-          },
-          __self: this
-        }, "Provider Name"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 88
-          },
-          __self: this
-        }, "Provider Region"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 89
-          },
-          __self: this
-        }, "County"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 90
-          },
-          __self: this
-        }, "Ambulatory"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 91
-          },
-          __self: this
-        }, "Wheelchair"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("th", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 92
-          },
-          __self: this
-        }, "Stretcher")), data.map(function (item) {
-          return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
-            key: item.id,
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 95
-            },
-            __self: this
-          }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 96
-            },
-            __self: this
-          }, item.Type), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 97
-            },
-            __self: this
-          }, item.Name), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 98
-            },
-            __self: this
-          }, item.Region), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 99
-            },
-            __self: this
-          }, item.County), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 100
-            },
-            __self: this
-          }, item.Amb), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 101
-            },
-            __self: this
-          }, item.WCHR), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
-            __source: {
-              fileName: _jsxFileName,
-              lineNumber: 102
-            },
-            __self: this
-          }, item.Stretcher));
-        }))));
-      } else {
-        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 110
-          },
-          __self: this
-        }, "No items found");
-      }
+              return a.length > b.length ? 1 : -1;
+            }
+          }]
+        }, {
+          Header: "Provider Info",
+          columns: [{
+            Header: "Type",
+            id: "Type",
+            accessor: function accessor(d) {
+              return d.Type;
+            }
+          }, {
+            Header: "Region",
+            id: "Region",
+            accessor: function accessor(d) {
+              return d.Region;
+            }
+          }, {
+            Header: "County",
+            id: "County",
+            accessor: function accessor(d) {
+              return d.County;
+            }
+          }]
+        }, {
+          Header: "Level of Service",
+          columns: [{
+            Header: "Ambulatory",
+            accessor: "Amb"
+          }, {
+            Header: "Wheelchair",
+            id: "WCHR",
+            accessor: function accessor(d) {
+              return d.WCHR;
+            }
+          }, {
+            Header: "Stretcher",
+            id: "Stretcher",
+            accessor: function accessor(d) {
+              return d.Stretcher;
+            }
+          }]
+        }],
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38
+        },
+        __self: this
+      }));
     }
   }, {
     key: "renderLoading",
     value: function renderLoading() {
-      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 109
         },
         __self: this
       }, "Loading...");
@@ -1423,66 +1209,9 @@ function (_Component) {
   }]);
 
   return ProviderList;
-}(react__WEBPACK_IMPORTED_MODULE_8__["Component"]);
-
-Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__["default"])(ProviderList, "defaultProps", {
-  filters: [{
-    property: 'Type',
-    value: ''
-  }, {
-    property: test1.region.property,
-    value: test1.region.value
-  }, {
-    property: 'County',
-    value: ''
-  }, {
-    property: 'WCHR',
-    value: ''
-  }, {
-    property: 'Stretcher',
-    value: 'Yes'
-  }],
-  sorter: [{
-    property: 'County'
-  }, {
-    property: 'name'
-  }]
-});
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (ProviderList);
-/* codxe used while working on generating page
-render () {
-   
-    const  {sorter}  = this.state;
- 
-     if (data && data.length > 0) {
-       if (Array.isArray(sorter) && sorter.length) {
-         data.sort(createSorter(...sorter));
-       }
-     }
- 
-     return (
-       
-       <div>
-                   
-         {
-           data.map(item => (
-             <div key={item.id}>
-               <span>{item.id}</span>&nbsp;&nbsp;
-               
-               <span><a href={`mailto:${item.email}`}>{item.name}</a></span>;&nbsp; 
-               <span>{item.company}</span>
-             </div>
-           ))
-         }
-       </div>
-       
-     );
-   } 
-   }
-
-
-export default List;*/
 
 /***/ }),
 
@@ -1562,7 +1291,7 @@ var createSorter = function createSorter() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!*************************************!*\
   !*** multi ./pages/providerData.js ***!
   \*************************************/
@@ -1571,39 +1300,6 @@ var createSorter = function createSorter() {
 
 module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\providerData.js */"./pages/providerData.js");
 
-
-/***/ }),
-
-/***/ "core-js/library/fn/array/from":
-/*!************************************************!*\
-  !*** external "core-js/library/fn/array/from" ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/array/from");
-
-/***/ }),
-
-/***/ "core-js/library/fn/array/is-array":
-/*!****************************************************!*\
-  !*** external "core-js/library/fn/array/is-array" ***!
-  \****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/array/is-array");
-
-/***/ }),
-
-/***/ "core-js/library/fn/is-iterable":
-/*!*************************************************!*\
-  !*** external "core-js/library/fn/is-iterable" ***!
-  \*************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/is-iterable");
 
 /***/ }),
 
@@ -1681,6 +1377,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-table":
+/*!******************************!*\
+  !*** external "react-table" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-table");
 
 /***/ })
 
