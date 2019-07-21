@@ -1,6 +1,6 @@
 # my-page
 
-This is my first webpage built using NEXT.JS/REACT.  It includes projects I have worked on while learning development including a searchable app importing data from www.tvmaze.com as well as my own Dungeons and Dragons attack simulation using old Special Edition 2 rules.  
+This is my first webpage built using NEXT.JS/REACT.  It includes projects I have worked on while learning development including a searchable app importing data from www.tvmaze.com as well as my own Dungeons, a Dragons attack simulation using old Special Edition 2 rules and a a page importing an excel tracking sheet I created at a previous job.  
 
 ## Getting Started
 
