@@ -17,6 +17,31 @@ function filterCaseInsensitive(filter, row) {
   );
 }
 
+const customFilter = ({ fieldName, filter, onChange }) => {
+
+  return (
+    <select
+      onChange={event => onChange(event.target.value)}
+      style={{ width: "100%" }}
+      value={filter ? filter.value : ''}
+    > 
+      <option value= ''>Show All</option>
+      {data
+        .map(item => item[fieldName])
+
+        .filter((item, i, s) => s.lastIndexOf(item) == i)
+        .map(function (value) {
+          
+          return (
+            <option key={value} value={value}>
+              {value}
+            </option>
+          );
+        })}
+    </select>
+  );
+};
+
 class ProviderList extends Component {
   constructor(props) {
     super(props);
@@ -43,7 +68,8 @@ class ProviderList extends Component {
               height: "400px" // This will force the table body to overflow and scroll, since there is not enough room
             }}
             filterable
-            defaultFilterMethod={(filter, row) => filterCaseInsensitive(filter, row) }
+            defaultFilterMethod=
+            {(filter, row) => filterCaseInsensitive(filter, row) }
             columns={[
               {
                 Header: "Provider",
@@ -66,18 +92,34 @@ class ProviderList extends Component {
                   {
                     Header: "Type",
                     id: "Type",
-                    accessor: d => d.Type
+                   accessor: d => d.Type,
+                    filterMethod: (filter, row) => {
+                      return row[filter.id] === filter.value;
+                    },
+                    Filter: ({ filter, onChange }) =>
+                    customFilter({ fieldName:'Type', filter, onChange })
                   },
                   {
                     Header: "Region",
                     id: "Region",
-                    accessor: d => d.Region
+                   accessor: d => d.Region,
+                    filterMethod: (filter, row) => {
+                      return row[filter.id] === filter.value;
+                    },
+                    Filter: ({ filter, onChange }) =>
+                    customFilter({ fieldName:'Region', filter, onChange })
                   },
                   {
                     Header: "County",
                     id: "County",
-                    accessor: d => d.County
+                    accessor: d => d.County,
+                    filterMethod: (filter, row) => {
+                      return row[filter.id] === filter.value;
+                  },
+                  Filter: ({ filter, onChange }) =>
+                    customFilter({ fieldName:'County', filter, onChange })
                   }
+                
                 ]
               },
               {
@@ -85,18 +127,34 @@ class ProviderList extends Component {
                 columns: [
                   {
                     Header: "Ambulatory",
-                    accessor: "Amb"
+                    accessor: "Amb",
+                    filterMethod: (filter, row) => {
+                      return row[filter.id] === filter.value;
+                    },
+                    Filter: ({ filter, onChange }) =>
+                    customFilter({ fieldName:'Amb', filter, onChange })
                   },
                   {
                     Header: "Wheelchair",
                     id: "WCHR",
-                    accessor: d => d.WCHR
+                    accessor: d => d.WCHR,
+                    filterMethod: (filter, row) => {
+                      return row[filter.id] === filter.value;
                   },
+                  Filter: ({ filter, onChange }) =>
+                  customFilter({ fieldName:'WCHR', filter, onChange })
+                },
                   {
                     Header: "Stretcher",
                     id: "Stretcher",
-                    accessor: d => d.Stretcher
-                  }
+                    accessor: d => d.Stretcher,
+                    accessor: d => d.WCHR,
+                    filterMethod: (filter, row) => {
+                      return row[filter.id] === filter.value;
+                  },
+                  Filter: ({ filter, onChange }) =>
+                    customFilter({ fieldName:'Stretcher', filter, onChange })
+                  },
                 ]
               },
             ]}
