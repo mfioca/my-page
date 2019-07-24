@@ -595,6 +595,26 @@ body {
     margin-left:-120px;
 }
 
+.Provider-info {
+    display: flex;
+    flex-wrap: nowrap;
+    
+  }
+  
+.Provider-info > div {
+    margin: 10px;
+    text-align: center;
+}
+
+.Provider-info-table {
+    font-size: 20px;
+}
+
+.Prvider-info-table, td, th {
+    text-align: center;
+    width: 300px;
+}
+
 .Provider-containter > div {
     
     height: 800px;
