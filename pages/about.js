@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import CSS from '../components/style.css'
 import Layout from '../components/layout'
 import About from './about_view/aboutview'
 import Resume from './about_view/resumeview'

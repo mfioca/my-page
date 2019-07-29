@@ -67,6 +67,8 @@ class AttackSim extends React.Component {
         this.rollforiniative = this.rollforiniative.bind(this);
     }
 
+
+    
     /*hero attack roll, radomly generates number between 1 to 20.  Then
     calls the hero attack roll function to determine successful attack.*/
 
@@ -113,7 +115,9 @@ class AttackSim extends React.Component {
 
     render() {
         return (
+            
             <div>
+                
                 {/*displays hero stats and attack information */}
                 <div className="Attack-section">
                     <div className="AC-Icon">

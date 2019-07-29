@@ -4,6 +4,7 @@ import { setHitAdj } from './herofunctions';
 import { setDmgAdj } from './herofunctions';
 import { setacAdj } from './herofunctions';
 import { HeroadjStats } from './attacksim';
+
 export { newHero }
 export { Hero }
 
@@ -17,8 +18,6 @@ var newHero = {
     BaseDamage: 10,
     BaseHitAdj: 0
 };
-
-
 
 
 class Hero extends React.Component {
@@ -50,11 +49,13 @@ class Hero extends React.Component {
         HeroadjStats.HeroDmg = (newHero.BaseDamage) + (setDmgAdj());
         HeroadjStats.HeroHitAdj = (newHero.BaseHitAdj) + (setHitAdj());
         //sets new state for each variable
-        this.setState({str: newHero.Str});
-        this.setState({const: newHero.Const});
-        this.setState({dext: newHero.Dext});
-        this.setState({hp: HeroadjStats.HeroHp});
-        this.setState({dmg: HeroadjStats.HeroDmg});
+        this.setState({
+            str: newHero.Str,
+            const: newHero.Const,
+            dext: newHero.Dext,
+            hp: HeroadjStats.HeroHp,
+            dmg: HeroadjStats.HeroDmg
+        });
     }
     //displays name as entered into the name field. currently is
     //a live event rather than on submit event.

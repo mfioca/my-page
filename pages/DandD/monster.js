@@ -50,11 +50,13 @@ class Monster extends React.Component {
         MonsteradjStats.MonsterDmg = (newMonster.BaseDamage) + (setDmgAdj());
         MonsteradjStats.MonsterHitAdj = (newMonster.BaseHitAdj) + (setHitAdj());
         //sets new state for each variable
-        this.setState({str: newMonster.Str});
-        this.setState({const: newMonster.Const});
-        this.setState({dext: newMonster.Dext});
-        this.setState({hp: MonsteradjStats.MonsterHp});
-        this.setState({dmg: MonsteradjStats.MonsterDmg});
+        this.setState({
+            str: newMonster.Str,
+            const: newMonster.Const,
+            dext: newMonster.Dext,
+            hp: MonsteradjStats.MonsterHp,
+            dmg: MonsteradjStats.MonsterDmg
+        });
     }
 
     

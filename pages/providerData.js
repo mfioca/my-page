@@ -1,19 +1,18 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout.js';
-import CSS from '../components/style.css';
 import ProviderList from './provider_data/providerimport.js';
 
 
 var data = require('./provider_data/provider.json');
 
 
-function Providerinfo(props) {
+function Providerinfo() {
     return (
     <div className="Provider-info">
         <div>
+            <p className="center Fsize-2"><b><u>Provider Totals</u></b></p>  
             <table className="Provider-info-table">
-                <p className="center"><b><u>Provider Totals</u></b></p>
-                <tr>
+                 <tr>
                     <th className="left">Total Transportation Providers:</th>
                     <td>{data.length}</td>
                 </tr>
@@ -62,70 +61,73 @@ function Providerinfo(props) {
                     <td>{data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'East').length}</td>
                 </tr>
             </table>
-      </div>
-      <div>
+        </div>
+        <div> 
+            <p className="center Fsize-2"><b><u>Level of Service Totals</u></b></p>
             <table className="Provider-info-table">
-                <p className="center"><b><u>Level of Service Totals</u></b></p>
                 <tr>
-                    <td className="right">Ambulatory:</td>
+                    <th className="left">All Regions:</th>
+                </tr>
+                <tr>
+                    <td className="right">Providers with Ambulatory:</td>
                     <td>{data.filter(data => data.Amb === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Wheelchair:</td>
+                    <td className="right">Providers with Wheelchair:</td>
                     <td>{data.filter(data => data.WCHR === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Stretcher:</td>
+                    <td className="right">Providers with Stretcher:</td>
                     <td>{data.filter(data => data.Stretcher === 'Yes').length}</td>
                 </tr>
                 <tr>
                     <th className="left">Central:</th>
                 </tr>
                 <tr>
-                    <td className="right">Ambulatory:</td>
+                    <td className="right">Providers with Ambulatory:</td>
                     <td>{data.filter(data => data.Region === 'Central' && data.Amb === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Wheelchair:</td>
+                    <td className="right">Providers with Wheelchair:</td>
                     <td>{data.filter(data => data.Region === 'Central' && data.WCHR === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Stretcher:</td>
+                    <td className="right">Providers with Stretcher:</td>
                     <td>{data.filter(data => data.Region === 'Central' && data.Stretcher === 'Yes').length}</td>
                 </tr>
                 <tr>
                     <th className="left">SouthWest:</th>
                 </tr>
                 <tr>
-                    <td className="right">Ambulatory:</td>
+                    <td className="right">Providers with Ambulatory:</td>
                     <td>{data.filter(data => data.Region === 'SouthWest' && data.Amb === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Wheelchair:</td>
+                    <td className="right">Providers with Wheelchair:</td>
                     <td>{data.filter(data => data.Region === 'SouthWest' && data.WCHR === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Stretcher:</td>
+                    <td className="right">Providers with Stretcher:</td>
                     <td>{data.filter(data => data.Region === 'SouthWest' && data.Stretcher === 'Yes').length}</td>
                 </tr>
                 <tr>
                     <th className="left">East:</th>
                 </tr>
                 <tr>
-                    <td className="right">Ambulatory:</td>
+                    <td className="right">Providers with Ambulatory:</td>
                     <td>{data.filter(data => data.Region === 'East' && data.Amb === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Wheelchair:</td>
+                    <td className="right">Providers with Wheelchair:</td>
                     <td>{data.filter(data => data.Region === 'East' && data.WCHR === 'Yes').length}</td>
                 </tr>
                 <tr>
-                    <td className="right">Stretcher:</td>
+                    <td className="right">Providers with Stretcher:</td>
                     <td>{data.filter(data => data.Region === 'East' && data.Stretcher === 'Yes').length}</td>
                 </tr>
             </table>
         </div>
-      </div>
+    </div>
     );
 }
 
@@ -136,16 +138,9 @@ class ProviderData extends Component {
             <Layout>
                 <div>
                     <p>this is data imported from a local json file. It will recreate a tracking
-                        spreadsheet I created at one of my jobs.
-                    </p>
+                        spreadsheet I created at one of my jobs.</p>
                     <p>I used react-table dependency to build the data table. Altering formatting
-                        to match my spreadsheet.
-                    </p>
-                    <ol>
-                        <b>Things to do:</b>
-                        <li>see if you can change react-tables css for custom styling</li>
-                        <li>double check json file for consistency</li>
-                    </ol>
+                        to match my spreadsheet. </p>
                 </div>
                 <Providerinfo />
                 <ProviderList />

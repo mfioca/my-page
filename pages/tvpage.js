@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Layout from '../components/layout'
-import CSS from '../components/style.css'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
 
+
 const noimage = '/static/images/no-img.png';
 var Search = '';
+
 
 
 class Searchbar extends React.Component {
@@ -23,6 +24,7 @@ class Searchbar extends React.Component {
     Search = (event.target.value);
   }
 
+
   render() {
     return (
       <div className="Tvpagesearch-bar Fsize-1">
@@ -31,14 +33,23 @@ class Searchbar extends React.Component {
         <form>
           <label>
             TV Show search by Name:
-            <input type="text" value={this.state.value} onChange={this.enterSearch} />
+            <input type="text" 
+            value={this.state.value} 
+            onChange={this.enterSearch} 
+            //Prevent enter key submit
+            onKeyPress={event => {
+              if (event.which === 13 /* Enter */) {
+                event.preventDefault();
+              }
+            }}
+            />
           </label>
           {/*due to get initial props async function is only called on page load
             disguised a page link as a search button to call value of search for 
             the await fetch api call.*/}
           <button>
             <Link href="/tvpage">
-              <a>Submit</a>
+              <a>Click Submit</a>
             </Link>
           </button>
         </form>

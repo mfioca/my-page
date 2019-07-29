@@ -48,9 +48,7 @@ const customFilter = ({ fieldName, filter, onChange }) => {
 
 class ProviderList extends Component {
   constructor(props) {
-    super(props);
-    
-    
+    super(props); 
 }
 
 
@@ -69,7 +67,7 @@ class ProviderList extends Component {
       return (
         <div>
           <ReactTable 
-            className= "Provider-table -striped -highlight"
+            className= "Provider-table -striped -highlight center"
             data= {data}
             defaultPageSize={20}
             style={{
@@ -215,17 +213,15 @@ class ProviderList extends Component {
 
             return (
               <div className="main-grid">
-                <div className="above-table text-right">
-                  <div className="col-sm-12">
+                  <div className="Fsize-2">
                     <span className="records-info">{recordsInfoText}</span>
                   </div>
-                </div>
                 {makeTable()}
               </div>
             );
           }}
         </ReactTable>
-        </div>
+      </div>
       );
     } 
   renderLoading() {

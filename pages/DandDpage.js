@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
-import CSS from '../components/style.css'
 import Hero from './DandD/hero'
 import Monster from './DandD/monster'
 import AttackSim from './DandD/attacksim'
@@ -8,6 +7,7 @@ import AttackSim from './DandD/attacksim'
 class DandD extends Component {
 
     render() {
+        
         return (
             <Layout>
                 <div className="center">

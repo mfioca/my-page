@@ -1,10 +1,7 @@
 import React from 'react'
 import { Component } from 'react'
 import Layout from '../components/layout.js'
-import CSS from '../components/style.css'
 import Testapp5 from './test_items/transition_item.js'
-
-
 
 
 const numbers = [1, 2, 3, 4, 5, 6];
@@ -86,6 +83,7 @@ class Testpage extends Component {
                     <p>importing local JSON file:</p>
                     
                 </div>
+                
             </Layout>
         )
     }

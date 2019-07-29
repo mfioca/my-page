@@ -109,8 +109,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./style.css */ "./components/style.css");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_6__);
 
 
 
@@ -119,13 +117,12 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Footer.js";
 
 
-
 function FooterLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "Footer-nav center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -135,7 +132,7 @@ function FooterLink(props) {
     title: props.title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 7
     },
     __self: this
   }, props.title));
@@ -159,7 +156,7 @@ function (_React$Component) {
         className: "Footer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 20
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(FooterLink, {
@@ -167,7 +164,7 @@ function (_React$Component) {
         title: "LinkedIn",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 21
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(FooterLink, {
@@ -175,7 +172,7 @@ function (_React$Component) {
         title: "Deviantart",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 22
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(FooterLink, {
@@ -183,33 +180,33 @@ function (_React$Component) {
         title: "Git-Hub",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 23
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "email",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: "mailto: mark@fioca.com",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         },
         __self: this
       }, "Send Email")))));
@@ -240,8 +237,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./style.css */ "./components/style.css");
-/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_7__);
 
 
 
@@ -250,7 +245,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Header.js";
 
-
+var activeprofile = '';
 
 function NavLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -382,11 +377,11 @@ function (_React$Component) {
           lineNumber: 46
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+      })), activeprofile === 'Guest' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
         className: "Dropdown-list_item",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 50
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
@@ -394,7 +389,7 @@ function (_React$Component) {
         title: "Test",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 51
         },
         __self: this
       })))));
@@ -422,7 +417,7 @@ function (_React$Component2) {
         className: "Header",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 62
+          lineNumber: 67
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
@@ -430,7 +425,7 @@ function (_React$Component2) {
         title: "Home",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 68
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
@@ -438,26 +433,26 @@ function (_React$Component2) {
         title: "About",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 69
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Headerdropdown, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 70
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "google",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 66
+          lineNumber: 71
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 72
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -466,13 +461,13 @@ function (_React$Component2) {
         height: "20",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 73
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 75
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
@@ -481,14 +476,14 @@ function (_React$Component2) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 76
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
         name: "q",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 77
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
@@ -496,7 +491,7 @@ function (_React$Component2) {
         value: "Google Search",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 78
         },
         __self: this
       })))));
@@ -615,17 +610,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-prototype
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/set-prototype-of */ "core-js/library/fn/object/set-prototype-of");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/set.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/set.js ***!
-  \************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/set */ "core-js/library/fn/set");
 
 /***/ }),
 
@@ -890,9 +874,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
-/* harmony import */ var _components_style_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/style.css */ "./components/style.css");
-/* harmony import */ var _components_style_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_style_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _provider_data_providerimport_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./provider_data/providerimport.js */ "./pages/provider_data/providerimport.js");
+/* harmony import */ var _provider_data_providerimport_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./provider_data/providerimport.js */ "./pages/provider_data/providerimport.js");
 
 
 
@@ -903,85 +885,84 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\providerD
 
 
 
-
 var data = __webpack_require__(/*! ./provider_data/provider.json */ "./pages/provider_data/provider.json");
 
-function Providerinfo(props) {
+function Providerinfo() {
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     className: "Provider-info",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+    className: "center Fsize-2",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("u", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Provider Totals"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
     className: "Provider-info-table",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-    className: "center",
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("u", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, "Provider Totals"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 16
     },
     __self: this
   }, "Total Transportation Providers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 17
     },
     __self: this
   }, data.length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 19
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 20
     },
     __self: this
   }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 21
     },
     __self: this
   }, data.filter(function (data) {
@@ -989,20 +970,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 23
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 24
     },
     __self: this
   }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 25
     },
     __self: this
   }, data.filter(function (data) {
@@ -1010,20 +991,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 27
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }, "Central Region Providers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }, data.filter(function (data) {
@@ -1031,20 +1012,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 32
     },
     __self: this
   }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 33
     },
     __self: this
   }, data.filter(function (data) {
@@ -1052,20 +1033,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 36
     },
     __self: this
   }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
     },
     __self: this
   }, data.filter(function (data) {
@@ -1073,20 +1054,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 39
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 40
     },
     __self: this
   }, "SouthWest Region:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 41
     },
     __self: this
   }, data.filter(function (data) {
@@ -1094,20 +1075,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 43
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 44
     },
     __self: this
   }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 45
     },
     __self: this
   }, data.filter(function (data) {
@@ -1115,20 +1096,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 47
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 48
     },
     __self: this
   }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 49
     },
     __self: this
   }, " ", data.filter(function (data) {
@@ -1136,20 +1117,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 51
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 52
     },
     __self: this
   }, "East Region:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 53
     },
     __self: this
   }, data.filter(function (data) {
@@ -1157,20 +1138,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 55
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 56
     },
     __self: this
   }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 57
     },
     __self: this
   }, data.filter(function (data) {
@@ -1178,20 +1159,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 59
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 60
     },
     __self: this
   }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 61
     },
     __self: this
   }, data.filter(function (data) {
@@ -1199,52 +1180,65 @@ function Providerinfo(props) {
   }).length)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+    className: "center Fsize-2",
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 66
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("u", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 66
+    },
+    __self: this
+  }, "Level of Service Totals"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("table", {
     className: "Provider-info-table",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 67
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-    className: "center",
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 68
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("u", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }, "Level of Service Totals"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
+    className: "left",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 69
+    },
+    __self: this
+  }, "All Regions:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: this
-  }, "Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 73
     },
     __self: this
   }, data.filter(function (data) {
@@ -1252,20 +1246,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 75
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 76
     },
     __self: this
-  }, "Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 77
     },
     __self: this
   }, data.filter(function (data) {
@@ -1273,20 +1267,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 79
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 80
     },
     __self: this
-  }, "Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 81
     },
     __self: this
   }, data.filter(function (data) {
@@ -1294,33 +1288,33 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 84
     },
     __self: this
   }, "Central:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 86
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 87
     },
     __self: this
-  }, "Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: this
   }, data.filter(function (data) {
@@ -1328,20 +1322,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 90
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 91
     },
     __self: this
-  }, "Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 90
+      lineNumber: 92
     },
     __self: this
   }, data.filter(function (data) {
@@ -1349,20 +1343,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 92
+      lineNumber: 94
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 93
+      lineNumber: 95
     },
     __self: this
-  }, "Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 94
+      lineNumber: 96
     },
     __self: this
   }, data.filter(function (data) {
@@ -1370,33 +1364,33 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 96
+      lineNumber: 98
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 97
+      lineNumber: 99
     },
     __self: this
   }, "SouthWest:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 99
+      lineNumber: 101
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 100
+      lineNumber: 102
     },
     __self: this
-  }, "Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 101
+      lineNumber: 103
     },
     __self: this
   }, data.filter(function (data) {
@@ -1404,20 +1398,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 103
+      lineNumber: 105
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 104
+      lineNumber: 106
     },
     __self: this
-  }, "Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 105
+      lineNumber: 107
     },
     __self: this
   }, data.filter(function (data) {
@@ -1425,20 +1419,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 107
+      lineNumber: 109
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 110
     },
     __self: this
-  }, "Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 109
+      lineNumber: 111
     },
     __self: this
   }, data.filter(function (data) {
@@ -1446,33 +1440,33 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 111
+      lineNumber: 113
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
     className: "left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 112
+      lineNumber: 114
     },
     __self: this
   }, "East:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 114
+      lineNumber: 116
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 115
+      lineNumber: 117
     },
     __self: this
-  }, "Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 116
+      lineNumber: 118
     },
     __self: this
   }, data.filter(function (data) {
@@ -1480,20 +1474,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 118
+      lineNumber: 120
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 119
+      lineNumber: 121
     },
     __self: this
-  }, "Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 122
     },
     __self: this
   }, data.filter(function (data) {
@@ -1501,20 +1495,20 @@ function Providerinfo(props) {
   }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 122
+      lineNumber: 124
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     className: "right",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 125
     },
     __self: this
-  }, "Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
+  }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 126
     },
     __self: this
   }, data.filter(function (data) {
@@ -1539,61 +1533,37 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 138
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 139
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 140
         },
         __self: this
       }, "this is data imported from a local json file. It will recreate a tracking spreadsheet I created at one of my jobs."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 142
         },
         __self: this
-      }, "I used react-table dependency to build the data table. Altering formatting to match my spreadsheet."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ol", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 144
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
+      }, "I used react-table dependency to build the data table. Altering formatting to match my spreadsheet. ")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Providerinfo, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 145
         },
         __self: this
-      }, "Things to do:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_provider_data_providerimport_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 146
-        },
-        __self: this
-      }, "see if you can change react-tables css for custom styling"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 147
-        },
-        __self: this
-      }, "double check json file for consistency"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Providerinfo, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 150
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_provider_data_providerimport_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 151
         },
         __self: this
       }));
@@ -1632,17 +1602,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/set */ "./node_modules/@babel/runtime-corejs2/core-js/set.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-table */ "react-table");
-/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_table__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-table/react-table.css */ "./node_modules/react-table/react-table.css");
-/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_table_react_table_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _provider_json__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./provider.json */ "./pages/provider_data/provider.json");
-var _provider_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./provider.json */ "./pages/provider_data/provider.json", 1);
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-table */ "react-table");
+/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_table__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-table/react-table.css */ "./node_modules/react-table/react-table.css");
+/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_table_react_table_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _provider_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./provider.json */ "./pages/provider_data/provider.json");
+var _provider_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./provider.json */ "./pages/provider_data/provider.json", 1);
 
 
 
@@ -1653,11 +1620,11 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\provider_
 
 
  //var data = require('./provider.json');
-//counts number of Region types there are in the json
 
-var uniqueNames = new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_5___default.a(_provider_json__WEBPACK_IMPORTED_MODULE_9__.map(function (item) {
-  return item.Region;
-})).size; //Function for case insensitivity allowing for more flexibility on filter results based
+/*counts number of Region types there are in the json
+const uniqueNames = new Set(data.map(item => item.Region)).size;
+*/
+//Function for case insensitivity allowing for more flexibility on filter results based
 //on user input.
 
 function filterCaseInsensitive(filter, row) {
@@ -1671,7 +1638,7 @@ var customFilter = function customFilter(_ref) {
   var fieldName = _ref.fieldName,
       filter = _ref.filter,
       _onChange = _ref.onChange;
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("select", {
+  return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("select", {
     onChange: function onChange(event) {
       return _onChange(event.target.value);
     },
@@ -1684,19 +1651,19 @@ var customFilter = function customFilter(_ref) {
       lineNumber: 29
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("option", {
+  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
     value: "",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }, "Show All"), _provider_json__WEBPACK_IMPORTED_MODULE_9__.map(function (item) {
+  }, "Show All"), _provider_json__WEBPACK_IMPORTED_MODULE_8__.map(function (item) {
     return item[fieldName];
   }).filter(function (item, i, s) {
     return s.lastIndexOf(item) == i;
   }).map(function (value) {
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("option", {
+    return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
       key: value,
       value: value,
       __source: {
@@ -1730,25 +1697,19 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return _provider_json__WEBPACK_IMPORTED_MODULE_9__ ? this.renderData(_provider_json__WEBPACK_IMPORTED_MODULE_9__) : this.renderLoading();
+      return _provider_json__WEBPACK_IMPORTED_MODULE_8__ ? this.renderData(_provider_json__WEBPACK_IMPORTED_MODULE_8__) : this.renderLoading();
     }
   }, {
     key: "renderData",
     value: function renderData(data) {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 68
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 74
-        },
-        __self: this
-      }, uniqueNames), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_7___default.a, {
-        className: "Provider-table -striped -highlight",
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_6___default.a, {
+        className: "Provider-table -striped -highlight center",
         data: data,
         defaultPageSize: 20,
         style: {
@@ -1917,7 +1878,7 @@ function (_Component) {
         }],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 69
         },
         __self: this
       }, function (state, makeTable, instance) {
@@ -1936,44 +1897,37 @@ function (_Component) {
           if (isFiltered) recordsInfoText = "".concat(totalRecords, " filtered Providers");else recordsInfoText = "".concat(recordsCountFrom, "-").concat(recordsCountTo, " of ").concat(totalRecords, " records");
         } else recordsInfoText = "No records";
 
-        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
           className: "main-grid",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 226
+            lineNumber: 215
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-          className: "above-table text-right",
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: "Fsize-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 227
+            lineNumber: 216
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-          className: "col-sm-12",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 228
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
           className: "records-info",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 229
+            lineNumber: 217
           },
           __self: this
-        }, recordsInfoText))), makeTable());
+        }, recordsInfoText)), makeTable());
       }));
     }
   }, {
     key: "renderLoading",
     value: function renderLoading() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 228
         },
         __self: this
       }, "Loading...");
@@ -1981,7 +1935,7 @@ function (_Component) {
   }]);
 
   return ProviderList;
-}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
 
 /* harmony default export */ __webpack_exports__["default"] = (ProviderList);
 
@@ -2040,17 +1994,6 @@ module.exports = require("core-js/library/fn/object/get-prototype-of");
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/set-prototype-of");
-
-/***/ }),
-
-/***/ "core-js/library/fn/set":
-/*!*****************************************!*\
-  !*** external "core-js/library/fn/set" ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/set");
 
 /***/ }),
 

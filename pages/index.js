@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
-import CSS from '../components/style.css'
+
 
 const pStyle = {
     marginRight: 'Auto',

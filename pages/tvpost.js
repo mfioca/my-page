@@ -1,4 +1,3 @@
-import CSS from '../components/style.css'
 import Layout from '../components/layout';
 import Layout2 from './tv_info/MyLayout';
 import fetch from 'isomorphic-unfetch';

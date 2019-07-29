@@ -1,6 +1,6 @@
 import React from 'react'
-import CSS from './style.css'
 
+var activeprofile = '';
 
 function NavLink(props) {
     return (
@@ -37,7 +37,7 @@ class Headerdropdown extends React.Component {
                     <div className="DropdownMenu" onMouseLeave={this.showList}>
                         <ul className="Dropdown-list">
                             <li className="Dropdown-list_item">
-                            <NavLink id="/tvpage" title="TvMaze" />
+                                <NavLink id="/tvpage" title="TvMaze" />
                             </li>
                             <li className="Dropdown-list_item">
                                 <NavLink id="/DandDpage" title="D and D" />
@@ -45,9 +45,12 @@ class Headerdropdown extends React.Component {
                             <li className="Dropdown-list_item">
                                 <NavLink id="/ProviderData" title="Provider List" />
                             </li>
-                            <li className="Dropdown-list_item">
+                            {/* Hiding link based on activeprofile variable*/}
+                            {activeprofile === 'Guest' &&
+                                <li className="Dropdown-list_item">
                                 <NavLink id="/test" title="Test" /> 
-                            </li>
+                                </li>  
+                            }
                         </ul>
                     </div>
                 )}
@@ -55,6 +58,8 @@ class Headerdropdown extends React.Component {
         );
     }
 }
+
+
 
 class Header extends React.Component {
     render() {
@@ -78,6 +83,8 @@ class Header extends React.Component {
         );
     }
 }
+
+
 
 export default Header;
 
