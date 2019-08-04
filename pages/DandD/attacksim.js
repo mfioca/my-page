@@ -1,46 +1,9 @@
-import React from 'react'
-import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj } from './herofunctions'
-import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj } from './monsterfunctions'
+import React from 'react';
+import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, 
+        setherostats, heroattackroll } from './herofunctions';
+import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj,
+        setmonsterstats, monsterattackroll } from './monsterfunctions'
 
-
-
-/* determins if the hero successfully hits the monster.  adjusts for monster
-armor class and hero hit adjustment.  on successful attack role, applies damage
-to monster hp and if hp reaches zero alerts that monster is dead */
-
-function heroattackroll() {
-    this.setState ({heroroll: Math.floor((Math.random() * 20) + 1)});
-    if (this.state.heroroll >= (this.state.monsterAc + this.state.heroHitAdj )) {
-        this.setState({herodidhit: 'Hit'})
-        if ((this.state.monsterHp - this.state.heroDmg) <= 0) {
-            this.setState ({monsterHp: 'Dead'})
-        } else {
-            this.setState ({monsterHp: this.state.monsterHp - this.state.heroDmg})
-        }
-    } else {
-        this.setState ({herodidhit: 'Miss'});
-    };
-};
-
-
-
-/* determins if the monster successfully hits the hero.  adjusts for hero
-armor class andmonster hit adjustment.  on successful attack role, applies damage
-to hero hp and if hp reaches zero alerts that hero is dead */
-
-function monsterattackroll() {
-    this.setState ({monsterroll: Math.floor((Math.random() * 20) + 1)});
-    if (this.state.monsterroll >= (this.state.heroAc + this.state.monsterHitAdj )) {
-        this.setState({monsterdidhit: 'Hit'})
-        if ((this.state.heroHp - this.state.monsterDmg) <= 0) {
-            this.setState ({heroHp: 'Dead'})
-        } else {
-            this.setState ({heroHp: this.state.heroHp - this.state.monsterDmg})
-        }
-    } else {
-        this.setState ({monsterdidhit: 'Miss'});
-    };
-};
 
 
 class AttackSim extends React.Component {
@@ -90,7 +53,7 @@ class AttackSim extends React.Component {
 
         };
         //Hero bind function statements
-        this.setherostats = this.setherostats.bind(this);
+        this.setherostats = setherostats.bind(this);
         this.SetheroConstAdj = SetheroConstAdj.bind(this);
         this.SetheroacAdj = SetheroacAdj.bind(this);
         this.SetheroDmgAdj = SetheroDmgAdj.bind(this);
@@ -98,7 +61,7 @@ class AttackSim extends React.Component {
         this.heroNameChange = this.heroNameChange.bind(this);
         this.heroattackroll = heroattackroll.bind(this);
         //monster bind function statements
-        this.setMonsterstats = this.setMonsterstats.bind(this);
+        this.setmonsterstats = setmonsterstats.bind(this);
         this.SetmonsterConstAdj = SetmonsterConstAdj.bind(this);
         this.SetmonsteracAdj = SetmonsteracAdj.bind(this);
         this.SetmonsterDmgAdj = SetmonsterDmgAdj.bind(this);
@@ -107,69 +70,44 @@ class AttackSim extends React.Component {
         this.monsterattackroll = monsterattackroll.bind(this);
 
         this.rollforiniative = this.rollforiniative.bind(this);
-        
-    }
-
-    setherostats() {
-        //performs a 1-20 roll for every item in the "herostats" object/state
-        for (let key in this.state.herostats) {
-            this.state.herostats[key] = Math.floor((Math.random() * 20) + 1);
-        };
-        this.setState ({
-            //sets adjusted items based on herostats numbers in the set..adj functions
-            heroHp: this.state.herobase.Hp + this.SetheroConstAdj(),
-            heroAc: this.state.herobase.ArmorClass + this.SetheroacAdj(),
-            heroDmg: this.state.herobase.Damage + this.SetheroDmgAdj(),
-            heroHitAdj: this.state.herobase.HitAdj + this.SetheroHitAdj(),
-        });
-    }
-
-    setMonsterstats() {
-        //performs a 1-20 roll for every item in the "monsterstats" object/state
-        for (let key in this.state.monsterstats) {
-            this.state.monsterstats[key] = Math.floor((Math.random() * 20) + 1);
-        };
-        this.setState ({
-            //sets adjusted items based on monsterstats numbers in the set..adj functions
-            monsterHp: this.state.monsterbase.Hp + this.SetmonsterConstAdj(),
-            monsterAc: this.state.monsterbase.ArmorClass + this.SetmonsteracAdj(),
-            monsterDmg: this.state.monsterbase.Damage + this.SetmonsterDmgAdj(),
-            monsterHitAdj: this.state.monsterbase.HitAdj + this.SetmonsterHitAdj(),
-        });
     }
 
     heroNameChange(event) {
         this.setState ({heroName : event.target.value});
-    };
+    }
 
     monsterNameChange(event) {
         this.setState ({monsterName : event.target.value});
-    };
+    }
 
     rollforiniative() {
         this.Heroinitiative = Math.floor((Math.random() * 10) + 1);
         this.Monsterinitiative = Math.floor((Math.random() * 10) + 1);
+        //if hero 1-10 role is lower, hero goes first.
         if (this.Heroinitiative < this.Monsterinitiative) {
             this.setState ({
                 heroinitiative: 'First',
                 monsterinitiative: 'Second'
             });
+        //if monster 1-10 role is lower, monster goes first
         } else if (this.Heroinitiative > this.Monsterinitiative) {
             this.setState ({
                 monsterinitiative: 'First',
                 heroinitiative: 'Second'
             });
         } else {
+            //if both have same result, roll again
             this.setState ({
                 heroinitiative: 'ReRoll',
                 monsterinitiative: 'ReRoll'
             })   
         };
+        //clears out the hit/miss comments since it is a new round.
         this.setState ({
             herodidhit: '',
             monsterdidhit: ''
         });
-    };
+    }
 
     
 
@@ -258,7 +196,7 @@ class AttackSim extends React.Component {
                             </div>
                         </div>
                         <div className="Stats-roll align-center">
-                            <button onClick={this.setMonsterstats}>Set Attrubutes</button>
+                            <button onClick={this.setmonsterstats}>Set Attrubutes</button>
                         </div>
                         <div>
                             <form>
@@ -275,9 +213,7 @@ class AttackSim extends React.Component {
                         </div>
                     </div>      
                 </div>
-                
-
-
+            
                 {/*displays hero stats and attack information */}
                 <div className="Attack-section">
                     <div className="AC-Icon">
@@ -301,6 +237,7 @@ class AttackSim extends React.Component {
                         { this.state.herodidhit }
                     </div>
                 </div>
+
                   {/*main field to control attack simulation placed between
                      hero info and monster info */}  
                 <div className="Attack-section">    
