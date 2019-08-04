@@ -21,7 +21,7 @@ function Divider(props) {
 function Resume(props) {
     return(
         <div>
-            <div className="Res-container FlexDirection_column">
+            <div className="Res-container FlexDirection-column">
                 <div className="Res-body">
                     <div >
                         <h1 className="center r-title">Resume</h1>

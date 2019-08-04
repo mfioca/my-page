@@ -14,7 +14,7 @@ body {
     font-size: 14px;
 }
 
-.FlexDirection_column {
+.FlexDirection-column {
     flex-direction: column;
 }
 
@@ -410,20 +410,21 @@ body {
 
 .DandD_character {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     flex-direction: row;
-    font-family: Arial, Helvetica, sans-serif; 
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 35px; 
 }
 
 .DandD_character > div {
-    width: 48%;
+    width: 45%;
     margin: 10px;
     background-color: #575555;
     box-shadow:  0 0 10px  rgba(0,0,0,0.6);
 	-moz-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
 	-webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
 	-o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
-    margin: 10px;  
 }
 
 .Hero, .Monster {
@@ -436,6 +437,8 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    padding: 10px;
+    
 }
 
 .HeroBox > div, .MonsterBox > div {

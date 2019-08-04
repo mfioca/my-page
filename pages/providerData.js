@@ -6,6 +6,11 @@ import ProviderList from './provider_data/providerimport.js';
 var data = require('./provider_data/provider.json');
 
 
+// {data.filter(data => data.Type === 'Provider').length}: 
+// filters the json based on items with values and totals up 
+//the number of listed items with that data value.  example above:
+//count the number of entries with the data "Type" of 'Provider'  
+
 function Providerinfo() {
     return (
     <div className="Provider-info">
@@ -142,7 +147,9 @@ class ProviderData extends Component {
                     <p>I used react-table dependency to build the data table. Altering formatting
                         to match my spreadsheet. </p>
                 </div>
+                {/*Providerinfo listed above*/}
                 <Providerinfo />
+                {/*pulled in from providerimport.js*/}
                 <ProviderList />
             </Layout>
         );

@@ -40,7 +40,8 @@ const customFilter = ({ fieldName, filter, onChange }) => {
               {value}
             </option>
           );
-        })}
+        })
+      }
     </select>
   );
 };
@@ -50,7 +51,6 @@ class ProviderList extends Component {
   constructor(props) {
     super(props); 
 }
-
 
 //pulls the json file on initial load
   componentDidMount () {
@@ -63,7 +63,6 @@ class ProviderList extends Component {
   }
 
   renderData(data) {
-    
       return (
         <div>
           <ReactTable 
@@ -193,16 +192,12 @@ class ProviderList extends Component {
           {/*functions to display totals of filtered data. */}
           {(state, makeTable, instance) => {
             let recordsInfoText = "";
-
             const { filtered, pageRows, pageSize, sortedData, page } = state;
 
             if (sortedData && sortedData.length > 0) {
               let isFiltered = filtered.length > 0;
-
               let totalRecords = sortedData.length;
-
               let recordsCountFrom = page * pageSize + 1;
-
               let recordsCountTo = recordsCountFrom + pageRows.length - 1;
 
               if (isFiltered)
