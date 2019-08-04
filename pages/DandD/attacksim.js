@@ -17,7 +17,6 @@ function heroattackroll() {
         } else {
             this.setState ({monsterHp: this.state.monsterHp - this.state.heroDmg})
         }
-    
     } else {
         this.setState ({herodidhit: 'Miss'});
     };
@@ -38,7 +37,6 @@ function monsterattackroll() {
         } else {
             this.setState ({heroHp: this.state.heroHp - this.state.monsterDmg})
         }
-    
     } else {
         this.setState ({monsterdidhit: 'Miss'});
     };
@@ -48,8 +46,7 @@ function monsterattackroll() {
 class AttackSim extends React.Component {
     constructor (props) {
         super(props);
-        this.heroinitiative = 0;
-        this.monsterinitiative = 0;
+        
         this.state = { 
             herostats: {
                 Str: 0,
@@ -92,33 +89,34 @@ class AttackSim extends React.Component {
             monsterdidhit: '',
 
         };
-
+        //Hero bind function statements
         this.setherostats = this.setherostats.bind(this);
         this.SetheroConstAdj = SetheroConstAdj.bind(this);
         this.SetheroacAdj = SetheroacAdj.bind(this);
         this.SetheroDmgAdj = SetheroDmgAdj.bind(this);
         this.SetheroHitAdj = SetheroHitAdj.bind(this);
         this.heroNameChange = this.heroNameChange.bind(this);
-
+        this.heroattackroll = heroattackroll.bind(this);
+        //monster bind function statements
         this.setMonsterstats = this.setMonsterstats.bind(this);
         this.SetmonsterConstAdj = SetmonsterConstAdj.bind(this);
         this.SetmonsteracAdj = SetmonsteracAdj.bind(this);
         this.SetmonsterDmgAdj = SetmonsterDmgAdj.bind(this);
         this.SetmonsterHitAdj = SetmonsterHitAdj.bind(this);
         this.monsterNameChange = this.monsterNameChange.bind(this);
-
-
-        this.heroattackroll = heroattackroll.bind(this);
         this.monsterattackroll = monsterattackroll.bind(this);
+
         this.rollforiniative = this.rollforiniative.bind(this);
         
     }
 
     setherostats() {
+        //performs a 1-20 roll for every item in the "herostats" object/state
         for (let key in this.state.herostats) {
             this.state.herostats[key] = Math.floor((Math.random() * 20) + 1);
         };
         this.setState ({
+            //sets adjusted items based on herostats numbers in the set..adj functions
             heroHp: this.state.herobase.Hp + this.SetheroConstAdj(),
             heroAc: this.state.herobase.ArmorClass + this.SetheroacAdj(),
             heroDmg: this.state.herobase.Damage + this.SetheroDmgAdj(),
@@ -127,10 +125,12 @@ class AttackSim extends React.Component {
     }
 
     setMonsterstats() {
+        //performs a 1-20 roll for every item in the "monsterstats" object/state
         for (let key in this.state.monsterstats) {
             this.state.monsterstats[key] = Math.floor((Math.random() * 20) + 1);
         };
         this.setState ({
+            //sets adjusted items based on monsterstats numbers in the set..adj functions
             monsterHp: this.state.monsterbase.Hp + this.SetmonsterConstAdj(),
             monsterAc: this.state.monsterbase.ArmorClass + this.SetmonsteracAdj(),
             monsterDmg: this.state.monsterbase.Damage + this.SetmonsterDmgAdj(),
@@ -177,106 +177,103 @@ class AttackSim extends React.Component {
         return (
             <div>
                 <div className="DandD_character Fsize-2">
-                    
-                        <div className="Hero">
-                            <div className="HeroBox">
-                                <div>
-                                    <p><b>Name: </b>{ this.state.heroName }</p>
-                                        <table className="DandDstat_table">
-                                        <tr>
-                                            <td>Strength:</td>
-                                            <td> { this.state.herostats.Str }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Constitution:</td>
-                                            <td> { this.state.herostats.Const }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dexterity:</td>
-                                            <td> { this.state.herostats.Dext }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hitpoints:</td>
-                                            <td> { this.state.heroHp }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Damage per hit:</td>
-                                            <td> { this.state.heroDmg }</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div>
-                                    <img className="DnD_Hero Float-right" src="../static/images/hero.png" alt="hero"/> 
-                                </div>
-                            </div>
-                            <div className="Stats-roll align-center">
-                                <button onClick={ this.setherostats }>Set Attrubutes</button>
-                            </div>
+                    <div className="Hero">
+                        <div className="HeroBox">
                             <div>
-                                <form>
-                                    <label>
-                                        Name:
-                                        <input
-                                            type="text"
-                                            maxLength="20"
-                                            value={this.state.value}
-                                            onChange={this.heroNameChange}
-                                        />
-                                    </label>
-                                </form> 
-                            </div>
-                            
-                        </div>
-
-                        <div className="Monster">
-                            <div className="MonsterBox">
-                                <div>
-                                    <p><b>Name: </b>{ this.state.monsterName }</p>
+                                <p><b>Name: </b>{ this.state.heroName }</p>
                                     <table className="DandDstat_table">
-                                        <tr>
-                                            <td>Strength:</td>
-                                            <td> { this.state.monsterstats.Str }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Constitution:</td>
-                                            <td> { this.state.monsterstats.Const }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dexterity:</td>
-                                            <td> { this.state.monsterstats.Dext }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hitpoints:</td>
-                                            <td> { this.state.monsterHp }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Base Damage:</td>
-                                            <td> { this.state.monsterDmg }</td>
-                                        </tr>
-                                    </table>
-                                </div>
-                                <div>
-                                    <img className="DnD_Monster Float-right" src="../static/images/monster.png" alt="monster"/>
-                                </div>
-                            </div>
-                            <div className="Stats-roll align-center">
-                                <button onClick={this.setMonsterstats}>Set Attrubutes</button>
+                                    <tr>
+                                        <td>Strength:</td>
+                                        <td> { this.state.herostats.Str }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constitution:</td>
+                                        <td> { this.state.herostats.Const }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dexterity:</td>
+                                        <td> { this.state.herostats.Dext }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hitpoints:</td>
+                                        <td> { this.state.heroHp }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Damage per Hit:</td>
+                                        <td> { this.state.heroDmg }</td>
+                                    </tr>
+                                </table>
                             </div>
                             <div>
-                                <form>
-                                    <label>
-                                        Name:
-                                        <input
-                                            type="text"
-                                            maxLength="20"
-                                            value={this.state.value}
-                                            onChange={this.monsterNameChange}
-                                        />
-                                    </label>
-                                </form>
+                                <img className="DnD_Hero Float-right" src="../static/images/hero.png" alt="hero"/> 
                             </div>
                         </div>
-                    
+                        <div className="Stats-roll align-center">
+                            <button onClick={ this.setherostats }>Set Attrubutes</button>
+                        </div>
+                        <div>
+                            <form>
+                                <label>
+                                    Name:
+                                    <input
+                                        type="text"
+                                        maxLength="20"
+                                        value={this.state.value}
+                                        onChange={this.heroNameChange}
+                                    />
+                                </label>
+                            </form> 
+                        </div>
+                    </div>
+
+                    <div className="Monster">
+                        <div className="MonsterBox">
+                            <div>
+                                <p><b>Name: </b>{ this.state.monsterName }</p>
+                                <table className="DandDstat_table">
+                                    <tr>
+                                        <td>Strength:</td>
+                                        <td> { this.state.monsterstats.Str }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constitution:</td>
+                                        <td> { this.state.monsterstats.Const }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Dexterity:</td>
+                                        <td> { this.state.monsterstats.Dext }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hitpoints:</td>
+                                        <td> { this.state.monsterHp }</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Damage per Hit:</td>
+                                        <td> { this.state.monsterDmg }</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div>
+                                <img className="DnD_Monster Float-right" src="../static/images/monster.png" alt="monster"/>
+                            </div>
+                        </div>
+                        <div className="Stats-roll align-center">
+                            <button onClick={this.setMonsterstats}>Set Attrubutes</button>
+                        </div>
+                        <div>
+                            <form>
+                                <label>
+                                    Name:
+                                    <input
+                                        type="text"
+                                        maxLength="20"
+                                        value={this.state.value}
+                                        onChange={this.monsterNameChange}
+                                    />
+                                </label>
+                            </form>
+                        </div>
+                    </div>      
                 </div>
                 
 
@@ -327,13 +324,13 @@ class AttackSim extends React.Component {
                     </div>
                     <div className="MonsterHP-icon">
                         <img src="../static/images/monsterhp.png" alt="icon"/>
-                        
                         <p className="MonsterHP-text Fsize-3 center">
-                            
                             { this.state.monsterHp }
                         </p>
                     </div>
                 </div>
+
+                
                 {/*displays Monster stats and attack information */}
                 <div className="Attack-section">
                     <div className="AC-Icon">

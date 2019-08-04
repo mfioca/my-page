@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -953,8 +953,6 @@ function (_React$Component) {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AttackSim);
 
     _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(AttackSim).call(this, props));
-    _this.heroinitiative = 0;
-    _this.monsterinitiative = 0;
     _this.state = {
       herostats: {
         Str: 0,
@@ -995,20 +993,22 @@ function (_React$Component) {
       monsterinitiative: 0,
       monsterroll: 0,
       monsterdidhit: ''
-    };
+    }; //Hero bind function statements
+
     _this.setherostats = _this.setherostats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetheroConstAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetheroacAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroacAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetheroDmgAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroDmgAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetheroHitAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.heroNameChange = _this.heroNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.heroattackroll = heroattackroll.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this)); //monster bind function statements
+
     _this.setMonsterstats = _this.setMonsterstats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetmonsterConstAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsterConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetmonsteracAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsteracAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetmonsterDmgAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsterDmgAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.SetmonsterHitAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsterHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.monsterNameChange = _this.monsterNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.heroattackroll = heroattackroll.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.monsterattackroll = monsterattackroll.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.rollforiniative = _this.rollforiniative.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
@@ -1017,12 +1017,14 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AttackSim, [{
     key: "setherostats",
     value: function setherostats() {
+      //performs a 1-20 roll for every item in the "herostats" object/state
       for (var key in this.state.herostats) {
         this.state.herostats[key] = Math.floor(Math.random() * 20 + 1);
       }
 
       ;
       this.setState({
+        //sets adjusted items based on herostats numbers in the set..adj functions
         heroHp: this.state.herobase.Hp + this.SetheroConstAdj(),
         heroAc: this.state.herobase.ArmorClass + this.SetheroacAdj(),
         heroDmg: this.state.herobase.Damage + this.SetheroDmgAdj(),
@@ -1032,12 +1034,14 @@ function (_React$Component) {
   }, {
     key: "setMonsterstats",
     value: function setMonsterstats() {
+      //performs a 1-20 roll for every item in the "monsterstats" object/state
       for (var key in this.state.monsterstats) {
         this.state.monsterstats[key] = Math.floor(Math.random() * 20 + 1);
       }
 
       ;
       this.setState({
+        //sets adjusted items based on monsterstats numbers in the set..adj functions
         monsterHp: this.state.monsterbase.Hp + this.SetmonsterConstAdj(),
         monsterAc: this.state.monsterbase.ArmorClass + this.SetmonsteracAdj(),
         monsterDmg: this.state.monsterbase.Damage + this.SetmonsterDmgAdj(),
@@ -1107,135 +1111,135 @@ function (_React$Component) {
         className: "Hero",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181
+          lineNumber: 180
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HeroBox",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 181
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 182
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 183
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 183
         },
         __self: this
       }, "Name: "), this.state.heroName), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("table", {
         className: "DandDstat_table",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
+          lineNumber: 184
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186
+          lineNumber: 185
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 186
         },
         __self: this
       }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 187
         },
         __self: this
       }, " ", this.state.herostats.Str)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 189
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 190
         },
         __self: this
       }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 191
         },
         __self: this
       }, " ", this.state.herostats.Const)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194
+          lineNumber: 193
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 194
         },
         __self: this
       }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 195
         },
         __self: this
       }, " ", this.state.herostats.Dext)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 198
+          lineNumber: 197
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 199
+          lineNumber: 198
         },
         __self: this
       }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 199
         },
         __self: this
       }, " ", this.state.heroHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 202
+          lineNumber: 201
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 203
+          lineNumber: 202
         },
         __self: this
-      }, "Damage per hit:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+      }, "Damage per Hit:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 204
+          lineNumber: 203
         },
         __self: this
       }, " ", this.state.heroDmg)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 207
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1244,39 +1248,39 @@ function (_React$Component) {
         alt: "hero",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 208
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Stats-roll align-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 212
+          lineNumber: 211
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.setherostats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 213
+          lineNumber: 212
         },
         __self: this
       }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 215
+          lineNumber: 214
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 216
+          lineNumber: 215
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 216
         },
         __self: this
       }, "Name:", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
@@ -1286,142 +1290,142 @@ function (_React$Component) {
         onChange: this.heroNameChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 218
         },
         __self: this
       }))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Monster",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 229
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "MonsterBox",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 230
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 231
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 232
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 232
         },
         __self: this
       }, "Name: "), this.state.monsterName), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("table", {
         className: "DandDstat_table",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 233
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 236
+          lineNumber: 234
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 237
+          lineNumber: 235
         },
         __self: this
       }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 238
+          lineNumber: 236
         },
         __self: this
       }, " ", this.state.monsterstats.Str)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 240
+          lineNumber: 238
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 241
+          lineNumber: 239
         },
         __self: this
       }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 242
+          lineNumber: 240
         },
         __self: this
       }, " ", this.state.monsterstats.Const)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 244
+          lineNumber: 242
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 245
+          lineNumber: 243
         },
         __self: this
       }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 246
+          lineNumber: 244
         },
         __self: this
       }, " ", this.state.monsterstats.Dext)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 248
+          lineNumber: 246
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 249
+          lineNumber: 247
         },
         __self: this
       }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 248
         },
         __self: this
       }, " ", this.state.monsterHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 250
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 251
         },
         __self: this
-      }, "Base Damage:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
+      }, "Damage per Hit:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 254
+          lineNumber: 252
         },
         __self: this
       }, " ", this.state.monsterDmg)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 258
+          lineNumber: 256
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1430,39 +1434,39 @@ function (_React$Component) {
         alt: "monster",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 259
+          lineNumber: 257
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Stats-roll align-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 262
+          lineNumber: 260
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.setMonsterstats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 263
+          lineNumber: 261
         },
         __self: this
       }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 263
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 266
+          lineNumber: 264
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 265
         },
         __self: this
       }, "Name:", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
@@ -1472,21 +1476,21 @@ function (_React$Component) {
         onChange: this.monsterNameChange,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 267
         },
         __self: this
       })))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 285
+          lineNumber: 282
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 286
+          lineNumber: 283
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1494,21 +1498,21 @@ function (_React$Component) {
         alt: "shield",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 284
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "AC-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 285
         },
         __self: this
       }, this.state.heroAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HitAdj-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 289
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1516,109 +1520,109 @@ function (_React$Component) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 290
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HitAdj-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 291
         },
         __self: this
       }, this.state.heroHitAdj)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-roll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 298
+          lineNumber: 295
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.heroattackroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 299
+          lineNumber: 296
         },
         __self: this
       }, "Hero Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-result Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 303
+          lineNumber: 300
         },
         __self: this
       }, this.state.herodidhit)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 306
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Initiative DandD_button",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 311
+          lineNumber: 308
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.rollforiniative,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 312
+          lineNumber: 309
         },
         __self: this
       }, "Roll for iniative")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Heroinitiative center Fsize-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 314
+          lineNumber: 311
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 315
+          lineNumber: 312
         },
         __self: this
       }, "Hero ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 315
+          lineNumber: 312
         },
         __self: this
       }), "iniative:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 316
+          lineNumber: 313
         },
         __self: this
       }, this.state.heroinitiative)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Monsterinitiative center Fsize-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 318
+          lineNumber: 315
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 319
+          lineNumber: 316
         },
         __self: this
       }, "Monster initiative:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 320
+          lineNumber: 317
         },
         __self: this
       }, this.state.monsterinitiative)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HeroHP-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 322
+          lineNumber: 319
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1626,21 +1630,21 @@ function (_React$Component) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 323
+          lineNumber: 320
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HeroHP-text Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 324
+          lineNumber: 321
         },
         __self: this
       }, this.state.heroHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "MonsterHP-icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 325
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1648,28 +1652,28 @@ function (_React$Component) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 329
+          lineNumber: 326
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "MonsterHP-text Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 331
+          lineNumber: 327
         },
         __self: this
       }, this.state.monsterHp))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-section",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 338
+          lineNumber: 335
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "AC-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 339
+          lineNumber: 336
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1677,21 +1681,21 @@ function (_React$Component) {
         alt: "shield",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 337
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "AC-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 341
+          lineNumber: 338
         },
         __self: this
       }, this.state.monsterAc)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "HitAdj-Icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 345
+          lineNumber: 342
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
@@ -1699,35 +1703,35 @@ function (_React$Component) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 346
+          lineNumber: 343
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
         className: "HitAdj-Icon-text Fsize-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 347
+          lineNumber: 344
         },
         __self: this
       }, this.state.monsterHitAdj)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-roll",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 351
+          lineNumber: 348
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
         onClick: this.monsterattackroll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 352
+          lineNumber: 349
         },
         __self: this
       }, "Monster Roll for Attack")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "Attack-result Fsize-3 center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 356
+          lineNumber: 353
         },
         __self: this
       }, this.state.monsterdidhit)));
@@ -1738,422 +1742,6 @@ function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (AttackSim);
-
-/***/ }),
-
-/***/ "./pages/DandD/hero.js":
-/*!*****************************!*\
-  !*** ./pages/DandD/hero.js ***!
-  \*****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _herofunctions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./herofunctions */ "./pages/DandD/herofunctions.js");
-
-
-
-
-
-
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\hero.js";
-
-
-
-
- //import { HeroadjStats } from './attacksim';
-
-var Hero =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Hero, _React$Component);
-
-  function Hero(props) {
-    var _this;
-
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Hero);
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Hero).call(this, props));
-    _this.state = {
-      herostats: {
-        Str: 0,
-        Const: 0,
-        Dext: 0
-      },
-      herobase: {
-        Hp: 50,
-        ArmorClass: 10,
-        Damage: 10,
-        HitAdj: 0
-      },
-      heroHp: 0,
-      heroAc: 0,
-      heroDmg: 0,
-      heroHitAdj: 0,
-      heroName: ''
-    };
-    _this.setherostats = _this.setherostats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroConstAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroacAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroacAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroDmgAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroDmgAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroHitAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.heroNameChange = _this.heroNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    return _this;
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Hero, [{
-    key: "setherostats",
-    value: function setherostats() {
-      for (var key in this.state.herostats) {
-        this.state.herostats[key] = Math.floor(Math.random() * 20 + 1);
-      }
-
-      ; //calls functions in hero_functions to adjust stats in
-      //heroadjstats variable in the attacksim.js
-
-      this.setState({
-        heroHp: this.state.herobase.Hp + this.SetheroConstAdj(),
-        heroAC: this.state.herobase.ArmorClass + this.SetheroacAdj(),
-        heroDmg: this.state.herobase.Damage + this.SetheroDmgAdj(),
-        heroHitAdj: this.state.herobase.HitAdj + this.SetheroHitAdj()
-      });
-    }
-  }, {
-    key: "heroNameChange",
-    value: function heroNameChange(event) {
-      this.setState({
-        heroName: event.target.value
-      });
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Hero",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 63
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "HeroBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 64
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 66
-        },
-        __self: this
-      }, "Name: "), this.state.heroName), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("table", {
-        className: "DandDstat_table",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: this
-      }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: this
-      }, " ", this.state.herostats.Str)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: this
-      }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 74
-        },
-        __self: this
-      }, " ", this.state.herostats.Const)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 76
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
-        },
-        __self: this
-      }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
-      }, " ", this.state.herostats.Dext)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 80
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 81
-        },
-        __self: this
-      }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 82
-        },
-        __self: this
-      }, " ", this.state.heroHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 84
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 85
-        },
-        __self: this
-      }, "Damage per hit:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 86
-        },
-        __self: this
-      }, " ", this.state.heroDmg)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 90
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        className: "DnD_Hero Float-right",
-        src: "../static/images/hero.png",
-        alt: "hero",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 91
-        },
-        __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Stats-roll align-center",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 94
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.setherostats,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 97
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 98
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 99
-        },
-        __self: this
-      }, "Name:", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
-        type: "text",
-        maxLength: "20",
-        value: this.state.value,
-        onChange: this.heroNameChange,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 101
-        },
-        __self: this
-      })))));
-    }
-  }]);
-
-  return Hero;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-/*
-var newHero = {
-    Str: 0,
-    Const: 0,
-    Dext: 0,
-    BaseHitPoints: 50,
-    BaseArmorClass: 10,
-    BaseDamage: 10,
-    BaseHitAdj: 0
-};
-
-
-class Hero extends React.Component {
-    constructor(props) {
-        super(props);
-        //sets states for stats in the new hero object
-        this.state = {
-            str: newHero.Str,
-            const: newHero.Const,
-            dext: newHero.Dext,
-            hp: HeroadjStats.HeroHp,
-            dmg: HeroadjStats.HeroDmg,
-            name: '',
-        };
-        this.setherostats = this.setherostats.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-    }
-
-    setherostats() {
-        for (let key in newHero) {
-            newHero[key] = Math.floor((Math.random() * 20) + 1);
-        } 
-        //random number between 1-20 to set stats
-        newHero.Str = Math.floor((Math.random() * 20) + 1);
-        newHero.Const = Math.floor((Math.random() * 20) + 1);
-        newHero.Dext = Math.floor((Math.random() * 20) + 1);
-        //calls functions in hero_functions to adjust stats in
-        //heroadjstats variable in the attacksim.js
-        HeroadjStats.HeroHp = (newHero.BaseHitPoints) + (SetConstAdj());
-        HeroadjStats.HeroAc = (newHero.BaseArmorClass) + (setacAdj());
-        HeroadjStats.HeroDmg = (newHero.BaseDamage) + (setDmgAdj());
-        HeroadjStats.HeroHitAdj = (newHero.BaseHitAdj) + (setHitAdj());
-        //sets new state for each variable 
-        this.setState({
-            str: newHero.Str,
-            const: newHero.Const,
-            dext: newHero.Dext,
-            hp: HeroadjStats.HeroHp,
-            dmg: HeroadjStats.HeroDmg
-        });
-    }
-    //displays name as entered into the name field. currently is
-    //a live event rather than on submit event.
-    handleChange(event) {
-        this.setState({Name: event.target.value});
-        event.preventDefault();
-    }
-
-    handleSubmit() {
-        this.setState(prevState => ({
-            showNameForm: !prevState.showNameForm
-        }));
-    }
-
-    
-
-    render() {
-        return (
-            <div className="Hero">
-                <div className="HeroBox">
-                    <div>
-                        <p><b>Name:</b> { this.state.Name }</p>
-                        <table className="DandDstat_table">
-                            <tr>
-                                <td>Strength:</td>
-                                <td> { this.state.str }</td>
-                            </tr>
-                            <tr>
-                                <td>Constitution:</td>
-                                <td> { this.state.const }</td>
-                            </tr>
-                            <tr>
-                                <td>Dexterity:</td>
-                                <td> { this.state.dext }</td>
-                            </tr>
-                            <tr>
-                                <td>Hitpoints:</td>
-                                <td> { this.state.hp }</td>
-                            </tr>
-                            <tr>
-                                <td>Base Damage:</td>
-                                <td> { this.state.dmg }</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div>
-                        <img className="DnD_Hero Float-right" src="../static/images/hero.png" alt="hero"/> 
-                    </div>
-                </div>
-                <div className="Stats-roll align-center">
-                    <button onClick={ this.setherostats }>Set Attrubutes</button>
-                </div>
-                <div>
-                    <form>
-                        <label>
-                            Name: 
-                            <input 
-                                type="text"
-                                maxLength="20"
-                                value={this.state.value}
-                                onChange={this.handleChange}
-                            />
-                            <button onClick = {this.handleChange}>Submit</button>
-                        </label>
-                    </form>
-                </div>
-            </div>
-        );
-    }
-}
-*/
-
-
-/* harmony default export */ __webpack_exports__["default"] = (Hero);
 
 /***/ }),
 
@@ -2332,466 +1920,6 @@ function SetheroHitAdj() {
     return 4;
   }
 }
-/*
-export function SetConstAdj() {
-    if (newHero.Const == 1) {
-        return -3;
-    }
-    if (newHero.Const == 2 || newHero.Const == 3) {
-        return -2;
-    }
-    if (newHero.Const >= 4 && newHero.Const <= 6) {
-        return -1;
-    }
-    if (newHero.Const >= 7 && newHero.Const <= 14) {
-        return 0;
-    }
-    if (newHero.Const == 15) {
-        return 1;
-    }
-    if (newHero.Const == 16) {
-        return 2;
-    }
-    if (newHero.Const == 17) {
-        return 3;
-    }
-    if (newHero.Const == 18) {
-        return 4;
-    }
-    if (newHero.Const == 19) {
-        return 5;
-    }
-    if (newHero.Const == 20) {
-        return 6;
-    }
-} 
-
-//sets hero hit adjustment based on strength stat number.
-export function setHitAdj() {
-    if (newHero.Str == 1) {
-        return -4;
-    }
-    if (newHero.Str == 2 || newHero.Str == 3) {
-        return -3;
-    }
-    if (newHero.Str == 4 || newHero.Str == 5) {
-        return -2;
-    }
-    if (newHero.Str == 6 || newHero.Str == 7) {
-        return -1;
-    }
-    if (newHero.Str >= 8 && newHero.Str <= 16) {
-        return 0;
-    }
-    if (newHero.Str == 17 ) {
-        return 1;
-    }
-    if (newHero.Str == 18 ) {
-        return 2;
-    }
-    if (newHero.Str == 19 ) {
-        return 3;
-    }
-    if (newHero.Str == 20 ) {
-        return 4;
-    }
-}
-
-//sets hero damage adjustment based on strength stat number.
-export function setDmgAdj() {
-    if (newHero.Str == 1) {
-        return -4;
-    }
-    if (newHero.Str == 2 || newHero.Str == 3) {
-        return -3;
-    }
-    if (newHero.Str == 4 || newHero.Str == 5) {
-        return -2;
-    }
-    if (newHero.Str == 6 || newHero.Str == 7) {
-        return -1;
-    }
-    if (newHero.Str >= 8 && newHero.Str <= 16) {
-        return 0;
-    }
-    if (newHero.Str == 17 ) {
-        return 1;
-    }
-    if (newHero.Str == 18 ) {
-        return 2;
-    }
-    if (newHero.Str == 19 ) {
-        return 3;
-    }
-    if (newHero.Str == 20 ) {
-        return 4;
-    }
-}
-
-//sets hero armor class based on dexterity stat number.
-export function setacAdj() {
-    if (newHero.Dext == 1 || newHero.Dext == 2) {
-        return -5;
-    }
-    if (newHero.Dext == 3) {
-        return -4;
-    }
-    if (newHero.Dext == 4) {
-        return -3;
-    }
-    if (newHero.Dext == 5) {
-        return -2;
-    }
-    if (newHero.Dext == 6) {
-        return -1;
-    }
-    if (newHero.Dext >= 7 && newHero.Dext <= 14) {
-        return 0;
-    }
-    if (newHero.Dext == 15) {
-        return 1;
-    }
-    if (newHero.Dext == 16) {
-        return 2;
-    }
-    if (newHero.Dext == 17) {
-        return 3;
-    }
-    if (newHero.Dext == 18 || newHero.Dext == 19) {
-        return 4;
-    }
-    if (newHero.Dext == 20) {
-        return 5;
-    }
-} */
-
-/***/ }),
-
-/***/ "./pages/DandD/monster.js":
-/*!********************************!*\
-  !*** ./pages/DandD/monster.js ***!
-  \********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _monsterfunctions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./monsterfunctions */ "./pages/DandD/monsterfunctions.js");
-
-
-
-
-
-
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\monster.js";
-
-
-
-
- //import { MonsteradjStats } from './attacksim';
-//export { newMonster }
-
-/*
-var newMonster = {
-    Str: 0,
-    Const: 0,
-    Dext: 0,
-    BaseHitPoints: 50,
-    BaseArmorClass: 10,
-    BaseDamage: 10,
-    BaseHitAdj: 0
-};  */
-
-var Monster =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Monster, _React$Component);
-
-  function Monster(props) {
-    var _this;
-
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Monster);
-
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Monster).call(this, props));
-    _this.state = {
-      monsterstats: {
-        Str: 0,
-        Const: 0,
-        Dext: 0
-      },
-      monsterbase: {
-        Name: '',
-        Hp: 50,
-        ArmorClass: 10,
-        Damage: 10,
-        HitAdj: 0
-      },
-      monsterHp: 0,
-      monsterAc: 0,
-      monsterDmg: 0,
-      monsterHitAdj: 0,
-      monsterName: ''
-    };
-    _this.setMonsterstats = _this.setMonsterstats.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsterConstAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_7__["SetmonsterConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsteracAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_7__["SetmonsteracAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsterDmgAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_7__["SetmonsterDmgAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsterHitAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_7__["SetmonsterHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.monsterNameChange = _this.monsterNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    return _this;
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Monster, [{
-    key: "setMonsterstats",
-    value: function setMonsterstats() {
-      for (var key in this.state.monsterstats) {
-        this.state.monsterstats[key] = Math.floor(Math.random() * 20 + 1);
-      }
-
-      ;
-      this.setState({
-        monsterHp: this.state.monsterbase.Hp + this.SetmonsterConstAdj(),
-        monsterAc: this.state.monsterbase.ArmorClass + this.SetmonsteracAdj(),
-        monsterDmg: this.state.monsterbase.Damage + this.SetmonsterDmgAdj(),
-        monsterHitAdj: this.state.monsterbase.HitAdj + this.SetmonsterHitAdj()
-      });
-    } //displays name as entered into the name field. currently is
-    //a live event rather than on submit event.
-
-  }, {
-    key: "monsterNameChange",
-    value: function monsterNameChange(event) {
-      this.setState({
-        monsterName: event.target.value
-      });
-    }
-    /*
-    setMonsterstats() {
-        //random number 1-20 to set newmonster stats
-        newMonster.Str = Math.floor((Math.random() * 20) + 1);
-        newMonster.Const = Math.floor((Math.random() * 20) + 1);
-        newMonster.Dext = Math.floor((Math.random() * 20) + 1);
-        //calls the adjusted functions in monster_functions to set adjusted monster
-        //stats in the attacksim.js
-        MonsteradjStats.MonsterHp = (newMonster.BaseHitPoints) + (SetConstAdj());
-        MonsteradjStats.MonsterAc = (newMonster.BaseArmorClass) + (setacAdj());
-        MonsteradjStats.MonsterDmg = (newMonster.BaseDamage) + (setDmgAdj());
-        MonsteradjStats.MonsterHitAdj = (newMonster.BaseHitAdj) + (setHitAdj());
-        //sets new state for each variable
-        this.setState({
-            str: newMonster.Str,
-            const: newMonster.Const,
-            dext: newMonster.Dext,
-            hp: MonsteradjStats.MonsterHp,
-            dmg: MonsteradjStats.MonsterDmg
-        });
-    } */
-
-  }, {
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Monster",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 92
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "MonsterBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 93
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 94
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }, "Name: "), this.state.monsterName), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("table", {
-        className: "DandDstat_table",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 96
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 97
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 98
-        },
-        __self: this
-      }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 99
-        },
-        __self: this
-      }, " ", this.state.monsterstats.Str)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 101
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 102
-        },
-        __self: this
-      }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 103
-        },
-        __self: this
-      }, " ", this.state.monsterstats.Const)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 105
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 106
-        },
-        __self: this
-      }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 107
-        },
-        __self: this
-      }, " ", this.state.monsterstats.Dext)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 109
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 110
-        },
-        __self: this
-      }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 111
-        },
-        __self: this
-      }, " ", this.state.monsterHp)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("tr", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 113
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 114
-        },
-        __self: this
-      }, "Base Damage:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("td", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 115
-        },
-        __self: this
-      }, " ", this.state.monsterDmg)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 119
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        className: "DnD_Monster Float-right",
-        src: "../static/images/monster.png",
-        alt: "monster",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 120
-        },
-        __self: this
-      }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Stats-roll align-center",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 123
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
-        onClick: this.setMonsterstats,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 124
-        },
-        __self: this
-      }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 126
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 127
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("label", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 128
-        },
-        __self: this
-      }, "Name:", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
-        type: "text",
-        maxLength: "20",
-        value: this.state.value,
-        onChange: this.monsterNameChange,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 130
-        },
-        __self: this
-      })))));
-    }
-  }]);
-
-  return Monster;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (Monster);
 
 /***/ }),
 
@@ -2808,7 +1936,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsteracAdj", function() { return SetmonsteracAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsterDmgAdj", function() { return SetmonsterDmgAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsterHitAdj", function() { return SetmonsterHitAdj; });
-//sets monster hit adjustment based on strength stat number.
 function SetmonsterConstAdj() {
   if (this.state.monsterstats.Const == 1) {
     return -3;
@@ -2970,138 +2097,6 @@ function SetmonsterHitAdj() {
     return 4;
   }
 }
-/*
-export function setHitAdj() {
-    if (newMonster.Str == 1) {
-        return -4;
-    }
-    if (newMonster.Str == 2 || newMonster.Str == 3) {
-        return -3;
-    }
-    if (newMonster.Str == 4 || newMonster.Str == 5) {
-        return -2;
-    }
-    if (newMonster.Str == 6 || newMonster.Str == 7) {
-        return -1;
-    }
-    if (newMonster.Str >= 8 && newMonster.Str <= 16) {
-        return 0;
-    }
-    if (newMonster.Str == 17 ) {
-        return 1;
-    }
-    if (newMonster.Str == 18 ) {
-        return 2;
-    }
-    if (newMonster.Str == 19 ) {
-        return 3;
-    }
-    if (newMonster.Str == 20 ) {
-        return 4;
-    }
-}
-
-//sets monster damage adjustment based on strength stat number.
-export function setDmgAdj() {
-    if (newMonster.Str == 1) {
-        return -4;
-    }
-    if (newMonster.Str == 2 || newMonster.Str == 3) {
-        return -3;
-    }
-    if (newMonster.Str == 4 || newMonster.Str == 5) {
-        return -2;
-    }
-    if (newMonster.Str == 6 || newMonster.Str == 7) {
-        return -1;
-    }
-    if (newMonster.Str >= 8 && newMonster.Str <= 16) {
-        return 0;
-    }
-    if (newMonster.Str == 17 ) {
-        return 1;
-    }
-    if (newMonster.Str == 18 ) {
-        return 2;
-    }
-    if (newMonster.Str == 19 ) {
-        return 3;
-    }
-    if (newMonster.Str == 20 ) {
-        return 4;
-    }
-}
-
-//sets monster armor class based on dexterity stat number.
-export function setacAdj() {
-    if (newMonster.Dext == 1 || newMonster.Dext == 2) {
-        return -5;
-    }
-    if (newMonster.Dext == 3) {
-        return -4;
-    }
-    if (newMonster.Dext == 4) {
-        return -3;
-    }
-    if (newMonster.Dext == 5) {
-        return -2;
-    }
-    if (newMonster.Dext == 6) {
-        return -1;
-    }
-    if (newMonster.Dext >= 7 && newMonster.Dext <= 14) {
-        return 0;
-    }
-    if (newMonster.Dext == 15) {
-        return 1;
-    }
-    if (newMonster.Dext == 16) {
-        return 2;
-    }
-    if (newMonster.Dext == 17) {
-        return 3;
-    }
-    if (newMonster.Dext == 18 || newMonster.Dext == 19) {
-        return 4;
-    }
-    if (newMonster.Dext == 20) {
-        return 5;
-    }
-}
-
-//sets monster hitpoints based on constitution stat number.
-export function SetConstAdj() {
-    if (newMonster.Const == 1) {
-        return -3;
-    }
-    if (newMonster.Const == 2 || newMonster.Const == 3) {
-        return -2;
-    }
-    if (newMonster.Const >= 4 && newMonster.Const <= 6) {
-        return -1;
-    }
-    if (newMonster.Const >= 7 && newMonster.Const <= 14) {
-        return 0;
-    }
-    if (newMonster.Const == 15) {
-        return 1;
-    }
-    if (newMonster.Const == 16) {
-        return 2;
-    }
-    if (newMonster.Const == 17) {
-        return 3;
-    }
-    if (newMonster.Const == 18) {
-        return 4;
-    }
-    if (newMonster.Const == 19) {
-        return 5;
-    }
-    if (newMonster.Const == 20) {
-        return 6;
-    }
-} */
 
 /***/ }),
 
@@ -3122,17 +2117,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
-/* harmony import */ var _DandD_hero__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DandD/hero */ "./pages/DandD/hero.js");
-/* harmony import */ var _DandD_monster__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./DandD/monster */ "./pages/DandD/monster.js");
-/* harmony import */ var _DandD_attacksim__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./DandD/attacksim */ "./pages/DandD/attacksim.js");
+/* harmony import */ var _DandD_attacksim__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DandD/attacksim */ "./pages/DandD/attacksim.js");
 
 
 
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandDpage.js";
-
-
 
 
 
@@ -3154,75 +2145,75 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 12
+          lineNumber: 10
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 13
+          lineNumber: 11
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 14
+          lineNumber: 12
         },
         __self: this
       }, "Dungeons and Dragons attack simulation"), "Calculations are based on SE 2 rules from late 80's and early 90's."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17
+          lineNumber: 15
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ol", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 16
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 18
+          lineNumber: 16
         },
         __self: this
       }, "Instructions:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 19
+          lineNumber: 17
         },
         __self: this
       }, "Press the \"Set Attributes\" buttons for both Hero and Monster."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 20
+          lineNumber: 18
         },
         __self: this
       }, "Press the \"Roll for Initiative\" button to see who attacks first."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 19
         },
         __self: this
       }, "Follow the instructions and press the \"Roll for Attack\" buttons."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 20
         },
         __self: this
       }, "After each round, repeat by rolling for Initiative and continue attacking until a character dies."))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "Attack-container",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_attacksim__WEBPACK_IMPORTED_MODULE_9__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_attacksim__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         },
         __self: this
       })));
@@ -3236,7 +2227,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./pages/DandDpage.js ***!
   \**********************************/

@@ -8,20 +8,18 @@
       "multi private-next-pages/test.js": 4,
       "multi private-next-pages/tvpage.js": 5,
       "multi private-next-pages/tvpost.js": 6,
-      "multi private-next-pages/about_view/aboutview.js": 7,
-      "multi private-next-pages/about_view/resumeview.js": 8,
-      "multi private-next-pages/DandD/attacksim.js": 9,
-      "multi private-next-pages/DandD/hero.js": 10,
-      "multi private-next-pages/DandD/herofunctions.js": 11,
-      "multi private-next-pages/DandD/monster.js": 12,
-      "multi private-next-pages/DandD/monsterfunctions.js": 13,
-      "multi private-next-pages/provider_data/providerImport.js": 14,
-      "multi private-next-pages/test_items/transition_item.js": 15,
-      "multi private-next-pages/tv_info/Header.js": 16,
-      "multi private-next-pages/tv_info/MyLayout.js": 17,
-      "multi next/dist/pages/_app": 18,
-      "multi next/dist/pages/_error": 19,
-      "multi next/dist/pages/_document": 20
+      "multi private-next-pages/DandD/attacksim.js": 7,
+      "multi private-next-pages/DandD/herofunctions.js": 8,
+      "multi private-next-pages/DandD/monsterfunctions.js": 9,
+      "multi private-next-pages/about_view/aboutview.js": 10,
+      "multi private-next-pages/about_view/resumeview.js": 11,
+      "multi private-next-pages/provider_data/providerImport.js": 12,
+      "multi private-next-pages/test_items/transition_item.js": 13,
+      "multi private-next-pages/tv_info/Header.js": 14,
+      "multi private-next-pages/tv_info/MyLayout.js": 15,
+      "multi next/dist/pages/_app": 16,
+      "multi next/dist/pages/_error": 17,
+      "multi next/dist/pages/_document": 18
     },
     "usedIds": {
       "0": 0,
@@ -42,9 +40,7 @@
       "15": 15,
       "16": 16,
       "17": 17,
-      "18": 18,
-      "19": 19,
-      "20": 20
+      "18": 18
     }
   },
   "chunks": {
