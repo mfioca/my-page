@@ -643,16 +643,3 @@ body {
 /* *********************** 
 *        test            * 
 **************************/
-
-
-
-
-  
-.box {
-    -webkit-transition:1s;
-}
-
-.box:active{
-    margin-left:-120px;
-}
-                                         

@@ -24,7 +24,7 @@ class Footer extends React.Component {
                 <div className="email">
                     <div>
                         <a href="mailto: mark@fioca.com">
-                            <a>Send Email</a>
+                            Send Email
                         </a>
                     </div>
                 </div>

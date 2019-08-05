@@ -203,13 +203,7 @@ function (_React$Component) {
           lineNumber: 26
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 27
-        },
-        __self: this
-      }, "Send Email")))));
+      }, "Send Email"))));
     }
   }]);
 

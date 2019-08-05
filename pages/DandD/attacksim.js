@@ -1,8 +1,8 @@
 import React from 'react';
-import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, 
-        setherostats, heroattackroll } from './herofunctions';
-import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj,
-        setmonsterstats, monsterattackroll } from './monsterfunctions'
+import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, setherostats, heroattackroll } from './herofunctions';
+import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll } from './monsterfunctions';
+
+
 
 
 
@@ -28,7 +28,6 @@ class AttackSim extends React.Component {
                 Dext: 0
             },
             monsterbase: {
-                Name: '',
                 Hp: 50,
                 ArmorClass: 10,
                 Damage: 10,
@@ -38,20 +37,22 @@ class AttackSim extends React.Component {
             heroAc: 0,
             heroDmg: 0,
             heroHitAdj: 0,
+            heroNametext: '',
             heroName: '',
-            heroinitiative: 0,
-            heroroll: 0,
-            herodidhit: '',
+            heroInitiative: 0,
+            heroRoll: 0,
+            heroDidHit: '',
             monsterHp: 0,
             monsterAc: 0,
             monsterDmg: 0,
             monsterHitAdj: 0,
+            monsterNametext: '',
             monsterName: '',
-            monsterinitiative: 0,
-            monsterroll: 0,
-            monsterdidhit: '',
-
+            monsterInitiative: 0,
+            monsterRoll: 0,
+            monsterDidHit: ''
         };
+
         //Hero bind function statements
         this.setherostats = setherostats.bind(this);
         this.SetheroConstAdj = SetheroConstAdj.bind(this);
@@ -59,6 +60,7 @@ class AttackSim extends React.Component {
         this.SetheroDmgAdj = SetheroDmgAdj.bind(this);
         this.SetheroHitAdj = SetheroHitAdj.bind(this);
         this.heroNameChange = this.heroNameChange.bind(this);
+        this.heroNameSubmit = this.heroNameSubmit.bind(this);
         this.heroattackroll = heroattackroll.bind(this);
         //monster bind function statements
         this.setmonsterstats = setmonsterstats.bind(this);
@@ -67,49 +69,57 @@ class AttackSim extends React.Component {
         this.SetmonsterDmgAdj = SetmonsterDmgAdj.bind(this);
         this.SetmonsterHitAdj = SetmonsterHitAdj.bind(this);
         this.monsterNameChange = this.monsterNameChange.bind(this);
+        this.monsterNameSubmit = this.monsterNameSubmit.bind(this);
         this.monsterattackroll = monsterattackroll.bind(this);
 
         this.rollforiniative = this.rollforiniative.bind(this);
     }
 
     heroNameChange(event) {
-        this.setState ({heroName : event.target.value});
+        this.setState ({heroNametext : event.target.value});
+    }
+
+    heroNameSubmit(event) {
+        this.setState ({heroName: this.state.heroNametext})
     }
 
     monsterNameChange(event) {
-        this.setState ({monsterName : event.target.value});
+        this.setState ({monsterNametext : event.target.value});
     }
 
+    monsterNameSubmit(event) {
+        this.setState ({monsterName: this.state.monsterNametext});
+    }
+
+    //initiative shows what character attacks first
     rollforiniative() {
         this.Heroinitiative = Math.floor((Math.random() * 10) + 1);
         this.Monsterinitiative = Math.floor((Math.random() * 10) + 1);
         //if hero 1-10 role is lower, hero goes first.
         if (this.Heroinitiative < this.Monsterinitiative) {
             this.setState ({
-                heroinitiative: 'First',
-                monsterinitiative: 'Second'
+                heroInitiative: 'First',
+                monsterInitiative: 'Second'
             });
         //if monster 1-10 role is lower, monster goes first
         } else if (this.Heroinitiative > this.Monsterinitiative) {
             this.setState ({
-                monsterinitiative: 'First',
-                heroinitiative: 'Second'
+                monsterInitiative: 'First',
+                heroInitiative: 'Second'
             });
         } else {
             //if both have same result, roll again
             this.setState ({
-                heroinitiative: 'ReRoll',
-                monsterinitiative: 'ReRoll'
+                heroInitiative: 'ReRoll',
+                monsterInitiative: 'ReRoll'
             })   
         };
         //clears out the hit/miss comments since it is a new round.
         this.setState ({
-            herodidhit: '',
-            monsterdidhit: ''
+            heroDidHit: '',
+            monsterDidHit: ''
         });
     }
-
-    
 
     render() {
         return (
@@ -119,27 +129,29 @@ class AttackSim extends React.Component {
                         <div className="HeroBox">
                             <div>
                                 <p><b>Name: </b>{ this.state.heroName }</p>
-                                    <table className="DandDstat_table">
-                                    <tr>
-                                        <td>Strength:</td>
-                                        <td> { this.state.herostats.Str }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Constitution:</td>
-                                        <td> { this.state.herostats.Const }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dexterity:</td>
-                                        <td> { this.state.herostats.Dext }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hitpoints:</td>
-                                        <td> { this.state.heroHp }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Damage per Hit:</td>
-                                        <td> { this.state.heroDmg }</td>
-                                    </tr>
+                                <table className="DandDstat_table">
+                                    <tbody>
+                                        <tr>
+                                            <td>Strength:</td>
+                                            <td> { this.state.herostats.Str }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Constitution:</td>
+                                            <td> { this.state.herostats.Const }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dexterity:</td>
+                                            <td> { this.state.herostats.Dext }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hitpoints:</td>
+                                            <td> { this.state.heroHp }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Damage per Hit:</td>
+                                            <td> { this.state.heroDmg }</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                             <div>
@@ -156,10 +168,17 @@ class AttackSim extends React.Component {
                                     <input
                                         type="text"
                                         maxLength="20"
-                                        value={this.state.value}
-                                        onChange={this.heroNameChange}
+                                        value={ this.state.value }
+                                        onChange={ this.heroNameChange }
+                                        //Prevent enter key submit
+                                        onKeyPress={event => {
+                                            if (event.which === 13 /* Enter */) {
+                                            event.preventDefault();
+                                            }
+                                        }}
                                     />
                                 </label>
+                                <button type="button" onClick={ this.heroNameSubmit }>Submit</button>
                             </form> 
                         </div>
                     </div>
@@ -169,26 +188,28 @@ class AttackSim extends React.Component {
                             <div>
                                 <p><b>Name: </b>{ this.state.monsterName }</p>
                                 <table className="DandDstat_table">
-                                    <tr>
-                                        <td>Strength:</td>
-                                        <td> { this.state.monsterstats.Str }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Constitution:</td>
-                                        <td> { this.state.monsterstats.Const }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Dexterity:</td>
-                                        <td> { this.state.monsterstats.Dext }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hitpoints:</td>
-                                        <td> { this.state.monsterHp }</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Damage per Hit:</td>
-                                        <td> { this.state.monsterDmg }</td>
-                                    </tr>
+                                    <tbody>
+                                        <tr>
+                                            <td>Strength:</td>
+                                            <td> { this.state.monsterstats.Str }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Constitution:</td>
+                                            <td> { this.state.monsterstats.Const }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dexterity:</td>
+                                            <td> { this.state.monsterstats.Dext }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hitpoints:</td>
+                                            <td> { this.state.monsterHp }</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Damage per Hit:</td>
+                                            <td> { this.state.monsterDmg }</td>
+                                        </tr>
+                                    </tbody>
                                 </table>
                             </div>
                             <div>
@@ -196,7 +217,7 @@ class AttackSim extends React.Component {
                             </div>
                         </div>
                         <div className="Stats-roll align-center">
-                            <button onClick={this.setmonsterstats}>Set Attrubutes</button>
+                            <button onClick={ this.setmonsterstats }>Set Attrubutes</button>
                         </div>
                         <div>
                             <form>
@@ -205,10 +226,17 @@ class AttackSim extends React.Component {
                                     <input
                                         type="text"
                                         maxLength="20"
-                                        value={this.state.value}
-                                        onChange={this.monsterNameChange}
+                                        value={ this.state.value }
+                                        onChange={ this.monsterNameChange }
+                                        //Prevent enter key submit
+                                        onKeyPress={event => {
+                                            if (event.which === 13 /* Enter */) {
+                                            event.preventDefault();
+                                            }
+                                        }}
                                     />
                                 </label>
+                                <button type="button" onClick={this.monsterNameSubmit}>Submit</button>
                             </form>
                         </div>
                     </div>      
@@ -229,12 +257,12 @@ class AttackSim extends React.Component {
                         </p>
                     </div>
                     <div className="Attack-roll">
-                        <button  onClick={this.heroattackroll}>
+                        <button  onClick={ this.heroattackroll }>
                             Hero Roll for Attack
                         </button>
                     </div>
                     <div className="Attack-result Fsize-3 center">
-                        { this.state.herodidhit }
+                        { this.state.heroDidHit }
                     </div>
                 </div>
 
@@ -243,15 +271,15 @@ class AttackSim extends React.Component {
                 <div className="Attack-section">    
                     
                     <div className="Initiative DandD_button">
-                        <button onClick={this.rollforiniative}>Roll for iniative</button>
+                        <button onClick={ this.rollforiniative }>Roll for iniative</button>
                     </div>
                     <div className="Heroinitiative center Fsize-2">
                         <p>Hero <br/>iniative:</p>
-                        <p className="Fsize-3">{this.state.heroinitiative}</p>
+                        <p className="Fsize-3">{ this.state.heroInitiative }</p>
                     </div>
                     <div className="Monsterinitiative center Fsize-2">
                         <p>Monster initiative:</p>
-                        <p className="Fsize-3">{this.state.monsterinitiative}</p>
+                        <p className="Fsize-3">{ this.state.monsterInitiative }</p>
                     </div>  
                     <div className="HeroHP-icon">
                         <img src="../static/images/herohp.png" alt="icon"/>
@@ -283,12 +311,12 @@ class AttackSim extends React.Component {
                         </p>
                     </div>
                     <div className="Attack-roll">
-                        <button onClick={this.monsterattackroll}>
+                        <button onClick={ this.monsterattackroll }>
                             Monster Roll for Attack
                         </button>
                     </div>
                     <div className="Attack-result Fsize-3 center">
-                        { this.state.monsterdidhit }
+                        { this.state.monsterDidHit }
                     </div>
                 </div>
             </div>

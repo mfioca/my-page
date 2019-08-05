@@ -2,14 +2,14 @@
   "modules": {
     "byIdentifier": {
       "multi private-next-pages/about.js": 0,
-      "multi private-next-pages/index.js": 1,
-      "multi private-next-pages/DandDpage.js": 2,
+      "multi private-next-pages/DandDpage.js": 1,
+      "multi private-next-pages/index.js": 2,
       "multi private-next-pages/providerData.js": 3,
       "multi private-next-pages/test.js": 4,
       "multi private-next-pages/tvpage.js": 5,
       "multi private-next-pages/tvpost.js": 6,
-      "multi private-next-pages/about_view/resumeview.js": 7,
-      "multi private-next-pages/about_view/aboutview.js": 8,
+      "multi private-next-pages/about_view/aboutview.js": 7,
+      "multi private-next-pages/about_view/resumeview.js": 8,
       "multi private-next-pages/DandD/attacksim.js": 9,
       "multi private-next-pages/DandD/herofunctions.js": 10,
       "multi private-next-pages/DandD/monsterfunctions.js": 11,

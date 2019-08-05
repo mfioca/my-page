@@ -66,11 +66,6 @@ class Testpage extends Component {
                 <div>
                     <NumberList numbers={numbers} />
                 </div>
-                    <p>Click on the Google Image and hold down the mouse button:</p>
-                    <div className="box pointer" onClick={this.switch}>
-                    <img src="https://www.google.com/images/srpr/logo11w.png" width="100"/>
-                     
-                </div>
                 <div className="Testapp5">
                     <Testapp5 />
                 </div>

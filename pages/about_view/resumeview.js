@@ -38,29 +38,31 @@ function Resume(props) {
                             Expertise in customer service, communication, analytical thinking and problem solving to achieve goals. 
                         </p>
                         <table className="Res-table res-lineheight">
-                            <tr>
-                                <th className="left">
-                                    <h3>CORE SKILLS</h3>
-                                </th>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <ul className="left">
-                                        <li>Cumstomer Service and Relationship Building</li>
-                                        <li>Technical Writing</li>
-                                        <li>Quality Assurance</li>
-                                        <li>Data Analysis and Reporting</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul className="left">
-                                        <li>Customer and Technical Support</li>
-                                        <li>Data Entry</li>
-                                        <li>Problem Solving and Decision Making</li>
-                                        <li>Communication and Traning</li>
-                                    </ul>
-                                </td>  
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <th className="left">
+                                        <h3>CORE SKILLS</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <ul className="left">
+                                            <li>Cumstomer Service and Relationship Building</li>
+                                            <li>Technical Writing</li>
+                                            <li>Quality Assurance</li>
+                                            <li>Data Analysis and Reporting</li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul className="left">
+                                            <li>Customer and Technical Support</li>
+                                            <li>Data Entry</li>
+                                            <li>Problem Solving and Decision Making</li>
+                                            <li>Communication and Traning</li>
+                                        </ul>
+                                    </td>  
+                                </tr>
+                            </tbody>
                         </table>
                         <h3>COMPUTER SKILLS</h3>
                         <p>
@@ -145,46 +147,48 @@ function Resume(props) {
                     <Divider title="PROFESSIONAL EXPERIENCE" />
                     <div>
                         <table className="Res-table">
-                            <tr>
-                                <td className="left">
-                                    <b>Contract Compliance Specialist</b>, LogistiCare Solutions, Atlanta, GA
-                                </td>
-                                <td className="right">
-                                    2015 - 2019
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="left">
-                                    <b>Job Coach and Claims Specialist</b>, LogistiCare Solutions, Atlanta GA
-                                </td>
-                                <td className="right">
-                                    2012 - 2015
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="left">
-                                    <b>Provider Enrollment Specialist</b>, Affilliated Computer Services, Anchorage AK
-                                </td>
-                                <td className="right">
-                                    2009 - 2011
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="left">
-                                    <b>Claims Processor</b>, Affiliated Computer Services, Anchorage AK
-                                </td>
-                                <td className="right">
-                                    2007 - 2009
-                                </td>
-                            </tr>
-                            <tr>
-                                <td className="left">
-                                    <b>Freelance Contractor</b>, PangoMedia, Anchorage AK
-                                </td>
-                                <td className="right">
-                                    2005 - 2006
-                                </td>
-                            </tr>
+                            <tbody>
+                                <tr>
+                                    <td className="left">
+                                        <b>Contract Compliance Specialist</b>, LogistiCare Solutions, Atlanta, GA
+                                    </td>
+                                    <td className="right">
+                                        2015 - 2019
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="left">
+                                        <b>Job Coach and Claims Specialist</b>, LogistiCare Solutions, Atlanta GA
+                                    </td>
+                                    <td className="right">
+                                        2012 - 2015
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="left">
+                                        <b>Provider Enrollment Specialist</b>, Affilliated Computer Services, Anchorage AK
+                                    </td>
+                                    <td className="right">
+                                        2009 - 2011
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="left">
+                                        <b>Claims Processor</b>, Affiliated Computer Services, Anchorage AK
+                                    </td>
+                                    <td className="right">
+                                        2007 - 2009
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td className="left">
+                                        <b>Freelance Contractor</b>, PangoMedia, Anchorage AK
+                                    </td>
+                                    <td className="right">
+                                        2005 - 2006
+                                    </td>
+                                </tr>
+                            </tbody>
                         </table>
                     </div>
                 </div>
