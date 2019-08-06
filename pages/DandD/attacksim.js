@@ -3,6 +3,7 @@ import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, setherosta
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll } from './monsterfunctions';
 
 
+
 class CharacterSheet extends React.Component {
     render() {
         return (
@@ -79,6 +80,35 @@ class NameForm extends React.Component {
                     </label>
                     <button type="button" onClick={ this.props.NameSubmit }>Submit</button>
                 </form> 
+            </div>
+        );
+    }
+}
+
+class AttackSection extends React.Component {
+    render() {
+        return (
+            <div className="Attack-section">
+                <div className="AC-Icon">
+                    <img src="../static/images/acicon.png" alt="shield"/>
+                    <p className="AC-Icon-text Fsize-3">
+                        { this.props.AC }
+                    </p>
+                </div>
+                <div className="HitAdj-Icon">
+                    <img src="../static/images/hitadjust.png" alt="icon"/>
+                    <p className="HitAdj-Icon-text Fsize-3">
+                        { this.props.HitAdj }
+                    </p>
+                </div>
+                <div className="Attack-roll">
+                    <button  onClick={ this.props.AttackRoll }>
+                        { this.props.RollTitle }
+                    </button>
+                </div>
+                <div className="Attack-result Fsize-3 center">
+                    { this.props.DidHit }
+                </div>
             </div>
         );
     }
@@ -252,35 +282,18 @@ class AttackSim extends React.Component {
                         />
                     </div>      
                 </div>
-            
-                {/*displays hero stats and attack information */}
-                <div className="Attack-section">
-                    <div className="AC-Icon">
-                        <img src="../static/images/acicon.png" alt="shield"/>
-                        <p className="AC-Icon-text Fsize-3">
-                            { this.state.heroAc }
-                        </p>
-                    </div>
-                    <div className="HitAdj-Icon">
-                        <img src="../static/images/hitadjust.png" alt="icon"/>
-                        <p className="HitAdj-Icon-text Fsize-3">
-                            { this.state.heroHitAdj }
-                        </p>
-                    </div>
-                    <div className="Attack-roll">
-                        <button  onClick={ this.heroattackroll }>
-                            Hero Roll for Attack
-                        </button>
-                    </div>
-                    <div className="Attack-result Fsize-3 center">
-                        { this.state.heroDidHit }
-                    </div>
-                </div>
+                
+                <AttackSection
+                    AC = { this.state.heroAc }
+                    HitAdj = { this.state.heroHitAdj }
+                    AttackRoll = { this.heroattackroll }
+                    RollTitle = "Hero Roll for Attack"
+                    DidHit = { this.state.heroDidHit }
+                />
 
                   {/*main field to control attack simulation placed between
                      hero info and monster info */}  
                 <div className="Attack-section">    
-                    
                     <div className="Initiative DandD_button">
                         <button onClick={ this.rollforiniative }>Roll for iniative</button>
                     </div>
@@ -305,31 +318,13 @@ class AttackSim extends React.Component {
                         </p>
                     </div>
                 </div>
-
-                
-                {/*displays Monster stats and attack information */}
-                <div className="Attack-section">
-                    <div className="AC-Icon">
-                        <img src="../static/images/acicon.png" alt="shield" />
-                        <p className="AC-Icon-text Fsize-3">
-                            { this.state.monsterAc }
-                        </p>
-                    </div>
-                    <div className="HitAdj-Icon">
-                        <img src="../static/images/hitadjust.png" alt="icon"/>
-                        <p className="HitAdj-Icon-text Fsize-3">
-                            { this.state.monsterHitAdj }
-                        </p>
-                    </div>
-                    <div className="Attack-roll">
-                        <button onClick={ this.monsterattackroll }>
-                            Monster Roll for Attack
-                        </button>
-                    </div>
-                    <div className="Attack-result Fsize-3 center">
-                        { this.state.monsterDidHit }
-                    </div>
-                </div>
+                <AttackSection
+                    AC = { this.state.monsterAc }
+                    HitAdj = { this.state.monsterHitAdj }
+                    AttackRoll = { this.monsterattackroll }
+                    RollTitle = "Monster Roll for Attack"
+                    DidHit = { this.state.monsterDidHit }
+                />
             </div>
         );
     }

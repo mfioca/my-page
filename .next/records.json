@@ -12,7 +12,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/style.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/react-table/react-table.css": [
     {
       "modules": {
         "byIdentifier": {},
@@ -25,7 +25,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/react-table/react-table.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/style.css": [
     {
       "modules": {
         "byIdentifier": {},

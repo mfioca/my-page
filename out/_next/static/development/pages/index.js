@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Footer.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Footer.js";
 
 
 function FooterLink(props) {
@@ -144,7 +144,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Header.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Header.js";
 
 var activeprofile = '';
 
@@ -422,7 +422,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./components/style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\layout.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\layout.js";
 
 
 
@@ -2558,10 +2558,10 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cindex.js!./":
-/*!*********************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cindex.js ***!
-  \*********************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Cindex.js!./":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Cindex.js ***!
+  \**********************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2583,12 +2583,12 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ "./node_modules/react/index.js":
 /*!*******************************************************************************************!*\
-  !*** delegated ./node_modules/react/index.js from dll-reference dll_6dc2816e14fab51b8269 ***!
+  !*** delegated ./node_modules/react/index.js from dll-reference dll_81bd344d8f06700801e0 ***!
   \*******************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = (__webpack_require__(/*! dll-reference dll_6dc2816e14fab51b8269 */ "dll-reference dll_6dc2816e14fab51b8269"))("./node_modules/react/index.js");
+module.exports = (__webpack_require__(/*! dll-reference dll_81bd344d8f06700801e0 */ "dll-reference dll_81bd344d8f06700801e0"))("./node_modules/react/index.js");
 
 /***/ }),
 
@@ -2614,7 +2614,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\index.js";
 
 
 var pStyle = {
@@ -2715,25 +2715,25 @@ function (_Component) {
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cindex.js ***!
-  \*************************************************************************************************************************************/
+/*!**************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Cindex.js ***!
+  \**************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Cindex.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Cindex.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2F&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Cindex.js!./");
 
 
 /***/ }),
 
-/***/ "dll-reference dll_6dc2816e14fab51b8269":
+/***/ "dll-reference dll_81bd344d8f06700801e0":
 /*!*******************************************!*\
-  !*** external "dll_6dc2816e14fab51b8269" ***!
+  !*** external "dll_81bd344d8f06700801e0" ***!
   \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = dll_6dc2816e14fab51b8269;
+module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 

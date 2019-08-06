@@ -114,7 +114,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Footer.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Footer.js";
 
 
 function FooterLink(props) {
@@ -237,7 +237,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Header.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Header.js";
 
 var activeprofile = '';
 
@@ -515,7 +515,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./components/style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\layout.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\layout.js";
 
 
 
@@ -862,7 +862,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\index.js";
+var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\index.js";
 
 
 var pStyle = {
@@ -969,7 +969,7 @@ function (_Component) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\index.js */"./pages/index.js");
+module.exports = __webpack_require__(/*! C:\Users\Mark\Documents\github\my-page\pages\index.js */"./pages/index.js");
 
 
 /***/ }),
