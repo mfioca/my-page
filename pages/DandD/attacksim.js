@@ -3,8 +3,86 @@ import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, setherosta
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll } from './monsterfunctions';
 
 
+class CharacterSheet extends React.Component {
+    render() {
+        return (
+            <div>
+                <table className="DandDstat_table inline-block">
+                    <tbody>
+                        <tr>
+                            <td>Strength:</td>
+                            <td> { this.props.Strength }</td>
+                        </tr>
+                        <tr>
+                            <td>Constitution:</td>
+                            <td> { this.props.Constitution }</td>
+                        </tr>
+                        <tr>
+                            <td>Dexterity:</td>
+                            <td> { this.props.Dexterity }</td>
+                        </tr>
+                        <tr>
+                            <td>Hitpoints:</td>
+                            <td> { this.props.Hitpoints }</td>
+                        </tr>
+                        <tr>
+                            <td>Damage per Hit:</td>
+                            <td> { this.props.Damage }</td>
+                        </tr>
+                    </tbody>
+                </table>    
+            </div>
+        );
+    }
+}
 
 
+class Avatar extends React.Component {
+    render() {
+        if (this.props.avatar === "hero") {
+            return (
+                <div>
+                    <img className="DnD_Hero Float-right" src="../static/images/hero.png" alt="hero"/> 
+                </div>
+            );
+        }
+        if (this.props.avatar === "monster") {
+            return (
+                <div>
+                    <img className="DnD_Monster Float-right" src="../static/images/monster.png" alt="monster"/>
+                </div>
+            );
+        }  
+    }
+}
+
+
+class NameForm extends React.Component {
+    render() {
+        return (
+            <div>
+                <form>
+                    <label>
+                        Name:
+                        <input
+                            type="text"
+                            maxLength="20"
+                            value={ this.props.value }
+                            onChange={ this.props.NameChange }
+                            //Prevent enter key submit
+                            onKeyPress={event => {
+                                if (event.which === 13 /* Enter */) {
+                                event.preventDefault();
+                                }
+                            }}
+                        />
+                    </label>
+                    <button type="button" onClick={ this.props.NameSubmit }>Submit</button>
+                </form> 
+            </div>
+        );
+    }
+}
 
 class AttackSim extends React.Component {
     constructor (props) {
@@ -124,121 +202,54 @@ class AttackSim extends React.Component {
     render() {
         return (
             <div>
+                
                 <div className="DandD_character Fsize-2">
                     <div className="Hero">
                         <div className="HeroBox">
                             <div>
                                 <p><b>Name: </b>{ this.state.heroName }</p>
-                                <table className="DandDstat_table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Strength:</td>
-                                            <td> { this.state.herostats.Str }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Constitution:</td>
-                                            <td> { this.state.herostats.Const }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dexterity:</td>
-                                            <td> { this.state.herostats.Dext }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hitpoints:</td>
-                                            <td> { this.state.heroHp }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Damage per Hit:</td>
-                                            <td> { this.state.heroDmg }</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <CharacterSheet 
+                                    Strength = { this.state.herostats.Str }
+                                    Constitution = { this.state.herostats.Const }
+                                    Dexterity = { this.state.herostats.Dext }
+                                    Hitpoints = { this.state.heroHp }
+                                    Damage = { this.state.heroDmg }
+                                />
                             </div>
-                            <div>
-                                <img className="DnD_Hero Float-right" src="../static/images/hero.png" alt="hero"/> 
-                            </div>
+                            <Avatar avatar = "hero" />
                         </div>
                         <div className="Stats-roll align-center">
                             <button onClick={ this.setherostats }>Set Attrubutes</button>
                         </div>
-                        <div>
-                            <form>
-                                <label>
-                                    Name:
-                                    <input
-                                        type="text"
-                                        maxLength="20"
-                                        value={ this.state.value }
-                                        onChange={ this.heroNameChange }
-                                        //Prevent enter key submit
-                                        onKeyPress={event => {
-                                            if (event.which === 13 /* Enter */) {
-                                            event.preventDefault();
-                                            }
-                                        }}
-                                    />
-                                </label>
-                                <button type="button" onClick={ this.heroNameSubmit }>Submit</button>
-                            </form> 
-                        </div>
+                        <NameForm 
+                            value = { this.state.value }
+                            NameChange = { this.heroNameChange }
+                            NameSubmit = { this.heroNameSubmit }
+                        />
                     </div>
 
                     <div className="Monster">
                         <div className="MonsterBox">
                             <div>
                                 <p><b>Name: </b>{ this.state.monsterName }</p>
-                                <table className="DandDstat_table">
-                                    <tbody>
-                                        <tr>
-                                            <td>Strength:</td>
-                                            <td> { this.state.monsterstats.Str }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Constitution:</td>
-                                            <td> { this.state.monsterstats.Const }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dexterity:</td>
-                                            <td> { this.state.monsterstats.Dext }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Hitpoints:</td>
-                                            <td> { this.state.monsterHp }</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Damage per Hit:</td>
-                                            <td> { this.state.monsterDmg }</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <CharacterSheet
+                                    Strength = { this.state.monsterstats.Str }
+                                    Constitution = { this.state.monsterstats.Const }
+                                    Dexterity = { this.state.monsterstats.Dext }
+                                    Hitpoints = { this.state.monsterHp }
+                                    Damage = { this.state.monsterDmg }
+                                />
                             </div>
-                            <div>
-                                <img className="DnD_Monster Float-right" src="../static/images/monster.png" alt="monster"/>
-                            </div>
+                            <Avatar avatar = "monster" />
                         </div>
                         <div className="Stats-roll align-center">
                             <button onClick={ this.setmonsterstats }>Set Attrubutes</button>
                         </div>
-                        <div>
-                            <form>
-                                <label>
-                                    Name:
-                                    <input
-                                        type="text"
-                                        maxLength="20"
-                                        value={ this.state.value }
-                                        onChange={ this.monsterNameChange }
-                                        //Prevent enter key submit
-                                        onKeyPress={event => {
-                                            if (event.which === 13 /* Enter */) {
-                                            event.preventDefault();
-                                            }
-                                        }}
-                                    />
-                                </label>
-                                <button type="button" onClick={this.monsterNameSubmit}>Submit</button>
-                            </form>
-                        </div>
+                        <NameForm 
+                            value = { this.state.value }
+                            NameChange = { this.monsterNameChange }
+                            NameSubmit = { this.monsterNameSubmit }
+                        />
                     </div>      
                 </div>
             
