@@ -1,7 +1,68 @@
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 var activeprofile = '';
+import {Collapse, Navbar, NavbarToggler, DropdownLink, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+  
+class Header extends React.Component {
+constructor(props) {
+    super(props);
 
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+    isOpen: false
+    };
+}
+    toggle() {
+    this.setState({
+    isOpen: !this.state.isOpen
+    });
+}
+    render() {
+        return (
+        <div>
+            <Navbar color="dark" dark expand="md" >
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav className="ml-auto " navbar>
+                    <NavItem>
+                        <NavLink href="/">Home</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/about">About</NavLink>
+                    </NavItem>
+                    <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle nav caret>
+                            Projects
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                            
+                            <DropdownItem >
+                                <a href="/tvpage">TvMaze</a>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <a href="/DandDpage">DandD</a>
+                            </DropdownItem>
+                            <DropdownItem>
+                                <a href="/ProviderData">Provider List</a>
+                            </DropdownItem>
+                            <DropdownItem>
+                                {activeprofile === 'Guest' &&
+                                    <a id="/test">Test</a> 
+                                }
+                            </DropdownItem>
+                        </DropdownMenu>
+                    </UncontrolledDropdown>
+                </Nav>
+            </Collapse>
+            </Navbar>
+        </div>
+        );
+    }
+}
+
+
+/*  old code
 function NavLink(props) {
     return (
     <div className="Navbar center">
@@ -45,7 +106,7 @@ class Headerdropdown extends React.Component {
                             <li className="Dropdown-list_item">
                                 <NavLink id="/ProviderData" title="Provider List" />
                             </li>
-                            {/* Hiding link based on activeprofile variable*/}
+                            
                             {activeprofile === 'Guest' &&
                                 <li className="Dropdown-list_item">
                                 <NavLink id="/test" title="Test" /> 
@@ -84,7 +145,7 @@ class Header extends React.Component {
     }
 }
 
-
+*/
 
 export default Header;
 

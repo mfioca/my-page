@@ -231,6 +231,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
+/* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_8__);
 
 
 
@@ -239,261 +243,268 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Header.js";
 
+
 var activeprofile = '';
 
-function NavLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-    className: "Navbar center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 7
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
-    href: "".concat(props.id),
-    title: props.title,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, props.title));
-}
 
-var Headerdropdown =
+var Header =
 /*#__PURE__*/
 function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Headerdropdown, _React$Component);
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Header, _React$Component);
 
-  function Headerdropdown(props) {
+  function Header(props) {
     var _this;
 
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Headerdropdown);
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Header);
 
-    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Headerdropdown).call(this, props));
+    _this = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Header).call(this, props));
+    _this.toggle = _this.toggle.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.state = {
-      showList: false
+      isOpen: false
     };
-    _this.showList = _this.showList.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
   }
 
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Headerdropdown, [{
-    key: "showList",
-    value: function showList() {
-      this.setState(function (prevState) {
-        return {
-          showList: !prevState.showList
-        };
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Header, [{
+    key: "toggle",
+    value: function toggle() {
+      this.setState({
+        isOpen: !this.state.isOpen
       });
     }
   }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Navbar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 23
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
-        className: "Dropdown pointer",
-        onClick: this.showList,
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Navbar"], {
+        color: "dark",
+        dark: true,
+        expand: "md",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavbarToggler"], {
+        onClick: this.toggle,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Collapse"], {
+        isOpen: this.state.isOpen,
+        navbar: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 26
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Nav"], {
+        className: "ml-auto ",
+        navbar: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 27
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
+        href: "/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, "Home")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 31
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("u", {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
+        href: "/about",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, "About")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["UncontrolledDropdown"], {
+        nav: true,
+        inNavbar: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 34
         },
         __self: this
-      }, "Projects")), this.state.showList && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "DropdownMenu",
-        onMouseLeave: this.showList,
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownToggle"], {
+        nav: true,
+        caret: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
-        className: "Dropdown-list",
+      }, "Projects"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownMenu"], {
+        right: true,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 38
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-        className: "Dropdown-list_item",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
-        id: "/tvpage",
-        title: "TvMaze",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownItem"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 40
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-        className: "Dropdown-list_item",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 41
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
-        id: "/DandDpage",
-        title: "D and D",
+      }, "TvMaze")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownItem"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 43
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-        className: "Dropdown-list_item",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "/DandDpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 44
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
-        id: "/ProviderData",
-        title: "Provider List",
+      }, "DandD")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownItem"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 46
         },
         __self: this
-      })), activeprofile === 'Guest' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
-        className: "Dropdown-list_item",
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "/ProviderData",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 47
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
+      }, "Provider List")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        },
+        __self: this
+      }, activeprofile === 'Guest' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
         id: "/test",
-        title: "Test",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 51
         },
         __self: this
-      })))));
-    }
-  }]);
-
-  return Headerdropdown;
-}(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-
-var Header =
-/*#__PURE__*/
-function (_React$Component2) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Header, _React$Component2);
-
-  function Header() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Header);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Header).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Header, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "Header",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
-        id: "/",
-        title: "Home",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(NavLink, {
-        id: "/about",
-        title: "About",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 69
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(Headerdropdown, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 70
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        className: "google",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 71
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 72
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
-        src: "/static/images/google.png",
-        alt: "google",
-        height: "20",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 73
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 75
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
-        action: "http://google.com/search",
-        target: "_blank",
-        rel: "noopener noreferrer",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 76
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
-        name: "q",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 77
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("input", {
-        type: "submit",
-        value: "Google Search",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 78
-        },
-        __self: this
-      })))));
+      }, "Test"))))))));
     }
   }]);
 
   return Header;
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
+/*  old code
+function NavLink(props) {
+    return (
+    <div className="Navbar center">
+        <a href={`${props.id}`} title={props.title}>
+            {props.title}
+        </a>
+    </div>
+    );
+}
+
+class Headerdropdown extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {showList: false};
+        this.showList = this.showList.bind(this);
+    }
+
+    showList() {
+        this.setState(prevState => ({
+            showList: !prevState.showList      
+        }));
+    };
+
+    render() {
+        return (
+            <div className="Navbar">
+                <a 
+                    className="Dropdown pointer"
+                    onClick={this.showList}>
+                    <u>Projects</u>
+                </a>
+                {this.state.showList && (
+                    <div className="DropdownMenu" onMouseLeave={this.showList}>
+                        <ul className="Dropdown-list">
+                            <li className="Dropdown-list_item">
+                                <NavLink id="/tvpage" title="TvMaze" />
+                            </li>
+                            <li className="Dropdown-list_item">
+                                <NavLink id="/DandDpage" title="D and D" />
+                            </li>
+                            <li className="Dropdown-list_item">
+                                <NavLink id="/ProviderData" title="Provider List" />
+                            </li>
+                            
+                            {activeprofile === 'Guest' &&
+                                <li className="Dropdown-list_item">
+                                <NavLink id="/test" title="Test" /> 
+                                </li>  
+                            }
+                        </ul>
+                    </div>
+                )}
+            </div>
+        );
+    }
+}
+
+
+
+class Header extends React.Component {
+    render() {
+        return (
+            <div className="Header">
+                <NavLink id="/" title="Home" />
+                <NavLink id="/about" title="About" />
+                <Headerdropdown />
+                <div className="google">
+                    <div>
+                        <img src="/static/images/google.png" alt="google" height="20" />
+                    </div>
+                    <div>
+                        <form action="http://google.com/search" target="_blank" rel="noopener noreferrer">
+                            <input name="q" />
+                            <input type="submit" value="Google Search" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
+*/
+
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
@@ -840,6 +851,17 @@ function _typeof(obj) {
 
 /***/ }),
 
+/***/ "./node_modules/bootstrap/dist/css/bootstrap.min.css":
+/*!***********************************************************!*\
+  !*** ./node_modules/bootstrap/dist/css/bootstrap.min.css ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -1048,6 +1070,17 @@ module.exports = require("core-js/library/fn/symbol/iterator");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "reactstrap":
+/*!*****************************!*\
+  !*** external "reactstrap" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("reactstrap");
 
 /***/ })
 

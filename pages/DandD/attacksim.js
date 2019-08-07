@@ -318,6 +318,7 @@ class AttackSim extends React.Component {
                         </p>
                     </div>
                 </div>
+                
                 <AttackSection
                     AC = { this.state.monsterAc }
                     HitAdj = { this.state.monsterHitAdj }

@@ -117,7 +117,6 @@ body {
 .Header a:link, .Footer a:link, .Dropdown {
     font-size: 20px;
     color: #bbb8b8;
-    transition: all .2s ease-in-out;
 }
 
 .Header a:visited, .Footer a:visited {
@@ -125,9 +124,8 @@ body {
 }
 
 .Header a:hover, .Footer a:hover, .Dropdown:hover {
-    font-size: 25px;
+    font-size: 20px;
     color: white;
-    transform: scale(1.1);
 }
 
 .about-container a:link {
@@ -221,14 +219,8 @@ body {
     margin-right: 0px;
 }
 
-.DropdownMenu {
-    position: absolute;
-    top: 62px;
-    left: 370px;
-    z-index: 1;
-    min-width: 125px;
-    padding: 0 20px;
-    overflow: hidden;
+.DropdownMenupizza {
+    
     background-color: black;
     background-image:
     linear-gradient( 
@@ -493,7 +485,7 @@ body {
 
 .AC-Icon-text {
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -506,7 +498,7 @@ body {
 
 .HitAdj-Icon-text {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     
@@ -549,7 +541,7 @@ body {
 
 .HeroHP-text, .MonsterHP-text {
     position: absolute;
-    top: 40px;
+    top: 60px;
     left: 50px;
     width: 50px;
 }
@@ -643,3 +635,7 @@ body {
 /* *********************** 
 *        test            * 
 **************************/
+
+.pizza {
+    display: block;
+}
