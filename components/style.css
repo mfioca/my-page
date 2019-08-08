@@ -4,7 +4,6 @@
 }
 
 body {
-    
     min-height: 100vh;
     font-size: 14px;
 }
@@ -96,8 +95,9 @@ body {
 .Res-table {
     border-collapse: collapse;
     width: 100%;
-    margin-left: 5px;
 }
+
+
 
 .Dropdown-list {
     margin: 0;
@@ -114,19 +114,18 @@ body {
 *         Links          * 
 **************************/
 
-.Header a:link, .Footer a:link, .Dropdown {
+.Header:link {
     font-size: 20px;
-    /*color: #bbb8b8;*/
-    color: white;
-}
-
-.Header a:visited, .Footer a:visited {
     color: #bbb8b8;
 }
 
-.Header a:hover, .Footer a:hover, .Dropdown:hover {
+.Header:visited {
+    color: #bbb8b8;
+}
+
+.Header:hover {
     font-size: 20px;
-    color: white;
+    color: black;
 }
 
 .about-container a:link {
@@ -185,61 +184,6 @@ body {
 *    Header and Footer   * 
 **************************/
 
-.Header {
-   font-size: 20px;
-   width: 100%;
-    height: 55px;
-    background-color: black;
-    background-image: 
-    linear-gradient(
-      rgba(15, 15, 15, 0.45), 
-      rgba(170, 165, 165, 0.45)
-    );
-}
-
-.Footer {
-    width: 100%;
-    height: 100px;
-    font-size: 20px;
-    background-color: black;
-    background-image: 
-    linear-gradient( 
-      rgba(170, 165, 165, 0.45),
-      rgba(15, 15, 15, 0.45)
-    );
-}
-
-.Footer-nav {
-    display: flex;
-    float: left;
-    width: 120px;
-    margin: 20px;
-    line-height: 40px;
-}
-
-.Header > div {
-    margin-left: 80px;
-    margin-right: 0px;
-}
-
-.DropdownMenu {
-    background-color: black;
-    background-image:
-    linear-gradient( 
-      rgba(170, 165, 165, 0.45),
-      rgba(15, 15, 15, 0.45)
-    );
-    border-radius: 5px;
-    text-align: center;
-}
-
-.Navbar {
-    display: flex;
-    float: left;
-    margin-left: 10px;
-    margin-top: 12px;
-    min-width: 75px;
-}
 
 .google, .email {
     display: flex;
@@ -314,11 +258,13 @@ body {
 	-webkit-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
 	-o-box-shadow: 0 0 10px  rgba(0,0,0,0.6);
     padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .about_section {
     display: flex;
-    margin-top: 0px;
+    margin-top: 10px;
     margin-bottom: 50px;
     padding-right: 50px;
     padding-left: 50px;
@@ -331,7 +277,7 @@ body {
     background-image:
     linear-gradient(
         to left, 
-      rgba(202, 202, 202),
+      white,
       rgba(83, 101, 138)
     );
     box-shadow: -10px 0px     5px rgba(0,0,0,0.6);
@@ -344,7 +290,7 @@ body {
     background-image:
     linear-gradient(
         to right, 
-      rgba(202, 202, 202),
+      white,
       rgba(83, 101, 138)
     );
     box-shadow: 10px 0px  5px rgba(0,0,0,0.6);
@@ -642,7 +588,11 @@ body {
     display: block;
 }
 
-.customLink, .customLink:hover{
+.customLink:link, .customLink:hover, .customLink:visited {
     color: red;
     text-decoration: none;
+  }
+
+  .testwidth {
+      height: 90px;
   }

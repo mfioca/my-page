@@ -8,7 +8,7 @@ const Dividerstyle = {
     width: '100%',
     border: '1px solid black',
     textAlign: 'center',
-    fontSize: 20
+    fontSize: 17
 }
 
 function Divider(props) {
@@ -41,7 +41,7 @@ function Resume(props) {
                             <tbody>
                                 <tr>
                                     <th className="left">
-                                        <h3>CORE SKILLS</h3>
+                                        <h4>CORE SKILLS</h4>
                                     </th>
                                 </tr>
                                 <tr>
@@ -64,7 +64,7 @@ function Resume(props) {
                                 </tr>
                             </tbody>
                         </table>
-                        <h3>COMPUTER SKILLS</h3>
+                        <h4>COMPUTER SKILLS</h4>
                         <p>
                             Windows and OSX, Microsoft Office with advanced excel functions and
                             macro scripting, Lotus Notes, Maximo Enterprise Suite, Audacity, Photoshop, 
@@ -74,7 +74,7 @@ function Resume(props) {
                     </div>
                     <Divider title="PROFESSIONAL CAREER EXPERTIESE" />
                     <div >
-                        <h3><u>SOFTWARE IMPLEMENTATION AND SUPPORT</u></h3>
+                        <h4><u>SOFTWARE IMPLEMENTATION AND SUPPORT</u></h4>
                         <ul>
                             <li>
                                 <p>
@@ -101,7 +101,7 @@ function Resume(props) {
                                 </p>
                             </li>
                         </ul>
-                        <h3><u>TECHNICAL WRITING</u></h3>
+                        <h4><u>TECHNICAL WRITING</u></h4>
                         <ul>
                             <li>
                                 <p>
@@ -119,7 +119,7 @@ function Resume(props) {
                                 </p>
                             </li>
                         </ul>
-                        <h3><u>CUSTOMER RELATIONS</u></h3>
+                        <h4><u>CUSTOMER RELATIONS</u></h4>
                         <ul>
                             <li>
                                 <p>
@@ -193,9 +193,9 @@ function Resume(props) {
                     </div>
                 </div>
                 <style jsx> {`
-                    p, ul, ol, li, .r-title {
+                    p, ul, ol, li, .r-title, h4 {
                         margin: 3px;
-                    }
+                    },
                 `}
                 </style>
             </div>
