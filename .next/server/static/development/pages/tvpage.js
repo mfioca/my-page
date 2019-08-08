@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -120,7 +120,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Footer.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Footer.js";
 
 
 
@@ -242,40 +242,6 @@ function (_React$Component) {
 
   return Footer;
 }(react__WEBPACK_IMPORTED_MODULE_6___default.a.Component);
-/*
-function FooterLink(props) {
-    return (
-        <div className="Footer-nav center">
-            <a href={`${props.id}`} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title={props.title}>
-                    {props.title}
-            </a>
-        </div>
-    );
-}
-
-class Footer extends React.Component {
-    render() {
-        return (
-            <div className="Footer">
-                <FooterLink id="https://www.linkedin.com/in/mark-fioca/"  title="LinkedIn" />
-                <FooterLink id="https://www.deviantart.com/franknmullet" title="Deviantart" />
-                <FooterLink id="https://github.com/mfioca/my-page" title="Git-Hub" />
-                <div className="email">
-                    <div>
-                        <a href="mailto: mark@fioca.com">
-                            Send Email
-                        </a>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-*/
-
 
 /* harmony default export */ __webpack_exports__["default"] = (Footer);
 
@@ -308,7 +274,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Header.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\Header.js";
 
 
 
@@ -595,7 +561,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer */ "./components/Footer.js");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.css */ "./components/style.css");
 /* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\layout.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\components\\layout.js";
 
 
 
@@ -1507,7 +1473,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\tv_info\\Header.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tv_info\\Header.js";
 
 
 var linkStyle = {
@@ -1553,7 +1519,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Header */ "./pages/tv_info/Header.js");
-var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\tv_info\\MyLayout.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tv_info\\MyLayout.js";
 
 
 var layout2Style = {
@@ -1615,7 +1581,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\tvpage.js";
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\tvpage.js";
 
 
 
@@ -1856,14 +1822,14 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 7:
+/***/ 6:
 /*!*******************************!*\
   !*** multi ./pages/tvpage.js ***!
   \*******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Mark\Documents\github\my-page\pages\tvpage.js */"./pages/tvpage.js");
+module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\tvpage.js */"./pages/tvpage.js");
 
 
 /***/ }),
