@@ -1,34 +1,54 @@
-import React from 'react'
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink } from 'reactstrap';
 
-
-function FooterLink(props) {
-    return (
-        <div className="Footer-nav center">
-            <a href={`${props.id}`} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                title={props.title}>
-                    {props.title}
-            </a>
-        </div>
-    );
-}
 
 class Footer extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+        isOpen: false
+        };
+    }
+    toggle() {
+        this.setState({
+        isOpen: !this.state.isOpen
+        });
+    }
     render() {
         return (
-            <div className="Footer">
-                <FooterLink id="https://www.linkedin.com/in/mark-fioca/"  title="LinkedIn" />
-                <FooterLink id="https://www.deviantart.com/franknmullet" title="Deviantart" />
-                <FooterLink id="https://github.com/mfioca/my-page" title="Git-Hub" />
-                <div className="email">
-                    <div>
-                        <a href="mailto: mark@fioca.com">
-                            Send Email
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <div>
+            <Navbar color="dark" dark expand="md" className="Fsize-2">
+            <NavbarToggler onClick={this.toggle} />
+            <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav  navbar>
+                    <NavItem>
+                        <NavLink href="https://www.linkedin.com/in/mark-fioca/"
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                        LinkedIn
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="https://www.deviantart.com/franknmullet"
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                        DeviantArt
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="https://github.com/mfioca/my-page"
+                            target="_blank" 
+                            rel="noopener noreferrer">
+                        GitHub
+                        </NavLink>
+                    </NavItem>
+                </Nav>
+            </Collapse>
+            </Navbar>
+        </div>
         );
     }
 }

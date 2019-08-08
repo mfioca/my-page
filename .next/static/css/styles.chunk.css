@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: rgb(202, 202, 202);
+    
     min-height: 100vh;
     font-size: 14px;
 }
@@ -123,7 +123,8 @@ body {
 
 .Header a:link, .Footer a:link, .Dropdown {
     font-size: 20px;
-    color: #bbb8b8;
+    /*color: #bbb8b8;*/
+    color: white;
 }
 
 .Header a:visited, .Footer a:visited {
@@ -192,8 +193,9 @@ body {
 **************************/
 
 .Header {
-    width: 100%;
-    height: 50px;
+   font-size: 20px;
+   width: 100%;
+    height: 55px;
     background-color: black;
     background-image: 
     linear-gradient(
@@ -205,6 +207,7 @@ body {
 .Footer {
     width: 100%;
     height: 100px;
+    font-size: 20px;
     background-color: black;
     background-image: 
     linear-gradient( 
@@ -226,8 +229,7 @@ body {
     margin-right: 0px;
 }
 
-.DropdownMenupizza {
-    
+.DropdownMenu {
     background-color: black;
     background-image:
     linear-gradient( 
@@ -646,5 +648,10 @@ body {
 .pizza {
     display: block;
 }
+
+.customLink, .customLink:hover{
+    color: red;
+    text-decoration: none;
+  }
 
 /*# sourceMappingURL=styles.chunk.css.map*/

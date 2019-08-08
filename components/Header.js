@@ -1,9 +1,13 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
-var activeprofile = '';
-import {Collapse, Navbar, NavbarToggler, DropdownLink, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-  
+
+
+var activeprofile = ''; 
+
+                
+
 class Header extends React.Component {
 constructor(props) {
     super(props);
@@ -21,10 +25,10 @@ constructor(props) {
     render() {
         return (
         <div>
-            <Navbar color="dark" dark expand="md" >
+            <Navbar  color="dark" className="Fsize-2" dark expand="md">
             <NavbarToggler onClick={this.toggle} />
             <Collapse isOpen={this.state.isOpen} navbar>
-                <Nav className="ml-auto " navbar>
+                <Nav className="ml-auto" navbar>
                     <NavItem>
                         <NavLink href="/">Home</NavLink>
                     </NavItem>
@@ -32,13 +36,12 @@ constructor(props) {
                         <NavLink href="/about">About</NavLink>
                     </NavItem>
                     <UncontrolledDropdown nav inNavbar>
-                        <DropdownToggle nav caret>
+                        <DropdownToggle nav caret >
                             Projects
                         </DropdownToggle>
-                        <DropdownMenu right>
-                            
-                            <DropdownItem >
-                                <a href="/tvpage">TvMaze</a>
+                        <DropdownMenu right className="bg-dark">
+                            <DropdownItem>
+                                <a   href="/tvpage">TvMaze</a>
                             </DropdownItem>
                             <DropdownItem>
                                 <a href="/DandDpage">DandD</a>
