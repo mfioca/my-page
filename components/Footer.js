@@ -44,6 +44,13 @@ class Footer extends React.Component {
                             rel="noopener noreferrer">
                         GitHub
                         </NavLink>
+                        </NavItem>
+                        </Nav>
+                        <Nav className="ml-auto" navbar>
+                        <NavItem className="ml-auto" navbar>
+                        <NavLink href="mailto: mark@fioca.com">
+                            Email
+                        </NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>

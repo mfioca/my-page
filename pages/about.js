@@ -53,7 +53,7 @@ class Aboutpage extends React.Component {
             </Row>
           </TabPane>
           <TabPane tabId="2">
-            <Row>
+            {/*<Row>
               <Col sm="6">
                 <Card body>
                   <CardTitle>Special Title Treatment</CardTitle>
@@ -68,7 +68,7 @@ class Aboutpage extends React.Component {
                   <Button>Go somewhere</Button>
                 </Card>
               </Col>
-            </Row>
+            </Row> */}
             <Row>
                 
                 <Col xl="auto" className="Fsize-1">
