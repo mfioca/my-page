@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
-import { Jumbotron, Button, Card, CardDeck, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap'
+import { Jumbotron, Button, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
@@ -35,7 +35,6 @@ const HomeHeader = (props) => {
                 I progress as a developer.<br />
                 Please feel free to look around and email me with any questions or suggestions.
             </p>
-          
         </Jumbotron>
       </div>
     );
@@ -54,6 +53,7 @@ class HomeCard extends React.Component{
                     </CardText>
                     <Button>
                         <a href={this.props.Link}
+                            className="Header"
                             target="_blank" 
                             rel="noopener noreferrer">
                             Deviant Art Profile
@@ -91,7 +91,7 @@ class Home extends Component {
                                         Link="https://www.deviantart.com/franknmullet"
                                     />
                                 </Col>
-                                <Col  sm={{ size: 4, order: 2, offset: 1 }}>
+                                <Col  sm={{ size: 4, order: 2, offset: 2 }}>
                                     <HomeCard 
                                         Title="Git Hub Repository"
                                         Image="../static/images/GitHub.png"

@@ -5,6 +5,7 @@ import Resume from './about_view/resumeview'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
 
+
 class Aboutpage extends React.Component {
   constructor(props) {
     super(props);
@@ -53,24 +54,7 @@ class Aboutpage extends React.Component {
             </Row>
           </TabPane>
           <TabPane tabId="2">
-            {/*<Row>
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </Col>
-              <Col sm="6">
-                <Card body>
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </Col>
-            </Row> */}
             <Row>
-                
                 <Col xl="auto" className="Fsize-1">
                 <Resume />
                 </Col>
@@ -81,7 +65,7 @@ class Aboutpage extends React.Component {
       </div>
     );
   }
-}
+} 
 
 /*
 class Tab extends Component {

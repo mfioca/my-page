@@ -47,7 +47,7 @@ class Footer extends React.Component {
                         </NavItem>
                         </Nav>
                         <Nav className="ml-auto" navbar>
-                        <NavItem className="ml-auto" navbar>
+                        <NavItem >
                         <NavLink href="mailto: mark@fioca.com">
                             Email
                         </NavLink>
