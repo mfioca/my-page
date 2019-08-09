@@ -6,11 +6,11 @@ class AboutMedia extends React.Component{
     render() {
         if (this.props.Align === "Right") {
         return (
-            <div>
+            <div className="p-3">
             <Card className="text-center">
                 <Row>
                     <Col >
-                    <CardImg className="AboutImg" src={this.props.ImgUrl} alt="Card image cap" />
+                    <CardImg className="AboutImg align-self-center mr-3" src={this.props.ImgUrl} alt="Card image cap" />
                     </Col>
                 <Col >
                 <CardTitle><h1>{this.props.Title}</h1></CardTitle>
@@ -27,7 +27,7 @@ class AboutMedia extends React.Component{
     }
     if (this.props.Align === "Left") {
         return (
-            <div>
+            <div className="p-3">
             <Card className="text-center">
                 <Row>
                     <Col >

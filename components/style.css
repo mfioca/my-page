@@ -33,11 +33,11 @@ body {
     font-size: 25px;
 }
 
-.center {
+.Text-Center {
     text-align: center;
 }
 
-.left {
+.Text-left {
     text-align: left;
 }
 
@@ -161,7 +161,6 @@ body {
     min-width: 150px;
     max-height: 250px;
     max-width: 250px;
-    
     padding: 5px;
 }
 
@@ -598,5 +597,50 @@ body {
   }
 
   .testwidth {
-      height: 90px;
+      height: 200px;
   }
+
+  .Hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+.Hr:after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+.hr-style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+.hr-style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+.hr-style-five {
+    border: 0;
+    height: 0; /* Firefox... */
+    box-shadow: 0 0 10px 1px black;
+}
+.hr-style-five:after {  /* Not really supposed to work, but does */
+    content: "\00a0";  /* Prevent margin collapse */
+}

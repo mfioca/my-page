@@ -2,67 +2,19 @@ import React, { Component } from 'react'
 import Layout from '../components/layout'
 import About from './about_view/aboutview'
 import Resume from './about_view/resumeview'
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
-import classnames from 'classnames';
+//import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+//import classnames from 'classnames';
 
 
 class Aboutpage extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      activeTab: '1'
-    };
-  }
-
-  toggle(tab) {
-    if (this.state.activeTab !== tab) {
-      this.setState({
-        activeTab: tab
-      });
-    }
-  }
+  
   render() {
     return (
-      <div>
-          <Layout>
-        <Nav tabs >
-          <NavItem>
-            <NavLink
-              className={classnames({ active: this.state.activeTab === '1' })}
-              onClick={() => { this.toggle('1'); }}
-            >
-              About
-            </NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink
-              className={classnames({ active: this.state.activeTab === '2' })}
-              onClick={() => { this.toggle('2'); }}
-            >
-              Resume
-            </NavLink>
-          </NavItem>
-        </Nav>
-        <TabContent activeTab={this.state.activeTab}>
-          <TabPane tabId="1">
-            <Row>
-              <Col sm="12">
-                <About />
-              </Col>
-            </Row>
-          </TabPane>
-          <TabPane tabId="2">
-            <Row>
-                <Col xl="auto" className="Fsize-1">
-                <Resume />
-                </Col>
-            </Row>
-          </TabPane>
-        </TabContent>
-        </Layout>
-      </div>
+      <Layout>
+        <About />
+        <hr className="hr-style-five m-5" />
+        <Resume />
+      </Layout>
     );
   }
 } 
