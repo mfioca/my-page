@@ -21,7 +21,8 @@
       "multi private-next-pages/tv_info/MyLayout.js": 17,
       "multi next/dist/pages/_app": 18,
       "multi next/dist/pages/_error": 19,
-      "multi next/dist/pages/_document": 20
+      "multi next/dist/pages/_document": 20,
+      "multi private-next-pages/provider_data/providerimport.js": 14
     },
     "usedIds": {
       "0": 0,
