@@ -22,3 +22,18 @@ export const AboutImg = {
     maxWidth: '250px',
     padding: '5px'  // check for boostrap equivilant
 };
+
+export const TvpageSearchBar = {
+    fontSize: '14px',
+    marginLeft: '200px',
+    marginRight: 'auto',
+    textAlign: 'center',
+
+}
+
+export const Center = {
+    marginRight: 'auto',
+    marginLeft: 'auto'
+}
+
+

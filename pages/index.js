@@ -17,7 +17,7 @@ function HomeHeader(props) {
                 and the React development structure.
           </p>
           <hr className="my-2" />
-            <p className="lead text-center"> 
+            <p className="text-center"> 
                 It is my intent to use this page as a professional page and portfolio as
                 I progress as a developer.<br />
                 Please feel free to look around and email me with any questions or suggestions.

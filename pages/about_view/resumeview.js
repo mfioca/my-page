@@ -54,7 +54,7 @@ class Resume extends React.Component {
                 </div>
                 <div>
                     <ThreeColumnCard
-                        Class="text-center bg-info text-white"
+                        Class="text-center bg-info text-white p-3"
                         Title="SOFTWARE IMPLEMENTATION AND SUPPORT"
                         Description1="Coordinated with network administrators and field monitors on supporting an Ipad
                             based vehicle inspection application from beta testing to full network implementation.
@@ -70,7 +70,7 @@ class Resume extends React.Component {
                             as well as intentional ways to cause errors."
                     />
                     <ThreeColumnCard
-                        Class="text-center bg-light text-dark"
+                        Class="text-center bg-light text-dark p-3"
                         Title="TECHNICAL WRITING"
                         Description1="Created online training modules for a new Operating System for a local cable and internet company.  
                             Converted MS word documentation to an online web based format utilizing HTML and RELAX NG Schema formatting.  
@@ -84,7 +84,7 @@ class Resume extends React.Component {
                             the highest level of customer service possible."
                     />
                     <ThreeColumnCard
-                        Class="text-center bg-primary text-white"
+                        Class="text-center bg-primary text-white p-3"
                         Title="CUSTOMER RELATIONS"
                         Description1="Managed a network of over 300 transportation providers and insured contract compliance of over 3000 driver, 
                             vehicle and insurance files.  Established the Georgia market as one of the top markets for contract compliance by working with providers, 

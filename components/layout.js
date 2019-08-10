@@ -12,6 +12,17 @@ export default function Layout(props) {
             {props.children}
           </div>
           <Footer />
+          <style jsx> {`
+        a:link, a:visited {
+            font-size: 14px;
+            color: #bbb8b8;
+        },
+        a:hover {
+          color: black;
+          
+        }
+    `}
+    </style>
         </div>
     );
 }

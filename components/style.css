@@ -115,7 +115,7 @@ body {
 **************************/
 
 .Header:link {
-    font-size: 20px;
+    font-size: 14px;
     color: #bbb8b8;
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 .Header:hover {
-    font-size: 20px;
+    font-size: 14px;
     color: black;
 }
 
@@ -324,6 +324,7 @@ body {
 }
 
 .tvbox {
+    font-size: 14px;
     display: flex;
     flex-wrap: wrap;
 }

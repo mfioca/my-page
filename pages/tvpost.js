@@ -7,9 +7,9 @@ const noimage = '/static/images/no-img.png';
 
 const tvPost = props => (
   <Layout>
-    <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
+    <h1 className="text-center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
     <Layout2>
-      <div className="Fsize-2">
+      <div >
         <h1>{props.show.name}</h1>
         <p><b>Type:</b> {props.show.type ? props.show.type : 'no data'}</p>
         <p><b>Premiered:</b> {props.show.premiered ? props.show.premiered : 'no data'}</p>

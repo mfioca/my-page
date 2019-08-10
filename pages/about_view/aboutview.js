@@ -5,7 +5,8 @@ class About extends React.Component {
     render() {
         return (
             <div>
-                <AboutMedia 
+                <AboutMedia
+                    Class="text-center bg-info text-white p-3"
                     Align="Right"
                     ImgUrl="../static/images/avatar.jpg"
                     Title="About"
@@ -16,7 +17,8 @@ class About extends React.Component {
                     to J. R. R. Tolkien and all the way to the historical facts behind the theories expressed 
                     in the TV show “Ancient Aliens”."
                 />
-                <AboutMedia 
+                <AboutMedia
+                    Class="text-center bg-info text-white p-3"
                     Align="Left"
                     ImgUrl="../static/images/building.png"
                     Title="Background"
@@ -25,7 +27,8 @@ class About extends React.Component {
                     and have seen things that are unforgetable.  Those experiences helped me 
                     expand my knowledge in movie, photo and audio editing and new knowledge and points of views about the world."
                 />
-                <AboutMedia 
+                <AboutMedia
+                    Class="text-center bg-info text-white p-3" 
                     Align="Right"
                     ImgUrl="../static/images/rainmeter.png"
                     Title="Computers and UI design"

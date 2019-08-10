@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button, Form, FormGroup, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
@@ -8,7 +9,6 @@ import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png';
 var Search = '';
-
 
 
 class Searchbar extends React.Component {
@@ -27,65 +27,54 @@ class Searchbar extends React.Component {
 
   render() {
     return (
-      <div className="Tvpagesearch-bar Fsize-1">
-        {/* currentl does not have on submit or entery key function to push link to 
-          page for api call to render*/}
-        <form>
-          <label>
-            TV Show search by Name:
-            <input type="text" 
-            value={this.state.value} 
-            onChange={this.enterSearch} 
-            //Prevent enter key submit
-            onKeyPress={event => {
-              if (event.which === 13 /* Enter */) {
-                event.preventDefault();
-              }
-            }}
+      <div className="d-flex justify-content-center ">
+        <Form inline>
+          <FormGroup >
+            <Label className="mr-sm-2">TV Show search by Name:</Label>
+            <Input
+              type="text"
+              value={this.state.value} 
+              onChange={this.enterSearch} 
+              //Prevent enter key submit
+              onKeyPress={event => {
+                if (event.which === 13 /* Enter */) {
+                  event.preventDefault();
+                }
+              }}
             />
-          </label>
+          </FormGroup>
           {/*due to get initial props async function is only called on page load
             disguised a page link as a search button to call value of search for 
             the await fetch api call.*/}
-          <button>
+          <Button className="ml-4 btn-dark">
             <Link href="/tvpage">
-              <a>Click Submit</a>
+              <a className="btn-dark w-100">Click Submit</a>
             </Link>
-          </button>
-        </form>
+          </Button>
+        </Form>
       </div>
     );
   }
 }
 
-
 const TvPage = props => (
   <Layout>
-    <h1 className="center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
+    <h1 className="text-center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
      <Searchbar />
      <Layout2>
         <h1>Results for: {Search}</h1>
-        {/* was original code from next.js tutorial.
-          <ul>
+          <div className="d-flex flex-wrap justify-content-center">
             {props.shows.map(show => (
-              <li key={show.id}>
-                <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
-                  <a>{show.name}</a>
-                </Link>
-              </li>
-              ))}
-            </ul>
-            */}
-          <div className="tvbox Fsize-2">
-            {/*Search results display inlucing show name and image.
-              uses map key to render all results. */}
-            {props.shows.map(show => (
-              <div key={show.id}>
-                <p>
-                 <Link as={`/p/${show.id}`} href={`/tvpost?id=${show.id}`}>
-                  <a>{show.name}<br /><br /><img className="tvbox-img" src={show.image ? show.image.medium : noimage} alt="no image"/></a>
-                </Link>
-                </p>
+              <div className="p-3 text-center" key={show.id}>
+                  <Card>
+                    <CardTitle className="my-4"><b><u>{show.name}</u></b></CardTitle>
+                    <CardBody>
+                    <CardImg className="px-2" src={show.image ? show.image.medium : noimage} alt="image" />
+                    </CardBody>
+                      <Link href={`/tvpost?id=${show.id}`}>
+                      <a className="btn btn-dark w-100">Select</a>
+                      </Link>
+                  </Card>
               </div>
               ))}
           </div>

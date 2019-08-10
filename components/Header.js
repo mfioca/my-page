@@ -1,7 +1,8 @@
 import React from 'react';
-import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu,  Button } from 'reactstrap';
 
 var activeprofile = ''; 
+
 
 class Header extends React.Component {
 constructor(props) {
@@ -34,21 +35,13 @@ constructor(props) {
                                 <DropdownToggle nav caret >
                                     Projects
                                 </DropdownToggle>
-                                <DropdownMenu right className="bg-dark">
-                                    <DropdownItem>
-                                        <a className="Header" href="/tvpage">TvMaze</a>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <a  className="Header" href="/DandDpage">DandD</a>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <a className="Header" href="/ProviderData">Provider List</a>
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        {activeprofile === 'Guest' &&
-                                            <a className="Header" href="/test">Test</a> 
-                                        }
-                                    </DropdownItem>
+                                <DropdownMenu right className="bg-dark btn-dark">
+                                    <Button className="btn-dark w-100" href="/tvpage">TvMaze</Button>
+                                    <Button className="btn-dark w-100" href="/DandDpage">DandD</Button>
+                                    <Button className="btn-dark w-100" href="/ProviderData">Provider List</Button>
+                                    {activeprofile === 'Guest' &&
+                                        <Button className="btn-dark w-100" href="/test">Test</Button> 
+                                    }
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Nav>
