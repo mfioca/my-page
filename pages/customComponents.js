@@ -10,8 +10,10 @@ import {AboutImg, CardImageStyle } from './jsxstyles'
 *   Export Classes       * 
 **************************/
 
+export { AboutMedia, SingleListCard, ThreeColumnCard, HomeCard}
+
 //used in about page
-export class AboutMedia extends React.Component{
+class AboutMedia extends React.Component{
     render() {
         if (this.props.Align === "Right") {
             return (
@@ -59,7 +61,7 @@ export class AboutMedia extends React.Component{
 }
 
 //used in about page for resume
-export class SingleListCard extends React.Component{
+class SingleListCard extends React.Component{
     render() {
         return (
             <div>
@@ -82,7 +84,7 @@ export class SingleListCard extends React.Component{
 };
 
 //used in resume for experience section
-export class ThreeColumnCard extends React.Component{
+class ThreeColumnCard extends React.Component{
     render() {
         return(
             <div className="p-3">
@@ -124,7 +126,7 @@ export class ThreeColumnCard extends React.Component{
 }
 
 //used in home page
-export class HomeCard extends React.Component{
+class HomeCard extends React.Component{
     render() {
         return (
             <div>

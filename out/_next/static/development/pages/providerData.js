@@ -22560,7 +22560,7 @@ function (_Component) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 5:
 /*!*********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FproviderData&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5CproviderData.js ***!
   \*********************************************************************************************************************************************************/
@@ -22583,5 +22583,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[5,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=providerData.js.map

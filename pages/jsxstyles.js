@@ -1,19 +1,19 @@
+export { AvatarStyle, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle}
 
-
-export const AvatarStyle = {
+const AvatarStyle = {
     borderRadius: '50%',
     width: '20%',
     height: 'auto'
 };
 
-export const CardImageStyle = {
+const CardImageStyle = {
     width: '50%',
     height: 'auto',
     marginRight: 'auto',
     marginLeft: 'auto'
 }
 
-export const AboutImg = {
+const AboutImg = {
     width: '70%',
     height: 'auto',
     minHeight: '150px',
@@ -25,7 +25,7 @@ export const AboutImg = {
 
 
 //TvMaze Page
-export const TvpageSearchBar = {
+const TvpageSearchBar = {
     fontSize: '14px',
     marginLeft: '200px',
     marginRight: 'auto',
@@ -33,12 +33,12 @@ export const TvpageSearchBar = {
 
 }
 
-export const TvImage = {
+const TvImage = {
     height: '300px',
     width: 'auto'
 }
 
-export const TvTitle = {
+const TvTitle = {
     height: '20px',
     width: '200px',
     margin: 4

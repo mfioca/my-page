@@ -1,6 +1,7 @@
+export { setherostats, SetheroConstAdj, SetheroacAdj, SetheroDmgAdj, SetheroHitAdj, heroattackroll, }
 
 //sets hero hitpoints based on constitution stat number.
-export function SetheroConstAdj() {
+function SetheroConstAdj() {
     if (this.state.herostats.Const == 1) {
         return -3;
     }
@@ -34,7 +35,7 @@ export function SetheroConstAdj() {
 };
 
 //sets hero Armorclass based on dexterity stat number.
-export function SetheroacAdj() {
+function SetheroacAdj() {
     if (this.state.herostats.Dext == 1 || this.state.herostats.Dext == 2) {
         return -5;
     }
@@ -71,7 +72,7 @@ export function SetheroacAdj() {
 }
 
 //sets hero damage based on strength stat number.
-export function SetheroDmgAdj() {
+function SetheroDmgAdj() {
     if (this.state.herostats.Str == 1) {
         return -4;
     }
@@ -102,7 +103,7 @@ export function SetheroDmgAdj() {
 }
 
 //sets hero hit adjustment based on strength stat number.
-export function SetheroHitAdj() {
+function SetheroHitAdj() {
     if (this.state.herostats.Str == 1) {
         return -4;
     }
@@ -133,7 +134,7 @@ export function SetheroHitAdj() {
 }
 
 //sets stats including base role 1-20 than applies above functions.
-export function setherostats() {
+function setherostats() {
     //performs a 1-20 roll for every item in the "herostats" object/state
     for (let key in this.state.herostats) {
         this.state.herostats[key] = Math.floor((Math.random() * 20) + 1);
@@ -150,7 +151,7 @@ export function setherostats() {
 /* determins if the hero successfully hits the monster.  adjusts for monster
 armor class and hero hit adjustment.  on successful attack role, applies damage
 to monster hp and if hp reaches zero alerts that monster is dead */
-export function heroattackroll() {
+function heroattackroll() {
     //1-20 for attack roll to see if hero hits
     this.setState ({heroRoll: Math.floor((Math.random() * 20) + 1)});
     //if hero hit, set display to show "hit"
