@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, Form, FormGroup, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
+import { TvImage, TvTitle } from './jsxstyles'
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
@@ -63,13 +64,13 @@ const TvPage = props => (
      <Searchbar />
      <Layout2>
         <h1>Results for: {Search}</h1>
-          <div className="d-flex flex-wrap justify-content-center">
+          <div className="d-flex flex-wrap justify-content-left">
             {props.shows.map(show => (
               <div className="p-3 text-center" key={show.id}>
                   <Card>
-                    <CardTitle className="my-4"><b><u>{show.name}</u></b></CardTitle>
+                    <CardTitle className="m-4 text-center" style={TvTitle}><b><u>{show.name}</u></b></CardTitle>
                     <CardBody>
-                    <CardImg className="px-2" src={show.image ? show.image.medium : noimage} alt="image" />
+                    <CardImg className="px-2" style={TvImage} src={show.image ? show.image.medium : noimage} alt="image" />
                     </CardBody>
                       <Link href={`/tvpost?id=${show.id}`}>
                       <a className="btn btn-dark w-100">Select</a>

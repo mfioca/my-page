@@ -23,6 +23,8 @@ export const AboutImg = {
     padding: '5px'  // check for boostrap equivilant
 };
 
+
+//TvMaze Page
 export const TvpageSearchBar = {
     fontSize: '14px',
     marginLeft: '200px',
@@ -31,9 +33,15 @@ export const TvpageSearchBar = {
 
 }
 
-export const Center = {
-    marginRight: 'auto',
-    marginLeft: 'auto'
+export const TvImage = {
+    height: '300px',
+    width: 'auto'
+}
+
+export const TvTitle = {
+    height: '20px',
+    width: '200px',
+    margin: 4
 }
 
 
