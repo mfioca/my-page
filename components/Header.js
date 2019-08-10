@@ -38,7 +38,7 @@ constructor(props) {
                                 <DropdownMenu right className="bg-dark btn-dark">
                                     <Button className="btn-dark w-100" href="/tvpage">TvMaze</Button>
                                     <Button className="btn-dark w-100" href="/DandDpage">DandD</Button>
-                                    <Button className="btn-dark w-100" href="/ProviderData">Provider List</Button>
+                                    <Button className="btn-dark w-100" href="/providerData">Provider List</Button>
                                     {activeprofile === 'Guest' &&
                                         <Button className="btn-dark w-100" href="/test">Test</Button> 
                                     }
