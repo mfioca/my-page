@@ -35,7 +35,7 @@ const tvPost = props => (
                 target="_blank"
                 rel="noopener noreferrer"
                 title={props.show.url}>
-            {props.show.url ? props.show.url : 'null'}
+            {props.show.name ? props.show.name : 'null'} 
             </a>
           </small>
         </h3>

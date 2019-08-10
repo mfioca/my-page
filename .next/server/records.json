@@ -5,13 +5,13 @@
       "multi private-next-pages/customComponents.js": 1,
       "multi private-next-pages/DandDpage.js": 2,
       "multi private-next-pages/index.js": 3,
-      "multi private-next-pages/providerData.js": 4,
-      "multi private-next-pages/jsxstyles.js": 5,
+      "multi private-next-pages/jsxstyles.js": 4,
+      "multi private-next-pages/providerData.js": 5,
       "multi private-next-pages/test.js": 6,
       "multi private-next-pages/tvpage.js": 7,
       "multi private-next-pages/tvpost.js": 8,
-      "multi private-next-pages/about_view/aboutview.js": 9,
-      "multi private-next-pages/about_view/resumeview.js": 10,
+      "multi private-next-pages/about_view/resumeview.js": 9,
+      "multi private-next-pages/about_view/aboutview.js": 10,
       "multi private-next-pages/DandD/attacksim.js": 11,
       "multi private-next-pages/DandD/herofunctions.js": 12,
       "multi private-next-pages/DandD/monsterfunctions.js": 13,
@@ -21,8 +21,7 @@
       "multi private-next-pages/tv_info/MyLayout.js": 17,
       "multi next/dist/pages/_app": 18,
       "multi next/dist/pages/_error": 19,
-      "multi next/dist/pages/_document": 20,
-      "multi private-next-pages/provider_data/providerimport.js": 14
+      "multi next/dist/pages/_document": 20
     },
     "usedIds": {
       "0": 0,
