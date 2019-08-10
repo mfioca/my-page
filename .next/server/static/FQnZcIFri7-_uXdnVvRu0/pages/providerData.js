@@ -1112,8 +1112,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_table__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__("qBGJ");
 /* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_table_react_table_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _provider_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__("ErfQ");
-var _provider_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_require__.t("ErfQ", 1);
 
 
 
@@ -1122,13 +1120,14 @@ var _provider_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpa
 
 
 
- //var data = require('./provider.json');
 
+var data = __webpack_require__("ErfQ");
 /*counts number of Region types there are in the json
 const uniqueNames = new Set(data.map(item => item.Region)).size;
 */
 //Function for case insensitivity allowing for more flexibility on filter results based
 //on user input.
+
 
 function filterCaseInsensitive(filter, row) {
   var id = filter.pivotId || filter.id;
@@ -1151,7 +1150,7 @@ var customFilter = function customFilter(_ref) {
     value: filter ? filter.value : ''
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("option", {
     value: ""
-  }, "Show All"), _provider_json__WEBPACK_IMPORTED_MODULE_8__.map(function (item) {
+  }, "Show All"), data.map(function (item) {
     return item[fieldName];
   }).filter(function (item, i, s) {
     return s.lastIndexOf(item) == i;
@@ -1177,7 +1176,7 @@ function (_Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__[/* default */ "a"])(ProviderList, [{
     key: "render",
     value: function render() {
-      return _provider_json__WEBPACK_IMPORTED_MODULE_8__ ? this.renderData(_provider_json__WEBPACK_IMPORTED_MODULE_8__) : this.renderLoading();
+      return data ? this.renderData(data) : this.renderLoading();
     }
   }, {
     key: "renderData",

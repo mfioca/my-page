@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import ReactTable from 'react-table';
 import "react-table/react-table.css";
-import data from './provider.json'
 
-//var data = require('./provider.json');
+
+var data = require('./provider.json');
 
 
 
