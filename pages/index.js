@@ -1,23 +1,10 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
-import { Jumbotron, Button, Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Container, Row, Col } from 'reactstrap'
-import 'bootstrap/dist/css/bootstrap.min.css'
+import { Jumbotron, Container, Row, Col } from 'reactstrap'
+import { AvatarStyle } from './jsxstyles'
+import { HomeCard } from './customComponents'
 
-
-const AvatarStyle = {
-    borderRadius: '50%',
-    width: '20%',
-    height: 'auto'
-};
-
-const CardImageStyle = {
-    width: '50%',
-    height: 'auto',
-    marginRight: 'auto',
-    marginLeft: 'auto'
-}
-
-const HomeHeader = (props) => {
+function HomeHeader(props) {
     return (
       <div>
         <Jumbotron>
@@ -38,32 +25,6 @@ const HomeHeader = (props) => {
         </Jumbotron>
       </div>
     );
-  };
-
-class HomeCard extends React.Component{
-    render() {
-    return (
-        <div>
-            <Card className="text-center">
-                <CardTitle>{this.props.Title}</CardTitle>
-                <CardImg top style={CardImageStyle} src={this.props.Image} alt="Card image cap" />
-                <CardBody>
-                    <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
-                    <CardText>{this.props.Description}
-                    </CardText>
-                    <Button>
-                        <a href={this.props.Link}
-                            className="Header"
-                            target="_blank" 
-                            rel="noopener noreferrer">
-                            Deviant Art Profile
-                        </a>
-                    </Button>
-                </CardBody>
-            </Card> 
-        </div>
-    );
-    }
 };
 
 
@@ -89,6 +50,7 @@ class Home extends Component {
                                         Description="I created a 45+
                                             skin desktop theme based on the Bethesda Game 'The Elder Scrolls V: Skyrim'."
                                         Link="https://www.deviantart.com/franknmullet"
+                                        ButtonTitle="Deviant"
                                     />
                                 </Col>
                                 <Col  sm={{ size: 4, order: 2, offset: 2 }}>
@@ -99,6 +61,7 @@ class Home extends Component {
                                         Description="I have this page published on my GitHub profile.  You can click on
                                         the below link to check out the base code"
                                         Link="https://github.com/mfioca/my-page"
+                                        ButtonTitle="GitHub"
                                     />
                                 </Col>
                             </Row>
