@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Layout from '../components/layout.js';
-import ProviderList from './provider_data/providerimport.js';
+import ProviderList from './provider_data/providerImport.js';
 
 
 var data = require('./provider_data/provider.json');
