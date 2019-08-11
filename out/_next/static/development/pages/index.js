@@ -338,7 +338,7 @@ function (_React$Component) {
         __self: this
       }, "DandD"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
         className: "btn-dark w-100",
-        href: "/ProviderData",
+        href: "/providerData",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 41
@@ -18677,7 +18677,7 @@ module.exports = warning;
 /*!***********************************!*\
   !*** ./pages/customComponents.js ***!
   \***********************************/
-/*! exports provided: AboutMedia, SingleListCard, ThreeColumnCard, HomeCard */
+/*! exports provided: AboutMedia, SingleListCard, ThreeColumnCard, HomeCard, JumbonoImage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18686,6 +18686,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SingleListCard", function() { return SingleListCard; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThreeColumnCard", function() { return ThreeColumnCard; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeCard", function() { return HomeCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "JumbonoImage", function() { return JumbonoImage; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
@@ -18702,22 +18703,71 @@ __webpack_require__.r(__webpack_exports__);
 
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\customComponents.js";
 
-
 /* **************** 
 *   Imports       * 
 ******************/
+
 
 
 /* *********************** 
 *   Export Classes       * 
 **************************/
 
- //used in about page
+ //used in Resumeview and providerdata
+
+var JumbonoImage =
+/*#__PURE__*/
+function (_React$Component) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(JumbonoImage, _React$Component);
+
+  function JumbonoImage() {
+    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, JumbonoImage);
+
+    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(JumbonoImage).apply(this, arguments));
+  }
+
+  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(JumbonoImage, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Jumbotron"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        className: "display-3 text-center",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "lead",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, this.props.Caption1), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("hr", {
+        className: "my-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }), this.props.Caption2);
+    }
+  }]);
+
+  return JumbonoImage;
+}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component); //used in about page
+
 
 var AboutMedia =
 /*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(AboutMedia, _React$Component);
+function (_React$Component2) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(AboutMedia, _React$Component2);
 
   function AboutMedia() {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, AboutMedia);
@@ -18733,26 +18783,26 @@ function (_React$Component) {
           className: "p-3",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 20
+            lineNumber: 32
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 21
+            lineNumber: 33
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 22
+            lineNumber: 34
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 23
+            lineNumber: 35
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardImg"], {
@@ -18761,37 +18811,37 @@ function (_React$Component) {
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 24
+            lineNumber: 36
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 26
+            lineNumber: 38
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 39
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 27
+            lineNumber: 39
           },
           __self: this
         }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 28
+            lineNumber: 40
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 29
+            lineNumber: 41
           },
           __self: this
         }, this.props.Description))))));
@@ -18802,56 +18852,56 @@ function (_React$Component) {
           className: "p-3",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 53
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 42
+            lineNumber: 54
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 43
+            lineNumber: 55
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 44
+            lineNumber: 56
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 57
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 45
+            lineNumber: 57
           },
           __self: this
         }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 46
+            lineNumber: 58
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 59
           },
           __self: this
         }, this.props.Description))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 52
+            lineNumber: 64
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardImg"], {
@@ -18860,7 +18910,7 @@ function (_React$Component) {
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 65
           },
           __self: this
         })))));
@@ -18876,8 +18926,8 @@ function (_React$Component) {
 
 var SingleListCard =
 /*#__PURE__*/
-function (_React$Component2) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(SingleListCard, _React$Component2);
+function (_React$Component3) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(SingleListCard, _React$Component3);
 
   function SingleListCard() {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, SingleListCard);
@@ -18891,62 +18941,62 @@ function (_React$Component2) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 79
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
         className: "Text-Left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 80
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 81
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardSubtitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 70
+          lineNumber: 82
         },
         __self: this
       }, this.props.Subtitle), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 83
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 84
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 85
         },
         __self: this
       }, this.props.Item1), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 74
+          lineNumber: 86
         },
         __self: this
       }, this.props.Item2), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 75
+          lineNumber: 87
         },
         __self: this
       }, this.props.Item3), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 76
+          lineNumber: 88
         },
         __self: this
       }, this.props.Item4))))));
@@ -18960,8 +19010,8 @@ function (_React$Component2) {
 
 var ThreeColumnCard =
 /*#__PURE__*/
-function (_React$Component3) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(ThreeColumnCard, _React$Component3);
+function (_React$Component4) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(ThreeColumnCard, _React$Component4);
 
   function ThreeColumnCard() {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, ThreeColumnCard);
@@ -18976,105 +19026,105 @@ function (_React$Component3) {
         className: "p-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 102
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
         className: this.props.Class,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 104
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92
+          lineNumber: 104
         },
         __self: this
       }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
         className: "text-left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 106
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 107
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96
+          lineNumber: 108
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 109
         },
         __self: this
       }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 115
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 116
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 117
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 118
         },
         __self: this
       }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 124
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 125
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 114
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 127
         },
         __self: this
       }, this.props.Description3)))))));
@@ -19087,8 +19137,8 @@ function (_React$Component3) {
 
 var HomeCard =
 /*#__PURE__*/
-function (_React$Component4) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(HomeCard, _React$Component4);
+function (_React$Component5) {
+  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(HomeCard, _React$Component5);
 
   function HomeCard() {
     Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, HomeCard);
@@ -19102,20 +19152,20 @@ function (_React$Component4) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 144
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
         className: "text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 146
         },
         __self: this
       }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardImg"], {
@@ -19125,31 +19175,31 @@ function (_React$Component4) {
         alt: "Card image cap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 147
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 148
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardSubtitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137
+          lineNumber: 149
         },
         __self: this
       }, this.props.Subtitle), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 150
         },
         __self: this
       }, this.props.Description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 152
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -19159,7 +19209,7 @@ function (_React$Component4) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 153
         },
         __self: this
       }, this.props.ButtonTitle)))));

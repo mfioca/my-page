@@ -1,8 +1,8 @@
 /* **************** 
 *   Imports       * 
 ******************/
-
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col,  Button } from 'reactstrap'
+import React from 'react'
+import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col, Button, Jumbotron } from 'reactstrap'
 import {AboutImg, CardImageStyle } from './jsxstyles'
 
 
@@ -10,8 +10,20 @@ import {AboutImg, CardImageStyle } from './jsxstyles'
 *   Export Classes       * 
 **************************/
 
-export { AboutMedia, SingleListCard, ThreeColumnCard, HomeCard}
+export { AboutMedia, SingleListCard, ThreeColumnCard, HomeCard, JumbonoImage }
 
+//used in Resumeview and providerdata
+class JumbonoImage extends React.Component {
+    render() {
+        return (
+            <Jumbotron>
+            <h1 className="display-3 text-center">{this.props.Title}</h1>
+            <p className="lead">{this.props.Caption1}</p>
+            <hr className="my-2" />{this.props.Caption2}
+            </Jumbotron>
+        );
+    }
+}
 //used in about page
 class AboutMedia extends React.Component{
     render() {

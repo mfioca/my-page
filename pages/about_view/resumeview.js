@@ -1,32 +1,23 @@
 import React from 'react'
-import { Jumbotron, Container, Row, Col } from 'reactstrap';
-import { SingleListCard, ThreeColumnCard } from '../customComponents'
+import { Container, Row, Col } from 'reactstrap';
+import { SingleListCard, ThreeColumnCard, JumbonoImage } from '../customComponents'
 
-function ResumeJumbo(props) {
-    return (
-        <div>
-        <Jumbotron>
-          <h1 className="display-3 text-center">Professional Experience</h1>
-          <p className="lead">Dedicated and motivated professional looking to apply my accumulated experience in 
-                            technical writing and training in mixed customer relations roles and into an IT based career. 
-                            Expertise in customer service, communication, analytical thinking and problem solving to achieve goals.</p>
-          <hr className="my-2" />
-          <p><b>Computer Skills:</b>
-                Windows and OSX, Microsoft Office with advanced excel functions and
-                macro scripting, Lotus Notes, Maximo Enterprise Suite, Audacity, Photoshop, 
-                Gimp, Eclipse, Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,
-                beginner knowledge in REACT and Java/JavaScript.</p>
-        </Jumbotron>
-      </div>
-    );
-}
 
 
 class Resume extends React.Component {
     render() {
         return (
             <div>
-                <ResumeJumbo />
+                <JumbonoImage 
+                    Title="Professional Experience"
+                    Caption1="Dedicated and motivated professional looking to apply my accumulated experience in 
+                    technical writing and training in mixed customer relations roles and into an IT based career. 
+                    Expertise in customer service, communication, analytical thinking and problem solving to achieve goals."
+                    Caption2="COMPUTER SKILLS: Windows and OSX, Microsoft Office with advanced excel functions and
+                    macro scripting, Lotus Notes, Maximo Enterprise Suite, Audacity, Photoshop, 
+                    Gimp, Eclipse, Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,
+                    beginner knowledge in REACT and Java/JavaScript."
+                />
                 <div className="Text-Center">
                     <h1><u>Core Skills</u></h1>
                 </div>

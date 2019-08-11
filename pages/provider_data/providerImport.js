@@ -3,6 +3,7 @@ import ReactTable from 'react-table';
 import "react-table/react-table.css";
 
 
+
 var data = require('./provider.json');
 
 
@@ -203,8 +204,8 @@ class ProviderList extends Component {
 
           return (
             <div className="main-grid">
-                <div className="Fsize-2">
-                  <span className="records-info">{recordsInfoText}</span>
+                <div>
+                  <span className="records-info h3">{recordsInfoText}</span>
                 </div>
               {makeTable()}
             </div>
