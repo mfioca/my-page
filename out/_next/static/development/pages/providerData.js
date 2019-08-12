@@ -21537,7 +21537,7 @@ function (_React$Component) {
         },
         __self: this
       }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
-        className: "lead",
+        className: "lead text-center",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 21
@@ -21550,7 +21550,14 @@ function (_React$Component) {
           lineNumber: 22
         },
         __self: this
-      }), this.props.Caption2);
+      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: this.props.noonewouldeverusethisname,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, this.props.Caption2));
     }
   }]);
 
@@ -21577,26 +21584,26 @@ function (_React$Component2) {
           className: "p-3",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 32
+            lineNumber: 33
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 33
+            lineNumber: 34
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 34
+            lineNumber: 35
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 35
+            lineNumber: 36
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardImg"], {
@@ -21605,37 +21612,37 @@ function (_React$Component2) {
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 36
+            lineNumber: 37
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 38
+            lineNumber: 39
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 40
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 39
+            lineNumber: 40
           },
           __self: this
         }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 40
+            lineNumber: 41
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 41
+            lineNumber: 42
           },
           __self: this
         }, this.props.Description))))));
@@ -21646,56 +21653,56 @@ function (_React$Component2) {
           className: "p-3",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 53
+            lineNumber: 54
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 54
+            lineNumber: 55
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 55
+            lineNumber: 56
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 56
+            lineNumber: 57
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 58
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 57
+            lineNumber: 58
           },
           __self: this
         }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 58
+            lineNumber: 59
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 59
+            lineNumber: 60
           },
           __self: this
         }, this.props.Description))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 64
+            lineNumber: 65
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardImg"], {
@@ -21704,7 +21711,7 @@ function (_React$Component2) {
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 65
+            lineNumber: 66
           },
           __self: this
         })))));
@@ -21735,62 +21742,62 @@ function (_React$Component3) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 80
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
         className: "Text-Left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 81
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 82
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardSubtitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 83
         },
         __self: this
       }, this.props.Subtitle), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 84
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 84
+          lineNumber: 85
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 86
         },
         __self: this
       }, this.props.Item1), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 87
         },
         __self: this
       }, this.props.Item2), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 88
         },
         __self: this
       }, this.props.Item3), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88
+          lineNumber: 89
         },
         __self: this
       }, this.props.Item4))))));
@@ -21820,105 +21827,105 @@ function (_React$Component4) {
         className: "p-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
         className: this.props.Class,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103
+          lineNumber: 104
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 105
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 105
         },
         __self: this
       }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
         className: "text-left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 106
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 107
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 108
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 109
         },
         __self: this
-      }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 110
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
+      }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 116
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 117
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 118
         },
         __self: this
-      }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 119
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
+      }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 125
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 126
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 127
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 128
         },
         __self: this
       }, this.props.Description3)))))));
@@ -21946,20 +21953,20 @@ function (_React$Component5) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 145
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Card"], {
         className: "text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 146
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardTitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 147
         },
         __self: this
       }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardImg"], {
@@ -21969,31 +21976,31 @@ function (_React$Component5) {
         alt: "Card image cap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 148
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 149
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardSubtitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 149
+          lineNumber: 150
         },
         __self: this
       }, this.props.Subtitle), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["CardText"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150
+          lineNumber: 151
         },
         __self: this
       }, this.props.Description), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 153
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
@@ -22003,7 +22010,7 @@ function (_React$Component5) {
         rel: "noopener noreferrer",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 154
         },
         __self: this
       }, this.props.ButtonTitle)))));
@@ -22021,19 +22028,19 @@ function (_React$Component5) {
 /*!****************************!*\
   !*** ./pages/jsxstyles.js ***!
   \****************************/
-/*! exports provided: AvatarStyle, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle */
+/*! exports provided: HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AvatarStyle", function() { return AvatarStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeImage", function() { return HomeImage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardImageStyle", function() { return CardImageStyle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutImg", function() { return AboutImg; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvpageSearchBar", function() { return TvpageSearchBar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvImage", function() { return TvImage; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvTitle", function() { return TvTitle; });
 
-var AvatarStyle = {
+var HomeImage = {
   borderRadius: '50%',
   width: '20%',
   height: 'auto'
@@ -22045,14 +22052,9 @@ var CardImageStyle = {
   marginLeft: 'auto'
 };
 var AboutImg = {
-  width: '70%',
-  height: 'auto',
-  minHeight: '150px',
-  minWidth: '150px',
-  maxHeight: '250px',
-  maxWidth: '250px',
-  padding: '5px' // check for boostrap equivilant
-
+  width: '300px',
+  height: '300px',
+  padding: '5px'
 }; //TvMaze Page
 
 var TvpageSearchBar = {
@@ -22129,39 +22131,39 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 21
+          lineNumber: 20
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 22
+          lineNumber: 21
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
         className: "px-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 22
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "text-center p-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("u", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 23
         },
         __self: this
       }, "Provider Totals"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Table"], {
@@ -22170,51 +22172,51 @@ function (_React$Component) {
         size: "sm",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tbody", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 26
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         className: "text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 27
         },
         __self: this
       }, "Total Transportation Providers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 28
         },
         __self: this
       }, data.length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 30
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 31
         },
         __self: this
       }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 32
         },
         __self: this
       }, data.filter(function (data) {
@@ -22222,20 +22224,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 34
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 36
+          lineNumber: 35
         },
         __self: this
       }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 36
         },
         __self: this
       }, data.filter(function (data) {
@@ -22243,20 +22245,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
+          lineNumber: 38
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         className: "text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 39
         },
         __self: this
       }, "Central Region Providers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 40
         },
         __self: this
       }, data.filter(function (data) {
@@ -22264,20 +22266,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 42
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 43
         },
         __self: this
       }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45
+          lineNumber: 44
         },
         __self: this
       }, data.filter(function (data) {
@@ -22285,20 +22287,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 46
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 48
+          lineNumber: 47
         },
         __self: this
       }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 48
         },
         __self: this
       }, data.filter(function (data) {
@@ -22306,20 +22308,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 50
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         className: "text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52
+          lineNumber: 51
         },
         __self: this
       }, "SouthWest Region:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 53
+          lineNumber: 52
         },
         __self: this
       }, data.filter(function (data) {
@@ -22327,20 +22329,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 55
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56
+          lineNumber: 55
         },
         __self: this
       }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 57
+          lineNumber: 56
         },
         __self: this
       }, data.filter(function (data) {
@@ -22348,20 +22350,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 59
+          lineNumber: 58
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 59
         },
         __self: this
       }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61
+          lineNumber: 60
         },
         __self: this
       }, " ", data.filter(function (data) {
@@ -22369,20 +22371,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63
+          lineNumber: 62
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         className: "text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 64
+          lineNumber: 63
         },
         __self: this
       }, "East Region:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65
+          lineNumber: 64
         },
         __self: this
       }, data.filter(function (data) {
@@ -22390,20 +22392,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 67
+          lineNumber: 66
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 68
+          lineNumber: 67
         },
         __self: this
       }, "Transportation Companies:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 69
+          lineNumber: 68
         },
         __self: this
       }, data.filter(function (data) {
@@ -22411,20 +22413,20 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 71
+          lineNumber: 70
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         className: "text-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 72
+          lineNumber: 71
         },
         __self: this
       }, "Volunteer Drivers:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 73
+          lineNumber: 72
         },
         __self: this
       }, data.filter(function (data) {
@@ -22433,26 +22435,26 @@ function (_React$Component) {
         className: "px-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78
+          lineNumber: 77
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "text-center p-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 78
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 78
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("u", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79
+          lineNumber: 78
         },
         __self: this
       }, "Level of Service Totals"))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Table"], {
@@ -22461,45 +22463,45 @@ function (_React$Component) {
         size: "sm",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80
+          lineNumber: 79
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tbody", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81
+          lineNumber: 80
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 82
+          lineNumber: 81
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         colspan: "2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83
+          lineNumber: 82
         },
         __self: this
       }, "All Regions")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 85
+          lineNumber: 84
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86
+          lineNumber: 85
         },
         __self: this
       }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         colspan: "2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 86
         },
         __self: this
       }, data.filter(function (data) {
@@ -22507,19 +22509,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89
+          lineNumber: 88
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90
+          lineNumber: 89
         },
         __self: this
       }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91
+          lineNumber: 90
         },
         __self: this
       }, data.filter(function (data) {
@@ -22527,19 +22529,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 93
+          lineNumber: 92
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94
+          lineNumber: 93
         },
         __self: this
       }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 95
+          lineNumber: 94
         },
         __self: this
       }, data.filter(function (data) {
@@ -22547,32 +22549,32 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97
+          lineNumber: 96
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         colspan: "2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98
+          lineNumber: 97
         },
         __self: this
       }, "Central")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 100
+          lineNumber: 99
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101
+          lineNumber: 100
         },
         __self: this
       }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102
+          lineNumber: 101
         },
         __self: this
       }, data.filter(function (data) {
@@ -22580,19 +22582,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 104
+          lineNumber: 103
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 105
+          lineNumber: 104
         },
         __self: this
       }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 106
+          lineNumber: 105
         },
         __self: this
       }, data.filter(function (data) {
@@ -22600,19 +22602,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 108
+          lineNumber: 107
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109
+          lineNumber: 108
         },
         __self: this
       }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110
+          lineNumber: 109
         },
         __self: this
       }, data.filter(function (data) {
@@ -22620,32 +22622,32 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 112
+          lineNumber: 111
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         colspan: "2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113
+          lineNumber: 112
         },
         __self: this
       }, "SouthWest")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115
+          lineNumber: 114
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116
+          lineNumber: 115
         },
         __self: this
       }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 117
+          lineNumber: 116
         },
         __self: this
       }, data.filter(function (data) {
@@ -22653,19 +22655,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 119
+          lineNumber: 118
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 120
+          lineNumber: 119
         },
         __self: this
       }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 121
+          lineNumber: 120
         },
         __self: this
       }, data.filter(function (data) {
@@ -22673,19 +22675,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 123
+          lineNumber: 122
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 124
+          lineNumber: 123
         },
         __self: this
       }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 125
+          lineNumber: 124
         },
         __self: this
       }, data.filter(function (data) {
@@ -22693,32 +22695,32 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("th", {
         colspan: "2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 127
         },
         __self: this
       }, "East")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 129
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 130
         },
         __self: this
       }, "Providers with Ambulatory:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132
+          lineNumber: 131
         },
         __self: this
       }, data.filter(function (data) {
@@ -22726,19 +22728,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 134
+          lineNumber: 133
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135
+          lineNumber: 134
         },
         __self: this
       }, "Providers with Wheelchair:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 136
+          lineNumber: 135
         },
         __self: this
       }, data.filter(function (data) {
@@ -22746,19 +22748,19 @@ function (_React$Component) {
       }).length)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 138
+          lineNumber: 137
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139
+          lineNumber: 138
         },
         __self: this
       }, "Providers with Stretcher:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("td", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 140
+          lineNumber: 139
         },
         __self: this
       }, data.filter(function (data) {
@@ -22774,49 +22776,43 @@ function ProviderData() {
   return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 155
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-    className: "text-center",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 156
+      lineNumber: 154
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["JumbonoImage"], {
     Title: "Provider List",
     Caption1: "this is data imported from a local json file. It will recreate a tracking\r spreadsheet I created at one of my jobs.",
     Caption2: "I used react-table dependency to build the data table. Altering formatting\r to match my spreadsheet.",
+    noonewouldeverusethisname: "text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 157
+      lineNumber: 155
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Providerinfo, {
+  }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(Providerinfo, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 166
+      lineNumber: 164
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], {
     className: "justify-content-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 168
+      lineNumber: 166
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
     xs: "11",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 169
+      lineNumber: 167
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_provider_data_providerImport_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 170
+      lineNumber: 168
     },
     __self: this
   }))));

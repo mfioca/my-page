@@ -1,6 +1,6 @@
-export { AvatarStyle, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle}
+export { HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle}
 
-const AvatarStyle = {
+const HomeImage = {
     borderRadius: '50%',
     width: '20%',
     height: 'auto'
@@ -14,13 +14,9 @@ const CardImageStyle = {
 }
 
 const AboutImg = {
-    width: '70%',
-    height: 'auto',
-    minHeight: '150px',
-    minWidth: '150px',
-    maxHeight: '250px',
-    maxWidth: '250px',
-    padding: '5px'  // check for boostrap equivilant
+    width: '300px',
+    height: '300px',
+    padding: '5px'  
 };
 
 

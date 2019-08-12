@@ -18,8 +18,9 @@ class JumbonoImage extends React.Component {
         return (
             <Jumbotron>
             <h1 className="display-3 text-center">{this.props.Title}</h1>
-            <p className="lead">{this.props.Caption1}</p>
-            <hr className="my-2" />{this.props.Caption2}
+            <p className="lead text-center">{this.props.Caption1}</p>
+            <hr className="my-2" />
+            <p className={this.props.noonewouldeverusethisname}>{this.props.Caption2}</p>
             </Jumbotron>
         );
     }
@@ -65,7 +66,7 @@ class AboutMedia extends React.Component{
                             <CardImg style={AboutImg} src={this.props.ImgUrl} alt="Card image cap" />
                         </Col>
                     </Row>
-                </Card> 
+                </Card>
             </div>
             );
         };

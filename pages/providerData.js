@@ -8,7 +8,6 @@ import ProviderList from './provider_data/providerImport.js';
 var data = require('./provider_data/provider.json');
 
 
-
 // {data.filter(data => data.Type === 'Provider').length}: 
 // filters the json based on items with values and totals up 
 //the number of listed items with that data value.  example above:
@@ -153,15 +152,14 @@ class Providerinfo extends React.Component {
 function ProviderData() {
     return (
         <Layout>
-            <div className="text-center">
             <JumbonoImage 
                 Title="Provider List"
                 Caption1="this is data imported from a local json file. It will recreate a tracking
                 spreadsheet I created at one of my jobs."
                 Caption2="I used react-table dependency to build the data table. Altering formatting
                 to match my spreadsheet."
+                noonewouldeverusethisname='text-center'
                 />
-            </div>
             {/*Providerinfo listed above*/}
             <Providerinfo />
             {/*pulled in from providerimport.js*/}

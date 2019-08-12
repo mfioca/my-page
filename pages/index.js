@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
 import Layout from '../components/layout.js'
 import { Jumbotron, Container, Row, Col } from 'reactstrap'
-import { AvatarStyle } from './jsxstyles'
+import { HomeImage } from './jsxstyles'
 import { HomeCard } from './customComponents'
+
 
 function HomeHeader(props) {
     return (
       <div>
         <Jumbotron>
           <h1 className="display-3 text-center">Welcome to my page!</h1>
-            <div className="container-fluid bg-1 text-center">
-                <img src="../static/images/avatar.jpg" style={AvatarStyle} alt="Bird"/>
+            <div className="container-fluid text-center">
+                <img src="../static/images/avatar.jpg" style={HomeImage} alt="avatar"/>
+            </div>
+            <div className="container-fluid text-center">
+                <img src="../static/images/avatar.jpg" style={HomeImage} alt="avatar"/>
             </div>
           <p className="lead text-center">
                 This page has been created during my efforts to learn JavaScript 
