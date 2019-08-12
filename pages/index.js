@@ -13,9 +13,6 @@ function HomeHeader(props) {
             <div className="container-fluid text-center">
                 <img src="../static/images/avatar.jpg" style={HomeImage} alt="avatar"/>
             </div>
-            <div className="container-fluid text-center">
-                <img src="../static/images/avatar.jpg" style={HomeImage} alt="avatar"/>
-            </div>
           <p className="lead text-center">
                 This page has been created during my efforts to learn JavaScript 
                 and the React development structure.
