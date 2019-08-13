@@ -1,4 +1,4 @@
-export { HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle}
+export { HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail}
 
 const HomeImage = {
     borderRadius: '50%',
@@ -19,6 +19,16 @@ const AboutImg = {
     padding: '5px'  
 };
 
+const DandDAvatar = {
+    height: '300px',
+    width: 'auto',
+    
+}
+
+const thumbnail = {
+    position: 'relative',
+    align: 'center'
+}
 
 //TvMaze Page
 const TvpageSearchBar = {
@@ -41,3 +51,4 @@ const TvTitle = {
 }
 
 
+  

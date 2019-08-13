@@ -5,14 +5,13 @@ import AttackSim from './DandD/attacksim'
 class DandD extends Component {
 
     render() {
-        
         return (
             <Layout>
-                <div className="center">
+                <div className="ml-5">
                     <h1>Dungeons and Dragons attack simulation</h1>
-                    Calculations are based on SE 2 rules from late 80's and early 90's.
+                     <h4>Calculations are based on SE 2 rules from late 80's and early 90's.</h4>
                 </div>
-                <div>
+                <div className="ml-5">
                     <ol><b>Instructions:</b>
                         <li>Press the "Set Attributes" buttons for both Hero and Monster.</li>
                         <li>Press the "Roll for Initiative" button to see who attacks first.</li>
@@ -21,9 +20,7 @@ class DandD extends Component {
                             a character dies.</li>
                     </ol>
                 </div>
-                <div className="Attack-container">
                     <AttackSim />
-                </div>
             </Layout>
         );
     }

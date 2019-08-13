@@ -32,7 +32,7 @@ class Footer extends React.Component {
                         </NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="https://www.deviantart.com/franknmullet"
+                        <NavLink href="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
                             target="_blank" 
                             rel="noopener noreferrer">
                         DeviantArt

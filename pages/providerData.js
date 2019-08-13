@@ -1,8 +1,8 @@
-import React from 'react';
-import Layout from '../components/layout.js';
-import { Container, Row, Col, Table } from 'reactstrap';
-import { JumbonoImage } from './customComponents';
-import ProviderList from './provider_data/providerImport.js';
+import React from 'react'
+import Layout from '../components/layout.js'
+import { Container, Row, Col, Table } from 'reactstrap'
+import { CustomJumbo} from './customComponents'
+import ProviderList from './provider_data/providerImport.js'
 
 
 var data = require('./provider_data/provider.json');
@@ -152,20 +152,22 @@ class Providerinfo extends React.Component {
 function ProviderData() {
     return (
         <Layout>
-            <JumbonoImage 
+            <CustomJumbo
                 Title="Provider List"
+                ImgUrl="noimage"
+                Caption1Style='lead text-center'
                 Caption1="this is data imported from a local json file. It will recreate a tracking
-                spreadsheet I created at one of my jobs."
+                    spreadsheet I created at one of my jobs."
+                Caption2Style='text-center'
                 Caption2="I used react-table dependency to build the data table. Altering formatting
-                to match my spreadsheet."
-                noonewouldeverusethisname='text-center'
+                    to match my spreadsheet."
                 />
             {/*Providerinfo listed above*/}
             <Providerinfo />
             {/*pulled in from providerimport.js*/}
             <Row className="justify-content-center">
                 <Col xs="11" >
-                <ProviderList />
+                    <ProviderList />
                 </Col>
             </Row>
         </Layout>
