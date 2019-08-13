@@ -124,9 +124,9 @@ class AttackSim extends React.Component {
     render() {
         return (
             <div >
-                <div className="w-100 d-flex  justify-content-center m-0 p-0"> 
-                    <Row>
-                        <Col   className=" m-5 bg-dark text-white ">
+                <div className="d-flex row justify-content-center m-0 p-0"> 
+                    <Row className="w-100">
+                        <Col   className=" m-1 bg-dark text-white ">
                             <div>
                                 <h5 className="mt-5 ml-5"><b>Name: </b>{ this.state.heroName }</h5>
                             </div>
@@ -149,7 +149,7 @@ class AttackSim extends React.Component {
                                 />
                             </div>
                         </Col>
-                        <Col   className="m-5  bg-dark text-white ">
+                        <Col   className="m-1  bg-dark text-white ">
                             <h5 className="mt-5 ml-5"><b>Name: </b>{ this.state.monsterName }</h5>
                             <CharacterSheet
                                 Strength = { this.state.monsterstats.Str }
@@ -172,8 +172,8 @@ class AttackSim extends React.Component {
                         </Col>
                     </Row>
                 </div>
-                <div className="d-flex flex-wrap ">
-                    <Row className="w-100 m-2">
+                <div className="d-flex flex-wrap justify-content-center m-0 p-0">
+                    <Row className="w-100 m-1">
                         <Col  className="bg-dark m-1 p-0">
                             <AttackSection
                                 AC = { this.state.heroAc }
@@ -212,7 +212,7 @@ class AttackSim extends React.Component {
                                     </div>
                                     </Col>
                                     <Col>
-                                        <div >
+                                        <div>
                                             <h4>Monster Hit Points</h4>
                                             <div className="mt-5">
                                                 <h4 className="text-center mb-4" >
