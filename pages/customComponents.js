@@ -228,7 +228,7 @@ export class AttackSection extends React.Component {
             <div className="bg-dark">
                 <Row>
                     <Col className="my-4 mx-5">
-                        <div >
+                        <div>
                             <img src="../static/images/acicon.png" alt="shield"/>
                             <div>
                                 <h4>
@@ -246,7 +246,7 @@ export class AttackSection extends React.Component {
                     </Col>
                     <Col className="my-4 mx-5">
                         <div className="float-right">
-                            <div style={thumbnail}>
+                            <div>
                                 <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <div>
                                     <h4>

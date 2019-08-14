@@ -5,9 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Bodystyle = {
   minHeight: '100vh',
-  maxWidth: '99%',
-  marginRight: '5px',
-  marginLeft: '5px'
+  maxWidth: '98%',
+  marginRight: 'auto',
+  marginLeft: 'auto'
 }
 
 export default function Layout(props) {
