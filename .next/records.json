@@ -12,7 +12,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/react-table/react-table.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/style.css": [
     {
       "modules": {
         "byIdentifier": {},
@@ -25,7 +25,7 @@
       }
     }
   ],
-  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!components/style.css": [
+  "mini-css-extract-plugin node_modules/css-loader/index.js??ref--5-1!node_modules/react-table/react-table.css": [
     {
       "modules": {
         "byIdentifier": {},
@@ -55,8 +55,8 @@
     "byIdentifier": {
       "css node_modules/css-loader/index.js??ref--5-1!node_modules/bootstrap/dist/css/bootstrap.min.css 0": 0,
       "css node_modules/css-loader/index.js??ref--5-1!components/style.css 0": 1,
-      "css node_modules/css-loader/index.js??ref--5-1!node_modules/react-table/react-table.css 0": 2,
-      "css node_modules/css-loader/index.js??ref--5-1!pages/test_items/transitionstyle.css 0": 3
+      "css node_modules/css-loader/index.js??ref--5-1!pages/test_items/transitionstyle.css 0": 2,
+      "css node_modules/css-loader/index.js??ref--5-1!node_modules/react-table/react-table.css 0": 3
     },
     "usedIds": {
       "0": 0,

@@ -1,19 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { Container, Row, Col, Table } from 'reactstrap'
+import { Row, Col, Table } from 'reactstrap'
 import { CustomJumbo} from './customComponents'
 import ProviderList from './provider_data/providerImport.js'
 
 
 var data = require('./provider_data/provider.json');
-
-function eatshit(props) {
-    return (
-        <td className="text-right">
-            {props.children}
-        </td>
-    );
-}
 
 
 // {data.filter(data => data.Type === 'Provider').length}: 
@@ -25,7 +17,6 @@ function eatshit(props) {
 class Providerinfo extends React.Component {
       
     render() {
-
         return (
             <div >
                 <Row>

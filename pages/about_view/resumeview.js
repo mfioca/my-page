@@ -10,6 +10,7 @@ class Resume extends React.Component {
             <div>
                 <CustomJumbo
                     Title="Professional Experience"
+                    ImgUrl = "noimage"
                     Caption1Style='lead text-center'
                     Caption1="Dedicated and motivated professional looking to apply my accumulated experience in 
                         technical writing and training in mixed customer relations roles and into an IT based career. 

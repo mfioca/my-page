@@ -4,8 +4,6 @@ import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj
 import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
 
-
-
 class AttackSim extends React.Component {
     constructor (props) {
         super(props);
@@ -208,7 +206,7 @@ class AttackSim extends React.Component {
                                         <h4>Hero Hit Points:</h4>
                                             <div className="mt-5">
                                                 <h4 className="text-center mb-4">
-                                                    { this.state.heroHp }
+                                                    {this.state.heroHp}
                                                 </h4>
                                             </div>
                                     </div>
@@ -243,7 +241,8 @@ class AttackSim extends React.Component {
         );
     }
 }
-            
+
+
 
 export default AttackSim;
 

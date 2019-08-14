@@ -344,7 +344,7 @@ function (_React$Component) {
           lineNumber: 41
         },
         __self: this
-      }, "Provider List"), activeprofile === 'Guest' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
+      }, "Provider List"), activeprofile === 'Admin' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
         className: "btn-dark w-100",
         href: "/test",
         __source: {
@@ -17905,47 +17905,47 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126
+          lineNumber: 124
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "d-flex row justify-content-center m-0 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127
+          lineNumber: 125
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Row"], {
         className: "w-100",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 128
+          lineNumber: 126
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         className: " m-1 bg-dark text-white ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 129
+          lineNumber: 127
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130
+          lineNumber: 128
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h5", {
         className: "mt-5 ml-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 129
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 131
+          lineNumber: 129
         },
         __self: this
       }, "Name: "), this.state.heroName)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CharacterSheet"], {
@@ -17957,28 +17957,28 @@ function (_React$Component) {
         ImgUrl: "../static/images/hero.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 133
+          lineNumber: 131
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-center m-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141
+          lineNumber: 139
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         onClick: this.setherostats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 140
         },
         __self: this
       }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "ml-3 p-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 142
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["NameForm"], {
@@ -17987,27 +17987,27 @@ function (_React$Component) {
         NameSubmit: this.heroNameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 143
         },
         __self: this
       }))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         className: "m-1  bg-dark text-white ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 152
+          lineNumber: 150
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h5", {
         className: "mt-5 ml-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 151
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 151
         },
         __self: this
       }, "Name: "), this.state.monsterName), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CharacterSheet"], {
@@ -18019,28 +18019,28 @@ function (_React$Component) {
         ImgUrl: "../static/images/monster.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154
+          lineNumber: 152
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-center m-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 160
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
         onClick: this.setmonsterstats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163
+          lineNumber: 161
         },
         __self: this
       }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "ml-3 p-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165
+          lineNumber: 163
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["NameForm"], {
@@ -18049,28 +18049,28 @@ function (_React$Component) {
         NameSubmit: this.monsterNameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166
+          lineNumber: 164
         },
         __self: this
       }))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "d-flex flex-wrap justify-content-center m-0 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 174
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Row"], {
         className: "w-100 m-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 178
+          lineNumber: 176
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         className: "bg-dark m-1 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179
+          lineNumber: 177
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["AttackSection"], {
@@ -18081,21 +18081,21 @@ function (_React$Component) {
         DidHit: this.state.heroDidHit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180
+          lineNumber: 178
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         className: "bg-dark m-1 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 186
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-center bg-dark m-0 p-0 text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189
+          lineNumber: 187
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
@@ -18104,152 +18104,152 @@ function (_React$Component) {
         onClick: this.rollforiniative,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190
+          lineNumber: 188
         },
         __self: this
       }, "Roll for iniative"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191
+          lineNumber: 189
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192
+          lineNumber: 190
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-left m-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 193
+          lineNumber: 191
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194
+          lineNumber: 192
         },
         __self: this
       }, "Hero ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194
+          lineNumber: 192
         },
         __self: this
       }), "iniative:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 193
         },
         __self: this
       }, this.state.heroInitiative))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 198
+          lineNumber: 196
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-right m-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 199
+          lineNumber: 197
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 198
         },
         __self: this
       }, "Monster ", react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("br", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200
+          lineNumber: 198
         },
         __self: this
       }), "initiative:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 201
+          lineNumber: 199
         },
         __self: this
       }, this.state.monsterInitiative)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 205
+          lineNumber: 203
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 206
+          lineNumber: 204
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 207
+          lineNumber: 205
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 206
         },
         __self: this
       }, "Hero Hit Points:"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "mt-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 207
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         className: "text-center mb-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 208
         },
         __self: this
       }, this.state.heroHp)))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 216
+          lineNumber: 214
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 215
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 218
+          lineNumber: 216
         },
         __self: this
       }, "Monster Hit Points"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "mt-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 219
+          lineNumber: 217
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h4", {
         className: "text-center mb-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 220
+          lineNumber: 218
         },
         __self: this
       }, this.state.monsterHp))))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
         className: "bg-dark m-1 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 227
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["AttackSection"], {
@@ -18260,7 +18260,7 @@ function (_React$Component) {
         DidHit: this.state.monsterDidHit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 228
         },
         __self: this
       })))));
@@ -19679,33 +19679,72 @@ function (_React$Component7) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AttackSection, [{
+    key: "AttackResult",
+    value: function AttackResult() {
+      var test = this.props.DidHit;
+
+      if (test === "Hit") {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 232
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
+          className: "alert-success w-100 text-center my-5",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 233
+          },
+          __self: this
+        }, test));
+      }
+
+      if (test === "Miss") {
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 239
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
+          className: "alert-danger w-100 text-center my-5",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 240
+          },
+          __self: this
+        }, test));
+      }
+    }
+  }, {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "bg-dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 229
+          lineNumber: 248
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 230
+          lineNumber: 249
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         className: "my-4 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 231
+          lineNumber: 250
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 232
+          lineNumber: 251
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -19713,41 +19752,41 @@ function (_React$Component7) {
         alt: "shield",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 233
+          lineNumber: 252
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 253
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "AC-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 254
         },
         __self: this
       }, this.props.AC)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         className: "my-4 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 248
+          lineNumber: 267
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "float-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 249
+          lineNumber: 268
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 250
+          lineNumber: 269
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -19755,63 +19794,56 @@ function (_React$Component7) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 270
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 271
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 272
         },
         __self: this
       }, this.props.HitAdj)))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "d-flex justify-content-center my-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 287
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         onClick: this.props.AttackRoll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 288
         },
         __self: this
       }, this.props.RollTitle)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 273
+          lineNumber: 292
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 274
+          lineNumber: 293
         },
         __self: this
       }, "Attack Result:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 276
+          lineNumber: 295
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-        className: "alert-success w-100 text-center my-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 277
-        },
-        __self: this
-      }, this.props.DidHit)));
+      }, this.AttackResult()));
     }
   }]);
 
@@ -19835,33 +19867,33 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 307
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 289
+          lineNumber: 308
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 290
+          lineNumber: 309
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 291
+          lineNumber: 310
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h6", {
         className: "mr-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 311
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -19879,7 +19911,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 312
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -19888,7 +19920,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 325
         },
         __self: this
       }, "Submit"))));
@@ -19961,7 +19993,7 @@ var TvTitle = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 0:
 /*!***************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FDandDpage&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5CDandDpage.js ***!
   \***************************************************************************************************************************************************/
@@ -19984,5 +20016,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=DandDpage.js.map

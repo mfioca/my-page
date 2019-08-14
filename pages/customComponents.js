@@ -224,6 +224,25 @@ export class CharacterSheet extends React.Component {
 
 // D and D application
 export class AttackSection extends React.Component {
+
+    AttackResult() {
+        var test = this.props.DidHit;
+        if (test === "Hit") {
+            return (
+                <div>
+                    <h2 className="alert-success w-100 text-center my-5">{ test }</h2>
+                </div>
+            );
+        }
+        if (test === "Miss") {
+            return (
+                <div>
+                    <h2 className="alert-danger w-100 text-center my-5">{ test }</h2>
+                </div>
+            );
+        }
+    }
+
     render() {
         return (
             <div className="bg-dark">
@@ -274,7 +293,7 @@ export class AttackSection extends React.Component {
                     <h2>Attack Result:</h2>
                 </div>
                 <div>
-                    <h2 className="alert-success w-100 text-center my-5">{ this.props.DidHit }</h2>
+                    {this.AttackResult()}
                 </div>
             </div>
         );
