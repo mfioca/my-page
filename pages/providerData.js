@@ -201,7 +201,7 @@ function ProviderData() {
             <Providerinfo />
             {/*pulled in from providerimport.js*/}
             <Row className="justify-content-center">
-                <Col xs="11 mb-3" >
+                <Col xs="11" className="mb-3" >
                     <ProviderList />
                 </Col>
             </Row>
