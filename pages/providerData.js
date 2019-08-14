@@ -88,6 +88,7 @@ class Providerinfo extends React.Component {
                                 },
                                 td:nth-child(even) {
                                     text-align: center;
+                                    widtH: 70px;
                                 }
                                 
                                 th {
@@ -162,6 +163,17 @@ class Providerinfo extends React.Component {
                                     <td>{data.filter(data => data.Region === 'East' && data.Stretcher === 'Yes').length}</td>
                                 </tr>
                             </tbody>
+                            <style jsx>{`
+                                {
+                                    text-align: center;
+                                    widtH: 70px;
+                                }
+                                
+                                th {
+                                    aligh: center,
+                                }
+                            `}
+                            </style>
                         </Table>
                     </Col>
                 </Row>
@@ -189,7 +201,7 @@ function ProviderData() {
             <Providerinfo />
             {/*pulled in from providerimport.js*/}
             <Row className="justify-content-center">
-                <Col xs="11" >
+                <Col xs="11 mb-3" >
                     <ProviderList />
                 </Col>
             </Row>

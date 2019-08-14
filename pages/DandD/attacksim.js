@@ -2,7 +2,7 @@ import React from 'react';
 import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, setherostats, heroattackroll } from './herofunctions'
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll } from './monsterfunctions'
 import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
-import { Row, Col, Button } from 'reactstrap'
+import { Row, Col, Button, Container } from 'reactstrap'
 
 
 
@@ -172,8 +172,10 @@ class AttackSim extends React.Component {
                         </Col>
                     </Row>
                 </div>
+                
                 <div className="d-flex flex-wrap justify-content-center m-0 p-0">
-                    <Row className="w-100 m-1">
+                    
+                    <Row className="w-100 m-0">
                         <Col  className="bg-dark m-1 p-0">
                             <AttackSection
                                 AC = { this.state.heroAc }
@@ -234,7 +236,9 @@ class AttackSim extends React.Component {
                         />
                         </Col>
                     </Row>
+                    
                 </div>
+                
             </div>
         );
     }

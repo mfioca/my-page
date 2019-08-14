@@ -4,7 +4,10 @@ import Footer from './Footer'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Bodystyle = {
-  minHeight: '100vh'
+  minHeight: '100vh',
+  maxWidth: '99%',
+  marginRight: '5px',
+  marginLeft: '5px'
 }
 
 export default function Layout(props) {
