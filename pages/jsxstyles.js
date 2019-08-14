@@ -7,8 +7,8 @@ const HomeImage = {
 };
 
 const CardImageStyle = {
-    width: '50%',
-    height: 'auto',
+    maxWidth: '150px',
+    maxHeight: '150px',
     marginRight: 'auto',
     marginLeft: 'auto'
 }

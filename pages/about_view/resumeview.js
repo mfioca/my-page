@@ -19,7 +19,7 @@ class Resume extends React.Component {
                         Gimp, Eclipse, Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,
                         beginner knowledge in REACT and Java/JavaScript."
                 />
-                <div className="Text-Center">
+                <div className="text-center">
                     <h1><u>Core Skills</u></h1>
                 </div>
                 <div>
@@ -27,7 +27,7 @@ class Resume extends React.Component {
                         <Row>
                             <Col  sm={{ size: 4, offset: 1 }}>
                                 <SingleListCard
-                                    Item1="Customer Service and Relationship Building"
+                                    Item1="Customer Service"
                                     Item2="Customer and Technical Support"
                                     Item3="Communication and Training"
                                     Item4="Problem Solving and Decision Making"

@@ -7,6 +7,14 @@ import ProviderList from './provider_data/providerImport.js'
 
 var data = require('./provider_data/provider.json');
 
+function eatshit(props) {
+    return (
+        <td className="text-right">
+            {props.children}
+        </td>
+    );
+}
+
 
 // {data.filter(data => data.Type === 'Provider').length}: 
 // filters the json based on items with values and totals up 
@@ -15,7 +23,9 @@ var data = require('./provider_data/provider.json');
 
 //function Providerinfo() {
 class Providerinfo extends React.Component {
+      
     render() {
+
         return (
             <div >
                 <Row>
@@ -24,54 +34,67 @@ class Providerinfo extends React.Component {
                         <Table striped bordered size="sm">
                             <tbody>
                                 <tr>
-                                    <th className="text-center">Total Transportation Providers:</th>
-                                    <td>{data.length}</td>
+                                    <th>Total Transportation Providers:</th>
+                                    <th>{data.length}</th>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Transportation Companies:</td>
+                                    <td>Transportation Companies:</td>
                                     <td>{data.filter(data => data.Type === 'Provider').length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Volunteer Drivers:</td>
+                                    <td>Volunteer Drivers:</td>
                                     <td>{data.filter(data => data.Type === 'Volunteer Driver').length}</td>
                                 </tr>
                                 <tr>
-                                    <th className="text-center">Central Region Providers:</th>
+                                    <th>Central Region Providers:</th>
                                     <td>{data.filter(data => data.Region === 'Central').length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Transportation Companies:</td>
+                                    <td>Transportation Companies:</td>
                                     <td>{data.filter(data => data.Type === 'Provider' && data.Region === 'Central' ).length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Volunteer Drivers:</td>
+                                    <td>Volunteer Drivers:</td>
                                     <td>{data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'Central').length}</td>
                                 </tr>
                                 <tr>
-                                    <th className="text-center">SouthWest Region:</th>
+                                    <th>SouthWest Region:</th>
                                     <td>{data.filter(data => data.Region === 'SouthWest').length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Transportation Companies:</td>
+                                    <td>Transportation Companies:</td>
                                     <td>{data.filter(data => data.Type === 'Provider' && data.Region === 'SouthWest' ).length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Volunteer Drivers:</td>
+                                    <td>Volunteer Drivers:</td>
                                     <td> {data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'SouthWest').length}</td>
                                 </tr>
                                 <tr>
-                                    <th className="text-center">East Region:</th>
+                                    <th>East Region:</th>
                                     <td>{data.filter(data => data.Region === 'East').length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Transportation Companies:</td>
+                                    <td>Transportation Companies:</td>
                                     <td>{data.filter(data => data.Type === 'Provider' && data.Region === 'East' ).length}</td>
                                 </tr>
                                 <tr>
-                                    <td className="text-right">Volunteer Drivers:</td>
+                                    <td>Volunteer Drivers:</td>
                                     <td>{data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'East').length}</td>
                                 </tr>
                             </tbody>
+                            <style jsx>{`
+                                td:nth-child(odd) {
+                                    text-align: right;
+                                },
+                                td:nth-child(even) {
+                                    text-align: center;
+                                }
+                                
+                                th {
+                                    aligh: center,
+                                }
+                            `}
+                            </style> 
                         </Table>
                     </Col>
                     <Col className="px-5">
@@ -83,7 +106,7 @@ class Providerinfo extends React.Component {
                                 </tr>
                                 <tr>
                                     <td>Providers with Ambulatory:</td>
-                                    <td colspan="2">{data.filter(data => data.Amb === 'Yes').length}</td>
+                                    <td>{data.filter(data => data.Amb === 'Yes').length}</td>
                                 </tr>
                                 <tr>
                                     <td>Providers with Wheelchair:</td>

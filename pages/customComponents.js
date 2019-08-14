@@ -166,13 +166,12 @@ class HomeCard extends React.Component{
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
                         <CardText>{this.props.Description}
                         </CardText>
-                        <Button>
-                            <a href={this.props.Link}
-                                className="Header"
-                                target="_blank" 
-                                rel="noopener noreferrer">
+                        <Button 
+                            href={this.props.Link}
+                            className="btn-dark"
+                            target="_blank" 
+                            rel="noopener noreferrer">
                                 {this.props.ButtonTitle}
-                            </a>
                         </Button>
                     </CardBody>
                 </Card> 
