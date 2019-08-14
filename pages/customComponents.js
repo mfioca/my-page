@@ -1,19 +1,17 @@
 /* **************** 
 *   Imports       * 
 ******************/
+
 import React from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron } from 'reactstrap'
 import {AboutImg, CardImageStyle, HomeImage, DandDAvatar, thumbnail } from './jsxstyles'
-
 
 /* *********************** 
 *   Export Classes       * 
 **************************/
 
-export { AboutMedia, SingleListCard, ThreeColumnCard, HomeCard, CustomJumbo, CharacterSheet, NameForm, AttackSection }
-
 //used in Resumeview and providerdata
-class CustomJumbo extends React.Component {
+export class CustomJumbo extends React.Component {
     render() {
         if (this.props.ImgUrl === "noimage") {
             return (
@@ -42,7 +40,7 @@ class CustomJumbo extends React.Component {
 }
 
 //used in about page
-class AboutMedia extends React.Component{
+export class AboutMedia extends React.Component{
     render() {
         if (this.props.Align === "Right") {
             return (
@@ -90,7 +88,7 @@ class AboutMedia extends React.Component{
 }
 
 //used in about page for resume
-class SingleListCard extends React.Component{
+export class SingleListCard extends React.Component{
     render() {
         return (
             <div>
@@ -113,7 +111,7 @@ class SingleListCard extends React.Component{
 };
 
 //used in resume for experience section
-class ThreeColumnCard extends React.Component{
+export class ThreeColumnCard extends React.Component{
     render() {
         return(
             <div className="p-3">
@@ -155,7 +153,7 @@ class ThreeColumnCard extends React.Component{
 }
 
 //used in home page
-class HomeCard extends React.Component{
+export class HomeCard extends React.Component{
     render() {
         return (
             <div>
@@ -181,7 +179,7 @@ class HomeCard extends React.Component{
 };
 
 //D and D application
-class CharacterSheet extends React.Component {
+export class CharacterSheet extends React.Component {
     render() {
         return (
             <div >
@@ -212,8 +210,8 @@ class CharacterSheet extends React.Component {
                             </tbody>
                         </Table>  
                     </Col>
-                    <Col>
-                    <div className="justify-content-center">
+                    <Col xs="6">
+                    <div className="float-right mr-5">
                         <img  style={DandDAvatar} src={this.props.ImgUrl} alt="hero"/>
                     </div>
                     </Col>
@@ -223,9 +221,8 @@ class CharacterSheet extends React.Component {
     }
 }
 
-
 // D and D application
-class AttackSection extends React.Component {
+export class AttackSection extends React.Component {
     render() {
         return (
             <div className="bg-dark">
@@ -252,7 +249,7 @@ class AttackSection extends React.Component {
                             <div style={thumbnail}>
                                 <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <div>
-                                    <h4 className="Ac-icon-text">
+                                    <h4>
                                         { this.props.HitAdj }
                                         <style jsx>{`
                                     h4 {
@@ -284,7 +281,7 @@ class AttackSection extends React.Component {
 }
 
 //D and D application
-class NameForm extends React.Component {
+export class NameForm extends React.Component {
     render() {
         return (
             <div>
