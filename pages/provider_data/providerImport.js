@@ -66,7 +66,7 @@ class ProviderList extends Component {
           data= {data}
           defaultPageSize={20}
           style={{
-            height: "400px" // This will force the table body to overflow and scroll, since there is not enough room
+            height: "800px" // This will force the table body to overflow and scroll, since there is not enough room
           }}
           //sets filtering options in react-table for no dropdown option.  Calls the filtercaseinsensitive
           //function as mentioned above

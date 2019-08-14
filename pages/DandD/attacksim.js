@@ -2,7 +2,7 @@ import React from 'react';
 import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, setherostats, heroattackroll } from './herofunctions'
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll } from './monsterfunctions'
 import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
-import { Row, Col, Button, Container } from 'reactstrap'
+import { Row, Col, Button } from 'reactstrap'
 
 
 
@@ -191,14 +191,14 @@ class AttackSim extends React.Component {
                                 <Row>
                                     <Col>    
                                         <div className="text-left m-5">
-                                            <p>Hero <br/>iniative:</p>
-                                            <p className="Fsize-3">{ this.state.heroInitiative }</p>
+                                            <h4>Hero <br/>iniative:</h4>
+                                            <h4>{ this.state.heroInitiative }</h4>
                                         </div>
                                     </Col>
                                     <Col>
                                         <div className="text-right m-5">
-                                            <p>Monster <br />initiative:</p>
-                                            <p className="Fsize-3">{ this.state.monsterInitiative }</p>
+                                            <h4>Monster <br />initiative:</h4>
+                                            <h4>{ this.state.monsterInitiative }</h4>
                                         </div>
                                     </Col>
                                 </Row>

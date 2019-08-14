@@ -6,6 +6,7 @@ import React from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron } from 'reactstrap'
 import {AboutImg, CardImageStyle, HomeImage, DandDAvatar, thumbnail } from './jsxstyles'
 
+
 /* *********************** 
 *   Export Classes       * 
 **************************/
@@ -228,36 +229,36 @@ export class AttackSection extends React.Component {
             <div className="bg-dark">
                 <Row>
                     <Col className="my-4 mx-5">
-                        <div>
+                        <div style={thumbnail}>
                             <img src="../static/images/acicon.png" alt="shield"/>
                             <div>
-                                <h4>
+                                <h4 className="AC-Icon-text">
                                     { this.props.AC }
-                                    <style jsx>{`
+                                    {/*<style jsx>{`
                                     h4 {
                                         position: absolute;
                                         top: 35px;
-                                        left: 58px;
+                                        left: 46px;
                                         transform: translate(-10%, -20%);
-                                    `}</style>
+                                    `}</style>*/}
                                 </h4>
                             </div>
                         </div>
                     </Col>
                     <Col className="my-4 mx-5">
                         <div className="float-right">
-                            <div>
+                            <div style={thumbnail}>
                                 <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <div>
-                                    <h4>
+                                    <h4 className="HitAdj-Icon-text">
                                         { this.props.HitAdj }
-                                        <style jsx>{`
+                                       {/* <style jsx>{`
                                     h4 {
                                         position: absolute;
                                         top: 45px;
                                         left: 43px;
                                         transform: translate(-10%, -20%);
-                                    `}</style>
+                                    `}</style> */}
                                     </h4>
                                 </div>
                             </div>

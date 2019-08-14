@@ -1,6 +1,6 @@
 import Header from './Header'
 import Footer from './Footer'
-
+import CSS from './style.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 const Bodystyle = {
