@@ -1,4 +1,4 @@
-export { HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail}
+export { HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail, TvCast}
 
 const HomeImage = {
     borderRadius: '50%',
@@ -47,8 +47,13 @@ const TvImage = {
 const TvTitle = {
     height: '20px',
     width: '200px',
-    margin: 4
+    margin: 4,
 }
 
-
+const TvCast = {
+    height: '20px',
+    width: '200px',
+    margin: 4,
+    wordWwrap: 'break-word',
+}
   

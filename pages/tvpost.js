@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout'
 import { Card, CardImg, CardBody, CardTitle, Row, Col, Button } from 'reactstrap'
-import { TvImage } from './jsxstyles'
+import { TvImage, TvCast } from './jsxstyles'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'
@@ -41,7 +41,9 @@ const tvPost = props => (
           </Col>
         </Row>
         <Row className="m-3">
-          <h4>Summary:<br /><small>{props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')}</small></h4>
+            <h4>Summary:<br /><small>{props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')}</small></h4>
+        </Row>
+        <Row className="m-3">
           <h3>Link: 
             <small className="ml-2">
               <a href={props.show.url}
@@ -58,12 +60,16 @@ const tvPost = props => (
           {props.show._embedded.cast.map(cast => (
             <div key={cast.person.id}>
               <Card className="m-5 text-center">
-                <CardTitle>{cast.person.name}</CardTitle>
+                <CardTitle className="mt-4">{cast.person.name}</CardTitle>
                 <CardBody>
-                  <CardImg style={TvImage} src={cast.person.image.medium? cast.person.image.medium: noimage} alt="castimage" />
-                  <h4 className="my-2">As: {cast.character.name}</h4>
+                  <div>
+                    <CardImg style={TvImage} src={cast.person.image.medium? cast.person.image.medium: noimage} alt="castimage" />
+                  </div>
+                  <div className="text-center my-3">
+                    <h4 style={TvCast}>As:{cast.character.name}</h4>
+                  </div>
                 </CardBody>
-                <Button className="btn-dark">
+                <Button className="btn-dark mt-5">
                   <a className="btn-dark w-100" 
                     href={cast.person.url}
                     target="_blank" 

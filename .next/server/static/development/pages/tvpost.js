@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1376,7 +1376,7 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 /*!****************************!*\
   !*** ./pages/jsxstyles.js ***!
   \****************************/
-/*! exports provided: HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail */
+/*! exports provided: HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail, TvCast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1389,6 +1389,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvTitle", function() { return TvTitle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DandDAvatar", function() { return DandDAvatar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thumbnail", function() { return thumbnail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvCast", function() { return TvCast; });
 
 var HomeImage = {
   borderRadius: '50%',
@@ -1429,6 +1430,12 @@ var TvTitle = {
   height: '20px',
   width: '200px',
   margin: 4
+};
+var TvCast = {
+  height: '20px',
+  width: '200px',
+  margin: 4,
+  wordWwrap: 'break-word'
 };
 
 /***/ }),
@@ -1751,17 +1758,24 @@ var tvPost = function tvPost(props) {
       lineNumber: 44
     },
     __self: this
-  }, props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, ''))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+  }, props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+    className: "m-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
     },
     __self: this
   }, "Link:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -1771,20 +1785,20 @@ var tvPost = function tvPost(props) {
     title: props.show.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: this
   }, props.show.name ? props.show.name : 'null')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: this
   }, "Cast:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "d-flex flex-wrap justify-content-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: this
   }, props.show._embedded.cast.map(function (cast) {
@@ -1792,26 +1806,33 @@ var tvPost = function tvPost(props) {
       key: cast.person.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 59
+        lineNumber: 61
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Card"], {
       className: "m-5 text-center",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 62
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardTitle"], {
+      className: "mt-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 61
+        lineNumber: 63
       },
       __self: this
     }, cast.person.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardBody"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 62
+        lineNumber: 64
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 65
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardImg"], {
@@ -1820,21 +1841,28 @@ var tvPost = function tvPost(props) {
       alt: "castimage",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
-      },
-      __self: this
-    }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
-      className: "my-2",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 64
-      },
-      __self: this
-    }, "As: ", cast.character.name)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-      className: "btn-dark",
-      __source: {
-        fileName: _jsxFileName,
         lineNumber: 66
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      className: "text-center my-3",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 68
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_6__["TvCast"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 69
+      },
+      __self: this
+    }, "As:", cast.character.name))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      className: "btn-dark mt-5",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -1844,7 +1872,7 @@ var tvPost = function tvPost(props) {
       rel: "noopener noreferrer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 73
       },
       __self: this
     }, "Actor page"))));
@@ -1897,7 +1925,7 @@ function () {
 
 /***/ }),
 
-/***/ 4:
+/***/ 6:
 /*!*******************************!*\
   !*** multi ./pages/tvpost.js ***!
   \*******************************/

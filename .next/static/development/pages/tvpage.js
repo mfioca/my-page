@@ -24786,7 +24786,7 @@ module.exports = warning;
 /*!****************************!*\
   !*** ./pages/jsxstyles.js ***!
   \****************************/
-/*! exports provided: HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail */
+/*! exports provided: HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail, TvCast */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24799,6 +24799,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvTitle", function() { return TvTitle; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DandDAvatar", function() { return DandDAvatar; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thumbnail", function() { return thumbnail; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvCast", function() { return TvCast; });
 
 var HomeImage = {
   borderRadius: '50%',
@@ -24839,6 +24840,12 @@ var TvTitle = {
   height: '20px',
   width: '200px',
   margin: 4
+};
+var TvCast = {
+  height: '20px',
+  width: '200px',
+  margin: 4,
+  wordWwrap: 'break-word'
 };
 
 /***/ }),
