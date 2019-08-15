@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1710,21 +1710,21 @@ function (_React$Component7) {
         className: "my-4 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 260
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "float-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 262
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -1732,53 +1732,53 @@ function (_React$Component7) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 263
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 264
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 265
         },
         __self: this
       }, this.props.HitAdj)))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "d-flex justify-content-center my-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 273
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         onClick: this.props.AttackRoll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 274
         },
         __self: this
       }, this.props.RollTitle)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 278
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 279
         },
         __self: this
       }, "Attack Result:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 281
         },
         __self: this
       }, this.AttackResult()));
@@ -1805,33 +1805,33 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 293
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 294
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 295
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 296
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h6", {
         className: "mr-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 311
+          lineNumber: 297
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -1849,7 +1849,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 312
+          lineNumber: 298
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -1858,7 +1858,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 325
+          lineNumber: 311
         },
         __self: this
       }, "Submit"))));
@@ -1879,124 +1879,97 @@ function (_React$Component8) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! reactstrap */ "reactstrap");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./customComponents */ "./pages/customComponents.js");
-
-
-
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./customComponents */ "./pages/customComponents.js");
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\index.js";
 
 
 
 
 
-var Home =
-/*#__PURE__*/
-function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Home, _Component);
-
-  function Home() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Home);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Home).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Home, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CustomJumbo"], {
-        Title: "Welcome to my page!",
-        ImgUrl: "",
-        Caption1Style: "lead text-center",
-        Caption1: "This page has been created during my efforts to learn JavaScript \r and the React development structure.",
-        Caption2Style: "text-center",
-        Caption2: "It is my intent to use this page as a professional page and portfolio as\r I progress as a developer.",
-        Caption3: "Please feel free to look around and email me with any questions or suggestions.",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Container"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 22
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Row"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
-        sm: {
-          size: 4,
-          offset: 1
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 24
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["HomeCard"], {
-        Title: "Desktop Customization",
-        Image: "../static/images/rainmeter.png",
-        Subtitle: "Rainmeter desktop tool",
-        Description: "I created a 45+\r skin desktop theme based on the Bethesda Game 'The Elder Scrolls V: Skyrim'.",
-        Link: "https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185",
-        ButtonTitle: "Deviant",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 25
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Col"], {
-        sm: {
-          size: 4,
-          order: 2,
-          offset: 2
-        },
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 35
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["HomeCard"], {
-        Title: "Git Hub Repository",
-        Image: "../static/images/GitHub.png",
-        Subtitle: "My-Page",
-        Description: "I have this page published on my GitHub profile.  You can click on\r the below link to check out the base code",
-        Link: "https://github.com/mfioca/my-page",
-        ButtonTitle: "GitHub",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 36
-        },
-        __self: this
-      })))));
-    }
-  }]);
-
-  return Home;
-}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+function Home() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["CustomJumbo"], {
+    Title: "Welcome to my page!",
+    ImgUrl: "",
+    Caption1Style: "lead text-center",
+    Caption1: "This page has been created during my efforts to learn JavaScript \r and the React development structure.",
+    Caption2Style: "text-center",
+    Caption2: "It is my intent to use this page as a professional page and portfolio as\r I progress as a developer.",
+    Caption3: "Please feel free to look around and email me with any questions or suggestions.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+    sm: {
+      size: 4,
+      offset: 1
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["HomeCard"], {
+    Title: "Desktop Customization",
+    Image: "../static/images/rainmeter.png",
+    Subtitle: "Rainmeter desktop tool",
+    Description: "I created a 45+\r skin desktop theme based on the Bethesda Game 'The Elder Scrolls V: Skyrim'.",
+    Link: "https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185",
+    ButtonTitle: "Deviant",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+    sm: {
+      size: 4,
+      order: 2,
+      offset: 2
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["HomeCard"], {
+    Title: "Git Hub Repository",
+    Image: "../static/images/GitHub.png",
+    Subtitle: "My-Page",
+    Description: "I have this page published on my GitHub profile.  You can click on\r the below link to check out the base code",
+    Link: "https://github.com/mfioca/my-page",
+    ButtonTitle: "GitHub",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  })))));
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Home);
 
@@ -2063,7 +2036,7 @@ var TvTitle = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

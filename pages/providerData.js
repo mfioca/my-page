@@ -21,7 +21,7 @@ class Providerinfo extends React.Component {
             <div >
                 <Row>
                     <Col className="px-5">
-                    <h4 className="text-center p-2"><b><u>Provider Totals</u></b></h4> 
+                        <h4 className="text-center p-2"><b><u>Provider Totals</u></b></h4> 
                         <Table striped bordered size="sm">
                             <tbody>
                                 <tr>

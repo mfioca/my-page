@@ -18764,119 +18764,92 @@ function monsterattackroll() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
-/* harmony import */ var _DandD_attacksim__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./DandD/attacksim */ "./pages/DandD/attacksim.js");
-
-
-
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
+/* harmony import */ var _DandD_attacksim__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DandD/attacksim */ "./pages/DandD/attacksim.js");
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\DandDpage.js";
 
 
 
 
-var DandD =
-/*#__PURE__*/
-function (_Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(DandD, _Component);
-
-  function DandD() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, DandD);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(DandD).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(DandD, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 9
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "ml-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 10
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 11
-        },
-        __self: this
-      }, "Dungeons and Dragons attack simulation"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, "Calculations are based on SE 2 rules from late 80's and early 90's.")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "ml-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ol", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("b", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }, "Instructions:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 16
-        },
-        __self: this
-      }, "Press the \"Set Attributes\" buttons for both Hero and Monster."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 17
-        },
-        __self: this
-      }, "Press the \"Roll for Initiative\" button to see who attacks first."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 18
-        },
-        __self: this
-      }, "Follow the instructions and press the \"Roll for Attack\" buttons."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 19
-        },
-        __self: this
-      }, "After each round, repeat by rolling for Initiative and continue attacking until a character dies."))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_DandD_attacksim__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 23
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return DandD;
-}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+function DandD() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ml-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "Dungeons and Dragons attack simulation"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, "Calculations are based on SE 2 rules from late 80's and early 90's.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "ml-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, "Instructions:"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, "Press the \"Set Attributes\" buttons for both Hero and Monster."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, "Press the \"Roll for Initiative\" button to see who attacks first."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, "Follow the instructions and press the \"Roll for Attack\" buttons."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, "After each round, repeat by rolling for Initiative and continue attacking until a character dies."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_DandD_attacksim__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }));
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (DandD);
 
@@ -19772,21 +19745,21 @@ function (_React$Component7) {
         className: "my-4 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 260
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "float-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 262
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -19794,53 +19767,53 @@ function (_React$Component7) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 263
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 264
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 265
         },
         __self: this
       }, this.props.HitAdj)))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "d-flex justify-content-center my-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 273
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         onClick: this.props.AttackRoll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 274
         },
         __self: this
       }, this.props.RollTitle)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 278
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 279
         },
         __self: this
       }, "Attack Result:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 281
         },
         __self: this
       }, this.AttackResult()));
@@ -19867,33 +19840,33 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 293
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 294
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 295
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 296
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h6", {
         className: "mr-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 311
+          lineNumber: 297
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -19911,7 +19884,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 312
+          lineNumber: 298
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -19920,7 +19893,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 325
+          lineNumber: 311
         },
         __self: this
       }, "Submit"))));
@@ -19993,7 +19966,7 @@ var TvTitle = {
 
 /***/ }),
 
-/***/ 0:
+/***/ 9:
 /*!***************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2FDandDpage&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5CDandDpage.js ***!
   \***************************************************************************************************************************************************/
@@ -20016,5 +19989,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[9,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=DandDpage.js.map

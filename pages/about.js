@@ -5,18 +5,15 @@ import Resume from './about_view/resumeview'
 
 
 
-class Aboutpage extends React.Component {
-  
-  render() {
-    return (
-      <Layout>
-        <About />
-        <hr className="hr-style-five m-5" />
-        <Resume />
-      </Layout>
-    );
-  }
-} 
+function Aboutpage (){
+  return (
+    <Layout>
+      <About />
+      <hr className="hr-style-five m-5" />
+      <Resume />
+    </Layout>
+  );
+}
 
 
 export default Aboutpage;

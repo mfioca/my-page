@@ -1,4 +1,5 @@
 export { SetmonsterConstAdj, SetmonsterDmgAdj, SetmonsterHitAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll}
+
 //sets monster hit point adjustment based on constitution stat number.
 function SetmonsterConstAdj() {
     if (this.state.monsterstats.Const == 1) {

@@ -126,45 +126,45 @@ class AttackSim extends React.Component {
                     <Row className="w-100">
                         <Col   className=" m-1 bg-dark text-white ">
                             <div>
-                                <h5 className="mt-5 ml-5"><b>Name: </b>{ this.state.heroName }</h5>
+                                <h5 className="mt-5 ml-5"><b>Name: </b>{this.state.heroName}</h5>
                             </div>
                             <CharacterSheet 
-                                Strength = { this.state.herostats.Str }
-                                Constitution = { this.state.herostats.Const }
-                                Dexterity = { this.state.herostats.Dext }
-                                Hitpoints = { this.state.heroHp }
-                                Damage = { this.state.heroDmg }
+                                Strength = {this.state.herostats.Str}
+                                Constitution = {this.state.herostats.Const}
+                                Dexterity = {this.state.herostats.Dext}
+                                Hitpoints = {this.state.heroHp}
+                                Damage = {this.state.heroDmg}
                                 ImgUrl= "../static/images/hero.png"
                             />
                             <div className="text-center m-3">
-                                <Button onClick={ this.setherostats }>Set Attrubutes</Button>
+                                <Button onClick={this.setherostats}>Set Attrubutes</Button>
                             </div>
                             <div className="ml-3 p-2">
                                 <NameForm 
-                                    value = { this.state.value }
-                                    NameChange = { this.heroNameChange }
-                                    NameSubmit = { this.heroNameSubmit }
+                                    value = {this.state.value}
+                                    NameChange = {this.heroNameChange}
+                                    NameSubmit = {this.heroNameSubmit}
                                 />
                             </div>
                         </Col>
                         <Col   className="m-1  bg-dark text-white ">
-                            <h5 className="mt-5 ml-5"><b>Name: </b>{ this.state.monsterName }</h5>
+                            <h5 className="mt-5 ml-5"><b>Name: </b>{this.state.monsterName}</h5>
                             <CharacterSheet
-                                Strength = { this.state.monsterstats.Str }
-                                Constitution = { this.state.monsterstats.Const }
-                                Dexterity = { this.state.monsterstats.Dext }
-                                Hitpoints = { this.state.monsterHp }
-                                Damage = { this.state.monsterDmg }
+                                Strength = {this.state.monsterstats.Str}
+                                Constitution = {this.state.monsterstats.Const}
+                                Dexterity = {this.state.monsterstats.Dext}
+                                Hitpoints = {this.state.monsterHp}
+                                Damage = {this.state.monsterDmg}
                                 ImgUrl = "../static/images/monster.png"
                             />
                             <div className="text-center m-3">
-                                <Button onClick={ this.setmonsterstats }>Set Attrubutes</Button>
+                                <Button onClick={this.setmonsterstats}>Set Attrubutes</Button>
                             </div>
                             <div className="ml-3 p-2">
                                 <NameForm 
-                                    value = { this.state.value }
-                                    NameChange = { this.monsterNameChange }
-                                    NameSubmit = { this.monsterNameSubmit }
+                                    value = {this.state.value}
+                                    NameChange = {this.monsterNameChange}
+                                    NameSubmit = {this.monsterNameSubmit}
                                 />
                             </div>
                         </Col>
@@ -176,27 +176,27 @@ class AttackSim extends React.Component {
                     <Row className="w-100 m-0">
                         <Col  className="bg-dark m-1 p-0">
                             <AttackSection
-                                AC = { this.state.heroAc }
-                                HitAdj = { this.state.heroHitAdj }
-                                AttackRoll = { this.heroattackroll }
+                                AC = {this.state.heroAc}
+                                HitAdj = {this.state.heroHitAdj}
+                                AttackRoll = {this.heroattackroll}
                                 RollTitle = "Hero Roll for Attack"
-                                DidHit = { this.state.heroDidHit }
+                                DidHit = {this.state.heroDidHit}
                             />
                         </Col>
                         <Col className="bg-dark m-1 p-0">
                             <div className="text-center bg-dark m-0 p-0 text-white">
-                                <Button type="button" className="m-5"  onClick={ this.rollforiniative }>Roll for iniative</Button>
+                                <Button type="button" className="m-5"  onClick={this.rollforiniative}>Roll for iniative</Button>
                                 <Row>
                                     <Col>    
                                         <div className="text-left m-5">
                                             <h4>Hero <br/>iniative:</h4>
-                                            <h4>{ this.state.heroInitiative }</h4>
+                                            <h4>{this.state.heroInitiative}</h4>
                                         </div>
                                     </Col>
                                     <Col>
                                         <div className="text-right m-5">
                                             <h4>Monster <br />initiative:</h4>
-                                            <h4>{ this.state.monsterInitiative }</h4>
+                                            <h4>{this.state.monsterInitiative}</h4>
                                         </div>
                                     </Col>
                                 </Row>
@@ -216,7 +216,7 @@ class AttackSim extends React.Component {
                                             <h4>Monster Hit Points</h4>
                                             <div className="mt-5">
                                                 <h4 className="text-center mb-4" >
-                                                    { this.state.monsterHp }
+                                                    {this.state.monsterHp}
                                                 </h4>
                                             </div>
                                         </div>
@@ -226,17 +226,15 @@ class AttackSim extends React.Component {
                         </Col>
                         <Col   className="bg-dark m-1 p-0">
                         <AttackSection
-                            AC = { this.state.monsterAc }
-                            HitAdj = { this.state.monsterHitAdj }
-                            AttackRoll = { this.monsterattackroll }
+                            AC = {this.state.monsterAc}
+                            HitAdj = {this.state.monsterHitAdj}
+                            AttackRoll = {this.monsterattackroll}
                             RollTitle = "Monster Roll for Attack"
-                            DidHit = { this.state.monsterDidHit }
+                            DidHit = {this.state.monsterDidHit}
                         />
                         </Col>
                     </Row>
-                    
                 </div>
-                
             </div>
         );
     }

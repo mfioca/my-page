@@ -7,7 +7,6 @@ import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 
 
-
 const noimage = '/static/images/no-img.png';
 var Search = '';
 

@@ -4,7 +4,7 @@
 
 import React from 'react'
 import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron } from 'reactstrap'
-import {AboutImg, CardImageStyle, HomeImage, DandDAvatar, thumbnail } from './jsxstyles'
+import { AboutImg, CardImageStyle, HomeImage, DandDAvatar, thumbnail } from './jsxstyles'
 
 
 /* *********************** 
@@ -190,23 +190,23 @@ export class CharacterSheet extends React.Component {
                             <tbody>
                                 <tr>
                                 <td className="text-muted  text-left h4">Strength:</td>
-                                    <td className="text-white  text-left h4"> { this.props.Strength }</td>
+                                    <td className="text-white  text-left h4"> {this.props.Strength}</td>
                                 </tr>
                                 <tr>
                                     <td className="text-muted  text-left h4">Constitution:</td>
-                                    <td className="text-white  text-left h4"> { this.props.Constitution }</td>
+                                    <td className="text-white  text-left h4"> {this.props.Constitution}</td>
                                 </tr>
                                 <tr>
                                     <td className="text-muted  text-left h4">Dexterity:</td>
-                                    <td className="text-white  text-left h4"> { this.props.Dexterity }</td>
+                                    <td className="text-white  text-left h4"> {this.props.Dexterity}</td>
                                 </tr>
                                 <tr>
                                     <td className="text-muted  text-left h4">Hitpoints:</td>
-                                    <td className="text-white  text-left h4"> { this.props.Hitpoints }</td>
+                                    <td className="text-white  text-left h4"> {this.props.Hitpoints}</td>
                                 </tr>
                                 <tr>
                                     <td className="text-muted  text-left h4">Damage per Hit:</td>
-                                    <td className="text-white  text-left h4"> { this.props.Damage }</td>
+                                    <td className="text-white  text-left h4"> {this.props.Damage}</td>
                                 </tr>
                             </tbody>
                         </Table>  
@@ -230,14 +230,14 @@ export class AttackSection extends React.Component {
         if (test === "Hit") {
             return (
                 <div>
-                    <h2 className="alert-success w-100 text-center my-5">{ test }</h2>
+                    <h2 className="alert-success w-100 text-center my-5">{test}</h2>
                 </div>
             );
         }
         if (test === "Miss") {
             return (
                 <div>
-                    <h2 className="alert-danger w-100 text-center my-5">{ test }</h2>
+                    <h2 className="alert-danger w-100 text-center my-5">{test}</h2>
                 </div>
             );
         }
@@ -252,14 +252,7 @@ export class AttackSection extends React.Component {
                             <img src="../static/images/acicon.png" alt="shield"/>
                             <div>
                                 <h4 className="AC-Icon-text">
-                                    { this.props.AC }
-                                    {/*<style jsx>{`
-                                    h4 {
-                                        position: absolute;
-                                        top: 35px;
-                                        left: 46px;
-                                        transform: translate(-10%, -20%);
-                                    `}</style>*/}
+                                    {this.props.AC}
                                 </h4>
                             </div>
                         </div>
@@ -270,14 +263,7 @@ export class AttackSection extends React.Component {
                                 <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <div>
                                     <h4 className="HitAdj-Icon-text">
-                                        { this.props.HitAdj }
-                                       {/* <style jsx>{`
-                                    h4 {
-                                        position: absolute;
-                                        top: 45px;
-                                        left: 43px;
-                                        transform: translate(-10%, -20%);
-                                    `}</style> */}
+                                        {this.props.HitAdj}
                                     </h4>
                                 </div>
                             </div>
@@ -285,8 +271,8 @@ export class AttackSection extends React.Component {
                     </Col>
                 </Row>
                 <div className="d-flex justify-content-center my-5">
-                    <Button  onClick={ this.props.AttackRoll }>
-                        { this.props.RollTitle }
+                    <Button  onClick={this.props.AttackRoll}>
+                        {this.props.RollTitle}
                     </Button>
                 </div>
                 <div className="text-center text-white">
@@ -312,8 +298,8 @@ export class NameForm extends React.Component {
                         <input
                             type="text"
                             maxLength="20"
-                            value={ this.props.value }
-                            onChange={ this.props.NameChange }
+                            value={this.props.value}
+                            onChange={this.props.NameChange}
                             //Prevent enter key submit
                             onKeyPress={event => {
                                 if (event.which === 13 /* Enter */) {
@@ -322,7 +308,7 @@ export class NameForm extends React.Component {
                             }}
                         />
                     </Label>
-                    <Button type="button" className="ml-5 " onClick={ this.props.NameSubmit }>Submit</Button>
+                    <Button type="button" className="ml-5 " onClick={this.props.NameSubmit}>Submit</Button>
                 </FormGroup>
                 </Form> 
             </div>

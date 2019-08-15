@@ -7,7 +7,11 @@ const noimage = '/static/images/no-img.png'
 
 const tvPost = props => (
   <Layout>
-    <h1 className="text-center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
+    <h1 className="text-center">the below content has been imported from 
+      <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">
+        TVmaze.com
+      </a>
+    </h1>
     <Layout2>
       <div className="h3">
         <h1>{props.show.name}</h1>

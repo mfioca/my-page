@@ -17739,72 +17739,45 @@ module.exports = warning;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/classCallCheck */ "./node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/createClass */ "./node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _about_view_aboutview__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./about_view/aboutview */ "./pages/about_view/aboutview.js");
-/* harmony import */ var _about_view_resumeview__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about_view/resumeview */ "./pages/about_view/resumeview.js");
-
-
-
-
-
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
+/* harmony import */ var _about_view_aboutview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about_view/aboutview */ "./pages/about_view/aboutview.js");
+/* harmony import */ var _about_view_resumeview__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about_view/resumeview */ "./pages/about_view/resumeview.js");
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\about.js";
 
 
 
 
 
-var Aboutpage =
-/*#__PURE__*/
-function (_React$Component) {
-  Object(_babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Aboutpage, _React$Component);
-
-  function Aboutpage() {
-    Object(_babel_runtime_corejs2_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Aboutpage);
-
-    return Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Aboutpage).apply(this, arguments));
-  }
-
-  Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Aboutpage, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_6__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 12
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_about_view_aboutview__WEBPACK_IMPORTED_MODULE_7__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 13
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("hr", {
-        className: "hr-style-five m-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 14
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_about_view_resumeview__WEBPACK_IMPORTED_MODULE_8__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 15
-        },
-        __self: this
-      }));
-    }
-  }]);
-
-  return Aboutpage;
-}(react__WEBPACK_IMPORTED_MODULE_5___default.a.Component);
+function Aboutpage() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_view_aboutview__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hr", {
+    className: "hr-style-five m-5",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_view_resumeview__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }));
+}
 
 /* harmony default export */ __webpack_exports__["default"] = (Aboutpage);
 
@@ -18977,21 +18950,21 @@ function (_React$Component7) {
         className: "my-4 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 260
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "float-right",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 268
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 262
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -18999,53 +18972,53 @@ function (_React$Component7) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 263
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 264
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 272
+          lineNumber: 265
         },
         __self: this
       }, this.props.HitAdj)))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "d-flex justify-content-center my-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 273
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         onClick: this.props.AttackRoll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 274
         },
         __self: this
       }, this.props.RollTitle)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 292
+          lineNumber: 278
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 279
         },
         __self: this
       }, "Attack Result:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 281
         },
         __self: this
       }, this.AttackResult()));
@@ -19072,33 +19045,33 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 293
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 294
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 295
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 296
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h6", {
         className: "mr-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 311
+          lineNumber: 297
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -19116,7 +19089,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 312
+          lineNumber: 298
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -19125,7 +19098,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 325
+          lineNumber: 311
         },
         __self: this
       }, "Submit"))));
