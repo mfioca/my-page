@@ -201,7 +201,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Header.js";
 
 
-var activeprofile = '';
 
 var Header =
 /*#__PURE__*/
@@ -344,15 +343,7 @@ function (_React$Component) {
           lineNumber: 41
         },
         __self: this
-      }, "Provider List"), activeprofile === 'Admin' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
-        className: "btn-dark w-100",
-        href: "/test",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        },
-        __self: this
-      }, "Test")))))));
+      }, "Provider List")))))));
     }
   }]);
 
@@ -25245,7 +25236,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftvpage&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Ctvpage.js ***!
   \*********************************************************************************************************************************************/
@@ -25268,5 +25259,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=tvpage.js.map

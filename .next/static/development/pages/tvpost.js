@@ -201,7 +201,6 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\components\\Header.js";
 
 
-var activeprofile = '';
 
 var Header =
 /*#__PURE__*/
@@ -344,15 +343,7 @@ function (_React$Component) {
           lineNumber: 41
         },
         __self: this
-      }, "Provider List"), activeprofile === 'Admin' && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
-        className: "btn-dark w-100",
-        href: "/test",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 43
-        },
-        __self: this
-      }, "Test")))))));
+      }, "Provider List")))))));
     }
   }]);
 
@@ -24791,6 +24782,67 @@ module.exports = warning;
 
 /***/ }),
 
+/***/ "./pages/jsxstyles.js":
+/*!****************************!*\
+  !*** ./pages/jsxstyles.js ***!
+  \****************************/
+/*! exports provided: HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeImage", function() { return HomeImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardImageStyle", function() { return CardImageStyle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutImg", function() { return AboutImg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvpageSearchBar", function() { return TvpageSearchBar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvImage", function() { return TvImage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvTitle", function() { return TvTitle; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DandDAvatar", function() { return DandDAvatar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "thumbnail", function() { return thumbnail; });
+
+var HomeImage = {
+  borderRadius: '50%',
+  width: '20%',
+  height: 'auto'
+};
+var CardImageStyle = {
+  maxWidth: '150px',
+  maxHeight: '150px',
+  marginRight: 'auto',
+  marginLeft: 'auto'
+};
+var AboutImg = {
+  width: '300px',
+  height: '300px',
+  padding: '5px'
+};
+var DandDAvatar = {
+  height: '300px',
+  width: 'auto'
+};
+var thumbnail = {
+  position: 'relative',
+  align: 'center' //TvMaze Page
+
+};
+var TvpageSearchBar = {
+  fontSize: '14px',
+  marginLeft: '200px',
+  marginRight: 'auto',
+  textAlign: 'center'
+};
+var TvImage = {
+  height: '300px',
+  width: 'auto'
+};
+var TvTitle = {
+  height: '20px',
+  width: '200px',
+  margin: 4
+};
+
+/***/ }),
+
 /***/ "./pages/tv_info/Header.js":
 /*!*********************************!*\
   !*** ./pages/tv_info/Header.js ***!
@@ -24895,11 +24947,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
 /* harmony import */ var _tv_info_MyLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./tv_info/MyLayout */ "./pages/tv_info/MyLayout.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _jsxstyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./jsxstyles */ "./pages/jsxstyles.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! isomorphic-unfetch */ "./node_modules/isomorphic-unfetch/browser.js");
+/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7__);
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Documents\\github\\my-page\\pages\\tvpost.js";
+
+
 
 
 
@@ -24910,14 +24966,14 @@ var tvPost = function tvPost(props) {
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 11
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     className: "text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 12
     },
     __self: this
   }, "the below content has been imported from", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -24926,101 +24982,42 @@ var tvPost = function tvPost(props) {
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, "TVmaze.com")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_tv_info_MyLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 17
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "h3",
+    className: "h3 m-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 18
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+    className: "float-left",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 21
     },
     __self: this
   }, props.show.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, "Type:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 18
-    },
-    __self: this
-  }, props.show.type ? props.show.type : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, "Premiered:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19
-    },
-    __self: this
-  }, props.show.premiered ? props.show.premiered : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, "status:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, props.show.status ? props.show.status : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, "Rating:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, props.show.rating.average ? props.show.average : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 22
@@ -25029,13 +25026,85 @@ var tvPost = function tvPost(props) {
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, "Type:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 22
+    },
+    __self: this
+  }, props.show.type ? props.show.type : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, "Premiered:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 23
+    },
+    __self: this
+  }, props.show.premiered ? props.show.premiered : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, "status:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, props.show.status ? props.show.status : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
       lineNumber: 25
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, "Rating:"), " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, props.show.rating.average ? props.show.rating.average : 'no data')), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29
     },
     __self: this
   }, "Genre:"), " \xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 30
     },
     __self: this
   }, props.show.genres.map(function (genre) {
@@ -25043,40 +25112,65 @@ var tvPost = function tvPost(props) {
       key: props.show.genres,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 32
       },
       __self: this
     }, genre, " \xA0");
-  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
+  })))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+    sm: {
+      size: 'auto',
+      offset: 1
+    },
+    className: "mr-5 mt-3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
     src: props.show.image ? props.show.image.medium : noimage,
     alt: "no image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 40
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
+    className: "m-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 43
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 44
+    },
+    __self: this
+  }, "Summary:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("br", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
     },
     __self: this
   }, props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, ''))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 45
     },
     __self: this
   }, "Link:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 46
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -25086,10 +25180,84 @@ var tvPost = function tvPost(props) {
     title: props.show.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 47
     },
     __self: this
-  }, props.show.name ? props.show.name : 'null'))))));
+  }, props.show.name ? props.show.name : 'null')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, "Cast:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "d-flex flex-wrap justify-content-left",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, props.show._embedded.cast.map(function (cast) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      key: cast.person.id,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 59
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Card"], {
+      className: "m-5 text-center",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 60
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardTitle"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
+      },
+      __self: this
+    }, cast.person.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardBody"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 62
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardImg"], {
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_6__["TvImage"],
+      src: cast.person.image.medium ? cast.person.image.medium : noimage,
+      alt: "castimage",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 63
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
+      className: "my-2",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 64
+      },
+      __self: this
+    }, "As: ", cast.character.name)), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
+      className: "btn-dark",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 66
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+      className: "btn-dark w-100",
+      href: cast.person.url,
+      target: "_blank",
+      rel: "noopener noreferrer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 67
+      },
+      __self: this
+    }, "Actor page"))));
+  })))));
 };
 
 tvPost.getInitialProps =
@@ -25106,7 +25274,7 @@ function () {
             id = context.query.id; //pules tvmaze api json based on selected show on the search page.
 
             _context.next = 3;
-            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_5___default()("https://api.tvmaze.com/shows/".concat(id));
+            return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_7___default()("https://api.tvmaze.com/shows/".concat(id, "?embed[]=cast"));
 
           case 3:
             res = _context.sent;
@@ -25138,7 +25306,7 @@ function () {
 
 /***/ }),
 
-/***/ 6:
+/***/ 3:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftvpost&absolutePagePath=C%3A%5CUsers%5CMark%5CDocuments%5Cgithub%5Cmy-page%5Cpages%5Ctvpost.js ***!
   \*********************************************************************************************************************************************/
@@ -25161,5 +25329,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=tvpost.js.map

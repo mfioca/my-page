@@ -9,7 +9,6 @@ module.exports = withCSS({
           '/tvpage': { page: '/tvpage'},
           '/DandDpage': { page: '/DandDpage'},
           '/providerData': { page: '/providerData'},
-          '/test': {page: '/test'},
         };
       }
 });

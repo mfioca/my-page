@@ -1,7 +1,7 @@
 import React from 'react';
 import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu,  Button } from 'reactstrap';
 
-var activeprofile = ''; 
+
 
 
 class Header extends React.Component {
@@ -39,9 +39,6 @@ constructor(props) {
                                     <Button className="btn-dark w-100" href="/tvpage">TvMaze</Button>
                                     <Button className="btn-dark w-100" href="/DandDpage">DandD</Button>
                                     <Button className="btn-dark w-100" href="/providerData">Provider List</Button>
-                                    {activeprofile === 'Admin' &&
-                                        <Button className="btn-dark w-100" href="/test">Test</Button> 
-                                    }
                                 </DropdownMenu>
                             </UncontrolledDropdown>
                         </Nav>
