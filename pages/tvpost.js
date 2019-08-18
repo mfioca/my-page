@@ -1,7 +1,7 @@
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout'
 import { Card, CardImg, CardBody, CardTitle, Row, Col, Button } from 'reactstrap'
-import { TvImage, TvCast } from './jsxstyles'
+import { TvImage, TvCast, TvTitle } from './jsxstyles'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'
@@ -59,14 +59,14 @@ const tvPost = props => (
         <div className="d-flex flex-wrap justify-content-left">
           {props.show._embedded.cast.map(cast => (
             <div key={cast.person.id}>
-              <Card className="m-5 text-center">
-                <CardTitle className="mt-4">{cast.person.name}</CardTitle>
+              <Card className="m-5">
+                <CardTitle className="m-4 text-center" style={TvTitle}>{cast.person.name}</CardTitle>
                 <CardBody>
                   <div>
-                    <CardImg style={TvImage} src={cast.person.image.medium? cast.person.image.medium: noimage} alt="castimage" />
+                    <CardImg className="p-2" style={TvImage} src={cast.person.image.medium? cast.person.image.medium: noimage} alt="castimage" />
                   </div>
-                  <div className="text-center my-3">
-                    <h4 style={TvCast}>As:<span className="ml-2">{cast.character.name}</span></h4>
+                  <div className="text-center my-2">
+                    <h4 style={TvCast}>As:<small className="ml-2">{cast.character.name}</small></h4>
                   </div>
                 </CardBody>
                 <Button className="btn-dark mt-5">
