@@ -3,7 +3,11 @@
 ******************/
 
 import React from 'react'
-import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron } from 'reactstrap'
+import { 
+    Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
+    Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron 
+} from 'reactstrap'
+
 import { AboutImg, CardImageStyle, HomeImage, DandDAvatar, thumbnail } from './jsxstyles'
 
 

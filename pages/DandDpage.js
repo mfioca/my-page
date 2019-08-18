@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Layout from '../components/layout.js'
 import AttackSim from './DandD/attacksim'
 

@@ -66,7 +66,7 @@ const tvPost = props => (
                     <CardImg style={TvImage} src={cast.person.image.medium? cast.person.image.medium: noimage} alt="castimage" />
                   </div>
                   <div className="text-center my-3">
-                    <h4 style={TvCast}>As:{cast.character.name}</h4>
+                    <h4 style={TvCast}>As:<span className="ml-2">{cast.character.name}</span></h4>
                   </div>
                 </CardBody>
                 <Button className="btn-dark mt-5">

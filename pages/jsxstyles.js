@@ -1,4 +1,8 @@
-export { HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, TvImage, TvTitle, DandDAvatar, thumbnail, TvCast}
+export { 
+    HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, 
+    TvImage, TvTitle, DandDAvatar, thumbnail, TvCast
+}
+
 
 const HomeImage = {
     borderRadius: '50%',

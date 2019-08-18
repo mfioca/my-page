@@ -1,5 +1,8 @@
 import React from 'react';
-import {Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu,  Button } from 'reactstrap';
+import {
+    Collapse, Navbar, NavbarToggler, Nav, NavItem, NavLink, UncontrolledDropdown, 
+    DropdownToggle, DropdownMenu,  Button 
+} from 'reactstrap';
 
 
 
@@ -21,7 +24,7 @@ constructor(props) {
     render() {
         return (
             <div>
-                <Navbar  color="dark" className="h4" dark expand="md">
+                <Navbar color="dark" className="h4" dark expand="md">
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

@@ -5,11 +5,10 @@ import Resume from './about_view/resumeview'
 
 
 
-function Aboutpage (){
+function Aboutpage() {
   return (
     <Layout>
       <About />
-      <hr className="hr-style-five m-5" />
       <Resume />
     </Layout>
   );

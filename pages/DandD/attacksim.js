@@ -124,7 +124,7 @@ class AttackSim extends React.Component {
             <div >
                 <div className="d-flex row justify-content-center m-0 p-0"> 
                     <Row className="w-100">
-                        <Col   className=" m-1 bg-dark text-white ">
+                        <Col className=" m-1 bg-dark text-white ">
                             <div>
                                 <h5 className="mt-5 ml-5"><b>Name: </b>{this.state.heroName}</h5>
                             </div>
@@ -172,7 +172,6 @@ class AttackSim extends React.Component {
                 </div>
                 
                 <div className="d-flex flex-wrap justify-content-center m-0 p-0">
-                    
                     <Row className="w-100 m-0">
                         <Col  className="bg-dark m-1 p-0">
                             <AttackSection
