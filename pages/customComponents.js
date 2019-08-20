@@ -101,12 +101,10 @@ export class SingleListCard extends React.Component{
                     <CardBody>
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
                         <CardText>
-                            <ul>
                                 <li>{this.props.Item1}</li>
                                 <li>{this.props.Item2}</li>
                                 <li>{this.props.Item3}</li>
                                 <li>{this.props.Item4}</li>
-                            </ul>
                         </CardText>
                     </CardBody>
                 </Card> 
@@ -189,8 +187,8 @@ export class CharacterSheet extends React.Component {
         return (
             <div >
                 <Row >
-                    <Col xs="6">
-                        <Table borderless  className=" ml-4 p-5">
+                    <Col sm={{ size: 'auto', offset: 1 }}>
+                        <Table borderless  className="">
                             <tbody>
                                 <tr>
                                 <td className="text-muted  text-left h4">Strength:</td>
@@ -215,8 +213,8 @@ export class CharacterSheet extends React.Component {
                             </tbody>
                         </Table>  
                     </Col>
-                    <Col xs="6">
-                    <div className="float-right mr-5">
+                    <Col sm={{ size: 'auto', offset: 1 }}>
+                    <div className="text-center ">
                         <img  style={DandDAvatar} src={this.props.ImgUrl} alt="hero"/>
                     </div>
                     </Col>
@@ -251,7 +249,7 @@ export class AttackSection extends React.Component {
         return (
             <div className="bg-dark">
                 <Row>
-                    <Col className="my-4 mx-5">
+                    <Col className="my-4 mx-5 d-flex justify-content-center">
                         <div style={thumbnail}>
                             <img src="../static/images/acicon.png" alt="shield"/>
                             <div>
@@ -261,8 +259,7 @@ export class AttackSection extends React.Component {
                             </div>
                         </div>
                     </Col>
-                    <Col className="my-4 mx-5">
-                        <div className="float-right">
+                    <Col className="my-4 mx-5 d-flex justify-content-center">
                             <div style={thumbnail}>
                                 <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <div>
@@ -270,8 +267,7 @@ export class AttackSection extends React.Component {
                                         {this.props.HitAdj}
                                     </h4>
                                 </div>
-                            </div>
-                        </div>
+                            </div>  
                     </Col>
                 </Row>
                 <div className="d-flex justify-content-center my-5">

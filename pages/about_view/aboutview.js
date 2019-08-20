@@ -12,7 +12,7 @@ function About() {
                 Description="Movie, sci-fi and over all tech geek that always seeks out new and interesting
                     things to experience and learn.  I strive to keep an open mind on everything because
                     you never know what kind of hidden truths await those who pay attention.
-                    You can find those hidden truths hidden things like the comedy writings of Douglas Adams 
+                    You can find those truths in the comedy writings of Douglas Adams 
                     to J. R. R. Tolkien and all the way to the historical facts behind the theories expressed 
                     in the TV show “Ancient Aliens”."
             />

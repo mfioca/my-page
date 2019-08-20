@@ -40,7 +40,6 @@ const TvpageSearchBar = {
     marginLeft: '200px',
     marginRight: 'auto',
     textAlign: 'center',
-
 }
 
 const TvImage = {

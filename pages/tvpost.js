@@ -17,7 +17,7 @@ const tvPost = props => (
     <Layout2>
       <div className="h3 m-3">
         <Row>
-          <Col className="float-left">
+          <Col>
             <h1>{props.show.name}</h1>
             <h3><b>Type:</b> <small>{props.show.type ? props.show.type : 'no data'}</small></h3>
             <h3><b>Premiered:</b> <small>{props.show.premiered ? props.show.premiered : 'no data'}</small></h3>

@@ -53,7 +53,6 @@ class ProviderList extends Component {
     super(props); 
   }
  
-
   render() {
     return data ? this.renderData(data) : this.renderLoading();
   }
