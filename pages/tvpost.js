@@ -34,7 +34,7 @@ const tvPost = props => (
                   <span key={props.show.genres}>
                   {genres} &nbsp;
                   </span>
-               ))} 
+                ))} 
               </small>
             </h3>
           </Col>
@@ -43,15 +43,15 @@ const tvPost = props => (
           </Col>
         </Row>
         <Row className="m-3">
-            <h4>Summary:<br /><small>{props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')}</small></h4>
+          <h4>Summary:<br /><small>{props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')}</small></h4>
         </Row>
         <Row className="m-3">
           <h3>Link: 
             <small className="ml-2">
               <a href={props.show.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={props.show.url}>
+                target="_blank"
+                rel="noopener noreferrer"
+                title={props.show.url}>
               {props.show.name ? props.show.name : 'null'} 
               </a>
             </small>
@@ -71,7 +71,7 @@ const tvPost = props => (
                     <h4 style={TvCast}>As:<small className="ml-2">{cast.character.name}</small></h4>
                   </div>
                 </CardBody>
-                <Button className="btn-dark mt-5">
+                <Button className="btn-dark mt-3">
                   <a className="btn-dark w-100" 
                     href={cast.person.url}
                     target="_blank" 
@@ -91,7 +91,7 @@ const tvPost = props => (
             defaultPageSize={20}
             style={{
               height: "600px",
-              fontSize: "14px" // This will force the table body to overflow and scroll, since there is not enough room
+              fontSize: "14px",
             }}
             filterable
             defaultFilterMethod={(filter, row) =>
@@ -137,6 +137,13 @@ const tvPost = props => (
                 accessor: d =>
                 <a href={d.url} target="_blank" rel="noopener noreferrer">{d.name}</a>, 
                 minWidth: 70,
+                style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
+              },
+              {
+                Header:"Air Date",
+                id: "airdate",
+                accessor: d => d.airdate,
+                width: 90,
                 style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
               },
               {

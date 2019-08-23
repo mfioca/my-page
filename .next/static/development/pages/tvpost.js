@@ -28075,7 +28075,7 @@ var tvPost = function tvPost(props) {
       },
       __self: this
     }, cast.character.name)))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
-      className: "btn-dark mt-5",
+      className: "btn-dark mt-3",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 74
@@ -28111,8 +28111,7 @@ var tvPost = function tvPost(props) {
     defaultPageSize: 20,
     style: {
       height: "600px",
-      fontSize: "14px" // This will force the table body to overflow and scroll, since there is not enough room
-
+      fontSize: "14px"
     },
     filterable: true,
     defaultFilterMethod: function defaultFilterMethod(filter, row) {
@@ -28195,13 +28194,24 @@ var tvPost = function tvPost(props) {
         'textAlign': 'center'
       }
     }, {
+      Header: "Air Date",
+      id: "airdate",
+      accessor: function accessor(d) {
+        return d.airdate;
+      },
+      width: 90,
+      style: {
+        'whiteSpace': 'unset',
+        'textAlign': 'center'
+      }
+    }, {
       Header: "Summary",
       id: "summary",
       accessor: function accessor(d) {
         return d.summary != null && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 146
+            lineNumber: 153
           },
           __self: this
         }, d.summary.replace(/<[/]?p>/g, ''));
