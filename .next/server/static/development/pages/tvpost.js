@@ -1914,13 +1914,7 @@ var tvPost = function tvPost(props) {
       lineNumber: 87
     },
     __self: this
-  }, "Episodes:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 88
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_6___default.a, {
+  }, "Episodes:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_6___default.a, {
     className: "-striped -highlight",
     data: props.show._embedded.episodes,
     defaultPageSize: 20,
@@ -1939,16 +1933,55 @@ var tvPost = function tvPost(props) {
       accessor: function accessor(d) {
         return d.season;
       },
-      width: 70,
+      width: 110,
       style: {
-        'text-align': 'center'
+        'textAlign': 'center'
+      },
+      Filter: function Filter(_ref) {
+        var filter = _ref.filter,
+            _onChange = _ref.onChange;
+        return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("select", {
+          onChange: function onChange(event) {
+            return _onChange(event.target.value);
+          },
+          style: {
+            width: "100%"
+          },
+          value: filter ? filter.value : '',
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 108
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
+          value: "",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 112
+          },
+          __self: this
+        }, "Show All"), props.show._embedded.episodes.map(function (item) {
+          return item.season;
+        }).filter(function (item, i, s) {
+          return s.lastIndexOf(item) == i;
+        }).map(function (value) {
+          return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
+            key: value,
+            value: value,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 118
+            },
+            __self: this
+          }, value);
+        }));
       }
     }, {
       Header: "Episode #",
       accessor: "number",
       width: 80,
       style: {
-        'text-align': 'center'
+        'textAlign': 'center'
       }
     }, {
       Header: "Name",
@@ -1960,15 +1993,15 @@ var tvPost = function tvPost(props) {
           rel: "noopener noreferrer",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 118
+            lineNumber: 138
           },
           __self: this
         }, d.name);
       },
       minWidth: 70,
       style: {
-        'white-space': 'unset',
-        'text-align': 'center'
+        'whiteSpace': 'unset',
+        'textAlign': 'center'
       }
     }, {
       Header: "Summary",
@@ -1977,18 +2010,18 @@ var tvPost = function tvPost(props) {
         return d.summary != null && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 126
+            lineNumber: 146
           },
           __self: this
         }, d.summary.replace(/<[/]?p>/g, ''));
       },
       style: {
-        'white-space': 'unset'
+        'whiteSpace': 'unset'
       }
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 88
     },
     __self: this
   })))));
@@ -1997,7 +2030,7 @@ var tvPost = function tvPost(props) {
 tvPost.getInitialProps =
 /*#__PURE__*/
 function () {
-  var _ref = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  var _ref2 = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_1__["default"])(
   /*#__PURE__*/
   _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(context) {
     var id, res, show;
@@ -2032,7 +2065,7 @@ function () {
   }));
 
   return function (_x) {
-    return _ref.apply(this, arguments);
+    return _ref2.apply(this, arguments);
   };
 }();
 

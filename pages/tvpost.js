@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout'
-import { Card, CardImg, CardBody, CardTitle, Row, Col, Button, Table } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, Row, Col, Button } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvImage, TvCast, TvTitle } from './jsxstyles'
@@ -85,7 +85,6 @@ const tvPost = props => (
         </div>
         <div className="mt-4">
           <h1>Episodes:</h1>
-          <p></p>
           <ReactTable
             className= "-striped -highlight"
             data= {props.show._embedded.episodes}
@@ -102,14 +101,35 @@ const tvPost = props => (
                 Header: "Season",
                 id: "season",
                 accessor: d => d.season,
-                width: 70,
-                style: {'text-align': 'center'},
+                width: 110,
+                style: {'textAlign': 'center'},
+                Filter: ({ filter, onChange }) => {
+                  return (
+                    <select
+                      onChange={event => onChange(event.target.value)}
+                      style={{ width: "100%"}}
+                      value={filter ? filter.value : ''}> 
+                      <option value= ''>Show All</option>
+                      {props.show._embedded.episodes
+                        .map(item => item.season)
+                        .filter((item, i, s) => s.lastIndexOf(item) == i)
+                        .map(function (value) {
+                          return (
+                            <option key={value} value={value}>
+                              {value}
+                            </option>
+                          );
+                        })
+                      }
+                    </select>
+                  );
+                }
               },
               {
                 Header: "Episode #",
                 accessor: "number",
                 width: 80,
-                style: {'text-align': 'center'}
+                style: {'textAlign': 'center'}
               },
               {
                 Header:"Name",
@@ -117,14 +137,14 @@ const tvPost = props => (
                 accessor: d =>
                 <a href={d.url} target="_blank" rel="noopener noreferrer">{d.name}</a>, 
                 minWidth: 70,
-                style: { 'white-space': 'unset', 'text-align': 'center' },
+                style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
               },
               {
                 Header:"Summary",
                 id: "summary",
                 accessor: d => 
                 d.summary != null && <span>{d.summary.replace(/<[/]?p>/g, '')}</span>,
-                style: { 'white-space': 'unset' },
+                style: { 'whiteSpace': 'unset' },
               }
             ]}
           />
