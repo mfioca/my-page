@@ -1,6 +1,8 @@
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout'
-import { Card, CardImg, CardBody, CardTitle, Row, Col, Button } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, Row, Col, Button, Table } from 'reactstrap'
+import ReactTable from "react-table"
+import "react-table/react-table.css"
 import { TvImage, TvCast, TvTitle } from './jsxstyles'
 import fetch from 'isomorphic-unfetch'
 
@@ -22,17 +24,17 @@ const tvPost = props => (
             <h3><b>Type:</b> <small>{props.show.type ? props.show.type : 'no data'}</small></h3>
             <h3><b>Premiered:</b> <small>{props.show.premiered ? props.show.premiered : 'no data'}</small></h3>
             <h3><b>status:</b> <small>{props.show.status ? props.show.status : 'no data'}</small></h3>
-            <h3><b>Rating:</b> <small>{props.show.rating.average ? props.show.rating.average : 'no data'}</small></h3>
+            <h3><b>Rating:</b> <small>{props.show.rating.average}</small></h3>
             <h3>
               {/* since tvmaze api json has genre as an imbedded array,
                 pulls the data in genres in a key map to list all entries*/}
               <b>Genre:</b> &nbsp;
               <small>
-                {props.show.genres.map(genre => (
+                {props.show.genres.map(genres => (
                   <span key={props.show.genres}>
-                  {genre} &nbsp;
+                  {genres} &nbsp;
                   </span>
-                ))}
+               ))} 
               </small>
             </h3>
           </Col>
@@ -59,7 +61,7 @@ const tvPost = props => (
         <div className="d-flex flex-wrap justify-content-left">
           {props.show._embedded.cast.map(cast => (
             <div key={cast.person.id}>
-              <Card className="m-5">
+              <Card className="m-2">
                 <CardTitle className="m-4 text-center" style={TvTitle}>{cast.person.name}</CardTitle>
                 <CardBody>
                   <div>
@@ -81,6 +83,52 @@ const tvPost = props => (
             </div>
           ))}
         </div>
+        <div className="mt-4">
+          <h1>Episodes:</h1>
+          <p></p>
+          <ReactTable
+            className= "-striped -highlight"
+            data= {props.show._embedded.episodes}
+            defaultPageSize={20}
+            style={{
+              height: "600px",
+              fontSize: "14px" // This will force the table body to overflow and scroll, since there is not enough room
+            }}
+            filterable
+            defaultFilterMethod={(filter, row) =>
+              String(row[filter.id]) === filter.value}
+            columns= {[
+              {
+                Header: "Season",
+                id: "season",
+                accessor: d => d.season,
+                width: 70,
+                style: {'text-align': 'center'},
+              },
+              {
+                Header: "Episode #",
+                accessor: "number",
+                width: 80,
+                style: {'text-align': 'center'}
+              },
+              {
+                Header:"Name",
+                id: "name",
+                accessor: d =>
+                <a href={d.url} target="_blank" rel="noopener noreferrer">{d.name}</a>, 
+                minWidth: 70,
+                style: { 'white-space': 'unset', 'text-align': 'center' },
+              },
+              {
+                Header:"Summary",
+                id: "summary",
+                accessor: d => 
+                d.summary != null && <span>{d.summary.replace(/<[/]?p>/g, '')}</span>,
+                style: { 'white-space': 'unset' },
+              }
+            ]}
+          />
+        </div>
       </div>
     </Layout2>
   </Layout>
@@ -89,7 +137,7 @@ const tvPost = props => (
 tvPost.getInitialProps = async function(context) {
   const { id } = context.query;
   //pules tvmaze api json based on selected show on the search page.
-  const res = await fetch(`https://api.tvmaze.com/shows/${id}?embed[]=cast`);
+  const res = await fetch(`https://api.tvmaze.com/shows/${id}?embed[]=episodes&embed[]=cast&embed[]=seasons`);
   const show = await res.json();
   
   console.log(show);

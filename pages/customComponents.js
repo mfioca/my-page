@@ -292,9 +292,8 @@ export class NameForm extends React.Component {
         return (
             <div>
                 <Form inline>
-                    <FormGroup>
-                    <Label>
-                        <h6 className="mr-3">Name:</h6>
+                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                        <Label className="mr-sm-2">Name:</Label>
                         <input
                             type="text"
                             maxLength="20"
@@ -307,9 +306,8 @@ export class NameForm extends React.Component {
                                 }
                             }}
                         />
-                    </Label>
-                    <Button type="button" className="ml-5 " onClick={this.props.NameSubmit}>Submit</Button>
-                </FormGroup>
+                    </FormGroup>
+                    <Button  onClick={this.props.NameSubmit}>Submit</Button>
                 </Form> 
             </div>
         );

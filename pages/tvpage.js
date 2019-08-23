@@ -72,7 +72,7 @@ const TvPage = props => (
                     <CardImg className="my-2" style={TvImage} src={show.image ? show.image.medium : noimage} alt="image" />
                     </CardBody>
                       <Link href={`/tvpost?id=${show.id}`}>
-                      <a className="btn btn-dark w-100">Select</a>
+                        <a className="btn btn-dark w-100">Select</a>
                       </Link>
                   </Card>
               </div>
