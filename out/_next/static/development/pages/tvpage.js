@@ -24823,8 +24823,7 @@ var DandDAvatar = {
 };
 var thumbnail = {
   position: 'relative',
-  align: 'center' //TvMaze Page
-
+  align: 'center'
 };
 var TvpageSearchBar = {
   fontSize: '14px',
@@ -25102,38 +25101,38 @@ var TvPage = function TvPage(props) {
       lineNumber: 62
     },
     __self: this
-  }, "the below content has been imported from ", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+  }, "the below content has been imported from", react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
     href: "https://www.tvmaze.com",
     target: "_blank",
     rel: "noopener noreferrer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 63
     },
     __self: this
   }, "TVmaze.com")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(Searchbar, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 67
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_tv_info_MyLayout_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 69
     },
     __self: this
   }, "Results for: ", Search), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "d-flex flex-wrap justify-content-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 70
     },
     __self: this
   }, props.shows.map(function (show) {
@@ -25142,13 +25141,13 @@ var TvPage = function TvPage(props) {
       key: show.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 72
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Card"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 69
+        lineNumber: 73
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardTitle"], {
@@ -25156,25 +25155,25 @@ var TvPage = function TvPage(props) {
       style: _jsxstyles__WEBPACK_IMPORTED_MODULE_10__["TvTitle"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 74
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("b", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 77
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("u", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 77
       },
       __self: this
     }, show.name))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 79
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardImg"], {
@@ -25184,21 +25183,21 @@ var TvPage = function TvPage(props) {
       alt: "image",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 80
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_13___default.a, {
       href: "/tvpost?id=".concat(show.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 87
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
       className: "btn btn-dark w-100",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 88
       },
       __self: this
     }, "Select"))));
@@ -25243,7 +25242,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftvpage&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Ctvpage.js ***!
   \********************************************************************************************************************************************/
@@ -25266,5 +25265,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[3,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=tvpage.js.map

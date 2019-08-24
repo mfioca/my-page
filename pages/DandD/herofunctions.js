@@ -1,4 +1,6 @@
-export { setherostats, SetheroConstAdj, SetheroacAdj, SetheroDmgAdj, SetheroHitAdj, heroattackroll, }
+export { setherostats, SetheroConstAdj, SetheroacAdj, 
+    SetheroDmgAdj, SetheroHitAdj, heroattackroll, 
+}
 
 //sets hero hitpoints based on constitution stat number.
 function SetheroConstAdj() {
@@ -152,7 +154,6 @@ function setherostats() {
 armor class and hero hit adjustment.  on successful attack role, applies damage
 to monster hp and if hp reaches zero alerts that monster is dead */
 function heroattackroll() {
-    //1-20 for attack roll to see if hero hits
     this.setState ({heroRoll: Math.floor((Math.random() * 20) + 1)});
     //if hero hit, set display to show "hit"
     if (this.state.heroRoll >= (this.state.monsterAc + this.state.heroHitAdj )) {

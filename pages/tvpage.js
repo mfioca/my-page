@@ -59,7 +59,11 @@ class Searchbar extends React.Component {
 
 const TvPage = props => (
   <Layout>
-    <h1 className="text-center">the below content has been imported from <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">TVmaze.com</a></h1>
+    <h1 className="text-center">the below content has been imported from 
+      <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">
+        TVmaze.com
+      </a>
+    </h1>
     <Searchbar />
     <Layout2>
       <h1>Results for: {Search}</h1>
@@ -67,9 +71,18 @@ const TvPage = props => (
         {props.shows.map(show => (
           <div className="p-3 text-center" key={show.id}>
             <Card>
-              <CardTitle className="m-4 text-center" style={TvTitle}><b><u>{show.name}</u></b></CardTitle>
+              <CardTitle 
+                className="m-4 text-center" 
+                style={TvTitle}>
+                  <b><u>{show.name}</u></b>
+              </CardTitle>
               <CardBody>
-              <CardImg className="my-2" style={TvImage} src={show.image ? show.image.medium : noimage} alt="image" />
+              <CardImg 
+                className="my-2" 
+                style={TvImage} 
+                src={show.image ? show.image.medium : noimage} 
+                alt="image" 
+              />
               </CardBody>
               <Link href={`/tvpost?id=${show.id}`}>
                 <a className="btn btn-dark w-100">Select</a>

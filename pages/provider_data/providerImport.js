@@ -17,9 +17,9 @@ const uniqueNames = new Set(data.map(item => item.Region)).size;
 function filterCaseInsensitive(filter, row) {
   const id = filter.pivotId || filter.id;
   return (
-      row[id] !== undefined ?
-        String(row[id].toLowerCase()).startsWith(filter.value.toLowerCase())
-        :  true
+    row[id] !== undefined ?
+      String(row[id].toLowerCase()).startsWith(filter.value.toLowerCase())
+    :  true
   );
 }
 
@@ -65,7 +65,7 @@ class ProviderList extends Component {
           data= {data}
           defaultPageSize={20}
           style={{
-            height: "800px" // This will force the table body to overflow and scroll, since there is not enough room
+            height: "800px" 
           }}
           //sets filtering options in react-table for no dropdown option.  Calls the filtercaseinsensitive
           //function as mentioned above

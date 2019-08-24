@@ -34,7 +34,6 @@ const thumbnail = {
     align: 'center'
 }
 
-//TvMaze Page
 const TvpageSearchBar = {
     fontSize: '14px',
     marginLeft: '200px',

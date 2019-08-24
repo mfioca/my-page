@@ -8,12 +8,40 @@ import {
     Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron 
 } from 'reactstrap'
 
-import { AboutImg, CardImageStyle, HomeImage, DandDAvatar, thumbnail } from './jsxstyles'
+import { AboutImg, CardImageStyle, HomeImage, 
+    DandDAvatar, thumbnail 
+} from './jsxstyles'
 
 
 /* *********************** 
 *   Export Classes       * 
 **************************/
+
+//used in home page
+export class HomeCard extends React.Component{
+    render() {
+        return (
+            <div>
+                <Card className="text-center">
+                    <CardTitle>{this.props.Title}</CardTitle>
+                    <CardImg top style={CardImageStyle} src={this.props.Image} alt="Card image cap" />
+                    <CardBody>
+                        <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
+                        <CardText>{this.props.Description}</CardText>
+                        <Button 
+                            href={this.props.Link}
+                            className="btn-dark"
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            >
+                                {this.props.ButtonTitle}
+                        </Button>
+                    </CardBody>
+                </Card> 
+            </div>
+        );
+    }
+};
 
 //used in Resumeview and providerdata
 export class CustomJumbo extends React.Component {
@@ -31,13 +59,17 @@ export class CustomJumbo extends React.Component {
             return (
                 <Jumbotron>
                     <h1 className="display-3 text-center">{this.props.Title}</h1>
-                        <div className="container-fluid text-center">
-                            <img src="../static/images/avatar.jpg" style={HomeImage} alt="avatar"/>
-                        </div>
-                        <p className={this.props.Caption1Style}>{this.props.Caption1}</p>
-                        <hr className="my-2" />
-                        <p className={this.props.Caption2Style}>{this.props.Caption2} <br />
-                            {this.props.Caption3}</p>
+                    <div className="container-fluid text-center">
+                        <img 
+                            src="../static/images/avatar.jpg" 
+                            style={HomeImage} alt="avatar"
+                        />
+                    </div>
+                    <p className={this.props.Caption1Style}>{this.props.Caption1}</p>
+                    <hr className="my-2" />
+                    <p className={this.props.Caption2Style}>{this.props.Caption2} <br />
+                        {this.props.Caption3}
+                    </p>
                 </Jumbotron>
             );
         }
@@ -53,40 +85,45 @@ export class AboutMedia extends React.Component{
                     <Card className={this.props.Class}>
                         <Row>
                             <Col >
-                            <CardImg style={AboutImg} src={this.props.ImgUrl} alt="Card image cap" />
+                                <CardImg 
+                                    style={AboutImg} 
+                                    src={this.props.ImgUrl} 
+                                    alt="Card image cap" 
+                                />
                             </Col>
-                        <Col>
-                        <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
-                        <CardBody>
-                            <CardText>
-                                {this.props.Description}
-                            </CardText>
-                        </CardBody>
-                        </Col>
+                            <Col>
+                                <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
+                                <CardBody>
+                                    <CardText>
+                                        {this.props.Description}
+                                    </CardText>
+                                </CardBody>
+                            </Col>
                         </Row>
                     </Card> 
                 </div>
             );
         }
+
         if (this.props.Align === "Left") {
             return (
                 <div className="p-3">
-                <Card className={this.props.Class}>
-                    <Row>
-                        <Col >
-                        <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
-                        <CardBody>
-                            <CardText>
-                                {this.props.Description}
-                            </CardText>
-                        </CardBody>
-                        </Col>
-                        <Col >
-                            <CardImg style={AboutImg} src={this.props.ImgUrl} alt="Card image cap" />
-                        </Col>
-                    </Row>
-                </Card>
-            </div>
+                    <Card className={this.props.Class}>
+                        <Row>
+                            <Col >
+                            <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
+                            <CardBody>
+                                <CardText>
+                                    {this.props.Description}
+                                </CardText>
+                            </CardBody>
+                            </Col>
+                            <Col >
+                                <CardImg style={AboutImg} src={this.props.ImgUrl} alt="Card image cap" />
+                            </Col>
+                        </Row>
+                    </Card>
+                </div>
             );
         };
     }
@@ -155,32 +192,6 @@ export class ThreeColumnCard extends React.Component{
     }
 }
 
-//used in home page
-export class HomeCard extends React.Component{
-    render() {
-        return (
-            <div>
-                <Card className="text-center">
-                    <CardTitle>{this.props.Title}</CardTitle>
-                    <CardImg top style={CardImageStyle} src={this.props.Image} alt="Card image cap" />
-                    <CardBody>
-                        <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
-                        <CardText>{this.props.Description}
-                        </CardText>
-                        <Button 
-                            href={this.props.Link}
-                            className="btn-dark"
-                            target="_blank" 
-                            rel="noopener noreferrer">
-                                {this.props.ButtonTitle}
-                        </Button>
-                    </CardBody>
-                </Card> 
-            </div>
-        );
-    }
-};
-
 //D and D application
 export class CharacterSheet extends React.Component {
     render() {
@@ -236,6 +247,7 @@ export class AttackSection extends React.Component {
                 </div>
             );
         }
+
         if (test === "Miss") {
             return (
                 <div>

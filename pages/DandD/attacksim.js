@@ -1,6 +1,10 @@
 import React from 'react';
-import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, SetheroacAdj, setherostats, heroattackroll } from './herofunctions'
-import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll } from './monsterfunctions'
+import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, 
+    SetheroacAdj, setherostats, heroattackroll 
+} from './herofunctions'
+import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, 
+    SetmonsteracAdj, setmonsterstats, monsterattackroll 
+} from './monsterfunctions'
 import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
 
@@ -93,20 +97,19 @@ class AttackSim extends React.Component {
     rollforiniative() {
         this.Heroinitiative = Math.floor((Math.random() * 10) + 1);
         this.Monsterinitiative = Math.floor((Math.random() * 10) + 1);
-        //if hero 1-10 role is lower, hero goes first.
+        
         if (this.Heroinitiative < this.Monsterinitiative) {
             this.setState ({
                 heroInitiative: 'First',
                 monsterInitiative: 'Second'
             });
-        //if monster 1-10 role is lower, monster goes first
+        
         } else if (this.Heroinitiative > this.Monsterinitiative) {
             this.setState ({
                 monsterInitiative: 'First',
                 heroInitiative: 'Second'
             });
         } else {
-            //if both have same result, roll again
             this.setState ({
                 heroInitiative: 'ReRoll',
                 monsterInitiative: 'ReRoll'
@@ -170,7 +173,6 @@ class AttackSim extends React.Component {
                         </Col>
                     </Row>
                 </div>
-                
                 <div className="d-flex flex-wrap justify-content-center m-0 p-0">
                     <Row className="w-100 m-0">
                         <Col  className="bg-dark m-1 p-0">
@@ -184,7 +186,13 @@ class AttackSim extends React.Component {
                         </Col>
                         <Col className="bg-dark m-1 p-0">
                             <div className="text-center bg-dark m-0 p-0 text-white">
-                                <Button type="button" className="m-5"  onClick={this.rollforiniative}>Roll for iniative</Button>
+                                <Button 
+                                    type="button" 
+                                    className="m-5"  
+                                    onClick={this.rollforiniative}
+                                >
+                                    Roll for iniative
+                                </Button>
                                 <Row>
                                     <Col>    
                                         <div className="text-left m-5">
@@ -203,11 +211,11 @@ class AttackSim extends React.Component {
                                     <Col>
                                     <div>
                                         <h4>Hero Hit Points:</h4>
-                                            <div className="mt-5">
-                                                <h4 className="text-center mb-4">
-                                                    {this.state.heroHp}
-                                                </h4>
-                                            </div>
+                                        <div className="mt-5">
+                                            <h4 className="text-center mb-4">
+                                                {this.state.heroHp}
+                                            </h4>
+                                        </div>
                                     </div>
                                     </Col>
                                     <Col>

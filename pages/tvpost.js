@@ -43,7 +43,15 @@ const tvPost = props => (
           </Col>
         </Row>
         <Row className="m-3">
-          <h4>Summary:<br /><small>{props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')}</small></h4>
+          <h4>Summary:<br />
+            <small>
+              {props.show.summary
+                .replace(/<[/]?p>/g, '')
+                .replace(/<[/]?b>/g, '')
+                .replace(/<[/]?i>/g, '')
+              }
+            </small>
+          </h4>
         </Row>
         <Row className="m-3">
           <h3>Link: 
@@ -62,10 +70,23 @@ const tvPost = props => (
           {props.show._embedded.cast.map(cast => (
             <div key={cast.person.id}>
               <Card className="m-2">
-                <CardTitle className="m-4 text-center" style={TvTitle}>{cast.person.name}</CardTitle>
+                <CardTitle 
+                  className="m-4 text-center" 
+                  style={TvTitle}>
+                    {cast.person.name}
+                </CardTitle>
                 <CardBody>
                   <div>
-                    <CardImg className="p-2" style={TvImage} src={cast.person.image.medium? cast.person.image.medium: noimage} alt="castimage" />
+                    <CardImg 
+                      className="p-2" 
+                      style={TvImage} 
+                      src={
+                        cast.character.image === null 
+                        && cast.person.image.medium  
+                        || cast.character.image.medium
+                      } 
+                      alt="castimage" 
+                    />
                   </div>
                   <div className="text-center my-2">
                     <h4 style={TvCast}>As:<small className="ml-2">{cast.character.name}</small></h4>

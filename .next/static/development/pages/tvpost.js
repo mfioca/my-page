@@ -27617,8 +27617,7 @@ var DandDAvatar = {
 };
 var thumbnail = {
   position: 'relative',
-  align: 'center' //TvMaze Page
-
+  align: 'center'
 };
 var TvpageSearchBar = {
   fontSize: '14px',
@@ -27962,27 +27961,27 @@ var tvPost = function tvPost(props) {
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 47
     },
     __self: this
   }, props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
     className: "m-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 57
     },
     __self: this
   }, "Link:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 58
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -27992,20 +27991,20 @@ var tvPost = function tvPost(props) {
     title: props.show.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 59
     },
     __self: this
   }, props.show.name ? props.show.name : 'null')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 68
     },
     __self: this
   }, "Cast:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "d-flex flex-wrap justify-content-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 69
     },
     __self: this
   }, props.show._embedded.cast.map(function (cast) {
@@ -28013,14 +28012,14 @@ var tvPost = function tvPost(props) {
       key: cast.person.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 71
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Card"], {
       className: "m-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 64
+        lineNumber: 72
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardTitle"], {
@@ -28028,57 +28027,57 @@ var tvPost = function tvPost(props) {
       style: _jsxstyles__WEBPACK_IMPORTED_MODULE_8__["TvTitle"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 73
       },
       __self: this
     }, cast.person.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardBody"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 78
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 67
+        lineNumber: 79
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardImg"], {
       className: "p-2",
       style: _jsxstyles__WEBPACK_IMPORTED_MODULE_8__["TvImage"],
-      src: cast.person.image.medium ? cast.person.image.medium : noimage,
+      src: cast.character.image === null && cast.person.image.medium || cast.character.image.medium,
       alt: "castimage",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 68
+        lineNumber: 80
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       className: "text-center my-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 91
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
       style: _jsxstyles__WEBPACK_IMPORTED_MODULE_8__["TvCast"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 92
       },
       __self: this
     }, "As:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
       className: "ml-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 92
       },
       __self: this
     }, cast.character.name)))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
       className: "btn-dark mt-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 74
+        lineNumber: 95
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -28088,7 +28087,7 @@ var tvPost = function tvPost(props) {
       rel: "noopener noreferrer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 75
+        lineNumber: 96
       },
       __self: this
     }, "Actor page"))));
@@ -28096,13 +28095,13 @@ var tvPost = function tvPost(props) {
     className: "mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 107
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 108
     },
     __self: this
   }, "Episodes:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_6__["default"], {
@@ -28140,14 +28139,14 @@ var tvPost = function tvPost(props) {
           value: filter ? filter.value : '',
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 108
+            lineNumber: 129
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
           value: "",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 112
+            lineNumber: 133
           },
           __self: this
         }, "Show All"), props.show._embedded.episodes.map(function (item) {
@@ -28160,7 +28159,7 @@ var tvPost = function tvPost(props) {
             value: value,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 118
+              lineNumber: 139
             },
             __self: this
           }, value);
@@ -28183,7 +28182,7 @@ var tvPost = function tvPost(props) {
           rel: "noopener noreferrer",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 138
+            lineNumber: 159
           },
           __self: this
         }, d.name);
@@ -28211,7 +28210,7 @@ var tvPost = function tvPost(props) {
         return d.summary != null && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 153
+            lineNumber: 174
           },
           __self: this
         }, d.summary.replace(/<[/]?p>/g, ''));
@@ -28222,7 +28221,7 @@ var tvPost = function tvPost(props) {
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 109
     },
     __self: this
   })))));
@@ -28274,7 +28273,7 @@ function () {
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftvpost&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Ctvpost.js ***!
   \********************************************************************************************************************************************/
@@ -28297,5 +28296,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=tvpost.js.map

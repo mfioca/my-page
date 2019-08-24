@@ -1,4 +1,6 @@
-export { SetmonsterConstAdj, SetmonsterDmgAdj, SetmonsterHitAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll}
+export { SetmonsterConstAdj, SetmonsterDmgAdj, SetmonsterHitAdj, 
+    SetmonsteracAdj, setmonsterstats, monsterattackroll
+}
 
 //sets monster hit point adjustment based on constitution stat number.
 function SetmonsterConstAdj() {
@@ -152,7 +154,6 @@ function setmonsterstats() {
 armor class andmonster hit adjustment.  on successful attack role, applies damage
 to hero hp and if hp reaches zero alerts that hero is dead */
 function monsterattackroll() {
-    //1-20 for attack roll to see if monster hits
     this.setState ({monsterRoll: Math.floor((Math.random() * 20) + 1)});
     if (this.state.monsterRoll >= (this.state.heroAc + this.state.monsterHitAdj )) {
         //if monster hit, set display to show "hit"
