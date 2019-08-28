@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1931,7 +1931,7 @@ var tvPost = function tvPost(props) {
       accessor: function accessor(d) {
         return d.season;
       },
-      width: 110,
+      maxWidth: 110,
       style: {
         'textAlign': 'center'
       },
@@ -1977,7 +1977,7 @@ var tvPost = function tvPost(props) {
     }, {
       Header: "Episode #",
       accessor: "number",
-      width: 80,
+      maxWidth: 80,
       style: {
         'textAlign': 'center'
       }
@@ -2007,7 +2007,7 @@ var tvPost = function tvPost(props) {
       accessor: function accessor(d) {
         return d.airdate;
       },
-      width: 90,
+      maxWidth: 120,
       style: {
         'whiteSpace': 'unset',
         'textAlign': 'center'
@@ -2082,7 +2082,7 @@ function () {
 
 /***/ }),
 
-/***/ 5:
+/***/ 6:
 /*!*******************************!*\
   !*** multi ./pages/tvpost.js ***!
   \*******************************/

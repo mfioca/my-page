@@ -32,7 +32,7 @@ const tvPost = props => (
               <small>
                 {props.show.genres.map(genres => (
                   <span key={props.show.genres}>
-                  {genres} &nbsp;
+                    {genres} &nbsp;
                   </span>
                 ))} 
               </small>
@@ -122,7 +122,7 @@ const tvPost = props => (
                 Header: "Season",
                 id: "season",
                 accessor: d => d.season,
-                width: 110,
+                maxWidth: 110,
                 style: {'textAlign': 'center'},
                 Filter: ({ filter, onChange }) => {
                   return (
@@ -149,7 +149,7 @@ const tvPost = props => (
               {
                 Header: "Episode #",
                 accessor: "number",
-                width: 80,
+                maxWidth: 80,
                 style: {'textAlign': 'center'}
               },
               {
@@ -164,7 +164,7 @@ const tvPost = props => (
                 Header:"Air Date",
                 id: "airdate",
                 accessor: d => d.airdate,
-                width: 90,
+                maxWidth: 120,
                 style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
               },
               {

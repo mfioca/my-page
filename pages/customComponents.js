@@ -22,8 +22,8 @@ export class HomeCard extends React.Component{
     render() {
         return (
             <div>
-                <Card className="text-center">
-                    <CardTitle>{this.props.Title}</CardTitle>
+                <Card className="text-center mb-3">
+                    <CardTitle className="mt-2">{this.props.Title}</CardTitle>
                     <CardImg top style={CardImageStyle} src={this.props.Image} alt="Card image cap" />
                     <CardBody>
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
@@ -215,7 +215,12 @@ export class CharacterSheet extends React.Component {
                                 </tr>
                                 <tr>
                                     <td className="text-muted  text-left h4">Hitpoints:</td>
-                                    <td className="text-white  text-left h4"> {this.props.Hitpoints}</td>
+                                    <td className="text-white  text-left h4">
+                                        {this.props.Hitpoints != "Dead" && 
+                                            <span>{this.props.Hitpoints}</span> ||
+                                            <span className="text-danger">{this.props.Hitpoints}</span>
+                                        } 
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td className="text-muted  text-left h4">Damage per Hit:</td>
@@ -239,19 +244,19 @@ export class CharacterSheet extends React.Component {
 export class AttackSection extends React.Component {
 
     AttackResult() {
-        var test = this.props.DidHit;
-        if (test === "Hit") {
+        var Result = this.props.DidHit;
+        if (Result === "Hit") {
             return (
                 <div>
-                    <h2 className="alert-success w-100 text-center my-5">{test}</h2>
+                    <h2 className="alert-success w-100 text-center mt-3">{Result}</h2>
                 </div>
             );
         }
 
-        if (test === "Miss") {
+        if (Result === "Miss") {
             return (
                 <div>
-                    <h2 className="alert-danger w-100 text-center my-5">{test}</h2>
+                    <h2 className="alert-danger w-100 text-center mt-3">{Result}</h2>
                 </div>
             );
         }
@@ -304,8 +309,8 @@ export class NameForm extends React.Component {
         return (
             <div>
                 <Form inline>
-                    <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
-                        <Label className="mr-sm-2">Name:</Label>
+                    <FormGroup className="mr-2 mt-2">
+                        <Label className="mr-2">Name:</Label>
                         <input
                             type="text"
                             maxLength="20"
@@ -319,7 +324,7 @@ export class NameForm extends React.Component {
                             }}
                         />
                     </FormGroup>
-                    <Button  onClick={this.props.NameSubmit}>Submit</Button>
+                    <Button  className="ml-2 mt-2" onClick={this.props.NameSubmit}>Submit</Button>
                 </Form> 
             </div>
         );

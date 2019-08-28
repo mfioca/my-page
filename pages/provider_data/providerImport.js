@@ -65,7 +65,7 @@ class ProviderList extends Component {
           data= {data}
           defaultPageSize={20}
           style={{
-            height: "800px" 
+            height: "800px"
           }}
           //sets filtering options in react-table for no dropdown option.  Calls the filtercaseinsensitive
           //function as mentioned above
@@ -220,9 +220,3 @@ class ProviderList extends Component {
 }
 
 export default ProviderList;
-
-
- 
-
-
-

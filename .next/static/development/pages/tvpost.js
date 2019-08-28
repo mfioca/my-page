@@ -28122,7 +28122,7 @@ var tvPost = function tvPost(props) {
       accessor: function accessor(d) {
         return d.season;
       },
-      width: 110,
+      maxWidth: 110,
       style: {
         'textAlign': 'center'
       },
@@ -28168,7 +28168,7 @@ var tvPost = function tvPost(props) {
     }, {
       Header: "Episode #",
       accessor: "number",
-      width: 80,
+      maxWidth: 80,
       style: {
         'textAlign': 'center'
       }
@@ -28198,7 +28198,7 @@ var tvPost = function tvPost(props) {
       accessor: function accessor(d) {
         return d.airdate;
       },
-      width: 90,
+      maxWidth: 120,
       style: {
         'whiteSpace': 'unset',
         'textAlign': 'center'
@@ -28273,7 +28273,7 @@ function () {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftvpost&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Ctvpost.js ***!
   \********************************************************************************************************************************************/
@@ -28296,5 +28296,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js","styles"]]]);
+},[[5,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=tvpost.js.map
