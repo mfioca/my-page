@@ -179,7 +179,7 @@ function ProviderData() {
                 Caption2Style='text-center'
                 Caption2="I used react-table dependency to build the data table. Altering formatting
                     to match my spreadsheet."
-                />
+            />
             <Providerinfo />
             <Row className="justify-content-center">
                 <Col xs="10" className="mb-3" >

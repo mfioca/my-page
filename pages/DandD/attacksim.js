@@ -152,7 +152,7 @@ class AttackSim extends React.Component {
                                 />
                             </div>
                         </Col>
-                        <Col   className="m-1  bg-dark text-white ">
+                        <Col className="m-1  bg-dark text-white">
                             <h5 className="mt-5 ml-5"><b>Name: </b>
                                 <span className="text-info ml-5">{this.state.monsterName}</span>
                             </h5>

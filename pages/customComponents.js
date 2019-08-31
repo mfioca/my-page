@@ -12,6 +12,21 @@ import { AboutImg, CardImageStyle, HomeImage,
     DandDAvatar, thumbnail 
 } from './jsxstyles'
 
+/* *********************************
+*   Export styled components       * 
+***********************************/
+
+export function TvPostInfoLabel(props) {
+    return (
+      <td className="h2 text-left w-25 m-0 p-2">{props.children}</td>
+    );
+}
+
+export function TvPostInfoValue(props){
+    return (
+        <td className="text-left m-0 p-2"><small>{props.children}</small></td>
+    )
+}
 
 /* *********************** 
 *   Export Classes       * 
@@ -81,7 +96,7 @@ export class AboutMedia extends React.Component{
     render() {
         if (this.props.Align === "Right") {
             return (
-                <div className="p-3">
+                <div className="py-3">
                     <Card className={this.props.Class}>
                         <Row>
                             <Col >
@@ -107,7 +122,7 @@ export class AboutMedia extends React.Component{
 
         if (this.props.Align === "Left") {
             return (
-                <div className="p-3">
+                <div className="py-3">
                     <Card className={this.props.Class}>
                         <Row>
                             <Col >
@@ -137,12 +152,12 @@ export class SingleListCard extends React.Component{
                 <Card className="Text-Left">
                     <CardBody>
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
-                        <CardText>
-                                <li>{this.props.Item1}</li>
-                                <li>{this.props.Item2}</li>
-                                <li>{this.props.Item3}</li>
-                                <li>{this.props.Item4}</li>
-                        </CardText>
+                        <div>
+                            <li>{this.props.Item1}</li>
+                            <li>{this.props.Item2}</li>
+                            <li>{this.props.Item3}</li>
+                            <li>{this.props.Item4}</li>
+                        </div>
                     </CardBody>
                 </Card> 
             </div>
@@ -154,35 +169,35 @@ export class SingleListCard extends React.Component{
 export class ThreeColumnCard extends React.Component{
     render() {
         return(
-            <div className="p-3">
+            <div className="py-3">
                 <Card className={this.props.Class}>
                 <CardTitle><h1>{this.props.Title}</h1></CardTitle>
                     <Row className="text-left">
                         <Col >
                             <CardBody>
-                                <CardText>
+                                <div>
                                     <li>
                                         {this.props.Description1}
                                     </li>
-                                </CardText>
+                                </div>
                             </CardBody>
                         </Col>
                         <Col >
                             <CardBody>
-                                <CardText>
+                                <div>
                                     <li>
                                         {this.props.Description2}
                                     </li>
-                                </CardText>
+                                </div>
                             </CardBody>
                         </Col>
                         <Col >
                             <CardBody>
-                                <CardText>
+                                <div>
                                     <li>
                                         {this.props.Description3}
                                     </li>
-                                </CardText>
+                                </div>
                             </CardBody>
                         </Col>
                     </Row>
@@ -195,6 +210,17 @@ export class ThreeColumnCard extends React.Component{
 //D and D application
 export class CharacterSheet extends React.Component {
     render() {
+        function DandDTableLabel(props) {
+            return (
+                <td className="text-muted text-left h4">{props.children}</td>
+            );
+        }
+
+        function DandDTableValue(props) {
+            return (
+                <td className="text-white text-left h4">{props.children}</td>
+            );
+        }
         return (
             <div >
                 <Row >
@@ -202,29 +228,29 @@ export class CharacterSheet extends React.Component {
                         <Table borderless  className="">
                             <tbody>
                                 <tr>
-                                <td className="text-muted  text-left h4">Strength:</td>
-                                    <td className="text-white  text-left h4"> {this.props.Strength}</td>
+                                    <DandDTableLabel>Strength:</DandDTableLabel>
+                                    <DandDTableValue>{this.props.Strength}</DandDTableValue>
                                 </tr>
                                 <tr>
-                                    <td className="text-muted  text-left h4">Constitution:</td>
-                                    <td className="text-white  text-left h4"> {this.props.Constitution}</td>
+                                    <DandDTableLabel>Constitution:</DandDTableLabel>
+                                    <DandDTableValue> {this.props.Constitution}</DandDTableValue>
                                 </tr>
                                 <tr>
-                                    <td className="text-muted  text-left h4">Dexterity:</td>
-                                    <td className="text-white  text-left h4"> {this.props.Dexterity}</td>
+                                    <DandDTableLabel>Dexterity:</DandDTableLabel>
+                                    <DandDTableValue> {this.props.Dexterity}</DandDTableValue>
                                 </tr>
                                 <tr>
-                                    <td className="text-muted  text-left h4">Hitpoints:</td>
-                                    <td className="text-white  text-left h4">
+                                    <DandDTableLabel>Hitpoints:</DandDTableLabel>
+                                    <DandDTableValue>
                                         {this.props.Hitpoints != "Dead" && 
                                             <span>{this.props.Hitpoints}</span> ||
                                             <span className="text-danger">{this.props.Hitpoints}</span>
                                         } 
-                                    </td>
+                                    </DandDTableValue>
                                 </tr>
                                 <tr>
-                                    <td className="text-muted  text-left h4">Damage per Hit:</td>
-                                    <td className="text-white  text-left h4"> {this.props.Damage}</td>
+                                    <DandDTableLabel>Damage per Hit:</DandDTableLabel>
+                                    <DandDTableValue> {this.props.Damage}</DandDTableValue>
                                 </tr>
                             </tbody>
                         </Table>  

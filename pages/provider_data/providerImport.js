@@ -2,11 +2,7 @@ import React, { Component } from 'react'
 import ReactTable from 'react-table'
 import "react-table/react-table.css"
 
-
-
 var data = require('./provider.json');
-
-
 
 /*counts number of Region types there are in the json
 const uniqueNames = new Set(data.map(item => item.Region)).size;

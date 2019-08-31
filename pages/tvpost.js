@@ -1,9 +1,10 @@
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout'
-import { Card, CardImg, CardBody, CardTitle, Row, Col, Button } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, Row, Col, Button, Table } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvImage, TvCast, TvTitle } from './jsxstyles'
+import { TvPostInfoLabel, TvPostInfoValue } from './customComponents'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'
@@ -21,25 +22,40 @@ const tvPost = props => (
         <Row>
           <Col>
             <h1>{props.show.name}</h1>
-            <h3><b>Type:</b> <small>{props.show.type ? props.show.type : 'no data'}</small></h3>
-            <h3><b>Premiered:</b> <small>{props.show.premiered ? props.show.premiered : 'no data'}</small></h3>
-            <h3><b>status:</b> <small>{props.show.status ? props.show.status : 'no data'}</small></h3>
-            <h3><b>Rating:</b> <small>{props.show.rating.average}</small></h3>
-            <h3>
-              {/* since tvmaze api json has genre as an imbedded array,
-                pulls the data in genres in a key map to list all entries*/}
-              <b>Genre:</b> &nbsp;
-              <small>
-                {props.show.genres.map(genres => (
-                  <span key={props.show.genres}>
-                    {genres} &nbsp;
-                  </span>
-                ))} 
-              </small>
-            </h3>
+            <Table borderless className="">
+              <tbody>
+                <tr>
+                  <TvPostInfoLabel>Type:</TvPostInfoLabel>
+                  <TvPostInfoValue>{props.show.type ? props.show.type : 'no data'}</TvPostInfoValue>
+                </tr>
+                <tr>
+                  <TvPostInfoLabel>Premiered:</TvPostInfoLabel>
+                  <TvPostInfoValue>{props.show.premiered ? props.show.premiered : 'no data'}</TvPostInfoValue>
+                </tr>
+                <tr>
+                  <TvPostInfoLabel>Status:</TvPostInfoLabel>
+                  <TvPostInfoValue>{props.show.status ? props.show.status : 'no data'}</TvPostInfoValue>
+                </tr>
+                <tr>
+                  <TvPostInfoLabel>Rating:</TvPostInfoLabel>
+                  <TvPostInfoValue>{props.show.rating.average}</TvPostInfoValue>
+                </tr>
+                <tr>
+                  <TvPostInfoLabel>Genre:</TvPostInfoLabel>
+                  <TvPostInfoValue>
+                    {props.show.genres.map((value, index) => {
+                      return <span key={index}>{value} &nbsp;</span>
+                      })
+                    }
+                  </TvPostInfoValue>
+                </tr>
+              </tbody>
+            </Table>
           </Col>
-          <Col sm={{ size: 'auto', offset: 1 }} className="mr-5 mt-3">
-            <img src={props.show.image ? props.show.image.medium : noimage} alt="no image"/>
+          <Col sm={{ size: 'auto', offset: 1 }}>
+            <div className="text-center mr-5 mt-2">
+              <img src={props.show.image ? props.show.image.medium : noimage} alt="no image"/>
+            </div>
           </Col>
         </Row>
         <Row className="m-3">
@@ -106,6 +122,8 @@ const tvPost = props => (
         </div>
         <div className="mt-4">
           <h1>Episodes:</h1>
+              
+          {/*React Table for Episode List */}
           <ReactTable
             className= "-striped -highlight"
             data= {props.show._embedded.episodes}
@@ -116,7 +134,7 @@ const tvPost = props => (
             }}
             filterable
             defaultFilterMethod={(filter, row) =>
-              String(row[filter.id]) === filter.value}
+            String(row[filter.id]) === filter.value}
             columns= {[
               {
                 Header: "Season",
@@ -124,6 +142,8 @@ const tvPost = props => (
                 accessor: d => d.season,
                 maxWidth: 110,
                 style: {'textAlign': 'center'},
+                //Dropdown list to filter table based on number
+                //of seasons
                 Filter: ({ filter, onChange }) => {
                   return (
                     <select
@@ -156,7 +176,11 @@ const tvPost = props => (
                 Header:"Name",
                 id: "name",
                 accessor: d =>
-                <a href={d.url} target="_blank" rel="noopener noreferrer">{d.name}</a>, 
+                //Converts Episode Name into a link to the TvMaze 
+                //page for that episode
+                <a href={d.url} target="_blank" rel="noopener noreferrer">
+                  {d.name}
+                </a>, 
                 minWidth: 70,
                 style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
               },
@@ -171,7 +195,10 @@ const tvPost = props => (
                 Header:"Summary",
                 id: "summary",
                 accessor: d => 
-                d.summary != null && <span>{d.summary.replace(/<[/]?p>/g, '')}</span>,
+                d.summary != null && 
+                  <span>
+                    {d.summary.replace(/<[/]?p>/g, '')}
+                  </span>,
                 style: { 'whiteSpace': 'unset' },
               }
             ]}
