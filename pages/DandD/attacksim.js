@@ -6,6 +6,7 @@ import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj,
     SetmonsteracAdj, setmonsterstats, monsterattackroll 
 } from './monsterfunctions'
 import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
+import { thumbnail } from '../jsxstyles'
 import { Row, Col, Button } from 'reactstrap'
 
 class AttackSim extends React.Component {
@@ -118,7 +119,9 @@ class AttackSim extends React.Component {
         //clears out the hit/miss comments since it is a new round.
         this.setState ({
             heroDidHit: '',
-            monsterDidHit: ''
+            monsterDidHit: '',
+            heroRoll: 0,
+            monsterRoll: 0
         });
     }
 
@@ -129,7 +132,7 @@ class AttackSim extends React.Component {
                     <Row className="w-100">
                         <Col className=" m-1 bg-dark text-white ">
                             <div>
-                                <h5 className="mt-5 ml-5"><b>Name: </b>
+                                <h5 className="mt-5 ml-5"><b>Hero Name: </b>
                                     <span className="text-info ml-5">{this.state.heroName}</span>
                                 </h5>
                             </div>
@@ -153,7 +156,7 @@ class AttackSim extends React.Component {
                             </div>
                         </Col>
                         <Col className="m-1  bg-dark text-white">
-                            <h5 className="mt-5 ml-5"><b>Name: </b>
+                            <h5 className="mt-5 ml-5"><b>Monster Name: </b>
                                 <span className="text-info ml-5">{this.state.monsterName}</span>
                             </h5>
                             <CharacterSheet
@@ -184,8 +187,9 @@ class AttackSim extends React.Component {
                             HitAdj = {this.state.heroHitAdj}
                             AttackRoll = {this.heroattackroll}
                             RollTitle = "Hero Roll for Attack"
+                            Roll = {this.state.heroRoll}
                             DidHit = {this.state.heroDidHit}
-                        />
+                        /> 
                     </div>
                     <div className="bg-dark m-1 p-0 col" xs="3">
                         <div className="text-center bg-dark m-0 p-0 text-white">
@@ -251,6 +255,7 @@ class AttackSim extends React.Component {
                             HitAdj = {this.state.monsterHitAdj}
                             AttackRoll = {this.monsterattackroll}
                             RollTitle = "Monster Roll for Attack"
+                            Roll = {this.state.monsterRoll}
                             DidHit = {this.state.monsterDidHit}
                         />
                     </div>

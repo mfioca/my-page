@@ -1,8 +1,8 @@
 {
   "modules": {
     "byIdentifier": {
-      "multi private-next-pages/about.js": 0,
-      "multi private-next-pages/customComponents.js": 1,
+      "multi private-next-pages/customComponents.js": 0,
+      "multi private-next-pages/about.js": 1,
       "multi private-next-pages/DandDpage.js": 2,
       "multi private-next-pages/index.js": 3,
       "multi private-next-pages/jsxstyles.js": 4,
@@ -12,14 +12,12 @@
       "multi private-next-pages/DandD/attacksim.js": 8,
       "multi private-next-pages/DandD/herofunctions.js": 9,
       "multi private-next-pages/DandD/monsterfunctions.js": 10,
-      "multi private-next-pages/about_view/aboutview.js": 11,
-      "multi private-next-pages/about_view/resumeview.js": 12,
-      "multi private-next-pages/provider_data/providerImport.js": 13,
-      "multi private-next-pages/tv_info/Header.js": 14,
-      "multi private-next-pages/tv_info/MyLayout.js": 15,
-      "multi next/dist/pages/_app": 16,
-      "multi next/dist/pages/_error": 17,
-      "multi next/dist/pages/_document": 18
+      "multi private-next-pages/provider_data/providerImport.js": 11,
+      "multi private-next-pages/tv_info/MyLayout.js": 12,
+      "multi private-next-pages/tv_info/Header.js": 13,
+      "multi next/dist/pages/_app": 14,
+      "multi next/dist/pages/_error": 15,
+      "multi next/dist/pages/_document": 16
     },
     "usedIds": {
       "0": 0,
@@ -38,9 +36,7 @@
       "13": 13,
       "14": 14,
       "15": 15,
-      "16": 16,
-      "17": 17,
-      "18": 18
+      "16": 16
     }
   },
   "chunks": {

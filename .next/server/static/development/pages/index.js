@@ -328,7 +328,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Navbar"], {
@@ -338,14 +338,14 @@ function (_React$Component) {
         expand: "md",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavbarToggler"], {
         onClick: this.toggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 26
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Collapse"], {
@@ -353,7 +353,7 @@ function (_React$Component) {
         navbar: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Nav"], {
@@ -361,33 +361,33 @@ function (_React$Component) {
         navbar: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 28
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 29
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavLink"], {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 30
         },
         __self: this
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 32
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavLink"], {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 33
         },
         __self: this
       }, "About")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["UncontrolledDropdown"], {
@@ -395,7 +395,7 @@ function (_React$Component) {
         inNavbar: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["DropdownToggle"], {
@@ -403,7 +403,7 @@ function (_React$Component) {
         caret: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }, "Projects"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["DropdownMenu"], {
@@ -411,7 +411,7 @@ function (_React$Component) {
         className: "bg-dark btn-dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -419,7 +419,7 @@ function (_React$Component) {
         href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 40
         },
         __self: this
       }, "TvMaze"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -427,7 +427,7 @@ function (_React$Component) {
         href: "/DandDpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 41
         },
         __self: this
       }, "DandD"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -435,7 +435,7 @@ function (_React$Component) {
         href: "/providerData",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 42
         },
         __self: this
       }, "Provider List")))))));
@@ -1817,10 +1817,18 @@ function (_React$Component7) {
           lineNumber: 322
         },
         __self: this
-      }, "Attack Result:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Attack Result:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "mt-2 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 324
+          lineNumber: 323
+        },
+        __self: this
+      }, "attack roll: ", this.props.Roll)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "mt-2 p-0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 325
         },
         __self: this
       }, this.AttackResult()));
@@ -1847,28 +1855,28 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 336
+          lineNumber: 337
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 337
+          lineNumber: 338
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         className: "mr-2 mt-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 338
+          lineNumber: 339
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         className: "mr-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 339
+          lineNumber: 340
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -1886,7 +1894,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 341
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -1894,7 +1902,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 353
+          lineNumber: 354
         },
         __self: this
       }, "Submit")));

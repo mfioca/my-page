@@ -320,8 +320,9 @@ export class AttackSection extends React.Component {
                 </div>
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>
+                    <p className="mt-2 p-0">attack roll: {this.props.Roll}</p>
                 </div>
-                <div>
+                <div className="mt-2 p-0">
                     {this.AttackResult()}
                 </div>
             </div>

@@ -3,109 +3,101 @@
   "pages": {
     "/": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/DandD/attacksim": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/DandD/herofunctions": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/DandD/monsterfunctions": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/DandDpage": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/_app": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/_error": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/about": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
-    "/about_view/aboutview": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
-      "static/runtime/main-a8d507370153bc11e956.js"
-    ],
-    "/about_view/resumeview": [
-      "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
-      "static/runtime/main-a8d507370153bc11e956.js"
-    ],
     "/customComponents": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/index": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/jsxstyles": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/providerData": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/provider_data/providerImport": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/tv_info/Header": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/tv_info/MyLayout": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/tvpage": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"
     ],
     "/tvpost": [
       "static/runtime/webpack-8ed9452df514b4d17d80.js",
-      "static/chunks/commons.bf7fd025a96d53a93b5b.js",
+      "static/chunks/commons.fc833993b61aba7f3f05.js",
       "static/css/styles.8c6c0f98.chunk.css",
       "static/chunks/styles.62ab8defe7dbe5f09eec.js",
       "static/runtime/main-a8d507370153bc11e956.js"

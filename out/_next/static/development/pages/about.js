@@ -233,7 +233,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Navbar"], {
@@ -243,14 +243,14 @@ function (_React$Component) {
         expand: "md",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 27
+          lineNumber: 25
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavbarToggler"], {
         onClick: this.toggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 26
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Collapse"], {
@@ -258,7 +258,7 @@ function (_React$Component) {
         navbar: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Nav"], {
@@ -266,33 +266,33 @@ function (_React$Component) {
         navbar: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 30
+          lineNumber: 28
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 31
+          lineNumber: 29
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavLink"], {
         href: "/",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 30
         },
         __self: this
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavItem"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 32
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["NavLink"], {
         href: "/about",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 33
         },
         __self: this
       }, "About")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["UncontrolledDropdown"], {
@@ -300,7 +300,7 @@ function (_React$Component) {
         inNavbar: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37
+          lineNumber: 35
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["DropdownToggle"], {
@@ -308,7 +308,7 @@ function (_React$Component) {
         caret: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 36
         },
         __self: this
       }, "Projects"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["DropdownMenu"], {
@@ -316,7 +316,7 @@ function (_React$Component) {
         className: "bg-dark btn-dark",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 39
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -324,7 +324,7 @@ function (_React$Component) {
         href: "/tvpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 40
         },
         __self: this
       }, "TvMaze"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -332,7 +332,7 @@ function (_React$Component) {
         href: "/DandDpage",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 41
         },
         __self: this
       }, "DandD"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_7__["Button"], {
@@ -340,7 +340,7 @@ function (_React$Component) {
         href: "/providerData",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 42
         },
         __self: this
       }, "Provider List")))))));
@@ -17733,8 +17733,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
-/* harmony import */ var _about_view_aboutview__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./about_view/aboutview */ "./pages/about_view/aboutview.js");
-/* harmony import */ var _about_view_resumeview__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./about_view/resumeview */ "./pages/about_view/resumeview.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
+/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./customComponents */ "./pages/customComponents.js");
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\about.js";
 
 
@@ -17745,52 +17745,10 @@ function Aboutpage() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 9
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_view_aboutview__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 11
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_about_view_resumeview__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (Aboutpage);
-
-/***/ }),
-
-/***/ "./pages/about_view/aboutview.js":
-/*!***************************************!*\
-  !*** ./pages/about_view/aboutview.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../customComponents */ "./pages/customComponents.js");
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\about_view\\aboutview.js";
-
-
-
-function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 6
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_1__["AboutMedia"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["AboutMedia"], {
     Class: "text-center bg-info text-white p-3",
     Align: "Right",
     ImgUrl: "../static/images/avatar.jpg",
@@ -17798,64 +17756,32 @@ function About() {
     Description: "Movie, sci-fi and over all tech geek that always seeks out new and interesting\r things to experience and learn.  I strive to keep an open mind on everything because\r you never know what kind of hidden truths await those who pay attention.\r You can find those truths in the comedy writings of Douglas Adams \r to J. R. R. Tolkien and all the way to the historical facts behind the theories expressed \r in the TV show \u201CAncient Aliens\u201D.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 10
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_1__["AboutMedia"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["AboutMedia"], {
     Class: "text-center bg-info text-white p-3",
     Align: "Left",
     ImgUrl: "../static/images/building.png",
     Title: "Background",
-    Description: "I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences \r when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated different places\r and have seen things that are unforgetable.  Those experiences helped me \r expand my knowledge in movie, photo and audio editing and new knowledge and points of views about the world.",
+    Description: "I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my \r experiences when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated \r different places and have seen things that are unforgetable.  Those experiences helped me expand \r my knowledge in movie, photo and audio editing and new knowledge and points of views about the world.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 22
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_1__["AboutMedia"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["AboutMedia"], {
     Class: "text-center bg-info text-white p-3",
     Align: "Right",
     ImgUrl: "../static/images/rainmeter.png",
     Title: "Computers and UI design",
-    Description: "I first developed my interested in UI design when convirting back to a windows machine from a mac. I did not like how windows was \r cet up and strived to make my desktop look and act more like OSX.\r I learned about a program called Rainmeter and expanded my knowledge in programing developing my first full custom UI theme \r through this program.  My Rainmeter theme is available to download through deviantart.",
+    Description: "I first developed my interested in UI design when convirting back to a windows machine \r from a mac. I did not like how windows was set up and strived to make my desktop look and act more like OSX.\r I learned about a program called Rainmeter and expanded my knowledge in programing developing my first \r full custom UI theme through this program.  My Rainmeter theme is available to download through deviantart.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 32
     },
     __self: this
-  }));
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (About);
-
-/***/ }),
-
-/***/ "./pages/about_view/resumeview.js":
-/*!****************************************!*\
-  !*** ./pages/about_view/resumeview.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/es/index.js");
-/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../customComponents */ "./pages/customComponents.js");
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\about_view\\resumeview.js";
-
-
-
-
-function Resume() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_2__["CustomJumbo"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["CustomJumbo"], {
     Title: "Professional Experience",
     ImgUrl: "noimage",
     Caption1Style: "lead text-center",
@@ -17863,67 +17789,67 @@ function Resume() {
     Caption2: "COMPUTER SKILLS: Windows and OSX, Microsoft Office with advanced excel functions and\r macro scripting, Lotus Notes, Maximo Enterprise Suite, Audacity, Photoshop, \r Gimp, Eclipse, Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,\r beginner knowledge in REACT and Java/JavaScript.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 42
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 54
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 55
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 55
     },
     __self: this
   }, "Core Skills"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25
+      lineNumber: 57
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Container"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Container"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 58
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Row"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 59
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     sm: {
       size: 4,
       offset: 1
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 60
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_2__["SingleListCard"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["SingleListCard"], {
     Item1: "Customer Service",
     Item2: "Customer and Technical Support",
     Item3: "Communication and Training",
     Item4: "Problem Solving and Decision Making",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 61
     },
     __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_1__["Col"], {
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
     sm: {
       size: 4,
       order: 2,
@@ -17931,62 +17857,62 @@ function Resume() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 68
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_2__["SingleListCard"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["SingleListCard"], {
     Item1: "Technical Writing",
     Item2: "Data Analysis and Reporting",
     Item3: "Quality Assurance",
     Item4: "Data Entry",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 69
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 79
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_2__["ThreeColumnCard"], {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["ThreeColumnCard"], {
     Class: "text-center bg-info text-white p-3",
     Title: "SOFTWARE IMPLEMENTATION AND SUPPORT",
-    Description1: "Coordinated with network administrators and field monitors on supporting an Ipad\r based vehicle inspection application from beta testing to full network implementation.\r During Beta testing, tested application for real world bugs and errors and coordinated \r with end users during real world testing.  Conducted training and technical support to \r end users as well as improvement testing and troubleshooting on bugs and fixes as assigned by developers.",
-    Description2: "Worked as a team to develop a 7 module training course for a new Asset Management Solution for BP Oil.  \r Developed training material through MS Word and coordinated with developers and company SME\u2019s to develop \r standard procedures and ensure documentation accuracy.",
-    Description3: "Provided first contact technical support for a new online enrollment process including password resets \r as well as troubleshooting and training to team members and providers.  During implantation, I conducted \r informal quality assurance testing including working through the designed process for current process accuracy \r as well as intentional ways to cause errors.",
+    Description1: "Coordinated with network administrators and field monitors on supporting an Ipad\r based vehicle inspection application from beta testing to full network implementation.\r During Beta testing, tested application for real world bugs and errors and coordinated \r with end users during real world testing.  Conducted training and technical support to \r end users as well as improvement testing and troubleshooting on bugs and fixes as \r assigned by developers.",
+    Description2: "Worked as a team to develop a 7 module training course for a new Asset Management \r Solution for BP Oil. Developed training material through MS Word and coordinated with developers \r and company SME\u2019s to develop standard procedures and ensure documentation accuracy.",
+    Description3: "Provided first contact technical support for a new online enrollment process \r including password resets as well as troubleshooting and training to team members and providers.  \r During implantation, I conducted informal quality assurance testing including working through the \r designed process for current process accuracy as well as intentional ways to cause errors.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 80
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_2__["ThreeColumnCard"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["ThreeColumnCard"], {
     Class: "text-center bg-light text-dark p-3",
     Title: "TECHNICAL WRITING",
-    Description1: "Created online training modules for a new Operating System for a local cable and internet company.  \r Converted MS word documentation to an online web based format utilizing HTML and RELAX NG Schema formatting.  \r Worked with developers and trainers to ensure accuracy and documentation matched established web formatting \r adjusting the training material as necessary.",
-    Description2: "Worked as a team to develop a 7 module training course for a new Asset Management Solution for BP Oil. \r Developed training material through MS Word and coordinated with developers and company SME\u2019s to develop standard procedures \r and ensure documentation accuracy.",
-    Description3: "Created Policies and Procedures for a specialized department as a supervisor in a high call volume call center environment.  \r This included a formal talk track for all types of incoming calls as well as rules and guidelines for each call type to produce \r the highest level of customer service possible.",
+    Description1: "Created online training modules for a new Operating System for a local cable and \r internet company.  Converted MS word documentation to an online web based format utilizing HTML \r and RELAX NG Schema formatting.  Worked with developers and trainers to ensure accuracy and \r documentation matched established web formatting adjusting the training material as necessary.",
+    Description2: "Worked as a team to develop a 7 module training course for a new Asset Management \r Solution for BP Oil. Developed training material through MS Word and coordinated with developers \r and company SME\u2019s to develop standard procedures and ensure documentation accuracy.",
+    Description3: "Created Policies and Procedures for a specialized department as a supervisor in a high \r call volume call center environment.  This included a formal talk track for all types of incoming \r calls as well as rules and guidelines for each call type to produce the highest level of customer \r service possible.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 97
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_2__["ThreeColumnCard"], {
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_3__["ThreeColumnCard"], {
     Class: "text-center bg-primary text-white p-3",
     Title: "CUSTOMER RELATIONS",
-    Description1: "Managed a network of over 300 transportation providers and insured contract compliance of over 3000 driver, \r vehicle and insurance files.  Established the Georgia market as one of the top markets for contract compliance by working with providers, \r other departments and management to increase provider relationships and performance.",
-    Description2: "Conducted performance monitoring of contractual compliance and networking trends by utilizing my advanced Excel skills by creating \r custom data spreadsheets with advanced functions and custom macro scripting.  These reports assisted in increasing network routing \r efficiency and increased compliance performance by showing trends and weaknesses in the provider network.",
-    Description3: "Responsible for Contract Administration of new providers enrolling in the Alaska Medicaid Network while achieving production goals and providing \r the highest level of customer service.  Interfaced with Medicaid Providers on contract questions and worked with them to complete submitted contracts.  \r Utilized Microsoft Access and Excel to track Contracts in all phases of the application process and ensure data accuracy.",
+    Description1: "Managed a network of over 300 transportation providers and insured contract \r compliance of over 3000 driver, vehicle and insurance files.  Established the Georgia market \r as one of the top markets for contract compliance by working with providers, other departments and \r management to increase provider relationships and performance.",
+    Description2: "Conducted performance monitoring of contractual compliance and networking trends by \r utilizing my advanced Excel skills by creating custom data spreadsheets with advanced functions \r and custom macro scripting.  These reports assisted in increasing network routing efficiency and \r increased compliance performance by showing trends and weaknesses in the provider network.",
+    Description3: "Responsible for Contract Administration of new providers enrolling in the Alaska Medicaid \r Network while achieving production goals and providing the highest level of customer service.  Interfaced \r with Medicaid Providers on contract questions and worked with them to complete submitted contracts.  \r Utilized Microsoft Access and Excel to track Contracts in all phases of the application process and \r ensure data accuracy.",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 112
     },
     __self: this
   })));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Resume);
+/* harmony default export */ __webpack_exports__["default"] = (Aboutpage);
 
 /***/ }),
 
@@ -18996,10 +18922,18 @@ function (_React$Component7) {
           lineNumber: 322
         },
         __self: this
-      }, "Attack Result:")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+      }, "Attack Result:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "mt-2 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 324
+          lineNumber: 323
+        },
+        __self: this
+      }, "attack roll: ", this.props.Roll)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "mt-2 p-0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 325
         },
         __self: this
       }, this.AttackResult()));
@@ -19026,28 +18960,28 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 336
+          lineNumber: 337
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 337
+          lineNumber: 338
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         className: "mr-2 mt-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 338
+          lineNumber: 339
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         className: "mr-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 339
+          lineNumber: 340
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -19065,7 +18999,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 340
+          lineNumber: 341
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -19073,7 +19007,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 353
+          lineNumber: 354
         },
         __self: this
       }, "Submit")));
