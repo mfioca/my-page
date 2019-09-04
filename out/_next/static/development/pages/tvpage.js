@@ -24841,10 +24841,11 @@ var TvTitle = {
   margin: 4
 };
 var TvCast = {
-  height: '20px',
+  maxHeight: '60px',
   width: '200px',
   margin: 4,
-  wordWwrap: 'break-word'
+  wordWwrap: 'break-word',
+  maxFontSize: '2vw'
 };
 
 /***/ }),
@@ -25242,7 +25243,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 5:
+/***/ 4:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Ftvpage&absolutePagePath=C%3A%5CUsers%5CMark%5CDesktop%5Cnewtest%5Cmy-page%5Cpages%5Ctvpage.js ***!
   \********************************************************************************************************************************************/
@@ -25265,5 +25266,5 @@ module.exports = dll_81bd344d8f06700801e0;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[4,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=tvpage.js.map

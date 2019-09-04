@@ -104,8 +104,8 @@ const tvPost = props => (
                       alt="castimage" 
                     />
                   </div>
-                  <div className="text-center my-2">
-                    <h4 style={TvCast}>As:<small className="ml-2">{cast.character.name}</small></h4>
+                  <div className="text-center my-2 p-2 h-100">
+                    <h4 style={TvCast}>As: <small>{cast.character.name}</small></h4>
                   </div>
                 </CardBody>
                 <Button className="btn-dark mt-3">

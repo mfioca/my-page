@@ -49,13 +49,14 @@ const TvImage = {
 const TvTitle = {
     height: '20px',
     width: '200px',
-    margin: 4,
+    margin: 4
 }
 
 const TvCast = {
-    height: '20px',
+    maxHeight: '60px',
     width: '200px',
     margin: 4,
     wordWwrap: 'break-word',
+    maxFontSize: '2vw'
 }
   

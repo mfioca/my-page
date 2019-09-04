@@ -6,8 +6,8 @@ import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj,
     SetmonsteracAdj, setmonsterstats, monsterattackroll 
 } from './monsterfunctions'
 import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
-import { thumbnail } from '../jsxstyles'
 import { Row, Col, Button } from 'reactstrap'
+
 
 class AttackSim extends React.Component {
     constructor (props) {
@@ -41,7 +41,7 @@ class AttackSim extends React.Component {
             heroDmg: 0,
             heroHitAdj: 0,
             heroNametext: '',
-            heroName: '',
+            heroName: 'Hero',
             heroInitiative: 0,
             heroRoll: 0,
             heroDidHit: '',
@@ -50,7 +50,7 @@ class AttackSim extends React.Component {
             monsterDmg: 0,
             monsterHitAdj: 0,
             monsterNametext: '',
-            monsterName: '',
+            monsterName: 'Monster',
             monsterInitiative: 0,
             monsterRoll: 0,
             monsterDidHit: ''
@@ -133,7 +133,9 @@ class AttackSim extends React.Component {
                         <Col className=" m-1 bg-dark text-white ">
                             <div>
                                 <h5 className="mt-5 ml-5"><b>Hero Name: </b>
-                                    <span className="text-info ml-5">{this.state.heroName}</span>
+                                    <span className="text-info ml-5 h3">
+                                        {this.state.heroName}
+                                    </span>
                                 </h5>
                             </div>
                             <CharacterSheet 
@@ -157,7 +159,9 @@ class AttackSim extends React.Component {
                         </Col>
                         <Col className="m-1  bg-dark text-white">
                             <h5 className="mt-5 ml-5"><b>Monster Name: </b>
-                                <span className="text-info ml-5">{this.state.monsterName}</span>
+                                <span className="text-info ml-5 h3">
+                                    {this.state.monsterName}
+                                </span>
                             </h5>
                             <CharacterSheet
                                 Strength = {this.state.monsterstats.Str}
@@ -201,14 +205,18 @@ class AttackSim extends React.Component {
                             </Button>
                             <Row>
                                 <Col className="border-info border-right w-50">
-                                    <h2 className="text-info">Hero</h2>
+                                    <h4 className="text-info">{this.state.heroName}</h4>
                                     <div className="text-center pt-4">
                                         <div className="p-3">
                                             <h4>iniative:</h4>
                                             <h4 className="text-info">
-                                                {this.state.heroInitiative != "Second" &&
-                                                    <span className="text-info">{this.state.heroInitiative}</span> ||
-                                                    <span className="text-warning">{this.state.heroInitiative}</span>
+                                                {this.state.heroInitiative != "Second" && 
+                                                    <span className="text-info">
+                                                        {this.state.heroInitiative}
+                                                    </span> ||  
+                                                    <span className="text-warning">
+                                                        {this.state.heroInitiative}
+                                                    </span>
                                                 }
                                             </h4>
                                         </div>
@@ -224,14 +232,17 @@ class AttackSim extends React.Component {
                                     </div>
                                 </Col>
                                 <Col>
-                                    <h2 className="text-info">Monster</h2>
+                                    <h4 className="text-info">{this.state.monsterName}</h4>
                                     <div className="text-center pt-4">
                                         <div className="p-3">
                                             <h4>iniative:</h4>
                                             <h4 className="text-info">
                                                 {this.state.monsterInitiative != "Second" &&
-                                                    <span className="text-info">{this.state.monsterInitiative}</span> ||
-                                                    <span className="text-warning">{this.state.monsterInitiative}</span>
+                                                    <span className="text-info">
+                                                        {this.state.monsterInitiative}</span> ||
+                                                    <span className="text-warning">
+                                                        {this.state.monsterInitiative}
+                                                    </span>
                                                 }
                                             </h4>
                                         </div>
@@ -239,8 +250,12 @@ class AttackSim extends React.Component {
                                             <h4>Hit Points:</h4>
                                             <h4 className="text-center mt-4">
                                                 {this.state.monsterHp != "Dead" &&
-                                                    <span className="text-success">{this.state.monsterHp}</span> || 
-                                                    <span className="text-danger">{this.state.monsterHp}</span>
+                                                    <span className="text-success">
+                                                        {this.state.monsterHp}
+                                                    </span> || 
+                                                    <span className="text-danger">
+                                                        {this.state.monsterHp}
+                                                    </span>
                                                 }
                                             </h4>
                                         </div>
@@ -249,7 +264,7 @@ class AttackSim extends React.Component {
                             </Row>
                         </div>
                     </div>
-                    <div   className="bg-dark m-1 p-0">
+                    <div className="bg-dark m-1 p-0">
                         <AttackSection
                             AC = {this.state.monsterAc}
                             HitAdj = {this.state.monsterHitAdj}

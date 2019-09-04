@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1431,10 +1431,11 @@ var TvTitle = {
   margin: 4
 };
 var TvCast = {
-  height: '20px',
+  maxHeight: '60px',
   width: '200px',
   margin: 4,
-  wordWwrap: 'break-word'
+  wordWwrap: 'break-word',
+  maxFontSize: '2vw'
 };
 
 /***/ }),
@@ -1833,7 +1834,7 @@ _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(f
 
 /***/ }),
 
-/***/ 6:
+/***/ 4:
 /*!*******************************!*\
   !*** multi ./pages/tvpage.js ***!
   \*******************************/

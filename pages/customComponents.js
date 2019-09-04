@@ -244,7 +244,7 @@ export class CharacterSheet extends React.Component {
                                     <DandDTableValue>
                                         {this.props.Hitpoints != "Dead" && 
                                             <span>{this.props.Hitpoints}</span> ||
-                                            <span className="text-danger">{this.props.Hitpoints}</span>
+                                            <span className="text-danger h5"><small>{this.props.Hitpoints}</small></span>
                                         } 
                                     </DandDTableValue>
                                 </tr>
@@ -268,7 +268,7 @@ export class CharacterSheet extends React.Component {
 
 // D and D application
 export class AttackSection extends React.Component {
-
+    
     AttackResult() {
         var Result = this.props.DidHit;
         if (Result === "Hit") {
@@ -320,7 +320,13 @@ export class AttackSection extends React.Component {
                 </div>
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>
-                    <p className="mt-2 p-0">attack roll: {this.props.Roll}</p>
+                    <p className="mt-2 p-0">
+                        attack roll: {
+                        this.props.Roll === 'Crit Strike' &&
+                        <span className="text-danger font-italic">{this.props.Roll}!</span>
+                        || <span>{this.props.Roll}</span>
+                        }
+                    </p>
                 </div>
                 <div className="mt-2 p-0">
                     {this.AttackResult()}
@@ -351,7 +357,7 @@ export class NameForm extends React.Component {
                             }}
                         />
                     </FormGroup>
-                    <Button  className="ml-2 mt-2" onClick={this.props.NameSubmit}>Submit</Button>
+                    <Button  className="ml-2 mt-2" onClick={this.props.NameSubmit}>Change Name</Button>
                 </Form> 
             </div>
         );

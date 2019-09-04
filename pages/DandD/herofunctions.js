@@ -138,8 +138,8 @@ function SetheroHitAdj() {
 //sets stats including base role 1-20 than applies above functions.
 function setherostats() {
     //performs a 1-20 roll for every item in the "herostats" object/state
-    for (let key in this.state.herostats) {
-        this.state.herostats[key] = Math.floor((Math.random() * 20) + 1);
+    for (let Stat in this.state.herostats) {
+        this.state.herostats[Stat] = Math.floor((Math.random() * 20) + 1);
     };
     this.setState ({
         //sets adjusted items based on herostats numbers in the set..adj functions
@@ -155,7 +155,7 @@ armor class and hero hit adjustment.  on successful attack role, applies damage
 to monster hp and if hp reaches zero alerts that monster is dead 
 */
 function heroattackroll() {
-    let attackroll =  (parseInt((Math.random() * 20) + 1)) + (parseInt(this.state.heroHitAdj));
+    let attackroll = (parseInt((Math.random() * 20) + 1)) + (parseInt(this.state.heroHitAdj));
     let critstrike = (this.state.heroDmg * 2);
     
     if (attackroll < 20 && attackroll >= this.state.monsterAc ) {
