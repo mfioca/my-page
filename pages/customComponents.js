@@ -244,7 +244,9 @@ export class CharacterSheet extends React.Component {
                                     <DandDTableValue>
                                         {this.props.Hitpoints != "Dead" && 
                                             <span>{this.props.Hitpoints}</span> ||
-                                            <span className="text-danger h5"><small>{this.props.Hitpoints}</small></span>
+                                            <span className="text-danger h5">
+                                                <small>{this.props.Hitpoints}</small>
+                                            </span>
                                         } 
                                     </DandDTableValue>
                                 </tr>
@@ -257,7 +259,10 @@ export class CharacterSheet extends React.Component {
                     </Col>
                     <Col sm={{ size: 'auto', offset: 1 }}>
                     <div className="text-center ">
-                        <img  style={DandDAvatar} src={this.props.ImgUrl} alt="hero"/>
+                        <img  style={DandDAvatar} 
+                            src={this.props.ImgUrl} 
+                            alt="hero"
+                        />
                     </div>
                     </Col>
                 </Row>
@@ -268,29 +273,11 @@ export class CharacterSheet extends React.Component {
 
 // D and D application
 export class AttackSection extends React.Component {
-    
-    AttackResult() {
-        var Result = this.props.DidHit;
-        if (Result === "Hit") {
-            return (
-                <div>
-                    <h2 className="alert-success w-100 text-center mt-3">{Result}</h2>
-                </div>
-            );
-        }
-
-        if (Result === "Miss") {
-            return (
-                <div>
-                    <h2 className="alert-danger w-100 text-center mt-3">{Result}</h2>
-                </div>
-            );
-        }
-    }
-
     render() {
+        var Result = this.props.DidHit;
+
         return (
-            <div className="bg-dark">
+            <div className="bg-dark" style={{height: '440px'}}>
                 <Row>
                     <Col className="my-4 mx-5 d-flex justify-content-center">
                         <div style={thumbnail}>
@@ -321,15 +308,26 @@ export class AttackSection extends React.Component {
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>
                     <p className="mt-2 p-0">
-                        attack roll: {
-                        this.props.Roll === 'Crit Strike' &&
-                        <span className="text-danger font-italic">{this.props.Roll}!</span>
-                        || <span>{this.props.Roll}</span>
+                        attack roll: 
+                        {this.props.Roll === 'Crit Strike' &&
+                            <span className="text-danger font-italic">
+                                {this.props.Roll}!
+                            </span> || 
+                            <span>
+                                {this.props.Roll}
+                            </span>
                         }
                     </p>
                 </div>
-                <div className="mt-2 p-0">
-                    {this.AttackResult()}
+                <div className="my-2 p-0">
+                    {Result === "Hit" &&
+                        <h2 className="alert-success w-100 text-center mt-3">
+                            {Result}
+                        </h2> ||
+                        <h2 className="alert-danger w-100 text-center mt-3">
+                            {Result}
+                        </h2>
+                    }
                 </div>
             </div>
         );
@@ -357,7 +355,11 @@ export class NameForm extends React.Component {
                             }}
                         />
                     </FormGroup>
-                    <Button  className="ml-2 mt-2" onClick={this.props.NameSubmit}>Change Name</Button>
+                    <Button  
+                        className="ml-2 mt-2" 
+                        onClick={this.props.NameSubmit}>
+                            Change Name
+                    </Button>
                 </Form> 
             </div>
         );

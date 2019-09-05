@@ -155,13 +155,14 @@ armor class andmonster hit adjustment.  on successful attack role, applies damag
 to hero hp and if hp reaches zero alerts that hero is dead */
 function monsterattackroll() {
     let attackroll = (parseInt((Math.random() * 20) + 1)) + (parseInt(this.state.heroHitAdj));
+    let adjattackroll = attackroll + (parseInt(this.state.heroHitAdj));
     let critstrike = (this.state.monsterDmg * 2);
     
-    if (attackroll < 20 && attackroll >= this.state.heroAc) {
-        this.setState({monsterDidHit: 'Hit', monsterRoll: attackroll})
+    if (attackroll < 20 && adjattackroll >= this.state.heroAc) {
+        this.setState({monsterDidHit: 'Hit', monsterRoll: adjattackroll})
         //performs check to see if the hero hp after monster damange is 0 or lower
         if ((this.state.heroHp - this.state.monsterDmg) <= 0) {
-            this.setState ({heroHp: 'Dead', monsterRoll: attackroll})  // if yes, hero is dead
+            this.setState ({heroHp: 'Dead', monsterRoll: adjattackroll})  // if yes, hero is dead
         } else {
             //if no, sets the herohp state to reflect new damage
             this.setState ({heroHp: this.state.heroHp - this.state.monsterDmg})
@@ -174,6 +175,6 @@ function monsterattackroll() {
             this.setState ({heroHp: this.state.heroHp - critstrike})
         } 
     } else {
-        this.setState ({monsterDidHit: 'Miss', monsterRoll: attackroll});
+        this.setState ({monsterDidHit: 'Miss', monsterRoll: adjattackroll});
     };
 };

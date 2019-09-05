@@ -9,6 +9,7 @@ import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
 
 
+
 class AttackSim extends React.Component {
     constructor (props) {
         super(props);
@@ -236,7 +237,7 @@ class AttackSim extends React.Component {
                                     <div className="text-center pt-4">
                                         <div className="p-3">
                                             <h4>iniative:</h4>
-                                            <h4 className="text-info">
+                                            <h4>
                                                 {this.state.monsterInitiative != "Second" &&
                                                     <span className="text-info">
                                                         {this.state.monsterInitiative}</span> ||
@@ -253,7 +254,7 @@ class AttackSim extends React.Component {
                                                     <span className="text-success">
                                                         {this.state.monsterHp}
                                                     </span> || 
-                                                    <span className="text-danger">
+                                                    <span className="text-danger h4">
                                                         {this.state.monsterHp}
                                                     </span>
                                                 }

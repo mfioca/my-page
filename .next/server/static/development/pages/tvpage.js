@@ -1431,11 +1431,11 @@ var TvTitle = {
   margin: 4
 };
 var TvCast = {
-  maxHeight: '60px',
+  maxHeight: '20px',
   width: '200px',
   margin: 4,
   wordWwrap: 'break-word',
-  maxFontSize: '2vw'
+  maxFontSize: '1vw'
 };
 
 /***/ }),

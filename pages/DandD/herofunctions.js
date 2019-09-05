@@ -155,18 +155,19 @@ armor class and hero hit adjustment.  on successful attack role, applies damage
 to monster hp and if hp reaches zero alerts that monster is dead 
 */
 function heroattackroll() {
-    let attackroll = (parseInt((Math.random() * 20) + 1)) + (parseInt(this.state.heroHitAdj));
+    let attackroll = (parseInt((Math.random() * 20) + 1));
+    let adjattackroll = attackroll + (parseInt(this.state.heroHitAdj)); 
     let critstrike = (this.state.heroDmg * 2);
     
-    if (attackroll < 20 && attackroll >= this.state.monsterAc ) {
-        this.setState({heroDidHit: 'Hit', heroRoll: attackroll});
+    if (attackroll < 20 && adjattackroll >= this.state.monsterAc ) {
+        this.setState({heroDidHit: 'Hit', heroRoll: adjattackroll});
         //performs check to see if the monster hp after hero damange is 0 or lower
         if ((this.state.monsterHp - this.state.heroDmg) <= 0) {
-            this.setState ({monsterHp: 'Dead', heroRoll: attackroll}) // if yes, monster is dead
+            this.setState ({monsterHp: 'Dead', heroRoll: adjattackroll}) // if yes, monster is dead
         } else {
             this.setState ({monsterHp: this.state.monsterHp - this.state.heroDmg})
         }
-    } else if (attackroll >= 20) {
+    } else if (attackroll === 20) {
         this.setState({heroDidHit: 'Hit', heroRoll: 'Crit Strike'});
         if ((this.state.monsterHp - critstrike) <= 0) {
             this.setState ({monsterHp: 'Dead', heroRoll: 'Crit Strike'}) // if yes, monster is dead
@@ -174,6 +175,6 @@ function heroattackroll() {
             this.setState ({monsterHp: this.state.monsterHp - critstrike})
         }
     } else {
-        this.setState ({heroDidHit: 'Miss', heroRoll: attackroll});
+        this.setState ({heroDidHit: 'Miss', heroRoll: adjattackroll});
     };
 };

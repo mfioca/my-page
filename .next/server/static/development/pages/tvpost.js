@@ -2179,25 +2179,25 @@ function (_React$Component6) {
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("small", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 247
+          lineNumber: 248
         },
         __self: this
       }, this.props.Hitpoints)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 251
+          lineNumber: 253
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 252
+          lineNumber: 254
         },
         __self: this
       }, "Damage per Hit:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 253
+          lineNumber: 255
         },
         __self: this
       }, " ", this.props.Damage))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
@@ -2207,14 +2207,14 @@ function (_React$Component6) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 258
+          lineNumber: 260
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "text-center ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 259
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -2223,7 +2223,7 @@ function (_React$Component6) {
         alt: "hero",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 260
+          lineNumber: 262
         },
         __self: this
       })))));
@@ -2245,72 +2245,37 @@ function (_React$Component7) {
   }
 
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(AttackSection, [{
-    key: "AttackResult",
-    value: function AttackResult() {
-      var Result = this.props.DidHit;
-
-      if (Result === "Hit") {
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 276
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-          className: "alert-success w-100 text-center mt-3",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 277
-          },
-          __self: this
-        }, Result));
-      }
-
-      if (Result === "Miss") {
-        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 284
-          },
-          __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
-          className: "alert-danger w-100 text-center mt-3",
-          __source: {
-            fileName: _jsxFileName,
-            lineNumber: 285
-          },
-          __self: this
-        }, Result));
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
+      var Result = this.props.DidHit;
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "bg-dark",
+        style: {
+          height: '440px'
+        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 293
+          lineNumber: 280
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 294
+          lineNumber: 281
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         className: "my-4 mx-5 d-flex justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 295
+          lineNumber: 282
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 296
+          lineNumber: 283
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -2318,34 +2283,34 @@ function (_React$Component7) {
         alt: "shield",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 297
+          lineNumber: 284
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 298
+          lineNumber: 285
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "AC-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 299
+          lineNumber: 286
         },
         __self: this
       }, this.props.AC)))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Col"], {
         className: "my-4 mx-5 d-flex justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 305
+          lineNumber: 292
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: _jsxstyles__WEBPACK_IMPORTED_MODULE_7__["thumbnail"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 293
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
@@ -2353,77 +2318,91 @@ function (_React$Component7) {
         alt: "icon",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 294
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 295
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
         className: "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 296
         },
         __self: this
       }, this.props.HitAdj))))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "d-flex justify-content-center my-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 316
+          lineNumber: 303
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
         onClick: this.props.AttackRoll,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 317
+          lineNumber: 304
         },
         __self: this
       }, this.props.RollTitle)), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 321
+          lineNumber: 308
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 322
+          lineNumber: 309
         },
         __self: this
       }, "Attack Result:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         className: "mt-2 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 323
+          lineNumber: 310
         },
         __self: this
-      }, "attack roll: ", this.props.Roll === 'Crit Strike' && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+      }, "attack roll:", this.props.Roll === 'Crit Strike' && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         className: "text-danger font-italic",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 326
+          lineNumber: 313
         },
         __self: this
       }, this.props.Roll, "!") || react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 316
         },
         __self: this
       }, this.props.Roll))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
-        className: "mt-2 p-0",
+        className: "my-2 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 331
+          lineNumber: 322
         },
         __self: this
-      }, this.AttackResult()));
+      }, Result === "Hit" && react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
+        className: "alert-success w-100 text-center mt-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 324
+        },
+        __self: this
+      }, Result) || react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h2", {
+        className: "alert-danger w-100 text-center mt-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 327
+        },
+        __self: this
+      }, Result)));
     }
   }]);
 
@@ -2447,28 +2426,28 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 343
+          lineNumber: 341
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Form"], {
         inline: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 344
+          lineNumber: 342
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["FormGroup"], {
         className: "mr-2 mt-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 345
+          lineNumber: 343
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Label"], {
         className: "mr-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 346
+          lineNumber: 344
         },
         __self: this
       }, "Name:"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("input", {
@@ -2486,7 +2465,7 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 347
+          lineNumber: 345
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_6__["Button"], {
@@ -2494,7 +2473,7 @@ function (_React$Component8) {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 360
+          lineNumber: 358
         },
         __self: this
       }, "Change Name")));
@@ -2565,11 +2544,11 @@ var TvTitle = {
   margin: 4
 };
 var TvCast = {
-  maxHeight: '60px',
+  maxHeight: '20px',
   width: '200px',
   margin: 4,
   wordWwrap: 'break-word',
-  maxFontSize: '2vw'
+  maxFontSize: '1vw'
 };
 
 /***/ }),
@@ -2869,21 +2848,41 @@ var tvPost = function tvPost(props) {
       },
       __self: this
     }, value, " \xA0");
-  })))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("tr", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 52
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["TvPostInfoLabel"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, "Seasons"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["TvPostInfoValue"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, props.show._embedded.seasons.filter(function (seasons) {
+    return seasons.number;
+  }).length))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Col"], {
     sm: {
       size: 'auto',
       offset: 1
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 61
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "text-center mr-5 mt-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("img", {
@@ -2891,52 +2890,52 @@ var tvPost = function tvPost(props) {
     alt: "no image",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 63
     },
     __self: this
   })))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
     className: "m-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 68
     },
     __self: this
   }, "Summary:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("br", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 68
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 69
     },
     __self: this
   }, props.show.summary.replace(/<[/]?p>/g, '').replace(/<[/]?b>/g, '').replace(/<[/]?i>/g, '')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Row"], {
     className: "m-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 78
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 79
     },
     __self: this
   }, "Link:", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 80
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -2946,20 +2945,20 @@ var tvPost = function tvPost(props) {
     title: props.show.url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 81
     },
     __self: this
   }, props.show.name ? props.show.name : 'null')))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 90
     },
     __self: this
   }, "Cast:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "d-flex flex-wrap justify-content-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 91
     },
     __self: this
   }, props.show._embedded.cast.map(function (cast) {
@@ -2967,14 +2966,17 @@ var tvPost = function tvPost(props) {
       key: cast.person.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 93
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Card"], {
+      style: {
+        height: '570px'
+      },
       className: "m-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 88
+        lineNumber: 94
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardTitle"], {
@@ -2982,19 +2984,19 @@ var tvPost = function tvPost(props) {
       style: _jsxstyles__WEBPACK_IMPORTED_MODULE_8__["TvTitle"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 89
+        lineNumber: 95
       },
       __self: this
     }, cast.person.name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardBody"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 94
+        lineNumber: 100
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 101
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["CardImg"], {
@@ -3004,34 +3006,34 @@ var tvPost = function tvPost(props) {
       alt: "castimage",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 102
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      className: "text-center my-2 p-2 h-100",
+      className: "text-center my-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 113
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h4", {
       style: _jsxstyles__WEBPACK_IMPORTED_MODULE_8__["TvCast"],
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 114
       },
       __self: this
-    }, "As: ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
+    }, "As: \xA0", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("small", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 115
       },
       __self: this
     }, cast.character.name)))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_5__["Button"], {
       className: "btn-dark mt-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 111
+        lineNumber: 119
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
@@ -3041,7 +3043,7 @@ var tvPost = function tvPost(props) {
       rel: "noopener noreferrer",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 112
+        lineNumber: 120
       },
       __self: this
     }, "Actor page"))));
@@ -3049,13 +3051,13 @@ var tvPost = function tvPost(props) {
     className: "mt-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 123
+      lineNumber: 131
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 124
+      lineNumber: 132
     },
     __self: this
   }, "Episodes:"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react_table__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -3095,14 +3097,14 @@ var tvPost = function tvPost(props) {
           value: filter ? filter.value : '',
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 149
+            lineNumber: 157
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("option", {
           value: "",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 153
+            lineNumber: 161
           },
           __self: this
         }, "Show All"), props.show._embedded.episodes.map(function (item) {
@@ -3115,7 +3117,7 @@ var tvPost = function tvPost(props) {
             value: value,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 159
+              lineNumber: 167
             },
             __self: this
           }, value);
@@ -3140,7 +3142,7 @@ var tvPost = function tvPost(props) {
             rel: "noopener noreferrer",
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 181
+              lineNumber: 189
             },
             __self: this
           }, d.name)
@@ -3169,7 +3171,7 @@ var tvPost = function tvPost(props) {
         return d.summary != null && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 199
+            lineNumber: 207
           },
           __self: this
         }, d.summary.replace(/<[/]?p>/g, ''));
@@ -3180,7 +3182,7 @@ var tvPost = function tvPost(props) {
     }],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 127
+      lineNumber: 135
     },
     __self: this
   })))));

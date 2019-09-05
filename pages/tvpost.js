@@ -49,6 +49,12 @@ const tvPost = props => (
                     }
                   </TvPostInfoValue>
                 </tr>
+                <tr>
+                  <TvPostInfoLabel>Seasons</TvPostInfoLabel>
+                  <TvPostInfoValue>
+                    {props.show._embedded.seasons.filter(seasons => seasons.number).length}
+                  </TvPostInfoValue>
+                </tr>
               </tbody>
             </Table>
           </Col>
@@ -85,10 +91,10 @@ const tvPost = props => (
         <div className="d-flex flex-wrap justify-content-left">
           {props.show._embedded.cast.map(cast => (
             <div key={cast.person.id}>
-              <Card className="m-2">
+              <Card style={{height: '570px'}} className="m-2">
                 <CardTitle 
                   className="m-4 text-center" 
-                  style={TvTitle}>
+                  style={TvTitle} >
                     {cast.person.name}
                 </CardTitle>
                 <CardBody>
@@ -104,8 +110,10 @@ const tvPost = props => (
                       alt="castimage" 
                     />
                   </div>
-                  <div className="text-center my-2 p-2 h-100">
-                    <h4 style={TvCast}>As: <small>{cast.character.name}</small></h4>
+                  <div className="text-center my-2">
+                    <h4 style={TvCast}>As: &nbsp;
+                      <small>{cast.character.name}</small>
+                    </h4>
                   </div>
                 </CardBody>
                 <Button className="btn-dark mt-3">
@@ -133,8 +141,8 @@ const tvPost = props => (
               fontSize: "14px",
             }}
             filterable
-            defaultFilterMethod={(filter, row) =>
-            String(row[filter.id]) === filter.value}
+              defaultFilterMethod={(filter, row) =>
+              String(row[filter.id]) === filter.value}
             columns= {[
               {
                 Header: "Season",
