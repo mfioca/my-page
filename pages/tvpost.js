@@ -4,7 +4,7 @@ import { Card, CardImg, CardBody, CardTitle, Row, Col, Button, Table } from 'rea
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvImage, TvCast, TvTitle } from './jsxstyles'
-import { TvPostInfoLabel, TvPostInfoValue } from './customComponents'
+import { TvPostInfoLabel, TvPostInfoValue, NewTabLink } from './customComponents'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'
@@ -78,12 +78,11 @@ const tvPost = props => (
         <Row className="m-3">
           <h3>Link: 
             <small className="ml-2">
-              <a href={props.show.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={props.show.url}>
-              {props.show.name ? props.show.name : 'null'} 
-              </a>
+              <NewTabLink
+                Link={props.show.url}
+                Title={props.show.url}>
+                  {props.show.name ? props.show.name : 'null'}
+                </NewTabLink>
             </small>
           </h3>
         </Row>
@@ -116,13 +115,13 @@ const tvPost = props => (
                     </h4>
                   </div>
                 </CardBody>
-                <Button className="btn-dark mt-3">
-                  <a className="btn-dark w-100" 
-                    href={cast.person.url}
-                    target="_blank" 
-                    rel="noopener noreferrer"> 
-                      Actor page
-                  </a>
+                <Button className="mt-3 p-0">
+                  <NewTabLink
+                    Style="btn btn-dark w-100"
+                    Link={cast.person.url}
+                    Title="Actor Page">
+                      Actor Page
+                  </NewTabLink>
                 </Button>
               </Card>
             </div>
@@ -186,9 +185,11 @@ const tvPost = props => (
                 accessor: d =>
                 //Converts Episode Name into a link to the TvMaze 
                 //page for that episode
-                <a href={d.url} target="_blank" rel="noopener noreferrer">
-                  {d.name}
-                </a>, 
+                <NewTabLink
+                  Link={d.url}
+                  Title="Episode Link">
+                    {d.name}
+                  </NewTabLink>, 
                 minWidth: 70,
                 style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
               },

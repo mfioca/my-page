@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
+import { NewTabLink } from './customComponents'
 
 
 const noimage = '/static/images/no-img.png';
@@ -23,7 +24,6 @@ class Searchbar extends React.Component {
     this.setState({value: event.target.value});
     Search = (event.target.value);
   }
-
 
   render() {
     return (
@@ -46,9 +46,9 @@ class Searchbar extends React.Component {
           {/*due to get initial props async function is only called on page load
             disguised a page link as a search button to call value of search for 
             the await fetch api call.*/}
-          <Button className="ml-4 btn-dark">
+          <Button className="ml-4 p-0">
             <Link href="/tvpage">
-              <a className="btn-dark w-100">Click Submit</a>
+              <a className="btn btn-dark">Click Submit</a>
             </Link>
           </Button>
         </Form>
@@ -60,9 +60,11 @@ class Searchbar extends React.Component {
 const TvPage = props => (
   <Layout>
     <h1 className="text-center">the below content has been imported from 
-      <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">
-        TVmaze.com
-      </a>
+    <NewTabLink
+      Link="https://www.tvmaze.com"
+      Title="TvMaze.com">
+        Tvmaze.com
+      </NewTabLink>
     </h1>
     <Searchbar />
     <Layout2>

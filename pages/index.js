@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { Container, Row, Col } from 'reactstrap'
 import { HomeCard, CustomJumbo} from './customComponents'
 
 
@@ -18,9 +17,8 @@ function Home() {
                     I progress as a developer."
                 Caption3="Please feel free to look around and email me with any questions or suggestions."
             />
-            <Container>
-                <Row>
-                    <Col  sm={{ size: 4, offset: 1 }}>
+            <div className="d-flex flex-wrap justify-content-center my-3">
+                <div className="text-center m-3">
                         <HomeCard
                             Title="Desktop Customization"
                             Image="../static/images/rainmeter.png"
@@ -30,8 +28,8 @@ function Home() {
                             Link="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
                             ButtonTitle="Deviant"
                         />
-                    </Col>
-                    <Col  sm={{ size: 4, order: 2, offset: 2 }}>
+                    </div>
+                    <div className="text-center m-3">
                         <HomeCard 
                             Title="Git Hub Repository"
                             Image="../static/images/GitHub.png"
@@ -41,9 +39,8 @@ function Home() {
                             Link="https://github.com/mfioca/my-page"
                             ButtonTitle="GitHub"
                         />
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+            </div>       
         </Layout>
     );
 }

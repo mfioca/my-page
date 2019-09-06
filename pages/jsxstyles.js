@@ -1,58 +1,66 @@
-export { 
-    HomeImage, CardImageStyle, AboutImg, TvpageSearchBar, 
-    TvImage, TvTitle, DandDAvatar, thumbnail, TvCast
-}
 
-
-const HomeImage = {
+export const HomeImage = {
     borderRadius: '50%',
     width: '20%',
     height: 'auto'
 };
 
-const CardImageStyle = {
+export const HomeCardStyle = {
+    width: '300px',
+    height: '400px',
+    marginRight: '50px',
+    marginLeft: '50px',
+    textAlign: 'center'
+}
+
+export const HomeCardTitleStyle = {
+    marginTop: '10px',
+    height: '400px'
+}
+
+export const CardImageStyle = {
     maxWidth: '150px',
     maxHeight: '150px',
     marginRight: 'auto',
     marginLeft: 'auto'
 }
 
-const AboutImg = {
+export const AboutImg = {
     width: '300px',
     height: '300px',
     padding: '5px'  
 };
 
-const DandDAvatar = {
+export const DandDAvatar = {
     height: '300px',
     width: 'auto',
     
 }
 
-const thumbnail = {
+export const thumbnail = {
     position: 'relative',
     align: 'center'
 }
 
-const TvpageSearchBar = {
+export const TvpageSearchBar = {
     fontSize: '14px',
     marginLeft: '200px',
     marginRight: 'auto',
     textAlign: 'center',
 }
 
-const TvImage = {
+export const TvImage = {
     height: '300px',
     width: 'auto'
 }
 
-const TvTitle = {
+export const TvTitle = {
     height: '20px',
     width: '200px',
     margin: 4
 }
 
-const TvCast = {
+export const TvCast = {
     maxHeight: '20px',
     width: '200px',
     margin: 4,

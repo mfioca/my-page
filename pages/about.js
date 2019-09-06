@@ -1,8 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { Container, Row, Col } from 'reactstrap'
-import { AboutMedia, SingleListCard, ThreeColumnCard, CustomJumbo } from './customComponents'
+import { AboutMedia, SingleListCard, ThreeColumnCard, CustomJumbo, NewTabLink } from './customComponents'
 
+const DeviantArt = "https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185";
 
 function Aboutpage() {
   return (
@@ -34,10 +35,14 @@ function Aboutpage() {
         Align="Right"
         ImgUrl="../static/images/rainmeter.png"
         Title="Computers and UI design"
-        Description="I first developed my interested in UI design when convirting back to a windows machine 
+        Description={
+          <p>I first developed my interested in UI design when convirting back to a windows machine 
           from a mac. I did not like how windows was set up and strived to make my desktop look and act more like OSX.
           I learned about a program called Rainmeter and expanded my knowledge in programing developing my first 
-          full custom UI theme through this program.  My Rainmeter theme is available to download through deviantart." 
+          full custom UI theme through this program.  My Rainmeter theme is available 
+          <NewTabLink Link={DeviantArt} Style="text-body"> here </NewTabLink>
+          to download through deviantart.</p>
+        }
       />
       <CustomJumbo
         Title="Professional Experience"
@@ -54,27 +59,23 @@ function Aboutpage() {
       <div className="text-center">
         <h1><u>Core Skills</u></h1>
       </div>
-        <div>
-            <Container>
-                <Row>
-                    <Col  sm={{ size: 4, offset: 1 }}>
+        <div className="d-flex flex-wrap justify-content-center my-3">
+          <div className='m-3'> 
                         <SingleListCard
                           Item1="Customer Service"
                           Item2="Customer and Technical Support"
                           Item3="Communication and Training"
                           Item4="Problem Solving and Decision Making"
                         />
-                    </Col>
-                    <Col  sm={{ size: 4, order: 2, offset: 2 }}>
-                        <SingleListCard
+                    </div>
+                    <div className='m-3'>
+                    <SingleListCard
                           Item1="Technical Writing"
                           Item2="Data Analysis and Reporting"
                           Item3="Quality Assurance"
                           Item4="Data Entry"
                         />
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
         </div>
         <div>
           <ThreeColumnCard

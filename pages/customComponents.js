@@ -5,10 +5,10 @@
 import React from 'react'
 import { 
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
-    Row, Col, Form, FormGroup, Label, Button, Table, Jumbotron 
+    Row, Col, Form, FormGroup, Label, Input, Button, Table, Jumbotron 
 } from 'reactstrap'
 
-import { AboutImg, CardImageStyle, HomeImage, 
+import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, HomeCardTitleStyle, 
     DandDAvatar, thumbnail 
 } from './jsxstyles'
 
@@ -28,6 +28,18 @@ export function TvPostInfoValue(props){
     )
 }
 
+export function NewTabLink(props){
+    return (
+        <a className={props.Style}
+            href={props.Link}
+            target="_blank" 
+            rel="noopener noreferrer"
+            title={props.Title}>
+                {props.children}
+        </a>
+    )
+}
+
 /* *********************** 
 *   Export Classes       * 
 **************************/
@@ -37,19 +49,18 @@ export class HomeCard extends React.Component{
     render() {
         return (
             <div>
-                <Card className="text-center mb-3">
-                    <CardTitle className="mt-2">{this.props.Title}</CardTitle>
+                <Card style={HomeCardStyle}>
+                    <CardTitle style={HomeCardTitleStyle}>{this.props.Title}</CardTitle>
                     <CardImg top style={CardImageStyle} src={this.props.Image} alt="Card image cap" />
                     <CardBody>
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
-                        <CardText>{this.props.Description}</CardText>
-                        <Button 
-                            href={this.props.Link}
-                            className="btn-dark"
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            >
-                                {this.props.ButtonTitle}
+                        <CardText style={{height: '80px'}}>{this.props.Description}</CardText>
+                        <Button className="w-100 p-0 m-0">
+                            <NewTabLink
+                                Style="btn btn-dark w-100 p-2"
+                                Link={this.props.Link}>
+                                    {this.props.ButtonTitle}
+                            </NewTabLink>
                         </Button>
                     </CardBody>
                 </Card> 
@@ -109,9 +120,9 @@ export class AboutMedia extends React.Component{
                             <Col>
                                 <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
                                 <CardBody>
-                                    <CardText>
+                                    
                                         {this.props.Description}
-                                    </CardText>
+                                    
                                 </CardBody>
                             </Col>
                         </Row>
@@ -149,7 +160,7 @@ export class SingleListCard extends React.Component{
     render() {
         return (
             <div>
-                <Card className="Text-Left">
+                <Card className="Text-Left" style={{width: '350px'}}>
                     <CardBody>
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
                         <div>
@@ -338,30 +349,28 @@ export class AttackSection extends React.Component {
 export class NameForm extends React.Component {
     render() {
         return (
-            <div>
-                <Form inline>
-                    <FormGroup className="mr-2 mt-2">
-                        <Label className="mr-2">Name:</Label>
-                        <input
-                            type="text"
-                            maxLength="20"
-                            value={this.props.value}
-                            onChange={this.props.NameChange}
-                            //Prevent enter key submit
-                            onKeyPress={event => {
-                                if (event.which === 13 /* Enter */) {
-                                event.preventDefault();
-                                }
-                            }}
-                        />
-                    </FormGroup>
-                    <Button  
-                        className="ml-2 mt-2" 
-                        onClick={this.props.NameSubmit}>
-                            Change Name
-                    </Button>
-                </Form> 
-            </div>
+            <Form inline>
+                <FormGroup className="mb-2 mr-sm-2 mb-sm-2">
+                    <Label className="mr-sm-2">Name:</Label>
+                    <input
+                        type="text"
+                        maxLength="20"
+                        value={this.props.value}
+                        onChange={this.props.NameChange}
+                        //Prevent enter key submit
+                        onKeyPress={event => {
+                            if (event.which === 13 /* Enter */) {
+                            event.preventDefault();
+                            }
+                        }}
+                    />
+                </FormGroup>
+                <Button  
+                    className="mb-2"
+                    onClick={this.props.NameSubmit}>
+                        Change Name
+                </Button>
+            </Form> 
         );
     }
 }

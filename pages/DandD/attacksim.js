@@ -150,13 +150,11 @@ class AttackSim extends React.Component {
                             <div className="text-center m-3">
                                 <Button onClick={this.setherostats}>Set Attrubutes</Button>
                             </div>
-                            <div className="ml-2 p-2">
                                 <NameForm 
                                     value = {this.state.value}
                                     NameChange = {this.heroNameChange}
                                     NameSubmit = {this.heroNameSubmit}
                                 />
-                            </div>
                         </Col>
                         <Col className="m-1  bg-dark text-white">
                             <h5 className="mt-5 ml-5"><b>Monster Name: </b>
@@ -175,13 +173,11 @@ class AttackSim extends React.Component {
                             <div className="text-center m-3">
                                 <Button onClick={this.setmonsterstats}>Set Attrubutes</Button>
                             </div>
-                            <div className="ml-3 p-2">
                                 <NameForm 
                                     value = {this.state.value}
                                     NameChange = {this.monsterNameChange}
                                     NameSubmit = {this.monsterNameSubmit}
                                 />
-                            </div>
                         </Col>
                     </Row>
                 </div>
@@ -225,8 +221,12 @@ class AttackSim extends React.Component {
                                             <h4>Hit Points:</h4>
                                             <h4 className="text-center mt-4">
                                                 {this.state.heroHp != "Dead" &&
-                                                    <span className="text-success">{this.state.heroHp}</span> ||
-                                                    <span className="text-danger">{this.state.heroHp}</span>
+                                                    <span className="text-success">
+                                                        {this.state.heroHp}
+                                                    </span> ||
+                                                    <span className="text-danger">
+                                                        {this.state.heroHp}
+                                                    </span>
                                                 }
                                             </h4>
                                         </div>
@@ -240,7 +240,8 @@ class AttackSim extends React.Component {
                                             <h4>
                                                 {this.state.monsterInitiative != "Second" &&
                                                     <span className="text-info">
-                                                        {this.state.monsterInitiative}</span> ||
+                                                        {this.state.monsterInitiative}
+                                                    </span> ||
                                                     <span className="text-warning">
                                                         {this.state.monsterInitiative}
                                                     </span>
