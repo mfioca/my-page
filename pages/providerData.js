@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout.js'
 import { Row, Col, Table } from 'reactstrap'
-import { CustomJumbo } from './customComponents'
+import { CustomJumbo, DataFilter } from './customComponents'
 import ProviderList from './provider_data/providerImport.js'
 
 
@@ -22,47 +22,103 @@ function Providerinfo() {
                             </tr>
                             <tr>
                                 <td>Transportation Companies:</td>
-                                <td>{data.filter(data => data.Type === 'Provider').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1= 'Type'
+                                        Value1= 'Provider'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Volunteer Drivers:</td>
-                                <td>{data.filter(data => data.Type === 'Volunteer Driver').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Volunteer Driver'/>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Central Region Providers:</th>
-                                <td>{data.filter(data => data.Region === 'Central').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'Central'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Transportation Companies:</td>
-                                <td>{data.filter(data => data.Type === 'Provider' && data.Region === 'Central' ).length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Provider'
+                                        Filter2 = 'Region'
+                                        Value2 = 'Central'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Volunteer Drivers:</td>
-                                <td>{data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'Central').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Volunteer Driver'
+                                        Filter2 = 'Region'
+                                        Value2 = 'Central'/>
+                                </td>
                             </tr>
                             <tr>
                                 <th>SouthWest Region:</th>
-                                <td>{data.filter(data => data.Region === 'SouthWest').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'SouthWest'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Transportation Companies:</td>
-                                <td>{data.filter(data => data.Type === 'Provider' && data.Region === 'SouthWest' ).length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Provider'
+                                        Filter2 = 'Region'
+                                        Value2 = 'SouthWest'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Volunteer Drivers:</td>
-                                <td> {data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'SouthWest').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Volunteer Driver'
+                                        Filter2 = 'Region'
+                                        Value2 = 'SouthWest'/>
+                                </td>
                             </tr>
                             <tr>
                                 <th>East Region:</th>
-                                <td>{data.filter(data => data.Region === 'East').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'East'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Transportation Companies:</td>
-                                <td>{data.filter(data => data.Type === 'Provider' && data.Region === 'East' ).length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Provider'
+                                        Filter2 = 'Region'
+                                        Value2 = 'East'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Volunteer Drivers:</td>
-                                <td>{data.filter(data => data.Type === 'Volunteer Driver' && data.Region === 'East').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Type'
+                                        Value1 = 'Volunteer Driver'
+                                        Filter2 = 'Region'
+                                        Value2 = 'East'/>
+                                </td>
                             </tr>
                         </tbody>
                         <style jsx>{`
@@ -90,60 +146,126 @@ function Providerinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td>{data.filter(data => data.Amb === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Amb'
+                                        Value1 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td>{data.filter(data => data.WCHR === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'WCHR'
+                                        Value1 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td>{data.filter(data => data.Stretcher === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Stretcher'
+                                        Value1 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <th colSpan="2">Central</th>
                             </tr>
                             <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td>{data.filter(data => data.Region === 'Central' && data.Amb === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'Central'
+                                        Filter2 = 'Amb'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td>{data.filter(data => data.Region === 'Central' && data.WCHR === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'Central'
+                                        Filter2 = 'WCHR'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td>{data.filter(data => data.Region === 'Central' && data.Stretcher === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'Central'
+                                        Filter2 = 'Stretcher'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <th colSpan="2">SouthWest</th>
                             </tr>
                             <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td>{data.filter(data => data.Region === 'SouthWest' && data.Amb === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'SouthWest'
+                                        Filter2 = 'Amb'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td>{data.filter(data => data.Region === 'SouthWest' && data.WCHR === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'SouthWest'
+                                        Filter2 = 'WCHR'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td>{data.filter(data => data.Region === 'SouthWest' && data.Stretcher === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'SouthWest'
+                                        Filter2 = 'Stretcher'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <th colSpan="2">East</th>
                             </tr>
                             <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td>{data.filter(data => data.Region === 'East' && data.Amb === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'East'
+                                        Filter2 = 'Amb'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td>{data.filter(data => data.Region === 'East' && data.WCHR === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'East'
+                                        Filter2 = 'WCHR'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td>{data.filter(data => data.Region === 'East' && data.Stretcher === 'Yes').length}</td>
+                                <td><DataFilter
+                                        Info = {data}
+                                        Filter1 = 'Region'
+                                        Value1 = 'East'
+                                        Filter2 = 'Stretcher'
+                                        Value2 = 'Yes'/>
+                                </td>
                             </tr>
                         </tbody>
                         <style jsx>{`

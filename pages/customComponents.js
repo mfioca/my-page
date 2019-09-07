@@ -218,6 +218,21 @@ export class ThreeColumnCard extends React.Component{
     }
 }
 
+//used in providerdata
+export class DataFilter extends React.Component {
+    render() {
+        let Fone = this.props.Filter1;
+        let Vone = this.props.Value1;
+        let Ftwo = this.props.Filter2;
+        let Vtwo = this.props.Value2;
+        let Data = this.props.Info;
+        
+        return (
+            <span>{Data.filter(Data => Data[Fone] === Vone && Data[Ftwo] === Vtwo).length}</span>
+        );
+    }
+} 
+
 //D and D application
 export class CharacterSheet extends React.Component {
     render() {

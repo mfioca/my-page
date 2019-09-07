@@ -82,7 +82,7 @@ const tvPost = props => (
                 Link={props.show.url}
                 Title={props.show.url}>
                   {props.show.name ? props.show.name : 'null'}
-                </NewTabLink>
+              </NewTabLink>
             </small>
           </h3>
         </Row>

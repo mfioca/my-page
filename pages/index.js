@@ -19,27 +19,27 @@ function Home() {
             />
             <div className="d-flex flex-wrap justify-content-center my-3">
                 <div className="text-center m-3">
-                        <HomeCard
-                            Title="Desktop Customization"
-                            Image="../static/images/rainmeter.png"
-                            Subtitle="Rainmeter desktop tool"
-                            Description="I created a 45+
-                                skin desktop theme based on the Bethesda Game 'The Elder Scrolls V: Skyrim'."
-                            Link="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
-                            ButtonTitle="Deviant"
-                        />
-                    </div>
-                    <div className="text-center m-3">
-                        <HomeCard 
-                            Title="Git Hub Repository"
-                            Image="../static/images/GitHub.png"
-                            Subtitle="My-Page"
-                            Description="I have this page published on my GitHub profile.  You can click on
-                                the below link to check out the base code"
-                            Link="https://github.com/mfioca/my-page"
-                            ButtonTitle="GitHub"
-                        />
-                    </div>
+                    <HomeCard
+                        Title="Desktop Customization"
+                        Image="../static/images/rainmeter.png"
+                        Subtitle="Rainmeter desktop tool"
+                        Description="I created a 45+
+                            skin desktop theme based on the Bethesda Game 'The Elder Scrolls V: Skyrim'."
+                        Link="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
+                        ButtonTitle="Deviant"
+                    />
+                </div>
+                <div className="text-center m-3">
+                    <HomeCard 
+                        Title="Git Hub Repository"
+                        Image="../static/images/GitHub.png"
+                        Subtitle="My-Page"
+                        Description="I have this page published on my GitHub profile.  You can click on
+                            the below link to check out the base code"
+                        Link="https://github.com/mfioca/my-page"
+                        ButtonTitle="GitHub"
+                    />
+                </div>
             </div>       
         </Layout>
     );
