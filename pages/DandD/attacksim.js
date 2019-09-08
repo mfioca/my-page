@@ -201,7 +201,7 @@ class AttackSim extends React.Component {
                                 Roll for iniative
                             </Button>
                             <Row>
-                                <Col className="border-info border-right w-50">
+                                <Col className="w-50">
                                     <h4 className="text-info">{this.state.heroName}</h4>
                                     <div className="text-center pt-4">
                                         <div className="p-3">

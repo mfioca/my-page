@@ -154,7 +154,7 @@ function setmonsterstats() {
 armor class andmonster hit adjustment.  on successful attack role, applies damage
 to hero hp and if hp reaches zero alerts that hero is dead */
 function monsterattackroll() {
-    let attackroll = (parseInt((Math.random() * 20) + 1)) + (parseInt(this.state.heroHitAdj));
+    let attackroll = (parseInt((Math.random() * 20) + 1));
     let adjattackroll = attackroll + (parseInt(this.state.heroHitAdj));
     let critstrike = (this.state.monsterDmg * 2);
     

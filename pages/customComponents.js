@@ -5,7 +5,7 @@
 import React from 'react'
 import { 
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
-    Row, Col, Form, FormGroup, Label, Input, Button, Table, Jumbotron 
+    Row, Col, Form, FormGroup, Label, Input, Button, Fade, Table, Jumbotron 
 } from 'reactstrap'
 
 import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, HomeCardTitleStyle, 
@@ -324,7 +324,7 @@ export class AttackSection extends React.Component {
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>
                     <p className="mt-2 p-0">
-                        attack roll: 
+                        attack roll: &nbsp; 
                         {this.props.Roll === 'Crit Strike' &&
                             <span className="text-danger font-italic">
                                 {this.props.Roll}!
@@ -352,30 +352,49 @@ export class AttackSection extends React.Component {
 
 //D and D application
 export class NameForm extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { fadeIn: false };
+        this.toggle = this.toggle.bind(this);
+    }   
+    
+    toggle() {
+        this.setState({
+            fadeIn: !this.state.fadeIn
+        });
+    }
+
     render() {
         return (
             <Form inline>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-2">
-                    <Label className="mr-sm-2">
-                        Name:</Label>
-                    <input
-                        type="text"
-                        maxLength="20"
-                        value={this.props.value}
-                        onChange={this.props.NameChange}
-                        //Prevent enter key submit
-                        onKeyPress={event => {
-                            if (event.which === 13 /* Enter */) {
-                            event.preventDefault();
-                            }
-                        }}
-                    />
+                    <Label className="mx-sm-2">
+                        <Button 
+                            className="btn text-white" 
+                            onClick={this.toggle}>
+                                Change Name:
+                        </Button>
+                    </Label>
+                    <Fade in={this.state.fadeIn}>
+                        <Input
+                            type="text"
+                            maxLength="20"
+                            value={this.props.value}
+                            onChange={this.props.NameChange}
+                            //Prevent enter key submit
+                            onKeyPress={event => {
+                                if (event.which === 13 /* Enter */) {
+                                event.preventDefault();
+                                }
+                            }}
+                        /> 
+                        <Button  
+                            className="mx-sm-2"
+                            onClick={this.props.NameSubmit}>
+                                Submit
+                        </Button>
+                    </Fade>
                 </FormGroup>
-                <Button  
-                    className="mb-2"
-                    onClick={this.props.NameSubmit}>
-                        Change Name
-                </Button>
             </Form> 
         );
     }
