@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { AboutMedia, SingleListCard, ThreeColumnCard, CustomJumbo, NewTabLink } from './customComponents'
-
+import { AboutMedia, ThreeColumnCard, CustomJumbo, NewTabLink } from './customComponents'
+import { Progress, Col } from 'reactstrap'
 
 function Aboutpage() {
   return (
@@ -11,22 +11,22 @@ function Aboutpage() {
         Align="Right"
         ImgUrl="../static/images/avatar.jpg"
         Title="About"
-        Description="Movie, sci-fi and over all tech geek that always seeks out new and interesting
+        Description={<p>Movie, sci-fi and over all tech geek that always seeks out new and interesting
           things to experience and learn.  I strive to keep an open mind on everything because
           you never know what kind of hidden truths await those who pay attention.
           You can find those truths in the comedy writings of Douglas Adams 
           to J. R. R. Tolkien and all the way to the historical facts behind the theories expressed 
-          in the TV show “Ancient Aliens”."
+          in the TV show “Ancient Aliens”.</p>}
       />
       <AboutMedia
         Class="text-center bg-info text-white p-3"
         Align="Left"
         ImgUrl="../static/images/building.png"
         Title="Background"
-        Description="I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my 
+        Description={<p>I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my 
           experiences when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated 
           different places and have seen things that are unforgetable.  Those experiences helped me expand 
-          my knowledge in movie, photo and audio editing and new knowledge and points of views about the world."
+          my knowledge in movie, photo and audio editing and new knowledge and points of views about the world.</p>}
       />
       <AboutMedia
         Class="text-center bg-info text-white p-3" 
@@ -57,23 +57,27 @@ function Aboutpage() {
       <div className="text-center">
         <h1><u>Core Skills</u></h1>
       </div>
-      <div className="d-flex flex-wrap justify-content-center my-3">
-        <div className='m-3'> 
-          <SingleListCard
-            Item1="Customer Service"
-            Item2="Customer and Technical Support"
-            Item3="Communication and Training"
-            Item4="Problem Solving and Decision Making"
-          />
-        </div>
-        <div className='m-3'>
-          <SingleListCard
-            Item1="Technical Writing"
-            Item2="Data Analysis and Reporting"
-            Item3="Quality Assurance"
-            Item4="Data Entry"
-          />
-        </div>
+      <div className="d-flex flex-wrap m-1 justify-content-center">
+        <Col xs="5"  className="m-1">
+          <div className="text-center">React, JavaScript, Bootstrap 4, SQL, CSS, HTML, XML</div>
+          <Progress animated color="warning" value={25}>Novice</Progress>
+          <div className="text-center">NPM, NodeJS, Rest API, JSON</div>
+          <Progress animated color="warning" value={25}>Novice</Progress>
+          <div className="text-center">Data Analysis, Quality Assurance and Reporting</div>
+          <Progress animated color="info" value={50}>Intermediate</Progress>
+          <div className="text-center">Training and Documentation/Technical Writing</div>
+          <Progress animated color="info" value={50}>Intermediate</Progress>
+        </Col>
+        <Col xs="5"  className="m-1">
+          <div className="text-center">Customer Service and Support</div>
+          <Progress animated color="success" value={75}>Advanced</Progress>
+          <div className="text-center">Problem Solving and troubleshooting</div>
+          <Progress animated color="success" value={75}>Advanced</Progress>
+          <div className="text-center">MS Word and Excel(macro scripting and functions)</div>
+          <Progress animated color="success" value={75}>Advanced</Progress>
+          <div className="text-center">Multitasking, Time Management</div>
+          <Progress animated color="success" value={75}>Advanced</Progress>
+        </Col>
       </div>
       <div>
         <ThreeColumnCard
@@ -129,6 +133,8 @@ function Aboutpage() {
     </Layout>
   );
 }
+
+
 
 
 export default Aboutpage;

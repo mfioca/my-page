@@ -107,7 +107,7 @@ export class AboutMedia extends React.Component{
     render() {
         if (this.props.Align === "Right") {
             return (
-                <div className="py-3">
+                <div className="py-2">
                     <Card className={this.props.Class}>
                         <Row>
                             <Col >
@@ -120,9 +120,7 @@ export class AboutMedia extends React.Component{
                             <Col>
                                 <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
                                 <CardBody>
-                                    
                                         {this.props.Description}
-                                    
                                 </CardBody>
                             </Col>
                         </Row>
@@ -133,15 +131,13 @@ export class AboutMedia extends React.Component{
 
         if (this.props.Align === "Left") {
             return (
-                <div className="py-3">
+                <div className="py-2">
                     <Card className={this.props.Class}>
                         <Row>
                             <Col >
                             <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
                             <CardBody>
-                                <CardText>
                                     {this.props.Description}
-                                </CardText>
                             </CardBody>
                             </Col>
                             <Col >
@@ -154,27 +150,6 @@ export class AboutMedia extends React.Component{
         };
     }
 }
-
-//used in about page for resume
-export class SingleListCard extends React.Component{
-    render() {
-        return (
-            <div>
-                <Card className="Text-Left" style={{width: '350px'}}>
-                    <CardBody>
-                        <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
-                        <div>
-                            <li>{this.props.Item1}</li>
-                            <li>{this.props.Item2}</li>
-                            <li>{this.props.Item3}</li>
-                            <li>{this.props.Item4}</li>
-                        </div>
-                    </CardBody>
-                </Card> 
-            </div>
-        );
-    }
-};
 
 //used in resume for experience section
 export class ThreeColumnCard extends React.Component{
@@ -325,6 +300,21 @@ export class AttackSection extends React.Component {
                                 </div>
                             </div>  
                     </Col>
+                    <style jsx>{`
+                        .AC-Icon-text {
+                            position: absolute;
+                            top: 42px;
+                            left: 50px;
+                            transform: translate(-50%, -50%);
+                        }
+                        .HitAdj-Icon-text {
+                            position: absolute;
+                            top: 48%;
+                            left: 50px;
+                            transform: translate(-50%, -50%);
+                        }    
+                    `}
+                    </style>
                 </Row>
                 <div className="d-flex justify-content-center my-5">
                     <Button  onClick={this.props.AttackRoll}>
@@ -366,7 +356,8 @@ export class NameForm extends React.Component {
         return (
             <Form inline>
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-2">
-                    <Label className="mr-sm-2">Name:</Label>
+                    <Label className="mr-sm-2">
+                        Name:</Label>
                     <input
                         type="text"
                         maxLength="20"

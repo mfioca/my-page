@@ -191,14 +191,14 @@ const tvPost = props => (
                     {d.name}
                   </NewTabLink>, 
                 minWidth: 70,
-                style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
+                style: {'whiteSpace': 'unset', 'textAlign': 'center'},
               },
               {
                 Header:"Air Date",
                 id: "airdate",
                 accessor: d => d.airdate,
                 maxWidth: 120,
-                style: { 'whiteSpace': 'unset', 'textAlign': 'center' },
+                style: {'whiteSpace': 'unset', 'textAlign': 'center'},
               },
               {
                 Header:"Summary",
@@ -208,7 +208,7 @@ const tvPost = props => (
                   <span>
                     {d.summary.replace(/<[/]?p>/g, '')}
                   </span>,
-                style: { 'whiteSpace': 'unset' },
+                style: {'whiteSpace': 'unset'},
               }
             ]}
           />

@@ -150,7 +150,7 @@ class AttackSim extends React.Component {
                             <div className="text-center m-3">
                                 <Button onClick={this.setherostats}>Set Attrubutes</Button>
                             </div>
-                                <NameForm 
+                                <NameForm
                                     value = {this.state.value}
                                     NameChange = {this.heroNameChange}
                                     NameSubmit = {this.heroNameSubmit}
