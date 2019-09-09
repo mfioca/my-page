@@ -11,6 +11,11 @@ import { NewTabLink } from './customComponents'
 const noimage = '/static/images/no-img.png';
 var Search = '';
 
+function FlexDivCenter(props) {
+  return (
+    <div className="d-flex justify-content-center">{props.children}</div>
+  )
+}
 
 class Searchbar extends React.Component {
   constructor(props) {
@@ -27,9 +32,7 @@ class Searchbar extends React.Component {
 
   render() {
     return (
-      <div className="d-flex justify-content-center ">
-        <Form inline>
-          <FormGroup >
+        <Form inline className="justify-content-center">
             <Label className="mr-sm-2">TV Show search by Name:</Label>
             <Input
               type="text"
@@ -42,7 +45,6 @@ class Searchbar extends React.Component {
                 }
               }}
             />
-          </FormGroup>
           {/*due to get initial props async function is only called on page load
             disguised a page link as a search button to call value of search for 
             the await fetch api call.*/}
@@ -52,7 +54,6 @@ class Searchbar extends React.Component {
             </Link>
           </Button>
         </Form>
-      </div>
     );
   }
 }

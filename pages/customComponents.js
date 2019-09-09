@@ -5,7 +5,7 @@
 import React from 'react'
 import { 
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
-    Row, Col, Form, FormGroup, Label, Input, Button, Fade, Table, Jumbotron 
+    Row, Col, Form, FormGroup, Label, Input, Button, Collapse, Table, Jumbotron 
 } from 'reactstrap'
 
 import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, HomeCardTitleStyle, 
@@ -354,19 +354,17 @@ export class AttackSection extends React.Component {
 export class NameForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { fadeIn: false };
+        this.state = {collapse: false};
         this.toggle = this.toggle.bind(this);
     }   
     
     toggle() {
-        this.setState({
-            fadeIn: !this.state.fadeIn
-        });
+        this.setState(state => ({collapse: !state.collapse}));
     }
 
     render() {
         return (
-            <Form inline>
+            <Form >
                 <FormGroup className="mb-2 mr-sm-2 mb-sm-2">
                     <Label className="mx-sm-2">
                         <Button 
@@ -375,8 +373,9 @@ export class NameForm extends React.Component {
                                 Change Name:
                         </Button>
                     </Label>
-                    <Fade in={this.state.fadeIn}>
+                    <Collapse isOpen={this.state.collapse}>
                         <Input
+                            className="w-50"
                             type="text"
                             maxLength="20"
                             value={this.props.value}
@@ -389,11 +388,11 @@ export class NameForm extends React.Component {
                             }}
                         /> 
                         <Button  
-                            className="mx-sm-2"
+                            className="m-sm-2"
                             onClick={this.props.NameSubmit}>
                                 Submit
                         </Button>
-                    </Fade>
+                    </Collapse>
                 </FormGroup>
             </Form> 
         );

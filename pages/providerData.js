@@ -129,7 +129,6 @@ function Providerinfo() {
                                 text-align: center;
                                 widtH: 70px;
                             }
-                            
                             th {
                                 aligh: center,
                             }
@@ -271,9 +270,8 @@ function Providerinfo() {
                         <style jsx>{`
                             {
                                 text-align: center;
-                                widtH: 70px;
+                                width: 70px;
                             }
-                            
                             th {
                                 aligh: center,
                             }
