@@ -330,7 +330,7 @@ export class AttackSection extends React.Component {
 
     render() {
         return (
-            <div className="bg-dark" style={{height: '440px'}}>
+            <div className="bg-dark" style={{minHeight: '460px'}}>
                 <Row>
                     <Col className="my-4 mx-5 d-flex justify-content-center">
                         <div style={thumbnail}>
@@ -379,7 +379,7 @@ export class AttackSection extends React.Component {
                         attack roll: &nbsp; {this.RollResult()}</p>
                 </div>
                 <div>
-                    {this.AttackBanner()}}
+                    {this.AttackBanner()}
                 </div>
             </div>
         );
