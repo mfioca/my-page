@@ -38,7 +38,7 @@ const tvPost = props => (
                 </tr>
                 <tr>
                   <TvPostInfoLabel>Rating:</TvPostInfoLabel>
-                  <TvPostInfoValue>{props.show.rating.average}</TvPostInfoValue>
+                  <TvPostInfoValue>{props.show.rating.average? props.show.rating.average : 'no data' }</TvPostInfoValue>
                 </tr>
                 <tr>
                   <TvPostInfoLabel>Genre:</TvPostInfoLabel>
@@ -102,9 +102,13 @@ const tvPost = props => (
                       className="p-2" 
                       style={TvImage} 
                       src={
-                        cast.character.image === null 
-                        && cast.person.image.medium  
-                        || cast.character.image.medium
+                        cast.person.image === null && noimage ||
+                        
+                        
+                        cast.character.image === null && cast.person.image.medium ||
+                        cast.character.image.medium
+                        
+                        
                       } 
                       alt="castimage" 
                     />
