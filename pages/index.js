@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { HomeCard, CustomJumbo} from './customComponents'
+import { HomeCard, CustomJumbo, CenterFlexWrapDiv} from './customComponents'
 
 
 function Home() {
@@ -17,7 +17,7 @@ function Home() {
                     I progress as a developer."
                 Caption3="Please feel free to look around and email me with any questions or suggestions."
             />
-            <div className="d-flex flex-wrap justify-content-center my-3">
+            <CenterFlexWrapDiv>
                 <div className="text-center m-3">
                     <HomeCard
                         Title="Desktop Customization"
@@ -40,7 +40,7 @@ function Home() {
                         ButtonTitle="GitHub"
                     />
                 </div>
-            </div>       
+            </CenterFlexWrapDiv>       
         </Layout>
     );
 }

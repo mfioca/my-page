@@ -5,17 +5,13 @@ import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import { NewTabLink } from './customComponents'
+import { NewTabLink, LeftFlexWrapDiv } from './customComponents'
 
 
 const noimage = '/static/images/no-img.png';
 var Search = '';
 
-function FlexDivCenter(props) {
-  return (
-    <div className="d-flex justify-content-center">{props.children}</div>
-  )
-}
+
 
 class Searchbar extends React.Component {
   constructor(props) {
@@ -70,7 +66,7 @@ const TvPage = props => (
     <Searchbar />
     <Layout2>
       <h1>Results for: {Search}</h1>
-      <div className="d-flex flex-wrap justify-content-left">
+      <LeftFlexWrapDiv>
         {props.shows.map(show => (
           <div className="p-3 text-center" key={show.id}>
             <Card>
@@ -93,7 +89,7 @@ const TvPage = props => (
             </Card>
           </div>
         ))}
-      </div>
+      </LeftFlexWrapDiv>
     </Layout2>
   </Layout>
 );

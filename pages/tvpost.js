@@ -4,7 +4,7 @@ import { Card, CardImg, CardBody, CardTitle, Row, Col, Button, Table } from 'rea
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvImage, TvCast, TvTitle } from './jsxstyles'
-import { TvPostInfoLabel, TvPostInfoValue, NewTabLink } from './customComponents'
+import { TvPostInfoLabel, TvPostInfoValue, NewTabLink, LeftFlexWrapDiv } from './customComponents'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'
@@ -87,7 +87,7 @@ const tvPost = props => (
           </h3>
         </Row>
         <h2>Cast:</h2>
-        <div className="d-flex flex-wrap justify-content-left">
+        <LeftFlexWrapDiv>
           {props.show._embedded.cast.map(cast => (
             <div key={cast.person.id}>
               <Card style={{height: '570px'}} className="m-2">
@@ -126,7 +126,7 @@ const tvPost = props => (
               </Card>
             </div>
           ))}
-        </div>
+        </LeftFlexWrapDiv>
         <div className="mt-4">
           <h1>Episodes:</h1>
               
@@ -189,7 +189,7 @@ const tvPost = props => (
                   Link={d.url}
                   Title="Episode Link">
                     {d.name}
-                  </NewTabLink>, 
+                </NewTabLink>, 
                 minWidth: 70,
                 style: {'whiteSpace': 'unset', 'textAlign': 'center'},
               },

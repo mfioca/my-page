@@ -16,16 +16,30 @@ import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, HomeCardTitleStyle,
 *   Export styled components       * 
 ***********************************/
 
-export function TvPostInfoLabel(props) {
+//used in tvpage, home page, attacksim
+export function CenterFlexWrapDiv(props) {
     return (
-      <td className="h2 text-left w-25 m-0 p-2">{props.children}</td>
+        <div className="d-flex flex-wrap justify-content-center">
+            {props.children}
+        </div>
+    )
+}
+
+//used in tvpost
+export function LeftFlexWrapDiv(props) {
+    return (
+        <div className="d-flex flex-wrap justify-content-left">
+            {props.children}
+        </div>
     );
 }
 
-export function TvPostInfoValue(props){
+export function TvPostInfoLabel(props) {
     return (
-        <td className="text-left m-0 p-2"><small>{props.children}</small></td>
-    )
+      <td className="h2 text-left w-25 m-0 p-2">
+        {props.children}
+    </td>
+    );
 }
 
 export function NewTabLink(props){
@@ -37,7 +51,15 @@ export function NewTabLink(props){
             title={props.Title}>
                 {props.children}
         </a>
-    )
+    );
+}
+
+export function TvPostInfoValue(props){
+    return (
+        <td className="text-left m-0 p-2">
+            <small>{props.children}</small>
+        </td>
+    );
 }
 
 /* *********************** 
@@ -274,9 +296,39 @@ export class CharacterSheet extends React.Component {
 
 // D and D application
 export class AttackSection extends React.Component {
-    render() {
-        var Result = this.props.DidHit;
+    
+    RollResult() {
+        if (this.props.Roll === 'Crit Strike') {
+            return (
+                <span className="text-danger font-italic">
+                    {this.props.Roll}!
+                </span>
+            );
+        } else {
+            return (
+                <span>{this.props.Roll}</span>
+            );
+        }
+    }
 
+    AttackBanner() {
+        const Result = this.props.DidHit;
+        if (Result === "Hit") {
+            return (
+                <h2 className="alert alert-success py-2 text-center">{Result}</h2>
+            );
+        } if (Result === "Miss") {
+            return (
+                <h2 className="alert alert-danger py-2 text-center">{Result}</h2>
+            );
+        } else {
+            return (
+                <h6 className="text-white text-center">(Attack Result displayed here)</h6>
+            );
+        }
+    }           
+
+    render() {
         return (
             <div className="bg-dark" style={{height: '440px'}}>
                 <Row>
@@ -324,26 +376,10 @@ export class AttackSection extends React.Component {
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>
                     <p className="mt-2 p-0">
-                        attack roll: &nbsp; 
-                        {this.props.Roll === 'Crit Strike' &&
-                            <span className="text-danger font-italic">
-                                {this.props.Roll}!
-                            </span> || 
-                            <span>
-                                {this.props.Roll}
-                            </span>
-                        }
-                    </p>
+                        attack roll: &nbsp; {this.RollResult()}</p>
                 </div>
-                <div className="my-2 p-0">
-                    {Result === "Hit" &&
-                        <h2 className="alert-success w-100 text-center mt-3">
-                            {Result}
-                        </h2> ||
-                        <h2 className="alert-danger w-100 text-center mt-3">
-                            {Result}
-                        </h2>
-                    }
+                <div>
+                    {this.AttackBanner()}}
                 </div>
             </div>
         );
@@ -365,33 +401,39 @@ export class NameForm extends React.Component {
     render() {
         return (
             <Form >
-                <FormGroup className="mb-2 mr-sm-2 mb-sm-2">
-                    <Label className="mx-sm-2">
-                        <Button 
-                            className="btn text-white" 
-                            onClick={this.toggle}>
-                                Change Name:
-                        </Button>
-                    </Label>
+                <FormGroup className="mb-2 mr-sm-2 mb-sm-2 d-flex flex-wrap">
+                    <div className="m-2">
+                        <Label>
+                            <Button 
+                                className="btn text-white" 
+                                onClick={this.toggle}>
+                                    Change Name:
+                            </Button>
+                        </Label>
+                    </div>
                     <Collapse isOpen={this.state.collapse}>
-                        <Input
-                            className="w-50"
-                            type="text"
-                            maxLength="20"
-                            value={this.props.value}
-                            onChange={this.props.NameChange}
-                            //Prevent enter key submit
-                            onKeyPress={event => {
-                                if (event.which === 13 /* Enter */) {
-                                event.preventDefault();
-                                }
-                            }}
-                        /> 
-                        <Button  
-                            className="m-sm-2"
-                            onClick={this.props.NameSubmit}>
-                                Submit
-                        </Button>
+                        <div className="d-flex flex-wrap">
+                            <div className="m-2">    
+                                <Input
+                                    type="text"
+                                    maxLength="20"
+                                    value={this.props.value}
+                                    onChange={this.props.NameChange}
+                                    //Prevent enter key submit
+                                    onKeyPress={event => {
+                                        if (event.which === 13 /* Enter */) {
+                                        event.preventDefault();
+                                        }
+                                    }}
+                                /> 
+                            </div>
+                            <div className="m-2">
+                                <Button  
+                                    onClick={this.props.NameSubmit}>
+                                        Submit
+                                </Button>
+                            </div>
+                        </div>
                     </Collapse>
                 </FormGroup>
             </Form> 

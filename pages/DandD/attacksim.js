@@ -5,7 +5,7 @@ import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj,
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, 
     SetmonsteracAdj, setmonsterstats, monsterattackroll 
 } from './monsterfunctions'
-import { CharacterSheet, NameForm, AttackSection } from '../customComponents'
+import { CharacterSheet, NameForm, AttackSection, CenterFlexWrapDiv } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
 
 
@@ -129,7 +129,7 @@ class AttackSim extends React.Component {
     render() {
         return (
             <div >
-                <div className="d-flex row justify-content-center m-0 p-0"> 
+                <CenterFlexWrapDiv className=" m-0 p-0"> 
                     <Row className="w-100">
                         <Col className=" m-1 bg-dark text-white ">
                             <div>
@@ -180,8 +180,8 @@ class AttackSim extends React.Component {
                                 />
                         </Col>
                     </Row>
-                </div>
-                <div className="d-flex flex-wrap justify-content-center m-0 p-0">
+                </CenterFlexWrapDiv>
+                <CenterFlexWrapDiv className="m-0 p-0">
                     <div  className="bg-dark m-1 p-0">
                         <AttackSection
                             AC = {this.state.heroAc}
@@ -276,7 +276,7 @@ class AttackSim extends React.Component {
                             DidHit = {this.state.monsterDidHit}
                         />
                     </div>
-                </div>
+                </CenterFlexWrapDiv>
             </div>
         );
     }
