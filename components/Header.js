@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 
 
+
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -38,7 +39,7 @@ class Header extends React.Component {
                                 <DropdownToggle nav caret >
                                     Projects
                                 </DropdownToggle>
-                                <DropdownMenu right className="bg-dark btn-dark">
+                                <DropdownMenu right className="bg-dark">
                                     <Button className="btn-dark w-100" href="/tvpage">TvMaze</Button>
                                     <Button className="btn-dark w-100" href="/DandDpage">DandD</Button>
                                     <Button className="btn-dark w-100" href="/providerData">Provider List</Button>

@@ -1,4 +1,4 @@
-import { isJSXSpreadChild } from "@babel/types";
+
 
 export const HomeImage = {
     borderRadius: '50%',
@@ -67,4 +67,10 @@ export const TvCast = {
     margin: 4,
     wordWwrap: 'break-word',
     maxFontSize: '1vw'
+}
+
+//testing an idea
+export const myStyles = {
+    Theme: "Btn-Dark",
+    w100: "w-100"
 }

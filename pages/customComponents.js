@@ -36,7 +36,7 @@ export function LeftFlexWrapDiv(props) {
 
 export function TvPostInfoLabel(props) {
     return (
-      <td className="h2 text-left w-25 m-0 p-2">
+    <td className="h2 text-left w-25 m-0 p-2">
         {props.children}
     </td>
     );
@@ -247,7 +247,7 @@ export class CharacterSheet extends React.Component {
         return (
             <div >
                 <Row >
-                    <Col sm={{ size: 'auto', offset: 1 }}>
+                    <Col sm={{ size: 'auto', offset: 0 }}>
                         <Table borderless  className="">
                             <tbody>
                                 <tr>
@@ -280,13 +280,13 @@ export class CharacterSheet extends React.Component {
                             </tbody>
                         </Table>  
                     </Col>
-                    <Col sm={{ size: 'auto', offset: 1 }}>
-                    <div className="text-center ">
-                        <img  style={DandDAvatar} 
-                            src={this.props.ImgUrl} 
-                            alt="hero"
-                        />
-                    </div>
+                    <Col sm={{ size: 'auto', offset: 2 }}>
+                        <div className="text-center ">
+                            <img  style={DandDAvatar} 
+                                src={this.props.ImgUrl} 
+                                alt="hero"
+                            />
+                        </div>
                     </Col>
                 </Row>
             </div>
@@ -296,6 +296,11 @@ export class CharacterSheet extends React.Component {
 
 // D and D application
 export class AttackSection extends React.Component {
+    constructor(props) {
+        super(props);
+        this.RollResult = this.RollResult.bind(this);
+        this.AttackBanner = this.AttackBanner.bind(this);
+    }
     
     RollResult() {
         if (this.props.Roll === 'Crit Strike') {
@@ -330,7 +335,7 @@ export class AttackSection extends React.Component {
 
     render() {
         return (
-            <div className="bg-dark" style={{minHeight: '460px'}}>
+            <div className="bg-dark">
                 <Row>
                     <Col className="my-4 mx-5 d-flex justify-content-center">
                         <div style={thumbnail}>
@@ -368,10 +373,15 @@ export class AttackSection extends React.Component {
                     `}
                     </style>
                 </Row>
-                <div className="d-flex justify-content-center my-5">
-                    <Button  onClick={this.props.AttackRoll}>
+                <div className="d-flex justify-content-center my-4">
+                    <Collapse isOpen={this.props.AttackTurn}>
+                    <Button  
+                    onMouseDown={this.props.AttackRoll} 
+                    onMouseUp = {this.props.NextTurn}>
+                        {this.props.AttackRoll}
                         {this.props.RollTitle}
                     </Button>
+                    </Collapse>
                 </div>
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>

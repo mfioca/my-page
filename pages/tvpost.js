@@ -1,6 +1,6 @@
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout'
-import { Card, CardImg, CardBody, CardTitle, Row, Col, Button, Table } from 'reactstrap'
+import { Card, CardImg, CardBody, CardTitle, Row, Col, Table } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvImage, TvCast, TvTitle } from './jsxstyles'
@@ -103,12 +103,8 @@ const tvPost = props => (
                       style={TvImage} 
                       src={
                         cast.person.image === null && noimage ||
-                        
-                        
                         cast.character.image === null && cast.person.image.medium ||
                         cast.character.image.medium
-                        
-                        
                       } 
                       alt="castimage" 
                     />
@@ -119,14 +115,12 @@ const tvPost = props => (
                     </h4>
                   </div>
                 </CardBody>
-                <Button className="mt-3 p-0">
                   <NewTabLink
-                    Style="btn btn-dark w-100"
+                    Style="btn btn-dark w-100 mt-3"
                     Link={cast.person.url}
                     Title="Actor Page">
                       Actor Page
                   </NewTabLink>
-                </Button>
               </Card>
             </div>
           ))}

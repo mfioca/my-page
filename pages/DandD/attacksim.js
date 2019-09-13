@@ -44,6 +44,7 @@ class AttackSim extends React.Component {
             heroNametext: '',
             heroName: 'Hero',
             heroInitiative: 0,
+            heroAttackVisible: false,
             heroRoll: 0,
             heroDidHit: '',
             monsterHp: 0,
@@ -53,8 +54,10 @@ class AttackSim extends React.Component {
             monsterNametext: '',
             monsterName: 'Monster',
             monsterInitiative: 0,
+            monsterAttackVisible: false,
             monsterRoll: 0,
-            monsterDidHit: ''
+            monsterDidHit: '',
+            
         };
 
         //Hero bind function statements
@@ -66,6 +69,7 @@ class AttackSim extends React.Component {
         this.heroNameChange = this.heroNameChange.bind(this);
         this.heroNameSubmit = this.heroNameSubmit.bind(this);
         this.heroattackroll = heroattackroll.bind(this);
+        this.heroAttackTurn = this.heroAttackTurn.bind(this);
         //monster bind function statements
         this.setmonsterstats = setmonsterstats.bind(this);
         this.SetmonsterConstAdj = SetmonsterConstAdj.bind(this);
@@ -75,8 +79,10 @@ class AttackSim extends React.Component {
         this.monsterNameChange = this.monsterNameChange.bind(this);
         this.monsterNameSubmit = this.monsterNameSubmit.bind(this);
         this.monsterattackroll = monsterattackroll.bind(this);
+        this.monsterAttackTurn = this.monsterAttackTurn.bind(this);
 
         this.rollforiniative = this.rollforiniative.bind(this);
+        
     }
 
     heroNameChange(event) {
@@ -103,19 +109,22 @@ class AttackSim extends React.Component {
         if (this.Heroinitiative < this.Monsterinitiative) {
             this.setState ({
                 heroInitiative: 'First',
-                monsterInitiative: 'Second'
+                monsterInitiative: 'Second',
+                heroAttackVisible: true
             });
-        
         } else if (this.Heroinitiative > this.Monsterinitiative) {
             this.setState ({
                 monsterInitiative: 'First',
-                heroInitiative: 'Second'
-            });
+                heroInitiative: 'Second',
+                monsterAttackVisible: true
+            }); 
         } else {
             this.setState ({
                 heroInitiative: 'ReRoll',
-                monsterInitiative: 'ReRoll'
-            })   
+                monsterInitiative: 'ReRoll',
+                heroAttackVisible: false,
+                monsterAttackVisible: false
+            });
         };
         //clears out the hit/miss comments since it is a new round.
         this.setState ({
@@ -126,14 +135,49 @@ class AttackSim extends React.Component {
         });
     }
 
+    heroAttackTurn() {
+        if (this.state.monsterHp === 'Dead'  || this.state.heroInitiative === 'Second') {
+            this.setState(state => (
+                {
+                    heroAttackVisible: !state.heroAttackVisible
+                }
+            ));
+        } else {
+            this.setState(state => (
+                {
+                    monsterAttackVisible: !state.monsterAttackVisible, 
+                    heroAttackVisible: !state.heroAttackVisible
+                }
+            ));
+        }
+    }; 
+    
+    monsterAttackTurn() {
+        if (this.state.heroHp === 'Dead' || this.state.monsterInitiative === 'Second') {
+            this.setState(state => (
+                {
+                    monsterAttackVisible: !state.monsterAttackVisible
+                }
+            ));
+        }
+        else {
+            this.setState(state => (
+                {
+                    monsterAttackVisible: !state.monsterAttackVisible, 
+                    heroAttackVisible: !state.heroAttackVisible
+                }
+            ));
+        };
+    }
+
     render() {
         return (
             <div >
-                <CenterFlexWrapDiv className=" m-0 p-0"> 
+                <CenterFlexWrapDiv className="m-0 p-0"> 
                     <Row className="w-100">
-                        <Col className=" m-1 bg-dark text-white ">
+                        <Col className="m-1 bg-dark text-white">
                             <div>
-                                <h5 className="mt-5 ml-5"><b>Hero Name: </b>
+                               <h5 className="mt-5 ml-5"><b>Hero Name: </b>
                                     <span className="text-info ml-5 h3">
                                         {this.state.heroName}
                                     </span>
@@ -190,6 +234,8 @@ class AttackSim extends React.Component {
                             RollTitle = "Hero Roll for Attack"
                             Roll = {this.state.heroRoll}
                             DidHit = {this.state.heroDidHit}
+                            NextTurn = {this.heroAttackTurn}
+                            AttackTurn = {this.state.heroAttackVisible}
                         /> 
                     </div>
                     <div className="bg-dark m-1 p-0 col" xs="3">
@@ -251,7 +297,7 @@ class AttackSim extends React.Component {
                                         <div className="p-3">
                                             <h4>Hit Points:</h4>
                                             <h4 className="text-center mt-4">
-                                                {this.state.monsterHp != "Dead" &&
+                                                {this.state.monsterHp != "Dead" && 
                                                     <span className="text-success">
                                                         {this.state.monsterHp}
                                                     </span> || 
@@ -274,6 +320,8 @@ class AttackSim extends React.Component {
                             RollTitle = "Monster Roll for Attack"
                             Roll = {this.state.monsterRoll}
                             DidHit = {this.state.monsterDidHit}
+                            NextTurn = {this.monsterAttackTurn}
+                            AttackTurn = {this.state.monsterAttackVisible}
                         />
                     </div>
                 </CenterFlexWrapDiv>

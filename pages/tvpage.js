@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, FormGroup, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
+import { Form, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
 import { TvImage, TvTitle } from './jsxstyles'
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout.js'
@@ -44,11 +44,9 @@ class Searchbar extends React.Component {
           {/*due to get initial props async function is only called on page load
             disguised a page link as a search button to call value of search for 
             the await fetch api call.*/}
-          <Button className="ml-4 p-0">
-            <Link href="/tvpage">
-              <a className="btn btn-dark">Click Submit</a>
-            </Link>
-          </Button>
+          <Link href="/tvpage">
+            <a className="btn btn-dark ml-4">Click Submit</a>
+          </Link>
         </Form>
     );
   }
@@ -57,10 +55,10 @@ class Searchbar extends React.Component {
 const TvPage = props => (
   <Layout>
     <h1 className="text-center">the below content has been imported from 
-    <NewTabLink
-      Link="https://www.tvmaze.com"
-      Title="TvMaze.com">
-        Tvmaze.com
+      <NewTabLink
+        Link="https://www.tvmaze.com"
+        Title="TvMaze.com">
+          Tvmaze.com
       </NewTabLink>
     </h1>
     <Searchbar />

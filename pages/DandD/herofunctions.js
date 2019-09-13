@@ -156,7 +156,7 @@ to monster hp and if hp reaches zero alerts that monster is dead
 */
 function heroattackroll() {
     let attackroll = (parseInt((Math.random() * 20) + 1));
-    let adjattackroll = attackroll + (parseInt(this.state.heroHitAdj)); 
+    let adjattackroll = attackroll + (this.state.heroHitAdj); 
     let critstrike = (this.state.heroDmg * 2);
     
     if (attackroll < 20 && adjattackroll >= this.state.monsterAc ) {
