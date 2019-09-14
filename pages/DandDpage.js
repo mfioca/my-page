@@ -7,9 +7,7 @@ function DandD(){
         <Layout>
             <div className="ml-5">
                 <h1>Dungeons and Dragons attack simulation</h1>
-                    <h4>Calculations are based on SE 2 rules from late 80's and early 90's.</h4>
-            </div>
-            <div className="ml-5">
+                <h4>Calculations are based on SE 2 rules from late 80's and early 90's.</h4>
                 <ol><b>Instructions:</b>
                     <li>Press the "Set Attributes" buttons for both Hero and Monster.</li>
                     <li>Press the "Roll for Initiative" button to see who attacks first.</li>

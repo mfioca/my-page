@@ -1,5 +1,5 @@
 export { setherostats, SetheroConstAdj, SetheroacAdj, 
-    SetheroDmgAdj, SetheroHitAdj, heroattackroll, 
+    SetheroDmgAdj, SetheroHitAdj, heroattackroll, heroAttackTurn 
 }
 
 //sets hero hitpoints based on constitution stat number.
@@ -177,4 +177,21 @@ function heroattackroll() {
     } else {
         this.setState ({heroDidHit: 'Miss', heroRoll: adjattackroll});
     };
+};
+
+function heroAttackTurn() {
+    if (this.state.monsterHp === 'Dead'  || this.state.heroInitiative === 'Second') {
+        this.setState(state => (
+            {
+                heroAttackVisible: !state.heroAttackVisible
+            }
+        ));
+    } else {
+        this.setState(state => (
+            {
+                monsterAttackVisible: !state.monsterAttackVisible, 
+                heroAttackVisible: !state.heroAttackVisible
+            }
+        ));
+    }
 };

@@ -1,5 +1,5 @@
 export { SetmonsterConstAdj, SetmonsterDmgAdj, SetmonsterHitAdj, 
-    SetmonsteracAdj, setmonsterstats, monsterattackroll
+    SetmonsteracAdj, setmonsterstats, monsterattackroll, monsterAttackTurn
 }
 
 //sets monster hit point adjustment based on constitution stat number.
@@ -178,3 +178,21 @@ function monsterattackroll() {
         this.setState ({monsterDidHit: 'Miss', monsterRoll: adjattackroll});
     };
 };
+
+function monsterAttackTurn() {
+    if (this.state.heroHp === 'Dead' || this.state.monsterInitiative === 'Second') {
+        this.setState(state => (
+            {
+                monsterAttackVisible: !state.monsterAttackVisible
+            }
+        ));
+    }
+    else {
+        this.setState(state => (
+            {
+                monsterAttackVisible: !state.monsterAttackVisible, 
+                heroAttackVisible: !state.heroAttackVisible
+            }
+        ));
+    }
+}

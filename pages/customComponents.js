@@ -300,6 +300,7 @@ export class AttackSection extends React.Component {
         super(props);
         this.RollResult = this.RollResult.bind(this);
         this.AttackBanner = this.AttackBanner.bind(this);
+        this.AttackButton = this.AttackButton.bind(this);
     }
     
     RollResult() {
@@ -331,7 +332,24 @@ export class AttackSection extends React.Component {
                 <h6 className="text-white text-center">(Attack Result displayed here)</h6>
             );
         }
-    }           
+    }
+    
+    AttackButton() {
+        if (this.props.AttackTurn === true) {
+            return (
+                <Button  
+                    onMouseDown={this.props.AttackRoll} 
+                    onMouseUp = {this.props.NextTurn}>
+                        {this.props.AttackRoll}
+                        {this.props.RollTitle}
+                </Button>
+            )
+        } else {
+            return (
+                <h4 className="text-white">Not your turn</h4>
+            )
+        };
+    }
 
     render() {
         return (
@@ -374,14 +392,7 @@ export class AttackSection extends React.Component {
                     </style>
                 </Row>
                 <div className="d-flex justify-content-center my-4">
-                    <Collapse isOpen={this.props.AttackTurn}>
-                    <Button  
-                    onMouseDown={this.props.AttackRoll} 
-                    onMouseUp = {this.props.NextTurn}>
-                        {this.props.AttackRoll}
-                        {this.props.RollTitle}
-                    </Button>
-                    </Collapse>
+                    {this.AttackButton()}
                 </div>
                 <div className="text-center text-white">
                     <h2>Attack Result:</h2>

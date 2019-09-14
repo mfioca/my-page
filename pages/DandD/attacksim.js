@@ -1,9 +1,9 @@
 import React from 'react';
 import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, 
-    SetheroacAdj, setherostats, heroattackroll 
+    SetheroacAdj, setherostats, heroattackroll, heroAttackTurn 
 } from './herofunctions'
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, 
-    SetmonsteracAdj, setmonsterstats, monsterattackroll 
+    SetmonsteracAdj, setmonsterstats, monsterattackroll, monsterAttackTurn
 } from './monsterfunctions'
 import { CharacterSheet, NameForm, AttackSection, CenterFlexWrapDiv } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
@@ -69,7 +69,7 @@ class AttackSim extends React.Component {
         this.heroNameChange = this.heroNameChange.bind(this);
         this.heroNameSubmit = this.heroNameSubmit.bind(this);
         this.heroattackroll = heroattackroll.bind(this);
-        this.heroAttackTurn = this.heroAttackTurn.bind(this);
+        this.heroAttackTurn = heroAttackTurn.bind(this);
         //monster bind function statements
         this.setmonsterstats = setmonsterstats.bind(this);
         this.SetmonsterConstAdj = SetmonsterConstAdj.bind(this);
@@ -79,7 +79,7 @@ class AttackSim extends React.Component {
         this.monsterNameChange = this.monsterNameChange.bind(this);
         this.monsterNameSubmit = this.monsterNameSubmit.bind(this);
         this.monsterattackroll = monsterattackroll.bind(this);
-        this.monsterAttackTurn = this.monsterAttackTurn.bind(this);
+        this.monsterAttackTurn = monsterAttackTurn.bind(this);
 
         this.rollforiniative = this.rollforiniative.bind(this);
         
@@ -133,41 +133,6 @@ class AttackSim extends React.Component {
             heroRoll: 0,
             monsterRoll: 0
         });
-    }
-
-    heroAttackTurn() {
-        if (this.state.monsterHp === 'Dead'  || this.state.heroInitiative === 'Second') {
-            this.setState(state => (
-                {
-                    heroAttackVisible: !state.heroAttackVisible
-                }
-            ));
-        } else {
-            this.setState(state => (
-                {
-                    monsterAttackVisible: !state.monsterAttackVisible, 
-                    heroAttackVisible: !state.heroAttackVisible
-                }
-            ));
-        }
-    }; 
-    
-    monsterAttackTurn() {
-        if (this.state.heroHp === 'Dead' || this.state.monsterInitiative === 'Second') {
-            this.setState(state => (
-                {
-                    monsterAttackVisible: !state.monsterAttackVisible
-                }
-            ));
-        }
-        else {
-            this.setState(state => (
-                {
-                    monsterAttackVisible: !state.monsterAttackVisible, 
-                    heroAttackVisible: !state.heroAttackVisible
-                }
-            ));
-        };
     }
 
     render() {
