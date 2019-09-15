@@ -5,18 +5,20 @@
 import React from 'react'
 import { 
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
-    Row, Col, Form, FormGroup, Label, Input, Button, Collapse, Table, Jumbotron 
+    Row, Col, Form, FormGroup, Label, Input, Button, Collapse, 
+    Table, Jumbotron 
 } from 'reactstrap'
 
-import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, HomeCardTitleStyle, 
-    DandDAvatar, thumbnail 
+import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, 
+    HomeCardTitleStyle, DandDStyle 
 } from './jsxstyles'
+
 
 /* *********************************
 *   Export styled components       * 
 ***********************************/
 
-//used in tvpage, home page, attacksim
+//used in home page, attacksim
 export function CenterFlexWrapDiv(props) {
     return (
         <div className="d-flex flex-wrap justify-content-center">
@@ -25,7 +27,7 @@ export function CenterFlexWrapDiv(props) {
     )
 }
 
-//used in tvpost
+//used in tvpost, tvpage
 export function LeftFlexWrapDiv(props) {
     return (
         <div className="d-flex flex-wrap justify-content-left">
@@ -72,11 +74,19 @@ export class HomeCard extends React.Component{
         return (
             <div>
                 <Card style={HomeCardStyle}>
-                    <CardTitle style={HomeCardTitleStyle}>{this.props.Title}</CardTitle>
-                    <CardImg top style={CardImageStyle} src={this.props.Image} alt="Card image cap" />
+                    <CardTitle style={HomeCardTitleStyle}>
+                        {this.props.Title}
+                    </CardTitle>
+                    <CardImg top 
+                        style={CardImageStyle} 
+                        src={this.props.Image} 
+                        alt="Card image cap" 
+                    />
                     <CardBody>
                         <CardSubtitle>{this.props.Subtitle}</CardSubtitle>
-                        <CardText style={{height: '80px'}}>{this.props.Description}</CardText>
+                        <CardText style={{height: '80px'}}>
+                            {this.props.Description}
+                        </CardText>
                         <Button className="w-100 p-0 m-0">
                             <NewTabLink
                                 Style="btn btn-dark w-100 p-2"
@@ -97,10 +107,16 @@ export class CustomJumbo extends React.Component {
         if (this.props.ImgUrl === "noimage") {
             return (
                 <Jumbotron>
-                <h1 className="display-3 text-center">{this.props.Title}</h1>
-                <p className={this.props.Caption1Style}>{this.props.Caption1}</p>
-                <hr className="my-2" />
-                <p className={this.props.Caption2Style}>{this.props.Caption2}</p>
+                    <h1 className="display-3 text-center">
+                        {this.props.Title}
+                    </h1>
+                    <p className={this.props.Caption1Style}>
+                        {this.props.Caption1}
+                    </p>
+                    <hr className="my-2" />
+                    <p className={this.props.Caption2Style}>
+                        {this.props.Caption2}
+                    </p>
                 </Jumbotron>
             );
         } else {
@@ -113,9 +129,12 @@ export class CustomJumbo extends React.Component {
                             style={HomeImage} alt="avatar"
                         />
                     </div>
-                    <p className={this.props.Caption1Style}>{this.props.Caption1}</p>
+                    <p className={this.props.Caption1Style}>
+                        {this.props.Caption1}
+                    </p>
                     <hr className="my-2" />
-                    <p className={this.props.Caption2Style}>{this.props.Caption2} <br />
+                    <p className={this.props.Caption2Style}>
+                        {this.props.Caption2}<br />
                         {this.props.Caption3}
                     </p>
                 </Jumbotron>
@@ -140,9 +159,11 @@ export class AboutMedia extends React.Component{
                                 />
                             </Col>
                             <Col>
-                                <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
+                                <CardTitle className="mt-5">
+                                    <h1>{this.props.Title}</h1>
+                                </CardTitle>
                                 <CardBody>
-                                        {this.props.Description}
+                                    {this.props.Description}
                                 </CardBody>
                             </Col>
                         </Row>
@@ -157,13 +178,19 @@ export class AboutMedia extends React.Component{
                     <Card className={this.props.Class}>
                         <Row>
                             <Col >
-                            <CardTitle className="mt-5"><h1>{this.props.Title}</h1></CardTitle>
+                            <CardTitle className="mt-5">
+                                <h1>{this.props.Title}</h1>
+                            </CardTitle>
                             <CardBody>
                                     {this.props.Description}
                             </CardBody>
                             </Col>
                             <Col >
-                                <CardImg style={AboutImg} src={this.props.ImgUrl} alt="Card image cap" />
+                                <CardImg 
+                                    style={AboutImg} 
+                                    src={this.props.ImgUrl} 
+                                    alt="Card image cap" 
+                                />
                             </Col>
                         </Row>
                     </Card>
@@ -235,13 +262,17 @@ export class CharacterSheet extends React.Component {
     render() {
         function DandDTableLabel(props) {
             return (
-                <td className="text-muted text-left h4">{props.children}</td>
+                <td className="text-muted text-left h4">
+                    {props.children}
+                </td>
             );
         }
 
         function DandDTableValue(props) {
             return (
-                <td className="text-white text-left h4">{props.children}</td>
+                <td className="text-white text-left h4">
+                    {props.children}
+                </td>
             );
         }
         return (
@@ -256,11 +287,11 @@ export class CharacterSheet extends React.Component {
                                 </tr>
                                 <tr>
                                     <DandDTableLabel>Constitution:</DandDTableLabel>
-                                    <DandDTableValue> {this.props.Constitution}</DandDTableValue>
+                                    <DandDTableValue>{this.props.Constitution}</DandDTableValue>
                                 </tr>
                                 <tr>
                                     <DandDTableLabel>Dexterity:</DandDTableLabel>
-                                    <DandDTableValue> {this.props.Dexterity}</DandDTableValue>
+                                    <DandDTableValue>{this.props.Dexterity}</DandDTableValue>
                                 </tr>
                                 <tr>
                                     <DandDTableLabel>Hitpoints:</DandDTableLabel>
@@ -275,14 +306,14 @@ export class CharacterSheet extends React.Component {
                                 </tr>
                                 <tr>
                                     <DandDTableLabel>Damage per Hit:</DandDTableLabel>
-                                    <DandDTableValue> {this.props.Damage}</DandDTableValue>
+                                    <DandDTableValue>{this.props.Damage}</DandDTableValue>
                                 </tr>
                             </tbody>
                         </Table>  
                     </Col>
                     <Col sm={{ size: 'auto', offset: 2 }}>
                         <div className="text-center ">
-                            <img  style={DandDAvatar} 
+                            <img  style={DandDStyle.Avatar} 
                                 src={this.props.ImgUrl} 
                                 alt="hero"
                             />
@@ -340,7 +371,6 @@ export class AttackSection extends React.Component {
                 <Button  
                     onMouseDown={this.props.AttackRoll} 
                     onMouseUp = {this.props.NextTurn}>
-                        {this.props.AttackRoll}
                         {this.props.RollTitle}
                 </Button>
             )
@@ -356,7 +386,7 @@ export class AttackSection extends React.Component {
             <div className="bg-dark">
                 <Row>
                     <Col className="my-4 mx-5 d-flex justify-content-center">
-                        <div style={thumbnail}>
+                        <div style={DandDStyle.thumbnail}>
                             <img src="../static/images/acicon.png" alt="shield"/>
                             <div>
                                 <h4 className="AC-Icon-text">
@@ -366,7 +396,7 @@ export class AttackSection extends React.Component {
                         </div>
                     </Col>
                     <Col className="my-4 mx-5 d-flex justify-content-center">
-                            <div style={thumbnail}>
+                            <div style={DandDStyle.thumbnail}>
                                 <img src="../static/images/hitadjust.png" alt="icon"/>
                                 <div>
                                     <h4 className="HitAdj-Icon-text">
@@ -462,3 +492,5 @@ export class NameForm extends React.Component {
     }
 }
 
+
+ 

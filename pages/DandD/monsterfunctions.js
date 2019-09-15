@@ -162,20 +162,40 @@ function monsterattackroll() {
         this.setState({monsterDidHit: 'Hit', monsterRoll: adjattackroll})
         //performs check to see if the hero hp after monster damange is 0 or lower
         if ((this.state.heroHp - this.state.monsterDmg) <= 0) {
-            this.setState ({heroHp: 'Dead', monsterRoll: adjattackroll})  // if yes, hero is dead
+            this.setState (
+                {
+                    heroHp: 'Dead', monsterRoll: adjattackroll  // if yes, hero is dead
+                }
+            )  
         } else {
             //if no, sets the herohp state to reflect new damage
-            this.setState ({heroHp: this.state.heroHp - this.state.monsterDmg})
+            this.setState (
+                {
+                    heroHp: this.state.heroHp - this.state.monsterDmg
+                }
+            )
         }
     } else if (attackroll >= 20) {
         this.setState({monsterDidHit: 'Hit', monsterRoll: 'Crit Strike'});
         if ((this.state.heroHp - critstrike) <= 0) {
-            this.setState ({heroHp: 'Dead', monsterRoll: 'Crit Strike'}) // if yes, monster is dead
+            this.setState (
+                {
+                    heroHp: 'Dead', monsterRoll: 'Crit Strike'  // if yes, monster is dead
+                }
+            ) 
         } else {
-            this.setState ({heroHp: this.state.heroHp - critstrike})
+            this.setState (
+                {
+                    heroHp: this.state.heroHp - critstrike
+                }
+            )
         } 
     } else {
-        this.setState ({monsterDidHit: 'Miss', monsterRoll: adjattackroll});
+        this.setState (
+            {
+                monsterDidHit: 'Miss', monsterRoll: adjattackroll
+            }
+        );
     };
 };
 

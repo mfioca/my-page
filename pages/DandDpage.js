@@ -12,8 +12,9 @@ function DandD(){
                     <li>Press the "Set Attributes" buttons for both Hero and Monster.</li>
                     <li>Press the "Roll for Initiative" button to see who attacks first.</li>
                     <li>Follow the instructions and press the "Roll for Attack" buttons.</li>
-                    <li>After each round, repeat by rolling for Initiative and continue attacking until
-                        a character dies.</li>
+                    <li>After each round, repeat by rolling for Initiative and continue 
+                        attacking until a character dies.
+                    </li>
                 </ol>
             </div>
                 <AttackSim />

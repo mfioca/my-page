@@ -3,7 +3,7 @@ import Layout2 from './tv_info/MyLayout'
 import { Card, CardImg, CardBody, CardTitle, Row, Col, Table } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
-import { TvImage, TvCast, TvTitle } from './jsxstyles'
+import { TvpageStyle } from './jsxstyles'
 import { TvPostInfoLabel, TvPostInfoValue, NewTabLink, LeftFlexWrapDiv } from './customComponents'
 import fetch from 'isomorphic-unfetch'
 
@@ -93,14 +93,14 @@ const tvPost = props => (
               <Card style={{height: '570px'}} className="m-2">
                 <CardTitle 
                   className="m-4 text-center" 
-                  style={TvTitle} >
+                  style={TvpageStyle.Title} >
                     {cast.person.name}
                 </CardTitle>
                 <CardBody>
                   <div>
                     <CardImg 
                       className="p-2" 
-                      style={TvImage} 
+                      style={TvpageStyle.Image} 
                       src={
                         cast.person.image === null && noimage ||
                         cast.character.image === null && cast.person.image.medium ||
@@ -110,7 +110,7 @@ const tvPost = props => (
                     />
                   </div>
                   <div className="text-center my-2">
-                    <h4 style={TvCast}>As: &nbsp;
+                    <h4 style={TvpageStyle.Cast}>As: &nbsp;
                       <small>{cast.character.name}</small>
                     </h4>
                   </div>

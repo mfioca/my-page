@@ -126,6 +126,7 @@ class AttackSim extends React.Component {
                 monsterAttackVisible: false
             });
         };
+
         //clears out the hit/miss comments since it is a new round.
         this.setState ({
             heroDidHit: '',
@@ -135,9 +136,9 @@ class AttackSim extends React.Component {
         });
     }
 
-    render() {
+    render() {  
         return (
-            <div >
+            <div>
                 <CenterFlexWrapDiv className="m-0 p-0"> 
                     <Row className="w-100">
                         <Col className="m-1 bg-dark text-white">

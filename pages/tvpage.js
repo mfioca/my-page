@@ -1,6 +1,6 @@
 import React from 'react'
 import { Form, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
-import { TvImage, TvTitle } from './jsxstyles'
+import { TvpageStyle } from './jsxstyles'
 import Layout from '../components/layout'
 import Layout2 from './tv_info/MyLayout.js'
 import Link from 'next/link'
@@ -70,13 +70,13 @@ const TvPage = props => (
             <Card>
               <CardTitle 
                 className="m-4 text-center" 
-                style={TvTitle}>
+                style={TvpageStyle.Title}>
                   <b><u>{show.name}</u></b>
               </CardTitle>
               <CardBody>
               <CardImg 
                 className="my-2" 
-                style={TvImage} 
+                style={TvpageStyle.Image} 
                 src={show.image ? show.image.medium : noimage} 
                 alt="image" 
               />

@@ -32,45 +32,32 @@ export const AboutImg = {
     padding: '5px'  
 };
 
-export const DandDAvatar = {
-    height: '300px',
-    width: 'auto',
-    
+export const TvpageStyle = {
+    Image: {
+        height: '300px',
+        width: 'auto'
+    },
+    Title: {
+        height: '20px',
+        width: '200px',
+        margin: 4
+    },
+    Cast: {
+        maxHeight: '20px',
+        width: '200px',
+        margin: 4,
+        wordWwrap: 'break-word',
+        maxFontSize: '1vw'
+    }
 }
 
-export const thumbnail = {
-    position: 'relative',
-    align: 'center'
-}
-
-export const TvpageSearchBar = {
-    fontSize: '14px',
-    marginLeft: '200px',
-    marginRight: 'auto',
-    textAlign: 'center',
-}
-
-export const TvImage = {
-    height: '300px',
-    width: 'auto'
-}
-
-export const TvTitle = {
-    height: '20px',
-    width: '200px',
-    margin: 4
-}
-
-export const TvCast = {
-    maxHeight: '20px',
-    width: '200px',
-    margin: 4,
-    wordWwrap: 'break-word',
-    maxFontSize: '1vw'
-}
-
-//testing an idea
-export const myStyles = {
-    Theme: "Btn-Dark",
-    w100: "w-100"
+export const DandDStyle = {
+    thumbnail: {
+        position: 'relative',
+        align: 'center'
+    },
+    Avatar: {
+        height: '300px',
+        width: 'auto',
+    }
 }
