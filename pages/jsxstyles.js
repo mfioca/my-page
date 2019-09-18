@@ -1,36 +1,38 @@
-
-
-export const HomeImage = {
-    borderRadius: '50%',
-    width: '20%',
-    height: 'auto'
-};
+/* **************** 
+*   Styles       * 
+******************/
 
 export const HomeCardStyle = {
-    width: '300px',
-    height: '400px',
-    marginRight: '50px',
-    marginLeft: '50px',
-    textAlign: 'center'
+    Card: {
+        width: '300px',
+        height: '400px',
+        marginRight: '50px',
+        marginLeft: '50px',
+        textAlign: 'center'
+    },
+    Title: {
+        marginTop: '10px',
+    }
 }
 
-export const HomeCardTitleStyle = {
-    marginTop: '10px',
-    height: '400px'
+export const ImageStyles = {
+    HomeCard: {
+        maxWidth: '150px',
+        maxHeight: '150px',
+        marginRight: 'auto',
+        marginLeft: 'auto'
+    },
+    HomeAvatar: {
+        borderRadius: '50%',
+        width: '20%',
+        height: 'auto'
+    },
+    About: {
+        width: '300px',
+        height: '300px',
+        padding: '5px'
+    },
 }
-
-export const CardImageStyle = {
-    maxWidth: '150px',
-    maxHeight: '150px',
-    marginRight: 'auto',
-    marginLeft: 'auto'
-}
-
-export const AboutImg = {
-    width: '300px',
-    height: '300px',
-    padding: '5px'  
-};
 
 export const TvpageStyle = {
     Image: {

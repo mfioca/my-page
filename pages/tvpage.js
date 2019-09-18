@@ -2,7 +2,7 @@ import React from 'react'
 import { Form, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
 import { TvpageStyle } from './jsxstyles'
 import Layout from '../components/layout'
-import Layout2 from './tv_info/MyLayout.js'
+import TvMazePage from './tv_info/TvmazeComponents.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
 import { NewTabLink, LeftFlexWrapDiv } from './customComponents'
@@ -10,7 +10,6 @@ import { NewTabLink, LeftFlexWrapDiv } from './customComponents'
 
 const noimage = '/static/images/no-img.png';
 var Search = '';
-
 
 
 class Searchbar extends React.Component {
@@ -28,26 +27,26 @@ class Searchbar extends React.Component {
 
   render() {
     return (
-        <Form inline className="justify-content-center">
-            <Label className="mr-sm-2">TV Show search by Name:</Label>
-            <Input
-              type="text"
-              value={this.state.value} 
-              onChange={this.enterSearch} 
-              //Prevent enter key submit
-              onKeyPress={event => {
-                if (event.which === 13 /* Enter */) {
-                  event.preventDefault();
-                }
-              }}
-            />
-          {/*due to get initial props async function is only called on page load
-            disguised a page link as a search button to call value of search for 
-            the await fetch api call.*/}
-          <Link href="/tvpage">
-            <a className="btn btn-dark ml-4">Click Submit</a>
-          </Link>
-        </Form>
+      <Form inline className="justify-content-center">
+        <Label className="mr-sm-2">TV Show search by Name:</Label>
+        <Input
+          type="text"
+          value={this.state.value} 
+          onChange={this.enterSearch} 
+          //Prevent enter key submit
+          onKeyPress={event => {
+            if (event.which === 13 /* Enter */) {
+              event.preventDefault();
+            }
+          }}
+        />
+        {/*due to get initial props async function is only called on page load
+          disguised a page link as a search button to call value of search for 
+          the await fetch api call.*/}
+        <Link href="/tvpage">
+          <a className="btn btn-dark ml-4">Click Submit</a>
+        </Link>
+      </Form>
     );
   }
 }
@@ -62,7 +61,7 @@ const TvPage = props => (
       </NewTabLink>
     </h1>
     <Searchbar />
-    <Layout2>
+    <TvMazePage>
       <h1>Results for: {Search}</h1>
       <LeftFlexWrapDiv>
         {props.shows.map(show => (
@@ -88,7 +87,7 @@ const TvPage = props => (
           </div>
         ))}
       </LeftFlexWrapDiv>
-    </Layout2>
+    </TvMazePage>
   </Layout>
 );
 

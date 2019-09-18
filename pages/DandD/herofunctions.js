@@ -160,7 +160,11 @@ function heroattackroll() {
     let critstrike = (this.state.heroDmg * 2);
     
     if (attackroll < 20 && adjattackroll >= this.state.monsterAc ) {
-        this.setState({heroDidHit: 'Hit', heroRoll: adjattackroll});
+        this.setState(
+            {
+                heroDidHit: 'Hit', heroRoll: adjattackroll
+            }
+        );
         //performs check to see if the monster hp after hero damange is 0 or lower
         if ((this.state.monsterHp - this.state.heroDmg) <= 0) {
             this.setState (
@@ -176,7 +180,11 @@ function heroattackroll() {
             )
         }
     } else if (attackroll === 20) {
-        this.setState({heroDidHit: 'Hit', heroRoll: 'Crit Strike'});
+        this.setState(
+            {
+                heroDidHit: 'Hit', heroRoll: 'Crit Strike'
+            }
+        );
         if ((this.state.monsterHp - critstrike) <= 0) {
             this.setState (
                 {

@@ -1,5 +1,5 @@
 import Layout from '../components/layout'
-import Layout2 from './tv_info/MyLayout'
+import TvMazePage from './tv_info/TvmazeComponents.js'
 import { Card, CardImg, CardBody, CardTitle, Row, Col, Table } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
@@ -17,7 +17,7 @@ const tvPost = props => (
         TVmaze.com
       </a>
     </h1>
-    <Layout2>
+    <TvMazePage>
       <div className="h3 m-3">
         <Row>
           <Col>
@@ -212,7 +212,7 @@ const tvPost = props => (
           />
         </div>
       </div>
-    </Layout2>
+    </TvMazePage>
   </Layout>
 );
 

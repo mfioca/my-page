@@ -103,16 +103,16 @@ class AttackSim extends React.Component {
 
     //initiative shows what character attacks first
     rollforiniative() {
-        this.Heroinitiative = Math.floor((Math.random() * 10) + 1);
-        this.Monsterinitiative = Math.floor((Math.random() * 10) + 1);
+        const heroinit = Math.floor((Math.random() * 10) + 1);
+        const monsterinit = Math.floor((Math.random() * 10) + 1);
         
-        if (this.Heroinitiative < this.Monsterinitiative) {
+        if (heroinit < monsterinit) {
             this.setState ({
                 heroInitiative: 'First',
                 monsterInitiative: 'Second',
                 heroAttackVisible: true
             });
-        } else if (this.Heroinitiative > this.Monsterinitiative) {
+        } else if (heroinit > monsterinit) {
             this.setState ({
                 monsterInitiative: 'First',
                 heroInitiative: 'Second',
@@ -160,11 +160,11 @@ class AttackSim extends React.Component {
                             <div className="text-center m-3">
                                 <Button onClick={this.setherostats}>Set Attrubutes</Button>
                             </div>
-                                <NameForm
-                                    value = {this.state.value}
-                                    NameChange = {this.heroNameChange}
-                                    NameSubmit = {this.heroNameSubmit}
-                                />
+                            <NameForm
+                                value = {this.state.value}
+                                NameChange = {this.heroNameChange}
+                                NameSubmit = {this.heroNameSubmit}
+                            />
                         </Col>
                         <Col className="m-1  bg-dark text-white">
                             <h5 className="mt-5 ml-5"><b>Monster Name: </b>
@@ -183,11 +183,11 @@ class AttackSim extends React.Component {
                             <div className="text-center m-3">
                                 <Button onClick={this.setmonsterstats}>Set Attrubutes</Button>
                             </div>
-                                <NameForm 
-                                    value = {this.state.value}
-                                    NameChange = {this.monsterNameChange}
-                                    NameSubmit = {this.monsterNameSubmit}
-                                />
+                            <NameForm 
+                                value = {this.state.value}
+                                NameChange = {this.monsterNameChange}
+                                NameSubmit = {this.monsterNameSubmit}
+                            />
                         </Col>
                     </Row>
                 </CenterFlexWrapDiv>

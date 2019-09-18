@@ -9,8 +9,7 @@ import {
     Table, Jumbotron 
 } from 'reactstrap'
 
-import { AboutImg, CardImageStyle, HomeImage, HomeCardStyle, 
-    HomeCardTitleStyle, DandDStyle 
+import { HomeCardStyle, DandDStyle, ImageStyles
 } from './jsxstyles'
 
 
@@ -73,12 +72,12 @@ export class HomeCard extends React.Component{
     render() {
         return (
             <div>
-                <Card style={HomeCardStyle}>
-                    <CardTitle style={HomeCardTitleStyle}>
+                <Card style={HomeCardStyle.Card}>
+                    <CardTitle style={HomeCardStyle.Title}>
                         {this.props.Title}
                     </CardTitle>
                     <CardImg top 
-                        style={CardImageStyle} 
+                        style={ImageStyles.HomeCard} 
                         src={this.props.Image} 
                         alt="Card image cap" 
                     />
@@ -126,7 +125,7 @@ export class CustomJumbo extends React.Component {
                     <div className="container-fluid text-center">
                         <img 
                             src="../static/images/avatar.jpg" 
-                            style={HomeImage} alt="avatar"
+                            style={ImageStyles.HomeAvatar} alt="avatar"
                         />
                     </div>
                     <p className={this.props.Caption1Style}>
@@ -153,7 +152,7 @@ export class AboutMedia extends React.Component{
                         <Row>
                             <Col >
                                 <CardImg 
-                                    style={AboutImg} 
+                                    style={ImageStyles.About} 
                                     src={this.props.ImgUrl} 
                                     alt="Card image cap" 
                                 />
@@ -187,7 +186,7 @@ export class AboutMedia extends React.Component{
                             </Col>
                             <Col >
                                 <CardImg 
-                                    style={AboutImg} 
+                                    style={ImageStyles.About} 
                                     src={this.props.ImgUrl} 
                                     alt="Card image cap" 
                                 />

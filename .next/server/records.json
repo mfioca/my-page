@@ -9,15 +9,14 @@
       "multi private-next-pages/providerData.js": 5,
       "multi private-next-pages/tvpage.js": 6,
       "multi private-next-pages/tvpost.js": 7,
-      "multi private-next-pages/DandD/herofunctions.js": 8,
-      "multi private-next-pages/DandD/monsterfunctions.js": 9,
-      "multi private-next-pages/DandD/attacksim.js": 10,
+      "multi private-next-pages/DandD/attacksim.js": 8,
+      "multi private-next-pages/DandD/herofunctions.js": 9,
+      "multi private-next-pages/DandD/monsterfunctions.js": 10,
       "multi private-next-pages/provider_data/providerImport.js": 11,
-      "multi private-next-pages/tv_info/Header.js": 12,
-      "multi private-next-pages/tv_info/MyLayout.js": 13,
-      "multi next/dist/pages/_app": 14,
-      "multi next/dist/pages/_error": 15,
-      "multi next/dist/pages/_document": 16
+      "multi private-next-pages/tv_info/TvmazeComponents.js": 12,
+      "multi next/dist/pages/_app": 13,
+      "multi next/dist/pages/_error": 14,
+      "multi next/dist/pages/_document": 15
     },
     "usedIds": {
       "0": 0,
@@ -35,8 +34,7 @@
       "12": 12,
       "13": 13,
       "14": 14,
-      "15": 15,
-      "16": 16
+      "15": 15
     }
   },
   "chunks": {

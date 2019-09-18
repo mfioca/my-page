@@ -7,7 +7,6 @@ import ProviderList from './provider_data/providerImport.js'
 
 var data = require('./provider_data/provider.json');
 
-
 function Providerinfo() {
     return (
         <div >
@@ -285,8 +284,6 @@ function Providerinfo() {
 }
 
 
-
-
 function ProviderData() {
     return (
         <Layout>
@@ -305,9 +302,10 @@ function ProviderData() {
                 <Col xs="10" className="mb-3" >
                     <ProviderList />
                 </Col>
-            </Row>
+            </Row>     
         </Layout>
     ); 
 }
+
 
 export default ProviderData;
