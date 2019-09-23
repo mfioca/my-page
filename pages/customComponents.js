@@ -274,6 +274,7 @@ export class CharacterSheet extends React.Component {
                 </td>
             );
         }
+        
         return (
             <div >
                 <Row >
@@ -490,6 +491,3 @@ export class NameForm extends React.Component {
         );
     }
 }
-
-
- 

@@ -1,8 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { Row, Col, Table } from 'reactstrap'
+import { Row, Col, Table, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
 import { CustomJumbo, DataFilter } from './customComponents'
 import ProviderList from './provider_data/providerImport.js'
+import Example from './provider_data/prividerCompliance.js'
+import classnames from 'classnames';
 
 
 var data = require('./provider_data/provider.json');
@@ -284,27 +286,80 @@ function Providerinfo() {
 }
 
 
-function ProviderData() {
-    return (
-        <Layout>
-            <CustomJumbo
-                Title="Provider List"
-                ImgUrl="noimage"
-                Caption1Style='lead text-center'
-                Caption1="this is data imported from a local json file. It will recreate a tracking
-                    spreadsheet I created at one of my jobs."
-                Caption2Style='text-center'
-                Caption2="I used react-table dependency to build the data table. Altering formatting
-                    to match my spreadsheet."
-            />
-            <Providerinfo />
-            <Row className="justify-content-center">
-                <Col xs="10" className="mb-3" >
-                    <ProviderList />
-                </Col>
-            </Row>     
-        </Layout>
-    ); 
+class ProviderData extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            activeTab: '1'
+        };
+    }
+    
+    toggle(tab) {
+        if (this.state.activeTab !== tab) {
+            this.setState({
+            activeTab: tab
+            });
+        }
+    }
+
+    render() {
+        return (
+            <Layout>
+                <CustomJumbo
+                    Title="Provider List"
+                    ImgUrl="noimage"
+                    Caption1Style='lead text-center'
+                    Caption1="this is data imported from local json files. It will recreate tracking
+                        spreadsheets I created at one of my previous jobs. Information displayed has
+                        been randomly generated."
+                    Caption2Style='text-center'
+                    Caption2="I used react-table dependency to build the data table. Altering formatting
+                        to match my spreadsheet."
+                />
+                <Nav tabs>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '1' })}
+                            onClick={() => { this.toggle('1'); }} style={{cursor: "pointer"}}
+                            >
+                                Network
+                        </NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink
+                            className={classnames({ active: this.state.activeTab === '2' })}
+                            onClick={() => { this.toggle('2'); }} style={{cursor: "pointer"}}
+                            >
+                            Compliance
+                        </NavLink>
+                </NavItem>
+                </Nav>
+                <TabContent activeTab={this.state.activeTab}>
+                    <TabPane tabId="1">
+                        <Providerinfo />
+                        <Row className="justify-content-center">
+                            <Col xs="10" className="mb-3" >
+                                <ProviderList />
+                            </Col>
+                        </Row>
+                    </TabPane>
+                    <TabPane tabId="2">
+                        <h5 className="text-center m-3">
+                            This page under construction.  
+                        </h5>
+                        <p className="text-center m-3">
+                            All information has been randomly generated from a JSON 
+                            Generator tool found online. This includes Names, emails, 
+                            phone numbers, addresses and dates.
+                        </p>
+                        <Example />
+                    </TabPane>
+                </TabContent>
+            </Layout>
+        );
+    }
 }
 
 
