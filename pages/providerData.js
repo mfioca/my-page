@@ -292,7 +292,7 @@ class ProviderData extends React.Component {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            activeTab: '1'
+            activeTab: '2'
         };
     }
     
@@ -351,7 +351,7 @@ class ProviderData extends React.Component {
                         </h5>
                         <p className="text-center m-3">
                             All information has been randomly generated from a JSON 
-                            Generator tool found online. This includes Names, emails, 
+                            Generator tool found online. This includes names, emails, 
                             phone numbers, addresses and dates.
                         </p>
                         <Example />
