@@ -254,7 +254,27 @@ export class DataFilter extends React.Component {
             <span>{Data.filter(Data => Data[Fone] === Vone && Data[Ftwo] === Vtwo).length}</span>
         );
     }
-} 
+}
+
+//used in providerCompliance
+export class DateCheck extends React.Component {
+    render() {
+        var date = this.props.Date;
+        if (date < "2019-09-22") {
+            return (
+                <span className="bg-danger text-white">{date}</span>
+            )
+        } else if (date < "2019-10-22" && date > "2019-09-22") {
+            return (
+                <span className="bg-warning text-white">{date}</span>
+            )
+        } else {
+            return (
+                <span>{date}</span>
+            );
+        }
+    }
+}
 
 //D and D application
 export class CharacterSheet extends React.Component {
