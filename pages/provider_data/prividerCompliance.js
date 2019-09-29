@@ -57,7 +57,7 @@ class ProviderCompliance extends React.Component {
         this.state = {
             dropdownOpen: false,
             value: 'ACCEL',
-            activeTab: '1'
+            activeTab: '2'
         };
         this.selectTab = this.selectTab.bind(this);
         this.selectProvider = this.selectProvider.bind(this);
@@ -158,34 +158,33 @@ class ProviderCompliance extends React.Component {
                                 <h2 className="my-5">Drivers:</h2>
                                 {tp.drivers.map(dr => (
                                     <div key={dr.id}>
-                                        <Row xs="auto" className="p-0">
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2">
+                                        <Row className="p-0 bg-secondary text-white rounded-lg">
+                                            <Col className=" h-25 text-center mx-5 mt-2">
                                                 <h3>{dr.name}</h3>
-                                            </div>
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2 pt-2">
+                                            </Col>
+                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
                                                 <p>License State: {dr.license.state}</p>
-                                            </div>
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2 pt-2">
+                                            </Col>
+                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
                                                 <p>License Exp: &nbsp;
                                                     <DateCheck Date={dr.license.exp} />
                                                 </p>
-                                            </div>
+                                            </Col>
                                         </Row>
-                                        <Row className="ml-5">
+                                        <Row className="ml-5 my-4">
                                             <Col className="justify-content-center">
-                                                <p>Training:</p>
                                                 <Table bordered className="w-75 shadow-sm">
                                                     <thead>
                                                         <tr className="bg-light">
-                                                            <th>Type:</th>
-                                                            <th>Company:</th>
+                                                            <th>Training</th>
+                                                            <th>Company</th>
                                                             <th>Exp date</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
                                                         {dr.training.map(tr => (
                                                             <tr key={tr.type}>
-                                                                <td>Type: {tr.type}: </td>
+                                                                <td>{tr.type}</td>
                                                                 <td>{tr.company}</td>
                                                                 <td>
                                                                     <DateCheck Date ={tr.end} />  
@@ -196,11 +195,10 @@ class ProviderCompliance extends React.Component {
                                                 </Table>
                                             </Col>
                                             <Col >
-                                                <p>Screening:</p>
                                                 <Table bordered className="w-75 shadow-sm">
                                                     <thead>
                                                         <tr className="bg-light">
-                                                            <th>Type:</th>
+                                                            <th>Screening</th>
                                                             <th>Exp date</th>
                                                         </tr>
                                                     </thead>
@@ -224,19 +222,19 @@ class ProviderCompliance extends React.Component {
                                 <h2 className="my-5">Vehicles</h2>
                                 {tp.vehicles.map(vehicle => (
                                     <div>
-                                        <Row xs="auto" className="p-0" key={vehicle.id}>
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2">
+                                        <Row className="p-0 bg-secondary text-white rounded-lg" key={vehicle.id}>
+                                            <Col  className=" h-25 text-center mt-2">
                                                 <h3>Number: {vehicle.number}</h3>
-                                            </div>
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2 pt-2">
+                                            </Col>
+                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
                                                 <p>Vehicle brand: {vehicle.brand}</p>
-                                            </div>
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2 pt-2">
+                                            </Col>
+                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
                                                 <p>Vehicle type: {vehicle.type}</p>
-                                            </div>
-                                            <div className="d-inline-block h-25 text-center mx-5 mt-2 pt-2">
+                                            </Col>
+                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
                                                 <p>Year: {vehicle.year}</p>
-                                            </div>
+                                            </Col>
                                         </Row>
                                         <Row className="justify-content-center">
                                             <Col sm="12" md={{ size: 3, offset: 1 }}>

@@ -291,6 +291,7 @@ export function ComplianceTable() {
     const providers = tpdata.filter(tpdata => tpdata._id).length;
     const drivers = drdata.filter(drdata => drdata.id).length;
     const vehicles = vehdata.filter(vehdata => vehdata.id).length;
+    var reportdate = "2019-09-22";
 
     return (
         <div>
@@ -309,7 +310,7 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired GL policies</td>
                             <td>
-                                {insdata.filter(insdata => insdata.general.end < "2019-09-22").length}
+                                {insdata.filter(insdata => insdata.general.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -317,7 +318,7 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (insdata.filter(insdata => insdata.general.end < "2019-09-22").length) /
+                                    (insdata.filter(insdata => insdata.general.end < reportdate).length) /
                                     providers * 100
                                 ) + '%'
                             }
@@ -326,7 +327,7 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired Vehicle policies</td>
                             <td>
-                                {insdata.filter(insdata => insdata.vehicle.end < "2019-09-22").length}
+                                {insdata.filter(insdata => insdata.vehicle.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -334,7 +335,7 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (insdata.filter(insdata => insdata.vehicle.end < "2019-09-22").length) /
+                                    (insdata.filter(insdata => insdata.vehicle.end < reportdate).length) /
                                     providers * 100
                                 ) + '%'
                             }
@@ -343,7 +344,7 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired Workers Comp policies</td>
                             <td>
-                                {insdata.filter(insdata => insdata.workerscomp.end < "2019-09-22").length}
+                                {insdata.filter(insdata => insdata.workerscomp.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -351,7 +352,7 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (insdata.filter(insdata => insdata.workerscomp.end < "2019-09-22").length) /
+                                    (insdata.filter(insdata => insdata.workerscomp.end < reportdate).length) /
                                     providers * 100
                                 ) + '%'
                             }
@@ -367,7 +368,7 @@ export function ComplianceTable() {
                         <tr>
                             <td className="text-right">Non-Compliant Registrations</td>
                             <td>
-                                {vehdata.filter(vehdata => vehdata.regexp < "2019-09-22").length}
+                                {vehdata.filter(vehdata => vehdata.regexp < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -376,7 +377,7 @@ export function ComplianceTable() {
                             {
                                 parseFloat (
                                     (
-                                        vehdata.filter(vehdata => vehdata.inspection.end < "2019-09-22").length
+                                        vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length
                                     ) / (vehicles)
                                 ).toFixed (2) + '%'
                             }
@@ -385,7 +386,7 @@ export function ComplianceTable() {
                         <tr>
                             <td className="text-right">Non-Compliant Inspections</td>
                             <td>
-                                {vehdata.filter(vehdata => vehdata.inspection.end < "2019-09-22").length}
+                                {vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -394,7 +395,7 @@ export function ComplianceTable() {
                             {
                                 parseFloat (
                                     (
-                                        vehdata.filter(vehdata => vehdata.inspection.end < "2019-09-22").length
+                                        vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length
                                     ) / (vehicles)
                                 ).toFixed (2) + '%'
                             }
@@ -403,7 +404,10 @@ export function ComplianceTable() {
                         <tr>
                             <td>Number of non-compliant Vehicles</td>
                             <td>
-                            {vehdata.filter(vehdata => vehdata.regexp < "2019-09-22" || vehdata.inspection.end < "2019-09-22").length}
+                            {vehdata.filter(
+                                vehdata => vehdata.regexp < reportdate || 
+                                vehdata.inspection.end < reportdate
+                                ).length}
                             </td>
                         </tr>
                         <tr>
@@ -411,8 +415,10 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (vehdata.filter(vehdata => vehdata.regexp < "2019-09-22" || vehdata.inspection.end < "2019-09-22").length) /
-                                    vehicles * 100
+                                    (
+                                        vehdata.filter(vehdata => vehdata.regexp < reportdate || 
+                                        vehdata.inspection.end < reportdate).length
+                                    ) / vehicles * 100
                                 ) + '%'
                             }
                             </td>
@@ -439,13 +445,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>License</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.license.exp < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.license.exp < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.license.exp < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.license.exp < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -454,13 +460,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>Drug Screen</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.drugscreen.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.drugscreen.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.drugscreen.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.drugscreen.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -469,13 +475,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>Background Check</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.background.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.background.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.background.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.background.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -484,13 +490,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>MVR</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.mvr.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.mvr.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.mvr.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.mvr.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -499,13 +505,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>First Aid</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.firstaid.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.firstaid.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.firstaid.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.firstaid.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -514,13 +520,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>CPR</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.cpr.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.cpr.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.cpr.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.cpr.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -529,13 +535,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>Defensive Driving</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.defdriv.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.defdriv.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.defdriv.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.defdriv.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -544,13 +550,13 @@ export function ComplianceTable() {
                             <tr>
                                 <td>Passenger Sensitivity (PASS)</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.pass.end < "2019-09-22").length}
+                                    {drdata.filter(drdata => drdata.pass.end < reportdate).length}
                                 </td>
                                 <td>
                                 {
                                     parseFloat (
                                         (
-                                            drdata.filter(drdata => drdata.pass.end < "2019-09-22").length
+                                            drdata.filter(drdata => drdata.pass.end < reportdate).length
                                         ) / (drivers)
                                     ).toFixed (2) + '%'
                                 }
@@ -559,14 +565,14 @@ export function ComplianceTable() {
                             <tr>
                             <td colSpan="2" className="text-right">Number of Non-Compliant Drivers</td>
                             <td>
-                            {drdata.filter(drdata => drdata.license.exp < "2019-09-22" ||
-                                drdata.firstaid.end < "2019-09-22" ||
-                                drdata.cpr.end < "2019-09-22" ||
-                                drdata.defdriv.end < "2019-09-22" ||
-                                drdata.pass.end < "2019-09-22" ||
-                                drdata.drugscreen.end < "2019-09-22" ||
-                                drdata.background.end < "2019-09-22" ||
-                                drdata.mvr.end < "2019-09-22"
+                            {drdata.filter(drdata => drdata.license.exp < reportdate ||
+                                drdata.firstaid.end < reportdate ||
+                                drdata.cpr.end < reportdate ||
+                                drdata.defdriv.end < reportdate ||
+                                drdata.pass.end < reportdate ||
+                                drdata.drugscreen.end < reportdate ||
+                                drdata.background.end < reportdate ||
+                                drdata.mvr.end < reportdate
                                 ).length
                             }
                             </td>
@@ -576,14 +582,14 @@ export function ComplianceTable() {
                             <td>
                             {Math.floor(
                                 (
-                                    (drdata.filter(drdata => drdata.license.exp < "2019-09-22" ||
-                                        drdata.firstaid.end < "2019-09-22" ||
-                                        drdata.cpr.end < "2019-09-22" ||
-                                        drdata.defdriv.end < "2019-09-22" ||
-                                        drdata.pass.end < "2019-09-22" ||
-                                        drdata.drugscreen.end < "2019-09-22" ||
-                                        drdata.background.end < "2019-09-22" ||
-                                        drdata.mvr.end < "2019-09-22"
+                                    (drdata.filter(drdata => drdata.license.exp < reportdate ||
+                                        drdata.firstaid.end < reportdate ||
+                                        drdata.cpr.end < reportdate ||
+                                        drdata.defdriv.end < reportdate ||
+                                        drdata.pass.end < reportdate ||
+                                        drdata.drugscreen.end < reportdate ||
+                                        drdata.background.end < reportdate ||
+                                        drdata.mvr.end < reportdate
                                     ).length) / drivers
                                 ) * 100) + '%'
                             }
