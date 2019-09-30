@@ -14,7 +14,7 @@ export function Networkinfo() {
     return (
         <div >
             <Row>
-                <Col className="px-5">
+                <Col className="px-5 pt-3">
                     <h4 className="text-center p-2"><b><u>Provider Totals</u></b></h4> 
                     <Table striped bordered size="sm" className="shadow-sm">
                         <tbody>
@@ -138,7 +138,7 @@ export function Networkinfo() {
                         </style> 
                     </Table>
                 </Col>
-                <Col className="px-5">
+                <Col className="px-5 pt-3">
                     <h4 className="text-center p-2"><b><u>Level of Service Totals</u></b></h4>
                     <Table striped bordered size="sm" className="shadow-sm">
                         <tbody>
@@ -295,7 +295,7 @@ export function ComplianceTable() {
 
     return (
         <div>
-            <h2 className="text-center">Compliance Summary</h2>
+            <h2 className="text-center my-2">Compliance Summary</h2>
             <Row>
                 <Col>
                 <Table striped bordered size="sm" className="shadow-sm">

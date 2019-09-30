@@ -3,8 +3,9 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem,
     TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Table 
 } from 'reactstrap'
 import classnames from 'classnames'
-import { DateCheck } from '../customComponents'
+import { DateCheck, TplistHeaderRow } from '../customComponents'
 import { ComplianceTable } from './providerStats'
+import { TplistHeader } from '../jsxstyles'
 
 var tpdata = require('./Compliance.json');
 
@@ -23,6 +24,8 @@ function ProviderDropdown() {
                             ...data.styles,
                             overflow: 'auto',
                             maxHeight: 200  ,
+                            textAlign: 'center',
+                            marginLeft: '-15px'
                             },
                         };
                     },
@@ -57,7 +60,7 @@ class ProviderCompliance extends React.Component {
         this.state = {
             dropdownOpen: false,
             value: 'ACCEL',
-            activeTab: '2'
+            activeTab: '1'
         };
         this.selectTab = this.selectTab.bind(this);
         this.selectProvider = this.selectProvider.bind(this);
@@ -87,12 +90,13 @@ class ProviderCompliance extends React.Component {
 
         return (
             <div>
-                <h1 className="mt-5 text-center">Provider Compliance Report</h1>
-                <h3 className="mt-2 mb-5 text-center">Report Date: 9/22/2019</h3>
+                <h1 className="mt-3 text-center">Provider Compliance Report</h1>
+                <h3 className="my-3 text-center">Report Date: 9/22/2019</h3>
                 <ComplianceTable />
+                <h1 className="mt-3 text-center">Compliance by Provider</h1>
                 <Dropdown isOpen={this.state.dropdownOpen} 
                     toggle={this.clickDropdown}
-                    className="ml-5"
+                    className="d-flex ml-5 my-5 justify-content-center"
                 >
                     <DropdownToggle caret>
                         Provider List
@@ -134,8 +138,8 @@ class ProviderCompliance extends React.Component {
                         }
                     </Row>
                     </div>
-                    <div>
-                        <Nav tabs className="mt-3">
+                    <div className="mt-3">
+                        <Nav tabs>
                             <NavItem>
                                 <NavLink
                                     className={classnames({ active: this.state.activeTab === '1' })}
@@ -155,24 +159,24 @@ class ProviderCompliance extends React.Component {
                         </Nav>
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
-                                <h2 className="my-5">Drivers:</h2>
+                                <h2 className="my-3">Drivers:</h2>
                                 {tp.drivers.map(dr => (
                                     <div key={dr.id}>
-                                        <Row className="p-0 bg-secondary text-white rounded-lg">
-                                            <Col className=" h-25 text-center mx-5 mt-2">
+                                        <TplistHeaderRow>
+                                            <Col style={TplistHeader.Title}>
                                                 <h3>{dr.name}</h3>
                                             </Col>
-                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
-                                                <p>License State: {dr.license.state}</p>
+                                            <Col style={TplistHeader.Title}>
+                                                <p style={TplistHeader.Value}>License State: {dr.license.state}</p>
                                             </Col>
-                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
-                                                <p>License Exp: &nbsp;
+                                            <Col style={TplistHeader.Title}>
+                                                <p style={TplistHeader.Value}>License Exp: &nbsp;
                                                     <DateCheck Date={dr.license.exp} />
                                                 </p>
                                             </Col>
-                                        </Row>
+                                        </TplistHeaderRow>
                                         <Row className="ml-5 my-4">
-                                            <Col className="justify-content-center">
+                                            <Col>
                                                 <Table bordered className="w-75 shadow-sm">
                                                     <thead>
                                                         <tr className="bg-light">
@@ -219,32 +223,32 @@ class ProviderCompliance extends React.Component {
                                 ))}
                             </TabPane>
                             <TabPane tabId="2">
-                                <h2 className="my-5">Vehicles</h2>
+                                <h2 className="my-3">Vehicles:</h2>
                                 {tp.vehicles.map(vehicle => (
-                                    <div>
-                                        <Row className="p-0 bg-secondary text-white rounded-lg" key={vehicle.id}>
-                                            <Col  className=" h-25 text-center mt-2">
+                                    <div key={vehicle.id}>
+                                        <TplistHeaderRow>
+                                            <Col style={TplistHeader.Title}>
                                                 <h3>Number: {vehicle.number}</h3>
                                             </Col>
-                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
-                                                <p>Vehicle brand: {vehicle.brand}</p>
+                                            <Col style={TplistHeader.Title}>
+                                                <p style={TplistHeader.Value}>Vehicle brand: {vehicle.brand}</p>
                                             </Col>
-                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
-                                                <p>Vehicle type: {vehicle.type}</p>
+                                            <Col style={TplistHeader.Title}>
+                                                <p style={TplistHeader.Value}>Vehicle type: {vehicle.type}</p>
                                             </Col>
-                                            <Col className=" h-25 text-center mx-5 mt-2 pt-2">
-                                                <p>Year: {vehicle.year}</p>
+                                            <Col style={TplistHeader.Title}>
+                                                <p style={TplistHeader.Value}>Year: {vehicle.year}</p>
                                             </Col>
-                                        </Row>
-                                        <Row className="justify-content-center">
-                                            <Col sm="12" md={{ size: 3, offset: 1 }}>
-                                            <div className="d-inline-block h-25 m-3 ">
+                                        </TplistHeaderRow>
+                                        <Row className="ml-5 my-2">
+                                            <Col>
+                                            <div className="d-inline-block h-25 m-3">
                                                 <h4>Registration: <small>{vehicle.reg}</small></h4>
                                                 <p>Exp date: <DateCheck Date={vehicle.regexp} /></p>
                                             </div>
                                             </Col>
-                                            <Col sm="12" md={{ size: 3, offset: 2 }}>
-                                            <div className="d-inline-block h-25 m-3 ">
+                                            <Col >
+                                            <div className="d-inline-block h-25 m-3">
                                                 <h4>Inspection:</h4>
                                                 <p>Exp date: <DateCheck Date={vehicle.inspection.end} /></p>
                                             </div>

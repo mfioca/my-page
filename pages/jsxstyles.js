@@ -63,3 +63,13 @@ export const DandDStyle = {
         width: 'auto',
     }
 }
+
+export const TplistHeader = {
+    Title: {
+        textAlign: 'Center',
+        marginTop: '10px'
+    },
+    Value: {
+        paddingTop: '10px'
+    }
+}

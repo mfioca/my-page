@@ -17,6 +17,18 @@ import { HomeCardStyle, DandDStyle, ImageStyles
 *   Export styled components       * 
 ***********************************/
 
+export function NewTabLink(props){
+    return (
+        <a className={props.Style}
+            href={props.Link}
+            target="_blank" 
+            rel="noopener noreferrer"
+            title={props.Title}>
+                {props.children}
+        </a>
+    );
+}
+
 //used in home page, attacksim
 export function CenterFlexWrapDiv(props) {
     return (
@@ -43,24 +55,21 @@ export function TvPostInfoLabel(props) {
     );
 }
 
-export function NewTabLink(props){
-    return (
-        <a className={props.Style}
-            href={props.Link}
-            target="_blank" 
-            rel="noopener noreferrer"
-            title={props.Title}>
-                {props.children}
-        </a>
-    );
-}
-
 export function TvPostInfoValue(props){
     return (
         <td className="text-left m-0 p-2">
             <small>{props.children}</small>
         </td>
     );
+}
+
+//used in provider compliance
+export function TplistHeaderRow (props) {
+    return (
+        <Row className="p-0 bg-secondary text-white rounded-lg">
+            {props.children}
+        </Row>
+    )
 }
 
 /* *********************** 

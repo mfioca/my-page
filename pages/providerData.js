@@ -14,7 +14,7 @@ class ProviderData extends React.Component {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            activeTab: '2'
+            activeTab: '1'
         };
     }
     
@@ -34,11 +34,10 @@ class ProviderData extends React.Component {
                     ImgUrl="noimage"
                     Caption1Style='lead text-center'
                     Caption1="this is data imported from local json files. It will recreate tracking
-                        spreadsheets I created at one of my previous jobs. Information displayed has
-                        been randomly generated."
+                        spreadsheets I created at one of my previous jobs."
                     Caption2Style='text-center'
-                    Caption2="I used react-table dependency to build the data table. Altering formatting
-                        to match my spreadsheet."
+                    Caption2="All information has been randomly generated from a JSON Generator tool 
+                    found online. This includes names, emails, phone numbers, addresses and dates."
                 />
                 <Nav tabs>
                     <NavItem>
@@ -60,6 +59,8 @@ class ProviderData extends React.Component {
                 </Nav>
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
+                        <h1 className="mt-5 text-center">Network Report</h1>
+                        <h3 className="mt-2 mb-5 text-center">Report Date: 9/22/2019</h3>
                         <Networkinfo />
                         <Row className="justify-content-center">
                             <Col xs="10" className="mb-3" >
@@ -68,14 +69,6 @@ class ProviderData extends React.Component {
                         </Row>
                     </TabPane>
                     <TabPane tabId="2">
-                        <h5 className="text-center m-3">
-                            This page under construction.  
-                        </h5>
-                        <p className="text-center m-3">
-                            All information has been randomly generated from a JSON 
-                            Generator tool found online. This includes names, emails, 
-                            phone numbers, addresses and dates.
-                        </p>
                         <ProviderCompliance />
                     </TabPane>
                 </TabContent>
