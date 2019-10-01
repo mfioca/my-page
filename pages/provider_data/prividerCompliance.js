@@ -7,7 +7,9 @@ import { DateCheck, TplistHeaderRow } from '../customComponents'
 import { ComplianceTable } from './providerStats'
 import { TplistHeader } from '../jsxstyles'
 
-var tpdata = require('./Compliance.json');
+var tpdata = require('./company.json');
+var vehdata = require('./vehicle.json');
+var drdata = require('./driver.json');
 
 
 function ProviderDropdown() {
@@ -32,13 +34,7 @@ function ProviderDropdown() {
                 },
             }}
         >
-            {tpdata.sort((a, b) => {
-                    const One = a.company.toUpperCase();
-                    const Two = b.company.toUpperCase();
-                
-                    return (One < Two) ? -1 : (One > Two) ? 1 : 0;
-                })
-                .map(TP => (
+            {tpdata.map(TP => (
                     <DropdownItem 
                         className="Btn" 
                         key={TP.company} 
@@ -87,6 +83,8 @@ class ProviderCompliance extends React.Component {
     render() {
         const tpfilter = tpdata.filter(tpdata => tpdata.company === this.state.value);
         const tp = tpfilter[0];
+        const drfilter = drdata.filter(drdata => drdata.company === this.state.value);
+        const vehfilter = vehdata.filter(vehdata => vehdata.company === this.state.value);
 
         return (
             <div>
@@ -112,31 +110,39 @@ class ProviderCompliance extends React.Component {
                 </div>
                 <div className="mt-5 mx-5">
                     <div className="bg-light shadow">
-                    <p className="pt-4 pl-4">Provider: {this.state.value}</p>
-                    <Row className="ml-3">
-                        <Col>
-                            <p className="ml-2">Address:</p>
-                            <p className="ml-3 my-0">{tp.address1}</p>
-                            <p className="ml-3 my-0">{tp.address2}</p>
-                        </Col>
-                        <Col className="mr-4">
-                            <p>Contact info:</p>
-                            <p className="ml-2 my-0"><b>Phone:</b> {tp.phone}</p>
-                            <p className="ml-2 my-0"><b>Email:</b> {tp.email}</p>
-                        </Col>
-                    </Row>
-                    <p className="pt-4 pl-4">Insurance:</p>
-                    <Row xs="auto" className="p-0 mr-4">
-                        {
-                            tp.insurance.map(insurance => (
-                                <Col className="ml-5" key={insurance.type}>
-                                    <p className="ml-5">Type: {insurance.type}</p>
-                                    <p className="ml-5">Company: {insurance.company}</p>
-                                    <p className="ml-5">Exp Date: <DateCheck Date={insurance.end} /></p>
-                                </Col>
-                            ))
-                        }
-                    </Row>
+                        <p className="pt-4 pl-4"><b>Provider:</b> {this.state.value}</p>
+                        <Row className="ml-3">
+                            <Col>
+                                <p className="ml-2"><b>Address:</b></p>
+                                <p className="ml-3 my-0">{tp.address1}</p>
+                                <p className="ml-3 my-0">{tp.address2}</p>
+                            </Col>
+                            <Col className="mr-4">
+                                <p><b>Contact info:</b></p>
+                                <p className="ml-2 my-0"><b>Phone:</b> {tp.phone}</p>
+                                <p className="ml-2 my-0"><b>Email:</b> {tp.email}</p>
+                            </Col>
+                        </Row>
+                        <p className="pt-4 pl-4"><b>Insurance:</b></p>
+                        <Row xs="auto" className="p-0 mr-4">
+                            
+                                    <Col className="ml-5">
+                                        <p className="ml-5">Type: {tp.gl.type}</p>
+                                        <p className="ml-5">Company: {tp.gl.company}</p>
+                                        <p className="ml-5">Exp Date: <DateCheck Date={tp.gl.end} /></p>
+                                    </Col>
+                                    <Col className="ml-5">
+                                        <p className="ml-5">Type: {tp.veh.type}</p>
+                                        <p className="ml-5">Company: {tp.veh.company}</p>
+                                        <p className="ml-5">Exp Date: <DateCheck Date={tp.veh.end} /></p>
+                                    </Col>
+                                    <Col className="ml-5">
+                                        <p className="ml-5">Type: {tp.wc.type}</p>
+                                        <p className="ml-5">Company: {tp.wc.company}</p>
+                                        <p className="ml-5">Exp Date: <DateCheck Date={tp.wc.end} /></p>
+                                    </Col>
+                               
+                        </Row>
                     </div>
                     <div className="mt-3">
                         <Nav tabs>
@@ -160,18 +166,18 @@ class ProviderCompliance extends React.Component {
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
                                 <h2 className="my-3">Drivers:</h2>
-                                {tp.drivers.map(dr => (
-                                    <div key={dr.id}>
+                                {drfilter.map(driver => (
+                                    <div key={driver.id}>
                                         <TplistHeaderRow>
                                             <Col style={TplistHeader.Title}>
-                                                <h3>{dr.name}</h3>
+                                                <h3>{driver.name}</h3>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>License State: {dr.license.state}</p>
+                                                <p style={TplistHeader.Value}>License State: {driver.license.state}</p>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
                                                 <p style={TplistHeader.Value}>License Exp: &nbsp;
-                                                    <DateCheck Date={dr.license.exp} />
+                                                    <DateCheck Date={driver.license.exp} />
                                                 </p>
                                             </Col>
                                         </TplistHeaderRow>
@@ -186,15 +192,26 @@ class ProviderCompliance extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {dr.training.map(tr => (
-                                                            <tr key={tr.type}>
-                                                                <td>{tr.type}</td>
-                                                                <td>{tr.company}</td>
-                                                                <td>
-                                                                    <DateCheck Date ={tr.end} />  
-                                                                </td>
-                                                            </tr>
-                                                        ))}
+                                                        <tr>
+                                                            <td>{driver.firstaid.type}</td>
+                                                            <td>{driver.firstaid.company}</td>
+                                                            <td><DateCheck Date={driver.firstaid.end}/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>{driver.cpr.type}</td>
+                                                            <td>{driver.cpr.company}</td>
+                                                            <td><DateCheck Date={driver.cpr.end}/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>{driver.defdriv.type}</td>
+                                                            <td>{driver.defdriv.company}</td>
+                                                            <td><DateCheck Date={driver.defdriv.end}/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>{driver.pass.type}</td>
+                                                            <td>{driver.pass.company}</td>
+                                                            <td><DateCheck Date={driver.pass.end}/></td>
+                                                        </tr>
                                                     </tbody>
                                                 </Table>
                                             </Col>
@@ -207,14 +224,18 @@ class ProviderCompliance extends React.Component {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {dr.screenings.map(scr => (
-                                                            <tr key={scr.type}>
-                                                                <td>{scr.type}</td>
-                                                                <td>
-                                                                    <DateCheck Date ={scr.end} />
-                                                                </td>
-                                                            </tr>
-                                                        ))}
+                                                        <tr>
+                                                            <td>{driver.drugscreen.type}</td>
+                                                            <td><DateCheck Date={driver.drugscreen.end}/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>{driver.background.type}</td>
+                                                            <td><DateCheck Date={driver.background.end}/></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>{driver.mvr.type}</td>
+                                                            <td><DateCheck Date={driver.mvr.end}/></td>
+                                                        </tr>
                                                     </tbody>
                                                 </Table>
                                             </Col>
@@ -224,7 +245,7 @@ class ProviderCompliance extends React.Component {
                             </TabPane>
                             <TabPane tabId="2">
                                 <h2 className="my-3">Vehicles:</h2>
-                                {tp.vehicles.map(vehicle => (
+                                {vehfilter.map(vehicle => (
                                     <div key={vehicle.id}>
                                         <TplistHeaderRow>
                                             <Col style={TplistHeader.Title}>
@@ -242,16 +263,16 @@ class ProviderCompliance extends React.Component {
                                         </TplistHeaderRow>
                                         <Row className="ml-5 my-2">
                                             <Col>
-                                            <div className="d-inline-block h-25 m-3">
-                                                <h4>Registration: <small>{vehicle.reg}</small></h4>
-                                                <p>Exp date: <DateCheck Date={vehicle.regexp} /></p>
-                                            </div>
+                                                <div className="d-inline-block h-25 m-3">
+                                                    <h4>Registration State: <small>{vehicle.registration.state}</small></h4>
+                                                    <p>Exp date: <DateCheck Date={vehicle.registration.end} /></p>
+                                                </div>
                                             </Col>
                                             <Col >
-                                            <div className="d-inline-block h-25 m-3">
-                                                <h4>Inspection:</h4>
-                                                <p>Exp date: <DateCheck Date={vehicle.inspection.end} /></p>
-                                            </div>
+                                                <div className="d-inline-block h-25 m-3">
+                                                    <h4>Inspection:</h4>
+                                                    <p>Exp date: <DateCheck Date={vehicle.inspection.end} /></p>
+                                                </div>
                                             </Col>
                                         </Row>
                                     </div>

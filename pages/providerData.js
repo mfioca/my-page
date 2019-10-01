@@ -1,11 +1,12 @@
 import React from 'react'
 import Layout from '../components/layout.js'
 import { Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import classnames from 'classnames'
 import { CustomJumbo } from './customComponents'
 import NetworkList from './provider_data/networkTable.js'
 import ProviderCompliance from './provider_data/prividerCompliance.js'
 import { Networkinfo } from './provider_data/providerStats.js'
-import classnames from 'classnames';
+
 
 
 class ProviderData extends React.Component {
@@ -59,8 +60,6 @@ class ProviderData extends React.Component {
                 </Nav>
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
-                        <h1 className="mt-5 text-center">Network Report</h1>
-                        <h3 className="mt-2 mb-5 text-center">Report Date: 9/22/2019</h3>
                         <Networkinfo />
                         <Row className="justify-content-center">
                             <Col xs="10" className="mb-3" >

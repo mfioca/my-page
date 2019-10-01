@@ -3,16 +3,17 @@ import { Row, Col, Table } from 'reactstrap'
 import { DataFilter } from '../customComponents'
 
 var networkdata = require('./network.json');
-var tpdata = require('./Compliance.json');
+var tpdata = require('./company.json');
 var vehdata = require('./vehicle.json');
 var drdata = require('./driver.json');
-var insdata = require('./insurance.json');
 
 
 
 export function Networkinfo() {
     return (
-        <div >
+        <div>
+            <h1 className="mt-5 text-center">Network Summary</h1>
+            <h3 className="mt-2 mb-5 text-center">Report Date: 9/22/2019</h3>
             <Row>
                 <Col className="px-5 pt-3">
                     <h4 className="text-center p-2"><b><u>Provider Totals</u></b></h4> 
@@ -288,10 +289,10 @@ export function Networkinfo() {
 
 
 export function ComplianceTable() {
-    const providers = tpdata.filter(tpdata => tpdata._id).length;
+    const providers = tpdata.filter(tpdata => tpdata.id).length;
     const drivers = drdata.filter(drdata => drdata.id).length;
     const vehicles = vehdata.filter(vehdata => vehdata.id).length;
-    var reportdate = "2019-09-22";
+    const reportdate = "2019-09-22";
 
     return (
         <div>
@@ -310,7 +311,7 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired GL policies</td>
                             <td>
-                                {insdata.filter(insdata => insdata.general.end < reportdate).length}
+                                {tpdata.filter(tpdata => tpdata.gl.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -318,7 +319,7 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (insdata.filter(insdata => insdata.general.end < reportdate).length) /
+                                    (tpdata.filter(tpdata => tpdata.gl.end < reportdate).length) /
                                     providers * 100
                                 ) + '%'
                             }
@@ -327,7 +328,7 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired Vehicle policies</td>
                             <td>
-                                {insdata.filter(insdata => insdata.vehicle.end < reportdate).length}
+                                {tpdata.filter(tpdata => tpdata.veh.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -335,7 +336,7 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (insdata.filter(insdata => insdata.vehicle.end < reportdate).length) /
+                                    (tpdata.filter(tpdata => tpdata.veh.end < reportdate).length) /
                                     providers * 100
                                 ) + '%'
                             }
@@ -344,7 +345,7 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired Workers Comp policies</td>
                             <td>
-                                {insdata.filter(insdata => insdata.workerscomp.end < reportdate).length}
+                                {tpdata.filter(tpdata => tpdata.wc.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -352,7 +353,7 @@ export function ComplianceTable() {
                             <td>
                             {
                                 Math.floor(
-                                    (insdata.filter(insdata => insdata.workerscomp.end < reportdate).length) /
+                                    (tpdata.filter(tpdata => tpdata.wc.end < reportdate).length) /
                                     providers * 100
                                 ) + '%'
                             }
@@ -366,9 +367,9 @@ export function ComplianceTable() {
                             <td>{vehicles}</td>
                         </tr>
                         <tr>
-                            <td className="text-right">Non-Compliant Registrations</td>
+                            <td className="text-right">Expired Registrations</td>
                             <td>
-                                {vehdata.filter(vehdata => vehdata.regexp < reportdate).length}
+                                {vehdata.filter(vehdata => vehdata.registration.end < reportdate).length}
                             </td>
                         </tr>
                         <tr>
@@ -377,14 +378,14 @@ export function ComplianceTable() {
                             {
                                 parseFloat (
                                     (
-                                        vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length
+                                        vehdata.filter(vehdata => vehdata.registration.end < reportdate).length
                                     ) / (vehicles)
                                 ).toFixed (2) + '%'
                             }
                             </td>
                         </tr>
                         <tr>
-                            <td className="text-right">Non-Compliant Inspections</td>
+                            <td className="text-right">Expired Inspections</td>
                             <td>
                                 {vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length}
                             </td>
@@ -439,7 +440,7 @@ export function ComplianceTable() {
                         
                             <tr>
                                 <th>Driver Compliance Catagories</th>
-                                <th>Total Non-Compliant</th>
+                                <th>Total Expired</th>
                                 <th>% Non-Compliant</th>
                             </tr>
                             <tr>
