@@ -28,7 +28,12 @@ const customFilter = ({ fieldName, filter, onChange }) => {
       style={{ width: "100%" }}
       value={filter ? filter.value : ''}> 
       <option value= ''>Show All</option>
-      {networkdata
+      {networkdata.sort((a, b) => {
+          const One = a[fieldName];
+          const Two = b[fieldName];
+      
+          return (One < Two) ? -1 : (One > Two) ? 1 : 0;
+      })
         .map(item => item[fieldName])
         .filter((item, i, s) => s.lastIndexOf(item) == i)
         .map(function (value) {
@@ -73,29 +78,41 @@ class NetworkList extends Component {
               columns: [
                 {
                   Header: "Name",
-                  accessor: "Name",
+                  id: "Name",
+                  accessor: d => d.Name,
+                  width: 140,
+                  
                   //*sorting method to allow for listing of numerical order listed in the name
                   sortMethod: (a, b) => {
                     if (a.length === b.length) {
                       return a > b ? 1 : -1;
                     }
                     return a.length > b.length ? 1 : -1;
-                  }
+                  },
                 },
                 {
                   Header: "Address",
                   id: "Address",
-                  accessor: d => d.Address
+                  accessor: d => d.Address,
+                  width: 300,
+                  size: 2,
+                  style: {
+                    whiteSpace: 'unset',
+                    fontSize: '14px'
+                  },
                 },
                 {
                   Header: "Phone",
                   id: "Phone",
-                  accessor: d => d.Phone
+                  accessor: d => d.Phone,
+                  width: 150,
                 },
                 {
                   Header: "Email",
                   id: "Email",
-                  accessor: d => d.Email
+                  accessor: d => d.Email,
+                  width: 220,
+                  style: {fontSize: '14px'},
                 }
               ]
             },              
@@ -103,18 +120,10 @@ class NetworkList extends Component {
               Header: "Provider Info",
               columns: [
                 {
-                  Header: "Type",
-                  id: "Type",
-                  accessor: d => d.Type,
-                  filterMethod: (filter, row) => {
-                    return row[filter.id] === filter.value;
-                  },
-                  Filter: ({ filter, onChange }) =>
-                  customFilter({ fieldName:'Type', filter, onChange })
-                },
-                {
                   Header: "Region",
                   id: "Region",
+                  width: 110,
+                  style: {'textAlign': 'center'},
                   accessor: d => d.Region,
                   filterMethod: (filter, row) => {
                     return row[filter.id] === filter.value;
@@ -127,6 +136,8 @@ class NetworkList extends Component {
                 {
                   Header: "County",
                   id: "County",
+                  style: {'textAlign': 'center'},
+                  width: 110,
                   accessor: d => d.County,
                   filterMethod: (filter, row) => {
                     return row[filter.id] === filter.value;
@@ -144,6 +155,8 @@ class NetworkList extends Component {
                 {
                   Header: "Ambulatory",
                   accessor: "Amb",
+                  style: {'textAlign': 'center'},
+                  width: 110,
                   filterMethod: (filter, row) => {
                     return row[filter.id] === filter.value;
                   },
@@ -155,6 +168,8 @@ class NetworkList extends Component {
                 {
                   Header: "Wheelchair",
                   id: "WCHR",
+                  style: {'textAlign': 'center'},
+                  width: 110,
                   accessor: d => d.WCHR,
                   filterMethod: (filter, row) => {
                     return row[filter.id] === filter.value;
@@ -167,6 +182,8 @@ class NetworkList extends Component {
                 {
                   Header: "Stretcher",
                   id: "Stretcher",
+                  style: {'textAlign': 'center'},
+                  width: 110,
                   accessor: d => d.Stretcher,
                   filterMethod: (filter, row) => {
                     return row[filter.id] === filter.value;

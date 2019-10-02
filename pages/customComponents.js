@@ -250,8 +250,8 @@ export class ThreeColumnCard extends React.Component{
     }
 }
 
-//used in providerdata
-export class DataFilter extends React.Component {
+//used in providerstats
+export class NetworkDataFilter extends React.Component {
     render() {
         let Fone = this.props.Filter1;
         let Vone = this.props.Value1;
@@ -262,6 +262,20 @@ export class DataFilter extends React.Component {
         return (
             <span>{Data.filter(Data => Data[Fone] === Vone && Data[Ftwo] === Vtwo).length}</span>
         );
+    }
+}
+
+//used in providerstats
+export class ComplDataFilter extends React.Component {
+    render() {
+        const Data = this.props.Info
+        const Fone = this.props.Filter1;
+        const Fonekey = this.props.Filter1child;
+        const Vone = this.props.Value1;
+
+        return (
+            <span>{Data.filter(Data => Data[Fone][Fonekey] < Vone).length}</span>
+        )
     }
 }
 

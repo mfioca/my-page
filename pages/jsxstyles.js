@@ -2,6 +2,16 @@
 *   Styles       * 
 ******************/
 
+export const Pointer = {
+    cursor: 'pointer'
+}
+
+export const TabStyle = {
+    width: '95%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+}
+
 export const HomeCardStyle = {
     Card: {
         width: '300px',
@@ -66,7 +76,7 @@ export const DandDStyle = {
 
 export const TplistHeader = {
     Title: {
-        textAlign: 'Center',
+        textAlign: 'center',
         marginTop: '10px'
     },
     Value: {

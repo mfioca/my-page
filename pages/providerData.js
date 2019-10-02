@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { Row, Col, TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap'
+import { TabStyle, Pointer } from './jsxstyles'
 import classnames from 'classnames'
 import { CustomJumbo } from './customComponents'
 import NetworkList from './provider_data/networkTable.js'
@@ -44,7 +45,7 @@ class ProviderData extends React.Component {
                     <NavItem>
                         <NavLink
                             className={classnames({ active: this.state.activeTab === '1' })}
-                            onClick={() => { this.toggle('1'); }} style={{cursor: "pointer"}}
+                            onClick={() => { this.toggle('1'); }} style={Pointer}
                             >
                                 Network
                         </NavLink>
@@ -52,22 +53,18 @@ class ProviderData extends React.Component {
                     <NavItem>
                         <NavLink
                             className={classnames({ active: this.state.activeTab === '2' })}
-                            onClick={() => { this.toggle('2'); }} style={{cursor: "pointer"}}
+                            onClick={() => { this.toggle('2'); }} style={Pointer}
                             >
                             Compliance
                         </NavLink>
                     </NavItem>
                 </Nav>
                 <TabContent activeTab={this.state.activeTab}>
-                    <TabPane tabId="1">
+                    <TabPane tabId="1" style={TabStyle}>
                         <Networkinfo />
-                        <Row className="justify-content-center">
-                            <Col xs="10" className="mb-3" >
-                                <NetworkList />
-                            </Col>
-                        </Row>
+                            <NetworkList />
                     </TabPane>
-                    <TabPane tabId="2">
+                    <TabPane tabId="2" style={TabStyle}>
                         <ProviderCompliance />
                     </TabPane>
                 </TabContent>

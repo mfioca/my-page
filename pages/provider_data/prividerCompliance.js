@@ -5,7 +5,7 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem,
 import classnames from 'classnames'
 import { DateCheck, TplistHeaderRow } from '../customComponents'
 import { ComplianceTable } from './providerStats'
-import { TplistHeader } from '../jsxstyles'
+import { TplistHeader, Pointer } from '../jsxstyles'
 
 var tpdata = require('./company.json');
 var vehdata = require('./vehicle.json');
@@ -125,23 +125,21 @@ class ProviderCompliance extends React.Component {
                         </Row>
                         <p className="pt-4 pl-4"><b>Insurance:</b></p>
                         <Row xs="auto" className="p-0 mr-4">
-                            
-                                    <Col className="ml-5">
-                                        <p className="ml-5">Type: {tp.gl.type}</p>
-                                        <p className="ml-5">Company: {tp.gl.company}</p>
-                                        <p className="ml-5">Exp Date: <DateCheck Date={tp.gl.end} /></p>
-                                    </Col>
-                                    <Col className="ml-5">
-                                        <p className="ml-5">Type: {tp.veh.type}</p>
-                                        <p className="ml-5">Company: {tp.veh.company}</p>
-                                        <p className="ml-5">Exp Date: <DateCheck Date={tp.veh.end} /></p>
-                                    </Col>
-                                    <Col className="ml-5">
-                                        <p className="ml-5">Type: {tp.wc.type}</p>
-                                        <p className="ml-5">Company: {tp.wc.company}</p>
-                                        <p className="ml-5">Exp Date: <DateCheck Date={tp.wc.end} /></p>
-                                    </Col>
-                               
+                            <Col className="ml-5">
+                                <p className="ml-5">Type: {tp.gl.type}</p>
+                                <p className="ml-5">Company: {tp.gl.company}</p>
+                                <p className="ml-5">Exp Date: <DateCheck Date={tp.gl.end} /></p>
+                            </Col>
+                            <Col className="ml-5">
+                                <p className="ml-5">Type: {tp.veh.type}</p>
+                                <p className="ml-5">Company: {tp.veh.company}</p>
+                                <p className="ml-5">Exp Date: <DateCheck Date={tp.veh.end} /></p>
+                            </Col>
+                            <Col className="ml-5">
+                                <p className="ml-5">Type: {tp.wc.type}</p>
+                                <p className="ml-5">Company: {tp.wc.company}</p>
+                                <p className="ml-5">Exp Date: <DateCheck Date={tp.wc.end} /></p>
+                            </Col>  
                         </Row>
                     </div>
                     <div className="mt-3">
@@ -149,7 +147,7 @@ class ProviderCompliance extends React.Component {
                             <NavItem>
                                 <NavLink
                                     className={classnames({ active: this.state.activeTab === '1' })}
-                                    onClick={() => { this.selectTab('1'); }} style={{cursor: "pointer"}}
+                                    onClick={() => { this.selectTab('1'); }} style={Pointer}
                                 >
                                     Drivers
                                 </NavLink>
@@ -157,7 +155,7 @@ class ProviderCompliance extends React.Component {
                             <NavItem>
                                 <NavLink
                                     className={classnames({ active: this.state.activeTab === '2' })}
-                                    onClick={() => { this.selectTab('2'); }} style={{cursor: "pointer"}}
+                                    onClick={() => { this.selectTab('2'); }} style={Pointer}
                                 >
                                     Vehicles
                                 </NavLink>

@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { Row, Col, Table } from 'reactstrap'
-import { DataFilter } from '../customComponents'
+import { NetworkDataFilter, ComplDataFilter } from '../customComponents'
 
 var networkdata = require('./network.json');
 var tpdata = require('./company.json');
@@ -16,139 +16,17 @@ export function Networkinfo() {
             <h3 className="mt-2 mb-5 text-center">Report Date: 9/22/2019</h3>
             <Row>
                 <Col className="px-5 pt-3">
-                    <h4 className="text-center p-2"><b><u>Provider Totals</u></b></h4> 
-                    <Table striped bordered size="sm" className="shadow-sm">
-                        <tbody>
-                            <tr>
-                                <th>Total Transportation Providers:</th>
-                                <th>{networkdata.length}</th>
-                            </tr>
-                            <tr>
-                                <td>Transportation Companies:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1= 'Type'
-                                        Value1= 'Provider'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Volunteer Drivers:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Volunteer Driver'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Central Region Providers:</th>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Region'
-                                        Value1 = 'Central'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Transportation Companies:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Provider'
-                                        Filter2 = 'Region'
-                                        Value2 = 'Central'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Volunteer Drivers:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Volunteer Driver'
-                                        Filter2 = 'Region'
-                                        Value2 = 'Central'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>SouthWest Region:</th>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Region'
-                                        Value1 = 'SouthWest'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Transportation Companies:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Provider'
-                                        Filter2 = 'Region'
-                                        Value2 = 'SouthWest'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Volunteer Drivers:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Volunteer Driver'
-                                        Filter2 = 'Region'
-                                        Value2 = 'SouthWest'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>East Region:</th>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Region'
-                                        Value1 = 'East'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Transportation Companies:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Provider'
-                                        Filter2 = 'Region'
-                                        Value2 = 'East'/>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Volunteer Drivers:</td>
-                                <td><DataFilter
-                                        Info = {networkdata}
-                                        Filter1 = 'Type'
-                                        Value1 = 'Volunteer Driver'
-                                        Filter2 = 'Region'
-                                        Value2 = 'East'/>
-                                </td>
-                            </tr>
-                        </tbody>
-                        <style jsx>{`
-                            td:nth-child(odd) {
-                                text-align: right;
-                            },
-                            td:nth-child(even) {
-                                text-align: center;
-                                widtH: 70px;
-                            }
-                            th {
-                                aligh: center,
-                            }
-                        `}
-                        </style> 
-                    </Table>
-                </Col>
-                <Col className="px-5 pt-3">
-                    <h4 className="text-center p-2"><b><u>Level of Service Totals</u></b></h4>
                     <Table striped bordered size="sm" className="shadow-sm">
                         <tbody>
                             <tr>
                                 <th colSpan="2">All Regions</th>
                             </tr>
                             <tr>
+                            <th>Total Providers:</th>
+                                <th>{networkdata.length}</th></tr>
+                            <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Amb'
                                         Value1 = 'Yes'/>
@@ -156,7 +34,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'WCHR'
                                         Value1 = 'Yes'/>
@@ -164,7 +42,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Stretcher'
                                         Value1 = 'Yes'/>
@@ -174,8 +52,16 @@ export function Networkinfo() {
                                 <th colSpan="2">Central</th>
                             </tr>
                             <tr>
+                                <th>Total Providers:</th>
+                                <td><NetworkDataFilter
+                                        Info = {networkdata}
+                                        Filter1 = 'Region'
+                                        Value1 = 'Central'/>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'Central'
@@ -185,7 +71,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'Central'
@@ -195,7 +81,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'Central'
@@ -203,12 +89,37 @@ export function Networkinfo() {
                                         Value2 = 'Yes'/>
                                 </td>
                             </tr>
+                            
+                        </tbody>
+                        <style jsx>{`
+                            {
+                                text-align: center;
+                                width: 70px;
+                            }
+                            th {
+                                aligh: center,
+                            }
+                        `}
+                        </style>
+                    </Table>
+                </Col>
+                <Col className="px-5 pt-3">
+                    <Table striped bordered size="sm" className="shadow-sm">
+                        <tbody>
                             <tr>
                                 <th colSpan="2">SouthWest</th>
                             </tr>
                             <tr>
+                                <th>Total Providers:</th>
+                                <td><NetworkDataFilter
+                                        Info = {networkdata}
+                                        Filter1 = 'Region'
+                                        Value1 = 'SouthWest'/>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'SouthWest'
@@ -218,7 +129,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'SouthWest'
@@ -228,7 +139,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'SouthWest'
@@ -240,8 +151,16 @@ export function Networkinfo() {
                                 <th colSpan="2">East</th>
                             </tr>
                             <tr>
+                                <th>Total Providers:</th>
+                                <td><NetworkDataFilter
+                                        Info = {networkdata}
+                                        Filter1 = 'Region'
+                                        Value1 = 'East'/>
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Providers with Ambulatory:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'East'
@@ -251,7 +170,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Wheelchair:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'East'
@@ -261,7 +180,7 @@ export function Networkinfo() {
                             </tr>
                             <tr>
                                 <td>Providers with Stretcher:</td>
-                                <td><DataFilter
+                                <td><NetworkDataFilter
                                         Info = {networkdata}
                                         Filter1 = 'Region'
                                         Value1 = 'East'
@@ -289,14 +208,14 @@ export function Networkinfo() {
 
 
 export function ComplianceTable() {
-    const providers = tpdata.filter(tpdata => tpdata.id).length;
+    const providers = tpdata.filter(tpdata => tpdata.company).length;
     const drivers = drdata.filter(drdata => drdata.id).length;
     const vehicles = vehdata.filter(vehdata => vehdata.id).length;
     const reportdate = "2019-09-22";
 
     return (
         <div>
-            <h2 className="text-center my-2">Compliance Summary</h2>
+            <h2 className="text-center mb-5">Compliance Summary</h2>
             <Row>
                 <Col>
                 <Table striped bordered size="sm" className="shadow-sm">
@@ -311,7 +230,12 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired GL policies</td>
                             <td>
-                                {tpdata.filter(tpdata => tpdata.gl.end < reportdate).length}
+                                <ComplDataFilter
+                                    Info = {tpdata}
+                                    Filter1 = 'gl'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate} 
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -328,7 +252,12 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired Vehicle policies</td>
                             <td>
-                                {tpdata.filter(tpdata => tpdata.veh.end < reportdate).length}
+                                <ComplDataFilter
+                                    Info = {tpdata}
+                                    Filter1 = 'veh'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate} 
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -345,7 +274,12 @@ export function ComplianceTable() {
                         <tr>
                             <td>Expired Workers Comp policies</td>
                             <td>
-                                {tpdata.filter(tpdata => tpdata.wc.end < reportdate).length}
+                                <ComplDataFilter
+                                    Info = {tpdata}
+                                    Filter1 = 'wc'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate} 
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -369,46 +303,56 @@ export function ComplianceTable() {
                         <tr>
                             <td className="text-right">Expired Registrations</td>
                             <td>
-                                {vehdata.filter(vehdata => vehdata.registration.end < reportdate).length}
+                                <ComplDataFilter
+                                    Info = {vehdata}
+                                    Filter1 = 'registration'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate} 
+                                />
                             </td>
                         </tr>
                         <tr>
                             <td className="text-right">Percent Non-Compliant Registrations:</td>
                             <td>
                             {
-                                parseFloat (
-                                    (
-                                        vehdata.filter(vehdata => vehdata.registration.end < reportdate).length
-                                    ) / (vehicles)
-                                ).toFixed (2) + '%'
+                                Math.floor(
+                                    vehdata.filter(vehdata => vehdata.registration.end < reportdate).length
+                                     / vehicles * 100
+                                ) + '%'
                             }
                             </td>
                         </tr>
                         <tr>
                             <td className="text-right">Expired Inspections</td>
                             <td>
-                                {vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length}
+                                <ComplDataFilter
+                                    Info = {vehdata}
+                                    Filter1 = 'inspection'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate} 
+                                />
                             </td>
                         </tr>
                         <tr>
                             <td className="text-right"> Percent Non-Compliant Inspection:</td>
                             <td>
                             {
-                                parseFloat (
-                                    (
-                                        vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length
-                                    ) / (vehicles)
-                                ).toFixed (2) + '%'
+                                Math.floor(
+                                    vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length
+                                     / vehicles * 100
+                                ) + '%'
                             }
                             </td>
                         </tr>
                         <tr>
                             <td>Number of non-compliant Vehicles</td>
                             <td>
-                            {vehdata.filter(
+                            {
+                                vehdata.filter(
                                 vehdata => vehdata.regexp < reportdate || 
                                 vehdata.inspection.end < reportdate
-                                ).length}
+                                ).length
+                            }
                             </td>
                         </tr>
                         <tr>
@@ -430,14 +374,13 @@ export function ComplianceTable() {
                 <Col>
                     <Table striped bordered size="sm" className="shadow-sm">
                         <tbody>
-                        <tr>
-                            <th colSpan="3" className="text-center">Drivers</th>
-                        </tr>
-                        <tr>
-                            <td colSpan="2">Number of Drivers</td>
-                            <td>{drivers}</td>
-                        </tr>
-                        
+                            <tr>
+                                <th colSpan="3" className="text-center">Drivers</th>
+                            </tr>
+                            <tr>
+                                <td colSpan="2">Number of Drivers</td>
+                                <td>{drivers}</td>
+                            </tr>
                             <tr>
                                 <th>Driver Compliance Catagories</th>
                                 <th>Total Expired</th>
@@ -446,156 +389,197 @@ export function ComplianceTable() {
                             <tr>
                                 <td>License</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.license.exp < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'license'
+                                        Filter1child = 'exp'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.license.exp < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
-                                }
+                                        ) / drivers * 100
+                                    ) + '%'
+                                } 
                                 </td>
                             </tr>
                             <tr>
                                 <td>Drug Screen</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.drugscreen.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'drugscreen'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.drugscreen.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
                                 <td>Background Check</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.background.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'background'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.background.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
                                 <td>MVR</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.mvr.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'mvr'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.mvr.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
                                 <td>First Aid</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.firstaid.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'firstaid'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.firstaid.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
                                 <td>CPR</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.cpr.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'cpr'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.cpr.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
                                 <td>Defensive Driving</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.defdriv.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'defdriv'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.defdriv.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
                                 <td>Passenger Sensitivity (PASS)</td>
                                 <td>
-                                    {drdata.filter(drdata => drdata.pass.end < reportdate).length}
+                                    <ComplDataFilter
+                                        Info = {drdata}
+                                        Filter1 = 'pass'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
                                 </td>
                                 <td>
                                 {
-                                    parseFloat (
+                                    Math.floor(
                                         (
                                             drdata.filter(drdata => drdata.pass.end < reportdate).length
-                                        ) / (drivers)
-                                    ).toFixed (2) + '%'
+                                        ) / drivers * 100
+                                    ) + '%'
                                 }
                                 </td>
                             </tr>
                             <tr>
-                            <td colSpan="2" className="text-right">Number of Non-Compliant Drivers</td>
-                            <td>
-                            {drdata.filter(drdata => drdata.license.exp < reportdate ||
-                                drdata.firstaid.end < reportdate ||
-                                drdata.cpr.end < reportdate ||
-                                drdata.defdriv.end < reportdate ||
-                                drdata.pass.end < reportdate ||
-                                drdata.drugscreen.end < reportdate ||
-                                drdata.background.end < reportdate ||
-                                drdata.mvr.end < reportdate
-                                ).length
-                            }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colSpan="2" className="text-right">Percent Non-Compliant Drivers</td>
-                            <td>
-                            {Math.floor(
-                                (
-                                    (drdata.filter(drdata => drdata.license.exp < reportdate ||
-                                        drdata.firstaid.end < reportdate ||
-                                        drdata.cpr.end < reportdate ||
-                                        drdata.defdriv.end < reportdate ||
-                                        drdata.pass.end < reportdate ||
-                                        drdata.drugscreen.end < reportdate ||
-                                        drdata.background.end < reportdate ||
-                                        drdata.mvr.end < reportdate
-                                    ).length) / drivers
-                                ) * 100) + '%'
-                            }
-                            </td>
-                        </tr>  
+                                <td colSpan="2" className="text-right">Number of Non-Compliant Drivers</td>
+                                <td>
+                                {
+                                    drdata.filter(drdata => drdata.license.exp < reportdate ||
+                                    drdata.firstaid.end < reportdate ||
+                                    drdata.cpr.end < reportdate ||
+                                    drdata.defdriv.end < reportdate ||
+                                    drdata.pass.end < reportdate ||
+                                    drdata.drugscreen.end < reportdate ||
+                                    drdata.background.end < reportdate ||
+                                    drdata.mvr.end < reportdate
+                                    ).length
+                                }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colSpan="2" className="text-right">Percent Non-Compliant Drivers</td>
+                                <td>
+                                {Math.floor(
+                                    (
+                                        (drdata.filter(drdata => drdata.license.exp < reportdate ||
+                                            drdata.firstaid.end < reportdate ||
+                                            drdata.cpr.end < reportdate ||
+                                            drdata.defdriv.end < reportdate ||
+                                            drdata.pass.end < reportdate ||
+                                            drdata.drugscreen.end < reportdate ||
+                                            drdata.background.end < reportdate ||
+                                            drdata.mvr.end < reportdate
+                                        ).length) / drivers
+                                    ) * 100) + '%'
+                                }
+                                </td>
+                            </tr>  
                         </tbody>
                     </Table>
                 </Col>
