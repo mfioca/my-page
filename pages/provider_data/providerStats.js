@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Row, Col, Table } from 'reactstrap'
-import { NetworkDataFilter, ComplDataFilter } from '../customComponents'
+import { NetworkDataFilter, ComplDataFilter, PercentCalc } from '../customComponents'
 
 var networkdata = require('./network.json');
 var tpdata = require('./company.json');
@@ -215,17 +215,17 @@ export function ComplianceTable() {
 
     return (
         <div>
-            <h2 className="text-center mb-5">Compliance Summary</h2>
+            <h2 className="text-center my-5">Compliance Summary</h2>
             <Row>
                 <Col>
                 <Table striped bordered size="sm" className="shadow-sm">
                     <tbody>
                         <tr>
-                            <td>Number of Providers</td>
-                            <td>{providers}</td>
+                            <th colSpan="2" className="text-center">Insurance</th>
                         </tr>
                         <tr>
-                            <th colSpan="2" className="text-center">Insurance</th>
+                            <th>Number of Providers</th>
+                            <td>{providers}</td>
                         </tr>
                         <tr>
                             <td>Expired GL policies</td>
@@ -239,14 +239,15 @@ export function ComplianceTable() {
                             </td>
                         </tr>
                         <tr>
-                            <td>Percent non-compliant GL policies</td>
+                            <td className="text-right">% non-compliant GL policies</td>
                             <td>
-                            {
-                                Math.floor(
-                                    (tpdata.filter(tpdata => tpdata.gl.end < reportdate).length) /
-                                    providers * 100
-                                ) + '%'
-                            }
+                                <PercentCalc
+                                    Info = {tpdata}
+                                    Filter1 = 'gl'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate}
+                                    Divider = {providers}
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -261,14 +262,15 @@ export function ComplianceTable() {
                             </td>
                         </tr>
                         <tr>
-                            <td>Percent non-compliant Vehicle policies</td>
+                            <td className="text-right">% non-compliant Vehicle policies</td>
                             <td>
-                            {
-                                Math.floor(
-                                    (tpdata.filter(tpdata => tpdata.veh.end < reportdate).length) /
-                                    providers * 100
-                                ) + '%'
-                            }
+                                <PercentCalc
+                                    Info = {tpdata}
+                                    Filter1 = 'veh'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate}
+                                    Divider = {providers}
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -283,25 +285,26 @@ export function ComplianceTable() {
                             </td>
                         </tr>
                         <tr>
-                            <td>Percent non-compliant Workers Comp policies</td>
+                            <td className="text-right">% non-compliant Workers Comp policies</td>
                             <td>
-                            {
-                                Math.floor(
-                                    (tpdata.filter(tpdata => tpdata.wc.end < reportdate).length) /
-                                    providers * 100
-                                ) + '%'
-                            }
+                                <PercentCalc
+                                    Info = {tpdata}
+                                    Filter1 = 'wc'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate}
+                                    Divider = {providers}
+                                />
                             </td>
                         </tr>
                         <tr>
                             <th colSpan="2" className="text-center">Vehicles</th>
                         </tr>
                         <tr>
-                            <td>Number of Vehicles</td>
+                            <th>Number of Vehicles</th>
                             <td>{vehicles}</td>
                         </tr>
                         <tr>
-                            <td className="text-right">Expired Registrations</td>
+                            <td>Expired Registrations</td>
                             <td>
                                 <ComplDataFilter
                                     Info = {vehdata}
@@ -312,18 +315,19 @@ export function ComplianceTable() {
                             </td>
                         </tr>
                         <tr>
-                            <td className="text-right">Percent Non-Compliant Registrations:</td>
+                            <td className="text-right">% Non-Compliant Registrations:</td>
                             <td>
-                            {
-                                Math.floor(
-                                    vehdata.filter(vehdata => vehdata.registration.end < reportdate).length
-                                     / vehicles * 100
-                                ) + '%'
-                            }
+                                <PercentCalc
+                                    Info = {vehdata}
+                                    Filter1 = 'registration'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate}
+                                    Divider = {vehicles}
+                                />
                             </td>
                         </tr>
                         <tr>
-                            <td className="text-right">Expired Inspections</td>
+                            <td>Expired Inspections</td>
                             <td>
                                 <ComplDataFilter
                                     Info = {vehdata}
@@ -334,14 +338,15 @@ export function ComplianceTable() {
                             </td>
                         </tr>
                         <tr>
-                            <td className="text-right"> Percent Non-Compliant Inspection:</td>
+                            <td className="text-right">% Non-Compliant Inspection:</td>
                             <td>
-                            {
-                                Math.floor(
-                                    vehdata.filter(vehdata => vehdata.inspection.end < reportdate).length
-                                     / vehicles * 100
-                                ) + '%'
-                            }
+                                <PercentCalc
+                                    Info = {vehdata}
+                                    Filter1 = 'inspection'
+                                    Filter1child = 'end'
+                                    Value1 = {reportdate}
+                                    Divider = {vehicles}
+                                />
                             </td>
                         </tr>
                         <tr>
@@ -356,7 +361,7 @@ export function ComplianceTable() {
                             </td>
                         </tr>
                         <tr>
-                            <td>Percent non-compliant Vehicles</td>
+                            <td className="text-right">% non-compliant Vehicles</td>
                             <td>
                             {
                                 Math.floor(
@@ -397,13 +402,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.license.exp < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                } 
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'license'
+                                        Filter1child = 'exp'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    /> 
                                 </td>
                             </tr>
                             <tr>
@@ -417,13 +422,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.drugscreen.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'drugscreen'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -437,13 +442,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.background.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'background'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -457,13 +462,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.mvr.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'mvr'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -477,13 +482,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.firstaid.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'firstaid'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -497,13 +502,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.cpr.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'cpr'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -517,13 +522,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.defdriv.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'defdriv'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>
@@ -537,13 +542,13 @@ export function ComplianceTable() {
                                     />
                                 </td>
                                 <td>
-                                {
-                                    Math.floor(
-                                        (
-                                            drdata.filter(drdata => drdata.pass.end < reportdate).length
-                                        ) / drivers * 100
-                                    ) + '%'
-                                }
+                                    <PercentCalc
+                                        Info = {drdata}
+                                        Filter1 = 'pass'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {drivers}
+                                    />
                                 </td>
                             </tr>
                             <tr>

@@ -5,7 +5,7 @@ import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj,
 import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, 
     SetmonsteracAdj, setmonsterstats, monsterattackroll, monsterAttackTurn
 } from './monsterfunctions'
-import { CharacterSheet, NameForm, AttackSection, CenterFlexWrapDiv } from '../customComponents'
+import { CharacterSheet, NameForm, AttackSection, CenterFlexWrapDiv, AttackStatusDisplay } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
 
 
@@ -110,24 +110,25 @@ class AttackSim extends React.Component {
             this.setState ({
                 heroInitiative: 'First',
                 monsterInitiative: 'Second',
-                heroAttackVisible: true
+                heroAttackVisible: true  //displays attack button
             });
         } else if (heroinit > monsterinit) {
             this.setState ({
                 monsterInitiative: 'First',
                 heroInitiative: 'Second',
-                monsterAttackVisible: true
+                monsterAttackVisible: true //displays attack button
             }); 
         } else {
             this.setState ({
                 heroInitiative: 'ReRoll',
                 monsterInitiative: 'ReRoll',
-                heroAttackVisible: false,
+                //hides attck buttons due to reroll
+                heroAttackVisible: false,  
                 monsterAttackVisible: false
             });
         };
 
-        //clears out the hit/miss comments since it is a new round.
+        //clears out the hit/miss comments and roll result since it is a new round.
         this.setState ({
             heroDidHit: '',
             monsterDidHit: '',
@@ -214,66 +215,18 @@ class AttackSim extends React.Component {
                             </Button>
                             <Row>
                                 <Col className="w-50">
-                                    <h4 className="text-info">{this.state.heroName}</h4>
-                                    <div className="text-center pt-4">
-                                        <div className="p-3">
-                                            <h4>iniative:</h4>
-                                            <h4 className="text-info">
-                                                {this.state.heroInitiative != "Second" && 
-                                                    <span className="text-info">
-                                                        {this.state.heroInitiative}
-                                                    </span> ||  
-                                                    <span className="text-warning">
-                                                        {this.state.heroInitiative}
-                                                    </span>
-                                                }
-                                            </h4>
-                                        </div>
-                                        <div className="p-3">
-                                            <h4>Hit Points:</h4>
-                                            <h4 className="text-center mt-4">
-                                                {this.state.heroHp != "Dead" &&
-                                                    <span className="text-success">
-                                                        {this.state.heroHp}
-                                                    </span> ||
-                                                    <span className="text-danger">
-                                                        {this.state.heroHp}
-                                                    </span>
-                                                }
-                                            </h4>
-                                        </div>
-                                    </div>
+                                    <AttackStatusDisplay
+                                        Name = {this.state.heroName}
+                                        Initiative = {this.state.heroInitiative}
+                                        HP = {this.state.heroHp}
+                                    />
                                 </Col>
                                 <Col>
-                                    <h4 className="text-info">{this.state.monsterName}</h4>
-                                    <div className="text-center pt-4">
-                                        <div className="p-3">
-                                            <h4>iniative:</h4>
-                                            <h4>
-                                                {this.state.monsterInitiative != "Second" &&
-                                                    <span className="text-info">
-                                                        {this.state.monsterInitiative}
-                                                    </span> ||
-                                                    <span className="text-warning">
-                                                        {this.state.monsterInitiative}
-                                                    </span>
-                                                }
-                                            </h4>
-                                        </div>
-                                        <div className="p-3">
-                                            <h4>Hit Points:</h4>
-                                            <h4 className="text-center mt-4">
-                                                {this.state.monsterHp != "Dead" && 
-                                                    <span className="text-success">
-                                                        {this.state.monsterHp}
-                                                    </span> || 
-                                                    <span className="text-danger h4">
-                                                        {this.state.monsterHp}
-                                                    </span>
-                                                }
-                                            </h4>
-                                        </div>
-                                    </div>
+                                    <AttackStatusDisplay
+                                        Name = {this.state.monsterName}
+                                        Initiative = {this.state.monsterInitiative}
+                                        HP = {this.state.monsterHp}
+                                    />
                                 </Col>
                             </Row>
                         </div>

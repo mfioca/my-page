@@ -203,6 +203,9 @@ function monsterattackroll() {
     };
 };
 
+/*function to determine if the attack button should be displayed. Function is
+called when the attack button is pressed in attackSection (Attackbutton() )
+if hero dead or monster goes 2nd, attack button should not be visible */
 function monsterAttackTurn() {
     if (this.state.heroHp === 'Dead' || this.state.monsterInitiative === 'Second') {
         this.setState(state => (
@@ -213,6 +216,8 @@ function monsterAttackTurn() {
     }
     else {
         this.setState(state => (
+            //if monster goes first, makes sure attack button on hero area is hidden 
+            //and displays attack button for monster.
             {
                 monsterAttackVisible: !state.monsterAttackVisible, 
                 heroAttackVisible: !state.heroAttackVisible

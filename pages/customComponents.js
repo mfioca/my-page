@@ -279,6 +279,28 @@ export class ComplDataFilter extends React.Component {
     }
 }
 
+export class PercentCalc extends React.Component {
+    render() {
+        const Data = this.props.Info
+        const Fone = this.props.Filter1;
+        const Fonekey = this.props.Filter1child;
+        const Vone = this.props.Value1;
+        const Divider = this.props.Divider;
+
+        return (
+            <span>
+                {
+                    Math.floor(
+                        (
+                            Data.filter(Data => Data[Fone][Fonekey] < Vone).length
+                        ) / Divider * 100
+                    ) + '%'
+                }
+            </span>
+        )
+    }
+}
+
 //used in providerCompliance
 export class DateCheck extends React.Component {
     render() {
@@ -377,6 +399,8 @@ export class AttackSection extends React.Component {
         this.AttackButton = this.AttackButton.bind(this);
     }
     
+    //Shows attack roll number with special display for
+    //crit scrike (natural 20 on roll)
     RollResult() {
         if (this.props.Roll === 'Crit Strike') {
             return (
@@ -391,6 +415,8 @@ export class AttackSection extends React.Component {
         }
     }
 
+    //shows attack result of hit/miss or place holder for
+    //result display.
     AttackBanner() {
         const Result = this.props.DidHit;
         if (Result === "Hit") {
@@ -408,6 +434,7 @@ export class AttackSection extends React.Component {
         }
     }
     
+    //Function to display attack button based on initiative roll and attack turn.
     AttackButton() {
         if (this.props.AttackTurn === true) {
             return (
@@ -480,6 +507,46 @@ export class AttackSection extends React.Component {
     }
 }
 
+//used in DandD page to display Name,Initiative and HP status for hero and 
+//monster.
+export class AttackStatusDisplay extends React.Component {
+    render() {
+        return (
+            <div>
+                <h4 className="text-info">{this.props.Name}</h4>
+                <div className="text-center pt-4">
+                    <div className="p-3">
+                        <h4>iniative:</h4>
+                        <h4 className="text-info">
+                            {this.props.Initiative != "Second" && 
+                                <span className="text-info">
+                                    {this.props.Initiative}
+                                </span> ||  
+                                <span className="text-warning">
+                                    {this.props.Initiative}
+                                </span>
+                            }
+                        </h4>
+                    </div>
+                    <div className="p-3">
+                        <h4>Hit Points:</h4>
+                        <h4 className="text-center mt-4">
+                            {this.props.HP != "Dead" &&
+                                <span className="text-success">
+                                    {this.props.HP}
+                                </span> ||
+                                <span className="text-danger">
+                                    {this.props.HP}
+                                </span>
+                            }
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
+
 //D and D application
 export class NameForm extends React.Component {
     constructor(props) {
@@ -501,7 +568,7 @@ export class NameForm extends React.Component {
                             <Button 
                                 className="btn text-white" 
                                 onClick={this.toggle}>
-                                    Change Name:
+                                    {this.state.collapse? 'Hide' : 'Change Name'}
                             </Button>
                         </Label>
                     </div>

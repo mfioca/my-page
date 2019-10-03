@@ -88,8 +88,10 @@ class ProviderCompliance extends React.Component {
 
         return (
             <div>
-                <h1 className="mt-3 text-center">Provider Compliance Report</h1>
-                <h3 className="my-3 text-center">Report Date: 9/22/2019</h3>
+                <div className="my-3 text-center">
+                    <h1>Provider Compliance Report</h1>
+                    <h3>Report Date: 9/22/2019</h3>
+                </div>
                 <ComplianceTable />
                 <h1 className="mt-3 text-center">Compliance by Provider</h1>
                 <Dropdown isOpen={this.state.dropdownOpen} 
@@ -114,13 +116,13 @@ class ProviderCompliance extends React.Component {
                         <Row className="ml-3">
                             <Col>
                                 <p className="ml-2"><b>Address:</b></p>
-                                <p className="ml-3 my-0">{tp.address1}</p>
-                                <p className="ml-3 my-0">{tp.address2}</p>
+                                <p className="ml-4 mt-0 mb-0">{tp.address1}</p>
+                                <p className="ml-4 mt-0 mb-0">{tp.address2}</p>
                             </Col>
-                            <Col className="mr-4">
-                                <p><b>Contact info:</b></p>
-                                <p className="ml-2 my-0"><b>Phone:</b> {tp.phone}</p>
-                                <p className="ml-2 my-0"><b>Email:</b> {tp.email}</p>
+                            <Col>
+                                <p className="ml-2"><b>Contact info:</b></p>
+                                <p className="ml-4 mt-0 mb-0"><b>Phone:</b> {tp.phone}</p>
+                                <p className="ml-4 mt-0 mb-0"><b>Email:</b> {tp.email}</p>
                             </Col>
                         </Row>
                         <p className="pt-4 pl-4"><b>Insurance:</b></p>
@@ -171,7 +173,9 @@ class ProviderCompliance extends React.Component {
                                                 <h3>{driver.name}</h3>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>License State: {driver.license.state}</p>
+                                                <p style={TplistHeader.Value}>
+                                                    License State: {driver.license.state}
+                                                </p>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
                                                 <p style={TplistHeader.Value}>License Exp: &nbsp;
@@ -250,19 +254,27 @@ class ProviderCompliance extends React.Component {
                                                 <h3>Number: {vehicle.number}</h3>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>Vehicle brand: {vehicle.brand}</p>
+                                                <p style={TplistHeader.Value}>
+                                                    Vehicle brand: {vehicle.brand}
+                                                </p>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>Vehicle type: {vehicle.type}</p>
+                                                <p style={TplistHeader.Value}>
+                                                    Vehicle type: {vehicle.type}
+                                                </p>
                                             </Col>
                                             <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>Year: {vehicle.year}</p>
+                                                <p style={TplistHeader.Value}>
+                                                    Year: {vehicle.year}
+                                                </p>
                                             </Col>
                                         </TplistHeaderRow>
                                         <Row className="ml-5 my-2">
                                             <Col>
                                                 <div className="d-inline-block h-25 m-3">
-                                                    <h4>Registration State: <small>{vehicle.registration.state}</small></h4>
+                                                    <h4>Registration State:&nbsp; 
+                                                        <small>{vehicle.registration.state}</small>
+                                                    </h4>
                                                     <p>Exp date: <DateCheck Date={vehicle.registration.end} /></p>
                                                 </div>
                                             </Col>

@@ -152,8 +152,7 @@ function setherostats() {
 
 /* determins if the hero successfully hits the monster.  adjusts for monster
 armor class and hero hit adjustment.  on successful attack role, applies damage
-to monster hp and if hp reaches zero alerts that monster is dead 
-*/
+to monster hp and if hp reaches zero alerts that monster is dead */
 function heroattackroll() {
     let attackroll = (parseInt((Math.random() * 20) + 1));
     let adjattackroll = attackroll + (this.state.heroHitAdj); 
@@ -207,6 +206,10 @@ function heroattackroll() {
     };
 };
 
+
+/*function to determine if the attack button should be displayed. Function is
+called when the attack button is pressed in attackSection (Attackbutton() ) 
+if monster dead or hero goes 2nd, attack button should not be visible */ 
 function heroAttackTurn() {
     if (this.state.monsterHp === 'Dead'  || this.state.heroInitiative === 'Second') {
         this.setState(state => (
@@ -215,6 +218,8 @@ function heroAttackTurn() {
             }
         ));
     } else {
+        //if hero goes first, makes sure attack button on monster area is hidden 
+        //and displays attack button for hero.
         this.setState(state => (
             {
                 monsterAttackVisible: !state.monsterAttackVisible, 

@@ -33,7 +33,7 @@ const customFilter = ({ fieldName, filter, onChange }) => {
           const Two = b[fieldName];
       
           return (One < Two) ? -1 : (One > Two) ? 1 : 0;
-      })
+        })
         .map(item => item[fieldName])
         .filter((item, i, s) => s.lastIndexOf(item) == i)
         .map(function (value) {
@@ -62,7 +62,7 @@ class NetworkList extends Component {
     return (
       <div>
         <ReactTable 
-          className= "Provider-table -striped -highlight center shadow-sm"
+          className= "Provider-table -striped -highlight center shadow-sm mb-5"
           data= {networkdata}
           defaultPageSize={20}
           style={{
@@ -81,7 +81,6 @@ class NetworkList extends Component {
                   id: "Name",
                   accessor: d => d.Name,
                   width: 140,
-                  
                   //*sorting method to allow for listing of numerical order listed in the name
                   sortMethod: (a, b) => {
                     if (a.length === b.length) {

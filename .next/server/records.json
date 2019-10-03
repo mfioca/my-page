@@ -9,16 +9,17 @@
       "multi private-next-pages/providerData.js": 5,
       "multi private-next-pages/tvpage.js": 6,
       "multi private-next-pages/tvpost.js": 7,
-      "multi private-next-pages/provider_data/networkTable.js": 8,
-      "multi private-next-pages/provider_data/prividerCompliance.js": 9,
-      "multi private-next-pages/provider_data/providerStats.js": 10,
-      "multi private-next-pages/DandD/attacksim.js": 11,
-      "multi private-next-pages/DandD/herofunctions.js": 12,
-      "multi private-next-pages/DandD/monsterfunctions.js": 13,
-      "multi private-next-pages/tv_info/TvmazeComponents.js": 14,
-      "multi next/dist/pages/_app": 15,
-      "multi next/dist/pages/_error": 16,
-      "multi next/dist/pages/_document": 17
+      "multi private-next-pages/DandD/attacksim - Copy.js": 8,
+      "multi private-next-pages/DandD/attacksim.js": 9,
+      "multi private-next-pages/DandD/herofunctions.js": 10,
+      "multi private-next-pages/DandD/monsterfunctions.js": 11,
+      "multi private-next-pages/provider_data/networkTable.js": 12,
+      "multi private-next-pages/provider_data/providerStats.js": 13,
+      "multi private-next-pages/provider_data/prividerCompliance.js": 14,
+      "multi private-next-pages/tv_info/TvmazeComponents.js": 15,
+      "multi next/dist/pages/_app": 16,
+      "multi next/dist/pages/_error": 17,
+      "multi next/dist/pages/_document": 18
     },
     "usedIds": {
       "0": 0,
@@ -38,7 +39,8 @@
       "14": 14,
       "15": 15,
       "16": 16,
-      "17": 17
+      "17": 17,
+      "18": 18
     }
   },
   "chunks": {
