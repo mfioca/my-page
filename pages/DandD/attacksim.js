@@ -167,7 +167,7 @@ class AttackSim extends React.Component {
                                 NameSubmit = {this.heroNameSubmit}
                             />
                         </Col>
-                        <Col className="m-1  bg-dark text-white">
+                        <Col className="m-1 bg-dark text-white">
                             <h5 className="mt-5 ml-5"><b>Monster Name: </b>
                                 <span className="text-info ml-5 h3">
                                     {this.state.monsterName}
@@ -193,7 +193,7 @@ class AttackSim extends React.Component {
                     </Row>
                 </CenterFlexWrapDiv>
                 <CenterFlexWrapDiv className="m-0 p-0">
-                    <div  className="bg-dark m-1 p-0">
+                    <div  className="bg-dark m-1 p-0 mb-2">
                         <AttackSection
                             AC = {this.state.heroAc}
                             HitAdj = {this.state.heroHitAdj}
@@ -205,8 +205,8 @@ class AttackSim extends React.Component {
                             AttackTurn = {this.state.heroAttackVisible}
                         /> 
                     </div>
-                    <div className="bg-dark m-1 p-0 col" xs="3">
-                        <div className="text-center bg-dark m-0 p-0 text-white">
+                    <div className="bg-dark m-1 mb-2 p-0 col" xs="3">
+                        <div className="text-center m-0 p-0 text-white">
                             <Button 
                                 type="button" 
                                 className="m-5 w-50"  
@@ -231,7 +231,7 @@ class AttackSim extends React.Component {
                             </Row>
                         </div>
                     </div>
-                    <div className="bg-dark m-1 p-0">
+                    <div className="bg-dark m-1 p-0 mb-2">
                         <AttackSection
                             AC = {this.state.monsterAc}
                             HitAdj = {this.state.monsterHitAdj}

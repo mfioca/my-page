@@ -1,10 +1,9 @@
 import Layout from '../components/layout'
-import TvMazePage from './tv_info/TvmazeComponents.js'
 import { Card, CardImg, CardBody, CardTitle, Row, Col, Table } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvpageStyle } from './jsxstyles'
-import { TvPostInfoLabel, TvPostInfoValue, NewTabLink, LeftFlexWrapDiv } from './customComponents'
+import { TvPostInfoLabel, TvPostInfoValue, NewTabLink, LeftFlexWrapDiv, TvMazePage } from './customComponents'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'

@@ -8,12 +8,11 @@ var vehdata = require('./vehicle.json');
 var drdata = require('./driver.json');
 
 
-
 export function Networkinfo() {
     return (
         <div>
             <h1 className="mt-5 text-center">Network Summary</h1>
-            <h3 className="mt-2 mb-5 text-center">Report Date: 9/22/2019</h3>
+            <h3 className="mt-2 mb-5 text-center">Report Date: 09/22/2019</h3>
             <Row>
                 <Col className="px-5 pt-3">
                     <Table striped bordered size="sm" className="shadow-sm">

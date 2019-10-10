@@ -60,6 +60,16 @@ export const TvpageStyle = {
         margin: 4,
         wordWwrap: 'break-word',
         maxFontSize: '1vw'
+    },
+    Layout: {
+        margin: 20,
+        padding: 20,
+        border: '1px solid #DDD',
+        backgroundColor: 'white'
+    },
+    Link: {
+        marginRight: 15,
+        fontSize: 20
     }
 }
 
@@ -74,13 +84,21 @@ export const DandDStyle = {
     }
 }
 
-export const TplistHeader = {
+//used in provider compliance drivers and
+//vehicles lists
+export const Tplist = {
     Title: {
         textAlign: 'center',
         marginTop: '10px'
     },
     Value: {
         paddingTop: '10px'
+    },
+    Info: {
+        marginLeft: '25px',
+        marginTop: '0px',
+        marginBottom: '0px'
     }
+
 }
 

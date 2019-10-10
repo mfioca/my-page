@@ -2,10 +2,9 @@ import React from 'react'
 import { Form, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
 import { TvpageStyle } from './jsxstyles'
 import Layout from '../components/layout'
-import TvMazePage from './tv_info/TvmazeComponents.js'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import { NewTabLink, LeftFlexWrapDiv } from './customComponents'
+import { NewTabLink, LeftFlexWrapDiv, TvMazePage } from './customComponents'
 
 
 const noimage = '/static/images/no-img.png';

@@ -5,7 +5,7 @@ import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem,
 import classnames from 'classnames'
 import { DateCheck, TplistHeaderRow } from '../customComponents'
 import { ComplianceTable } from './providerStats'
-import { TplistHeader, Pointer } from '../jsxstyles'
+import { Tplist, Pointer } from '../jsxstyles'
 
 var tpdata = require('./company.json');
 var vehdata = require('./vehicle.json');
@@ -48,6 +48,7 @@ function ProviderDropdown() {
         </DropdownMenu>
     );
 }
+
 
 
 class ProviderCompliance extends React.Component {
@@ -116,31 +117,31 @@ class ProviderCompliance extends React.Component {
                         <Row className="ml-3">
                             <Col>
                                 <p className="ml-2"><b>Address:</b></p>
-                                <p className="ml-4 mt-0 mb-0">{tp.address1}</p>
-                                <p className="ml-4 mt-0 mb-0">{tp.address2}</p>
+                                <p style={Tplist.Info}>{tp.address1}</p>
+                                <p style={Tplist.Info}>{tp.address2}</p>
                             </Col>
                             <Col>
                                 <p className="ml-2"><b>Contact info:</b></p>
-                                <p className="ml-4 mt-0 mb-0"><b>Phone:</b> {tp.phone}</p>
-                                <p className="ml-4 mt-0 mb-0"><b>Email:</b> {tp.email}</p>
+                                <p style={Tplist.Info}><b>Phone:</b> {tp.phone}</p>
+                                <p style={Tplist.Info}><b>Email:</b> {tp.email}</p>
                             </Col>
                         </Row>
                         <p className="pt-4 pl-4"><b>Insurance:</b></p>
-                        <Row xs="auto" className="p-0 mr-4">
-                            <Col className="ml-5">
-                                <p className="ml-5">Type: {tp.gl.type}</p>
-                                <p className="ml-5">Company: {tp.gl.company}</p>
-                                <p className="ml-5">Exp Date: <DateCheck Date={tp.gl.end} /></p>
+                        <Row className=" ml-3">
+                            <Col className="ml-2 mb-4">
+                                <p style={Tplist.Info}><b>Type:</b> {tp.gl.type}</p>
+                                <p style={Tplist.Info}><b>Company:</b> {tp.gl.company}</p>
+                                <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={tp.gl.end} /></p>
                             </Col>
-                            <Col className="ml-5">
-                                <p className="ml-5">Type: {tp.veh.type}</p>
-                                <p className="ml-5">Company: {tp.veh.company}</p>
-                                <p className="ml-5">Exp Date: <DateCheck Date={tp.veh.end} /></p>
+                            <Col className="ml-2">
+                                <p style={Tplist.Info}><b>Type:</b> {tp.veh.type}</p>
+                                <p style={Tplist.Info}><b>Company:</b> {tp.veh.company}</p>
+                                <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={tp.veh.end} /></p>
                             </Col>
-                            <Col className="ml-5">
-                                <p className="ml-5">Type: {tp.wc.type}</p>
-                                <p className="ml-5">Company: {tp.wc.company}</p>
-                                <p className="ml-5">Exp Date: <DateCheck Date={tp.wc.end} /></p>
+                            <Col className="ml-2">
+                                <p style={Tplist.Info}><b>Type:</b> {tp.wc.type}</p>
+                                <p style={Tplist.Info}><b>Company:</b> {tp.wc.company}</p>
+                                <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={tp.wc.end} /></p>
                             </Col>  
                         </Row>
                     </div>
@@ -165,20 +166,19 @@ class ProviderCompliance extends React.Component {
                         </Nav>
                         <TabContent activeTab={this.state.activeTab}>
                             <TabPane tabId="1">
-                                <h2 className="my-3">Drivers:</h2>
                                 {drfilter.map(driver => (
                                     <div key={driver.id}>
                                         <TplistHeaderRow>
-                                            <Col style={TplistHeader.Title}>
+                                            <Col style={Tplist.Title}>
                                                 <h3>{driver.name}</h3>
                                             </Col>
-                                            <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>
+                                            <Col style={Tplist.Title}>
+                                                <p style={Tplist.Value}>
                                                     License State: {driver.license.state}
                                                 </p>
                                             </Col>
-                                            <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>License Exp: &nbsp;
+                                            <Col style={Tplist.Title}>
+                                                <p style={Tplist.Value}>License Exp: &nbsp;
                                                     <DateCheck Date={driver.license.exp} />
                                                 </p>
                                             </Col>
@@ -250,21 +250,21 @@ class ProviderCompliance extends React.Component {
                                 {vehfilter.map(vehicle => (
                                     <div key={vehicle.id}>
                                         <TplistHeaderRow>
-                                            <Col style={TplistHeader.Title}>
+                                            <Col style={Tplist.Title}>
                                                 <h3>Number: {vehicle.number}</h3>
                                             </Col>
-                                            <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>
+                                            <Col style={Tplist.Title}>
+                                                <p style={Tplist.Value}>
                                                     Vehicle brand: {vehicle.brand}
                                                 </p>
                                             </Col>
-                                            <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>
+                                            <Col style={Tplist.Title}>
+                                                <p style={Tplist.Value}>
                                                     Vehicle type: {vehicle.type}
                                                 </p>
                                             </Col>
-                                            <Col style={TplistHeader.Title}>
-                                                <p style={TplistHeader.Value}>
+                                            <Col style={Tplist.Title}>
+                                                <p style={Tplist.Value}>
                                                     Year: {vehicle.year}
                                                 </p>
                                             </Col>

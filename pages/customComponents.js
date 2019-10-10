@@ -9,8 +9,9 @@ import {
     Table, Jumbotron 
 } from 'reactstrap'
 
-import { HomeCardStyle, DandDStyle, ImageStyles
+import { HomeCardStyle, DandDStyle, ImageStyles, TvpageStyle
 } from './jsxstyles'
+import Link from 'next/link'
 
 
 /* *********************************
@@ -47,6 +48,25 @@ export function LeftFlexWrapDiv(props) {
     );
 }
 
+export function TvMazeHeader() {
+    return (
+        <div>
+        <Link href="/tvpage">
+            <a style={TvpageStyle.Link}>Search Page</a>
+        </Link>
+        </div>
+    )
+}
+
+export function TvMazePage(props) {
+    return (
+        <div style={TvpageStyle.Layout}>
+            <TvMazeHeader />
+            {props.children}
+        </div>
+    )
+}
+
 export function TvPostInfoLabel(props) {
     return (
     <td className="h2 text-left w-25 m-0 p-2">
@@ -71,6 +91,77 @@ export function TplistHeaderRow (props) {
         </Row>
     )
 }
+
+/* *********************** 
+*   Export functions     * 
+**************************/
+
+//used in providerstats
+export function NetworkDataFilter(props) {
+    let Fone = props.Filter1;
+    let Vone = props.Value1;
+    let Ftwo = props.Filter2;
+    let Vtwo = props.Value2;
+    let Data = props.Info;
+    
+    return (
+        <span>{Data.filter(Data => Data[Fone] === Vone && Data[Ftwo] === Vtwo).length}</span>
+    );
+}
+
+//used in providerstats
+export function ComplDataFilter(props) {
+    const Data = props.Info
+    const Fone = props.Filter1;
+    const Fonekey = props.Filter1child;
+    const Vone = props.Value1;
+
+    return (
+        <span>{Data.filter(Data => Data[Fone][Fonekey] < Vone).length}</span>
+    )
+}
+
+//used in providerstats
+export function PercentCalc(props) {
+    const Data = props.Info
+    const Fone = props.Filter1;
+    const Fonekey = props.Filter1child;
+    const Vone = props.Value1;
+    const Divider = props.Divider;
+
+    return (
+        <span>
+            {
+                Math.floor(
+                    (
+                        Data.filter(Data => Data[Fone][Fonekey] < Vone).length
+                    ) / Divider * 100
+                ) + '%'
+            }
+        </span>
+    )
+}
+
+//used in providerCompliance
+export function DateCheck(props) {
+    var date = props.Date;
+    
+    if (date < "2019-09-22") {
+        return (
+            <span className="bg-danger text-white">{date}</span>
+        )
+    } else if (date < "2019-10-22" && date > "2019-09-22") {
+        return (
+            <span className="bg-warning text-white">{date}</span>
+        )
+    } else {
+        return (
+            <span>{date}</span>
+        );
+    }   
+}
+
+
 
 /* *********************** 
 *   Export Classes       * 
@@ -250,77 +341,6 @@ export class ThreeColumnCard extends React.Component{
     }
 }
 
-//used in providerstats
-export class NetworkDataFilter extends React.Component {
-    render() {
-        let Fone = this.props.Filter1;
-        let Vone = this.props.Value1;
-        let Ftwo = this.props.Filter2;
-        let Vtwo = this.props.Value2;
-        let Data = this.props.Info;
-        
-        return (
-            <span>{Data.filter(Data => Data[Fone] === Vone && Data[Ftwo] === Vtwo).length}</span>
-        );
-    }
-}
-
-//used in providerstats
-export class ComplDataFilter extends React.Component {
-    render() {
-        const Data = this.props.Info
-        const Fone = this.props.Filter1;
-        const Fonekey = this.props.Filter1child;
-        const Vone = this.props.Value1;
-
-        return (
-            <span>{Data.filter(Data => Data[Fone][Fonekey] < Vone).length}</span>
-        )
-    }
-}
-
-export class PercentCalc extends React.Component {
-    render() {
-        const Data = this.props.Info
-        const Fone = this.props.Filter1;
-        const Fonekey = this.props.Filter1child;
-        const Vone = this.props.Value1;
-        const Divider = this.props.Divider;
-
-        return (
-            <span>
-                {
-                    Math.floor(
-                        (
-                            Data.filter(Data => Data[Fone][Fonekey] < Vone).length
-                        ) / Divider * 100
-                    ) + '%'
-                }
-            </span>
-        )
-    }
-}
-
-//used in providerCompliance
-export class DateCheck extends React.Component {
-    render() {
-        var date = this.props.Date;
-        if (date < "2019-09-22") {
-            return (
-                <span className="bg-danger text-white">{date}</span>
-            )
-        } else if (date < "2019-10-22" && date > "2019-09-22") {
-            return (
-                <span className="bg-warning text-white">{date}</span>
-            )
-        } else {
-            return (
-                <span>{date}</span>
-            );
-        }
-    }
-}
-
 //D and D application
 export class CharacterSheet extends React.Component {
     render() {
@@ -380,7 +400,7 @@ export class CharacterSheet extends React.Component {
                         <div className="text-center ">
                             <img  style={DandDStyle.Avatar} 
                                 src={this.props.ImgUrl} 
-                                alt="hero"
+                                alt="Avatar"
                             />
                         </div>
                     </Col>
@@ -405,7 +425,7 @@ export class AttackSection extends React.Component {
         if (this.props.Roll === 'Crit Strike') {
             return (
                 <span className="text-danger font-italic">
-                    {this.props.Roll}!
+                    Critical Strike!
                 </span>
             );
         } else {
@@ -421,11 +441,11 @@ export class AttackSection extends React.Component {
         const Result = this.props.DidHit;
         if (Result === "Hit") {
             return (
-                <h2 className="alert alert-success py-2 text-center">{Result}</h2>
+                <h2 className="alert alert-success py-2 text-center">Hit!</h2>
             );
         } if (Result === "Miss") {
             return (
-                <h2 className="alert alert-danger py-2 text-center">{Result}</h2>
+                <h2 className="alert alert-danger py-2 text-center">    Miss</h2>
             );
         } else {
             return (
@@ -453,7 +473,7 @@ export class AttackSection extends React.Component {
 
     render() {
         return (
-            <div className="bg-dark">
+            <div>
                 <Row>
                     <Col className="my-4 mx-5 d-flex justify-content-center">
                         <div style={DandDStyle.thumbnail}>
