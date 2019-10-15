@@ -55,10 +55,6 @@ class NetworkList extends Component {
   }
  
   render() {
-    return networkdata ? this.renderData(networkdata) : this.renderLoading();
-  }
-
-  renderData(networkdata) {
     return (
       <div>
         <ReactTable 
@@ -225,9 +221,6 @@ class NetworkList extends Component {
       </ReactTable>
     </div>
     );
-  } 
-  renderLoading() {
-    return <div>Loading...</div>;
   }
 }
 

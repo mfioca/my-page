@@ -49,7 +49,180 @@ function ProviderDropdown() {
     );
 }
 
+function CompanyTab(props) {
+    let TP = props.Data;
+    return (
+        <div className="bg-light shadow">
+            <p className="pt-4 pl-4"><b>Provider:</b> {TP.company}</p>
+            <Row className="ml-3">
+                <Col>
+                    <p className="ml-2"><b>Address:</b></p>
+                    <p style={Tplist.Info}>{TP.address1}</p>
+                    <p style={Tplist.Info}>{TP.address2}</p>
+                </Col>
+                <Col>
+                    <p className="ml-2"><b>Contact info:</b></p>
+                    <p style={Tplist.Info}><b>Phone:</b> {TP.phone}</p>
+                    <p style={Tplist.Info}><b>Email:</b> {TP.email}</p>
+                </Col>
+            </Row>
+            <p className="pt-4 pl-4"><b>Insurance:</b></p>
+            <Row className=" ml-3">
+                <Col className="ml-2 mb-4">
+                    <p style={Tplist.Info}><b>Type:</b> {TP.gl.type}</p>
+                    <p style={Tplist.Info}><b>Company:</b> {TP.gl.company}</p>
+                    <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={TP.gl.end} /></p>
+                </Col>
+                <Col className="ml-2">
+                    <p style={Tplist.Info}><b>Type:</b> {TP.veh.type}</p>
+                    <p style={Tplist.Info}><b>Company:</b> {TP.veh.company}</p>
+                    <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={TP.veh.end} /></p>
+                </Col>
+                <Col className="ml-2">
+                    <p style={Tplist.Info}><b>Type:</b> {TP.wc.type}</p>
+                    <p style={Tplist.Info}><b>Company:</b> {TP.wc.company}</p>
+                    <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={TP.wc.end} /></p>
+                </Col>  
+            </Row>
+        </div>
+    );
+}
 
+function DriverTab(props) {
+    let Driver = props.Data;
+
+    return (
+        <div>
+            {Driver.map(driver => (
+                <div key={driver.id}>
+                    <TplistHeaderRow>
+                        <Col style={Tplist.Title}>
+                            <h3>{driver.name}</h3>
+                        </Col>
+                        <Col style={Tplist.Title}>
+                            <p style={Tplist.Value}>
+                                License State: {driver.license.state}
+                            </p>
+                        </Col>
+                        <Col style={Tplist.Title}>
+                            <p style={Tplist.Value}>License Exp: &nbsp;
+                                <DateCheck Date={driver.license.exp} />
+                            </p>
+                        </Col>
+                    </TplistHeaderRow>
+                    <Row className="ml-5 my-4">
+                        <Col>
+                            <Table bordered className="w-75 shadow-sm">
+                                <thead>
+                                    <tr className="bg-light">
+                                        <th>Training</th>
+                                        <th>Company</th>
+                                        <th>Exp date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{driver.firstaid.type}</td>
+                                        <td>{driver.firstaid.company}</td>
+                                        <td><DateCheck Date={driver.firstaid.end}/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{driver.cpr.type}</td>
+                                        <td>{driver.cpr.company}</td>
+                                        <td><DateCheck Date={driver.cpr.end}/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{driver.defdriv.type}</td>
+                                        <td>{driver.defdriv.company}</td>
+                                        <td><DateCheck Date={driver.defdriv.end}/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{driver.pass.type}</td>
+                                        <td>{driver.pass.company}</td>
+                                        <td><DateCheck Date={driver.pass.end}/></td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Col>
+                        <Col>
+                            <Table bordered className="w-75 shadow-sm">
+                                <thead>
+                                    <tr className="bg-light">
+                                        <th>Screening</th>
+                                        <th>Exp date</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{driver.drugscreen.type}</td>
+                                        <td><DateCheck Date={driver.drugscreen.end}/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{driver.background.type}</td>
+                                        <td><DateCheck Date={driver.background.end}/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{driver.mvr.type}</td>
+                                        <td><DateCheck Date={driver.mvr.end}/></td>
+                                    </tr>
+                                </tbody>
+                            </Table>
+                        </Col>
+                    </Row>
+                </div>
+            ))}
+        </div>
+    );
+}
+
+function VehicleTab(props) {
+    let Vehicle = props.Data;
+    
+    return (
+        <div>
+            {Vehicle.map(vehicle => (
+                <div key={vehicle.id}>
+                    <TplistHeaderRow>
+                        <Col style={Tplist.Title}>
+                            <h3>Number: {vehicle.number}</h3>
+                        </Col>
+                        <Col style={Tplist.Title}>
+                            <p style={Tplist.Value}>
+                                Vehicle brand: {vehicle.brand}
+                            </p>
+                        </Col>
+                        <Col style={Tplist.Title}>
+                            <p style={Tplist.Value}>
+                                Vehicle type: {vehicle.type}
+                            </p>
+                        </Col>
+                        <Col style={Tplist.Title}>
+                            <p style={Tplist.Value}>
+                                Year: {vehicle.year}
+                            </p>
+                        </Col>
+                    </TplistHeaderRow>
+                    <Row className="ml-5 my-2">
+                        <Col>
+                            <div className="d-inline-block h-25 m-3">
+                                <h4>Registration State:&nbsp; 
+                                    <small>{vehicle.registration.state}</small>
+                                </h4>
+                                <p>Exp date: <DateCheck Date={vehicle.registration.end} /></p>
+                            </div>
+                        </Col>
+                        <Col >
+                            <div className="d-inline-block h-25 m-3">
+                                <h4>Inspection:</h4>
+                                <p>Exp date: <DateCheck Date={vehicle.inspection.end} /></p>
+                            </div>
+                        </Col>
+                    </Row>
+                </div>
+            ))}
+        </div>
+    );
+}
 
 class ProviderCompliance extends React.Component {
     constructor(props) {
@@ -112,40 +285,8 @@ class ProviderCompliance extends React.Component {
                     </h5>
                 </div>
                 <div className="mt-5 mx-5">
-                    <div className="bg-light shadow">
-                        <p className="pt-4 pl-4"><b>Provider:</b> {this.state.value}</p>
-                        <Row className="ml-3">
-                            <Col>
-                                <p className="ml-2"><b>Address:</b></p>
-                                <p style={Tplist.Info}>{tp.address1}</p>
-                                <p style={Tplist.Info}>{tp.address2}</p>
-                            </Col>
-                            <Col>
-                                <p className="ml-2"><b>Contact info:</b></p>
-                                <p style={Tplist.Info}><b>Phone:</b> {tp.phone}</p>
-                                <p style={Tplist.Info}><b>Email:</b> {tp.email}</p>
-                            </Col>
-                        </Row>
-                        <p className="pt-4 pl-4"><b>Insurance:</b></p>
-                        <Row className=" ml-3">
-                            <Col className="ml-2 mb-4">
-                                <p style={Tplist.Info}><b>Type:</b> {tp.gl.type}</p>
-                                <p style={Tplist.Info}><b>Company:</b> {tp.gl.company}</p>
-                                <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={tp.gl.end} /></p>
-                            </Col>
-                            <Col className="ml-2">
-                                <p style={Tplist.Info}><b>Type:</b> {tp.veh.type}</p>
-                                <p style={Tplist.Info}><b>Company:</b> {tp.veh.company}</p>
-                                <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={tp.veh.end} /></p>
-                            </Col>
-                            <Col className="ml-2">
-                                <p style={Tplist.Info}><b>Type:</b> {tp.wc.type}</p>
-                                <p style={Tplist.Info}><b>Company:</b> {tp.wc.company}</p>
-                                <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={tp.wc.end} /></p>
-                            </Col>  
-                        </Row>
-                    </div>
-                    <div className="mt-3">
+                    <CompanyTab Data = {tp} />
+                    <div className="my-3">
                         <Nav tabs>
                             <NavItem>
                                 <NavLink
@@ -165,128 +306,11 @@ class ProviderCompliance extends React.Component {
                             </NavItem>
                         </Nav>
                         <TabContent activeTab={this.state.activeTab}>
-                            <TabPane tabId="1">
-                                {drfilter.map(driver => (
-                                    <div key={driver.id}>
-                                        <TplistHeaderRow>
-                                            <Col style={Tplist.Title}>
-                                                <h3>{driver.name}</h3>
-                                            </Col>
-                                            <Col style={Tplist.Title}>
-                                                <p style={Tplist.Value}>
-                                                    License State: {driver.license.state}
-                                                </p>
-                                            </Col>
-                                            <Col style={Tplist.Title}>
-                                                <p style={Tplist.Value}>License Exp: &nbsp;
-                                                    <DateCheck Date={driver.license.exp} />
-                                                </p>
-                                            </Col>
-                                        </TplistHeaderRow>
-                                        <Row className="ml-5 my-4">
-                                            <Col>
-                                                <Table bordered className="w-75 shadow-sm">
-                                                    <thead>
-                                                        <tr className="bg-light">
-                                                            <th>Training</th>
-                                                            <th>Company</th>
-                                                            <th>Exp date</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>{driver.firstaid.type}</td>
-                                                            <td>{driver.firstaid.company}</td>
-                                                            <td><DateCheck Date={driver.firstaid.end}/></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>{driver.cpr.type}</td>
-                                                            <td>{driver.cpr.company}</td>
-                                                            <td><DateCheck Date={driver.cpr.end}/></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>{driver.defdriv.type}</td>
-                                                            <td>{driver.defdriv.company}</td>
-                                                            <td><DateCheck Date={driver.defdriv.end}/></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>{driver.pass.type}</td>
-                                                            <td>{driver.pass.company}</td>
-                                                            <td><DateCheck Date={driver.pass.end}/></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </Table>
-                                            </Col>
-                                            <Col >
-                                                <Table bordered className="w-75 shadow-sm">
-                                                    <thead>
-                                                        <tr className="bg-light">
-                                                            <th>Screening</th>
-                                                            <th>Exp date</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <td>{driver.drugscreen.type}</td>
-                                                            <td><DateCheck Date={driver.drugscreen.end}/></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>{driver.background.type}</td>
-                                                            <td><DateCheck Date={driver.background.end}/></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>{driver.mvr.type}</td>
-                                                            <td><DateCheck Date={driver.mvr.end}/></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </Table>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                ))}
+                            <TabPane tabId="1" className="mt-3">
+                                <DriverTab Data = {drfilter} />
                             </TabPane>
-                            <TabPane tabId="2">
-                                <h2 className="my-3">Vehicles:</h2>
-                                {vehfilter.map(vehicle => (
-                                    <div key={vehicle.id}>
-                                        <TplistHeaderRow>
-                                            <Col style={Tplist.Title}>
-                                                <h3>Number: {vehicle.number}</h3>
-                                            </Col>
-                                            <Col style={Tplist.Title}>
-                                                <p style={Tplist.Value}>
-                                                    Vehicle brand: {vehicle.brand}
-                                                </p>
-                                            </Col>
-                                            <Col style={Tplist.Title}>
-                                                <p style={Tplist.Value}>
-                                                    Vehicle type: {vehicle.type}
-                                                </p>
-                                            </Col>
-                                            <Col style={Tplist.Title}>
-                                                <p style={Tplist.Value}>
-                                                    Year: {vehicle.year}
-                                                </p>
-                                            </Col>
-                                        </TplistHeaderRow>
-                                        <Row className="ml-5 my-2">
-                                            <Col>
-                                                <div className="d-inline-block h-25 m-3">
-                                                    <h4>Registration State:&nbsp; 
-                                                        <small>{vehicle.registration.state}</small>
-                                                    </h4>
-                                                    <p>Exp date: <DateCheck Date={vehicle.registration.end} /></p>
-                                                </div>
-                                            </Col>
-                                            <Col >
-                                                <div className="d-inline-block h-25 m-3">
-                                                    <h4>Inspection:</h4>
-                                                    <p>Exp date: <DateCheck Date={vehicle.inspection.end} /></p>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </div>
-                                ))}
+                            <TabPane tabId="2" className="mt-3">
+                                <VehicleTab Data = {vehfilter} />
                             </TabPane>
                         </TabContent>
                     </div>

@@ -6,12 +6,12 @@ const Bodystyle = {
   minHeight: '100vh',
   maxWidth: '98%',
   marginRight: 'auto',
-  marginLeft: 'auto'
+  marginLeft: 'auto',
 }
 
 export default function Layout(props) {
   return (
-    <div className="Layout">
+    <div>
       <Header />
       <div style={Bodystyle}>
         {props.children}

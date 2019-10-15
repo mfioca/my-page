@@ -16,7 +16,7 @@ class ProviderData extends React.Component {
 
         this.toggle = this.toggle.bind(this);
         this.state = {
-            activeTab: '2'
+            activeTab: '1'
         };
     }
     
@@ -62,7 +62,7 @@ class ProviderData extends React.Component {
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1" style={TabStyle}>
                         <Networkinfo />
-                            <NetworkList />
+                        <NetworkList />
                     </TabPane>
                     <TabPane tabId="2" style={TabStyle}>
                         <ProviderCompliance />

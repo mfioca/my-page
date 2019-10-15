@@ -161,8 +161,6 @@ export function DateCheck(props) {
     }   
 }
 
-
-
 /* *********************** 
 *   Export Classes       * 
 **************************/
@@ -445,7 +443,7 @@ export class AttackSection extends React.Component {
             );
         } if (Result === "Miss") {
             return (
-                <h2 className="alert alert-danger py-2 text-center">    Miss</h2>
+                <h2 className="alert alert-danger py-2 text-center">Miss</h2>
             );
         } else {
             return (
@@ -454,7 +452,9 @@ export class AttackSection extends React.Component {
         }
     }
     
-    //Function to display attack button based on initiative roll and attack turn.
+    /*Function to display attack button based on initiative roll and attack turn. Pulls
+    AttackTurn functon and Attackroll functions from either herofunctions.js or monsterfunctions.js
+    as itentified in props */
     AttackButton() {
         if (this.props.AttackTurn === true) {
             return (

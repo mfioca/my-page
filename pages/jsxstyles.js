@@ -41,7 +41,7 @@ export const ImageStyles = {
         width: '300px',
         height: '300px',
         padding: '5px'
-    },
+    }
 }
 
 export const TvpageStyle = {
