@@ -51,9 +51,9 @@ export function LeftFlexWrapDiv(props) {
 export function TvMazeHeader() {
     return (
         <div>
-        <Link href="/tvpage">
-            <a style={TvpageStyle.Link}>Search Page</a>
-        </Link>
+            <Link href="/tvpage">
+                <a style={TvpageStyle.Link}>Search Page</a>
+            </Link>
         </div>
     )
 }
@@ -243,12 +243,13 @@ export class CustomJumbo extends React.Component {
 //used in about page
 export class AboutMedia extends React.Component{
     render() {
+
         if (this.props.Align === "Right") {
             return (
                 <div className="py-2">
                     <Card className={this.props.Class}>
                         <Row>
-                            <Col >
+                            <Col>
                                 <CardImg 
                                     style={ImageStyles.About} 
                                     src={this.props.ImgUrl} 
@@ -282,7 +283,7 @@ export class AboutMedia extends React.Component{
                                     {this.props.Description}
                             </CardBody>
                             </Col>
-                            <Col >
+                            <Col>
                                 <CardImg 
                                     style={ImageStyles.About} 
                                     src={this.props.ImgUrl} 
@@ -303,7 +304,7 @@ export class ThreeColumnCard extends React.Component{
         return(
             <div className="py-3">
                 <Card className={this.props.Class}>
-                <CardTitle><h1>{this.props.Title}</h1></CardTitle>
+                    <CardTitle><h1>{this.props.Title}</h1></CardTitle>
                     <Row className="text-left">
                         <Col >
                             <CardBody>
@@ -447,7 +448,9 @@ export class AttackSection extends React.Component {
             );
         } else {
             return (
-                <h6 className="text-white text-center">(Attack Result displayed here)</h6>
+                <h6 className="text-white text-center">
+                    (Attack Result displayed here)
+                </h6>
             );
         }
     }
@@ -460,8 +463,9 @@ export class AttackSection extends React.Component {
             return (
                 <Button  
                     onMouseDown={this.props.AttackRoll} 
-                    onMouseUp = {this.props.NextTurn}>
-                        {this.props.RollTitle}
+                    onMouseUp = {this.props.NextTurn}
+                >
+                    {this.props.RollTitle}
                 </Button>
             )
         } else {
@@ -598,7 +602,7 @@ export class NameForm extends React.Component {
                                 <Input
                                     type="text"
                                     maxLength="20"
-                                    value={this.props.value}
+                                    value={this.props.Value}
                                     onChange={this.props.NameChange}
                                     //Prevent enter key submit
                                     onKeyPress={event => {

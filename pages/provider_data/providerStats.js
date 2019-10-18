@@ -217,163 +217,163 @@ export function ComplianceTable() {
             <h2 className="text-center my-5">Compliance Summary</h2>
             <Row>
                 <Col>
-                <Table striped bordered size="sm" className="shadow-sm">
-                    <tbody>
-                        <tr>
-                            <th colSpan="2" className="text-center">Insurance</th>
-                        </tr>
-                        <tr>
-                            <th>Number of Providers</th>
-                            <td>{providers}</td>
-                        </tr>
-                        <tr>
-                            <td>Expired GL policies</td>
-                            <td>
-                                <ComplDataFilter
-                                    Info = {tpdata}
-                                    Filter1 = 'gl'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="text-right">% non-compliant GL policies</td>
-                            <td>
-                                <PercentCalc
-                                    Info = {tpdata}
-                                    Filter1 = 'gl'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate}
-                                    Divider = {providers}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Expired Vehicle policies</td>
-                            <td>
-                                <ComplDataFilter
-                                    Info = {tpdata}
-                                    Filter1 = 'veh'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="text-right">% non-compliant Vehicle policies</td>
-                            <td>
-                                <PercentCalc
-                                    Info = {tpdata}
-                                    Filter1 = 'veh'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate}
-                                    Divider = {providers}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Expired Workers Comp policies</td>
-                            <td>
-                                <ComplDataFilter
-                                    Info = {tpdata}
-                                    Filter1 = 'wc'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="text-right">% non-compliant Workers Comp policies</td>
-                            <td>
-                                <PercentCalc
-                                    Info = {tpdata}
-                                    Filter1 = 'wc'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate}
-                                    Divider = {providers}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <th colSpan="2" className="text-center">Vehicles</th>
-                        </tr>
-                        <tr>
-                            <th>Number of Vehicles</th>
-                            <td>{vehicles}</td>
-                        </tr>
-                        <tr>
-                            <td>Expired Registrations</td>
-                            <td>
-                                <ComplDataFilter
-                                    Info = {vehdata}
-                                    Filter1 = 'registration'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="text-right">% Non-Compliant Registrations:</td>
-                            <td>
-                                <PercentCalc
-                                    Info = {vehdata}
-                                    Filter1 = 'registration'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate}
-                                    Divider = {vehicles}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Expired Inspections</td>
-                            <td>
-                                <ComplDataFilter
-                                    Info = {vehdata}
-                                    Filter1 = 'inspection'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate} 
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="text-right">% Non-Compliant Inspection:</td>
-                            <td>
-                                <PercentCalc
-                                    Info = {vehdata}
-                                    Filter1 = 'inspection'
-                                    Filter1child = 'end'
-                                    Value1 = {reportdate}
-                                    Divider = {vehicles}
-                                />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Number of non-compliant Vehicles</td>
-                            <td>
-                            {
-                                vehdata.filter(
-                                vehdata => vehdata.regexp < reportdate || 
-                                vehdata.inspection.end < reportdate
-                                ).length
-                            }
-                            </td>
-                        </tr>
-                        <tr>
-                            <td className="text-right">% non-compliant Vehicles</td>
-                            <td>
-                            {
-                                Math.floor(
-                                    (
-                                        vehdata.filter(vehdata => vehdata.regexp < reportdate || 
-                                        vehdata.inspection.end < reportdate).length
-                                    ) / vehicles * 100
-                                ) + '%'
-                            }
-                            </td>
-                        </tr>
-                    </tbody>
-                </Table>
+                    <Table striped bordered size="sm" className="shadow-sm">
+                        <tbody>
+                            <tr>
+                                <th colSpan="2" className="text-center">Insurance</th>
+                            </tr>
+                            <tr>
+                                <th>Number of Providers</th>
+                                <td>{providers}</td>
+                            </tr>
+                            <tr>
+                                <td>Expired GL policies</td>
+                                <td>
+                                    <ComplDataFilter
+                                        Info = {tpdata}
+                                        Filter1 = 'gl'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="text-right">% non-compliant GL policies</td>
+                                <td>
+                                    <PercentCalc
+                                        Info = {tpdata}
+                                        Filter1 = 'gl'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {providers}
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Expired Vehicle policies</td>
+                                <td>
+                                    <ComplDataFilter
+                                        Info = {tpdata}
+                                        Filter1 = 'veh'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="text-right">% non-compliant Vehicle policies</td>
+                                <td>
+                                    <PercentCalc
+                                        Info = {tpdata}
+                                        Filter1 = 'veh'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {providers}
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Expired Workers Comp policies</td>
+                                <td>
+                                    <ComplDataFilter
+                                        Info = {tpdata}
+                                        Filter1 = 'wc'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="text-right">% non-compliant Workers Comp policies</td>
+                                <td>
+                                    <PercentCalc
+                                        Info = {tpdata}
+                                        Filter1 = 'wc'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {providers}
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <th colSpan="2" className="text-center">Vehicles</th>
+                            </tr>
+                            <tr>
+                                <th>Number of Vehicles</th>
+                                <td>{vehicles}</td>
+                            </tr>
+                            <tr>
+                                <td>Expired Registrations</td>
+                                <td>
+                                    <ComplDataFilter
+                                        Info = {vehdata}
+                                        Filter1 = 'registration'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="text-right">% Non-Compliant Registrations:</td>
+                                <td>
+                                    <PercentCalc
+                                        Info = {vehdata}
+                                        Filter1 = 'registration'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {vehicles}
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Expired Inspections</td>
+                                <td>
+                                    <ComplDataFilter
+                                        Info = {vehdata}
+                                        Filter1 = 'inspection'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate} 
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="text-right">% Non-Compliant Inspection:</td>
+                                <td>
+                                    <PercentCalc
+                                        Info = {vehdata}
+                                        Filter1 = 'inspection'
+                                        Filter1child = 'end'
+                                        Value1 = {reportdate}
+                                        Divider = {vehicles}
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Number of non-compliant Vehicles</td>
+                                <td>
+                                {
+                                    vehdata.filter(
+                                    vehdata => vehdata.regexp < reportdate || 
+                                    vehdata.inspection.end < reportdate
+                                    ).length
+                                }
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="text-right">% non-compliant Vehicles</td>
+                                <td>
+                                {
+                                    Math.floor(
+                                        (
+                                            vehdata.filter(vehdata => vehdata.regexp < reportdate || 
+                                            vehdata.inspection.end < reportdate).length
+                                        ) / vehicles * 100
+                                    ) + '%'
+                                }
+                                </td>
+                            </tr>
+                        </tbody>
+                    </Table>
                 </Col>
                 <Col>
                     <Table striped bordered size="sm" className="shadow-sm">

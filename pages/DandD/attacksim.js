@@ -1,10 +1,7 @@
-import React from 'react';
-import { SetheroConstAdj, SetheroHitAdj, SetheroDmgAdj, 
-    SetheroacAdj, setherostats, heroattackroll, heroAttackTurn 
-} from './herofunctions'
-import { SetmonsterConstAdj, SetmonsterHitAdj, SetmonsterDmgAdj, 
-    SetmonsteracAdj, setmonsterstats, monsterattackroll, monsterAttackTurn
-} from './monsterfunctions'
+import React from 'react'
+import { SetConstAdj, SetAcAdj, SetDmgHitAdj, setherostats, setmonsterstats,
+    heroattackroll, monsterattackroll, heroAttackTurn, monsterAttackTurn } from './mainfunctions'
+
 import { CharacterSheet, NameForm, AttackSection, CenterFlexWrapDiv, AttackStatusDisplay } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
 
@@ -62,26 +59,21 @@ class AttackSim extends React.Component {
 
         //Hero bind function statements
         this.setherostats = setherostats.bind(this);
-        this.SetheroConstAdj = SetheroConstAdj.bind(this);
-        this.SetheroacAdj = SetheroacAdj.bind(this);
-        this.SetheroDmgAdj = SetheroDmgAdj.bind(this);
-        this.SetheroHitAdj = SetheroHitAdj.bind(this);
         this.heroNameChange = this.heroNameChange.bind(this);
         this.heroNameSubmit = this.heroNameSubmit.bind(this);
         this.heroattackroll = heroattackroll.bind(this);
         this.heroAttackTurn = heroAttackTurn.bind(this);
         //monster bind function statements
         this.setmonsterstats = setmonsterstats.bind(this);
-        this.SetmonsterConstAdj = SetmonsterConstAdj.bind(this);
-        this.SetmonsteracAdj = SetmonsteracAdj.bind(this);
-        this.SetmonsterDmgAdj = SetmonsterDmgAdj.bind(this);
-        this.SetmonsterHitAdj = SetmonsterHitAdj.bind(this);
         this.monsterNameChange = this.monsterNameChange.bind(this);
         this.monsterNameSubmit = this.monsterNameSubmit.bind(this);
         this.monsterattackroll = monsterattackroll.bind(this);
         this.monsterAttackTurn = monsterAttackTurn.bind(this);
 
         this.rollforiniative = this.rollforiniative.bind(this);
+        this.SetConstAdj = SetConstAdj.bind(this);
+        this.SetAcAdj = SetAcAdj.bind(this);
+        this.SetDmgHitAdj = SetDmgHitAdj.bind(this);
         
     }
 
@@ -162,7 +154,7 @@ class AttackSim extends React.Component {
                                 <Button onClick={this.setherostats}>Set Attrubutes</Button>
                             </div>
                             <NameForm
-                                value = {this.state.value}
+                                Value = {this.state.value}
                                 NameChange = {this.heroNameChange}
                                 NameSubmit = {this.heroNameSubmit}
                             />
@@ -185,7 +177,7 @@ class AttackSim extends React.Component {
                                 <Button onClick={this.setmonsterstats}>Set Attrubutes</Button>
                             </div>
                             <NameForm 
-                                value = {this.state.value}
+                                Value = {this.state.value}
                                 NameChange = {this.monsterNameChange}
                                 NameSubmit = {this.monsterNameSubmit}
                             />

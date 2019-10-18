@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2045,11 +2045,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _herofunctions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./herofunctions */ "./pages/DandD/herofunctions.js");
-/* harmony import */ var _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./monsterfunctions */ "./pages/DandD/monsterfunctions.js");
-/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../customComponents */ "./pages/customComponents.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! reactstrap */ "reactstrap");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _mainfunctions__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./mainfunctions */ "./pages/DandD/mainfunctions.js");
+/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../customComponents */ "./pages/customComponents.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
@@ -2057,7 +2056,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandD\\attacksim.js";
-
 
 
 
@@ -2119,26 +2117,21 @@ function (_React$Component) {
       monsterDidHit: ''
     }; //Hero bind function statements
 
-    _this.setherostats = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["setherostats"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroConstAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroacAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroacAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroDmgAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroDmgAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetheroHitAdj = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["SetheroHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.setherostats = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["setherostats"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.heroNameChange = _this.heroNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.heroNameSubmit = _this.heroNameSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.heroattackroll = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["heroattackroll"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.heroAttackTurn = _herofunctions__WEBPACK_IMPORTED_MODULE_7__["heroAttackTurn"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this)); //monster bind function statements
+    _this.heroattackroll = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["heroattackroll"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.heroAttackTurn = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["heroAttackTurn"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this)); //monster bind function statements
 
-    _this.setmonsterstats = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["setmonsterstats"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsterConstAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsterConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsteracAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsteracAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsterDmgAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsterDmgAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.SetmonsterHitAdj = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["SetmonsterHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.setmonsterstats = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["setmonsterstats"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.monsterNameChange = _this.monsterNameChange.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.monsterNameSubmit = _this.monsterNameSubmit.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.monsterattackroll = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["monsterattackroll"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
-    _this.monsterAttackTurn = _monsterfunctions__WEBPACK_IMPORTED_MODULE_8__["monsterAttackTurn"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.monsterattackroll = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["monsterattackroll"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.monsterAttackTurn = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["monsterAttackTurn"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     _this.rollforiniative = _this.rollforiniative.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.SetConstAdj = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["SetConstAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.SetAcAdj = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["SetAcAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
+    _this.SetDmgHitAdj = _mainfunctions__WEBPACK_IMPORTED_MODULE_7__["SetDmgHitAdj"].bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this));
     return _this;
   }
 
@@ -2216,57 +2209,57 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 142
+          lineNumber: 134
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CenterFlexWrapDiv"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CenterFlexWrapDiv"], {
         className: "m-0 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143
+          lineNumber: 135
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Row"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         className: "w-100",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 144
+          lineNumber: 136
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         className: "m-1 bg-dark text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 145
+          lineNumber: 137
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146
+          lineNumber: 138
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h5", {
         className: "mt-5 ml-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 139
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 147
+          lineNumber: 139
         },
         __self: this
       }, "Hero Name: "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
         className: "text-info ml-5 h3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148
+          lineNumber: 140
         },
         __self: this
-      }, this.state.heroName))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CharacterSheet"], {
+      }, this.state.heroName))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CharacterSheet"], {
         Strength: this.state.herostats.Str,
         Constitution: this.state.herostats.Const,
         Dexterity: this.state.herostats.Dext,
@@ -2275,60 +2268,60 @@ function (_React$Component) {
         ImgUrl: "../static/images/hero.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 153
+          lineNumber: 145
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-center m-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 161
+          lineNumber: 153
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         onClick: this.setherostats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 162
+          lineNumber: 154
         },
         __self: this
-      }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["NameForm"], {
-        value: this.state.value,
+      }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["NameForm"], {
+        Value: this.state.value,
         NameChange: this.heroNameChange,
         NameSubmit: this.heroNameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164
+          lineNumber: 156
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         className: "m-1 bg-dark text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 170
+          lineNumber: 162
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h5", {
         className: "mt-5 ml-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 163
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("b", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171
+          lineNumber: 163
         },
         __self: this
       }, "Monster Name: "), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
         className: "text-info ml-5 h3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 164
         },
         __self: this
-      }, this.state.monsterName)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CharacterSheet"], {
+      }, this.state.monsterName)), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CharacterSheet"], {
         Strength: this.state.monsterstats.Str,
         Constitution: this.state.monsterstats.Const,
         Dexterity: this.state.monsterstats.Dext,
@@ -2337,47 +2330,47 @@ function (_React$Component) {
         ImgUrl: "../static/images/monster.png",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176
+          lineNumber: 168
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-center m-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 176
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         onClick: this.setmonsterstats,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185
+          lineNumber: 177
         },
         __self: this
-      }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["NameForm"], {
-        value: this.state.value,
+      }, "Set Attrubutes")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["NameForm"], {
+        Value: this.state.value,
         NameChange: this.monsterNameChange,
         NameSubmit: this.monsterNameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 179
         },
         __self: this
-      })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CenterFlexWrapDiv"], {
+      })))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CenterFlexWrapDiv"], {
         className: "m-0 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195
+          lineNumber: 187
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "bg-dark m-1 p-0 mb-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 196
+          lineNumber: 188
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["AttackSection"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["AttackSection"], {
         AC: this.state.heroAc,
         HitAdj: this.state.heroHitAdj,
         AttackRoll: this.heroattackroll,
@@ -2388,7 +2381,7 @@ function (_React$Component) {
         AttackTurn: this.state.heroAttackVisible,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197
+          lineNumber: 189
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
@@ -2396,70 +2389,70 @@ function (_React$Component) {
         xs: "3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 208
+          lineNumber: 200
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "text-center m-0 p-0 text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 209
+          lineNumber: 201
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Button"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         type: "button",
         className: "m-5 w-50",
         onClick: this.rollforiniative,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 210
+          lineNumber: 202
         },
         __self: this
-      }, "Roll for iniative"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Row"], {
+      }, "Roll for iniative"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 216
+          lineNumber: 208
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         className: "w-50",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 217
+          lineNumber: 209
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["AttackStatusDisplay"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["AttackStatusDisplay"], {
         Name: this.state.heroName,
         Initiative: this.state.heroInitiative,
         HP: this.state.heroHp,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 218
+          lineNumber: 210
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_10__["Col"], {
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 224
+          lineNumber: 216
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["AttackStatusDisplay"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["AttackStatusDisplay"], {
         Name: this.state.monsterName,
         Initiative: this.state.monsterInitiative,
         HP: this.state.monsterHp,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 225
+          lineNumber: 217
         },
         __self: this
       }))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
         className: "bg-dark m-1 p-0 mb-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 234
+          lineNumber: 226
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["AttackSection"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["AttackSection"], {
         AC: this.state.monsterAc,
         HitAdj: this.state.monsterHitAdj,
         AttackRoll: this.monsterattackroll,
@@ -2470,7 +2463,7 @@ function (_React$Component) {
         AttackTurn: this.state.monsterAttackVisible,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 235
+          lineNumber: 227
         },
         __self: this
       }))));
@@ -2484,195 +2477,158 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./pages/DandD/herofunctions.js":
+/***/ "./pages/DandD/mainfunctions.js":
 /*!**************************************!*\
-  !*** ./pages/DandD/herofunctions.js ***!
+  !*** ./pages/DandD/mainfunctions.js ***!
   \**************************************/
-/*! exports provided: setherostats, SetheroConstAdj, SetheroacAdj, SetheroDmgAdj, SetheroHitAdj, heroattackroll, heroAttackTurn */
+/*! exports provided: SetConstAdj, SetAcAdj, SetDmgHitAdj, setherostats, heroattackroll, heroAttackTurn, setmonsterstats, monsterattackroll, monsterAttackTurn */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetConstAdj", function() { return SetConstAdj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetAcAdj", function() { return SetAcAdj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetDmgHitAdj", function() { return SetDmgHitAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setherostats", function() { return setherostats; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetheroConstAdj", function() { return SetheroConstAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetheroacAdj", function() { return SetheroacAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetheroDmgAdj", function() { return SetheroDmgAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetheroHitAdj", function() { return SetheroHitAdj; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "heroattackroll", function() { return heroattackroll; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "heroAttackTurn", function() { return heroAttackTurn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setmonsterstats", function() { return setmonsterstats; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "monsterattackroll", function() { return monsterattackroll; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "monsterAttackTurn", function() { return monsterAttackTurn; });
 /* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
 /* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
 
- //sets hero hitpoints based on constitution stat number.
-
-function SetheroConstAdj() {
-  if (this.state.herostats.Const == 1) {
+//sets hitpoints based on constitution stat number.
+function SetConstAdj(constitution) {
+  if (constitution == 1) {
     return -3;
   }
 
-  if (this.state.herostats.Const == 2 || this.state.herostats.Const == 3) {
+  if (constitution == 2 || constitution == 3) {
     return -2;
   }
 
-  if (this.state.herostats.Const >= 4 && this.state.herostats.Const <= 6) {
+  if (constitution >= 4 && constitution <= 6) {
     return -1;
   }
 
-  if (this.state.herostats.Const >= 7 && this.state.herostats.Const <= 14) {
+  if (constitution >= 7 && constitution <= 14) {
     return 0;
   }
 
-  if (this.state.herostats.Const == 15) {
+  if (constitution == 15) {
     return 1;
   }
 
-  if (this.state.herostats.Const == 16) {
+  if (constitution == 16) {
     return 2;
   }
 
-  if (this.state.herostats.Const == 17) {
+  if (constitution == 17) {
     return 3;
   }
 
-  if (this.state.herostats.Const == 18) {
+  if (constitution == 18) {
     return 4;
   }
 
-  if (this.state.herostats.Const == 19) {
+  if (constitution == 19) {
     return 5;
   }
 
-  if (this.state.herostats.Const == 20) {
+  if (constitution == 20) {
     return 6;
   }
 }
+; //sets Armorclass based on dexterity stat number.
 
-; //sets hero Armorclass based on dexterity stat number.
-
-function SetheroacAdj() {
-  if (this.state.herostats.Dext == 1 || this.state.herostats.Dext == 2) {
+function SetAcAdj(dexterity) {
+  if (dexterity == 1 || dexterity == 2) {
     return -5;
   }
 
-  if (this.state.herostats.Dext == 3) {
+  if (dexterity == 3) {
     return -4;
   }
 
-  if (this.state.herostats.Dext == 4) {
+  if (dexterity == 4) {
     return -3;
   }
 
-  if (this.state.herostats.Dext == 5) {
+  if (dexterity == 5) {
     return -2;
   }
 
-  if (this.state.herostats.Dext == 6) {
+  if (dexterity == 6) {
     return -1;
   }
 
-  if (this.state.herostats.Dext >= 7 && this.state.herostats.Dext <= 14) {
+  if (dexterity >= 7 && dexterity <= 14) {
     return 0;
   }
 
-  if (this.state.herostats.Dext == 15) {
+  if (dexterity == 15) {
     return 1;
   }
 
-  if (this.state.herostats.Dext == 16) {
+  if (dexterity == 16) {
     return 2;
   }
 
-  if (this.state.herostats.Dext == 17) {
+  if (dexterity == 17) {
     return 3;
   }
 
-  if (this.state.herostats.Dext == 18 || this.state.herostats.Dext == 19) {
+  if (dexterity == 18 || dexterity == 19) {
     return 4;
   }
 
-  if (this.state.herostats.Dext == 20) {
+  if (dexterity == 20) {
     return 5;
   }
-} //sets hero damage based on strength stat number.
+} //sets damage and hit adjustment based on strength stat number.
 
-
-function SetheroDmgAdj() {
-  if (this.state.herostats.Str == 1) {
+function SetDmgHitAdj(strength) {
+  if (strength == 1) {
     return -4;
   }
 
-  if (this.state.herostats.Str == 2 || this.state.herostats.Str == 3) {
+  if (strength == 2 || strength == 3) {
     return -3;
   }
 
-  if (this.state.herostats.Str == 4 || this.state.herostats.Str == 5) {
+  if (strength == 4 || strength == 5) {
     return -2;
   }
 
-  if (this.state.herostats.Str == 6 || this.state.herostats.Str == 7) {
+  if (strength == 6 || strength == 7) {
     return -1;
   }
 
-  if (this.state.herostats.Str >= 8 && this.state.herostats.Str <= 16) {
+  if (strength >= 8 && strength <= 16) {
     return 0;
   }
 
-  if (this.state.herostats.Str == 17) {
+  if (strength == 17) {
     return 1;
   }
 
-  if (this.state.herostats.Str == 18) {
+  if (strength == 18) {
     return 2;
   }
 
-  if (this.state.herostats.Str == 19) {
+  if (strength == 19) {
     return 3;
   }
 
-  if (this.state.herostats.Str == 20) {
+  if (strength == 20) {
     return 4;
   }
-} //sets hero hit adjustment based on strength stat number.
-
-
-function SetheroHitAdj() {
-  if (this.state.herostats.Str == 1) {
-    return -4;
-  }
-
-  if (this.state.herostats.Str == 2 || this.state.herostats.Str == 3) {
-    return -3;
-  }
-
-  if (this.state.herostats.Str == 4 || this.state.herostats.Str == 5) {
-    return -2;
-  }
-
-  if (this.state.herostats.Str == 6 || this.state.herostats.Str == 7) {
-    return -1;
-  }
-
-  if (this.state.herostats.Str >= 8 && this.state.herostats.Str <= 16) {
-    return 0;
-  }
-
-  if (this.state.herostats.Str == 17) {
-    return 1;
-  }
-
-  if (this.state.herostats.Str == 18) {
-    return 2;
-  }
-
-  if (this.state.herostats.Str == 19) {
-    return 3;
-  }
-
-  if (this.state.herostats.Str == 20) {
-    return 4;
-  }
-} //sets stats including base role 1-20 than applies above functions.
-
+}
+/* ************************
+*   hero functions        * 
+**************************/
+//sets stats including base role 1-20 than applies above functions.
 
 function setherostats() {
   //performs a 1-20 roll for every item in the "herostats" object/state
@@ -2683,16 +2639,15 @@ function setherostats() {
   ;
   this.setState({
     //sets adjusted items based on herostats numbers in the set..adj functions
-    heroHp: this.state.herobase.Hp + this.SetheroConstAdj(),
-    heroAc: this.state.herobase.ArmorClass + this.SetheroacAdj(),
-    heroDmg: this.state.herobase.Damage + this.SetheroDmgAdj(),
-    heroHitAdj: this.state.herobase.HitAdj + this.SetheroHitAdj()
+    heroHp: this.state.herobase.Hp + this.SetConstAdj(this.state.herostats.Const),
+    heroAc: this.state.herobase.ArmorClass + this.SetAcAdj(this.state.herostats.Dext),
+    heroDmg: this.state.herobase.Damage + this.SetDmgHitAdj(this.state.herostats.Str),
+    heroHitAdj: this.state.herobase.HitAdj + this.SetDmgHitAdj(this.state.herostats.Str)
   });
 }
 /* determins if the hero successfully hits the monster.  adjusts for monster
 armor class and hero hit adjustment.  on successful attack role, applies damage
 to monster hp and if hp reaches zero alerts that monster is dead */
-
 
 function heroattackroll() {
   var attackroll = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(Math.random() * 20 + 1);
@@ -2743,7 +2698,6 @@ function heroattackroll() {
 
   ;
 }
-
 ;
 /*function to determine if the attack button should be displayed. Function is
 called when the attack button is pressed in attackSection (Attackbutton() ) 
@@ -2767,200 +2721,11 @@ function heroAttackTurn() {
     });
   }
 }
-
 ;
-
-/***/ }),
-
-/***/ "./pages/DandD/monsterfunctions.js":
-/*!*****************************************!*\
-  !*** ./pages/DandD/monsterfunctions.js ***!
-  \*****************************************/
-/*! exports provided: SetmonsterConstAdj, SetmonsterDmgAdj, SetmonsterHitAdj, SetmonsteracAdj, setmonsterstats, monsterattackroll, monsterAttackTurn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsterConstAdj", function() { return SetmonsterConstAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsterDmgAdj", function() { return SetmonsterDmgAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsterHitAdj", function() { return SetmonsterHitAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetmonsteracAdj", function() { return SetmonsteracAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setmonsterstats", function() { return setmonsterstats; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "monsterattackroll", function() { return monsterattackroll; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "monsterAttackTurn", function() { return monsterAttackTurn; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-
- //sets monster hit point adjustment based on constitution stat number.
-
-function SetmonsterConstAdj() {
-  if (this.state.monsterstats.Const == 1) {
-    return -3;
-  }
-
-  if (this.state.monsterstats.Const == 2 || this.state.monsterstats.Const == 3) {
-    return -2;
-  }
-
-  if (this.state.monsterstats.Const >= 4 && this.state.monsterstats.Const <= 6) {
-    return -1;
-  }
-
-  if (this.state.monsterstats.Const >= 7 && this.state.monsterstats.Const <= 14) {
-    return 0;
-  }
-
-  if (this.state.monsterstats.Const == 15) {
-    return 1;
-  }
-
-  if (this.state.monsterstats.Const == 16) {
-    return 2;
-  }
-
-  if (this.state.monsterstats.Const == 17) {
-    return 3;
-  }
-
-  if (this.state.monsterstats.Const == 18) {
-    return 4;
-  }
-
-  if (this.state.monsterstats.Const == 19) {
-    return 5;
-  }
-
-  if (this.state.monsterstats.Const == 20) {
-    return 6;
-  }
-}
-
-; //sets monster armor class adjustment based on dexterity stat number.
-
-function SetmonsteracAdj() {
-  if (this.state.monsterstats.Dext == 1 || this.state.monsterstats.Dext == 2) {
-    return -5;
-  }
-
-  if (this.state.monsterstats.Dext == 3) {
-    return -4;
-  }
-
-  if (this.state.monsterstats.Dext == 4) {
-    return -3;
-  }
-
-  if (this.state.monsterstats.Dext == 5) {
-    return -2;
-  }
-
-  if (this.state.monsterstats.Dext == 6) {
-    return -1;
-  }
-
-  if (this.state.monsterstats.Dext >= 7 && this.state.monsterstats.Dext <= 14) {
-    return 0;
-  }
-
-  if (this.state.monsterstats.Dext == 15) {
-    return 1;
-  }
-
-  if (this.state.monsterstats.Dext == 16) {
-    return 2;
-  }
-
-  if (this.state.monsterstats.Dext == 17) {
-    return 3;
-  }
-
-  if (this.state.monsterstats.Dext == 18 || this.state.monsterstats.Dext == 19) {
-    return 4;
-  }
-
-  if (this.state.monsterstats.Dext == 20) {
-    return 5;
-  }
-} //sets monster damage based on strength stat number.
-
-
-function SetmonsterDmgAdj() {
-  if (this.state.monsterstats.Str == 1) {
-    return -4;
-  }
-
-  if (this.state.monsterstats.Str == 2 || this.state.monsterstats.Str == 3) {
-    return -3;
-  }
-
-  if (this.state.monsterstats.Str == 4 || this.state.monsterstats.Str == 5) {
-    return -2;
-  }
-
-  if (this.state.monsterstats.Str == 6 || this.state.monsterstats.Str == 7) {
-    return -1;
-  }
-
-  if (this.state.monsterstats.Str >= 8 && this.state.monsterstats.Str <= 16) {
-    return 0;
-  }
-
-  if (this.state.monsterstats.Str == 17) {
-    return 1;
-  }
-
-  if (this.state.monsterstats.Str == 18) {
-    return 2;
-  }
-
-  if (this.state.monsterstats.Str == 19) {
-    return 3;
-  }
-
-  if (this.state.monsterstats.Str == 20) {
-    return 4;
-  }
-} //sets monster hit adjustment based on strength stat number.
-
-
-function SetmonsterHitAdj() {
-  if (this.state.monsterstats.Str == 1) {
-    return -4;
-  }
-
-  if (this.state.monsterstats.Str == 2 || this.state.monsterstats.Str == 3) {
-    return -3;
-  }
-
-  if (this.state.monsterstats.Str == 4 || this.state.monsterstats.Str == 5) {
-    return -2;
-  }
-
-  if (this.state.monsterstats.Str == 6 || this.state.monsterstats.Str == 7) {
-    return -1;
-  }
-
-  if (this.state.monsterstats.Str >= 8 && this.state.monsterstats.Str <= 16) {
-    return 0;
-  }
-
-  if (this.state.monsterstats.Str == 17) {
-    return 1;
-  }
-
-  if (this.state.monsterstats.Str == 18) {
-    return 2;
-  }
-
-  if (this.state.monsterstats.Str == 19) {
-    return 3;
-  }
-
-  if (this.state.monsterstats.Str == 20) {
-    return 4;
-  }
-} //sets stats including base role 1-20 than applies above functions.
-
+/* ***********************
+*   monster functions    * 
+*************************/
+//sets stats including base role 1-20 than applies above functions.
 
 function setmonsterstats() {
   //performs a 1-20 roll for every item in the "monsterstats" object/state
@@ -2971,16 +2736,15 @@ function setmonsterstats() {
   ;
   this.setState({
     //sets adjusted items based on monsterstats numbers in the set..adj functions
-    monsterHp: this.state.monsterbase.Hp + this.SetmonsterConstAdj(),
-    monsterAc: this.state.monsterbase.ArmorClass + this.SetmonsteracAdj(),
-    monsterDmg: this.state.monsterbase.Damage + this.SetmonsterDmgAdj(),
-    monsterHitAdj: this.state.monsterbase.HitAdj + this.SetmonsterHitAdj()
+    monsterHp: this.state.monsterbase.Hp + this.SetConstAdj(this.state.monsterstats.Const),
+    monsterAc: this.state.monsterbase.ArmorClass + this.SetAcAdj(this.state.monsterstats.Dext),
+    monsterDmg: this.state.monsterbase.Damage + this.SetDmgHitAdj(this.state.monsterstats.Str),
+    monsterHitAdj: this.state.monsterbase.HitAdj + this.SetDmgHitAdj(this.state.monsterstats.Str)
   });
 }
 /* determins if the monster successfully hits the hero.  adjusts for hero
 armor class andmonster hit adjustment.  on successful attack role, applies damage
 to hero hp and if hp reaches zero alerts that hero is dead */
-
 
 function monsterattackroll() {
   var attackroll = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(Math.random() * 20 + 1);
@@ -3006,7 +2770,7 @@ function monsterattackroll() {
         heroHp: this.state.heroHp - this.state.monsterDmg
       });
     }
-  } else if (attackroll >= 20) {
+  } else if (attackroll === 20) {
     this.setState({
       monsterDidHit: 'Hit',
       monsterRoll: 'Crit Strike'
@@ -3032,7 +2796,6 @@ function monsterattackroll() {
 
   ;
 }
-
 ;
 /*function to determine if the attack button should be displayed. Function is
 called when the attack button is pressed in attackSection (Attackbutton() )
@@ -3642,26 +3405,26 @@ function (_React$Component3) {
           className: "py-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 248
+            lineNumber: 249
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 249
+            lineNumber: 250
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 250
+            lineNumber: 251
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 251
+            lineNumber: 252
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardImg"], {
@@ -3670,32 +3433,32 @@ function (_React$Component3) {
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 252
+            lineNumber: 253
           },
           __self: this
         })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 258
+            lineNumber: 259
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
           className: "mt-5",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 259
+            lineNumber: 260
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 260
+            lineNumber: 261
           },
           __self: this
         }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 262
+            lineNumber: 263
           },
           __self: this
         }, this.props.Description)))));
@@ -3706,51 +3469,51 @@ function (_React$Component3) {
           className: "py-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 274
+            lineNumber: 275
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 275
+            lineNumber: 276
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 276
+            lineNumber: 277
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 277
+            lineNumber: 278
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
           className: "mt-5",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 278
+            lineNumber: 279
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 279
+            lineNumber: 280
           },
           __self: this
         }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 281
+            lineNumber: 282
           },
           __self: this
         }, this.props.Description)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 285
+            lineNumber: 286
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardImg"], {
@@ -3759,7 +3522,7 @@ function (_React$Component3) {
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 286
+            lineNumber: 287
           },
           __self: this
         })))));
@@ -3790,105 +3553,105 @@ function (_React$Component4) {
         className: "py-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 304
+          lineNumber: 305
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
         className: this.props.Class,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 305
+          lineNumber: 306
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 307
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 307
         },
         __self: this
       }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
         className: "text-left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 308
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 309
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 310
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 311
         },
         __self: this
-      }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 317
+          lineNumber: 312
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+      }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 318
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 319
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 320
         },
         __self: this
-      }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 326
+          lineNumber: 321
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+      }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 327
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 328
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 329
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 330
         },
         __self: this
       }, this.props.Description3)))))));
@@ -3917,7 +3680,7 @@ function (_React$Component5) {
           className: "text-muted text-left h4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 347
+            lineNumber: 348
           },
           __self: this
         }, props.children);
@@ -3928,7 +3691,7 @@ function (_React$Component5) {
           className: "text-white text-left h4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 355
+            lineNumber: 356
           },
           __self: this
         }, props.children);
@@ -3937,13 +3700,13 @@ function (_React$Component5) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 362
+          lineNumber: 363
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 363
+          lineNumber: 364
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
@@ -3953,7 +3716,7 @@ function (_React$Component5) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 364
+          lineNumber: 365
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Table"], {
@@ -3961,122 +3724,122 @@ function (_React$Component5) {
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 365
+          lineNumber: 366
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tbody", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 366
+          lineNumber: 367
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 367
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 368
         },
         __self: this
-      }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 369
         },
         __self: this
-      }, this.props.Strength)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 371
+          lineNumber: 370
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, this.props.Strength)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 372
         },
         __self: this
-      }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 373
         },
         __self: this
-      }, this.props.Constitution)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 375
+          lineNumber: 374
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, this.props.Constitution)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 376
         },
         __self: this
-      }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 377
         },
         __self: this
-      }, this.props.Dexterity)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 379
+          lineNumber: 378
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, this.props.Dexterity)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 380
         },
         __self: this
-      }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 381
         },
         __self: this
+      }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 382
+        },
+        __self: this
       }, this.props.Hitpoints != "Dead" && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 383
+          lineNumber: 384
         },
         __self: this
       }, this.props.Hitpoints) || react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "text-danger h5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 384
+          lineNumber: 385
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("small", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 385
+          lineNumber: 386
         },
         __self: this
       }, this.props.Hitpoints)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 390
+          lineNumber: 391
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 391
+          lineNumber: 392
         },
         __self: this
       }, "Damage per Hit:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 392
+          lineNumber: 393
         },
         __self: this
       }, this.props.Damage))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
@@ -4086,14 +3849,14 @@ function (_React$Component5) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 397
+          lineNumber: 398
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "text-center ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 398
+          lineNumber: 399
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
@@ -4102,7 +3865,7 @@ function (_React$Component5) {
         alt: "Avatar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 399
+          lineNumber: 400
         },
         __self: this
       })))));
@@ -4139,7 +3902,7 @@ function (_React$Component6) {
           className: "text-danger font-italic",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 425
+            lineNumber: 426
           },
           __self: this
         }, "Critical Strike!");
@@ -4147,7 +3910,7 @@ function (_React$Component6) {
         return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 431
+            lineNumber: 432
           },
           __self: this
         }, this.props.Roll);
@@ -4165,7 +3928,7 @@ function (_React$Component6) {
           className: "alert alert-success py-2 text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 442
+            lineNumber: 443
           },
           __self: this
         }, "Hit!");
@@ -4176,7 +3939,7 @@ function (_React$Component6) {
           className: "alert alert-danger py-2 text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 446
+            lineNumber: 447
           },
           __self: this
         }, "Miss");
@@ -4185,7 +3948,7 @@ function (_React$Component6) {
           className: "text-white text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 450
+            lineNumber: 451
           },
           __self: this
         }, "(Attack Result displayed here)");
@@ -4204,7 +3967,7 @@ function (_React$Component6) {
           onMouseUp: this.props.NextTurn,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 461
+            lineNumber: 464
           },
           __self: this
         }, this.props.RollTitle);
@@ -4213,7 +3976,7 @@ function (_React$Component6) {
           className: "text-white",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 469
+            lineNumber: 473
           },
           __self: this
         }, "Not your turn");
@@ -4227,20 +3990,20 @@ function (_React$Component6) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 476
+          lineNumber: 480
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 477
+          lineNumber: 481
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
         className: "my-4 mx-5 d-flex justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 478
+          lineNumber: 482
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -4248,7 +4011,7 @@ function (_React$Component6) {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 479
+          lineNumber: 483
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
@@ -4257,28 +4020,28 @@ function (_React$Component6) {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 480
+          lineNumber: 484
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 481
+          lineNumber: 485
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
         className: "jsx-1953405926" + " " + "AC-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 482
+          lineNumber: 486
         },
         __self: this
       }, this.props.AC)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
         className: "my-4 mx-5 d-flex justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 488
+          lineNumber: 492
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
@@ -4286,7 +4049,7 @@ function (_React$Component6) {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 489
+          lineNumber: 493
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
@@ -4295,57 +4058,57 @@ function (_React$Component6) {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 490
+          lineNumber: 494
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 491
+          lineNumber: 495
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
         className: "jsx-1953405926" + " " + "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 492
+          lineNumber: 496
         },
         __self: this
       }, this.props.HitAdj)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_6___default.a, {
         id: "1953405926",
         __self: this
-      }, ".AC-Icon-text.jsx-1953405926{position:absolute;top:42px;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}.HitAdj-Icon-text.jsx-1953405926{position:absolute;top:48%;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGN1c3RvbUNvbXBvbmVudHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBaWZnQyxBQUcrQyxBQU1BLGtCQUxULEFBTUQsUUFDRSxDQU5BLFNBT3NCLENBTkEsd0dBT3BDLENBTkEiLCJmaWxlIjoiQzpcXFVzZXJzXFxNYXJrXFxEZXNrdG9wXFxuZXd0ZXN0XFxteS1wYWdlXFxwYWdlc1xcY3VzdG9tQ29tcG9uZW50cy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qICoqKioqKioqKioqKioqKiogXHJcbiogICBJbXBvcnRzICAgICAgICogXHJcbioqKioqKioqKioqKioqKioqKi9cclxuXHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcclxuaW1wb3J0IHsgXHJcbiAgICBDYXJkLCBDYXJkSW1nLCBDYXJkVGV4dCwgQ2FyZEJvZHksIENhcmRUaXRsZSwgQ2FyZFN1YnRpdGxlLCBcclxuICAgIFJvdywgQ29sLCBGb3JtLCBGb3JtR3JvdXAsIExhYmVsLCBJbnB1dCwgQnV0dG9uLCBDb2xsYXBzZSwgXHJcbiAgICBUYWJsZSwgSnVtYm90cm9uIFxyXG59IGZyb20gJ3JlYWN0c3RyYXAnXHJcblxyXG5pbXBvcnQgeyBIb21lQ2FyZFN0eWxlLCBEYW5kRFN0eWxlLCBJbWFnZVN0eWxlcywgVHZwYWdlU3R5bGVcclxufSBmcm9tICcuL2pzeHN0eWxlcydcclxuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xyXG5cclxuXHJcbi8qICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxyXG4qICAgRXhwb3J0IHN0eWxlZCBjb21wb25lbnRzICAgICAgICogXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIE5ld1RhYkxpbmsocHJvcHMpe1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8YSBjbGFzc05hbWU9e3Byb3BzLlN0eWxlfVxyXG4gICAgICAgICAgICBocmVmPXtwcm9wcy5MaW5rfVxyXG4gICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIiBcclxuICAgICAgICAgICAgcmVsPVwibm9vcGVuZXIgbm9yZWZlcnJlclwiXHJcbiAgICAgICAgICAgIHRpdGxlPXtwcm9wcy5UaXRsZX0+XHJcbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9hPlxyXG4gICAgKTtcclxufVxyXG5cclxuLy91c2VkIGluIGhvbWUgcGFnZSwgYXR0YWNrc2ltXHJcbmV4cG9ydCBmdW5jdGlvbiBDZW50ZXJGbGV4V3JhcERpdihwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXAganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiB0dnBvc3QsIHR2cGFnZVxyXG5leHBvcnQgZnVuY3Rpb24gTGVmdEZsZXhXcmFwRGl2KHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IGZsZXgtd3JhcCBqdXN0aWZ5LWNvbnRlbnQtbGVmdFwiPlxyXG4gICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZNYXplSGVhZGVyKCkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2PlxyXG4gICAgICAgIDxMaW5rIGhyZWY9XCIvdHZwYWdlXCI+XHJcbiAgICAgICAgICAgIDxhIHN0eWxlPXtUdnBhZ2VTdHlsZS5MaW5rfT5TZWFyY2ggUGFnZTwvYT5cclxuICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBUdk1hemVQYWdlKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgc3R5bGU9e1R2cGFnZVN0eWxlLkxheW91dH0+XHJcbiAgICAgICAgICAgIDxUdk1hemVIZWFkZXIgLz5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZQb3N0SW5mb0xhYmVsKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgPHRkIGNsYXNzTmFtZT1cImgyIHRleHQtbGVmdCB3LTI1IG0tMCBwLTJcIj5cclxuICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICA8L3RkPlxyXG4gICAgKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFR2UG9zdEluZm9WYWx1ZShwcm9wcyl7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LWxlZnQgbS0wIHAtMlwiPlxyXG4gICAgICAgICAgICA8c21hbGw+e3Byb3BzLmNoaWxkcmVufTwvc21hbGw+XHJcbiAgICAgICAgPC90ZD5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlciBjb21wbGlhbmNlXHJcbmV4cG9ydCBmdW5jdGlvbiBUcGxpc3RIZWFkZXJSb3cgKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxSb3cgY2xhc3NOYW1lPVwicC0wIGJnLXNlY29uZGFyeSB0ZXh0LXdoaXRlIHJvdW5kZWQtbGdcIj5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvUm93PlxyXG4gICAgKVxyXG59XHJcblxyXG4vKiAqKioqKioqKioqKioqKioqKioqKioqKiBcclxuKiAgIEV4cG9ydCBmdW5jdGlvbnMgICAgICogXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG5cclxuLy91c2VkIGluIHByb3ZpZGVyc3RhdHNcclxuZXhwb3J0IGZ1bmN0aW9uIE5ldHdvcmtEYXRhRmlsdGVyKHByb3BzKSB7XHJcbiAgICBsZXQgRm9uZSA9IHByb3BzLkZpbHRlcjE7XHJcbiAgICBsZXQgVm9uZSA9IHByb3BzLlZhbHVlMTtcclxuICAgIGxldCBGdHdvID0gcHJvcHMuRmlsdGVyMjtcclxuICAgIGxldCBWdHdvID0gcHJvcHMuVmFsdWUyO1xyXG4gICAgbGV0IERhdGEgPSBwcm9wcy5JbmZvO1xyXG4gICAgXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPntEYXRhLmZpbHRlcihEYXRhID0+IERhdGFbRm9uZV0gPT09IFZvbmUgJiYgRGF0YVtGdHdvXSA9PT0gVnR3bykubGVuZ3RofTwvc3Bhbj5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBDb21wbERhdGFGaWx0ZXIocHJvcHMpIHtcclxuICAgIGNvbnN0IERhdGEgPSBwcm9wcy5JbmZvXHJcbiAgICBjb25zdCBGb25lID0gcHJvcHMuRmlsdGVyMTtcclxuICAgIGNvbnN0IEZvbmVrZXkgPSBwcm9wcy5GaWx0ZXIxY2hpbGQ7XHJcbiAgICBjb25zdCBWb25lID0gcHJvcHMuVmFsdWUxO1xyXG5cclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPHNwYW4+e0RhdGEuZmlsdGVyKERhdGEgPT4gRGF0YVtGb25lXVtGb25la2V5XSA8IFZvbmUpLmxlbmd0aH08L3NwYW4+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBQZXJjZW50Q2FsYyhwcm9wcykge1xyXG4gICAgY29uc3QgRGF0YSA9IHByb3BzLkluZm9cclxuICAgIGNvbnN0IEZvbmUgPSBwcm9wcy5GaWx0ZXIxO1xyXG4gICAgY29uc3QgRm9uZWtleSA9IHByb3BzLkZpbHRlcjFjaGlsZDtcclxuICAgIGNvbnN0IFZvbmUgPSBwcm9wcy5WYWx1ZTE7XHJcbiAgICBjb25zdCBEaXZpZGVyID0gcHJvcHMuRGl2aWRlcjtcclxuXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPlxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBNYXRoLmZsb29yKFxyXG4gICAgICAgICAgICAgICAgICAgIChcclxuICAgICAgICAgICAgICAgICAgICAgICAgRGF0YS5maWx0ZXIoRGF0YSA9PiBEYXRhW0ZvbmVdW0ZvbmVrZXldIDwgVm9uZSkubGVuZ3RoXHJcbiAgICAgICAgICAgICAgICAgICAgKSAvIERpdmlkZXIgKiAxMDBcclxuICAgICAgICAgICAgICAgICkgKyAnJSdcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIDwvc3Bhbj5cclxuICAgIClcclxufVxyXG5cclxuLy91c2VkIGluIHByb3ZpZGVyQ29tcGxpYW5jZVxyXG5leHBvcnQgZnVuY3Rpb24gRGF0ZUNoZWNrKHByb3BzKSB7XHJcbiAgICB2YXIgZGF0ZSA9IHByb3BzLkRhdGU7XHJcbiAgICBcclxuICAgIGlmIChkYXRlIDwgXCIyMDE5LTA5LTIyXCIpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiZy1kYW5nZXIgdGV4dC13aGl0ZVwiPntkYXRlfTwvc3Bhbj5cclxuICAgICAgICApXHJcbiAgICB9IGVsc2UgaWYgKGRhdGUgPCBcIjIwMTktMTAtMjJcIiAmJiBkYXRlID4gXCIyMDE5LTA5LTIyXCIpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiZy13YXJuaW5nIHRleHQtd2hpdGVcIj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKVxyXG4gICAgfSBlbHNlIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3Bhbj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKTtcclxuICAgIH0gICBcclxufVxyXG5cclxuLyogKioqKioqKioqKioqKioqKioqKioqKiogXHJcbiogICBFeHBvcnQgQ2xhc3NlcyAgICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbi8vdXNlZCBpbiBob21lIHBhZ2VcclxuZXhwb3J0IGNsYXNzIEhvbWVDYXJkIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8Q2FyZCBzdHlsZT17SG9tZUNhcmRTdHlsZS5DYXJkfT5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlIHN0eWxlPXtIb21lQ2FyZFN0eWxlLlRpdGxlfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgdG9wIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUNhcmR9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3RoaXMucHJvcHMuSW1hZ2V9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFN1YnRpdGxlPnt0aGlzLnByb3BzLlN1YnRpdGxlfTwvQ2FyZFN1YnRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFRleHQgc3R5bGU9e3toZWlnaHQ6ICc4MHB4J319PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRleHQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxCdXR0b24gY2xhc3NOYW1lPVwidy0xMDAgcC0wIG0tMFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPE5ld1RhYkxpbmtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHlsZT1cImJ0biBidG4tZGFyayB3LTEwMCBwLTJcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIExpbms9e3RoaXMucHJvcHMuTGlua30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkJ1dHRvblRpdGxlfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9OZXdUYWJMaW5rPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgPC9DYXJkPiBcclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufTtcclxuXHJcbi8vdXNlZCBpbiBSZXN1bWV2aWV3IGFuZCBwcm92aWRlcmRhdGFcclxuZXhwb3J0IGNsYXNzIEN1c3RvbUp1bWJvIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5JbWdVcmwgPT09IFwibm9pbWFnZVwiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8SnVtYm90cm9uPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJkaXNwbGF5LTMgdGV4dC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9oMT5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjFTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8aHIgY2xhc3NOYW1lPVwibXktMlwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNhcHRpb24yU3R5bGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uMn1cclxuICAgICAgICAgICAgICAgICAgICA8L3A+XHJcbiAgICAgICAgICAgICAgICA8L0p1bWJvdHJvbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPEp1bWJvdHJvbj5cclxuICAgICAgICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPVwiZGlzcGxheS0zIHRleHQtY2VudGVyXCI+e3RoaXMucHJvcHMuVGl0bGV9PC9oMT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lci1mbHVpZCB0ZXh0LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aW1nIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9hdmF0YXIuanBnXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUF2YXRhcn0gYWx0PVwiYXZhdGFyXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjFTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8aHIgY2xhc3NOYW1lPVwibXktMlwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNhcHRpb24yU3R5bGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uMn08YnIgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQ2FwdGlvbjN9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9wPlxyXG4gICAgICAgICAgICAgICAgPC9KdW1ib3Ryb24+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcblxyXG4vL3VzZWQgaW4gYWJvdXQgcGFnZVxyXG5leHBvcnQgY2xhc3MgQWJvdXRNZWRpYSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BbGlnbiA9PT0gXCJSaWdodFwiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB5LTJcIj5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2xhc3N9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Um93PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENvbCA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXtJbWFnZVN0eWxlcy5BYm91dH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDb2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRUaXRsZSBjbGFzc05hbWU9XCJtdC01XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L1Jvdz5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmQ+IFxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BbGlnbiA9PT0gXCJMZWZ0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHktMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT17dGhpcy5wcm9wcy5DbGFzc30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkVGl0bGUgY2xhc3NOYW1lPVwibXQtNVwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9ufVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENvbCA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXtJbWFnZVN0eWxlcy5BYm91dH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Sb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9DYXJkPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfTtcclxuICAgIH1cclxufVxyXG5cclxuLy91c2VkIGluIHJlc3VtZSBmb3IgZXhwZXJpZW5jZSBzZWN0aW9uXHJcbmV4cG9ydCBjbGFzcyBUaHJlZUNvbHVtbkNhcmQgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnR7XHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuKFxyXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB5LTNcIj5cclxuICAgICAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT17dGhpcy5wcm9wcy5DbGFzc30+XHJcbiAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlPjxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPjwvQ2FyZFRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgIDxSb3cgY2xhc3NOYW1lPVwidGV4dC1sZWZ0XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxDb2wgPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9uMX1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5EZXNjcmlwdGlvbjJ9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPENvbCA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb24zfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9Sb3c+XHJcbiAgICAgICAgICAgICAgICA8L0NhcmQ+IFxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vL0QgYW5kIEQgYXBwbGljYXRpb25cclxuZXhwb3J0IGNsYXNzIENoYXJhY3RlclNoZWV0IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBmdW5jdGlvbiBEYW5kRFRhYmxlTGFiZWwocHJvcHMpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIHRleHQtbGVmdCBoNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBmdW5jdGlvbiBEYW5kRFRhYmxlVmFsdWUocHJvcHMpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LXdoaXRlIHRleHQtbGVmdCBoNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIFxyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXYgPlxyXG4gICAgICAgICAgICAgICAgPFJvdyA+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBzbT17eyBzaXplOiAnYXV0bycsIG9mZnNldDogMCB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFRhYmxlIGJvcmRlcmxlc3MgIGNsYXNzTmFtZT1cIlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRib2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5TdHJlbmd0aDo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5TdHJlbmd0aH08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5Db25zdGl0dXRpb246PC9EYW5kRFRhYmxlTGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlVmFsdWU+e3RoaXMucHJvcHMuQ29uc3RpdHV0aW9ufTwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRleHRlcml0eTo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5EZXh0ZXJpdHl9PC9EYW5kRFRhYmxlVmFsdWU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlTGFiZWw+SGl0cG9pbnRzOjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0cG9pbnRzICE9IFwiRGVhZFwiICYmIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXIgaDVcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNtYWxsPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NtYWxsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRhbWFnZSBwZXIgSGl0OjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPnt0aGlzLnByb3BzLkRhbWFnZX08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90Ym9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9UYWJsZT4gIFxyXG4gICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2wgc209e3sgc2l6ZTogJ2F1dG8nLCBvZmZzZXQ6IDIgfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW1nICBzdHlsZT17RGFuZERTdHlsZS5BdmF0YXJ9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkF2YXRhclwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vLyBEIGFuZCBEIGFwcGxpY2F0aW9uXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTZWN0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIGNvbnN0cnVjdG9yKHByb3BzKSB7XHJcbiAgICAgICAgc3VwZXIocHJvcHMpO1xyXG4gICAgICAgIHRoaXMuUm9sbFJlc3VsdCA9IHRoaXMuUm9sbFJlc3VsdC5iaW5kKHRoaXMpO1xyXG4gICAgICAgIHRoaXMuQXR0YWNrQmFubmVyID0gdGhpcy5BdHRhY2tCYW5uZXIuYmluZCh0aGlzKTtcclxuICAgICAgICB0aGlzLkF0dGFja0J1dHRvbiA9IHRoaXMuQXR0YWNrQnV0dG9uLmJpbmQodGhpcyk7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC8vU2hvd3MgYXR0YWNrIHJvbGwgbnVtYmVyIHdpdGggc3BlY2lhbCBkaXNwbGF5IGZvclxyXG4gICAgLy9jcml0IHNjcmlrZSAobmF0dXJhbCAyMCBvbiByb2xsKVxyXG4gICAgUm9sbFJlc3VsdCgpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5Sb2xsID09PSAnQ3JpdCBTdHJpa2UnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWRhbmdlciBmb250LWl0YWxpY1wiPlxyXG4gICAgICAgICAgICAgICAgICAgIENyaXRpY2FsIFN0cmlrZSFcclxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPHNwYW4+e3RoaXMucHJvcHMuUm9sbH08L3NwYW4+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC8vc2hvd3MgYXR0YWNrIHJlc3VsdCBvZiBoaXQvbWlzcyBvciBwbGFjZSBob2xkZXIgZm9yXHJcbiAgICAvL3Jlc3VsdCBkaXNwbGF5LlxyXG4gICAgQXR0YWNrQmFubmVyKCkge1xyXG4gICAgICAgIGNvbnN0IFJlc3VsdCA9IHRoaXMucHJvcHMuRGlkSGl0O1xyXG4gICAgICAgIGlmIChSZXN1bHQgPT09IFwiSGl0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJhbGVydCBhbGVydC1zdWNjZXNzIHB5LTIgdGV4dC1jZW50ZXJcIj5IaXQhPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGlmIChSZXN1bHQgPT09IFwiTWlzc1wiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwiYWxlcnQgYWxlcnQtZGFuZ2VyIHB5LTIgdGV4dC1jZW50ZXJcIj5NaXNzPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGg2IGNsYXNzTmFtZT1cInRleHQtd2hpdGUgdGV4dC1jZW50ZXJcIj4oQXR0YWNrIFJlc3VsdCBkaXNwbGF5ZWQgaGVyZSk8L2g2PlxyXG4gICAgICAgICAgICApO1xyXG4gICAgICAgIH1cclxuICAgIH1cclxuICAgIFxyXG4gICAgLypGdW5jdGlvbiB0byBkaXNwbGF5IGF0dGFjayBidXR0b24gYmFzZWQgb24gaW5pdGlhdGl2ZSByb2xsIGFuZCBhdHRhY2sgdHVybi4gUHVsbHNcclxuICAgIEF0dGFja1R1cm4gZnVuY3RvbiBhbmQgQXR0YWNrcm9sbCBmdW5jdGlvbnMgZnJvbSBlaXRoZXIgaGVyb2Z1bmN0aW9ucy5qcyBvciBtb25zdGVyZnVuY3Rpb25zLmpzXHJcbiAgICBhcyBpdGVudGlmaWVkIGluIHByb3BzICovXHJcbiAgICBBdHRhY2tCdXR0b24oKSB7XHJcbiAgICAgICAgaWYgKHRoaXMucHJvcHMuQXR0YWNrVHVybiA9PT0gdHJ1ZSkge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPEJ1dHRvbiAgXHJcbiAgICAgICAgICAgICAgICAgICAgb25Nb3VzZURvd249e3RoaXMucHJvcHMuQXR0YWNrUm9sbH0gXHJcbiAgICAgICAgICAgICAgICAgICAgb25Nb3VzZVVwID0ge3RoaXMucHJvcHMuTmV4dFR1cm59PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Sb2xsVGl0bGV9XHJcbiAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgKVxyXG4gICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPk5vdCB5b3VyIHR1cm48L2g0PlxyXG4gICAgICAgICAgICApXHJcbiAgICAgICAgfTtcclxuICAgIH1cclxuXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBjbGFzc05hbWU9XCJteS00IG14LTUgZC1mbGV4IGp1c3RpZnktY29udGVudC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBzcmM9XCIuLi9zdGF0aWMvaW1hZ2VzL2FjaWNvbi5wbmdcIiBhbHQ9XCJzaGllbGRcIi8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJBQy1JY29uLXRleHRcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQUN9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9oND5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8Q29sIGNsYXNzTmFtZT1cIm15LTQgbXgtNSBkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9oaXRhZGp1c3QucG5nXCIgYWx0PVwiaWNvblwiLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwiSGl0QWRqLUljb24tdGV4dFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0QWRqfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+ICBcclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5BQy1JY29uLXRleHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdG9wOiA0MnB4O1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5IaXRBZGotSWNvbi10ZXh0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvcDogNDglO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgIGB9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9zdHlsZT5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlciBteS00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAge3RoaXMuQXR0YWNrQnV0dG9uKCl9XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgdGV4dC13aGl0ZVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMj5BdHRhY2sgUmVzdWx0OjwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwibXQtMiBwLTBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgYXR0YWNrIHJvbGw6ICZuYnNwOyB7dGhpcy5Sb2xsUmVzdWx0KCl9PC9wPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIHt0aGlzLkF0dGFja0Jhbm5lcigpfVxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBEYW5kRCBwYWdlIHRvIGRpc3BsYXkgTmFtZSxJbml0aWF0aXZlIGFuZCBIUCBzdGF0dXMgZm9yIGhlcm8gYW5kIFxyXG4vL21vbnN0ZXIuXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTdGF0dXNEaXNwbGF5IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQtaW5mb1wiPnt0aGlzLnByb3BzLk5hbWV9PC9oND5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgcHQtNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5pbmlhdGl2ZTo8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Jbml0aWF0aXZlICE9IFwiU2Vjb25kXCIgJiYgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPiB8fCAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC13YXJuaW5nXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5IaXQgUG9pbnRzOjwvaDQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtdC00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUCAhPSBcIkRlYWRcIiAmJlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc3VjY2Vzc1wiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSFB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vRCBhbmQgRCBhcHBsaWNhdGlvblxyXG5leHBvcnQgY2xhc3MgTmFtZUZvcm0gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcclxuICAgICAgICBzdXBlcihwcm9wcyk7XHJcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtjb2xsYXBzZTogZmFsc2V9O1xyXG4gICAgICAgIHRoaXMudG9nZ2xlID0gdGhpcy50b2dnbGUuYmluZCh0aGlzKTtcclxuICAgIH0gICBcclxuICAgIFxyXG4gICAgdG9nZ2xlKCkge1xyXG4gICAgICAgIHRoaXMuc2V0U3RhdGUoc3RhdGUgPT4gKHtjb2xsYXBzZTogIXN0YXRlLmNvbGxhcHNlfSkpO1xyXG4gICAgfVxyXG5cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8Rm9ybSA+XHJcbiAgICAgICAgICAgICAgICA8Rm9ybUdyb3VwIGNsYXNzTmFtZT1cIm1iLTIgbXItc20tMiBtYi1zbS0yIGQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm0tMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8TGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJ0biB0ZXh0LXdoaXRlXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17dGhpcy50b2dnbGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5zdGF0ZS5jb2xsYXBzZT8gJ0hpZGUnIDogJ0NoYW5nZSBOYW1lJ31cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2xsYXBzZSBpc09wZW49e3RoaXMuc3RhdGUuY29sbGFwc2V9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbnB1dFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1heExlbmd0aD1cIjIwXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e3RoaXMucHJvcHMudmFsdWV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXt0aGlzLnByb3BzLk5hbWVDaGFuZ2V9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vUHJldmVudCBlbnRlciBrZXkgc3VibWl0XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uS2V5UHJlc3M9e2V2ZW50ID0+IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIChldmVudC53aGljaCA9PT0gMTMgLyogRW50ZXIgKi8pIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH19XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz4gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9e3RoaXMucHJvcHMuTmFtZVN1Ym1pdH0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdWJtaXRcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbGxhcHNlPlxyXG4gICAgICAgICAgICAgICAgPC9Gb3JtR3JvdXA+XHJcbiAgICAgICAgICAgIDwvRm9ybT4gXHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufVxyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\customComponents.js */")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, ".AC-Icon-text.jsx-1953405926{position:absolute;top:42px;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}.HitAdj-Icon-text.jsx-1953405926{position:absolute;top:48%;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGN1c3RvbUNvbXBvbmVudHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBcWZnQyxBQUcrQyxBQU1BLGtCQUxULEFBTUQsUUFDRSxDQU5BLFNBT3NCLENBTkEsd0dBT3BDLENBTkEiLCJmaWxlIjoiQzpcXFVzZXJzXFxNYXJrXFxEZXNrdG9wXFxuZXd0ZXN0XFxteS1wYWdlXFxwYWdlc1xcY3VzdG9tQ29tcG9uZW50cy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qICoqKioqKioqKioqKioqKiogXHJcbiogICBJbXBvcnRzICAgICAgICogXHJcbioqKioqKioqKioqKioqKioqKi9cclxuXHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcclxuaW1wb3J0IHsgXHJcbiAgICBDYXJkLCBDYXJkSW1nLCBDYXJkVGV4dCwgQ2FyZEJvZHksIENhcmRUaXRsZSwgQ2FyZFN1YnRpdGxlLCBcclxuICAgIFJvdywgQ29sLCBGb3JtLCBGb3JtR3JvdXAsIExhYmVsLCBJbnB1dCwgQnV0dG9uLCBDb2xsYXBzZSwgXHJcbiAgICBUYWJsZSwgSnVtYm90cm9uIFxyXG59IGZyb20gJ3JlYWN0c3RyYXAnXHJcblxyXG5pbXBvcnQgeyBIb21lQ2FyZFN0eWxlLCBEYW5kRFN0eWxlLCBJbWFnZVN0eWxlcywgVHZwYWdlU3R5bGVcclxufSBmcm9tICcuL2pzeHN0eWxlcydcclxuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xyXG5cclxuXHJcbi8qICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxyXG4qICAgRXhwb3J0IHN0eWxlZCBjb21wb25lbnRzICAgICAgICogXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIE5ld1RhYkxpbmsocHJvcHMpe1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8YSBjbGFzc05hbWU9e3Byb3BzLlN0eWxlfVxyXG4gICAgICAgICAgICBocmVmPXtwcm9wcy5MaW5rfVxyXG4gICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIiBcclxuICAgICAgICAgICAgcmVsPVwibm9vcGVuZXIgbm9yZWZlcnJlclwiXHJcbiAgICAgICAgICAgIHRpdGxlPXtwcm9wcy5UaXRsZX0+XHJcbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9hPlxyXG4gICAgKTtcclxufVxyXG5cclxuLy91c2VkIGluIGhvbWUgcGFnZSwgYXR0YWNrc2ltXHJcbmV4cG9ydCBmdW5jdGlvbiBDZW50ZXJGbGV4V3JhcERpdihwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXAganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiB0dnBvc3QsIHR2cGFnZVxyXG5leHBvcnQgZnVuY3Rpb24gTGVmdEZsZXhXcmFwRGl2KHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IGZsZXgtd3JhcCBqdXN0aWZ5LWNvbnRlbnQtbGVmdFwiPlxyXG4gICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZNYXplSGVhZGVyKCkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICA8TGluayBocmVmPVwiL3R2cGFnZVwiPlxyXG4gICAgICAgICAgICAgICAgPGEgc3R5bGU9e1R2cGFnZVN0eWxlLkxpbmt9PlNlYXJjaCBQYWdlPC9hPlxyXG4gICAgICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBUdk1hemVQYWdlKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgc3R5bGU9e1R2cGFnZVN0eWxlLkxheW91dH0+XHJcbiAgICAgICAgICAgIDxUdk1hemVIZWFkZXIgLz5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZQb3N0SW5mb0xhYmVsKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgPHRkIGNsYXNzTmFtZT1cImgyIHRleHQtbGVmdCB3LTI1IG0tMCBwLTJcIj5cclxuICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICA8L3RkPlxyXG4gICAgKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFR2UG9zdEluZm9WYWx1ZShwcm9wcyl7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LWxlZnQgbS0wIHAtMlwiPlxyXG4gICAgICAgICAgICA8c21hbGw+e3Byb3BzLmNoaWxkcmVufTwvc21hbGw+XHJcbiAgICAgICAgPC90ZD5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlciBjb21wbGlhbmNlXHJcbmV4cG9ydCBmdW5jdGlvbiBUcGxpc3RIZWFkZXJSb3cgKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxSb3cgY2xhc3NOYW1lPVwicC0wIGJnLXNlY29uZGFyeSB0ZXh0LXdoaXRlIHJvdW5kZWQtbGdcIj5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvUm93PlxyXG4gICAgKVxyXG59XHJcblxyXG4vKiAqKioqKioqKioqKioqKioqKioqKioqKiBcclxuKiAgIEV4cG9ydCBmdW5jdGlvbnMgICAgICogXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG5cclxuLy91c2VkIGluIHByb3ZpZGVyc3RhdHNcclxuZXhwb3J0IGZ1bmN0aW9uIE5ldHdvcmtEYXRhRmlsdGVyKHByb3BzKSB7XHJcbiAgICBsZXQgRm9uZSA9IHByb3BzLkZpbHRlcjE7XHJcbiAgICBsZXQgVm9uZSA9IHByb3BzLlZhbHVlMTtcclxuICAgIGxldCBGdHdvID0gcHJvcHMuRmlsdGVyMjtcclxuICAgIGxldCBWdHdvID0gcHJvcHMuVmFsdWUyO1xyXG4gICAgbGV0IERhdGEgPSBwcm9wcy5JbmZvO1xyXG4gICAgXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPntEYXRhLmZpbHRlcihEYXRhID0+IERhdGFbRm9uZV0gPT09IFZvbmUgJiYgRGF0YVtGdHdvXSA9PT0gVnR3bykubGVuZ3RofTwvc3Bhbj5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBDb21wbERhdGFGaWx0ZXIocHJvcHMpIHtcclxuICAgIGNvbnN0IERhdGEgPSBwcm9wcy5JbmZvXHJcbiAgICBjb25zdCBGb25lID0gcHJvcHMuRmlsdGVyMTtcclxuICAgIGNvbnN0IEZvbmVrZXkgPSBwcm9wcy5GaWx0ZXIxY2hpbGQ7XHJcbiAgICBjb25zdCBWb25lID0gcHJvcHMuVmFsdWUxO1xyXG5cclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPHNwYW4+e0RhdGEuZmlsdGVyKERhdGEgPT4gRGF0YVtGb25lXVtGb25la2V5XSA8IFZvbmUpLmxlbmd0aH08L3NwYW4+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBQZXJjZW50Q2FsYyhwcm9wcykge1xyXG4gICAgY29uc3QgRGF0YSA9IHByb3BzLkluZm9cclxuICAgIGNvbnN0IEZvbmUgPSBwcm9wcy5GaWx0ZXIxO1xyXG4gICAgY29uc3QgRm9uZWtleSA9IHByb3BzLkZpbHRlcjFjaGlsZDtcclxuICAgIGNvbnN0IFZvbmUgPSBwcm9wcy5WYWx1ZTE7XHJcbiAgICBjb25zdCBEaXZpZGVyID0gcHJvcHMuRGl2aWRlcjtcclxuXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPlxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBNYXRoLmZsb29yKFxyXG4gICAgICAgICAgICAgICAgICAgIChcclxuICAgICAgICAgICAgICAgICAgICAgICAgRGF0YS5maWx0ZXIoRGF0YSA9PiBEYXRhW0ZvbmVdW0ZvbmVrZXldIDwgVm9uZSkubGVuZ3RoXHJcbiAgICAgICAgICAgICAgICAgICAgKSAvIERpdmlkZXIgKiAxMDBcclxuICAgICAgICAgICAgICAgICkgKyAnJSdcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIDwvc3Bhbj5cclxuICAgIClcclxufVxyXG5cclxuLy91c2VkIGluIHByb3ZpZGVyQ29tcGxpYW5jZVxyXG5leHBvcnQgZnVuY3Rpb24gRGF0ZUNoZWNrKHByb3BzKSB7XHJcbiAgICB2YXIgZGF0ZSA9IHByb3BzLkRhdGU7XHJcbiAgICBcclxuICAgIGlmIChkYXRlIDwgXCIyMDE5LTA5LTIyXCIpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiZy1kYW5nZXIgdGV4dC13aGl0ZVwiPntkYXRlfTwvc3Bhbj5cclxuICAgICAgICApXHJcbiAgICB9IGVsc2UgaWYgKGRhdGUgPCBcIjIwMTktMTAtMjJcIiAmJiBkYXRlID4gXCIyMDE5LTA5LTIyXCIpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiZy13YXJuaW5nIHRleHQtd2hpdGVcIj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKVxyXG4gICAgfSBlbHNlIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3Bhbj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKTtcclxuICAgIH0gICBcclxufVxyXG5cclxuLyogKioqKioqKioqKioqKioqKioqKioqKiogXHJcbiogICBFeHBvcnQgQ2xhc3NlcyAgICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbi8vdXNlZCBpbiBob21lIHBhZ2VcclxuZXhwb3J0IGNsYXNzIEhvbWVDYXJkIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8Q2FyZCBzdHlsZT17SG9tZUNhcmRTdHlsZS5DYXJkfT5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlIHN0eWxlPXtIb21lQ2FyZFN0eWxlLlRpdGxlfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgdG9wIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUNhcmR9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3RoaXMucHJvcHMuSW1hZ2V9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFN1YnRpdGxlPnt0aGlzLnByb3BzLlN1YnRpdGxlfTwvQ2FyZFN1YnRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFRleHQgc3R5bGU9e3toZWlnaHQ6ICc4MHB4J319PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRleHQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxCdXR0b24gY2xhc3NOYW1lPVwidy0xMDAgcC0wIG0tMFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPE5ld1RhYkxpbmtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHlsZT1cImJ0biBidG4tZGFyayB3LTEwMCBwLTJcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIExpbms9e3RoaXMucHJvcHMuTGlua30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkJ1dHRvblRpdGxlfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9OZXdUYWJMaW5rPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgPC9DYXJkPiBcclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufTtcclxuXHJcbi8vdXNlZCBpbiBSZXN1bWV2aWV3IGFuZCBwcm92aWRlcmRhdGFcclxuZXhwb3J0IGNsYXNzIEN1c3RvbUp1bWJvIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5JbWdVcmwgPT09IFwibm9pbWFnZVwiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8SnVtYm90cm9uPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJkaXNwbGF5LTMgdGV4dC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9oMT5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjFTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8aHIgY2xhc3NOYW1lPVwibXktMlwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNhcHRpb24yU3R5bGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uMn1cclxuICAgICAgICAgICAgICAgICAgICA8L3A+XHJcbiAgICAgICAgICAgICAgICA8L0p1bWJvdHJvbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPEp1bWJvdHJvbj5cclxuICAgICAgICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPVwiZGlzcGxheS0zIHRleHQtY2VudGVyXCI+e3RoaXMucHJvcHMuVGl0bGV9PC9oMT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lci1mbHVpZCB0ZXh0LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aW1nIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9hdmF0YXIuanBnXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUF2YXRhcn0gYWx0PVwiYXZhdGFyXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjFTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8aHIgY2xhc3NOYW1lPVwibXktMlwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNhcHRpb24yU3R5bGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uMn08YnIgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQ2FwdGlvbjN9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9wPlxyXG4gICAgICAgICAgICAgICAgPC9KdW1ib3Ryb24+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcblxyXG4vL3VzZWQgaW4gYWJvdXQgcGFnZVxyXG5leHBvcnQgY2xhc3MgQWJvdXRNZWRpYSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcclxuICAgIHJlbmRlcigpIHtcclxuXHJcbiAgICAgICAgaWYgKHRoaXMucHJvcHMuQWxpZ24gPT09IFwiUmlnaHRcIikge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmQgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNsYXNzfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFJvdz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDb2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXtJbWFnZVN0eWxlcy5BYm91dH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDb2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRUaXRsZSBjbGFzc05hbWU9XCJtdC01XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L1Jvdz5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmQ+IFxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BbGlnbiA9PT0gXCJMZWZ0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHktMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT17dGhpcy5wcm9wcy5DbGFzc30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkVGl0bGUgY2xhc3NOYW1lPVwibXQtNVwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9ufVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEltZyBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e0ltYWdlU3R5bGVzLkFib3V0fSBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3JjPXt0aGlzLnByb3BzLkltZ1VybH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkNhcmQgaW1hZ2UgY2FwXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L1Jvdz5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmQ+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9O1xyXG4gICAgfVxyXG59XHJcblxyXG4vL3VzZWQgaW4gcmVzdW1lIGZvciBleHBlcmllbmNlIHNlY3Rpb25cclxuZXhwb3J0IGNsYXNzIFRocmVlQ29sdW1uQ2FyZCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4oXHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHktM1wiPlxyXG4gICAgICAgICAgICAgICAgPENhcmQgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNsYXNzfT5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlPjxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPjwvQ2FyZFRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgIDxSb3cgY2xhc3NOYW1lPVwidGV4dC1sZWZ0XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxDb2wgPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9uMX1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5EZXNjcmlwdGlvbjJ9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPENvbCA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb24zfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9Sb3c+XHJcbiAgICAgICAgICAgICAgICA8L0NhcmQ+IFxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vL0QgYW5kIEQgYXBwbGljYXRpb25cclxuZXhwb3J0IGNsYXNzIENoYXJhY3RlclNoZWV0IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBmdW5jdGlvbiBEYW5kRFRhYmxlTGFiZWwocHJvcHMpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIHRleHQtbGVmdCBoNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBmdW5jdGlvbiBEYW5kRFRhYmxlVmFsdWUocHJvcHMpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LXdoaXRlIHRleHQtbGVmdCBoNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIFxyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXYgPlxyXG4gICAgICAgICAgICAgICAgPFJvdyA+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBzbT17eyBzaXplOiAnYXV0bycsIG9mZnNldDogMCB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFRhYmxlIGJvcmRlcmxlc3MgIGNsYXNzTmFtZT1cIlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRib2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5TdHJlbmd0aDo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5TdHJlbmd0aH08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5Db25zdGl0dXRpb246PC9EYW5kRFRhYmxlTGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlVmFsdWU+e3RoaXMucHJvcHMuQ29uc3RpdHV0aW9ufTwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRleHRlcml0eTo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5EZXh0ZXJpdHl9PC9EYW5kRFRhYmxlVmFsdWU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlTGFiZWw+SGl0cG9pbnRzOjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0cG9pbnRzICE9IFwiRGVhZFwiICYmIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXIgaDVcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNtYWxsPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NtYWxsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRhbWFnZSBwZXIgSGl0OjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPnt0aGlzLnByb3BzLkRhbWFnZX08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90Ym9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9UYWJsZT4gIFxyXG4gICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2wgc209e3sgc2l6ZTogJ2F1dG8nLCBvZmZzZXQ6IDIgfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW1nICBzdHlsZT17RGFuZERTdHlsZS5BdmF0YXJ9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkF2YXRhclwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vLyBEIGFuZCBEIGFwcGxpY2F0aW9uXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTZWN0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIGNvbnN0cnVjdG9yKHByb3BzKSB7XHJcbiAgICAgICAgc3VwZXIocHJvcHMpO1xyXG4gICAgICAgIHRoaXMuUm9sbFJlc3VsdCA9IHRoaXMuUm9sbFJlc3VsdC5iaW5kKHRoaXMpO1xyXG4gICAgICAgIHRoaXMuQXR0YWNrQmFubmVyID0gdGhpcy5BdHRhY2tCYW5uZXIuYmluZCh0aGlzKTtcclxuICAgICAgICB0aGlzLkF0dGFja0J1dHRvbiA9IHRoaXMuQXR0YWNrQnV0dG9uLmJpbmQodGhpcyk7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC8vU2hvd3MgYXR0YWNrIHJvbGwgbnVtYmVyIHdpdGggc3BlY2lhbCBkaXNwbGF5IGZvclxyXG4gICAgLy9jcml0IHNjcmlrZSAobmF0dXJhbCAyMCBvbiByb2xsKVxyXG4gICAgUm9sbFJlc3VsdCgpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5Sb2xsID09PSAnQ3JpdCBTdHJpa2UnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWRhbmdlciBmb250LWl0YWxpY1wiPlxyXG4gICAgICAgICAgICAgICAgICAgIENyaXRpY2FsIFN0cmlrZSFcclxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPHNwYW4+e3RoaXMucHJvcHMuUm9sbH08L3NwYW4+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC8vc2hvd3MgYXR0YWNrIHJlc3VsdCBvZiBoaXQvbWlzcyBvciBwbGFjZSBob2xkZXIgZm9yXHJcbiAgICAvL3Jlc3VsdCBkaXNwbGF5LlxyXG4gICAgQXR0YWNrQmFubmVyKCkge1xyXG4gICAgICAgIGNvbnN0IFJlc3VsdCA9IHRoaXMucHJvcHMuRGlkSGl0O1xyXG4gICAgICAgIGlmIChSZXN1bHQgPT09IFwiSGl0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJhbGVydCBhbGVydC1zdWNjZXNzIHB5LTIgdGV4dC1jZW50ZXJcIj5IaXQhPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGlmIChSZXN1bHQgPT09IFwiTWlzc1wiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwiYWxlcnQgYWxlcnQtZGFuZ2VyIHB5LTIgdGV4dC1jZW50ZXJcIj5NaXNzPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGg2IGNsYXNzTmFtZT1cInRleHQtd2hpdGUgdGV4dC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAoQXR0YWNrIFJlc3VsdCBkaXNwbGF5ZWQgaGVyZSlcclxuICAgICAgICAgICAgICAgIDwvaDY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICAvKkZ1bmN0aW9uIHRvIGRpc3BsYXkgYXR0YWNrIGJ1dHRvbiBiYXNlZCBvbiBpbml0aWF0aXZlIHJvbGwgYW5kIGF0dGFjayB0dXJuLiBQdWxsc1xyXG4gICAgQXR0YWNrVHVybiBmdW5jdG9uIGFuZCBBdHRhY2tyb2xsIGZ1bmN0aW9ucyBmcm9tIGVpdGhlciBoZXJvZnVuY3Rpb25zLmpzIG9yIG1vbnN0ZXJmdW5jdGlvbnMuanNcclxuICAgIGFzIGl0ZW50aWZpZWQgaW4gcHJvcHMgKi9cclxuICAgIEF0dGFja0J1dHRvbigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BdHRhY2tUdXJuID09PSB0cnVlKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8QnV0dG9uICBcclxuICAgICAgICAgICAgICAgICAgICBvbk1vdXNlRG93bj17dGhpcy5wcm9wcy5BdHRhY2tSb2xsfSBcclxuICAgICAgICAgICAgICAgICAgICBvbk1vdXNlVXAgPSB7dGhpcy5wcm9wcy5OZXh0VHVybn1cclxuICAgICAgICAgICAgICAgID5cclxuICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Sb2xsVGl0bGV9XHJcbiAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgKVxyXG4gICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPk5vdCB5b3VyIHR1cm48L2g0PlxyXG4gICAgICAgICAgICApXHJcbiAgICAgICAgfTtcclxuICAgIH1cclxuXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBjbGFzc05hbWU9XCJteS00IG14LTUgZC1mbGV4IGp1c3RpZnktY29udGVudC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBzcmM9XCIuLi9zdGF0aWMvaW1hZ2VzL2FjaWNvbi5wbmdcIiBhbHQ9XCJzaGllbGRcIi8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJBQy1JY29uLXRleHRcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQUN9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9oND5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8Q29sIGNsYXNzTmFtZT1cIm15LTQgbXgtNSBkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9oaXRhZGp1c3QucG5nXCIgYWx0PVwiaWNvblwiLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwiSGl0QWRqLUljb24tdGV4dFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0QWRqfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+ICBcclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5BQy1JY29uLXRleHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdG9wOiA0MnB4O1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5IaXRBZGotSWNvbi10ZXh0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvcDogNDglO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgIGB9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9zdHlsZT5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlciBteS00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAge3RoaXMuQXR0YWNrQnV0dG9uKCl9XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgdGV4dC13aGl0ZVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMj5BdHRhY2sgUmVzdWx0OjwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwibXQtMiBwLTBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgYXR0YWNrIHJvbGw6ICZuYnNwOyB7dGhpcy5Sb2xsUmVzdWx0KCl9PC9wPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIHt0aGlzLkF0dGFja0Jhbm5lcigpfVxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBEYW5kRCBwYWdlIHRvIGRpc3BsYXkgTmFtZSxJbml0aWF0aXZlIGFuZCBIUCBzdGF0dXMgZm9yIGhlcm8gYW5kIFxyXG4vL21vbnN0ZXIuXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTdGF0dXNEaXNwbGF5IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQtaW5mb1wiPnt0aGlzLnByb3BzLk5hbWV9PC9oND5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgcHQtNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5pbmlhdGl2ZTo8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Jbml0aWF0aXZlICE9IFwiU2Vjb25kXCIgJiYgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPiB8fCAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC13YXJuaW5nXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5IaXQgUG9pbnRzOjwvaDQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtdC00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUCAhPSBcIkRlYWRcIiAmJlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc3VjY2Vzc1wiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSFB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vRCBhbmQgRCBhcHBsaWNhdGlvblxyXG5leHBvcnQgY2xhc3MgTmFtZUZvcm0gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcclxuICAgICAgICBzdXBlcihwcm9wcyk7XHJcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtjb2xsYXBzZTogZmFsc2V9O1xyXG4gICAgICAgIHRoaXMudG9nZ2xlID0gdGhpcy50b2dnbGUuYmluZCh0aGlzKTtcclxuICAgIH0gICBcclxuICAgIFxyXG4gICAgdG9nZ2xlKCkge1xyXG4gICAgICAgIHRoaXMuc2V0U3RhdGUoc3RhdGUgPT4gKHtjb2xsYXBzZTogIXN0YXRlLmNvbGxhcHNlfSkpO1xyXG4gICAgfVxyXG5cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8Rm9ybSA+XHJcbiAgICAgICAgICAgICAgICA8Rm9ybUdyb3VwIGNsYXNzTmFtZT1cIm1iLTIgbXItc20tMiBtYi1zbS0yIGQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm0tMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8TGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJ0biB0ZXh0LXdoaXRlXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17dGhpcy50b2dnbGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5zdGF0ZS5jb2xsYXBzZT8gJ0hpZGUnIDogJ0NoYW5nZSBOYW1lJ31cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2xsYXBzZSBpc09wZW49e3RoaXMuc3RhdGUuY29sbGFwc2V9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbnB1dFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1heExlbmd0aD1cIjIwXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e3RoaXMucHJvcHMuVmFsdWV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXt0aGlzLnByb3BzLk5hbWVDaGFuZ2V9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vUHJldmVudCBlbnRlciBrZXkgc3VibWl0XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uS2V5UHJlc3M9e2V2ZW50ID0+IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIChldmVudC53aGljaCA9PT0gMTMgLyogRW50ZXIgKi8pIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH19XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz4gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9e3RoaXMucHJvcHMuTmFtZVN1Ym1pdH0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdWJtaXRcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbGxhcHNlPlxyXG4gICAgICAgICAgICAgICAgPC9Gb3JtR3JvdXA+XHJcbiAgICAgICAgICAgIDwvRm9ybT4gXHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufVxyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\customComponents.js */")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "d-flex justify-content-center my-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 514
+          lineNumber: 518
         },
         __self: this
       }, this.AttackButton()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 517
+          lineNumber: 521
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 518
+          lineNumber: 522
         },
         __self: this
       }, "Attack Result:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
         className: "mt-2 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 519
+          lineNumber: 523
         },
         __self: this
       }, "attack roll: \xA0 ", this.RollResult())), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 522
+          lineNumber: 526
         },
         __self: this
       }, this.AttackBanner()));
@@ -4373,89 +4136,89 @@ function (_React$Component7) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 535
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
-        className: "text-info",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 536
-        },
-        __self: this
-      }, this.props.Name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "text-center pt-4",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 537
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "p-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 538
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
-        __source: {
-          fileName: _jsxFileName,
           lineNumber: 539
         },
         __self: this
-      }, "iniative:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
         className: "text-info",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 540
         },
         __self: this
+      }, this.props.Name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "text-center pt-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 541
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        className: "p-3",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 542
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 543
+        },
+        __self: this
+      }, "iniative:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+        className: "text-info",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 544
+        },
+        __self: this
       }, this.props.Initiative != "Second" && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "text-info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 542
+          lineNumber: 546
         },
         __self: this
       }, this.props.Initiative) || react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "text-warning",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 545
+          lineNumber: 549
         },
         __self: this
       }, this.props.Initiative))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "p-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 551
+          lineNumber: 555
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 552
+          lineNumber: 556
         },
         __self: this
       }, "Hit Points:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
         className: "text-center mt-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 553
+          lineNumber: 557
         },
         __self: this
       }, this.props.HP != "Dead" && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "text-success",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 555
+          lineNumber: 559
         },
         __self: this
       }, this.props.HP) || react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "text-danger",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 558
+          lineNumber: 562
         },
         __self: this
       }, this.props.HP)))));
@@ -4498,27 +4261,27 @@ function (_React$Component8) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Form"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 584
+          lineNumber: 588
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["FormGroup"], {
         className: "mb-2 mr-sm-2 mb-sm-2 d-flex flex-wrap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 585
+          lineNumber: 589
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "m-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 586
+          lineNumber: 590
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 587
+          lineNumber: 591
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Button"], {
@@ -4526,34 +4289,34 @@ function (_React$Component8) {
         onClick: this.toggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 588
+          lineNumber: 592
         },
         __self: this
       }, this.state.collapse ? 'Hide' : 'Change Name'))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Collapse"], {
         isOpen: this.state.collapse,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 595
+          lineNumber: 599
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "d-flex flex-wrap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 596
+          lineNumber: 600
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "m-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 597
+          lineNumber: 601
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Input"], {
         type: "text",
         maxLength: "20",
-        value: this.props.value,
+        value: this.props.Value,
         onChange: this.props.NameChange //Prevent enter key submit
         ,
         onKeyPress: function onKeyPress(event) {
@@ -4565,21 +4328,21 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 598
+          lineNumber: 602
         },
         __self: this
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "m-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 611
+          lineNumber: 615
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Button"], {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 612
+          lineNumber: 616
         },
         __self: this
       }, "Submit"))))));
@@ -4705,7 +4468,7 @@ var Tplist = {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!**********************************!*\
   !*** multi ./pages/DandDpage.js ***!
   \**********************************/
