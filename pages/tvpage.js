@@ -1,14 +1,15 @@
 import React from 'react'
-import { Form, Label, Input, Card, CardImg, CardBody, CardTitle } from 'reactstrap'
-import { TvpageStyle } from './jsxstyles'
+import { Form, Label, Input } from 'reactstrap'
 import Layout from '../components/layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import { NewTabLink, LeftFlexWrapDiv, TvMazePage } from './customComponents'
+import { NewTabLink, LeftFlexWrapDiv, TvMazePage, TvMazeCard } from './customComponents'
 
 
 const noimage = '/static/images/no-img.png';
 var Search = '';
+
+
 
 
 class Searchbar extends React.Component {
@@ -51,6 +52,7 @@ class Searchbar extends React.Component {
 }
 
 const TvPage = props => (
+  
   <Layout>
     <h1 className="text-center">the below content has been imported from 
       <NewTabLink
@@ -64,25 +66,20 @@ const TvPage = props => (
       <h1>Results for: {Search}</h1>
       <LeftFlexWrapDiv>
         {props.shows.map(show => (
-          <div className="p-3 text-center" key={show.id}>
-            <Card>
-              <CardTitle 
-                className="m-4 text-center" 
-                style={TvpageStyle.Title}>
-                  <b><u>{show.name}</u></b>
-              </CardTitle>
-              <CardBody>
-              <CardImg 
-                className="my-2" 
-                style={TvpageStyle.Image} 
-                src={show.image ? show.image.medium : noimage} 
-                alt="image" 
-              />
-              </CardBody>
-              <Link href={`/tvpost?id=${show.id}`}>
-                <a className="btn btn-dark w-100">Select</a>
-              </Link>
-            </Card>
+          <div className="p-3" key={show.id}>
+            <TvMazeCard
+              CardStyle={{width: '250px'}}
+              Title={
+                <p><b><u>{show.name}</u></b></p>
+              }
+              ImgSrc={show.image ? show.image.medium : noimage}
+              ImgAlt="image"
+              Link={
+                <Link href={`/tvpost?id=${show.id}`}>
+                  <a className="btn btn-dark w-100">Select</a>
+                </Link>
+              }
+            />
           </div>
         ))}
       </LeftFlexWrapDiv>
@@ -104,3 +101,24 @@ TvPage.getInitialProps = async function() {
 };
 
 export default TvPage;
+
+
+/*
+<Card style={{width: '250px'}}>
+              <CardTitle 
+                className="my-4 text-center w-100 px-2" 
+                style={TvpageStyle.Title}>
+                  <b><u>{show.name}</u></b>
+              </CardTitle>
+              <CardBody>
+                <CardImg
+                  style={TvpageStyle.Image} 
+                  src={show.image ? show.image.medium : noimage} 
+                  alt="image" 
+                />
+                <Link href={`/tvpost?id=${show.id}`}>
+                  <a className="btn btn-dark w-100">Select</a>
+                </Link>
+              </CardBody>
+            </Card>
+*/

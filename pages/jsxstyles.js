@@ -9,7 +9,9 @@ export const Pointer = {
 export const TabStyle = {
     width: '95%',
     marginLeft: 'auto',
-    marginRight: 'auto'
+    marginRight: 'auto',
+    marginTop: '20px',
+    marginBottom: '20px'
 }
 
 export const HomeCardStyle = {
@@ -46,13 +48,19 @@ export const ImageStyles = {
 
 export const TvpageStyle = {
     Image: {
+        display: 'flex',
         height: '300px',
-        width: 'auto'
+        width: '200px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        marginTop: '10px',
+        marginBottom: '10px'
     },
     Title: {
         height: '20px',
         width: '200px',
-        margin: 4
+        margin: 4,
+        wordWwrap: 'break-word',
     },
     Cast: {
         maxHeight: '20px',

@@ -1,11 +1,9 @@
 import React from 'react'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, 
-    TabContent, TabPane, Nav, NavItem, NavLink, Row, Col, Table 
-} from 'reactstrap'
-import classnames from 'classnames'
-import { DateCheck, TplistHeaderRow } from '../customComponents'
+    Row, Col, Table } from 'reactstrap'
+import { DateCheck, TplistHeaderRow, CustomTabs } from '../customComponents'
 import { ComplianceTable } from './providerStats'
-import { Tplist, Pointer } from '../jsxstyles'
+import { Tplist } from '../jsxstyles'
 
 var tpdata = require('./company.json');
 var vehdata = require('./vehicle.json');
@@ -230,9 +228,7 @@ class ProviderCompliance extends React.Component {
         this.state = {
             dropdownOpen: false,
             value: 'ACCEL',
-            activeTab: '1'
         };
-        this.selectTab = this.selectTab.bind(this);
         this.selectProvider = this.selectProvider.bind(this);
         this.clickDropdown = this.clickDropdown.bind(this);
         this.ProviderDropdown = ProviderDropdown.bind(this);
@@ -246,12 +242,6 @@ class ProviderCompliance extends React.Component {
 
     selectProvider(e) {
         this.setState({value: event.target.value});
-    }
-
-    selectTab(tab) {
-        if (this.state.actiTab !== tab) {
-            this.setState({activeTab: tab});
-        }
     }
 
     render() {
@@ -284,35 +274,19 @@ class ProviderCompliance extends React.Component {
                         &nbsp;need immediate attention.
                     </h5>
                 </div>
-                <div className="mt-5 mx-5">
+                <div>
                     <CompanyTab Data = {tp} />
                     <div className="my-3">
-                        <Nav tabs>
-                            <NavItem>
-                                <NavLink
-                                    className={classnames({ active: this.state.activeTab === '1' })}
-                                    onClick={() => { this.selectTab('1'); }} style={Pointer}
-                                >
-                                    Drivers
-                                </NavLink>
-                            </NavItem>
-                            <NavItem>
-                                <NavLink
-                                    className={classnames({ active: this.state.activeTab === '2' })}
-                                    onClick={() => { this.selectTab('2'); }} style={Pointer}
-                                >
-                                    Vehicles
-                                </NavLink>
-                            </NavItem>
-                        </Nav>
-                        <TabContent activeTab={this.state.activeTab}>
-                            <TabPane tabId="1" className="mt-3">
+                        <CustomTabs
+                            Tab1Name = 'Drivers'
+                            Tab2Name = 'Vehicles'
+                            Tab1Content = {
                                 <DriverTab Data = {drfilter} />
-                            </TabPane>
-                            <TabPane tabId="2" className="mt-3">
+                            }
+                            Tab2Content = {
                                 <VehicleTab Data = {vehfilter} />
-                            </TabPane>
-                        </TabContent>
+                            }
+                        />
                     </div>
                 </div>
             </div>

@@ -2,14 +2,15 @@
 *   Imports       * 
 ******************/
 
-import React from 'react'
+import React, { useState } from 'react';
 import { 
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
     Row, Col, Form, FormGroup, Label, Input, Button, Collapse, 
-    Table, Jumbotron 
+    Table, Jumbotron, TabContent, TabPane, Nav, NavItem, NavLink
 } from 'reactstrap'
+import classnames from 'classnames';
 
-import { HomeCardStyle, DandDStyle, ImageStyles, TvpageStyle
+import { HomeCardStyle, DandDStyle, ImageStyles, TvpageStyle, Pointer, TabStyle
 } from './jsxstyles'
 import Link from 'next/link'
 
@@ -161,6 +162,72 @@ export function DateCheck(props) {
     }   
 }
 
+//used in TvPage and TVPost
+export function TvMazeCard(props) {
+    return(
+        <Card style={props.CardStyle} className={props.CardClassName}>
+        <CardTitle 
+            className="m-4 text-center"
+            style={TvpageStyle.Title}>
+            {props.Title}
+        </CardTitle>
+        <CardBody>
+            <CardImg 
+                className={props.ImgClass} 
+                style={TvpageStyle.Image} 
+                src={props.ImgSrc} 
+                alt={props.ImgAlt}
+            />
+            <CardSubtitle className="text-center my-2">
+            <h4 style={TvpageStyle.Cast}>
+                {props.SubTitle}
+            </h4>
+            </CardSubtitle>
+        </CardBody>
+            {props.Link}
+        </Card>
+    );
+}
+
+//used in ProviderCompliance, providerData and TVpost
+export function CustomTabs(props) {
+    const [activeTab, setActiveTab] = useState('1');
+    
+    const toggle = tab => {
+        if(activeTab !== tab) setActiveTab(tab);
+    }
+    return (
+        <div>
+            <Nav tabs>
+                <NavItem>
+                    <NavLink
+                        className={classnames({ active: activeTab === '1' })}
+                        onClick={() => { toggle('1'); }} style={Pointer}
+                    >
+                        {props.Tab1Name}
+                    </NavLink>
+                </NavItem>
+                <NavItem>
+                    <NavLink
+                        className={classnames({ active: activeTab === '2' })}
+                        onClick={() => { toggle('2'); }} style={Pointer}
+                    >
+                        {props.Tab2Name}
+                    </NavLink>
+                </NavItem>
+            </Nav>
+            <TabContent activeTab={activeTab}>
+                <TabPane tabId="1" style={TabStyle}>
+                    {props.Tab1Content}
+                </TabPane>
+                <TabPane tabId="2" style={TabStyle}>
+                    {props.Tab2Content}
+                </TabPane>
+            </TabContent>
+        </div>
+    )
+}
+
 /* *********************** 
 *   Export Classes       * 
 **************************/
@@ -196,9 +263,9 @@ export class HomeCard extends React.Component{
             </div>
         );
     }
-};
+}
 
-//used in Resumeview and providerdata
+//used in Resumeview, about page and providerdata
 export class CustomJumbo extends React.Component {
     render() {
         if (this.props.ImgUrl === "noimage") {
@@ -360,8 +427,8 @@ export class CharacterSheet extends React.Component {
         }
         
         return (
-            <div >
-                <Row >
+            <div>
+                <Row>
                     <Col sm={{ size: 'auto', offset: 0 }}>
                         <Table borderless  className="">
                             <tbody>
@@ -625,3 +692,6 @@ export class NameForm extends React.Component {
         );
     }
 }
+
+
+

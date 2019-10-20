@@ -46,6 +46,7 @@ function Aboutpage() {
         Title="Professional Experience"
         ImgUrl = "noimage"
         Caption1Style='lead text-center'
+        Caption2Style='text-center'
         Caption1="Dedicated and motivated professional looking to apply my accumulated experience in 
             technical writing and training in mixed customer relations roles and into an IT based career. 
             Expertise in customer service, communication, analytical thinking and problem solving to achieve goals."

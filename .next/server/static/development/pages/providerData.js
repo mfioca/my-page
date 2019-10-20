@@ -495,6 +495,28 @@ function Layout(props) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/array/is-array */ "core-js/library/fn/array/is-array");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js ***!
+  \*********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! core-js/library/fn/get-iterator */ "core-js/library/fn/get-iterator");
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js":
 /*!***********************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js ***!
@@ -671,6 +693,25 @@ module.exports = _createClass;
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js":
+/*!***************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js ***!
+  \***************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _arrayWithHoles; });
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/array/is-array */ "./node_modules/@babel/runtime-corejs2/core-js/array/is-array.js");
+/* harmony import */ var _core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0__);
+
+function _arrayWithHoles(arr) {
+  if (_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(arr)) return arr;
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js":
 /*!**********************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js ***!
@@ -829,6 +870,63 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js ***!
+  \*********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _iterableToArrayLimit; });
+/* harmony import */ var _core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/get-iterator */ "./node_modules/@babel/runtime-corejs2/core-js/get-iterator.js");
+/* harmony import */ var _core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0__);
+
+function _iterableToArrayLimit(arr, i) {
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = _core_js_get_iterator__WEBPACK_IMPORTED_MODULE_0___default()(arr), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _nonIterableRest; });
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js":
 /*!*************************************************************************!*\
   !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js ***!
@@ -916,6 +1014,28 @@ function _setPrototypeOf(o, p) {
   };
 
   return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js":
+/*!**************************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js ***!
+  \**************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _slicedToArray; });
+/* harmony import */ var _arrayWithHoles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles */ "./node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js");
+/* harmony import */ var _iterableToArrayLimit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit */ "./node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js");
+/* harmony import */ var _nonIterableRest__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nonIterableRest */ "./node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js");
+
+
+
+function _slicedToArray(arr, i) {
+  return Object(_arrayWithHoles__WEBPACK_IMPORTED_MODULE_0__["default"])(arr) || Object(_iterableToArrayLimit__WEBPACK_IMPORTED_MODULE_1__["default"])(arr, i) || Object(_nonIterableRest__WEBPACK_IMPORTED_MODULE_2__["default"])();
 }
 
 /***/ }),
@@ -2138,7 +2258,7 @@ module.exports = __webpack_require__(/*! ./dist/style */ "./node_modules/styled-
 /*!***********************************!*\
   !*** ./pages/customComponents.js ***!
   \***********************************/
-/*! exports provided: NewTabLink, CenterFlexWrapDiv, LeftFlexWrapDiv, TvMazeHeader, TvMazePage, TvPostInfoLabel, TvPostInfoValue, TplistHeaderRow, NetworkDataFilter, ComplDataFilter, PercentCalc, DateCheck, HomeCard, CustomJumbo, AboutMedia, ThreeColumnCard, CharacterSheet, AttackSection, AttackStatusDisplay, NameForm */
+/*! exports provided: NewTabLink, CenterFlexWrapDiv, LeftFlexWrapDiv, TvMazeHeader, TvMazePage, TvPostInfoLabel, TvPostInfoValue, TplistHeaderRow, NetworkDataFilter, ComplDataFilter, PercentCalc, DateCheck, TvMazeCard, CustomTabs, HomeCard, CustomJumbo, AboutMedia, ThreeColumnCard, CharacterSheet, AttackSection, AttackStatusDisplay, NameForm */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2155,6 +2275,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComplDataFilter", function() { return ComplDataFilter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PercentCalc", function() { return PercentCalc; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DateCheck", function() { return DateCheck; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TvMazeCard", function() { return TvMazeCard; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomTabs", function() { return CustomTabs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeCard", function() { return HomeCard; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomJumbo", function() { return CustomJumbo; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutMedia", function() { return AboutMedia; });
@@ -2169,15 +2291,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
-/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactstrap */ "reactstrap");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _jsxstyles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./jsxstyles */ "./pages/jsxstyles.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! styled-jsx/style */ "./node_modules/styled-jsx/style.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! classnames */ "classnames");
+/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _jsxstyles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./jsxstyles */ "./pages/jsxstyles.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_12__);
+
 
 
 
@@ -2194,12 +2320,13 @@ var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\customCom
 
 
 
+
 /* *********************************
 *   Export styled components       * 
 ***********************************/
 
 function NewTabLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
     className: props.Style,
     href: props.Link,
     target: "_blank",
@@ -2207,105 +2334,105 @@ function NewTabLink(props) {
     title: props.Title,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, props.children);
 } //used in home page, attacksim
 
 function CenterFlexWrapDiv(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "d-flex flex-wrap justify-content-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, props.children);
 } //used in tvpost, tvpage
 
 function LeftFlexWrapDiv(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     className: "d-flex flex-wrap justify-content-left",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 46
     },
     __self: this
   }, props.children);
 }
 function TvMazeHeader() {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 53
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_10___default.a, {
-    href: "/tvpage",
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("a", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["TvpageStyle"].Link,
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_12___default.a, {
+    href: "/tvpage",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("a", {
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TvpageStyle"].Link,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
   }, "Search Page")));
 }
 function TvMazePage(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["TvpageStyle"].Layout,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(TvMazeHeader, {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TvpageStyle"].Layout,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 64
     },
     __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(TvMazeHeader, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 65
+    },
+    __self: this
   }), props.children);
 }
 function TvPostInfoLabel(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
     className: "h2 text-left w-25 m-0 p-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 73
     },
     __self: this
   }, props.children);
 }
 function TvPostInfoValue(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
     className: "text-left m-0 p-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("small", {
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("small", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 82
     },
     __self: this
   }, props.children));
 } //used in provider compliance
 
 function TplistHeaderRow(props) {
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
     className: "p-0 bg-secondary text-white rounded-lg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 89
+      lineNumber: 90
     },
     __self: this
   }, props.children);
@@ -2321,10 +2448,10 @@ function NetworkDataFilter(props) {
   var Ftwo = props.Filter2;
   var Vtwo = props.Value2;
   var Data = props.Info;
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 108
+      lineNumber: 109
     },
     __self: this
   }, Data.filter(function (Data) {
@@ -2337,10 +2464,10 @@ function ComplDataFilter(props) {
   var Fone = props.Filter1;
   var Fonekey = props.Filter1child;
   var Vone = props.Value1;
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 120
+      lineNumber: 121
     },
     __self: this
   }, Data.filter(function (Data) {
@@ -2354,10 +2481,10 @@ function PercentCalc(props) {
   var Fonekey = props.Filter1child;
   var Vone = props.Value1;
   var Divider = props.Divider;
-  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 133
+      lineNumber: 134
     },
     __self: this
   }, Math.floor(Data.filter(function (Data) {
@@ -2369,32 +2496,169 @@ function DateCheck(props) {
   var date = props.Date;
 
   if (date < "2019-09-22") {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
       className: "bg-danger text-white",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 152
       },
       __self: this
     }, date);
   } else if (date < "2019-10-22" && date > "2019-09-22") {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
       className: "bg-warning text-white",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155
+        lineNumber: 156
       },
       __self: this
     }, date);
   } else {
-    return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+    return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 159
+        lineNumber: 160
       },
       __self: this
     }, date);
   }
+} //used in TvPage and TVPost
+
+function TvMazeCard(props) {
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Card"], {
+    style: props.CardStyle,
+    className: props.CardClassName,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 168
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardTitle"], {
+    className: "m-4 text-center",
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TvpageStyle"].Title,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 169
+    },
+    __self: this
+  }, props.Title), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 174
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardImg"], {
+    className: props.ImgClass,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TvpageStyle"].Image,
+    src: props.ImgSrc,
+    alt: props.ImgAlt,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 175
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardSubtitle"], {
+    className: "text-center my-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 181
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TvpageStyle"].Cast,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 182
+    },
+    __self: this
+  }, props.SubTitle))), props.Link);
+} //used in ProviderCompliance, providerData and TVpost
+
+function CustomTabs(props) {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_8__["useState"])('1'),
+      _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_6__["default"])(_useState, 2),
+      activeTab = _useState2[0],
+      setActiveTab = _useState2[1];
+
+  var toggle = function toggle(tab) {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 200
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Nav"], {
+    tabs: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 201
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 202
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["NavLink"], {
+    className: classnames__WEBPACK_IMPORTED_MODULE_10___default()({
+      active: activeTab === '1'
+    }),
+    onClick: function onClick() {
+      toggle('1');
+    },
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Pointer"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 203
+    },
+    __self: this
+  }, props.Tab1Name)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["NavItem"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 210
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["NavLink"], {
+    className: classnames__WEBPACK_IMPORTED_MODULE_10___default()({
+      active: activeTab === '2'
+    }),
+    onClick: function onClick() {
+      toggle('2');
+    },
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Pointer"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 211
+    },
+    __self: this
+  }, props.Tab2Name))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["TabContent"], {
+    activeTab: activeTab,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 219
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["TabPane"], {
+    tabId: "1",
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TabStyle"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 220
+    },
+    __self: this
+  }, props.Tab1Content), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["TabPane"], {
+    tabId: "2",
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["TabStyle"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 223
+    },
+    __self: this
+  }, props.Tab2Content)));
 }
 /* *********************** 
 *   Export Classes       * 
@@ -2415,70 +2679,70 @@ function (_React$Component) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(HomeCard, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172
+          lineNumber: 239
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["HomeCardStyle"].Card,
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Card"], {
+        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["HomeCardStyle"].Card,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 173
+          lineNumber: 240
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["HomeCardStyle"].Title,
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardTitle"], {
+        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["HomeCardStyle"].Title,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174
+          lineNumber: 241
         },
         __self: this
-      }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardImg"], {
+      }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardImg"], {
         top: true,
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["ImageStyles"].HomeCard,
+        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["ImageStyles"].HomeCard,
         src: this.props.Image,
         alt: "Card image cap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 177
+          lineNumber: 244
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182
+          lineNumber: 249
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardSubtitle"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardSubtitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183
+          lineNumber: 250
         },
         __self: this
-      }, this.props.Subtitle), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardText"], {
+      }, this.props.Subtitle), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardText"], {
         style: {
           height: '80px'
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184
+          lineNumber: 251
         },
         __self: this
-      }, this.props.Description), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+      }, this.props.Description), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         className: "w-100 p-0 m-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187
+          lineNumber: 254
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(NewTabLink, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(NewTabLink, {
         Style: "btn btn-dark w-100 p-2",
         Link: this.props.Link,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 188
+          lineNumber: 255
         },
         __self: this
       }, this.props.ButtonTitle)))));
@@ -2486,8 +2750,7 @@ function (_React$Component) {
   }]);
 
   return HomeCard;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
-; //used in Resumeview and providerdata
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); //used in Resumeview, about page and providerdata
 
 var CustomJumbo =
 /*#__PURE__*/
@@ -2504,96 +2767,96 @@ function (_React$Component2) {
     key: "render",
     value: function render() {
       if (this.props.ImgUrl === "noimage") {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Jumbotron"], {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Jumbotron"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 206
+            lineNumber: 273
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
           className: "display-3 text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 207
+            lineNumber: 274
           },
           __self: this
-        }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
           className: this.props.Caption1Style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 210
+            lineNumber: 277
           },
           __self: this
-        }, this.props.Caption1), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", {
+        }, this.props.Caption1), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", {
           className: "my-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 213
+            lineNumber: 280
           },
           __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
           className: this.props.Caption2Style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 214
+            lineNumber: 281
           },
           __self: this
         }, this.props.Caption2));
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Jumbotron"], {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Jumbotron"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 221
+            lineNumber: 288
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
           className: "display-3 text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 222
+            lineNumber: 289
           },
           __self: this
-        }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        }, this.props.Title), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           className: "container-fluid text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 223
+            lineNumber: 290
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
           src: "../static/images/avatar.jpg",
-          style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["ImageStyles"].HomeAvatar,
+          style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["ImageStyles"].HomeAvatar,
           alt: "avatar",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 224
+            lineNumber: 291
           },
           __self: this
-        })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
           className: this.props.Caption1Style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 229
+            lineNumber: 296
           },
           __self: this
-        }, this.props.Caption1), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("hr", {
+        }, this.props.Caption1), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("hr", {
           className: "my-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 232
+            lineNumber: 299
           },
           __self: this
-        }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+        }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
           className: this.props.Caption2Style,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 233
+            lineNumber: 300
           },
           __self: this
-        }, this.props.Caption2, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("br", {
+        }, this.props.Caption2, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("br", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 234
+            lineNumber: 301
           },
           __self: this
         }), this.props.Caption3));
@@ -2602,7 +2865,7 @@ function (_React$Component2) {
   }]);
 
   return CustomJumbo;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component); //used in about page
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); //used in about page
 
 var AboutMedia =
 /*#__PURE__*/
@@ -2619,128 +2882,128 @@ function (_React$Component3) {
     key: "render",
     value: function render() {
       if (this.props.Align === "Right") {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           className: "py-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 249
+            lineNumber: 316
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 250
+            lineNumber: 317
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 251
+            lineNumber: 318
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 252
+            lineNumber: 319
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardImg"], {
-          style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["ImageStyles"].About,
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardImg"], {
+          style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["ImageStyles"].About,
           src: this.props.ImgUrl,
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 253
+            lineNumber: 320
           },
           __self: this
-        })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 259
+            lineNumber: 326
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardTitle"], {
           className: "mt-5",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 260
+            lineNumber: 327
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 261
+            lineNumber: 328
           },
           __self: this
-        }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+        }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 263
+            lineNumber: 330
           },
           __self: this
         }, this.props.Description)))));
       }
 
       if (this.props.Align === "Left") {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
           className: "py-2",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 275
+            lineNumber: 342
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Card"], {
           className: this.props.Class,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 276
+            lineNumber: 343
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 277
+            lineNumber: 344
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 278
+            lineNumber: 345
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardTitle"], {
           className: "mt-5",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 279
+            lineNumber: 346
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 280
+            lineNumber: 347
           },
           __self: this
-        }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+        }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 282
+            lineNumber: 349
           },
           __self: this
-        }, this.props.Description)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        }, this.props.Description)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 286
+            lineNumber: 353
           },
           __self: this
-        }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardImg"], {
-          style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["ImageStyles"].About,
+        }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardImg"], {
+          style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["ImageStyles"].About,
           src: this.props.ImgUrl,
           alt: "Card image cap",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 287
+            lineNumber: 354
           },
           __self: this
         })))));
@@ -2751,7 +3014,7 @@ function (_React$Component3) {
   }]);
 
   return AboutMedia;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component); //used in resume for experience section
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); //used in resume for experience section
 
 var ThreeColumnCard =
 /*#__PURE__*/
@@ -2767,109 +3030,109 @@ function (_React$Component4) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(ThreeColumnCard, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "py-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 305
+          lineNumber: 372
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Card"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Card"], {
         className: this.props.Class,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 306
+          lineNumber: 373
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardTitle"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardTitle"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 374
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 307
+          lineNumber: 374
         },
         __self: this
-      }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+      }, this.props.Title)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         className: "text-left",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 308
+          lineNumber: 375
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 309
+          lineNumber: 376
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 310
+          lineNumber: 377
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 311
+          lineNumber: 378
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 312
+          lineNumber: 379
         },
         __self: this
-      }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, this.props.Description1)))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 318
+          lineNumber: 385
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 319
+          lineNumber: 386
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 320
+          lineNumber: 387
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 321
+          lineNumber: 388
         },
         __self: this
-      }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, this.props.Description2)))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 327
+          lineNumber: 394
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["CardBody"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["CardBody"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 328
+          lineNumber: 395
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 329
+          lineNumber: 396
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("li", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("li", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 330
+          lineNumber: 397
         },
         __self: this
       }, this.props.Description3)))))));
@@ -2877,7 +3140,7 @@ function (_React$Component4) {
   }]);
 
   return ThreeColumnCard;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component); //D and D application
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); //D and D application
 
 var CharacterSheet =
 /*#__PURE__*/
@@ -2894,196 +3157,196 @@ function (_React$Component5) {
     key: "render",
     value: function render() {
       function DandDTableLabel(props) {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
           className: "text-muted text-left h4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 348
+            lineNumber: 415
           },
           __self: this
         }, props.children);
       }
 
       function DandDTableValue(props) {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("td", {
           className: "text-white text-left h4",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 356
+            lineNumber: 423
           },
           __self: this
         }, props.children);
       }
 
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 363
+          lineNumber: 430
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 364
+          lineNumber: 431
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         sm: {
           size: 'auto',
           offset: 0
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 365
+          lineNumber: 432
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Table"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Table"], {
         borderless: true,
         className: "",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 366
+          lineNumber: 433
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tbody", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tbody", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 367
+          lineNumber: 434
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 368
+          lineNumber: 435
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 369
+          lineNumber: 436
         },
         __self: this
-      }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, "Strength:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 370
+          lineNumber: 437
         },
         __self: this
-      }, this.props.Strength)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, this.props.Strength)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 372
+          lineNumber: 439
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 373
+          lineNumber: 440
         },
         __self: this
-      }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, "Constitution:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 374
+          lineNumber: 441
         },
         __self: this
-      }, this.props.Constitution)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, this.props.Constitution)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 376
+          lineNumber: 443
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 377
+          lineNumber: 444
         },
         __self: this
-      }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, "Dexterity:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 378
+          lineNumber: 445
         },
         __self: this
-      }, this.props.Dexterity)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, this.props.Dexterity)), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 380
+          lineNumber: 447
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 381
+          lineNumber: 448
         },
         __self: this
-      }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, "Hitpoints:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 382
+          lineNumber: 449
         },
         __self: this
-      }, this.props.Hitpoints != "Dead" && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+      }, this.props.Hitpoints != "Dead" && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 384
+          lineNumber: 451
         },
         __self: this
-      }, this.props.Hitpoints) || react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+      }, this.props.Hitpoints) || react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         className: "text-danger h5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 385
+          lineNumber: 452
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("small", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("small", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 386
+          lineNumber: 453
         },
         __self: this
-      }, this.props.Hitpoints)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      }, this.props.Hitpoints)))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("tr", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 391
+          lineNumber: 458
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableLabel, {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableLabel, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 392
+          lineNumber: 459
         },
         __self: this
-      }, "Damage per Hit:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DandDTableValue, {
+      }, "Damage per Hit:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(DandDTableValue, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 393
+          lineNumber: 460
         },
         __self: this
-      }, this.props.Damage))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, this.props.Damage))))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         sm: {
           size: 'auto',
           offset: 2
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 398
+          lineNumber: 465
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "text-center ",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 399
+          lineNumber: 466
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["DandDStyle"].Avatar,
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
+        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["DandDStyle"].Avatar,
         src: this.props.ImgUrl,
         alt: "Avatar",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 400
+          lineNumber: 467
         },
         __self: this
       })))));
@@ -3091,7 +3354,7 @@ function (_React$Component5) {
   }]);
 
   return CharacterSheet;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component); // D and D application
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); // D and D application
 
 var AttackSection =
 /*#__PURE__*/
@@ -3116,19 +3379,19 @@ function (_React$Component6) {
     key: "RollResult",
     value: function RollResult() {
       if (this.props.Roll === 'Crit Strike') {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
           className: "text-danger font-italic",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 426
+            lineNumber: 493
           },
           __self: this
         }, "Critical Strike!");
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 432
+            lineNumber: 499
           },
           __self: this
         }, this.props.Roll);
@@ -3142,31 +3405,31 @@ function (_React$Component6) {
       var Result = this.props.DidHit;
 
       if (Result === "Hit") {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h2", {
           className: "alert alert-success py-2 text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 443
+            lineNumber: 510
           },
           __self: this
         }, "Hit!");
       }
 
       if (Result === "Miss") {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h2", {
           className: "alert alert-danger py-2 text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 447
+            lineNumber: 514
           },
           __self: this
         }, "Miss");
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h6", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h6", {
           className: "text-white text-center",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 451
+            lineNumber: 518
           },
           __self: this
         }, "(Attack Result displayed here)");
@@ -3180,21 +3443,21 @@ function (_React$Component6) {
     key: "AttackButton",
     value: function AttackButton() {
       if (this.props.AttackTurn === true) {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
           onMouseDown: this.props.AttackRoll,
           onMouseUp: this.props.NextTurn,
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 464
+            lineNumber: 531
           },
           __self: this
         }, this.props.RollTitle);
       } else {
-        return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+        return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
           className: "text-white",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 473
+            lineNumber: 540
           },
           __self: this
         }, "Not your turn");
@@ -3205,128 +3468,128 @@ function (_React$Component6) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 480
+          lineNumber: 547
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Row"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 481
+          lineNumber: 548
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         className: "my-4 mx-5 d-flex justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 482
+          lineNumber: 549
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["DandDStyle"].thumbnail,
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["DandDStyle"].thumbnail,
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 483
+          lineNumber: 550
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
         src: "../static/images/acicon.png",
         alt: "shield",
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 484
+          lineNumber: 551
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 485
+          lineNumber: 552
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         className: "jsx-1953405926" + " " + "AC-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 486
+          lineNumber: 553
         },
         __self: this
-      }, this.props.AC)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+      }, this.props.AC)))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Col"], {
         className: "my-4 mx-5 d-flex justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 492
+          lineNumber: 559
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["DandDStyle"].thumbnail,
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
+        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["DandDStyle"].thumbnail,
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 493
+          lineNumber: 560
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("img", {
         src: "../static/images/hitadjust.png",
         alt: "icon",
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 494
+          lineNumber: 561
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "jsx-1953405926",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 495
+          lineNumber: 562
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         className: "jsx-1953405926" + " " + "HitAdj-Icon-text",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 496
+          lineNumber: 563
         },
         __self: this
-      }, this.props.HitAdj)))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_6___default.a, {
+      }, this.props.HitAdj)))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_7___default.a, {
         id: "1953405926",
         __self: this
-      }, ".AC-Icon-text.jsx-1953405926{position:absolute;top:42px;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}.HitAdj-Icon-text.jsx-1953405926{position:absolute;top:48%;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGN1c3RvbUNvbXBvbmVudHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBcWZnQyxBQUcrQyxBQU1BLGtCQUxULEFBTUQsUUFDRSxDQU5BLFNBT3NCLENBTkEsd0dBT3BDLENBTkEiLCJmaWxlIjoiQzpcXFVzZXJzXFxNYXJrXFxEZXNrdG9wXFxuZXd0ZXN0XFxteS1wYWdlXFxwYWdlc1xcY3VzdG9tQ29tcG9uZW50cy5qcyIsInNvdXJjZXNDb250ZW50IjpbIi8qICoqKioqKioqKioqKioqKiogXHJcbiogICBJbXBvcnRzICAgICAgICogXHJcbioqKioqKioqKioqKioqKioqKi9cclxuXHJcbmltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCdcclxuaW1wb3J0IHsgXHJcbiAgICBDYXJkLCBDYXJkSW1nLCBDYXJkVGV4dCwgQ2FyZEJvZHksIENhcmRUaXRsZSwgQ2FyZFN1YnRpdGxlLCBcclxuICAgIFJvdywgQ29sLCBGb3JtLCBGb3JtR3JvdXAsIExhYmVsLCBJbnB1dCwgQnV0dG9uLCBDb2xsYXBzZSwgXHJcbiAgICBUYWJsZSwgSnVtYm90cm9uIFxyXG59IGZyb20gJ3JlYWN0c3RyYXAnXHJcblxyXG5pbXBvcnQgeyBIb21lQ2FyZFN0eWxlLCBEYW5kRFN0eWxlLCBJbWFnZVN0eWxlcywgVHZwYWdlU3R5bGVcclxufSBmcm9tICcuL2pzeHN0eWxlcydcclxuaW1wb3J0IExpbmsgZnJvbSAnbmV4dC9saW5rJ1xyXG5cclxuXHJcbi8qICoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKlxyXG4qICAgRXhwb3J0IHN0eWxlZCBjb21wb25lbnRzICAgICAgICogXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIE5ld1RhYkxpbmsocHJvcHMpe1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8YSBjbGFzc05hbWU9e3Byb3BzLlN0eWxlfVxyXG4gICAgICAgICAgICBocmVmPXtwcm9wcy5MaW5rfVxyXG4gICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIiBcclxuICAgICAgICAgICAgcmVsPVwibm9vcGVuZXIgbm9yZWZlcnJlclwiXHJcbiAgICAgICAgICAgIHRpdGxlPXtwcm9wcy5UaXRsZX0+XHJcbiAgICAgICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9hPlxyXG4gICAgKTtcclxufVxyXG5cclxuLy91c2VkIGluIGhvbWUgcGFnZSwgYXR0YWNrc2ltXHJcbmV4cG9ydCBmdW5jdGlvbiBDZW50ZXJGbGV4V3JhcERpdihwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXAganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiB0dnBvc3QsIHR2cGFnZVxyXG5leHBvcnQgZnVuY3Rpb24gTGVmdEZsZXhXcmFwRGl2KHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZC1mbGV4IGZsZXgtd3JhcCBqdXN0aWZ5LWNvbnRlbnQtbGVmdFwiPlxyXG4gICAgICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZNYXplSGVhZGVyKCkge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICA8TGluayBocmVmPVwiL3R2cGFnZVwiPlxyXG4gICAgICAgICAgICAgICAgPGEgc3R5bGU9e1R2cGFnZVN0eWxlLkxpbmt9PlNlYXJjaCBQYWdlPC9hPlxyXG4gICAgICAgICAgICA8L0xpbms+XHJcbiAgICAgICAgPC9kaXY+XHJcbiAgICApXHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBUdk1hemVQYWdlKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXYgc3R5bGU9e1R2cGFnZVN0eWxlLkxheW91dH0+XHJcbiAgICAgICAgICAgIDxUdk1hemVIZWFkZXIgLz5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZQb3N0SW5mb0xhYmVsKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgPHRkIGNsYXNzTmFtZT1cImgyIHRleHQtbGVmdCB3LTI1IG0tMCBwLTJcIj5cclxuICAgICAgICB7cHJvcHMuY2hpbGRyZW59XHJcbiAgICA8L3RkPlxyXG4gICAgKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFR2UG9zdEluZm9WYWx1ZShwcm9wcyl7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LWxlZnQgbS0wIHAtMlwiPlxyXG4gICAgICAgICAgICA8c21hbGw+e3Byb3BzLmNoaWxkcmVufTwvc21hbGw+XHJcbiAgICAgICAgPC90ZD5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlciBjb21wbGlhbmNlXHJcbmV4cG9ydCBmdW5jdGlvbiBUcGxpc3RIZWFkZXJSb3cgKHByb3BzKSB7XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxSb3cgY2xhc3NOYW1lPVwicC0wIGJnLXNlY29uZGFyeSB0ZXh0LXdoaXRlIHJvdW5kZWQtbGdcIj5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvUm93PlxyXG4gICAgKVxyXG59XHJcblxyXG4vKiAqKioqKioqKioqKioqKioqKioqKioqKiBcclxuKiAgIEV4cG9ydCBmdW5jdGlvbnMgICAgICogXHJcbioqKioqKioqKioqKioqKioqKioqKioqKioqL1xyXG5cclxuLy91c2VkIGluIHByb3ZpZGVyc3RhdHNcclxuZXhwb3J0IGZ1bmN0aW9uIE5ldHdvcmtEYXRhRmlsdGVyKHByb3BzKSB7XHJcbiAgICBsZXQgRm9uZSA9IHByb3BzLkZpbHRlcjE7XHJcbiAgICBsZXQgVm9uZSA9IHByb3BzLlZhbHVlMTtcclxuICAgIGxldCBGdHdvID0gcHJvcHMuRmlsdGVyMjtcclxuICAgIGxldCBWdHdvID0gcHJvcHMuVmFsdWUyO1xyXG4gICAgbGV0IERhdGEgPSBwcm9wcy5JbmZvO1xyXG4gICAgXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPntEYXRhLmZpbHRlcihEYXRhID0+IERhdGFbRm9uZV0gPT09IFZvbmUgJiYgRGF0YVtGdHdvXSA9PT0gVnR3bykubGVuZ3RofTwvc3Bhbj5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBDb21wbERhdGFGaWx0ZXIocHJvcHMpIHtcclxuICAgIGNvbnN0IERhdGEgPSBwcm9wcy5JbmZvXHJcbiAgICBjb25zdCBGb25lID0gcHJvcHMuRmlsdGVyMTtcclxuICAgIGNvbnN0IEZvbmVrZXkgPSBwcm9wcy5GaWx0ZXIxY2hpbGQ7XHJcbiAgICBjb25zdCBWb25lID0gcHJvcHMuVmFsdWUxO1xyXG5cclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPHNwYW4+e0RhdGEuZmlsdGVyKERhdGEgPT4gRGF0YVtGb25lXVtGb25la2V5XSA8IFZvbmUpLmxlbmd0aH08L3NwYW4+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBQZXJjZW50Q2FsYyhwcm9wcykge1xyXG4gICAgY29uc3QgRGF0YSA9IHByb3BzLkluZm9cclxuICAgIGNvbnN0IEZvbmUgPSBwcm9wcy5GaWx0ZXIxO1xyXG4gICAgY29uc3QgRm9uZWtleSA9IHByb3BzLkZpbHRlcjFjaGlsZDtcclxuICAgIGNvbnN0IFZvbmUgPSBwcm9wcy5WYWx1ZTE7XHJcbiAgICBjb25zdCBEaXZpZGVyID0gcHJvcHMuRGl2aWRlcjtcclxuXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPlxyXG4gICAgICAgICAgICB7XHJcbiAgICAgICAgICAgICAgICBNYXRoLmZsb29yKFxyXG4gICAgICAgICAgICAgICAgICAgIChcclxuICAgICAgICAgICAgICAgICAgICAgICAgRGF0YS5maWx0ZXIoRGF0YSA9PiBEYXRhW0ZvbmVdW0ZvbmVrZXldIDwgVm9uZSkubGVuZ3RoXHJcbiAgICAgICAgICAgICAgICAgICAgKSAvIERpdmlkZXIgKiAxMDBcclxuICAgICAgICAgICAgICAgICkgKyAnJSdcclxuICAgICAgICAgICAgfVxyXG4gICAgICAgIDwvc3Bhbj5cclxuICAgIClcclxufVxyXG5cclxuLy91c2VkIGluIHByb3ZpZGVyQ29tcGxpYW5jZVxyXG5leHBvcnQgZnVuY3Rpb24gRGF0ZUNoZWNrKHByb3BzKSB7XHJcbiAgICB2YXIgZGF0ZSA9IHByb3BzLkRhdGU7XHJcbiAgICBcclxuICAgIGlmIChkYXRlIDwgXCIyMDE5LTA5LTIyXCIpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiZy1kYW5nZXIgdGV4dC13aGl0ZVwiPntkYXRlfTwvc3Bhbj5cclxuICAgICAgICApXHJcbiAgICB9IGVsc2UgaWYgKGRhdGUgPCBcIjIwMTktMTAtMjJcIiAmJiBkYXRlID4gXCIyMDE5LTA5LTIyXCIpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJiZy13YXJuaW5nIHRleHQtd2hpdGVcIj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKVxyXG4gICAgfSBlbHNlIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8c3Bhbj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKTtcclxuICAgIH0gICBcclxufVxyXG5cclxuLyogKioqKioqKioqKioqKioqKioqKioqKiogXHJcbiogICBFeHBvcnQgQ2xhc3NlcyAgICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbi8vdXNlZCBpbiBob21lIHBhZ2VcclxuZXhwb3J0IGNsYXNzIEhvbWVDYXJkIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8Q2FyZCBzdHlsZT17SG9tZUNhcmRTdHlsZS5DYXJkfT5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlIHN0eWxlPXtIb21lQ2FyZFN0eWxlLlRpdGxlfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgdG9wIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUNhcmR9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3RoaXMucHJvcHMuSW1hZ2V9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFN1YnRpdGxlPnt0aGlzLnByb3BzLlN1YnRpdGxlfTwvQ2FyZFN1YnRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFRleHQgc3R5bGU9e3toZWlnaHQ6ICc4MHB4J319PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRleHQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxCdXR0b24gY2xhc3NOYW1lPVwidy0xMDAgcC0wIG0tMFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPE5ld1RhYkxpbmtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHlsZT1cImJ0biBidG4tZGFyayB3LTEwMCBwLTJcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIExpbms9e3RoaXMucHJvcHMuTGlua30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkJ1dHRvblRpdGxlfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9OZXdUYWJMaW5rPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgPC9DYXJkPiBcclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufTtcclxuXHJcbi8vdXNlZCBpbiBSZXN1bWV2aWV3IGFuZCBwcm92aWRlcmRhdGFcclxuZXhwb3J0IGNsYXNzIEN1c3RvbUp1bWJvIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5JbWdVcmwgPT09IFwibm9pbWFnZVwiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8SnVtYm90cm9uPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJkaXNwbGF5LTMgdGV4dC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9oMT5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjFTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8aHIgY2xhc3NOYW1lPVwibXktMlwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNhcHRpb24yU3R5bGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uMn1cclxuICAgICAgICAgICAgICAgICAgICA8L3A+XHJcbiAgICAgICAgICAgICAgICA8L0p1bWJvdHJvbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPEp1bWJvdHJvbj5cclxuICAgICAgICAgICAgICAgICAgICA8aDEgY2xhc3NOYW1lPVwiZGlzcGxheS0zIHRleHQtY2VudGVyXCI+e3RoaXMucHJvcHMuVGl0bGV9PC9oMT5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lci1mbHVpZCB0ZXh0LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aW1nIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9hdmF0YXIuanBnXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUF2YXRhcn0gYWx0PVwiYXZhdGFyXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjFTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgICAgICA8aHIgY2xhc3NOYW1lPVwibXktMlwiIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNhcHRpb24yU3R5bGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uMn08YnIgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQ2FwdGlvbjN9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9wPlxyXG4gICAgICAgICAgICAgICAgPC9KdW1ib3Ryb24+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG59XHJcblxyXG4vL3VzZWQgaW4gYWJvdXQgcGFnZVxyXG5leHBvcnQgY2xhc3MgQWJvdXRNZWRpYSBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcclxuICAgIHJlbmRlcigpIHtcclxuXHJcbiAgICAgICAgaWYgKHRoaXMucHJvcHMuQWxpZ24gPT09IFwiUmlnaHRcIikge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmQgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNsYXNzfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFJvdz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDb2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXtJbWFnZVN0eWxlcy5BYm91dH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDb2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRUaXRsZSBjbGFzc05hbWU9XCJtdC01XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L1Jvdz5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmQ+IFxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BbGlnbiA9PT0gXCJMZWZ0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHktMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT17dGhpcy5wcm9wcy5DbGFzc30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkVGl0bGUgY2xhc3NOYW1lPVwibXQtNVwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9ufVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEltZyBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e0ltYWdlU3R5bGVzLkFib3V0fSBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3JjPXt0aGlzLnByb3BzLkltZ1VybH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkNhcmQgaW1hZ2UgY2FwXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L1Jvdz5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmQ+XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9O1xyXG4gICAgfVxyXG59XHJcblxyXG4vL3VzZWQgaW4gcmVzdW1lIGZvciBleHBlcmllbmNlIHNlY3Rpb25cclxuZXhwb3J0IGNsYXNzIFRocmVlQ29sdW1uQ2FyZCBleHRlbmRzIFJlYWN0LkNvbXBvbmVudHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4oXHJcbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHktM1wiPlxyXG4gICAgICAgICAgICAgICAgPENhcmQgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNsYXNzfT5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlPjxoMT57dGhpcy5wcm9wcy5UaXRsZX08L2gxPjwvQ2FyZFRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgIDxSb3cgY2xhc3NOYW1lPVwidGV4dC1sZWZ0XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxDb2wgPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9uMX1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5EZXNjcmlwdGlvbjJ9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPENvbCA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb24zfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgPC9Sb3c+XHJcbiAgICAgICAgICAgICAgICA8L0NhcmQ+IFxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vL0QgYW5kIEQgYXBwbGljYXRpb25cclxuZXhwb3J0IGNsYXNzIENoYXJhY3RlclNoZWV0IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICBmdW5jdGlvbiBEYW5kRFRhYmxlTGFiZWwocHJvcHMpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkIHRleHQtbGVmdCBoNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG5cclxuICAgICAgICBmdW5jdGlvbiBEYW5kRFRhYmxlVmFsdWUocHJvcHMpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDx0ZCBjbGFzc05hbWU9XCJ0ZXh0LXdoaXRlIHRleHQtbGVmdCBoNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICAgICAgICAgIDwvdGQ+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgICAgIFxyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXYgPlxyXG4gICAgICAgICAgICAgICAgPFJvdyA+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBzbT17eyBzaXplOiAnYXV0bycsIG9mZnNldDogMCB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFRhYmxlIGJvcmRlcmxlc3MgIGNsYXNzTmFtZT1cIlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRib2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5TdHJlbmd0aDo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5TdHJlbmd0aH08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5Db25zdGl0dXRpb246PC9EYW5kRFRhYmxlTGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlVmFsdWU+e3RoaXMucHJvcHMuQ29uc3RpdHV0aW9ufTwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRleHRlcml0eTo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5EZXh0ZXJpdHl9PC9EYW5kRFRhYmxlVmFsdWU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlTGFiZWw+SGl0cG9pbnRzOjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0cG9pbnRzICE9IFwiRGVhZFwiICYmIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXIgaDVcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNtYWxsPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NtYWxsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRhbWFnZSBwZXIgSGl0OjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPnt0aGlzLnByb3BzLkRhbWFnZX08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90Ym9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9UYWJsZT4gIFxyXG4gICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2wgc209e3sgc2l6ZTogJ2F1dG8nLCBvZmZzZXQ6IDIgfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW1nICBzdHlsZT17RGFuZERTdHlsZS5BdmF0YXJ9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkF2YXRhclwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vLyBEIGFuZCBEIGFwcGxpY2F0aW9uXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTZWN0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIGNvbnN0cnVjdG9yKHByb3BzKSB7XHJcbiAgICAgICAgc3VwZXIocHJvcHMpO1xyXG4gICAgICAgIHRoaXMuUm9sbFJlc3VsdCA9IHRoaXMuUm9sbFJlc3VsdC5iaW5kKHRoaXMpO1xyXG4gICAgICAgIHRoaXMuQXR0YWNrQmFubmVyID0gdGhpcy5BdHRhY2tCYW5uZXIuYmluZCh0aGlzKTtcclxuICAgICAgICB0aGlzLkF0dGFja0J1dHRvbiA9IHRoaXMuQXR0YWNrQnV0dG9uLmJpbmQodGhpcyk7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC8vU2hvd3MgYXR0YWNrIHJvbGwgbnVtYmVyIHdpdGggc3BlY2lhbCBkaXNwbGF5IGZvclxyXG4gICAgLy9jcml0IHNjcmlrZSAobmF0dXJhbCAyMCBvbiByb2xsKVxyXG4gICAgUm9sbFJlc3VsdCgpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5Sb2xsID09PSAnQ3JpdCBTdHJpa2UnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWRhbmdlciBmb250LWl0YWxpY1wiPlxyXG4gICAgICAgICAgICAgICAgICAgIENyaXRpY2FsIFN0cmlrZSFcclxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPHNwYW4+e3RoaXMucHJvcHMuUm9sbH08L3NwYW4+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC8vc2hvd3MgYXR0YWNrIHJlc3VsdCBvZiBoaXQvbWlzcyBvciBwbGFjZSBob2xkZXIgZm9yXHJcbiAgICAvL3Jlc3VsdCBkaXNwbGF5LlxyXG4gICAgQXR0YWNrQmFubmVyKCkge1xyXG4gICAgICAgIGNvbnN0IFJlc3VsdCA9IHRoaXMucHJvcHMuRGlkSGl0O1xyXG4gICAgICAgIGlmIChSZXN1bHQgPT09IFwiSGl0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJhbGVydCBhbGVydC1zdWNjZXNzIHB5LTIgdGV4dC1jZW50ZXJcIj5IaXQhPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGlmIChSZXN1bHQgPT09IFwiTWlzc1wiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwiYWxlcnQgYWxlcnQtZGFuZ2VyIHB5LTIgdGV4dC1jZW50ZXJcIj5NaXNzPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGg2IGNsYXNzTmFtZT1cInRleHQtd2hpdGUgdGV4dC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAoQXR0YWNrIFJlc3VsdCBkaXNwbGF5ZWQgaGVyZSlcclxuICAgICAgICAgICAgICAgIDwvaDY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICAvKkZ1bmN0aW9uIHRvIGRpc3BsYXkgYXR0YWNrIGJ1dHRvbiBiYXNlZCBvbiBpbml0aWF0aXZlIHJvbGwgYW5kIGF0dGFjayB0dXJuLiBQdWxsc1xyXG4gICAgQXR0YWNrVHVybiBmdW5jdG9uIGFuZCBBdHRhY2tyb2xsIGZ1bmN0aW9ucyBmcm9tIGVpdGhlciBoZXJvZnVuY3Rpb25zLmpzIG9yIG1vbnN0ZXJmdW5jdGlvbnMuanNcclxuICAgIGFzIGl0ZW50aWZpZWQgaW4gcHJvcHMgKi9cclxuICAgIEF0dGFja0J1dHRvbigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BdHRhY2tUdXJuID09PSB0cnVlKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8QnV0dG9uICBcclxuICAgICAgICAgICAgICAgICAgICBvbk1vdXNlRG93bj17dGhpcy5wcm9wcy5BdHRhY2tSb2xsfSBcclxuICAgICAgICAgICAgICAgICAgICBvbk1vdXNlVXAgPSB7dGhpcy5wcm9wcy5OZXh0VHVybn1cclxuICAgICAgICAgICAgICAgID5cclxuICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Sb2xsVGl0bGV9XHJcbiAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgKVxyXG4gICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPk5vdCB5b3VyIHR1cm48L2g0PlxyXG4gICAgICAgICAgICApXHJcbiAgICAgICAgfTtcclxuICAgIH1cclxuXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBjbGFzc05hbWU9XCJteS00IG14LTUgZC1mbGV4IGp1c3RpZnktY29udGVudC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBzcmM9XCIuLi9zdGF0aWMvaW1hZ2VzL2FjaWNvbi5wbmdcIiBhbHQ9XCJzaGllbGRcIi8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJBQy1JY29uLXRleHRcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQUN9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9oND5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8Q29sIGNsYXNzTmFtZT1cIm15LTQgbXgtNSBkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9oaXRhZGp1c3QucG5nXCIgYWx0PVwiaWNvblwiLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwiSGl0QWRqLUljb24tdGV4dFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0QWRqfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+ICBcclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5BQy1JY29uLXRleHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdG9wOiA0MnB4O1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5IaXRBZGotSWNvbi10ZXh0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvcDogNDglO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgIGB9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9zdHlsZT5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlciBteS00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAge3RoaXMuQXR0YWNrQnV0dG9uKCl9XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgdGV4dC13aGl0ZVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMj5BdHRhY2sgUmVzdWx0OjwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwibXQtMiBwLTBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgYXR0YWNrIHJvbGw6ICZuYnNwOyB7dGhpcy5Sb2xsUmVzdWx0KCl9PC9wPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIHt0aGlzLkF0dGFja0Jhbm5lcigpfVxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBEYW5kRCBwYWdlIHRvIGRpc3BsYXkgTmFtZSxJbml0aWF0aXZlIGFuZCBIUCBzdGF0dXMgZm9yIGhlcm8gYW5kIFxyXG4vL21vbnN0ZXIuXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTdGF0dXNEaXNwbGF5IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQtaW5mb1wiPnt0aGlzLnByb3BzLk5hbWV9PC9oND5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgcHQtNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5pbmlhdGl2ZTo8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Jbml0aWF0aXZlICE9IFwiU2Vjb25kXCIgJiYgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPiB8fCAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC13YXJuaW5nXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5IaXQgUG9pbnRzOjwvaDQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtdC00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUCAhPSBcIkRlYWRcIiAmJlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc3VjY2Vzc1wiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSFB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vRCBhbmQgRCBhcHBsaWNhdGlvblxyXG5leHBvcnQgY2xhc3MgTmFtZUZvcm0gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcclxuICAgICAgICBzdXBlcihwcm9wcyk7XHJcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtjb2xsYXBzZTogZmFsc2V9O1xyXG4gICAgICAgIHRoaXMudG9nZ2xlID0gdGhpcy50b2dnbGUuYmluZCh0aGlzKTtcclxuICAgIH0gICBcclxuICAgIFxyXG4gICAgdG9nZ2xlKCkge1xyXG4gICAgICAgIHRoaXMuc2V0U3RhdGUoc3RhdGUgPT4gKHtjb2xsYXBzZTogIXN0YXRlLmNvbGxhcHNlfSkpO1xyXG4gICAgfVxyXG5cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8Rm9ybSA+XHJcbiAgICAgICAgICAgICAgICA8Rm9ybUdyb3VwIGNsYXNzTmFtZT1cIm1iLTIgbXItc20tMiBtYi1zbS0yIGQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm0tMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8TGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJ0biB0ZXh0LXdoaXRlXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17dGhpcy50b2dnbGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5zdGF0ZS5jb2xsYXBzZT8gJ0hpZGUnIDogJ0NoYW5nZSBOYW1lJ31cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2xsYXBzZSBpc09wZW49e3RoaXMuc3RhdGUuY29sbGFwc2V9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbnB1dFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1heExlbmd0aD1cIjIwXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e3RoaXMucHJvcHMuVmFsdWV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXt0aGlzLnByb3BzLk5hbWVDaGFuZ2V9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vUHJldmVudCBlbnRlciBrZXkgc3VibWl0XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uS2V5UHJlc3M9e2V2ZW50ID0+IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIChldmVudC53aGljaCA9PT0gMTMgLyogRW50ZXIgKi8pIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH19XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz4gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9e3RoaXMucHJvcHMuTmFtZVN1Ym1pdH0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdWJtaXRcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbGxhcHNlPlxyXG4gICAgICAgICAgICAgICAgPC9Gb3JtR3JvdXA+XHJcbiAgICAgICAgICAgIDwvRm9ybT4gXHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufVxyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\customComponents.js */")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, ".AC-Icon-text.jsx-1953405926{position:absolute;top:42px;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}.HitAdj-Icon-text.jsx-1953405926{position:absolute;top:48%;left:50px;-webkit-transform:translate(-50%,-50%);-ms-transform:translate(-50%,-50%);transform:translate(-50%,-50%);}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGN1c3RvbUNvbXBvbmVudHMuanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBd2pCZ0MsQUFHK0MsQUFNQSxrQkFMVCxBQU1ELFFBQ0UsQ0FOQSxTQU9zQixDQU5BLHdHQU9wQyxDQU5BIiwiZmlsZSI6IkM6XFxVc2Vyc1xcTWFya1xcRGVza3RvcFxcbmV3dGVzdFxcbXktcGFnZVxccGFnZXNcXGN1c3RvbUNvbXBvbmVudHMuanMiLCJzb3VyY2VzQ29udGVudCI6WyIvKiAqKioqKioqKioqKioqKioqIFxyXG4qICAgSW1wb3J0cyAgICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKiovXHJcblxyXG5pbXBvcnQgUmVhY3QsIHsgdXNlU3RhdGUgfSBmcm9tICdyZWFjdCc7XHJcbmltcG9ydCB7IFxyXG4gICAgQ2FyZCwgQ2FyZEltZywgQ2FyZFRleHQsIENhcmRCb2R5LCBDYXJkVGl0bGUsIENhcmRTdWJ0aXRsZSwgXHJcbiAgICBSb3csIENvbCwgRm9ybSwgRm9ybUdyb3VwLCBMYWJlbCwgSW5wdXQsIEJ1dHRvbiwgQ29sbGFwc2UsIFxyXG4gICAgVGFibGUsIEp1bWJvdHJvbiwgVGFiQ29udGVudCwgVGFiUGFuZSwgTmF2LCBOYXZJdGVtLCBOYXZMaW5rXHJcbn0gZnJvbSAncmVhY3RzdHJhcCdcclxuaW1wb3J0IGNsYXNzbmFtZXMgZnJvbSAnY2xhc3NuYW1lcyc7XHJcblxyXG5pbXBvcnQgeyBIb21lQ2FyZFN0eWxlLCBEYW5kRFN0eWxlLCBJbWFnZVN0eWxlcywgVHZwYWdlU3R5bGUsIFBvaW50ZXIsIFRhYlN0eWxlXHJcbn0gZnJvbSAnLi9qc3hzdHlsZXMnXHJcbmltcG9ydCBMaW5rIGZyb20gJ25leHQvbGluaydcclxuXHJcblxyXG4vKiAqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKipcclxuKiAgIEV4cG9ydCBzdHlsZWQgY29tcG9uZW50cyAgICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBOZXdUYWJMaW5rKHByb3BzKXtcclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPGEgY2xhc3NOYW1lPXtwcm9wcy5TdHlsZX1cclxuICAgICAgICAgICAgaHJlZj17cHJvcHMuTGlua31cclxuICAgICAgICAgICAgdGFyZ2V0PVwiX2JsYW5rXCIgXHJcbiAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxyXG4gICAgICAgICAgICB0aXRsZT17cHJvcHMuVGl0bGV9PlxyXG4gICAgICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvYT5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBob21lIHBhZ2UsIGF0dGFja3NpbVxyXG5leHBvcnQgZnVuY3Rpb24gQ2VudGVyRmxleFdyYXBEaXYocHJvcHMpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkLWZsZXggZmxleC13cmFwIGp1c3RpZnktY29udGVudC1jZW50ZXJcIj5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG59XHJcblxyXG4vL3VzZWQgaW4gdHZwb3N0LCB0dnBhZ2VcclxuZXhwb3J0IGZ1bmN0aW9uIExlZnRGbGV4V3JhcERpdihwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXAganVzdGlmeS1jb250ZW50LWxlZnRcIj5cclxuICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFR2TWF6ZUhlYWRlcigpIHtcclxuICAgIHJldHVybiAoXHJcbiAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi90dnBhZ2VcIj5cclxuICAgICAgICAgICAgICAgIDxhIHN0eWxlPXtUdnBhZ2VTdHlsZS5MaW5rfT5TZWFyY2ggUGFnZTwvYT5cclxuICAgICAgICAgICAgPC9MaW5rPlxyXG4gICAgICAgIDwvZGl2PlxyXG4gICAgKVxyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gVHZNYXplUGFnZShwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8ZGl2IHN0eWxlPXtUdnBhZ2VTdHlsZS5MYXlvdXR9PlxyXG4gICAgICAgICAgICA8VHZNYXplSGVhZGVyIC8+XHJcbiAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICA8L2Rpdj5cclxuICAgIClcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIFR2UG9zdEluZm9MYWJlbChwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgIDx0ZCBjbGFzc05hbWU9XCJoMiB0ZXh0LWxlZnQgdy0yNSBtLTAgcC0yXCI+XHJcbiAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgPC90ZD5cclxuICAgICk7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBUdlBvc3RJbmZvVmFsdWUocHJvcHMpe1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8dGQgY2xhc3NOYW1lPVwidGV4dC1sZWZ0IG0tMCBwLTJcIj5cclxuICAgICAgICAgICAgPHNtYWxsPntwcm9wcy5jaGlsZHJlbn08L3NtYWxsPlxyXG4gICAgICAgIDwvdGQ+XHJcbiAgICApO1xyXG59XHJcblxyXG4vL3VzZWQgaW4gcHJvdmlkZXIgY29tcGxpYW5jZVxyXG5leHBvcnQgZnVuY3Rpb24gVHBsaXN0SGVhZGVyUm93IChwcm9wcykge1xyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8Um93IGNsYXNzTmFtZT1cInAtMCBiZy1zZWNvbmRhcnkgdGV4dC13aGl0ZSByb3VuZGVkLWxnXCI+XHJcbiAgICAgICAgICAgIHtwcm9wcy5jaGlsZHJlbn1cclxuICAgICAgICA8L1Jvdz5cclxuICAgIClcclxufVxyXG5cclxuLyogKioqKioqKioqKioqKioqKioqKioqKiogXHJcbiogICBFeHBvcnQgZnVuY3Rpb25zICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlcnN0YXRzXHJcbmV4cG9ydCBmdW5jdGlvbiBOZXR3b3JrRGF0YUZpbHRlcihwcm9wcykge1xyXG4gICAgbGV0IEZvbmUgPSBwcm9wcy5GaWx0ZXIxO1xyXG4gICAgbGV0IFZvbmUgPSBwcm9wcy5WYWx1ZTE7XHJcbiAgICBsZXQgRnR3byA9IHByb3BzLkZpbHRlcjI7XHJcbiAgICBsZXQgVnR3byA9IHByb3BzLlZhbHVlMjtcclxuICAgIGxldCBEYXRhID0gcHJvcHMuSW5mbztcclxuICAgIFxyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8c3Bhbj57RGF0YS5maWx0ZXIoRGF0YSA9PiBEYXRhW0ZvbmVdID09PSBWb25lICYmIERhdGFbRnR3b10gPT09IFZ0d28pLmxlbmd0aH08L3NwYW4+XHJcbiAgICApO1xyXG59XHJcblxyXG4vL3VzZWQgaW4gcHJvdmlkZXJzdGF0c1xyXG5leHBvcnQgZnVuY3Rpb24gQ29tcGxEYXRhRmlsdGVyKHByb3BzKSB7XHJcbiAgICBjb25zdCBEYXRhID0gcHJvcHMuSW5mb1xyXG4gICAgY29uc3QgRm9uZSA9IHByb3BzLkZpbHRlcjE7XHJcbiAgICBjb25zdCBGb25la2V5ID0gcHJvcHMuRmlsdGVyMWNoaWxkO1xyXG4gICAgY29uc3QgVm9uZSA9IHByb3BzLlZhbHVlMTtcclxuXHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxzcGFuPntEYXRhLmZpbHRlcihEYXRhID0+IERhdGFbRm9uZV1bRm9uZWtleV0gPCBWb25lKS5sZW5ndGh9PC9zcGFuPlxyXG4gICAgKVxyXG59XHJcblxyXG4vL3VzZWQgaW4gcHJvdmlkZXJzdGF0c1xyXG5leHBvcnQgZnVuY3Rpb24gUGVyY2VudENhbGMocHJvcHMpIHtcclxuICAgIGNvbnN0IERhdGEgPSBwcm9wcy5JbmZvXHJcbiAgICBjb25zdCBGb25lID0gcHJvcHMuRmlsdGVyMTtcclxuICAgIGNvbnN0IEZvbmVrZXkgPSBwcm9wcy5GaWx0ZXIxY2hpbGQ7XHJcbiAgICBjb25zdCBWb25lID0gcHJvcHMuVmFsdWUxO1xyXG4gICAgY29uc3QgRGl2aWRlciA9IHByb3BzLkRpdmlkZXI7XHJcblxyXG4gICAgcmV0dXJuIChcclxuICAgICAgICA8c3Bhbj5cclxuICAgICAgICAgICAge1xyXG4gICAgICAgICAgICAgICAgTWF0aC5mbG9vcihcclxuICAgICAgICAgICAgICAgICAgICAoXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIERhdGEuZmlsdGVyKERhdGEgPT4gRGF0YVtGb25lXVtGb25la2V5XSA8IFZvbmUpLmxlbmd0aFxyXG4gICAgICAgICAgICAgICAgICAgICkgLyBEaXZpZGVyICogMTAwXHJcbiAgICAgICAgICAgICAgICApICsgJyUnXHJcbiAgICAgICAgICAgIH1cclxuICAgICAgICA8L3NwYW4+XHJcbiAgICApXHJcbn1cclxuXHJcbi8vdXNlZCBpbiBwcm92aWRlckNvbXBsaWFuY2VcclxuZXhwb3J0IGZ1bmN0aW9uIERhdGVDaGVjayhwcm9wcykge1xyXG4gICAgdmFyIGRhdGUgPSBwcm9wcy5EYXRlO1xyXG4gICAgXHJcbiAgICBpZiAoZGF0ZSA8IFwiMjAxOS0wOS0yMlwiKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiYmctZGFuZ2VyIHRleHQtd2hpdGVcIj57ZGF0ZX08L3NwYW4+XHJcbiAgICAgICAgKVxyXG4gICAgfSBlbHNlIGlmIChkYXRlIDwgXCIyMDE5LTEwLTIyXCIgJiYgZGF0ZSA+IFwiMjAxOS0wOS0yMlwiKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwiYmctd2FybmluZyB0ZXh0LXdoaXRlXCI+e2RhdGV9PC9zcGFuPlxyXG4gICAgICAgIClcclxuICAgIH0gZWxzZSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPHNwYW4+e2RhdGV9PC9zcGFuPlxyXG4gICAgICAgICk7XHJcbiAgICB9ICAgXHJcbn1cclxuXHJcbi8vdXNlZCBpbiBUdlBhZ2UgYW5kIFRWUG9zdFxyXG5leHBvcnQgZnVuY3Rpb24gVHZNYXplQ2FyZChwcm9wcykge1xyXG4gICAgcmV0dXJuKFxyXG4gICAgICAgIDxDYXJkIHN0eWxlPXtwcm9wcy5DYXJkU3R5bGV9IGNsYXNzTmFtZT17cHJvcHMuQ2FyZENsYXNzTmFtZX0+XHJcbiAgICAgICAgPENhcmRUaXRsZSBcclxuICAgICAgICAgICAgY2xhc3NOYW1lPVwibS00IHRleHQtY2VudGVyXCJcclxuICAgICAgICAgICAgc3R5bGU9e1R2cGFnZVN0eWxlLlRpdGxlfT5cclxuICAgICAgICAgICAge3Byb3BzLlRpdGxlfVxyXG4gICAgICAgIDwvQ2FyZFRpdGxlPlxyXG4gICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgPENhcmRJbWcgXHJcbiAgICAgICAgICAgICAgICBjbGFzc05hbWU9e3Byb3BzLkltZ0NsYXNzfSBcclxuICAgICAgICAgICAgICAgIHN0eWxlPXtUdnBhZ2VTdHlsZS5JbWFnZX0gXHJcbiAgICAgICAgICAgICAgICBzcmM9e3Byb3BzLkltZ1NyY30gXHJcbiAgICAgICAgICAgICAgICBhbHQ9e3Byb3BzLkltZ0FsdH1cclxuICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgPENhcmRTdWJ0aXRsZSBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBteS0yXCI+XHJcbiAgICAgICAgICAgIDxoNCBzdHlsZT17VHZwYWdlU3R5bGUuQ2FzdH0+XHJcbiAgICAgICAgICAgICAgICB7cHJvcHMuU3ViVGl0bGV9XHJcbiAgICAgICAgICAgIDwvaDQ+XHJcbiAgICAgICAgICAgIDwvQ2FyZFN1YnRpdGxlPlxyXG4gICAgICAgIDwvQ2FyZEJvZHk+XHJcbiAgICAgICAgICAgIHtwcm9wcy5MaW5rfVxyXG4gICAgICAgIDwvQ2FyZD5cclxuICAgICk7XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBQcm92aWRlckNvbXBsaWFuY2UsIHByb3ZpZGVyRGF0YSBhbmQgVFZwb3N0XHJcbmV4cG9ydCBmdW5jdGlvbiBDdXN0b21UYWJzKHByb3BzKSB7XHJcbiAgICBjb25zdCBbYWN0aXZlVGFiLCBzZXRBY3RpdmVUYWJdID0gdXNlU3RhdGUoJzEnKTtcclxuICAgIFxyXG4gICAgY29uc3QgdG9nZ2xlID0gdGFiID0+IHtcclxuICAgICAgICBpZihhY3RpdmVUYWIgIT09IHRhYikgc2V0QWN0aXZlVGFiKHRhYik7XHJcbiAgICB9XHJcbiAgICByZXR1cm4gKFxyXG4gICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgIDxOYXYgdGFicz5cclxuICAgICAgICAgICAgICAgIDxOYXZJdGVtPlxyXG4gICAgICAgICAgICAgICAgICAgIDxOYXZMaW5rXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17Y2xhc3NuYW1lcyh7IGFjdGl2ZTogYWN0aXZlVGFiID09PSAnMScgfSl9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHsgdG9nZ2xlKCcxJyk7IH19IHN0eWxlPXtQb2ludGVyfVxyXG4gICAgICAgICAgICAgICAgICAgID5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3Byb3BzLlRhYjFOYW1lfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvTmF2TGluaz5cclxuICAgICAgICAgICAgICAgIDwvTmF2SXRlbT5cclxuICAgICAgICAgICAgICAgIDxOYXZJdGVtPlxyXG4gICAgICAgICAgICAgICAgICAgIDxOYXZMaW5rXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT17Y2xhc3NuYW1lcyh7IGFjdGl2ZTogYWN0aXZlVGFiID09PSAnMicgfSl9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHsgdG9nZ2xlKCcyJyk7IH19IHN0eWxlPXtQb2ludGVyfVxyXG4gICAgICAgICAgICAgICAgICAgID5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3Byb3BzLlRhYjJOYW1lfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvTmF2TGluaz5cclxuICAgICAgICAgICAgICAgIDwvTmF2SXRlbT5cclxuICAgICAgICAgICAgPC9OYXY+XHJcbiAgICAgICAgICAgIDxUYWJDb250ZW50IGFjdGl2ZVRhYj17YWN0aXZlVGFifT5cclxuICAgICAgICAgICAgICAgIDxUYWJQYW5lIHRhYklkPVwiMVwiIHN0eWxlPXtUYWJTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAge3Byb3BzLlRhYjFDb250ZW50fVxyXG4gICAgICAgICAgICAgICAgPC9UYWJQYW5lPlxyXG4gICAgICAgICAgICAgICAgPFRhYlBhbmUgdGFiSWQ9XCIyXCIgc3R5bGU9e1RhYlN0eWxlfT5cclxuICAgICAgICAgICAgICAgICAgICB7cHJvcHMuVGFiMkNvbnRlbnR9XHJcbiAgICAgICAgICAgICAgICA8L1RhYlBhbmU+XHJcbiAgICAgICAgICAgIDwvVGFiQ29udGVudD5cclxuICAgICAgICA8L2Rpdj5cclxuICAgIClcclxufVxyXG5cclxuLyogKioqKioqKioqKioqKioqKioqKioqKiogXHJcbiogICBFeHBvcnQgQ2xhc3NlcyAgICAgICAqIFxyXG4qKioqKioqKioqKioqKioqKioqKioqKioqKi9cclxuXHJcbi8vdXNlZCBpbiBob21lIHBhZ2VcclxuZXhwb3J0IGNsYXNzIEhvbWVDYXJkIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICA8Q2FyZCBzdHlsZT17SG9tZUNhcmRTdHlsZS5DYXJkfT5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlIHN0eWxlPXtIb21lQ2FyZFN0eWxlLlRpdGxlfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuVGl0bGV9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRJbWcgdG9wIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuSG9tZUNhcmR9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3RoaXMucHJvcHMuSW1hZ2V9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICBhbHQ9XCJDYXJkIGltYWdlIGNhcFwiIFxyXG4gICAgICAgICAgICAgICAgICAgIC8+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFN1YnRpdGxlPnt0aGlzLnByb3BzLlN1YnRpdGxlfTwvQ2FyZFN1YnRpdGxlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFRleHQgc3R5bGU9e3toZWlnaHQ6ICc4MHB4J319PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZFRleHQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxCdXR0b24gY2xhc3NOYW1lPVwidy0xMDAgcC0wIG0tMFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPE5ld1RhYkxpbmtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdHlsZT1cImJ0biBidG4tZGFyayB3LTEwMCBwLTJcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIExpbms9e3RoaXMucHJvcHMuTGlua30+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkJ1dHRvblRpdGxlfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9OZXdUYWJMaW5rPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgPC9DYXJkPiBcclxuICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufVxyXG5cclxuLy91c2VkIGluIFJlc3VtZXZpZXcsIGFib3V0IHBhZ2UgYW5kIHByb3ZpZGVyZGF0YVxyXG5leHBvcnQgY2xhc3MgQ3VzdG9tSnVtYm8gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIGlmICh0aGlzLnByb3BzLkltZ1VybCA9PT0gXCJub2ltYWdlXCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxKdW1ib3Ryb24+XHJcbiAgICAgICAgICAgICAgICAgICAgPGgxIGNsYXNzTmFtZT1cImRpc3BsYXktMyB0ZXh0LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5UaXRsZX1cclxuICAgICAgICAgICAgICAgICAgICA8L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT17dGhpcy5wcm9wcy5DYXB0aW9uMVN0eWxlfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQ2FwdGlvbjF9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9wPlxyXG4gICAgICAgICAgICAgICAgICAgIDxociBjbGFzc05hbWU9XCJteS0yXCIgLz5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjJTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24yfVxyXG4gICAgICAgICAgICAgICAgICAgIDwvcD5cclxuICAgICAgICAgICAgICAgIDwvSnVtYm90cm9uPlxyXG4gICAgICAgICAgICApO1xyXG4gICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8SnVtYm90cm9uPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJkaXNwbGF5LTMgdGV4dC1jZW50ZXJcIj57dGhpcy5wcm9wcy5UaXRsZX08L2gxPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyLWZsdWlkIHRleHQtY2VudGVyXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxpbWcgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICBzcmM9XCIuLi9zdGF0aWMvaW1hZ2VzL2F2YXRhci5qcGdcIiBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHN0eWxlPXtJbWFnZVN0eWxlcy5Ib21lQXZhdGFyfSBhbHQ9XCJhdmF0YXJcIlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT17dGhpcy5wcm9wcy5DYXB0aW9uMVN0eWxlfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQ2FwdGlvbjF9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9wPlxyXG4gICAgICAgICAgICAgICAgICAgIDxociBjbGFzc05hbWU9XCJteS0yXCIgLz5cclxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2FwdGlvbjJTdHlsZX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkNhcHRpb24yfTxiciAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5DYXB0aW9uM31cclxuICAgICAgICAgICAgICAgICAgICA8L3A+XHJcbiAgICAgICAgICAgICAgICA8L0p1bWJvdHJvbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBhYm91dCBwYWdlXHJcbmV4cG9ydCBjbGFzcyBBYm91dE1lZGlhIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xyXG4gICAgcmVuZGVyKCkge1xyXG5cclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BbGlnbiA9PT0gXCJSaWdodFwiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB5LTJcIj5cclxuICAgICAgICAgICAgICAgICAgICA8Q2FyZCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2xhc3N9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Um93PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEltZyBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3R5bGU9e0ltYWdlU3R5bGVzLkFib3V0fSBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgc3JjPXt0aGlzLnByb3BzLkltZ1VybH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkNhcmQgaW1hZ2UgY2FwXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENvbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZFRpdGxlIGNsYXNzTmFtZT1cIm10LTVcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGgxPnt0aGlzLnByb3BzLlRpdGxlfTwvaDE+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5EZXNjcmlwdGlvbn1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvQ2FyZD4gXHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGlmICh0aGlzLnByb3BzLkFsaWduID09PSBcIkxlZnRcIikge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgPENhcmQgY2xhc3NOYW1lPXt0aGlzLnByb3BzLkNsYXNzfT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFJvdz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDb2wgPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRUaXRsZSBjbGFzc05hbWU9XCJtdC01XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGgxPnt0aGlzLnByb3BzLlRpdGxlfTwvaDE+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRUaXRsZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb259XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkSW1nIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHlsZT17SW1hZ2VTdHlsZXMuQWJvdXR9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzcmM9e3RoaXMucHJvcHMuSW1nVXJsfSBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgYWx0PVwiQ2FyZCBpbWFnZSBjYXBcIiBcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvQ2FyZD5cclxuICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICApO1xyXG4gICAgICAgIH07XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vdXNlZCBpbiByZXN1bWUgZm9yIGV4cGVyaWVuY2Ugc2VjdGlvblxyXG5leHBvcnQgY2xhc3MgVGhyZWVDb2x1bW5DYXJkIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50e1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIHJldHVybihcclxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJweS0zXCI+XHJcbiAgICAgICAgICAgICAgICA8Q2FyZCBjbGFzc05hbWU9e3RoaXMucHJvcHMuQ2xhc3N9PlxyXG4gICAgICAgICAgICAgICAgICAgIDxDYXJkVGl0bGU+PGgxPnt0aGlzLnByb3BzLlRpdGxlfTwvaDE+PC9DYXJkVGl0bGU+XHJcbiAgICAgICAgICAgICAgICAgICAgPFJvdyBjbGFzc05hbWU9XCJ0ZXh0LWxlZnRcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPENvbCA+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8Q2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPGxpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuRGVzY3JpcHRpb24xfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9DYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9Db2w+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxDb2wgPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPENhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkRlc2NyaXB0aW9uMn1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9saT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQ2FyZEJvZHk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8Q29sID5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxDYXJkQm9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8bGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5EZXNjcmlwdGlvbjN9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0NhcmRCb2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8L1Jvdz5cclxuICAgICAgICAgICAgICAgIDwvQ2FyZD4gXHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vRCBhbmQgRCBhcHBsaWNhdGlvblxyXG5leHBvcnQgY2xhc3MgQ2hhcmFjdGVyU2hlZXQgZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgcmVuZGVyKCkge1xyXG4gICAgICAgIGZ1bmN0aW9uIERhbmREVGFibGVMYWJlbChwcm9wcykge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT1cInRleHQtbXV0ZWQgdGV4dC1sZWZ0IGg0XCI+XHJcbiAgICAgICAgICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgICAgICAgICAgPC90ZD5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9XHJcblxyXG4gICAgICAgIGZ1bmN0aW9uIERhbmREVGFibGVWYWx1ZShwcm9wcykge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT1cInRleHQtd2hpdGUgdGV4dC1sZWZ0IGg0XCI+XHJcbiAgICAgICAgICAgICAgICAgICAge3Byb3BzLmNoaWxkcmVufVxyXG4gICAgICAgICAgICAgICAgPC90ZD5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9XHJcbiAgICAgICAgXHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBzbT17eyBzaXplOiAnYXV0bycsIG9mZnNldDogMCB9fT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPFRhYmxlIGJvcmRlcmxlc3MgIGNsYXNzTmFtZT1cIlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRib2R5PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5TdHJlbmd0aDo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5TdHJlbmd0aH08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx0cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVMYWJlbD5Db25zdGl0dXRpb246PC9EYW5kRFRhYmxlTGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlVmFsdWU+e3RoaXMucHJvcHMuQ29uc3RpdHV0aW9ufTwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRleHRlcml0eTo8L0RhbmREVGFibGVMYWJlbD5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPERhbmREVGFibGVWYWx1ZT57dGhpcy5wcm9wcy5EZXh0ZXJpdHl9PC9EYW5kRFRhYmxlVmFsdWU+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90cj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8dHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxEYW5kRFRhYmxlTGFiZWw+SGl0cG9pbnRzOjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0cG9pbnRzICE9IFwiRGVhZFwiICYmIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXIgaDVcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNtYWxsPnt0aGlzLnByb3BzLkhpdHBvaW50c308L3NtYWxsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH0gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvRGFuZERUYWJsZVZhbHVlPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdHI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHRyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZUxhYmVsPkRhbWFnZSBwZXIgSGl0OjwvRGFuZERUYWJsZUxhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8RGFuZERUYWJsZVZhbHVlPnt0aGlzLnByb3BzLkRhbWFnZX08L0RhbmREVGFibGVWYWx1ZT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RyPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90Ym9keT5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPC9UYWJsZT4gIFxyXG4gICAgICAgICAgICAgICAgICAgIDwvQ29sPlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2wgc209e3sgc2l6ZTogJ2F1dG8nLCBvZmZzZXQ6IDIgfX0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aW1nICBzdHlsZT17RGFuZERTdHlsZS5BdmF0YXJ9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHNyYz17dGhpcy5wcm9wcy5JbWdVcmx9IFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGFsdD1cIkF2YXRhclwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAvPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICApO1xyXG4gICAgfVxyXG59XHJcblxyXG4vLyBEIGFuZCBEIGFwcGxpY2F0aW9uXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTZWN0aW9uIGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIGNvbnN0cnVjdG9yKHByb3BzKSB7XHJcbiAgICAgICAgc3VwZXIocHJvcHMpO1xyXG4gICAgICAgIHRoaXMuUm9sbFJlc3VsdCA9IHRoaXMuUm9sbFJlc3VsdC5iaW5kKHRoaXMpO1xyXG4gICAgICAgIHRoaXMuQXR0YWNrQmFubmVyID0gdGhpcy5BdHRhY2tCYW5uZXIuYmluZCh0aGlzKTtcclxuICAgICAgICB0aGlzLkF0dGFja0J1dHRvbiA9IHRoaXMuQXR0YWNrQnV0dG9uLmJpbmQodGhpcyk7XHJcbiAgICB9XHJcbiAgICBcclxuICAgIC8vU2hvd3MgYXR0YWNrIHJvbGwgbnVtYmVyIHdpdGggc3BlY2lhbCBkaXNwbGF5IGZvclxyXG4gICAgLy9jcml0IHNjcmlrZSAobmF0dXJhbCAyMCBvbiByb2xsKVxyXG4gICAgUm9sbFJlc3VsdCgpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5Sb2xsID09PSAnQ3JpdCBTdHJpa2UnKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWRhbmdlciBmb250LWl0YWxpY1wiPlxyXG4gICAgICAgICAgICAgICAgICAgIENyaXRpY2FsIFN0cmlrZSFcclxuICAgICAgICAgICAgICAgIDwvc3Bhbj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPHNwYW4+e3RoaXMucHJvcHMuUm9sbH08L3NwYW4+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG5cclxuICAgIC8vc2hvd3MgYXR0YWNrIHJlc3VsdCBvZiBoaXQvbWlzcyBvciBwbGFjZSBob2xkZXIgZm9yXHJcbiAgICAvL3Jlc3VsdCBkaXNwbGF5LlxyXG4gICAgQXR0YWNrQmFubmVyKCkge1xyXG4gICAgICAgIGNvbnN0IFJlc3VsdCA9IHRoaXMucHJvcHMuRGlkSGl0O1xyXG4gICAgICAgIGlmIChSZXN1bHQgPT09IFwiSGl0XCIpIHtcclxuICAgICAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJhbGVydCBhbGVydC1zdWNjZXNzIHB5LTIgdGV4dC1jZW50ZXJcIj5IaXQhPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGlmIChSZXN1bHQgPT09IFwiTWlzc1wiKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwiYWxlcnQgYWxlcnQtZGFuZ2VyIHB5LTIgdGV4dC1jZW50ZXJcIj5NaXNzPC9oMj5cclxuICAgICAgICAgICAgKTtcclxuICAgICAgICB9IGVsc2Uge1xyXG4gICAgICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICAgICAgPGg2IGNsYXNzTmFtZT1cInRleHQtd2hpdGUgdGV4dC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAoQXR0YWNrIFJlc3VsdCBkaXNwbGF5ZWQgaGVyZSlcclxuICAgICAgICAgICAgICAgIDwvaDY+XHJcbiAgICAgICAgICAgICk7XHJcbiAgICAgICAgfVxyXG4gICAgfVxyXG4gICAgXHJcbiAgICAvKkZ1bmN0aW9uIHRvIGRpc3BsYXkgYXR0YWNrIGJ1dHRvbiBiYXNlZCBvbiBpbml0aWF0aXZlIHJvbGwgYW5kIGF0dGFjayB0dXJuLiBQdWxsc1xyXG4gICAgQXR0YWNrVHVybiBmdW5jdG9uIGFuZCBBdHRhY2tyb2xsIGZ1bmN0aW9ucyBmcm9tIGVpdGhlciBoZXJvZnVuY3Rpb25zLmpzIG9yIG1vbnN0ZXJmdW5jdGlvbnMuanNcclxuICAgIGFzIGl0ZW50aWZpZWQgaW4gcHJvcHMgKi9cclxuICAgIEF0dGFja0J1dHRvbigpIHtcclxuICAgICAgICBpZiAodGhpcy5wcm9wcy5BdHRhY2tUdXJuID09PSB0cnVlKSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8QnV0dG9uICBcclxuICAgICAgICAgICAgICAgICAgICBvbk1vdXNlRG93bj17dGhpcy5wcm9wcy5BdHRhY2tSb2xsfSBcclxuICAgICAgICAgICAgICAgICAgICBvbk1vdXNlVXAgPSB7dGhpcy5wcm9wcy5OZXh0VHVybn1cclxuICAgICAgICAgICAgICAgID5cclxuICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Sb2xsVGl0bGV9XHJcbiAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgKVxyXG4gICAgICAgIH0gZWxzZSB7XHJcbiAgICAgICAgICAgIHJldHVybiAoXHJcbiAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC13aGl0ZVwiPk5vdCB5b3VyIHR1cm48L2g0PlxyXG4gICAgICAgICAgICApXHJcbiAgICAgICAgfTtcclxuICAgIH1cclxuXHJcbiAgICByZW5kZXIoKSB7XHJcbiAgICAgICAgcmV0dXJuIChcclxuICAgICAgICAgICAgPGRpdj5cclxuICAgICAgICAgICAgICAgIDxSb3c+XHJcbiAgICAgICAgICAgICAgICAgICAgPENvbCBjbGFzc05hbWU9XCJteS00IG14LTUgZC1mbGV4IGp1c3RpZnktY29udGVudC1jZW50ZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGltZyBzcmM9XCIuLi9zdGF0aWMvaW1hZ2VzL2FjaWNvbi5wbmdcIiBhbHQ9XCJzaGllbGRcIi8+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJBQy1JY29uLXRleHRcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuQUN9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9oND5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8Q29sIGNsYXNzTmFtZT1cIm15LTQgbXgtNSBkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlclwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBzdHlsZT17RGFuZERTdHlsZS50aHVtYm5haWx9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiLi4vc3RhdGljL2ltYWdlcy9oaXRhZGp1c3QucG5nXCIgYWx0PVwiaWNvblwiLz5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwiSGl0QWRqLUljb24tdGV4dFwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSGl0QWRqfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+ICBcclxuICAgICAgICAgICAgICAgICAgICA8L0NvbD5cclxuICAgICAgICAgICAgICAgICAgICA8c3R5bGUganN4PntgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5BQy1JY29uLXRleHQge1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgdG9wOiA0MnB4O1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIC5IaXRBZGotSWNvbi10ZXh0IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRvcDogNDglO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgbGVmdDogNTBweDtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsIC01MCUpO1xyXG4gICAgICAgICAgICAgICAgICAgICAgICB9ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgIGB9XHJcbiAgICAgICAgICAgICAgICAgICAgPC9zdHlsZT5cclxuICAgICAgICAgICAgICAgIDwvUm93PlxyXG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJkLWZsZXgganVzdGlmeS1jb250ZW50LWNlbnRlciBteS00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAge3RoaXMuQXR0YWNrQnV0dG9uKCl9XHJcbiAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgdGV4dC13aGl0ZVwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxoMj5BdHRhY2sgUmVzdWx0OjwvaDI+XHJcbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwibXQtMiBwLTBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgYXR0YWNrIHJvbGw6ICZuYnNwOyB7dGhpcy5Sb2xsUmVzdWx0KCl9PC9wPlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIHt0aGlzLkF0dGFja0Jhbm5lcigpfVxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vdXNlZCBpbiBEYW5kRCBwYWdlIHRvIGRpc3BsYXkgTmFtZSxJbml0aWF0aXZlIGFuZCBIUCBzdGF0dXMgZm9yIGhlcm8gYW5kIFxyXG4vL21vbnN0ZXIuXHJcbmV4cG9ydCBjbGFzcyBBdHRhY2tTdGF0dXNEaXNwbGF5IGV4dGVuZHMgUmVhY3QuQ29tcG9uZW50IHtcclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8ZGl2PlxyXG4gICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQtaW5mb1wiPnt0aGlzLnByb3BzLk5hbWV9PC9oND5cclxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgcHQtNFwiPlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5pbmlhdGl2ZTo8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8aDQgY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5Jbml0aWF0aXZlICE9IFwiU2Vjb25kXCIgJiYgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1pbmZvXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPiB8fCAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC13YXJuaW5nXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHt0aGlzLnByb3BzLkluaXRpYXRpdmV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC0zXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoND5IaXQgUG9pbnRzOjwvaDQ+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtdC00XCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUCAhPSBcIkRlYWRcIiAmJlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc3VjY2Vzc1wiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5wcm9wcy5IUH1cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+IHx8XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1kYW5nZXJcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAge3RoaXMucHJvcHMuSFB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC9zcGFuPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgfVxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2g0PlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgPC9kaXY+XHJcbiAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICk7XHJcbiAgICB9XHJcbn1cclxuXHJcbi8vRCBhbmQgRCBhcHBsaWNhdGlvblxyXG5leHBvcnQgY2xhc3MgTmFtZUZvcm0gZXh0ZW5kcyBSZWFjdC5Db21wb25lbnQge1xyXG4gICAgY29uc3RydWN0b3IocHJvcHMpIHtcclxuICAgICAgICBzdXBlcihwcm9wcyk7XHJcbiAgICAgICAgdGhpcy5zdGF0ZSA9IHtjb2xsYXBzZTogZmFsc2V9O1xyXG4gICAgICAgIHRoaXMudG9nZ2xlID0gdGhpcy50b2dnbGUuYmluZCh0aGlzKTtcclxuICAgIH0gICBcclxuICAgIFxyXG4gICAgdG9nZ2xlKCkge1xyXG4gICAgICAgIHRoaXMuc2V0U3RhdGUoc3RhdGUgPT4gKHtjb2xsYXBzZTogIXN0YXRlLmNvbGxhcHNlfSkpO1xyXG4gICAgfVxyXG5cclxuICAgIHJlbmRlcigpIHtcclxuICAgICAgICByZXR1cm4gKFxyXG4gICAgICAgICAgICA8Rm9ybSA+XHJcbiAgICAgICAgICAgICAgICA8Rm9ybUdyb3VwIGNsYXNzTmFtZT1cIm1iLTIgbXItc20tMiBtYi1zbS0yIGQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm0tMlwiPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8TGFiZWw+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8QnV0dG9uIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJ0biB0ZXh0LXdoaXRlXCIgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgb25DbGljaz17dGhpcy50b2dnbGV9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB7dGhpcy5zdGF0ZS5jb2xsYXBzZT8gJ0hpZGUnIDogJ0NoYW5nZSBOYW1lJ31cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xhYmVsPlxyXG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgIDxDb2xsYXBzZSBpc09wZW49e3RoaXMuc3RhdGUuY29sbGFwc2V9PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImQtZmxleCBmbGV4LXdyYXBcIj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+ICAgIFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxJbnB1dFxyXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB0eXBlPVwidGV4dFwiXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG1heExlbmd0aD1cIjIwXCJcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgdmFsdWU9e3RoaXMucHJvcHMuVmFsdWV9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXt0aGlzLnByb3BzLk5hbWVDaGFuZ2V9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIC8vUHJldmVudCBlbnRlciBrZXkgc3VibWl0XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uS2V5UHJlc3M9e2V2ZW50ID0+IHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIChldmVudC53aGljaCA9PT0gMTMgLyogRW50ZXIgKi8pIHtcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGV2ZW50LnByZXZlbnREZWZhdWx0KCk7XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICB9XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIH19XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgLz4gXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibS0yXCI+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiAgXHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIG9uQ2xpY2s9e3RoaXMucHJvcHMuTmFtZVN1Ym1pdH0+XHJcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBTdWJtaXRcclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L0J1dHRvbj5cclxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxyXG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cclxuICAgICAgICAgICAgICAgICAgICA8L0NvbGxhcHNlPlxyXG4gICAgICAgICAgICAgICAgPC9Gb3JtR3JvdXA+XHJcbiAgICAgICAgICAgIDwvRm9ybT4gXHJcbiAgICAgICAgKTtcclxuICAgIH1cclxufVxyXG5cclxuXHJcblxyXG4iXX0= */\n/*@ sourceURL=C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\customComponents.js */")), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "d-flex justify-content-center my-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 518
+          lineNumber: 585
         },
         __self: this
-      }, this.AttackButton()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.AttackButton()), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "text-center text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 521
+          lineNumber: 588
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 522
+          lineNumber: 589
         },
         __self: this
-      }, "Attack Result:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+      }, "Attack Result:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("p", {
         className: "mt-2 p-0",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 523
+          lineNumber: 590
         },
         __self: this
-      }, "attack roll: \xA0 ", this.RollResult())), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, "attack roll: \xA0 ", this.RollResult())), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 526
+          lineNumber: 593
         },
         __self: this
       }, this.AttackBanner()));
@@ -3334,7 +3597,7 @@ function (_React$Component6) {
   }]);
 
   return AttackSection;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component); //used in DandD page to display Name,Initiative and HP status for hero and 
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); //used in DandD page to display Name,Initiative and HP status for hero and 
 //monster.
 
 var AttackStatusDisplay =
@@ -3351,92 +3614,92 @@ function (_React$Component7) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(AttackStatusDisplay, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 539
+          lineNumber: 606
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         className: "text-info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 540
+          lineNumber: 607
         },
         __self: this
-      }, this.props.Name), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.props.Name), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "text-center pt-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 541
+          lineNumber: 608
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "p-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 542
+          lineNumber: 609
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 543
+          lineNumber: 610
         },
         __self: this
-      }, "iniative:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, "iniative:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         className: "text-info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 544
+          lineNumber: 611
         },
         __self: this
-      }, this.props.Initiative != "Second" && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+      }, this.props.Initiative != "Second" && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         className: "text-info",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 546
+          lineNumber: 613
         },
         __self: this
-      }, this.props.Initiative) || react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+      }, this.props.Initiative) || react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         className: "text-warning",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 549
+          lineNumber: 616
         },
         __self: this
-      }, this.props.Initiative))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, this.props.Initiative))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "p-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 555
+          lineNumber: 622
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 556
+          lineNumber: 623
         },
         __self: this
-      }, "Hit Points:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
+      }, "Hit Points:"), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("h4", {
         className: "text-center mt-4",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 557
+          lineNumber: 624
         },
         __self: this
-      }, this.props.HP != "Dead" && react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+      }, this.props.HP != "Dead" && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         className: "text-success",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 559
+          lineNumber: 626
         },
         __self: this
-      }, this.props.HP) || react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
+      }, this.props.HP) || react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", {
         className: "text-danger",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 562
+          lineNumber: 629
         },
         __self: this
       }, this.props.HP)))));
@@ -3444,7 +3707,7 @@ function (_React$Component7) {
   }]);
 
   return AttackStatusDisplay;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component); //D and D application
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component); //D and D application
 
 var NameForm =
 /*#__PURE__*/
@@ -3476,62 +3739,62 @@ function (_React$Component8) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Form"], {
+      return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Form"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 588
+          lineNumber: 655
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["FormGroup"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["FormGroup"], {
         className: "mb-2 mr-sm-2 mb-sm-2 d-flex flex-wrap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 589
+          lineNumber: 656
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "m-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 590
+          lineNumber: 657
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Label"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Label"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 591
+          lineNumber: 658
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         className: "btn text-white",
         onClick: this.toggle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 592
+          lineNumber: 659
         },
         __self: this
-      }, this.state.collapse ? 'Hide' : 'Change Name'))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Collapse"], {
+      }, this.state.collapse ? 'Hide' : 'Change Name'))), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Collapse"], {
         isOpen: this.state.collapse,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 599
+          lineNumber: 666
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "d-flex flex-wrap",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 600
+          lineNumber: 667
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "m-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 601
+          lineNumber: 668
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Input"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Input"], {
         type: "text",
         maxLength: "20",
         value: this.props.Value,
@@ -3546,21 +3809,21 @@ function (_React$Component8) {
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 602
+          lineNumber: 669
         },
         __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
+      })), react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         className: "m-2",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 615
+          lineNumber: 682
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Button"], {
+      }, react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_9__["Button"], {
         onClick: this.props.NameSubmit,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 616
+          lineNumber: 683
         },
         __self: this
       }, "Submit"))))));
@@ -3568,7 +3831,7 @@ function (_React$Component8) {
   }]);
 
   return NameForm;
-}(react__WEBPACK_IMPORTED_MODULE_7___default.a.Component);
+}(react__WEBPACK_IMPORTED_MODULE_8___default.a.Component);
 
 /***/ }),
 
@@ -3597,7 +3860,9 @@ var Pointer = {
 var TabStyle = {
   width: '95%',
   marginLeft: 'auto',
-  marginRight: 'auto'
+  marginRight: 'auto',
+  marginTop: '20px',
+  marginBottom: '20px'
 };
 var HomeCardStyle = {
   Card: {
@@ -3631,13 +3896,19 @@ var ImageStyles = {
 };
 var TvpageStyle = {
   Image: {
+    display: 'flex',
     height: '300px',
-    width: 'auto'
+    width: '200px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    marginTop: '10px',
+    marginBottom: '10px'
   },
   Title: {
     height: '20px',
     width: '200px',
-    margin: 4
+    margin: 4,
+    wordWwrap: 'break-word'
   },
   Cast: {
     maxHeight: '20px',
@@ -3704,15 +3975,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactstrap */ "reactstrap");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _jsxstyles__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./jsxstyles */ "./pages/jsxstyles.js");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! classnames */ "classnames");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./customComponents */ "./pages/customComponents.js");
-/* harmony import */ var _provider_data_networkTable_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./provider_data/networkTable.js */ "./pages/provider_data/networkTable.js");
-/* harmony import */ var _provider_data_prividerCompliance_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./provider_data/prividerCompliance.js */ "./pages/provider_data/prividerCompliance.js");
-/* harmony import */ var _provider_data_providerStats_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./provider_data/providerStats.js */ "./pages/provider_data/providerStats.js");
+/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./customComponents */ "./pages/customComponents.js");
+/* harmony import */ var _provider_data_networkTable_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./provider_data/networkTable.js */ "./pages/provider_data/networkTable.js");
+/* harmony import */ var _provider_data_prividerCompliance_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./provider_data/prividerCompliance.js */ "./pages/provider_data/prividerCompliance.js");
+/* harmony import */ var _provider_data_providerStats_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./provider_data/providerStats.js */ "./pages/provider_data/providerStats.js");
 
 
 
@@ -3720,9 +3986,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\providerData.js";
-
-
-
 
 
 
@@ -3760,15 +4023,13 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this2 = this;
-
       return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_layout_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 30
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_11__["CustomJumbo"], {
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CustomJumbo"], {
         Title: "Provider List",
         ImgUrl: "noimage",
         Caption1Style: "lead text-center",
@@ -3777,96 +4038,44 @@ function (_React$Component) {
         Caption2: "All information has been randomly generated from a JSON Generator tool \r found online. This includes names, emails, phone numbers, addresses and dates.",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 31
         },
         __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Nav"], {
-        tabs: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 44
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 45
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
-        className: classnames__WEBPACK_IMPORTED_MODULE_10___default()({
-          active: this.state.activeTab === '1'
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_8__["CustomTabs"], {
+        Tab1Name: "Network",
+        Tab2Name: "Compliance",
+        Tab1Content: react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 46
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_provider_data_providerStats_js__WEBPACK_IMPORTED_MODULE_11__["Networkinfo"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 47
+          },
+          __self: this
+        }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_provider_data_networkTable_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          },
+          __self: this
+        })),
+        Tab2Content: react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_provider_data_prividerCompliance_js__WEBPACK_IMPORTED_MODULE_10__["default"], {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 52
+          },
+          __self: this
         }),
-        onClick: function onClick() {
-          _this2.toggle('1');
-        },
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["Pointer"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 42
         },
         __self: this
-      }, "Network")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 53
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
-        className: classnames__WEBPACK_IMPORTED_MODULE_10___default()({
-          active: this.state.activeTab === '2'
-        }),
-        onClick: function onClick() {
-          _this2.toggle('2');
-        },
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["Pointer"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 54
-        },
-        __self: this
-      }, "Compliance"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["TabContent"], {
-        activeTab: this.state.activeTab,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 62
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["TabPane"], {
-        tabId: "1",
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["TabStyle"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 63
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_provider_data_providerStats_js__WEBPACK_IMPORTED_MODULE_14__["Networkinfo"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 64
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_provider_data_networkTable_js__WEBPACK_IMPORTED_MODULE_12__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 65
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["TabPane"], {
-        tabId: "2",
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_9__["TabStyle"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 67
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_provider_data_prividerCompliance_js__WEBPACK_IMPORTED_MODULE_13__["default"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 68
-        },
-        __self: this
-      }))));
+      }));
     }
   }]);
 
@@ -4277,11 +4486,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! reactstrap */ "reactstrap");
 /* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! classnames */ "classnames");
-/* harmony import */ var classnames__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(classnames__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../customComponents */ "./pages/customComponents.js");
-/* harmony import */ var _providerStats__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./providerStats */ "./pages/provider_data/providerStats.js");
-/* harmony import */ var _jsxstyles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../jsxstyles */ "./pages/jsxstyles.js");
+/* harmony import */ var _customComponents__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../customComponents */ "./pages/customComponents.js");
+/* harmony import */ var _providerStats__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./providerStats */ "./pages/provider_data/providerStats.js");
+/* harmony import */ var _jsxstyles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../jsxstyles */ "./pages/jsxstyles.js");
 
 
 
@@ -4290,7 +4497,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\provider_data\\prividerCompliance.js";
-
 
 
 
@@ -4325,7 +4531,7 @@ function ProviderDropdown() {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 15
     },
     __self: this
   }, tpdata.map(function (TP) {
@@ -4336,7 +4542,7 @@ function ProviderDropdown() {
       value: TP.company,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38
+        lineNumber: 36
       },
       __self: this
     }, TP.company);
@@ -4349,284 +4555,284 @@ function CompanyTab(props) {
     className: "bg-light shadow",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     className: "pt-4 pl-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 54
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 54
     },
     __self: this
   }, "Provider:"), " ", TP.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
     className: "ml-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 55
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 56
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 57
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 57
     },
     __self: this
   }, "Address:")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 58
     },
     __self: this
   }, TP.address1), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 59
     },
     __self: this
   }, TP.address2)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 61
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 62
     },
     __self: this
   }, "Contact info:")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 63
     },
     __self: this
   }, "Phone:"), " ", TP.phone), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 64
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 64
     },
     __self: this
   }, "Email:"), " ", TP.email))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
     className: "pt-4 pl-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 67
     },
     __self: this
   }, "Insurance:")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
     className: " ml-3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 68
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
     className: "ml-2 mb-4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71
+      lineNumber: 69
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 70
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 70
     },
     __self: this
   }, "Type:"), " ", TP.gl.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 71
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 71
     },
     __self: this
   }, "Company:"), " ", TP.gl.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 72
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 72
     },
     __self: this
-  }, "Exp Date:"), " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+  }, "Exp Date:"), " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
     Date: TP.gl.end,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 72
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
     className: "ml-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, "Type:"), " ", TP.veh.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 76
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
-  }, "Type:"), " ", TP.veh.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 76
     },
     __self: this
   }, "Company:"), " ", TP.veh.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 77
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 77
     },
     __self: this
-  }, "Exp Date:"), " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+  }, "Exp Date:"), " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
     Date: TP.veh.end,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 77
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
     className: "ml-2",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 79
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 80
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 82
+      lineNumber: 80
     },
     __self: this
   }, "Type:"), " ", TP.wc.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 81
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 81
     },
     __self: this
   }, "Company:"), " ", TP.wc.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Info,
+    style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Info,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("b", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 82
     },
     __self: this
-  }, "Exp Date:"), " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+  }, "Exp Date:"), " ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
     Date: TP.wc.end,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 82
     },
     __self: this
   })))));
@@ -4637,7 +4843,7 @@ function DriverTab(props) {
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 95
+      lineNumber: 93
     },
     __self: this
   }, Driver.map(function (driver) {
@@ -4645,249 +4851,249 @@ function DriverTab(props) {
       key: driver.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 95
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["TplistHeaderRow"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["TplistHeaderRow"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 98
+        lineNumber: 96
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 99
+        lineNumber: 97
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 100
+        lineNumber: 98
       },
       __self: this
     }, driver.name)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 102
+        lineNumber: 100
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Value,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 103
+        lineNumber: 101
       },
       __self: this
     }, "License State: ", driver.license.state)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 107
+        lineNumber: 105
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Value,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 108
+        lineNumber: 106
       },
       __self: this
-    }, "License Exp: \xA0", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, "License Exp: \xA0", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.license.exp,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 109
+        lineNumber: 107
       },
       __self: this
     })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
       className: "ml-5 my-4",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 113
+        lineNumber: 111
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 114
+        lineNumber: 112
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Table"], {
       bordered: true,
       className: "w-75 shadow-sm",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 113
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("thead", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 114
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
+      className: "bg-light",
       __source: {
         fileName: _jsxFileName,
         lineNumber: 115
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("thead", {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 116
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
-      className: "bg-light",
+    }, "Training"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 117
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
+    }, "Company"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 118
       },
       __self: this
-    }, "Training"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 119
-      },
-      __self: this
-    }, "Company"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 120
-      },
-      __self: this
     }, "Exp date"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tbody", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 123
+        lineNumber: 121
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 124
+        lineNumber: 122
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 125
+        lineNumber: 123
       },
       __self: this
     }, driver.firstaid.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 126
+        lineNumber: 124
       },
       __self: this
     }, driver.firstaid.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 125
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.firstaid.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 127
+        lineNumber: 125
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 129
+        lineNumber: 127
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 130
+        lineNumber: 128
       },
       __self: this
     }, driver.cpr.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 131
+        lineNumber: 129
       },
       __self: this
     }, driver.cpr.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 130
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.cpr.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 132
+        lineNumber: 130
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 134
+        lineNumber: 132
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 135
+        lineNumber: 133
       },
       __self: this
     }, driver.defdriv.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 136
+        lineNumber: 134
       },
       __self: this
     }, driver.defdriv.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 135
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.defdriv.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 137
+        lineNumber: 135
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 139
+        lineNumber: 137
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 140
+        lineNumber: 138
       },
       __self: this
     }, driver.pass.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 141
+        lineNumber: 139
       },
       __self: this
     }, driver.pass.company), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 140
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.pass.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 142
+        lineNumber: 140
       },
       __self: this
     })))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 147
+        lineNumber: 145
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Table"], {
@@ -4895,113 +5101,113 @@ function DriverTab(props) {
       className: "w-75 shadow-sm",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 148
+        lineNumber: 146
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("thead", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 149
+        lineNumber: 147
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       className: "bg-light",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 150
+        lineNumber: 148
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 151
+        lineNumber: 149
       },
       __self: this
     }, "Screening"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("th", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 152
+        lineNumber: 150
       },
       __self: this
     }, "Exp date"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tbody", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 155
+        lineNumber: 153
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 156
+        lineNumber: 154
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 157
+        lineNumber: 155
       },
       __self: this
     }, driver.drugscreen.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158
+        lineNumber: 156
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.drugscreen.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 158
+        lineNumber: 156
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 160
+        lineNumber: 158
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 161
+        lineNumber: 159
       },
       __self: this
     }, driver.background.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 160
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.background.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 162
+        lineNumber: 160
       },
       __self: this
     }))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("tr", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 164
+        lineNumber: 162
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 165
+        lineNumber: 163
       },
       __self: this
     }, driver.mvr.type), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("td", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166
+        lineNumber: 164
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: driver.mvr.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 166
+        lineNumber: 164
       },
       __self: this
     }))))))));
@@ -5013,7 +5219,7 @@ function VehicleTab(props) {
   return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 182
+      lineNumber: 180
     },
     __self: this
   }, Vehicle.map(function (vehicle) {
@@ -5021,145 +5227,145 @@ function VehicleTab(props) {
       key: vehicle.id,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 184
+        lineNumber: 182
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["TplistHeaderRow"], {
+    }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["TplistHeaderRow"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 185
+        lineNumber: 183
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 186
+        lineNumber: 184
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 187
+        lineNumber: 185
       },
       __self: this
     }, "Number: ", vehicle.number)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 189
+        lineNumber: 187
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Value,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 190
+        lineNumber: 188
       },
       __self: this
     }, "Vehicle brand: ", vehicle.brand)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 194
+        lineNumber: 192
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Value,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 195
+        lineNumber: 193
       },
       __self: this
     }, "Vehicle type: ", vehicle.type)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Title,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 199
+        lineNumber: 197
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
-      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Tplist"].Value,
+      style: _jsxstyles__WEBPACK_IMPORTED_MODULE_11__["Tplist"].Value,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 200
+        lineNumber: 198
       },
       __self: this
     }, "Year: ", vehicle.year))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Row"], {
       className: "ml-5 my-2",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 205
+        lineNumber: 203
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 206
+        lineNumber: 204
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: "d-inline-block h-25 m-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 207
+        lineNumber: 205
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 208
+        lineNumber: 206
       },
       __self: this
     }, "Registration State:\xA0", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("small", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 209
+        lineNumber: 207
       },
       __self: this
     }, vehicle.registration.state)), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211
+        lineNumber: 209
       },
       __self: this
-    }, "Exp date: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, "Exp date: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: vehicle.registration.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 211
+        lineNumber: 209
       },
       __self: this
     })))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Col"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 214
+        lineNumber: 212
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
       className: "d-inline-block h-25 m-3",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 215
+        lineNumber: 213
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h4", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 216
+        lineNumber: 214
       },
       __self: this
     }, "Inspection:"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("p", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 217
+        lineNumber: 215
       },
       __self: this
-    }, "Exp date: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_10__["DateCheck"], {
+    }, "Exp date: ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["DateCheck"], {
       Date: vehicle.inspection.end,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 217
+        lineNumber: 215
       },
       __self: this
     }))))));
@@ -5179,10 +5385,8 @@ function (_React$Component) {
     _this2 = Object(_babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(_babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(ProviderCompliance).call(this, props));
     _this2.state = {
       dropdownOpen: false,
-      value: 'ACCEL',
-      activeTab: '1'
+      value: 'ACCEL'
     };
-    _this2.selectTab = _this2.selectTab.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2));
     _this2.selectProvider = _this2.selectProvider.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2));
     _this2.clickDropdown = _this2.clickDropdown.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2));
     _this2.ProviderDropdown = ProviderDropdown.bind(Object(_babel_runtime_corejs2_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4__["default"])(_this2));
@@ -5206,15 +5410,6 @@ function (_React$Component) {
       });
     }
   }, {
-    key: "selectTab",
-    value: function selectTab(tab) {
-      if (this.state.actiTab !== tab) {
-        this.setState({
-          activeTab: tab
-        });
-      }
-    }
-  }, {
     key: "render",
     value: function render() {
       var _this3 = this;
@@ -5232,39 +5427,39 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 264
+          lineNumber: 254
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "my-3 text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 265
+          lineNumber: 255
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 266
+          lineNumber: 256
         },
         __self: this
       }, "Provider Compliance Report"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h3", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 267
+          lineNumber: 257
         },
         __self: this
-      }, "Report Date: 9/22/2019")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_providerStats__WEBPACK_IMPORTED_MODULE_11__["ComplianceTable"], {
+      }, "Report Date: 9/22/2019")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_providerStats__WEBPACK_IMPORTED_MODULE_10__["ComplianceTable"], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 269
+          lineNumber: 259
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h1", {
         className: "mt-3 text-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 270
+          lineNumber: 260
         },
         __self: this
       }, "Compliance by Provider"), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Dropdown"], {
@@ -5273,154 +5468,95 @@ function (_React$Component) {
         className: "d-flex ml-5 my-5 justify-content-center",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 271
+          lineNumber: 261
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["DropdownToggle"], {
         caret: true,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 275
+          lineNumber: 265
         },
         __self: this
       }, "Provider List"), this.ProviderDropdown()), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "mt-5 ml-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 280
+          lineNumber: 270
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h5", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 281
+          lineNumber: 271
         },
         __self: this
       }, "Dates in ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "bg-warning text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 281
+          lineNumber: 271
         },
         __self: this
       }, "Yellow"), "\xA0 are about to expire."), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h5", {
         className: "mb-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 283
+          lineNumber: 273
         },
         __self: this
       }, "Dates in  ", react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
         className: "bg-danger text-white",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 283
+          lineNumber: 273
         },
         __self: this
       }, "Red"), "\xA0need immediate attention.")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "mt-5 mx-5",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 287
+          lineNumber: 277
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(CompanyTab, {
         Data: tp,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 288
+          lineNumber: 278
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         className: "my-3",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 289
+          lineNumber: 279
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["Nav"], {
-        tabs: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 290
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 291
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
-        className: classnames__WEBPACK_IMPORTED_MODULE_9___default()({
-          active: this.state.activeTab === '1'
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_customComponents__WEBPACK_IMPORTED_MODULE_9__["CustomTabs"], {
+        Tab1Name: "Drivers",
+        Tab2Name: "Vehicles",
+        Tab1Content: react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DriverTab, {
+          Data: drfilter,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 284
+          },
+          __self: this
         }),
-        onClick: function onClick() {
-          _this3.selectTab('1');
-        },
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Pointer"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 292
-        },
-        __self: this
-      }, "Drivers")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavItem"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 299
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["NavLink"], {
-        className: classnames__WEBPACK_IMPORTED_MODULE_9___default()({
-          active: this.state.activeTab === '2'
+        Tab2Content: react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(VehicleTab, {
+          Data: vehfilter,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 287
+          },
+          __self: this
         }),
-        onClick: function onClick() {
-          _this3.selectTab('2');
-        },
-        style: _jsxstyles__WEBPACK_IMPORTED_MODULE_12__["Pointer"],
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 300
+          lineNumber: 280
         },
         __self: this
-      }, "Vehicles"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["TabContent"], {
-        activeTab: this.state.activeTab,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 308
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["TabPane"], {
-        tabId: "1",
-        className: "mt-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 309
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(DriverTab, {
-        Data: drfilter,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 310
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_8__["TabPane"], {
-        tabId: "2",
-        className: "mt-3",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 312
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(VehicleTab, {
-        Data: vehfilter,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 313
-        },
-        __self: this
-      }))))));
+      }))));
     }
   }]);
 
@@ -7061,6 +7197,28 @@ module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\p
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
+
+/***/ }),
+
+/***/ "core-js/library/fn/array/is-array":
+/*!****************************************************!*\
+  !*** external "core-js/library/fn/array/is-array" ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/array/is-array");
+
+/***/ }),
+
+/***/ "core-js/library/fn/get-iterator":
+/*!**************************************************!*\
+  !*** external "core-js/library/fn/get-iterator" ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/get-iterator");
 
 /***/ }),
 

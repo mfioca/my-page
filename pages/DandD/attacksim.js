@@ -1,10 +1,9 @@
 import React from 'react'
 import { SetConstAdj, SetAcAdj, SetDmgHitAdj, setherostats, setmonsterstats,
-    heroattackroll, monsterattackroll, heroAttackTurn, monsterAttackTurn } from './mainfunctions'
+    RollforIniative, AttackRoll, AttackTurn } from './mainfunctions'
 
 import { CharacterSheet, NameForm, AttackSection, CenterFlexWrapDiv, AttackStatusDisplay } from '../customComponents'
 import { Row, Col, Button } from 'reactstrap'
-
 
 
 class AttackSim extends React.Component {
@@ -12,27 +11,20 @@ class AttackSim extends React.Component {
         super(props);
         
         this.state = { 
+            base: {
+                Hp: 50,
+                ArmorClass: 10,
+                Damage: 10
+            },
             herostats: {
                 Str: 0,
                 Const: 0,
                 Dext: 0
             },
-            herobase: {
-                Hp: 50,
-                ArmorClass: 10,
-                Damage: 10,
-                HitAdj: 0
-            },
             monsterstats: {
                 Str: 0,
                 Const: 0,
                 Dext: 0
-            },
-            monsterbase: {
-                Hp: 50,
-                ArmorClass: 10,
-                Damage: 10,
-                HitAdj: 0
             },
             heroHp: 0,
             heroAc: 0,
@@ -54,27 +46,25 @@ class AttackSim extends React.Component {
             monsterAttackVisible: false,
             monsterRoll: 0,
             monsterDidHit: '',
-            
         };
 
         //Hero bind function statements
         this.setherostats = setherostats.bind(this);
         this.heroNameChange = this.heroNameChange.bind(this);
         this.heroNameSubmit = this.heroNameSubmit.bind(this);
-        this.heroattackroll = heroattackroll.bind(this);
-        this.heroAttackTurn = heroAttackTurn.bind(this);
+        
         //monster bind function statements
         this.setmonsterstats = setmonsterstats.bind(this);
         this.monsterNameChange = this.monsterNameChange.bind(this);
         this.monsterNameSubmit = this.monsterNameSubmit.bind(this);
-        this.monsterattackroll = monsterattackroll.bind(this);
-        this.monsterAttackTurn = monsterAttackTurn.bind(this);
 
-        this.rollforiniative = this.rollforiniative.bind(this);
+        //combined hero/monster function statesments
         this.SetConstAdj = SetConstAdj.bind(this);
         this.SetAcAdj = SetAcAdj.bind(this);
         this.SetDmgHitAdj = SetDmgHitAdj.bind(this);
-        
+        this.RollforIniative = RollforIniative.bind(this);
+        this.AttackRoll = AttackRoll.bind(this);
+        this.AttackTurn = AttackTurn.bind(this);
     }
 
     heroNameChange(event) {
@@ -91,42 +81,6 @@ class AttackSim extends React.Component {
 
     monsterNameSubmit(event) {
         this.setState ({monsterName: this.state.monsterNametext});
-    }
-
-    //initiative shows what character attacks first
-    rollforiniative() {
-        const heroinit = Math.floor((Math.random() * 10) + 1);
-        const monsterinit = Math.floor((Math.random() * 10) + 1);
-        
-        if (heroinit < monsterinit) {
-            this.setState ({
-                heroInitiative: 'First',
-                monsterInitiative: 'Second',
-                heroAttackVisible: true  //displays attack button
-            });
-        } else if (heroinit > monsterinit) {
-            this.setState ({
-                monsterInitiative: 'First',
-                heroInitiative: 'Second',
-                monsterAttackVisible: true //displays attack button
-            }); 
-        } else {
-            this.setState ({
-                heroInitiative: 'ReRoll',
-                monsterInitiative: 'ReRoll',
-                //hides attck buttons due to reroll
-                heroAttackVisible: false,  
-                monsterAttackVisible: false
-            });
-        };
-
-        //clears out the hit/miss comments and roll result since it is a new round.
-        this.setState ({
-            heroDidHit: '',
-            monsterDidHit: '',
-            heroRoll: 0,
-            monsterRoll: 0
-        });
     }
 
     render() {  
@@ -189,11 +143,11 @@ class AttackSim extends React.Component {
                         <AttackSection
                             AC = {this.state.heroAc}
                             HitAdj = {this.state.heroHitAdj}
-                            AttackRoll = {this.heroattackroll}
+                            AttackRoll = {this.AttackRoll}
                             RollTitle = "Hero Roll for Attack"
                             Roll = {this.state.heroRoll}
                             DidHit = {this.state.heroDidHit}
-                            NextTurn = {this.heroAttackTurn}
+                            NextTurn = {this.AttackTurn}
                             AttackTurn = {this.state.heroAttackVisible}
                         /> 
                     </div>
@@ -202,7 +156,7 @@ class AttackSim extends React.Component {
                             <Button 
                                 type="button" 
                                 className="m-5 w-50"  
-                                onClick={this.rollforiniative}>
+                                onClick={this.RollforIniative}>
                                 Roll for iniative
                             </Button>
                             <Row>
@@ -227,11 +181,11 @@ class AttackSim extends React.Component {
                         <AttackSection
                             AC = {this.state.monsterAc}
                             HitAdj = {this.state.monsterHitAdj}
-                            AttackRoll = {this.monsterattackroll}
+                            AttackRoll = {this.AttackRoll}
                             RollTitle = "Monster Roll for Attack"
                             Roll = {this.state.monsterRoll}
                             DidHit = {this.state.monsterDidHit}
-                            NextTurn = {this.monsterAttackTurn}
+                            NextTurn = {this.AttackTurn}
                             AttackTurn = {this.state.monsterAttackVisible}
                         />
                     </div>
