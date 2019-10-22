@@ -101,24 +101,3 @@ TvPage.getInitialProps = async function() {
 };
 
 export default TvPage;
-
-
-/*
-<Card style={{width: '250px'}}>
-              <CardTitle 
-                className="my-4 text-center w-100 px-2" 
-                style={TvpageStyle.Title}>
-                  <b><u>{show.name}</u></b>
-              </CardTitle>
-              <CardBody>
-                <CardImg
-                  style={TvpageStyle.Image} 
-                  src={show.image ? show.image.medium : noimage} 
-                  alt="image" 
-                />
-                <Link href={`/tvpost?id=${show.id}`}>
-                  <a className="btn btn-dark w-100">Select</a>
-                </Link>
-              </CardBody>
-            </Card>
-*/

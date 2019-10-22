@@ -10,8 +10,8 @@ import {
 } from 'reactstrap'
 import classnames from 'classnames';
 
-import { HomeCardStyle, DandDStyle, ImageStyles, TvpageStyle, Pointer, TabStyle
-} from './jsxstyles'
+import { HomeCardStyle, DandDStyle, ImageStyles, TvpageStyle, Pointer, TabStyle,
+    Tplist } from './jsxstyles'
 import Link from 'next/link'
 
 
@@ -91,6 +91,12 @@ export function TplistHeaderRow (props) {
             {props.children}
         </Row>
     )
+}
+
+export function InfoField(props) {
+    return (
+        <p style={Tplist.Info}>{props.children}</p>
+    );
 }
 
 /* *********************** 
@@ -652,43 +658,41 @@ export class NameForm extends React.Component {
 
     render() {
         return (
-            <Form >
-                <FormGroup className="mb-2 mr-sm-2 mb-sm-2 d-flex flex-wrap">
-                    <div className="m-2">
-                        <Label>
-                            <Button 
-                                className="btn text-white" 
-                                onClick={this.toggle}>
-                                    {this.state.collapse? 'Hide' : 'Change Name'}
-                            </Button>
-                        </Label>
-                    </div>
+            <Row className="my-3">
+                <Col xs="auto">
+                    <Button 
+                        className="btn text-white" 
+                        onClick={this.toggle}>
+                            {this.state.collapse? 'Hide' : 'Change Name'}
+                    </Button>
+                </Col>
+                <Col>
                     <Collapse isOpen={this.state.collapse}>
-                        <div className="d-flex flex-wrap">
-                            <div className="m-2">    
-                                <Input
-                                    type="text"
-                                    maxLength="20"
-                                    value={this.props.Value}
-                                    onChange={this.props.NameChange}
-                                    //Prevent enter key submit
-                                    onKeyPress={event => {
-                                        if (event.which === 13 /* Enter */) {
-                                        event.preventDefault();
-                                        }
-                                    }}
-                                /> 
-                            </div>
-                            <div className="m-2">
-                                <Button  
-                                    onClick={this.props.NameSubmit}>
-                                        Submit
-                                </Button>
-                            </div>
-                        </div>
+                        <Form inline>
+                            <Label className="mx-sm-2">
+                                Name:
+                            </Label>
+                            <Input 
+                                type="text"
+                                maxLength="20"
+                                value={this.props.Value}
+                                onChange={this.props.NameChange}
+                                //Prevent enter key submit
+                                onKeyPress={event => {
+                                    if (event.which === 13 /* Enter */) {
+                                    event.preventDefault();
+                                    }
+                                }}
+                            />
+                            <Button
+                                className="ml-sm-2"
+                                onClick={this.props.NameSubmit}>
+                                    Submit
+                            </Button>
+                        </Form>
                     </Collapse>
-                </FormGroup>
-            </Form> 
+                </Col>
+            </Row>
         );
     }
 }

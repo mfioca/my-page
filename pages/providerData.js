@@ -7,54 +7,37 @@ import { Networkinfo } from './provider_data/providerStats.js'
 
 
 
-class ProviderData extends React.Component {
-    constructor(props) {
-        super(props);
+function ProviderData() {
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            activeTab: '1'
-        };
-    }
+    return (
+        <Layout>
+            <CustomJumbo
+                Title="Provider List"
+                ImgUrl="noimage"
+                Caption1Style='lead text-center'
+                Caption1="this is data imported from local json files. It will recreate tracking
+                    spreadsheets I created at one of my previous jobs."
+                Caption2Style='text-center'
+                Caption2="All information has been randomly generated from a JSON Generator tool 
+                found online. This includes names, emails, phone numbers, addresses and dates."
+            />
+
+            <CustomTabs
+                Tab1Name = 'Network'
+                Tab2Name = 'Compliance'
+                Tab1Content = {
+                    <div>
+                        <Networkinfo />
+                        <NetworkList />
+                    </div>
+                }
+                Tab2Content = {
+                    <ProviderCompliance />
+                }
+            />
+        </Layout>
+    );
     
-    toggle(tab) {
-        if (this.state.activeTab !== tab) {
-            this.setState({
-            activeTab: tab
-            });
-        }
-    }
-
-    render() {
-        return (
-            <Layout>
-                <CustomJumbo
-                    Title="Provider List"
-                    ImgUrl="noimage"
-                    Caption1Style='lead text-center'
-                    Caption1="this is data imported from local json files. It will recreate tracking
-                        spreadsheets I created at one of my previous jobs."
-                    Caption2Style='text-center'
-                    Caption2="All information has been randomly generated from a JSON Generator tool 
-                    found online. This includes names, emails, phone numbers, addresses and dates."
-                />
-
-                <CustomTabs
-                    Tab1Name = 'Network'
-                    Tab2Name = 'Compliance'
-                    Tab1Content = {
-                        <div>
-                            <Networkinfo />
-                            <NetworkList />
-                        </div>
-                    }
-                    Tab2Content = {
-                        <ProviderCompliance />
-                    }
-                />
-            </Layout>
-        );
-    }
 }
 
 

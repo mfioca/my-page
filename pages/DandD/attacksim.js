@@ -130,7 +130,7 @@ class AttackSim extends React.Component {
                             <div className="text-center m-3">
                                 <Button onClick={this.setmonsterstats}>Set Attrubutes</Button>
                             </div>
-                            <NameForm 
+                            <NameForm
                                 Value = {this.state.value}
                                 NameChange = {this.monsterNameChange}
                                 NameSubmit = {this.monsterNameSubmit}
@@ -151,31 +151,29 @@ class AttackSim extends React.Component {
                             AttackTurn = {this.state.heroAttackVisible}
                         /> 
                     </div>
-                    <div className="bg-dark m-1 mb-2 p-0 col" xs="3">
-                        <div className="text-center m-0 p-0 text-white">
-                            <Button 
-                                type="button" 
-                                className="m-5 w-50"  
-                                onClick={this.RollforIniative}>
-                                Roll for iniative
-                            </Button>
-                            <Row>
-                                <Col className="w-50">
-                                    <AttackStatusDisplay
-                                        Name = {this.state.heroName}
-                                        Initiative = {this.state.heroInitiative}
-                                        HP = {this.state.heroHp}
-                                    />
-                                </Col>
-                                <Col>
-                                    <AttackStatusDisplay
-                                        Name = {this.state.monsterName}
-                                        Initiative = {this.state.monsterInitiative}
-                                        HP = {this.state.monsterHp}
-                                    />
-                                </Col>
-                            </Row>
-                        </div>
+                    <div className="bg-dark m-1 mb-2 p-0 col text-center text-white">
+                        <Button 
+                            type="button" 
+                            className="m-5 w-50"  
+                            onClick={this.RollforIniative}>
+                            Roll for iniative
+                        </Button>
+                        <Row>
+                            <Col className="w-50">
+                                <AttackStatusDisplay
+                                    Name = {this.state.heroName}
+                                    Initiative = {this.state.heroInitiative}
+                                    HP = {this.state.heroHp}
+                                />
+                            </Col>
+                            <Col>
+                                <AttackStatusDisplay
+                                    Name = {this.state.monsterName}
+                                    Initiative = {this.state.monsterInitiative}
+                                    HP = {this.state.monsterHp}
+                                />
+                            </Col>
+                        </Row>
                     </div>
                     <div className="bg-dark m-1 p-0 mb-2">
                         <AttackSection

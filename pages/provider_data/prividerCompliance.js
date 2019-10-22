@@ -1,13 +1,14 @@
 import React from 'react'
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem, 
     Row, Col, Table } from 'reactstrap'
-import { DateCheck, TplistHeaderRow, CustomTabs } from '../customComponents'
+import { DateCheck, TplistHeaderRow, CustomTabs, InfoField } from '../customComponents'
 import { ComplianceTable } from './providerStats'
 import { Tplist } from '../jsxstyles'
 
 var tpdata = require('./company.json');
 var vehdata = require('./vehicle.json');
 var drdata = require('./driver.json');
+
 
 
 function ProviderDropdown() {
@@ -53,33 +54,33 @@ function CompanyTab(props) {
         <div className="bg-light shadow">
             <p className="pt-4 pl-4"><b>Provider:</b> {TP.company}</p>
             <Row className="ml-3">
-                <Col>
-                    <p className="ml-2"><b>Address:</b></p>
-                    <p style={Tplist.Info}>{TP.address1}</p>
-                    <p style={Tplist.Info}>{TP.address2}</p>
+                <Col className="ml-2">
+                    <p><b>Address:</b></p>
+                    <InfoField>{TP.address1}</InfoField>
+                    <InfoField>{TP.address2}</InfoField>
                 </Col>
                 <Col>
                     <p className="ml-2"><b>Contact info:</b></p>
-                    <p style={Tplist.Info}><b>Phone:</b> {TP.phone}</p>
-                    <p style={Tplist.Info}><b>Email:</b> {TP.email}</p>
+                    <InfoField><b>Phone:</b> {TP.phone}</InfoField>
+                    <InfoField><b>Email:</b> {TP.email}</InfoField>
                 </Col>
             </Row>
             <p className="pt-4 pl-4"><b>Insurance:</b></p>
             <Row className=" ml-3">
                 <Col className="ml-2 mb-4">
-                    <p style={Tplist.Info}><b>Type:</b> {TP.gl.type}</p>
-                    <p style={Tplist.Info}><b>Company:</b> {TP.gl.company}</p>
-                    <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={TP.gl.end} /></p>
+                    <InfoField><b>Type:</b> {TP.gl.type}</InfoField>
+                    <InfoField><b>Company:</b> {TP.gl.company}</InfoField>
+                    <InfoField><b>Exp Date:</b> <DateCheck Date={TP.gl.end} /></InfoField>
                 </Col>
                 <Col className="ml-2">
-                    <p style={Tplist.Info}><b>Type:</b> {TP.veh.type}</p>
-                    <p style={Tplist.Info}><b>Company:</b> {TP.veh.company}</p>
-                    <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={TP.veh.end} /></p>
+                    <InfoField><b>Type:</b> {TP.veh.type}</InfoField>
+                    <InfoField><b>Company:</b> {TP.veh.company}</InfoField>
+                    <InfoField><b>Exp Date:</b> <DateCheck Date={TP.veh.end} /></InfoField>
                 </Col>
                 <Col className="ml-2">
-                    <p style={Tplist.Info}><b>Type:</b> {TP.wc.type}</p>
-                    <p style={Tplist.Info}><b>Company:</b> {TP.wc.company}</p>
-                    <p style={Tplist.Info}><b>Exp Date:</b> <DateCheck Date={TP.wc.end} /></p>
+                    <InfoField><b>Type:</b> {TP.wc.type}</InfoField>
+                    <InfoField><b>Company:</b> {TP.wc.company}</InfoField>
+                    <InfoField><b>Exp Date:</b> <DateCheck Date={TP.wc.end} /></InfoField>
                 </Col>  
             </Row>
         </div>

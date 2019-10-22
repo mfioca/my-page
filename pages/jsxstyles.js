@@ -107,6 +107,5 @@ export const Tplist = {
         marginTop: '0px',
         marginBottom: '0px'
     }
-
 }
 

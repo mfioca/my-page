@@ -15,9 +15,9 @@ const tvPost = props => {
   return (
     <Layout>
       <h1 className="text-center">the below content has been imported from 
-        <a href="https://www.tvmaze.com" target="_blank" rel="noopener noreferrer">
+        <NewTabLink Link="https://www.tvmaze.com" Title="TVMaze link">
           TVmaze.com
-        </a>
+        </NewTabLink>
       </h1>
       <TvMazePage>
         <div className="h3 m-3">
@@ -60,7 +60,7 @@ const tvPost = props => {
                     </TvPostInfoValue>
                   </tr>
                   <tr>
-                    <TvPostInfoLabel>Seasons</TvPostInfoLabel>
+                    <TvPostInfoLabel>Seasons:</TvPostInfoLabel>
                     <TvPostInfoValue>
                       {props.show._embedded.seasons.filter(seasons => seasons.number).length}
                     </TvPostInfoValue>
@@ -126,7 +126,7 @@ const tvPost = props => {
                     />
                   </div>
                 ))}
-            </LeftFlexWrapDiv>
+              </LeftFlexWrapDiv>
             /*end of Tab1Content*/
             }
             Tab2Content = {
@@ -237,37 +237,3 @@ tvPost.getInitialProps = async function(context) {
 };
 
 export default tvPost;
-
-
-/*
-<Card style={{height: '570px'}} className="m-2">
-                    <CardTitle 
-                      className="m-4 text-center" 
-                      style={TvpageStyle.Title} >
-                        {cast.person.name}
-                    </CardTitle>
-                    <CardBody>
-                        <CardImg 
-                          className="d-flex justify-content-center" 
-                          style={TvpageStyle.Image} 
-                          src={
-                            cast.person.image === null && noimage ||
-                            cast.character.image === null && cast.person.image.medium ||
-                            cast.character.image.medium
-                          } 
-                          alt="castimage" 
-                        />
-                      <CardSubtitle className="text-center my-2">
-                        <h4 style={TvpageStyle.Cast}>As: &nbsp;
-                          <small>{cast.character.name}</small>
-                        </h4>
-                      </CardSubtitle>
-                    </CardBody>
-                      <NewTabLink
-                        Style="btn btn-dark w-100 mt-3"
-                        Link={cast.person.url}
-                        Title="Actor Page">
-                          Actor Page
-                      </NewTabLink>
-                  </Card>
-*/
