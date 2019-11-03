@@ -9,7 +9,9 @@ var tpdata = require('./company.json');
 var vehdata = require('./vehicle.json');
 var drdata = require('./driver.json');
 
-
+/* ***************************** 
+*   Components for class       * 
+*******************************/
 
 function ProviderDropdown() {
     return (
@@ -222,6 +224,11 @@ function VehicleTab(props) {
         </div>
     );
 }
+
+
+/* ******************* 
+*   Main Class       * 
+*********************/
 
 class ProviderCompliance extends React.Component {
     constructor(props) {

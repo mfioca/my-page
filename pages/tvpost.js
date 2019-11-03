@@ -96,6 +96,7 @@ const tvPost = props => {
               </small>
             </h3>
           </Row>
+  {/*********Tabbed content**********/}
           <CustomTabs
             Tab1Name = 'Cast'
             Tab2Name = 'Episodes'

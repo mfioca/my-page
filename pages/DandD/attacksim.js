@@ -88,14 +88,13 @@ class AttackSim extends React.Component {
             <div>
                 <CenterFlexWrapDiv className="m-0 p-0"> 
                     <Row className="w-100">
+            {/**********Hero Character Sheet*********/}
                         <Col className="m-1 bg-dark text-white">
-                            <div>
-                               <h5 className="mt-5 ml-5"><b>Hero Name: </b>
-                                    <span className="text-info ml-5 h3">
-                                        {this.state.heroName}
-                                    </span>
-                                </h5>
-                            </div>
+                            <h5 className="mt-5 ml-5"><b>Hero Name: </b>
+                                <span className="text-info ml-5 h3">
+                                    {this.state.heroName}
+                                </span>
+                            </h5>
                             <CharacterSheet 
                                 Strength = {this.state.herostats.Str}
                                 Constitution = {this.state.herostats.Const}
@@ -113,6 +112,7 @@ class AttackSim extends React.Component {
                                 NameSubmit = {this.heroNameSubmit}
                             />
                         </Col>
+            {/**********Monster Character Sheet*********/}
                         <Col className="m-1 bg-dark text-white">
                             <h5 className="mt-5 ml-5"><b>Monster Name: </b>
                                 <span className="text-info ml-5 h3">
@@ -139,7 +139,8 @@ class AttackSim extends React.Component {
                     </Row>
                 </CenterFlexWrapDiv>
                 <CenterFlexWrapDiv className="m-0 p-0">
-                    <div  className="bg-dark m-1 p-0 mb-2">
+                    <div  className="bg-dark m-1 p-0 mb-2 col">
+            {/**********Hero Display Area*********/}
                         <AttackSection
                             AC = {this.state.heroAc}
                             HitAdj = {this.state.heroHitAdj}
@@ -153,7 +154,6 @@ class AttackSim extends React.Component {
                     </div>
                     <div className="bg-dark m-1 mb-2 p-0 col text-center text-white">
                         <Button 
-                            type="button" 
                             className="m-5 w-50"  
                             onClick={this.RollforIniative}>
                             Roll for iniative
@@ -175,7 +175,8 @@ class AttackSim extends React.Component {
                             </Col>
                         </Row>
                     </div>
-                    <div className="bg-dark m-1 p-0 mb-2">
+                    <div className="bg-dark m-1 p-0 mb-2 col">
+            {/**********Monster Display Area*********/}
                         <AttackSection
                             AC = {this.state.monsterAc}
                             HitAdj = {this.state.monsterHitAdj}

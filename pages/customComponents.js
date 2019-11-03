@@ -5,7 +5,7 @@
 import React, { useState } from 'react';
 import { 
     Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, 
-    Row, Col, Form, FormGroup, Label, Input, Button, Collapse, 
+    Row, Col, Form, Label, Input, Button, Collapse, 
     Table, Jumbotron, TabContent, TabPane, Nav, NavItem, NavLink
 } from 'reactstrap'
 import classnames from 'classnames';
@@ -18,6 +18,22 @@ import Link from 'next/link'
 /* *********************************
 *   Export styled components       * 
 ***********************************/
+
+export function BackgroundDanger(props) {
+    return (
+        <span className="bg-danger text-white">
+            {props.children}
+        </span>
+    );
+}
+
+export function BackgroundWarning(props) {
+    return (
+        <span className="bg-warning text-white">
+            {props.children}
+        </span>
+    );
+}
 
 export function NewTabLink(props){
     return (
@@ -93,6 +109,7 @@ export function TplistHeaderRow (props) {
     )
 }
 
+//used in providercompliance
 export function InfoField(props) {
     return (
         <p style={Tplist.Info}>{props.children}</p>
@@ -155,11 +172,11 @@ export function DateCheck(props) {
     
     if (date < "2019-09-22") {
         return (
-            <span className="bg-danger text-white">{date}</span>
+            <BackgroundDanger>{date}</BackgroundDanger>
         )
     } else if (date < "2019-10-22" && date > "2019-09-22") {
         return (
-            <span className="bg-warning text-white">{date}</span>
+            <BackgroundWarning>{date}</BackgroundWarning>
         )
     } else {
         return (
@@ -189,6 +206,7 @@ export function TvMazeCard(props) {
                 {props.SubTitle}
             </h4>
             </CardSubtitle>
+            <CardText>{props.Description}</CardText>
         </CardBody>
             {props.Link}
         </Card>
@@ -426,7 +444,7 @@ export class CharacterSheet extends React.Component {
 
         function DandDTableValue(props) {
             return (
-                <td className="text-white text-left h4">
+                <td style={{width: '100px'}} className="text-white text-left h4">
                     {props.children}
                 </td>
             );
@@ -614,7 +632,7 @@ export class AttackStatusDisplay extends React.Component {
                 <div className="text-center pt-4">
                     <div className="p-3">
                         <h4>iniative:</h4>
-                        <h4 className="text-info">
+                        <h4>
                             {this.props.Initiative != "Second" && 
                                 <span className="text-info">
                                     {this.props.Initiative}
@@ -660,8 +678,7 @@ export class NameForm extends React.Component {
         return (
             <Row className="my-3">
                 <Col xs="auto">
-                    <Button 
-                        className="btn text-white" 
+                    <Button
                         onClick={this.toggle}>
                             {this.state.collapse? 'Hide' : 'Change Name'}
                     </Button>

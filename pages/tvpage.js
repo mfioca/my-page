@@ -9,9 +9,6 @@ import { NewTabLink, LeftFlexWrapDiv, TvMazePage, TvMazeCard } from './customCom
 const noimage = '/static/images/no-img.png';
 var Search = '';
 
-
-
-
 class Searchbar extends React.Component {
   constructor(props) {
     super(props);

@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { HomeCard, CustomJumbo, CenterFlexWrapDiv} from './customComponents'
+import { HomeCard, CustomJumbo, CenterFlexWrapDiv } from './customComponents'
 
 
 function Home() {
@@ -27,7 +27,7 @@ function Home() {
                             skin desktop theme based on the Bethesda Game 'The Elder Scrolls V: Skyrim'."
                         Link="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
                         ButtonTitle="Deviant"
-                    />
+                   />
                 </div>
                 <div className="text-center m-3">
                     <HomeCard 
