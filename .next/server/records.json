@@ -3,16 +3,14 @@
     "byIdentifier": {
       "multi private-next-pages/DandDpage.js": 0,
       "multi private-next-pages/about.js": 1,
-      "multi private-next-pages/customComponents.js": 2,
-      "multi private-next-pages/index.js": 3,
-      "multi private-next-pages/jsxstyles.js": 4,
-      "multi private-next-pages/providerData.js": 5,
-      "multi private-next-pages/provider_data/networkTable.js": 6,
-      "multi private-next-pages/tvpage.js": 7,
-      "multi private-next-pages/tvpost.js": 8,
-      "multi next/dist/pages/_app": 9,
-      "multi next/dist/pages/_error": 10,
-      "multi next/dist/pages/_document": 11
+      "multi private-next-pages/index.js": 2,
+      "multi private-next-pages/providerData.js": 3,
+      "multi private-next-pages/provider_data/networkTable.js": 4,
+      "multi private-next-pages/tvpage.js": 5,
+      "multi private-next-pages/tvpost.js": 6,
+      "multi next/dist/pages/_app": 7,
+      "multi next/dist/pages/_error": 8,
+      "multi next/dist/pages/_document": 9
     },
     "usedIds": {
       "0": 0,
@@ -24,52 +22,38 @@
       "6": 6,
       "7": 7,
       "8": 8,
-      "9": 9,
-      "10": 10,
-      "11": 11
+      "9": 9
     }
   },
   "chunks": {
     "byName": {
       "init-server.js": 0,
       "on-error-server.js": 1,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\DandDpage.js": 2,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\_app.js": 3,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\_document.js": 4,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\_error.js": 5,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\about.js": 6,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\customComponents.js": 7,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\index.js": 8,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\jsxstyles.js": 9,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\providerData.js": 10,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\provider_data\\networkTable.js": 11,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\tvpage.js": 12,
-      "static\\pRMMyVgoHoZvLLee4lE3O\\pages\\tvpost.js": 13,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\DandDpage.js": 14,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\_app.js": 15,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\_document.js": 16,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\_error.js": 17,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\about.js": 18,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\index.js": 19,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\providerData.js": 20,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\provider_data\\networkTable.js": 21,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\tvpage.js": 22,
-      "static\\_IyVIx8YmEhcq8V_oWGqO\\pages\\tvpost.js": 23
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\DandDpage.js": 2,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\_app.js": 3,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\_document.js": 4,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\_error.js": 5,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\about.js": 6,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\index.js": 7,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\providerData.js": 8,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\provider_data\\networkTable.js": 9,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\tvpage.js": 10,
+      "static\\L0bGCldzCnd7tQIKzIsIZ\\pages\\tvpost.js": 11
     },
     "bySource": {},
     "usedIds": [
       0,
       1,
-      14,
-      15,
-      16,
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23
+      10,
+      11,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
     ]
   }
 }
