@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[26],{iOTL:function(n,o,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/customComponents",function(){return w("TYO+")}])}},[["iOTL",1,0]]]);

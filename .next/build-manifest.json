@@ -1,104 +1,32 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_5bb4e0a5d1efbd89e3a2.js",
+    "static/development/dll/dll_5bb4e0a5d1efbd89e3a2.js.map"
+  ],
   "pages": {
     "/": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/DandD/attacksim": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/DandD/mainfunctions": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/DandDpage": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ],
     "/_app": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_error": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
     ],
     "/_polyfills": [
-      "static/runtime/polyfills-4128d6e314264e09aa7e.js"
-    ],
-    "/about": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/customComponents": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
+      "static/runtime/polyfills.js",
+      "static/runtime/polyfills.js.map"
     ],
     "/index": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/jsxstyles": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/providerData": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/provider_data/networkTable": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/provider_data/prividerCompliance": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/provider_data/providerStats": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/tvpage": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
-    ],
-    "/tvpost": [
-      "static/runtime/webpack-4b444dab214c6491079c.js",
-      "static/chunks/commons.9325397de66b141aad05.js",
-      "static/css/styles.5d004353.chunk.css",
-      "static/chunks/styles.8406d2b90893bd0370f1.js",
-      "static/runtime/main-726057ae0b516ecc2025.js"
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
     ]
   }
 }
