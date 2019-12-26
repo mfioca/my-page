@@ -4,7 +4,7 @@ import { Row, Col, Table } from 'reactstrap'
 import ReactTable from "react-table"
 import "react-table/react-table.css"
 import { TvPostInfoLabel, TvPostInfoValue, NewTabLink, 
-  LeftFlexWrapDiv, TvMazePage, CustomTabs, TvMazeCard } from './customComponents'
+  LeftFlexWrapDiv, TvMazePage, CustomTabs, TvMazeCard } from '../components/customComponents'
 import fetch from 'isomorphic-unfetch'
 
 const noimage = '/static/images/no-img.png'

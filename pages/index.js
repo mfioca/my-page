@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout.js'
-import { HomeCard, CustomJumbo, CenterFlexWrapDiv } from './customComponents'
+import { HomeCard, CustomJumbo, CenterFlexWrapDiv } from '../components/customComponents'
 
 
 function Home() {

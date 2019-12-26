@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { AboutMedia, ThreeColumnCard, CustomJumbo, NewTabLink } from './customComponents'
+import { AboutMedia, ThreeColumnCard, CustomJumbo, NewTabLink } from '../components/customComponents'
 import { Progress, Col } from 'reactstrap'
 
 function Aboutpage() {

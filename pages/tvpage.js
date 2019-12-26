@@ -3,7 +3,7 @@ import { Form, Label, Input } from 'reactstrap'
 import Layout from '../components/layout'
 import Link from 'next/link'
 import fetch from 'isomorphic-unfetch'
-import { NewTabLink, LeftFlexWrapDiv, TvMazePage, TvMazeCard } from './customComponents'
+import { NewTabLink, LeftFlexWrapDiv, TvMazePage, TvMazeCard } from '../components/customComponents'
 
 
 const noimage = '/static/images/no-img.png';
