@@ -120,52 +120,6 @@ export function InfoField(props) {
 *   Export functions     * 
 **************************/
 
-//used in providerstats
-export function NetworkDataFilter(props) {
-    let Fone = props.Filter1;
-    let Vone = props.Value1;
-    let Ftwo = props.Filter2;
-    let Vtwo = props.Value2;
-    let Data = props.Info;
-    
-    return (
-        <span>{Data.filter(Data => Data[Fone] === Vone && Data[Ftwo] === Vtwo).length}</span>
-    );
-}
-
-//used in providerstats
-export function ComplDataFilter(props) {
-    const Data = props.Info
-    const Fone = props.Filter1;
-    const Fonekey = props.Filter1child;
-    const Vone = props.Value1;
-
-    return (
-        <span>{Data.filter(Data => Data[Fone][Fonekey] < Vone).length}</span>
-    )
-}
-
-//used in providerstats
-export function PercentCalc(props) {
-    const Data = props.Info
-    const Fone = props.Filter1;
-    const Fonekey = props.Filter1child;
-    const Vone = props.Value1;
-    const Divider = props.Divider;
-
-    return (
-        <span>
-            {
-                Math.floor(
-                    (
-                        Data.filter(Data => Data[Fone][Fonekey] < Vone).length
-                    ) / Divider * 100
-                ) + '%'
-            }
-        </span>
-    )
-}
-
 //used in providerCompliance
 export function DateCheck(props) {
     var date = props.Date;

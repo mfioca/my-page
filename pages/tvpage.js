@@ -72,8 +72,7 @@ const TvPage = props => (
               ImgSrc={show.image ? show.image.medium : noimage}
               ImgAlt="image"
               Link={
-                  <a href={`/tvpost?id=${show.id}`} className="btn btn-dark w-100">Select</a>
-                
+                <a href={`/tvpost?id=${show.id}`} className="btn btn-dark w-100">Select</a>
               }
             />
           </div>
