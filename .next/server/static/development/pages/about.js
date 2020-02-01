@@ -88,389 +88,10 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 6);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ({
-
-/***/ "./components/DandDfunctions.js":
-/*!**************************************!*\
-  !*** ./components/DandDfunctions.js ***!
-  \**************************************/
-/*! exports provided: SetConstAdj, SetAcAdj, SetDmgHitAdj, setherostats, setmonsterstats, RollforIniative, AttackRoll, AttackTurn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetConstAdj", function() { return SetConstAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetAcAdj", function() { return SetAcAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SetDmgHitAdj", function() { return SetDmgHitAdj; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setherostats", function() { return setherostats; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setmonsterstats", function() { return setmonsterstats; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RollforIniative", function() { return RollforIniative; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AttackRoll", function() { return AttackRoll; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AttackTurn", function() { return AttackTurn; });
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/parse-int */ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0__);
-
-//sets hitpoints based on constitution stat number.
-function SetConstAdj(constitution) {
-  if (constitution == 1) {
-    return -3;
-  }
-
-  if (constitution == 2 || constitution == 3) {
-    return -2;
-  }
-
-  if (constitution >= 4 && constitution <= 6) {
-    return -1;
-  }
-
-  if (constitution >= 7 && constitution <= 14) {
-    return 0;
-  }
-
-  if (constitution == 15) {
-    return 1;
-  }
-
-  if (constitution == 16) {
-    return 2;
-  }
-
-  if (constitution == 17) {
-    return 3;
-  }
-
-  if (constitution == 18) {
-    return 4;
-  }
-
-  if (constitution == 19) {
-    return 5;
-  }
-
-  if (constitution == 20) {
-    return 6;
-  }
-}
-; //sets Armorclass based on dexterity stat number.
-
-function SetAcAdj(dexterity) {
-  if (dexterity == 1 || dexterity == 2) {
-    return -5;
-  }
-
-  if (dexterity == 3) {
-    return -4;
-  }
-
-  if (dexterity == 4) {
-    return -3;
-  }
-
-  if (dexterity == 5) {
-    return -2;
-  }
-
-  if (dexterity == 6) {
-    return -1;
-  }
-
-  if (dexterity >= 7 && dexterity <= 14) {
-    return 0;
-  }
-
-  if (dexterity == 15) {
-    return 1;
-  }
-
-  if (dexterity == 16) {
-    return 2;
-  }
-
-  if (dexterity == 17) {
-    return 3;
-  }
-
-  if (dexterity == 18 || dexterity == 19) {
-    return 4;
-  }
-
-  if (dexterity == 20) {
-    return 5;
-  }
-} //sets damage and hit adjustment based on strength stat number.
-
-function SetDmgHitAdj(strength) {
-  if (strength == 1) {
-    return -4;
-  }
-
-  if (strength == 2 || strength == 3) {
-    return -3;
-  }
-
-  if (strength == 4 || strength == 5) {
-    return -2;
-  }
-
-  if (strength == 6 || strength == 7) {
-    return -1;
-  }
-
-  if (strength >= 8 && strength <= 16) {
-    return 0;
-  }
-
-  if (strength == 17) {
-    return 1;
-  }
-
-  if (strength == 18) {
-    return 2;
-  }
-
-  if (strength == 19) {
-    return 3;
-  }
-
-  if (strength == 20) {
-    return 4;
-  }
-}
-/* ************************
-*   Stat functions        * 
-**************************/
-//sets stats including base role 1-20 than applies above functions.
-
-function setherostats() {
-  //performs a 1-20 roll for every item in the "herostats" object/state
-  for (let Stat in this.state.herostats) {
-    this.state.herostats[Stat] = Math.floor(Math.random() * 20 + 1);
-  }
-
-  ;
-  this.setState({
-    //sets adjusted items based on herostats numbers in the set..adj functions
-    heroHp: this.state.base.Hp + this.SetConstAdj(this.state.herostats.Const),
-    heroAc: this.state.base.ArmorClass + this.SetAcAdj(this.state.herostats.Dext),
-    heroDmg: this.state.base.Damage + this.SetDmgHitAdj(this.state.herostats.Str),
-    heroHitAdj: this.SetDmgHitAdj(this.state.herostats.Str)
-  });
-} //sets stats including base role 1-20 than applies above functions.
-
-function setmonsterstats() {
-  //performs a 1-20 roll for every item in the "monsterstats" object/state
-  for (let key in this.state.monsterstats) {
-    this.state.monsterstats[key] = Math.floor(Math.random() * 20 + 1);
-  }
-
-  ;
-  this.setState({
-    //sets adjusted items based on monsterstats numbers in the set..adj functions
-    monsterHp: this.state.base.Hp + this.SetConstAdj(this.state.monsterstats.Const),
-    monsterAc: this.state.base.ArmorClass + this.SetAcAdj(this.state.monsterstats.Dext),
-    monsterDmg: this.state.base.Damage + this.SetDmgHitAdj(this.state.monsterstats.Str),
-    monsterHitAdj: this.SetDmgHitAdj(this.state.monsterstats.Str)
-  });
-}
-/* ***********************
-*    Attack functions    * 
-*************************/
-//initiative shows what character attacks first
-
-function RollforIniative() {
-  const heroinit = Math.floor(Math.random() * 10 + 1);
-  const monsterinit = Math.floor(Math.random() * 10 + 1);
-
-  if (heroinit < monsterinit) {
-    this.setState({
-      heroInitiative: 'First',
-      monsterInitiative: 'Second',
-      heroAttackVisible: true,
-      //displays attack button
-      initiativeButtonVisible: false
-    });
-  } else if (heroinit > monsterinit) {
-    this.setState({
-      monsterInitiative: 'First',
-      heroInitiative: 'Second',
-      monsterAttackVisible: true,
-      //displays attack button
-      initiativeButtonVisible: false
-    });
-  } else {
-    this.setState({
-      heroInitiative: 'ReRoll',
-      monsterInitiative: 'ReRoll',
-      //hides attck buttons due to reroll
-      heroAttackVisible: false,
-      monsterAttackVisible: false
-    });
-  }
-
-  ; //clears out the hit/miss comments and roll result since it is a new round.
-
-  this.setState({
-    heroDidHit: '',
-    monsterDidHit: '',
-    heroRoll: 0,
-    monsterRoll: 0
-  });
-}
-/* determins if attack is successful depending on attack turn(set by attackvisible state).  adjusts for
-armor class and hit adjustment.  on successful attack role, applies damage
-to hp and if hp reaches zero alerts that character is dead */
-
-function AttackRoll() {
-  if (this.state.heroAttackVisible === true) {
-    let attackroll = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(Math.random() * 20 + 1);
-
-    let adjattackroll = attackroll + this.state.heroHitAdj;
-    let critstrike = this.state.heroDmg * 2;
-
-    if (attackroll < 20 && adjattackroll >= this.state.monsterAc) {
-      this.setState({
-        heroDidHit: 'Hit',
-        heroRoll: adjattackroll
-      }); //performs check to see if the monster hp after hero damange is 0 or lower
-
-      if (this.state.monsterHp - this.state.heroDmg <= 0) {
-        this.setState({
-          monsterHp: 'Dead',
-          heroRoll: adjattackroll // if yes, monster is dead
-
-        });
-      } else {
-        this.setState({
-          monsterHp: this.state.monsterHp - this.state.heroDmg
-        });
-      }
-    } else if (attackroll === 20) {
-      this.setState({
-        heroDidHit: 'Hit',
-        heroRoll: 'Crit Strike'
-      });
-
-      if (this.state.monsterHp - critstrike <= 0) {
-        this.setState({
-          monsterHp: 'Dead',
-          heroRoll: 'Crit Strike' // if yes, monster is dead
-
-        });
-      } else {
-        this.setState({
-          monsterHp: this.state.monsterHp - critstrike
-        });
-      }
-    } else {
-      this.setState({
-        heroDidHit: 'Miss',
-        heroRoll: adjattackroll
-      });
-    }
-
-    ;
-  }
-
-  if (this.state.monsterAttackVisible === true) {
-    let attackroll = _babel_runtime_corejs2_core_js_parse_int__WEBPACK_IMPORTED_MODULE_0___default()(Math.random() * 20 + 1);
-
-    let adjattackroll = attackroll + this.state.monsterHitAdj;
-    let critstrike = this.state.monsterDmg * 2;
-
-    if (attackroll < 20 && adjattackroll >= this.state.heroAc) {
-      this.setState({
-        monsterDidHit: 'Hit',
-        monsterRoll: adjattackroll
-      }); //performs check to see if the hero hp after monster damange is 0 or lower
-
-      if (this.state.heroHp - this.state.monsterDmg <= 0) {
-        this.setState({
-          heroHp: 'Dead',
-          monsterRoll: adjattackroll // if yes, hero is dead
-
-        });
-      } else {
-        //if no, sets the herohp state to reflect new damage
-        this.setState({
-          heroHp: this.state.heroHp - this.state.monsterDmg
-        });
-      }
-    } else if (attackroll === 20) {
-      this.setState({
-        monsterDidHit: 'Hit',
-        monsterRoll: 'Crit Strike'
-      });
-
-      if (this.state.heroHp - critstrike <= 0) {
-        this.setState({
-          heroHp: 'Dead',
-          monsterRoll: 'Crit Strike' // if yes, monster is dead
-
-        });
-      } else {
-        this.setState({
-          heroHp: this.state.heroHp - critstrike
-        });
-      }
-    } else {
-      this.setState({
-        monsterDidHit: 'Miss',
-        monsterRoll: adjattackroll
-      });
-    }
-
-    ;
-  }
-
-  this.AttackTurn();
-}
-/*function to determine where and when the attack button should be displayed based on initiative
-setting. Function is called when the attack button is pressed in attackSection (Attackbutton() ) */
-
-function AttackTurn() {
-  if (this.state.heroAttackVisible === true) {
-    if (this.state.monsterHp === 'Dead' || this.state.heroInitiative === 'Second') {
-      this.setState(state => ({
-        heroAttackVisible: !state.heroAttackVisible
-      }));
-      this.setState({
-        initiativeButtonVisible: true
-      });
-    } else {
-      //if hero goes first, makes sure attack button on monster area is hidden 
-      //and displays attack button for hero.
-      this.setState(state => ({
-        monsterAttackVisible: !state.monsterAttackVisible,
-        heroAttackVisible: !state.heroAttackVisible
-      }));
-    }
-  }
-
-  if (this.state.monsterAttackVisible === true) {
-    if (this.state.heroHp === 'Dead' || this.state.monsterInitiative === 'Second') {
-      this.setState(state => ({
-        monsterAttackVisible: !state.monsterAttackVisible
-      }));
-      this.setState({
-        initiativeButtonVisible: true
-      });
-    } else {
-      this.setState(state => ( //if monster goes first, makes sure attack button on hero area is hidden 
-      //and displays attack button for monster.
-      {
-        monsterAttackVisible: !state.monsterAttackVisible,
-        heroAttackVisible: !state.heroAttackVisible
-      }));
-    }
-  }
-}
-;
-
-/***/ }),
 
 /***/ "./components/Footer.js":
 /*!******************************!*\
@@ -2438,17 +2059,6 @@ module.exports = __webpack_require__(/*! core-js/library/fn/object/get-own-prope
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(/*! core-js/library/fn/object/keys */ "core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime-corejs2/core-js/parse-int.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime-corejs2/core-js/parse-int.js ***!
-  \******************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! core-js/library/fn/parse-int */ "core-js/library/fn/parse-int");
 
 /***/ }),
 
@@ -4965,10 +4575,10 @@ module.exports = ReactPropTypesSecret;
 
 /***/ }),
 
-/***/ "./pages/DandDpage.js":
-/*!****************************!*\
-  !*** ./pages/DandDpage.js ***!
-  \****************************/
+/***/ "./pages/about.js":
+/*!************************!*\
+  !*** ./pages/about.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -4976,452 +4586,319 @@ module.exports = ReactPropTypesSecret;
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout.js */ "./components/layout.js");
-/* harmony import */ var _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/DandDfunctions */ "./components/DandDfunctions.js");
-/* harmony import */ var _components_customComponents__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/customComponents */ "./components/customComponents.js");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! reactstrap */ "reactstrap");
-/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\DandDpage.js";
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout.js");
+/* harmony import */ var _components_customComponents__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/customComponents */ "./components/customComponents.js");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! reactstrap */ "reactstrap");
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(reactstrap__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\Users\\Mark\\Desktop\\newtest\\my-page\\pages\\about.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 
 
 
-
-class AttackSim extends react__WEBPACK_IMPORTED_MODULE_0___default.a.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      base: {
-        Hp: 50,
-        ArmorClass: 10,
-        Damage: 10
-      },
-      herostats: {
-        Str: 0,
-        Const: 0,
-        Dext: 0
-      },
-      monsterstats: {
-        Str: 0,
-        Const: 0,
-        Dext: 0
-      },
-      heroHp: 0,
-      heroAc: 0,
-      heroDmg: 0,
-      heroHitAdj: 0,
-      heroNametext: '',
-      heroName: 'Hero',
-      heroInitiative: 0,
-      heroAttackVisible: false,
-      heroRoll: 0,
-      heroDidHit: '',
-      monsterHp: 0,
-      monsterAc: 0,
-      monsterDmg: 0,
-      monsterHitAdj: 0,
-      monsterNametext: '',
-      monsterName: 'Monster',
-      monsterInitiative: 0,
-      monsterAttackVisible: false,
-      monsterRoll: 0,
-      monsterDidHit: '',
-      initiativeButtonVisible: true
-    }; //Hero bind function statements
-
-    this.setherostats = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["setherostats"].bind(this);
-    this.heroNameChange = this.heroNameChange.bind(this);
-    this.heroNameSubmit = this.heroNameSubmit.bind(this); //monster bind function statements
-
-    this.setmonsterstats = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["setmonsterstats"].bind(this);
-    this.monsterNameChange = this.monsterNameChange.bind(this);
-    this.monsterNameSubmit = this.monsterNameSubmit.bind(this); //combined hero/monster function statesments
-
-    this.SetConstAdj = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["SetConstAdj"].bind(this);
-    this.SetAcAdj = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["SetAcAdj"].bind(this);
-    this.SetDmgHitAdj = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["SetDmgHitAdj"].bind(this);
-    this.RollforIniative = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["RollforIniative"].bind(this);
-    this.AttackRoll = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["AttackRoll"].bind(this);
-    this.AttackTurn = _components_DandDfunctions__WEBPACK_IMPORTED_MODULE_2__["AttackTurn"].bind(this);
-  }
-
-  heroNameChange(event) {
-    this.setState({
-      heroNametext: event.target.value
-    });
-  }
-
-  heroNameSubmit(event) {
-    this.setState({
-      heroName: this.state.heroNametext
-    });
-  }
-
-  monsterNameChange(event) {
-    this.setState({
-      monsterNametext: event.target.value
-    });
-  }
-
-  monsterNameSubmit(event) {
-    this.setState({
-      monsterName: this.state.monsterNametext
-    });
-  }
-
-  IntButton() {
-    if (this.state.initiativeButtonVisible === true) {
-      return __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-        className: "m-5 w-50",
-        onClick: this.RollforIniative,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 95
-        },
-        __self: this
-      }, "Roll for iniative");
-    } else {
-      return __jsx("h4", {
-        className: "text-white m-5 text-center",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 103
-        },
-        __self: this
-      }, "Round in Progress");
-    }
-
-    ;
-  }
-
-  render() {
-    return __jsx("div", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 110
-      },
-      __self: this
-    }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["CenterFlexWrapDiv"], {
-      className: "m-0 p-0",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 111
-      },
-      __self: this
-    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], {
-      className: "w-100",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 112
-      },
-      __self: this
-    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-      className: "m-1 bg-dark text-white",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 114
-      },
-      __self: this
-    }, __jsx("h5", {
-      className: "mt-5 ml-5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 115
-      },
-      __self: this
-    }, __jsx("b", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 115
-      },
-      __self: this
-    }, "Hero Name: "), __jsx("span", {
-      className: "text-info ml-5 h3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 116
-      },
-      __self: this
-    }, this.state.heroName)), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["CharacterSheet"], {
-      Strength: this.state.herostats.Str,
-      Constitution: this.state.herostats.Const,
-      Dexterity: this.state.herostats.Dext,
-      Hitpoints: this.state.heroHp,
-      Damage: this.state.heroDmg,
-      ImgUrl: "../static/images/hero.png",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 120
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "text-center m-3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 128
-      },
-      __self: this
-    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-      onClick: this.setherostats,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 129
-      },
-      __self: this
-    }, "Set Attrubutes")), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["NameForm"], {
-      Value: this.state.value,
-      NameChange: this.heroNameChange,
-      NameSubmit: this.heroNameSubmit,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 131
-      },
-      __self: this
-    })), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-      className: "m-1 bg-dark text-white",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 138
-      },
-      __self: this
-    }, __jsx("h5", {
-      className: "mt-5 ml-5",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 139
-      },
-      __self: this
-    }, __jsx("b", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 139
-      },
-      __self: this
-    }, "Monster Name: "), __jsx("span", {
-      className: "text-info ml-5 h3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 140
-      },
-      __self: this
-    }, this.state.monsterName)), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["CharacterSheet"], {
-      Strength: this.state.monsterstats.Str,
-      Constitution: this.state.monsterstats.Const,
-      Dexterity: this.state.monsterstats.Dext,
-      Hitpoints: this.state.monsterHp,
-      Damage: this.state.monsterDmg,
-      ImgUrl: "../static/images/monster.png",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 144
-      },
-      __self: this
-    }), __jsx("div", {
-      className: "text-center m-3",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 152
-      },
-      __self: this
-    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Button"], {
-      onClick: this.setmonsterstats,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 153
-      },
-      __self: this
-    }, "Set Attrubutes")), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["NameForm"], {
-      Value: this.state.value,
-      NameChange: this.monsterNameChange,
-      NameSubmit: this.monsterNameSubmit,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 155
-      },
-      __self: this
-    })))), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["CenterFlexWrapDiv"], {
-      className: "m-0 p-0",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 163
-      },
-      __self: this
-    }, __jsx("div", {
-      className: "bg-dark m-1 p-0 mb-2 col",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 164
-      },
-      __self: this
-    }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["AttackSection"], {
-      AC: this.state.heroAc,
-      HitAdj: this.state.heroHitAdj,
-      AttackRoll: this.AttackRoll,
-      RollTitle: "Hero Roll for Attack",
-      Roll: this.state.heroRoll,
-      DidHit: this.state.heroDidHit,
-      NextTurn: this.AttackTurn,
-      AttackTurn: this.state.heroAttackVisible,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 166
-      },
-      __self: this
-    })), __jsx("div", {
-      className: "bg-dark m-1 mb-2 p-0 col text-center text-white",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 177
-      },
-      __self: this
-    }, this.IntButton(), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Row"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 179
-      },
-      __self: this
-    }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-      className: "w-50",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 180
-      },
-      __self: this
-    }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["AttackStatusDisplay"], {
-      Name: this.state.heroName,
-      Initiative: this.state.heroInitiative,
-      HP: this.state.heroHp,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 181
-      },
-      __self: this
-    })), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_4__["Col"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 187
-      },
-      __self: this
-    }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["AttackStatusDisplay"], {
-      Name: this.state.monsterName,
-      Initiative: this.state.monsterInitiative,
-      HP: this.state.monsterHp,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 188
-      },
-      __self: this
-    })))), __jsx("div", {
-      className: "bg-dark m-1 p-0 mb-2 col",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 196
-      },
-      __self: this
-    }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_3__["AttackSection"], {
-      AC: this.state.monsterAc,
-      HitAdj: this.state.monsterHitAdj,
-      AttackRoll: this.AttackRoll,
-      RollTitle: "Monster Roll for Attack",
-      Roll: this.state.monsterRoll,
-      DidHit: this.state.monsterDidHit,
-      NextTurn: this.AttackTurn,
-      AttackTurn: this.state.monsterAttackVisible,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 198
-      },
-      __self: this
-    }))));
-  }
-
-}
-
-function DandD() {
-  return __jsx(_components_layout_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+function Aboutpage() {
+  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 218
+      lineNumber: 8
     },
     __self: this
-  }, __jsx("div", {
-    className: "ml-5",
+  }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["AboutMedia"], {
+    Class: "text-center bg-info text-white p-3",
+    Align: "Right",
+    ImgUrl: "../static/images/avatar.jpg",
+    Title: "About",
+    Description: __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "Movie, sci-fi and over all tech geek that always seeks out new and interesting things to experience and learn.  I strive to keep an open mind on everything because you never know what kind of hidden truths await those who pay attention. You can find those truths in the comedy writings of Douglas Adams to J. R. R. Tolkien and all the way to the historical facts behind the theories expressed in the TV show \u201CAncient Aliens\u201D."),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 219
+      lineNumber: 9
+    },
+    __self: this
+  }), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["AboutMedia"], {
+    Class: "text-center bg-info text-white p-3",
+    Align: "Left",
+    ImgUrl: "../static/images/building.png",
+    Title: "Background",
+    Description: __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, "I have lived in Pennsylvania, Alaska and Georgia.  While in Alaska, I expanded my experiences when I joined the local Paranormal Investigation group I.O.P.I.A.  I have investigated different places and have seen things that are unforgetable.  Those experiences helped me expand my knowledge in movie, photo and audio editing and new knowledge and points of views about the world."),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["AboutMedia"], {
+    Class: "text-center bg-info text-white p-3",
+    Align: "Right",
+    ImgUrl: "../static/images/rainmeter.png",
+    Title: "Computers and UI design",
+    Description: __jsx("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 37
+      },
+      __self: this
+    }, "I first developed my interested in UI design when convirting back to a windows machine from a mac. I did not like how windows was set up and strived to make my desktop look and act more like OSX. I learned about a program called Rainmeter and expanded my knowledge in programing developing my first full custom UI theme through this program.  My Rainmeter theme is available", __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["NewTabLink"], {
+      Link: "https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185",
+      Style: "text-body",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41
+      },
+      __self: this
+    }, " here "), " to download through deviantart."),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["CustomJumbo"], {
+    Title: "Professional Experience",
+    ImgUrl: "noimage",
+    Caption1Style: "lead text-center",
+    Caption2Style: "text-center",
+    Caption1: "Dedicated and motivated professional looking to apply my accumulated experience in \r technical writing and training in mixed customer relations roles and into an IT based career. \r Expertise in customer service, communication, analytical thinking and problem solving to achieve goals.",
+    Caption2: "COMPUTER SKILLS: Windows and OSX, Microsoft Office with advanced excel functions and\r macro scripting, Lotus Notes, Maximo Enterprise Suite, Audacity, Photoshop, \r Gimp, Eclipse, Notepad++, Visual Studio Code, working knowledge of HTML, CSS and SQL,\r beginner knowledge in REACT and Java/JavaScript.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }), __jsx("div", {
+    className: "text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 58
     },
     __self: this
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 220
+      lineNumber: 59
     },
     __self: this
-  }, "Dungeons and Dragons attack simulation"), __jsx("h4", {
+  }, __jsx("u", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 221
+      lineNumber: 59
     },
     __self: this
-  }, "Calculations are based on SE 2 rules from late 80's and early 90's."), __jsx("ol", {
+  }, "Core Skills"))), __jsx("div", {
+    className: "d-flex flex-wrap m-1 justify-content-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 61
     },
     __self: this
-  }, __jsx("b", {
+  }, __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    xs: "5",
+    className: "m-1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 222
+      lineNumber: 62
     },
     __self: this
-  }, "Instructions:"), __jsx("li", {
+  }, __jsx("div", {
+    className: "text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 223
+      lineNumber: 63
     },
     __self: this
-  }, "Press the \"Set Attributes\" buttons for both Hero and Monster."), __jsx("li", {
+  }, "React, JavaScript, Bootstrap 4, SQL, CSS, HTML, XML"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "warning",
+    value: 25,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 224
+      lineNumber: 64
     },
     __self: this
-  }, "Press the \"Roll for Initiative\" button to see who attacks first."), __jsx("li", {
+  }, "Novice"), __jsx("div", {
+    className: "text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 225
+      lineNumber: 65
     },
     __self: this
-  }, "Follow the instructions and press the \"Roll for Attack\" buttons."), __jsx("li", {
+  }, "NPM, NodeJS, Rest API, JSON"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "warning",
+    value: 25,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 226
+      lineNumber: 66
     },
     __self: this
-  }, "After each round, repeat by rolling for Initiative and continue attacking until a character dies."))), __jsx(AttackSim, {
+  }, "Novice"), __jsx("div", {
+    className: "text-center",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 230
+      lineNumber: 67
     },
     __self: this
-  }));
+  }, "Data Analysis, Quality Assurance and Reporting"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "info",
+    value: 50,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 68
+    },
+    __self: this
+  }, "Intermediate"), __jsx("div", {
+    className: "text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69
+    },
+    __self: this
+  }, "Training and Documentation/Technical Writing"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "info",
+    value: 50,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 70
+    },
+    __self: this
+  }, "Intermediate")), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Col"], {
+    xs: "5",
+    className: "m-1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 72
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73
+    },
+    __self: this
+  }, "Customer Service and Support"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "success",
+    value: 75,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, "Advanced"), __jsx("div", {
+    className: "text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
+  }, "Problem Solving and troubleshooting"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "success",
+    value: 75,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76
+    },
+    __self: this
+  }, "Advanced"), __jsx("div", {
+    className: "text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
+  }, "MS Word and Excel(macro scripting and functions)"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "success",
+    value: 75,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, "Advanced"), __jsx("div", {
+    className: "text-center",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, "Multitasking, Time Management"), __jsx(reactstrap__WEBPACK_IMPORTED_MODULE_3__["Progress"], {
+    animated: true,
+    color: "success",
+    value: 75,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, "Advanced"))), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["ThreeColumnCard"], {
+    Class: "text-center bg-info text-white p-3",
+    Title: "SOFTWARE IMPLEMENTATION AND SUPPORT",
+    Description1: "Managed new customer accounts during the onboarding process by providing training and\r support throughout the initial implementation of their software to reach goals and objectives. Also \r acts as a liaison between customers and other teams and recommends and/or helps to implement value-added\r services.",
+    Description2: "Coordinated with network administrators and field monitors on supporting an Ipad\r based vehicle inspection application from beta testing to full network implementation.\r During Beta testing, tested application for real world bugs and errors and coordinated \r with end users during real world testing.  Conducted training and technical support to \r end users as well as improvement testing and troubleshooting on bugs and fixes as \r assigned by developers.",
+    Description3: "Provided first contact technical support for a new online enrollment process \r including password resets as well as troubleshooting and training to team members and providers.  \r During implantation, I conducted informal quality assurance testing including working through the \r designed process for current process accuracy as well as intentional ways to cause errors.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["ThreeColumnCard"], {
+    Class: "text-center bg-light text-dark p-3",
+    Title: "TECHNICAL WRITING",
+    Description1: "Created online training modules for a new Operating System for a local cable and \r internet company.  Converted MS word documentation to an online web based format utilizing HTML \r and RELAX NG Schema formatting.  Worked with developers and trainers to ensure accuracy and \r documentation matched established web formatting adjusting the training material as necessary.",
+    Description2: "Worked as a team to develop a 7 module training course for a new Asset Management \r Solution for BP Oil. Developed training material through MS Word and coordinated with developers \r and company SME\u2019s to develop standard procedures and ensure documentation accuracy.",
+    Description3: "Created Policies and Procedures for a specialized department as a supervisor in a high \r call volume call center environment.  This included a formal talk track for all types of incoming \r calls as well as rules and guidelines for each call type to produce the highest level of customer \r service possible.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 102
+    },
+    __self: this
+  }), __jsx(_components_customComponents__WEBPACK_IMPORTED_MODULE_2__["ThreeColumnCard"], {
+    Class: "text-center bg-primary text-white p-3",
+    Title: "CUSTOMER RELATIONS",
+    Description1: "Managed a network of over 300 transportation providers and insured contract \r compliance of over 3000 driver, vehicle and insurance files.  Established the Georgia market \r as one of the top markets for contract compliance by working with providers, other departments and \r management to increase provider relationships and performance.",
+    Description2: "Conducted performance monitoring of contractual compliance and networking trends by \r utilizing my advanced Excel skills by creating custom data spreadsheets with advanced functions \r and custom macro scripting.  These reports assisted in increasing network routing efficiency and \r increased compliance performance by showing trends and weaknesses in the provider network.",
+    Description3: "Responsible for Contract Administration of new providers enrolling in the Alaska Medicaid \r Network while achieving production goals and providing the highest level of customer service.  Interfaced \r with Medicaid Providers on contract questions and worked with them to complete submitted contracts.  \r Utilized Microsoft Access and Excel to track Contracts in all phases of the application process and \r ensure data accuracy.",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 117
+    },
+    __self: this
+  })));
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (DandD);
+/* harmony default export */ __webpack_exports__["default"] = (Aboutpage);
 
 /***/ }),
 
-/***/ 6:
-/*!**********************************!*\
-  !*** multi ./pages/DandDpage.js ***!
-  \**********************************/
+/***/ 5:
+/*!******************************!*\
+  !*** multi ./pages/about.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\DandDpage.js */"./pages/DandDpage.js");
+module.exports = __webpack_require__(/*! C:\Users\Mark\Desktop\newtest\my-page\pages\about.js */"./pages/about.js");
 
 
 /***/ }),
@@ -5500,17 +4977,6 @@ module.exports = require("core-js/library/fn/object/get-own-property-descriptor"
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/keys");
-
-/***/ }),
-
-/***/ "core-js/library/fn/parse-int":
-/*!***********************************************!*\
-  !*** external "core-js/library/fn/parse-int" ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("core-js/library/fn/parse-int");
 
 /***/ }),
 
@@ -5636,4 +5102,4 @@ module.exports = require("url");
 /***/ })
 
 /******/ });
-//# sourceMappingURL=DandDpage.js.map
+//# sourceMappingURL=about.js.map

@@ -84,15 +84,16 @@ function Aboutpage() {
         <ThreeColumnCard
           Class="text-center bg-info text-white p-3"
           Title="SOFTWARE IMPLEMENTATION AND SUPPORT"
-          Description1="Coordinated with network administrators and field monitors on supporting an Ipad
+          Description1="Managed new customer accounts during the onboarding process by providing training and
+            support throughout the initial implementation of their software to reach goals and objectives. Also 
+            acts as a liaison between customers and other teams and recommends and/or helps to implement value-added
+            services."
+          Description2="Coordinated with network administrators and field monitors on supporting an Ipad
             based vehicle inspection application from beta testing to full network implementation.
             During Beta testing, tested application for real world bugs and errors and coordinated 
             with end users during real world testing.  Conducted training and technical support to 
             end users as well as improvement testing and troubleshooting on bugs and fixes as 
             assigned by developers."
-          Description2="Worked as a team to develop a 7 module training course for a new Asset Management 
-            Solution for BP Oil. Developed training material through MS Word and coordinated with developers 
-            and company SME’s to develop standard procedures and ensure documentation accuracy."
           Description3="Provided first contact technical support for a new online enrollment process 
             including password resets as well as troubleshooting and training to team members and providers.  
             During implantation, I conducted informal quality assurance testing including working through the 
