@@ -148,13 +148,15 @@ export function RollforIniative() {
         this.setState ({
             heroInitiative: 'First',
             monsterInitiative: 'Second',
-            heroAttackVisible: true  //displays attack button
+            heroAttackVisible: true,  //displays attack button
+            initiativeButtonVisible: false,
         });
     } else if (heroinit > monsterinit) {
         this.setState ({
             monsterInitiative: 'First',
             heroInitiative: 'Second',
-            monsterAttackVisible: true //displays attack button
+            monsterAttackVisible: true, //displays attack button
+            initiativeButtonVisible: false,
         }); 
     } else {
         this.setState ({
@@ -285,6 +287,7 @@ export function AttackRoll() {
             );
         };
     }
+    this.AttackTurn();
 }
 
 /*function to determine where and when the attack button should be displayed based on initiative
@@ -297,6 +300,11 @@ export function AttackTurn() {
                     heroAttackVisible: !state.heroAttackVisible
                 }
             ));
+            this.setState (
+                {
+                    initiativeButtonVisible: true,
+                }
+            );
         } 
         else {
             //if hero goes first, makes sure attack button on monster area is hidden 
@@ -316,6 +324,11 @@ export function AttackTurn() {
                     monsterAttackVisible: !state.monsterAttackVisible
                 }
             ));
+            this.setState (
+                {
+                    initiativeButtonVisible: true,
+                }
+            );
         }
         else {
             this.setState(state => (

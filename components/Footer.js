@@ -12,6 +12,7 @@ class Footer extends React.Component {
         isOpen: false
         };
     }
+
     toggle() {
         this.setState({
         isOpen: !this.state.isOpen
@@ -24,21 +25,24 @@ class Footer extends React.Component {
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav navbar className="h4">
                         <NavItem>
-                            <NavLink href="https://www.linkedin.com/in/mark-fioca/"
+                            <NavLink 
+                                href="https://www.linkedin.com/in/mark-fioca/"
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     LinkedIn
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
+                            <NavLink 
+                                href="https://www.deviantart.com/franknmullet/art/Skyrim-Theme-1-0-651760185"
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     DeviantArt
                             </NavLink>
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/mfioca/my-page"
+                            <NavLink 
+                                href="https://github.com/mfioca/my-page"
                                 target="_blank" 
                                 rel="noopener noreferrer">
                                     GitHub
@@ -47,8 +51,9 @@ class Footer extends React.Component {
                     </Nav>
                     <Nav className="ml-auto h4" navbar>
                         <NavItem >
-                            <NavLink href="mailto: mark@fioca.com">
-                                Email
+                            <NavLink 
+                                href="mailto: mark@fioca.com">
+                                    Email
                             </NavLink>
                         </NavItem>
                     </Nav>

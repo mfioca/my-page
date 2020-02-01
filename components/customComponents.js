@@ -506,9 +506,11 @@ export class AttackSection extends React.Component {
     AttackButton() {
         if (this.props.AttackTurn === true) {
             return (
-                <Button  
-                    onMouseDown={this.props.AttackRoll} 
-                    onMouseUp = {this.props.NextTurn}
+                <Button 
+                onClick={this.props.AttackRoll}
+                //onMouseDown={this.props.NextTurn}
+                    //onMouseDown={this.props.AttackRoll && this.props.NextTurn} 
+                    //onMouseUp = {this.props.NextTurn}
                 >
                     {this.props.RollTitle}
                 </Button>

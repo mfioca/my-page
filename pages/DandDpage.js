@@ -8,6 +8,8 @@ import { Row, Col, Button } from 'reactstrap'
 
 
 
+
+
 class AttackSim extends React.Component {
     constructor (props) {
         super(props);
@@ -48,6 +50,7 @@ class AttackSim extends React.Component {
             monsterAttackVisible: false,
             monsterRoll: 0,
             monsterDidHit: '',
+            initiativeButtonVisible: true,
         };
 
         //Hero bind function statements
@@ -67,6 +70,7 @@ class AttackSim extends React.Component {
         this.RollforIniative = RollforIniative.bind(this);
         this.AttackRoll = AttackRoll.bind(this);
         this.AttackTurn = AttackTurn.bind(this);
+
     }
 
     heroNameChange(event) {
@@ -83,6 +87,22 @@ class AttackSim extends React.Component {
 
     monsterNameSubmit(event) {
         this.setState ({monsterName: this.state.monsterNametext});
+    }
+
+    IntButton() {
+        if (this.state.initiativeButtonVisible === true) {
+            return (
+                <Button 
+                    className="m-5 w-50"  
+                    onClick={this.RollforIniative}>
+                    Roll for iniative
+                </Button>
+            )
+        } else {
+            return (
+                <h4 className="text-white m-5 text-center">Round in Progress</h4>
+            )
+        };
     }
 
     render() {  
@@ -155,11 +175,7 @@ class AttackSim extends React.Component {
                         /> 
                     </div>
                     <div className="bg-dark m-1 mb-2 p-0 col text-center text-white">
-                        <Button 
-                            className="m-5 w-50"  
-                            onClick={this.RollforIniative}>
-                            Roll for iniative
-                        </Button>
+                        {this.IntButton()}
                         <Row>
                             <Col className="w-50">
                                 <AttackStatusDisplay
@@ -211,7 +227,7 @@ function DandD(){
                         attacking until a character dies.</li>
                 </ol>
             </div>
-                <AttackSim />
+            <AttackSim />
         </Layout>
     );
 }
