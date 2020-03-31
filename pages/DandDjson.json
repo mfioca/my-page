@@ -1,0 +1,13 @@
+
+    {
+        "id": 82,
+        "Name": "Monster",
+        "STR": "20",
+        "CONST": "20",
+        "Dexterity": "20",
+        
+        "Hitpoints": "50",
+        "Damage": "20",
+        
+        }
+        

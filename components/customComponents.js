@@ -9,7 +9,6 @@ import {
     Table, Jumbotron, TabContent, TabPane, Nav, NavItem, NavLink
 } from 'reactstrap'
 import classnames from 'classnames';
-
 import { HomeCardStyle, DandDStyle, ImageStyles, TvpageStyle, Pointer, TabStyle,
     Tplist } from './jsxstyles'
 import Link from 'next/link'
