@@ -18,6 +18,7 @@ import Link from 'next/link'
 *   Export styled components       * 
 ***********************************/
 
+//Used in datecheck below
 export function BackgroundDanger(props) {
     return (
         <span className="bg-danger text-white">
@@ -26,6 +27,7 @@ export function BackgroundDanger(props) {
     );
 }
 
+//Used in dateCheck below
 export function BackgroundWarning(props) {
     return (
         <span className="bg-warning text-white">
