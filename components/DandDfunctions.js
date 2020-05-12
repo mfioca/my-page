@@ -290,6 +290,7 @@ export function AttackRoll() {
     this.AttackTurn();
 }
 
+
 /*function to determine where and when the attack button should be displayed based on initiative
 setting. Function is called when the attack button is pressed in attackSection (Attackbutton() ) */ 
 export function AttackTurn() {

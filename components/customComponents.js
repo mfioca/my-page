@@ -265,7 +265,9 @@ export class CustomJumbo extends React.Component {
         } else {
             return (
                 <Jumbotron>
-                    <h1 className="display-3 text-center">{this.props.Title}</h1>
+                    <h1 className="display-3 text-center">
+                        {this.props.Title}
+                    </h1>
                     <div className="container-fluid text-center">
                         <img 
                             src="../static/images/avatar.jpg" 
@@ -486,11 +488,15 @@ export class AttackSection extends React.Component {
         const Result = this.props.DidHit;
         if (Result === "Hit") {
             return (
-                <h2 className="alert alert-success py-2 text-center">Hit!</h2>
+                <h2 className="alert alert-success py-2 text-center">
+                    Hit!
+                </h2>
             );
         } if (Result === "Miss") {
             return (
-                <h2 className="alert alert-danger py-2 text-center">Miss</h2>
+                <h2 className="alert alert-danger py-2 text-center">
+                    Miss
+                </h2>
             );
         } else {
             return (
@@ -501,9 +507,9 @@ export class AttackSection extends React.Component {
         }
     }
     
-    /*Function to display attack button based on initiative roll and attack turn. Pulls
-    AttackTurn functon and Attackroll functions from either herofunctions.js or monsterfunctions.js
-    as itentified in props */
+    /*Function to display attack button based on initiative roll and attack turn. 
+    Pulls npAttackTurn functon and Attackroll functions from either herofunctions.js or 
+    monsterfunctions.js as itentified in props */
     AttackButton() {
         if (this.props.AttackTurn === true) {
             return (

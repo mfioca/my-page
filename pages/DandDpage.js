@@ -126,7 +126,9 @@ class AttackSim extends React.Component {
                                 ImgUrl= "../static/images/hero.png"
                             />
                             <div className="text-center m-3">
-                                <Button onClick={this.setherostats}>Set Attrubutes</Button>
+                                <Button onClick={this.setherostats}>
+                                    Set Attrubutes
+                                </Button>
                             </div>
                             <NameForm
                                 Value = {this.state.value}
@@ -150,7 +152,9 @@ class AttackSim extends React.Component {
                                 ImgUrl = "../static/images/monster.png"
                             />
                             <div className="text-center m-3">
-                                <Button onClick={this.setmonsterstats}>Set Attrubutes</Button>
+                                <Button onClick={this.setmonsterstats}>
+                                    Set Attrubutes
+                                </Button>
                             </div>
                             <NameForm
                                 Value = {this.state.value}
