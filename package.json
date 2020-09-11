@@ -19,7 +19,7 @@
     "jquery": "^3.4.1",
     "mkdirp": "^1.0.3",
     "next": "^9.3.3",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "now-client": "^6.0.1",
     "path-to-regexp": "^6.1.0",
     "prop-types": "^15.7.2",
